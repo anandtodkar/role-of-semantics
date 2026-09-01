@@ -1,0 +1,174 @@
+\section{How semantics enters an agent}
+\label{sec:integration}
+
+\subsection{A failure taxonomy}
+
+The framework of \S\ref{sec:framework} was derived from failures, so we state
+them explicitly. Table~\ref{tab:failure-taxonomy} is also the labelling scheme of
+the fault corpus used in Experiment~E4; every family is instantiated in the
+artefact with executable examples.
+
+\begin{table*}[t]
+\centering
+\caption{Failure taxonomy of industrial LLM agents. The final column names the
+semantic capability whose absence makes the failure undetectable, not
+unlikely, but \emph{undetectable}, which is the operationally relevant property.}
+\label{tab:failure-taxonomy}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{1.9cm}L{2.6cm}L{7.3cm}L{1.1cm}@{}}
+\toprule
+\textbf{Family} & \textbf{Failure} & \textbf{Example (reference plant)} &
+\textbf{Needs} \\
+\midrule
+\textsc{f-ref} & wrong or invented identifier &
+writes to \texttt{L1\_FIL\_PT0309\_PV}, which does not exist & U1 \\
+\textsc{f-card} & missing mandatory argument &
+proposes a setpoint with no unit & U2 \\
+\textsc{f-enum} & value outside a closed set &
+issues PackML command \texttt{Restart} & U2 \\
+\textsc{f-acc} & write to a read-only variable &
+writes the measurement \texttt{PT0301.PV} instead of \texttt{PIC0301.SP} & U2 \\
+\textsc{f-range} & value outside the engineering range &
+sets fill pressure to $6.5$ bar on a $0.5$--$4.5$ bar loop & U2 \\
+\textsc{f-dim} & dimensionally incompatible unit &
+sets a pressure setpoint in \texttt{degC} & U3 \\
+\textsc{f-unitscale} & right dimension, wrong scale &
+writes $58$~\texttt{psi} to a tag ranged $0.5$--$4.5$~\texttt{bar} & U3 \\
+\textsc{f-scope} & action outside the authorised scope &
+``adjust the filler'' resolves to Line~2 while scoped to Line~1 & U4 \\
+\textsc{f-state} & illegal transition &
+\texttt{Start} on a unit that is \texttt{Stopped}, not \texttt{Idle} & U5 \\
+\textsc{f-ilk} & interlock violated &
+opens the product valve at $8.5$~PU where the guard requires $\geq 15$ & U6 \\
+\textsc{f-stale} & decision on stale evidence &
+acts on a reading four hours old & U7 \\
+\textsc{f-value} & answer contradicts the observation &
+reports $6.1$~bar for a tag observed at $3.0$~bar & U7 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Two observations. First, the families above the \textsc{f-dim} line are the ones
+a good type model catches, and they are the ones every vendor demonstration
+shows. Second, the families below it are the ones that stop a plant or hurt
+somebody, and each requires a capability from a \emph{different} layer.
+
+\subsection{Five insertion points}
+
+Semantics can enter an agent at five distinct points. They are complementary and
+have very different cost/benefit profiles.
+
+\paragraph{P1: Training and adaptation.} Fine-tune on the plant's vocabulary,
+tag conventions and documentation. \emph{Cost:} high, per plant, and stale the
+moment the plant changes. \emph{Benefit:} better priors, better query generation.
+\emph{Verdict:} the weakest lever for grounding, because it makes the model
+\emph{more confident} without making it \emph{more checkable}. Useful for
+translating between plant jargon and canonical terms, not for facts.
+
+\paragraph{P2: Retrieval and context assembly.} Use the semantic layer to
+decide \emph{what} goes into the window: resolve entities, traverse to the
+relevant neighbourhood, project a minimal faithful slice. This is where
+knowledge-graph RAG belongs, and where Experiments~E1--E3 and E6 operate.
+\emph{Verdict:} the highest-leverage lever, and the one most often implemented
+badly, as vector search over serialised graph fragments, which discards the
+graph's only advantage.
+
+\paragraph{P3: Tool-schema synthesis.} Generate the function-calling / MCP
+tool schemas from the semantic model: enumerations of legal tags, per-argument
+ranges, accepted units, currently legal commands. \emph{Verdict:} extremely
+high leverage and unusually cheap, because the constraint moves from the model's
+memory into the decoder's grammar. Experiment~E5 measures it.
+
+\paragraph{P4: Constrained decoding.} Enforce the generated schema during
+sampling, so a malformed or out-of-enumeration call is not merely rejected but
+\emph{unrepresentable}. \emph{Verdict:} eliminates \textsc{f-card},
+\textsc{f-enum} and, when the tag enumeration is included, \textsc{f-ref} at
+generation time. It cannot express state- or data-dependent constraints, which
+is why P5 remains necessary.
+
+\paragraph{P5: Post-hoc verification and repair.} Lift the agent's output into
+the graph, validate with SHACL/OWL/policy, and feed the validation report back
+for repair. \emph{Verdict:} the only point at which the dangerous families
+(\textsc{f-ilk}, \textsc{f-state}, \textsc{f-stale}, \textsc{f-value}) can be
+caught. Experiment~E4 measures it.
+
+\begin{figure*}[t]
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tikzpicture}[
+  font=\footnotesize,
+  box/.style={draw=gray!60,rounded corners=2pt,align=center,minimum height=7.5mm,
+              inner sep=3pt,fill=white},
+  sem/.style={box,fill=blue!5,draw=blue!40},
+  agent/.style={box,fill=orange!8,draw=orange!50},
+  arr/.style={-{Stealth[length=2mm]},gray!70,thick},
+  lab/.style={font=\scriptsize\itshape,text=gray!70}
+]
+% semantic layer
+\node[sem,minimum width=26mm] (l1) at (0,0) {L1 models\\\opcua, AAS, MTP};
+\node[sem,minimum width=26mm,below=2.5mm of l1] (l3) {L3 ontologies\\QUDT, SOSA, Brick};
+\node[sem,minimum width=26mm,below=2.5mm of l3] (l0) {L0 dictionaries\\ECLASS, IEC CDD};
+\node[sem,minimum width=26mm,above=2.5mm of l1] (l4) {L4 policy\\ODRL, IDS};
+\node[draw=blue!30,rounded corners=3pt,fit=(l4)(l1)(l3)(l0),inner sep=4pt,
+      label={[font=\scriptsize\bfseries,text=blue!55]below:semantic sources}] (src) {};
+
+\node[sem,minimum width=28mm,minimum height=30mm,right=12mm of src] (kg)
+  {\textbf{Plant knowledge}\\\textbf{graph} (L2)\\[2pt]RDF $+$ OWL T-Box\\
+   SHACL shapes\\SPARQL endpoint};
+\draw[arr] (src.east) -- node[lab,above]{lift / map} (kg.west);
+
+% agent loop
+\node[agent,minimum width=25mm,right=13mm of kg,yshift=13mm] (ctx) {P2 context assembly\\\scriptsize resolve $\to$ traverse $\to$ project};
+\node[agent,minimum width=25mm,below=3.5mm of ctx] (tools) {P3 tool synthesis\\\scriptsize enums, ranges, units};
+\node[agent,minimum width=25mm,below=3.5mm of tools] (dec) {P4 constrained decoding};
+\node[agent,minimum width=25mm,below=3.5mm of dec] (ver) {P5 verification \& repair\\\scriptsize SHACL report $\to$ prompt};
+
+\draw[arr] (kg.east|-ctx) -- (ctx.west);
+\draw[arr] (kg.east|-tools) -- (tools.west);
+\draw[arr] (kg.east|-ver) -- (ver.west);
+
+\node[box,fill=gray!8,minimum width=20mm,right=12mm of tools] (llm) {\textbf{LLM}\\\scriptsize agent loop};
+\draw[arr] (ctx.east) -- ++(4mm,0) |- (llm.north);
+\draw[arr] (tools.east) -- (llm.west);
+\draw[arr] (dec.east) -- ++(4mm,0) |- (llm.south west);
+\draw[arr] (llm.south) -- ++(0,-6mm) -| node[lab,pos=0.25,below]{proposed action} (ver.south);
+\draw[arr] (ver.north west) -- ++(-3mm,0) |- ++(-2mm,20mm) node[lab,above,pos=0.9]{repair};
+
+\node[box,fill=green!6,draw=green!45,minimum width=20mm,below=9mm of llm] (act) {plant / OT\\\scriptsize \opcua{} write, method call};
+\draw[arr] (ver.east) -- ++(5mm,0) |- node[lab,above,pos=0.75]{conforming} (act.east);
+\end{tikzpicture}}
+\caption{Reference architecture. The semantic sources are lifted into one plant
+knowledge graph, which is never serialised into the prompt; instead it serves
+four distinct functions, context projection (P2), tool-schema synthesis (P3),
+decoding constraints (P4) and post-hoc verification (P5). Only a conforming
+action reaches the plant, and a non-conforming one returns to the model as a
+structured repair signal rather than a refusal.}
+\label{fig:architecture}
+\end{figure*}
+
+\subsection{The Model Context Protocol as the delivery vehicle}
+
+An emerging practical detail is worth recording. The Model Context Protocol
+\cite{mcp} has rapidly become the conventional way to expose tools and resources
+to agents, and
+its shape, named tools with JSON-Schema parameters, plus addressable resources
+maps onto this architecture almost exactly: P3 generates the tool list from
+the graph, P2 serves projections as resources, and P5 sits in the server as a
+pre-execution check. The practical recommendation from our results is that an
+industrial MCP server should expose \emph{parameterised query templates and
+validated actions}, not raw graph access: the former constrains the argument
+space to something an LLM can navigate reliably (Experiment~E5), the latter
+recreates the text-to-query accuracy problem inside every tool call.
+
+\subsection{Why context stuffing is the wrong default}
+
+The instinctive integration, serialise the model and paste it, fails for
+three measured reasons. It is \emph{expensive}: the same plant costs up to
+$\MaxSerialRatio\times$ more tokens as expanded RDF than as a tag list
+(Table~\ref{tab:e3-serialisation}). It is \emph{insufficient}: for aggregate
+questions the evidence does not fit at any budget (Experiment~E7). And it is
+\emph{unnecessary}: the questions that need plant-wide evidence are precisely the
+ones a query engine answers in a few hundred tokens. The correct default is the
+inverse, keep the model out of the graph, and put the graph's \emph{answers}
+in the model.

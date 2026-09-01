@@ -1,0 +1,89 @@
+\section{Layer L0: identification and property dictionaries}
+\label{sec:layer0}
+
+Nothing an agent does is safe until it knows \emph{which thing} it is talking
+about, and nothing it learns is transferable until two vendors calling the same
+property by different names can be recognised as agreeing. L0 supplies both:
+globally unique identifiers, and dictionaries of standardised properties bound
+to those identifiers.
+
+\subsection{IRDI and the ISO identification stack}
+
+The International Registration Data Identifier (IRDI, ISO/IEC~11179-6 and
+ISO~29002-5 \cite{iso29002}) is the identifier currency of European industrial
+semantics. An IRDI such as \texttt{0173-1\#02-AAO677\#002} names a registration
+authority (\texttt{0173-1} = ECLASS), an item type (\texttt{02} = property), an
+item code and a \emph{version}. The versioning is the point: a property definition can
+evolve without the identifier silently changing meaning, which is precisely the
+guarantee a long-lived agent memory requires.
+
+\paragraph{Agent affordance.} An IRDI is the join key across the entire stack.
+The same identifier appears as an AAS \texttt{semanticId}, as an \opcua{}
+\texttt{DictionaryEntry} reference, in an AutomationML attribute and in an
+ECLASS-classified catalogue. An agent that carries IRDIs instead of English
+labels can transfer a learned fact (``\emph{this} property is the one that must
+match the recipe'') from one vendor's machine to another's. Without them, every
+plant is a fresh vocabulary-learning problem. In the AUF this is the only
+technology family scoring $3$ on U1 across the board.
+
+\paragraph{Limitation.} IRDIs are not dereferenceable in the web sense by
+default. An agent cannot simply \texttt{GET} one and receive a definition; it
+needs a dictionary service. This is a small friction with a large practical
+effect on retrieval-augmented pipelines, and it is why the survey scores
+L0 lower on U8 than L2.
+
+\subsection{ECLASS and IEC~CDD}
+
+ECLASS \cite{eclass} is a hierarchical classification of products and services
+with, for each classification class, a set of standardised properties, values
+and value lists; ECLASS~Advanced additionally supplies structured property
+blocks and aspects. IEC~CDD, the Common Data Dictionary built on IEC~61360
+\cite{iec61360}, does the same for electrotechnical components, and IEC~61987
+\cite{iec61987} for process measurement and control devices, each entry carrying
+a preferred name, a definition, a data type, a unit and often a value list, in
+several languages.
+
+\paragraph{Agent affordance.} These dictionaries are, in effect,
+\emph{pre-written ontologies of the properties an agent will encounter}, with
+the three attributes that matter most for constrained generation: the datatype,
+the unit and the closed value list for enumerated properties. When an
+AAS submodel element carries an IEC~61360 data specification, an agent knows not
+just that \texttt{FillVolume} is a number but that it is a
+\texttt{REAL\_MEASURE} in millilitres. Our reference plant carries these as
+\texttt{semanticId}s on every signal precisely to make this affordance
+measurable; in Experiment~E1 it is part of what lifts C2 grounding to
+\GrndTopOneCTwo{}.
+
+\paragraph{Limitation.} L0 dictionaries describe \emph{property types}, never
+\emph{instances}, and never relations between instances. They cannot say that
+this filler is downstream of that pasteuriser, nor that this setpoint is
+currently locked. They also carry licensing friction: ECLASS content is
+commercially licensed, which materially complicates embedding it in an
+open agent stack. This obstacle is under-discussed in the literature.
+
+\subsection{ETIM, UNSPSC, GS1}
+
+ETIM (technical product classification, strongest in electrical and building
+trades) is structurally similar to ECLASS and increasingly harmonised with it.
+UNSPSC is a procurement taxonomy: useful for commercial reasoning, nearly
+useless for engineering, because it classifies without describing properties.
+GS1 identifiers (GTIN for products, GIAI for individual assets, SSCC for
+logistic units) together with EPCIS event vocabulary are the strongest L0 story
+for \emph{instance} identity and for supply-chain provenance, and they are the
+natural bridge when an agent's reasoning crosses from the plant floor to the
+supply chain.
+
+\subsection{What L0 does and does not buy an agent}
+
+L0 lets an agent map a phrase to a versioned, global property identifier,
+recognise that two vendors' spellings denote the same property, and obtain the
+datatype, unit and value list needed for constrained generation. It cannot
+distinguish two \emph{instances} of the same property type, supply current
+values, relations or state, or say whether acting is permitted now.
+
+In our ablation, L0 alone corresponds to no experimental condition, because a
+dictionary without an information model is not a deployable context. Its effect
+is visible indirectly: it is the reason condition~C2 can express
+\texttt{semanticId} and thereby recognise that the Line~1 and Line~2 fill-volume
+setpoints are instances of \emph{the same property}, which is what makes the
+recipe-conformance tasks (REC-01--03) tractable at all.

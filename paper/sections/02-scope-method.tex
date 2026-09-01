@@ -1,0 +1,138 @@
+\section{Scope, method and the layer model}
+\label{sec:scope}
+
+\subsection{Scope}
+
+We include a technology if it (i) is a published specification, standard or
+widely adopted open vocabulary; (ii) carries \emph{machine-interpretable meaning}
+beyond byte-level syntax; and (iii) is used, or is plausibly usable, in
+discrete-manufacturing, process, energy or building automation. We therefore
+include information-modelling standards that are not usually called ``semantic''
+(\opcua, AutomationML, PackML) because they encode exactly the kind of meaning an
+agent needs, and we exclude pure transport protocols (Modbus, PROFINET RT,
+EtherCAT) except where they are cited as the semantic baseline against which
+everything else is an improvement.
+
+We exclude: proprietary vendor data models without public specification;
+machine-learning feature stores, which are statistical rather than semantic
+artefacts; and general enterprise data catalogues, except where they carry a
+formal vocabulary (DCAT).
+
+\subsection{Method}
+
+Specifications were collected from the standardisation bodies themselves (IEC,
+ISO, ISA, VDI/VDE/NAMUR, W3C, ETSI, OPC~Foundation, IDTA, ECLASS~e.V.,
+AutomationML~e.V., IDSA, Eclipse Foundation), from the reference documentation
+of the corresponding open implementations, and from the peer-reviewed literature
+introducing the major domain ontologies. The ten AUF criteria
+(\S\ref{sec:framework}) were then derived top-down from a failure taxonomy of
+industrial agents (Table~\ref{tab:failure-taxonomy}): each criterion exists
+because at least one observed failure mode is caused by its absence. Each
+technology was scored $0$--$3$ per criterion against the rubric in
+Appendix~\ref{app:rubric}, on the basis of what the \emph{specification mandates
+or standardises}, not what a particular implementation happens to offer.
+
+Finally, the framework's central claim, that the criteria are independent and
+non-substitutable, is testable, and we test it by ablation
+(\S\ref{sec:design}). If the criteria were substitutable, adding more of one
+(say, type information) would compensate for the absence of another (say, unit
+semantics). Experiments E2, E4 and E5 show that it does not.
+
+\paragraph{A note on scoring.} AUF scores are an expert assessment, not a
+measurement, and we mark them as such. The experimental sections make no use of
+them; they are a navigational aid for the reader and a summary of the prose.
+Where a technology is extensible in principle but silent by default (\opcua{}
+alarm limits, AAS qualifiers) we score the default, since that is what an agent
+receives in practice.
+
+\subsection{The layer model}
+\label{sec:layers}
+
+Discussions of ``semantics'' in automation founder because the word is used for
+five different things. We separate them explicitly; the separation is the
+backbone of the survey and of the experiment.
+
+\begin{table*}[t]
+\centering
+\caption{The five-layer model used throughout this survey. Each layer answers a
+different question, and no layer subsumes the one below it.}
+\label{tab:layers}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}L{1.9cm}L{2.6cm}L{6.0cm}L{4.4cm}@{}}
+\toprule
+\textbf{Layer} & \textbf{Question answered} & \textbf{Representative technologies} &
+\textbf{Agent affordance} \\
+\midrule
+L0 Identification &
+\emph{Which concept is this?} &
+ECLASS, IEC~CDD (IEC~61360), IRDI (ISO~29002-5), ETIM, UNSPSC, GS1~GTIN/GIAI,
+IEC~61987 &
+Stable, global, resolvable reference; cross-vendor property equality \\[3pt]
+
+L1 Information models &
+\emph{What is it, and what can be done to it?} &
+\opcua{}~/~IEC~62541, AAS (IDTA), AutomationML~/~IEC~62714, MTP (VDI/VDE/NAMUR
+2658), PackML~/~ISA-TR88.00.02, ISA-95~/~IEC~62264, DTDL, W3C~WoT~TD, NGSI-LD,
+MTConnect, IEC~61850, Sparkplug~B &
+Types, cardinalities, ranges, access rights, callable methods, state machines \\[3pt]
+
+L2 Formal semantics &
+\emph{What follows, and what is forbidden?} &
+RDF, RDFS, OWL~2, SHACL, SPARQL, JSON-LD, SKOS, PROV-O, R2RML/RML, OBDA &
+Entailment, constraint validation, path queries, aggregation, provenance \\[3pt]
+
+L3 Domain ontologies &
+\emph{What does this mean in \emph{this} domain?} &
+QUDT, SOSA/SSN, Brick, Project~Haystack, RealEstateCore, SAREF (+4BLDG, 4INMA,
+4ENER), ISO~15926~RDL, DEXPI, IOF/BFO, Catena-X~SAMM, FIWARE Smart Data Models &
+Quantity kinds and unit calculus, observation semantics, equipment taxonomies,
+process semantics \\[3pt]
+
+L4 Dataspaces &
+\emph{May I use it, and can I believe it?} &
+IDS-RAM \& Dataspace Protocol, Gaia-X, Catena-X, Manufacturing-X, Eclipse~EDC,
+ODRL, DCAT-AP, W3C~VC/DID &
+Usage policy, sovereignty, attestation, lineage across organisational boundaries \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Three properties of this model matter for the argument that follows.
+
+\paragraph{Layers are complements, not alternatives.} A common
+mis-specification (``we will use the AAS instead of an ontology'', or ``we
+have \opcua, we do not need RDF'') treats L1 and L2/L3 as competing choices.
+They answer different questions. \opcua{} tells an agent that
+\texttt{PT0301.PV} is a \texttt{Double} with an \texttt{EURange} of
+$[0, 6]$ and an \texttt{EUInformation} display name \texttt{"bar"}. It does not
+tell the agent that \texttt{bar} and \texttt{psi} are commensurable and how, that
+the variable is downstream of a pasteuriser, or that writing its sibling
+setpoint is currently forbidden. Those are L3, L2 and L1-behavioural facts
+respectively, and the experiment in \S\ref{sec:results} shows each of them
+independently moving the numbers.
+
+\paragraph{Adoption is inverted with respect to agent value.} L0 and L1 are the
+mature, widely deployed layers; L2 and L3 are patchy; L4 is nascent. The AUF
+matrix (Table~\ref{tab:auf-matrix}) shows that the agent-critical criteria of
+unit calculus, behaviour, constraints and provenance concentrate in exactly the
+layers with the thinnest deployment.
+
+\paragraph{The layers have very different token economics.} L1 exchange formats
+are verbose by design, because they were built for machines with disks, not for
+models with context windows. Experiment~E3 (Table~\ref{tab:e3-serialisation})
+measures the same plant at $1\times$ as a historian CSV and up to
+$\MaxSerialRatio\times$ as expanded RDF, which forces a design consequence
+explored in \S\ref{sec:integration}: the semantic layer must be
+\emph{queried}, never pasted.
+
+\subsection{Terminology}
+
+We use \emph{tag} or \emph{signal} for a process variable (an \opcua{}
+\texttt{VariableNode}, an AAS \texttt{Property}, a historian point);
+\emph{asset} for a physical thing with an identity; \emph{grounding} for the
+mapping of a natural-language expression onto an identified entity;
+\emph{context} for the token sequence placed in the model's window;
+\emph{guardrail} for any mechanism that accepts or rejects a proposed agent
+action before execution; and \emph{ceiling} for the maximum task accuracy
+achievable by a reader that never invents facts (\S\ref{sec:design}).

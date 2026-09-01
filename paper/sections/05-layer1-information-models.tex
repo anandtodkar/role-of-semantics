@@ -1,0 +1,237 @@
+\section{Layer L1: information and interface models}
+\label{sec:layer1}
+
+L1 is where industrial automation has invested most and where an agent finds the
+richest \emph{type} information. In a few important cases it also holds the only
+machine-readable statement of what may legally be \emph{done}.
+
+\subsection{\opcua{} (IEC 62541)}
+
+\opcua{} \cite{iec62541} is the dominant vendor-neutral information model of
+factory and process automation. Its core is a typed, navigable \emph{address space}: nodes
+(objects, variables, methods, types) connected by typed references
+(\texttt{HasComponent}, \texttt{HasProperty}, \texttt{Organizes},
+\texttt{HasTypeDefinition}). Object-oriented modelling, with type definitions
+that carry inheritance and are instantiated as objects, lets a client discover
+the structure of a machine it has never seen, at run time, without a schema
+shipped out of band.
+\emph{Companion specifications} standardise the model for a domain (robotics,
+machine tools, machine vision, packaging via PackML, and several dozen others),
+so that two robots from different vendors expose the same browse names for the
+same concepts. Serialisation as \texttt{NodeSet2} XML makes the whole model a
+transferable artefact, and PubSub extends the transport beyond client/server.
+
+\paragraph{Agent affordances.} Four are decisive.
+\emph{(i) Introspectable typing.} \texttt{DataType}, \texttt{ValueRank} and
+\texttt{ArrayDimensions} let an agent emit correctly-shaped values.
+\emph{(ii) Access control as data.} \texttt{AccessLevel} /
+\texttt{UserAccessLevel} distinguish readable from writable nodes. This is
+what makes fault family \textsc{f-acc} detectable at all, and it accounts for
+eight of the caught cases in Experiment~E4.
+\emph{(iii) Engineering ranges.} \texttt{EURange} and \texttt{InstrumentRange}
+give constrained decoding real bounds; \texttt{EUInformation} gives a unit
+display string.
+\emph{(iv) Methods.} \opcua{} \texttt{Method} nodes with typed input and output
+arguments are, structurally, function-calling tool schemas that already exist in
+the plant. Projecting them into an agent's tool list is close to mechanical, and
+is the single highest-leverage integration available today.
+
+\paragraph{Limitations for agents.} \opcua{} units are an
+\texttt{EUInformation} structure referencing UN/CEFACT codes; there is no
+dimension algebra and no conversion, so \texttt{bar} and \texttt{psi} are two
+opaque strings (U3~$=1$). Cross-machine topology is not modelled: the address
+space is a containment tree per server, not a plant graph, so ``which units lose
+air if the compressor trips'' is unanswerable within \opcua{} alone
+(U4~$=2$). Constraints beyond range and type are prose in the companion
+specification (U6~$=1$). And \texttt{NodeSet2} is extraordinarily verbose:
+Experiment~E3 measures our small plant at over $23\times$ the token cost of the
+equivalent tag list, so an agent must never be handed one directly.
+
+\subsection{The Asset Administration Shell (IDTA)}
+
+The AAS \cite{idta2023aas} is the Industrie~4.0 digital-twin metamodel,
+standardised by the Industrial Digital Twin Association in a multi-part
+specification (metamodel, API, IEC~61360 data specification, security, and the
+AASX package format). An
+asset has a shell; a shell has \emph{submodels}; a submodel contains
+\emph{submodel elements}, which may be properties, collections, ranges, files,
+relationship elements or operations. Every element may carry a
+\texttt{semanticId} (typically an IRDI or IRI), which is what binds the AAS to
+L0. Standardised \emph{submodel templates}, such as Digital Nameplate and
+Technical Data \cite{idta2023nameplate} together with a growing library covering
+documentation, carbon footprint and spare parts, make the same information
+appear in the same shape across vendors. The familiar Type~1/2/3
+distinction (a file, a served but passive shell, an actively communicating
+shell) is a deployment maturity axis rather than a modelling one.
+
+\paragraph{Agent affordances.} The AAS is the best-aligned industrial standard
+for agent consumption, for three reasons. First, submodel templates give an
+agent a \emph{stable expectation}: if the asset has a Nameplate submodel, the
+manufacturer is at a known \texttt{idShort} with a known \texttt{semanticId}, so
+extraction becomes lookup rather than inference. Second, the REST API
+(Part~2) is a natural tool surface: \texttt{GET /submodels/\{id\}/\allowbreak
+submodel-elements/\{idShortPath\}} is a function call with a typed return.
+Third, \texttt{semanticId} plus the IEC~61360 data specification carries unit and
+datatype down to the individual property. In our reference plant the AAS
+projection is what condition~C2 renders.
+
+\paragraph{Limitations for agents.} The AAS models an \emph{asset} and is weak
+at modelling the \emph{plant}: cross-asset relations exist
+(\texttt{RelationshipElement}, \texttt{AnnotatedRelationshipElement}) but are
+neither standardised into a topology vocabulary nor transitively queryable.
+There is no query language in the metamodel; the specification is currently
+extending in this direction, but as of writing an agent must fetch and filter
+client-side, which is exactly the pattern Experiment~E7 shows to be a
+$17$--$\MaxQuerySaving\times$ token penalty. Behavioural semantics are limited to
+\texttt{Operation} elements; there is no standard state model. And the serialised
+environment is the most verbose artefact we measured ($29\times$ the tag list).
+
+\subsection{AutomationML (IEC 62714)}
+
+AutomationML \cite{iec62714} is the engineering-data exchange format: CAEX for
+topology, with
+libraries of system-unit classes, role classes and interface classes instantiated
+into an instance hierarchy; COLLADA for geometry
+and kinematics; PLCopen~XML for behaviour. Its \emph{role classes} are its
+semantic contribution: an object is declared to play a role
+(\texttt{Robot}, \texttt{Conveyor}) independently of the vendor class that
+implements it.
+
+\paragraph{Agent affordance.} AutomationML has the strongest \emph{as-engineered}
+relational model of any L1 technology (U4~$=3$): interfaces and links express
+plant topology explicitly, which is exactly the structure that Experiment~E2
+shows to be decisive for impact-analysis tasks (TOP-01--05). Converters between
+AutomationML and the AAS are mature, and the pragmatic pattern of lifting
+engineering topology out of AutomationML and publishing it as AAS submodels or
+RDF is one of the cheapest routes to a plant graph.
+
+\paragraph{Limitation.} It is an engineering-time artefact. It does not carry
+run-time values, states or events, so on its own it can support planning but not
+situational awareness.
+
+\subsection{MTP (VDI/VDE/NAMUR 2658)}
+
+The Module Type Package \cite{vdi2658} describes a process module as a set of
+\emph{services} with parameters, and a state machine per service, plus an HMI
+description and communication mapping (typically \opcua). It exists because
+modular process plants must be orchestrated by a Process Orchestration Layer
+that has never seen the module before.
+
+\paragraph{Agent affordance.} MTP is, from an agent's point of view, unusually
+well designed: it is one of the very few industrial standards that describes a
+plant component as a \emph{set of invocable services with legal state
+transitions and typed parameters}. That is a tool schema with a precondition
+model. An agent orchestrating MTP modules can plan without a hand-written
+capability description, and can be prevented from issuing an illegal service
+command by construction. It scores $3$ on U5 and $2$ on U6, a combination almost
+nothing else achieves.
+
+\paragraph{Limitation.} Adoption is concentrated in process industries, and the
+service model does not extend to the discrete world.
+
+\subsection{PackML / ISA-88 and ISA-95 / IEC 62264}
+
+PackML (ANSI/ISA-TR88.00.02 \cite{isa88}, and the corresponding \opcua{}
+companion model) standardises a machine's operating states, namely
+\texttt{Idle}, \texttt{Execute}, \texttt{Held}, \texttt{Stopped},
+\texttt{Aborted} and the acting states between them, together with the commands
+that move between them. ISA-95 /
+IEC~62264 \cite{iec62264} standardises the enterprise-to-control hierarchy
+(enterprise, site, area, work centre, work unit) and the object models for
+production schedules, definitions and performance, with B2MML as its XML
+binding.
+
+\paragraph{Agent affordance.} These two are small, cheap and disproportionately
+valuable. PackML is the entire content of criterion U5 for packaging and
+discrete lines: it turns ``can I start the filler?'' from a judgement into a
+lookup, and it is what makes fault family \textsc{f-state} catchable. That
+family accounts for seven cases in our corpus and is undetectable by every other
+tier. PackML is also
+\emph{token-cheap}: the complete state machine is a few hundred tokens, the best
+value-per-token of any artefact we measured. ISA-95 supplies the mereology that
+scopes every query an agent asks (``the Line~1 tags'', ``the utilities area
+total''), and its absence is why fault family \textsc{f-scope} is invisible below
+tier~G3.
+
+\paragraph{Limitation.} Neither carries units, values or constraints. PackML in
+particular is frequently \emph{implemented} without being \emph{published}: the
+states exist in the PLC, but nothing exposes them as a model, which is the
+practical reason so many deployed agents cannot use them.
+
+\subsection{DTDL, W3C WoT Thing Description, NGSI-LD}
+
+Three technologies converge from three directions on the same shape, a
+JSON(-LD) description of a thing's properties, actions or commands, and events.
+
+\emph{DTDL} (Digital Twins Definition Language, Azure Digital Twins)
+\cite{dtdl} offers interfaces with telemetry, properties, commands, components
+and typed relationships, and a graph query language over the twin graph. It is
+the strongest of the three on relations plus query, and the weakest on openness.
+
+\emph{W3C WoT Thing Description~1.1} \cite{w3c2023wot} is a W3C Recommendation
+and, for our purposes, the most elegant: properties, actions and events each
+carry a JSON Schema data model \emph{and} protocol bindings (\texttt{forms}),
+while the JSON-LD context allows every affordance to be annotated with an
+external ontology term. A Thing Description is very nearly a function-calling
+manifest with semantic annotations attached, and is the closest existing
+standard to what an agent tool registry should look like.
+
+\emph{NGSI-LD} (ETSI GS~CIM~009 \cite{etsi2023ngsild}) models entities with
+properties and relationships, where every attribute may itself carry metadata
+(unit code, \texttt{observedAt} timestamp, \texttt{datasetId}) and the whole is
+grounded in JSON-LD/RDF. Its provenance handling is the best in L1 (U7~$=3$), and its
+\texttt{observedAt} per attribute is exactly what fault family
+\textsc{f-stale} requires.
+
+\paragraph{Assessment.} Together these show what a modern industrial standard
+\emph{could} look like: typed affordances, external semantic annotation, native
+JSON-LD, timestamps as first-class attribute metadata. Their weakness is
+domain depth. None carries a plant taxonomy, an equipment state model or an
+engineering-range convention, so they are complements to \opcua/AAS rather than
+replacements.
+
+\subsection{Sector-specific models: MTConnect, IEC 61850, Sparkplug B}
+
+MTConnect \cite{mtconnect} (machine tools) offers a clean, read-oriented XML
+model with \texttt{DataItem}s that carry a type, a subtype, units and native
+units. It is one of the few standards that distinguishes reporting units from
+native units, which is a small but real U3 contribution. IEC~61850
+\cite{iec61850} (substation automation) has arguably the most rigorous naming
+and data-model discipline in all of automation: logical nodes and standardised
+data objects give near-perfect L0/L1 alignment inside its domain. Sparkplug~B
+\cite{sparkplug} is included as the pragmatic counterpoint: it
+adds a birth-certificate metadata payload to MQTT, giving a minimal but
+genuinely useful type and unit hint at very low token cost. It is a
+reminder that a modest, universally deployed semantic increment can be worth more
+than a rich, rarely deployed one.
+
+\subsection{Summary of L1}
+
+\begin{table*}[t]
+\centering
+\caption{What each L1 technology uniquely contributes to an agent, and what it
+cannot do. ``Unique'' means no other widely deployed L1 standard supplies it.}
+\label{tab:l1-summary}
+\footnotesize
+\begin{tabular}{@{}lp{5.6cm}p{5.6cm}@{}}
+\toprule
+\textbf{Technology} & \textbf{Unique agent contribution} & \textbf{Principal gap} \\
+\midrule
+\opcua{} & Run-time introspectable types, access rights, EU ranges, callable
+methods & No unit calculus, no plant-wide topology, extreme verbosity \\
+AAS & Standardised submodel templates + \texttt{semanticId} down to the property;
+REST tool surface & No query language, weak topology, no state model \\
+AutomationML & As-engineered topology and role classes & Engineering-time only \\
+MTP & Services with parameters \emph{and} legal state transitions & Process
+industries only \\
+PackML & The legal command set in the current state, at negligible token cost &
+Nothing else \\
+ISA-95 & The mereology that scopes every query & No values, units or constraints \\
+WoT TD & Affordances with protocol bindings and external semantic annotation &
+No domain depth \\
+NGSI-LD & Per-attribute unit code and \texttt{observedAt} provenance & Weak
+behaviour model \\
+DTDL & Twin graph with a query language & Vendor-bound \\
+\bottomrule
+\end{tabular}
+\end{table*}

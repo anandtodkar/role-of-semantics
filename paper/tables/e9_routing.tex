@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{E9: neighbourhood projection versus intent-routed projection at a 6000-token budget.}
+\label{tab:e9-routing}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{ll ccc cccccccc}
+\toprule
+Cond. & Projection & Ceiling & Coverage & Verif@1 & GRD & UNI & RNG & TOP & PRV & ACT & SAF & REC \\
+\midrule
+C3 & neighbourhood & 0.514 & 0.761 & 1.000 & 1.00 & 0.80 & 0.80 & 1.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+C3 & routed & 0.543 & 0.774 & 1.000 & 1.00 & 1.00 & 0.80 & 1.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+C4 & neighbourhood & 0.857 & 0.857 & 0.842 & 0.80 & 0.80 & 0.60 & 1.00 & 0.75 & 1.00 & 1.00 & 1.00 \\
+C4 & routed & 0.943 & 0.959 & 1.000 & 1.00 & 0.80 & 0.80 & 1.00 & 1.00 & 1.00 & 1.00 & 1.00 \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize Routing spends budget on the constraint, event and recipe layers only when the question gives a reason to, using surface cues available before retrieval. No category degrades; grounding and provenance recover fully. The trade-off between semantic richness and context budget is therefore an artefact of dumping a neighbourhood, not a property of the representation.\end{minipage}
+\end{table*}

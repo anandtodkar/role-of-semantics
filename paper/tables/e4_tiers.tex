@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{E4: guardrail efficacy over 137 proposed agent actions (84 faulty, 53 valid).}
+\label{tab:e4-tiers}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llccccrc}
+\toprule
+Tier & Semantic assets available & Caught & Recall & 95\% CI & Correct diag. & False alarms & FP rate \\
+\midrule
+G0 & none & 0/84 & 0.000 & [0.00, 0.04] & 0.000 & 0 & 0.000 \\
+G1 & JSON call schema (keys, datatypes, enumerations) & 12/84 & 0.143 & [0.08, 0.23] & 0.143 & 0 & 0.000 \\
+G2 & tag dictionary, engineering ranges, unit \textbackslash{}emph{string} & 57/84 & 0.679 & [0.57, 0.77] & 0.631 & 4 & 0.075 \\
+G3 & G2 + RDF/OWL graph, SHACL, QUDT dimensions and conversions, ISA-95 mereology & 62/84 & 0.738 & [0.64, 0.82] & 0.738 & 0 & 0.000 \\
+G4 & G3 + PackML behaviour, explicit interlocks, SOSA/PROV observations & 84/84 & 1.000 & [0.96, 1.00] & 1.000 & 0 & 0.000 \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize \emph{Correct diagnosis} requires the validator to name the right fault family, not merely to reject. G2 rejects unit-scale errors for the wrong reason and rejects legal re-expressions of a value in a different unit.\end{minipage}
+\end{table*}

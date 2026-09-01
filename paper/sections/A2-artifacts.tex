@@ -1,0 +1,167 @@
+\section{Artefact, reproduction and task suite}
+\label{app:artifacts}
+
+\subsection{Reproducing every number in this paper}
+
+\begin{lstlisting}[language=bash,caption={Full reproduction. Deterministic,
+offline, no API keys, no GPU.}]
+python -m venv .venv && .venv/Scripts/activate      # or: source .venv/bin/activate
+pip install -r requirements.txt                     # rdflib, pyshacl, numpy, pandas, matplotlib
+cd code
+python run_experiments.py --dump-artifacts
+cd ../paper && latexmk -pdf main.tex
+\end{lstlisting}
+
+\texttt{run\_experiments.py} writes \texttt{results/results.json}, regenerates
+every file in \texttt{paper/tables} and \texttt{paper/figures}, and rewrites
+\texttt{paper/generated\_macros.tex}, from which every inline number in the text
+is drawn. Runtime is under a minute on a laptop; the dominant cost is the SHACL
+pass over the action corpus.
+
+\subsection{Repository layout}
+
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\caption{Artefact contents. Module names are relative to
+\texttt{code/semantics\_bench/}.}
+\label{tab:artifact}
+\begin{tabular}{@{}L{3.4cm}L{11.8cm}@{}}
+\toprule
+\textbf{Module / path} & \textbf{Contents} \\
+\midrule
+\texttt{plant.py} & the declarative reference plant: assets,
+signals, topology, interlocks, recipes, events \\
+\texttt{kg.py} & projection into RDF, AAS~JSON, \opcua{}
+NodeSet2, WoT~TD, NGSI-LD, JSON-LD and historian CSV \\
+\texttt{vocab.py} & namespaces and the alignment ontology \\
+\texttt{units.py} & QUDT-shaped dimension vectors and affine
+conversions \\
+\texttt{statemachine.py} & the PackML state machine, legal
+command sets and reachability \\
+\texttt{shapes.py} & the SHACL shapes graph \\
+\texttt{conditions.py} & context conditions C0--C4, the fact
+model and the renderers \\
+\texttt{naming.py} & the five tag naming schemes and the
+state-restoring context manager used by E8 \\
+\texttt{retrieval.py} & lexical and graph retrievers,
+entity resolution, convention decoding, intent routing, budget-aware
+re-ranking \\
+\texttt{tasks.py} & the \NTasks-task suite with declared
+evidence requirements \\
+\texttt{validation.py} & the \NCases-action fault corpus and
+validator tiers G0--G4 \\
+\texttt{toolgen.py} & action-space enumeration and tool-schema
+projection \\
+\texttt{sparql\_probe.py} & the E7 SPARQL probes \\
+\texttt{llm.py} & optional adapter for running the suite
+against a real model \\
+\texttt{code/tests/} & unit tests for the unit calculus, state machine, shapes,
+retrieval and metrics \\
+\texttt{artifacts/} & the plant serialised in all seven formats \\
+\texttt{results/} & \texttt{results.json}, every measurement in the paper \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{The task suite}
+
+\begin{table*}[t]
+\centering
+\caption{The \NTasks{} benchmark tasks. Each task additionally declares the set
+of fact keys required to answer it, which is what the sufficiency measurement
+consumes.}
+\label{tab:tasks}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lL{6.8cm}@{\hspace{4mm}}lL{6.8cm}@{}}
+\toprule
+\textbf{ID} & \textbf{Question} & \textbf{ID} & \textbf{Question} \\
+\midrule
+GRD-01 & What is the outlet pressure of the Line 1 filler right now?
+       & PRV-01 & Why did the Line 1 filler report a low bowl level at 02:15 on 14 July? \\
+GRD-02 & What is the outlet pressure of the compressed air compressor?
+       & PRV-02 & How old is the reading you are quoting for the Line 1 filler bowl level? \\
+GRD-03 & Give me the carousel speed of the Line 1 labeller.
+       & PRV-03 & Has the compressor had maintenance in the last 60 days, and did it affect the vibration baseline? \\
+GRD-04 & What is the Line 2 pasteuriser zone 1 temperature?
+       & PRV-04 & Which alarms fired upstream of the Line 1 capper in the five minutes before its torque alarm at 02:16? \\
+GRD-05 & Report the bowl level of the filler on line 1.
+       & ACT-01 & Can I start the Line 2 filler right now? \\
+UNI-01 & Report the Line 2 pasteuriser zone 1 temperature in degrees Celsius.
+       & ACT-02 & What is the shortest command sequence to bring the Line 2 labeller into Execute? \\
+UNI-02 & Which of the two filling lines currently runs the higher outlet pressure?
+       & ACT-03 & Is it legal to send Unhold to the Line 1 CIP skid? \\
+UNI-03 & Express the Line 1 filler product flow in cubic metres per hour.
+       & ACT-04 & Which Line 1 units can accept a Start command without any preparatory step? \\
+UNI-04 & Is the Line 2 filler outlet pressure above 3 bar?
+       & SAF-01 & May I change the Line 1 fill volume setpoint to 330 ml now? \\
+UNI-05 & What is the total electrical power drawn by the utilities area?
+       & SAF-02 & Is it safe to open the Line 2 product valve? \\
+RNG-01 & Is 5 bar an acceptable value for the Line 1 filler fill pressure setpoint?
+       & SAF-03 & Can the pasteuriser temperature setpoint on Line 1 be changed while CIP runs? \\
+RNG-02 & Can I write 250 kPa to the Line 1 filler fill pressure setpoint?
+       & SAF-04 & Which writable Line 1 tags are protected by an interlock? \\
+RNG-03 & The Line 1 filler bowl level reads 61.4 \%. Is any alarm limit exceeded?
+       & REC-01 & Does the current Line 1 fill volume setpoint match the Cola 0.5 L recipe? \\
+RNG-04 & Which tags anywhere in the plant are currently outside their alarm limits?
+       & REC-02 & Is the Line 1 capping torque setpoint within the Cola 0.5 L recipe specification? \\
+RNG-05 & May I write to the Line 1 filler outlet pressure tag?
+       & REC-03 & For the Lemonade 1 L product, does the Line 2 fill pressure setpoint match the recipe? \\
+TOP-01 & If compressor UT-CMP trips, which production units lose their air supply? & & \\
+TOP-02 & Which units are downstream of the Line 1 pasteuriser? & & \\
+TOP-03 & List every asset belonging to Bottling Line 1. & & \\
+TOP-04 & Which chiller serves the Line 2 filler? & & \\
+TOP-05 & Which line would be affected by taking Chiller 1 out of service, and which units? & & \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{An example of the same fact in five conditions}
+
+\begin{lstlisting}[language=jsonl,float=*,floatplacement=t,caption={The Line 1
+filler outlet pressure as each condition renders it. C0 and C1 are the whole
+record; C2 and C3/C4 are excerpts. The information content differs, not merely
+the syntax.},label={lst:conditions}]
+# C0  (raw tag list)
+L1_FIL_PT0301_PV=3
+
+# C1  (historian CSV)
+"L1_FIL_PT0301_PV","Outlet pressure","bar","3"
+
+# C2  (typed information model: OPC UA / AAS projection)
+{"NodeId":"ns=3;s=L1.FIL.PT0301.PV","BrowseName":"L1_FIL_PT0301_PV",
+ "DisplayName":"Outlet pressure","ParentObject":"L1-FIL","DataType":"Double",
+ "AccessLevel":"CurrentRead","EngineeringUnits":{"DisplayName":"bar",
+ "Description":"Pressure"},"EURange":{"Low":0.0,"High":6.0},
+ "Role":"measurement","Value":3.0,"SemanticId":"0173-1#02-AAA731#004",
+ "AlarmLimits":{"Low":null,"High":4.98}}
+
+# C3 / C4  (RDF, Turtle)
+plant:signal/L1_FIL_PT0301_PV a sio:Signal ; skos:notation "L1_FIL_PT0301_PV" ;
+  rdfs:label "Outlet pressure" ; sio:belongsTo plant:L1-FIL ;
+  qudt:unit unit:BAR ; qudt:hasQuantityKind qk:Pressure ;
+  sio:engineeringLow 0 ; sio:engineeringHigh 6 ;
+  sio:accessMode "r" ; sio:signalRole "measurement"
+  ; sio:semanticId "0173-1#02-AAA731#004" ; sio:alarmHigh 4.98 .
+plant:obs/L1_FIL_PT0301_PV a sosa:Observation ;
+  sosa:observedProperty plant:signal/L1_FIL_PT0301_PV ;
+  sosa:resultTime "2026-07-14T02:20:00Z" ;
+  sosa:hasResult [ qudt:numericValue 3 ; qudt:unit unit:BAR ] .
+unit:BAR a qudt:Unit ; qudt:symbol "bar" ; qudt:hasQuantityKind qk:Pressure ;
+  qudt:conversionMultiplier 100000 ; qudt:conversionOffset 0 ;
+  sio:dimensionVector "L^-1.M^1.T^-2" .
+plant:L1-FIL a sio:Filler ; rdfs:label "Line 1 Rotary Filler" ;
+  sio:isa95Level "WorkUnit" ; sio:isPartOf plant:L1
+  ; sio:isFedBy plant:L1-PAS ; sio:feeds plant:L1-CAP
+  ; sio:packMLState "Execute"
+  ; sio:legalCommand "Abort", "Hold", "Stop", "Suspend" .
+\end{lstlisting}
+
+Reading Listing~\ref{lst:conditions} downwards is the argument of this paper in
+one page: C0 states a number; C1 states a number with a name; C2 states a typed,
+bounded, permissioned number attached to a machine; C3 makes the unit
+\emph{computable} and the machine \emph{located in a plant}; C4 states what may
+be done to the machine right now. Only the last of these lets an agent be
+prevented from doing something wrong.

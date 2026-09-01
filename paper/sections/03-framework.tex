@@ -1,0 +1,191 @@
+\section{The agent-usability framework}
+\label{sec:framework}
+
+\subsection{Design rationale}
+
+An agent is not a data consumer in the classical sense. It does not integrate
+two systems once, at engineering time, with a human present to resolve
+ambiguity. It receives a natural-language goal, must resolve it against a plant
+it has never seen, must decide what evidence it needs, must act, and must be
+prevented from acting wrongly, continuously, unsupervised, at inference time.
+The framework below asks, of each technology, what it contributes to that loop.
+
+Each criterion is stated as a capability the technology either grants or
+withholds, together with the concrete agent failure it prevents. The four-point
+rubric is in Appendix~\ref{app:rubric}.
+
+\subsection{The ten criteria}
+
+\paragraph{U1: Identity and resolvability.}
+Does the technology assign globally unique, stable, ideally dereferenceable
+identifiers to concepts \emph{and} to instances, and can an agent get from a
+human phrase to such an identifier? IRDIs and IRIs do this; a historian tag name
+does not, because it is unique only inside one system and its meaning is carried
+by an unwritten naming convention. \emph{Prevents:} referring to the wrong
+physical thing; silently conflating homographs.
+
+\paragraph{U2: Type system and schema exposure.}
+Are classes, properties, datatypes, cardinalities, value ranges, enumerations
+and access rights machine-readable, and can the agent \emph{introspect} them at
+run time rather than being told about them out of band? \emph{Prevents:}
+malformed calls; writes to read-only variables; out-of-range setpoints;
+invented properties.
+
+\paragraph{U3: Quantity and unit semantics.}
+Is a value bound to a \emph{quantity kind} and a \emph{unit} with a declared
+dimension and conversion, or merely to a display string? A unit symbol is
+decoration; a dimension vector plus an affine conversion is a calculus.
+\emph{Prevents:} the Mars-Climate-Orbiter class of error, meaning dimensionally
+absurd assignments, and worse, dimensionally \emph{correct} assignments at the
+wrong scale, which no type checker catches.
+
+\paragraph{U4: Relational expressivity.}
+Can the model express mereology (part--whole, ISA-95 hierarchy), topology
+(material and utility flow), and arbitrary typed relations, with transitivity
+where it applies? \emph{Prevents:} inability to scope a query
+(``\emph{Line~1} tags''), to propagate impact (``if the compressor trips''), or
+to authorise by containment.
+
+\paragraph{U5: Behavioural and action semantics.}
+Does the model describe what may be \emph{done}: callable operations with
+signatures, state machines, service interfaces, pre- and post-conditions?
+\emph{Prevents:} commands that are illegal in the current state; plans whose
+steps are individually plausible and jointly impossible.
+
+\paragraph{U6: Constraint and validation semantics.}
+Can the technology express constraints in a form an engine can \emph{check}, as
+opposed to prose in a manual? SHACL shapes, OWL disjointness, interlock guards
+and MTP conditions qualify; a PDF specification does not. \emph{Prevents:}
+everything else, after the fact. This is the criterion that converts an
+LLM's output from a claim into a proposition with a truth value.
+
+\paragraph{U7: Provenance, time and trust.}
+Are observations timestamped, attributed to a source, and versioned; is
+uncertainty or quality representable? \emph{Prevents:} decisions on stale data;
+unfalsifiable answers; inability to audit an agent's reasoning after an
+incident.
+
+\paragraph{U8: Queryability and aggregation pushdown.}
+Is there a standard query language, and can filtering, joining, aggregation and
+transitive traversal be evaluated \emph{outside} the model, returning only the
+answer? \emph{Prevents:} the fundamental scaling failure of context stuffing
+(Experiment~E7).
+
+\paragraph{U9: Context economy.}
+What does the representation cost in tokens per unit of usable fact, and does
+it support projection, so that you can ask for a small, faithful slice?
+\emph{Prevents:}
+budget exhaustion before the relevant evidence is reached, the dominant cause of
+apparent ``reasoning'' failures in long-context agents.
+
+\paragraph{U10: Ecosystem and deployability.}
+Are there open implementations, converters, public reference data, and a
+governance body? A technology that scores well on U1--U9 and has no runtime is a
+research proposal. \emph{Prevents:} the project never happening.
+
+\subsection{Non-substitutability}
+
+The framework's substantive claim is that U1--U8 are \emph{orthogonal}: strength
+in one does not compensate for weakness in another. This is not obvious. One
+might reasonably argue that a sufficiently rich type system implies unit safety
+(it does not: \texttt{Double} in \texttt{bar} and \texttt{Double} in \texttt{psi}
+are the same type), or that a complete information model implies behavioural
+safety (it does not: an \opcua{} address space describes the variables of a
+machine, not the order in which its commands are legal).
+
+We test the claim directly. The five context conditions of \S\ref{sec:design}
+add criteria cumulatively, and the five validator tiers do the same. If the
+criteria were substitutable, the curves would saturate early. Instead
+(Figure~\ref{fig:ceiling}, Figure~\ref{fig:guardrails}) each added criterion
+opens a new band of tasks and a new family of detectable faults, and the
+budget sweep shows that no amount of the criteria a representation \emph{has}
+substitutes for one it lacks.
+
+\subsection{The comparison matrix}
+
+Table~\ref{tab:auf-matrix} applies the rubric across the survey. Reading it by
+column rather than by row is instructive.
+
+\begin{table*}[t]
+\centering
+\caption{Agent-usability assessment. Scores $0$--$3$ per the rubric in
+Appendix~\ref{app:rubric}, assessed against what the specification standardises,
+not what individual tools add. \textbf{U1} identity, \textbf{U2} types,
+\textbf{U3} units, \textbf{U4} relations, \textbf{U5} behaviour,
+\textbf{U6} constraints, \textbf{U7} provenance, \textbf{U8} query,
+\textbf{U9} economy, \textbf{U10} ecosystem.}
+\label{tab:auf-matrix}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{@{}llcccccccccc@{}}
+\toprule
+\textbf{L} & \textbf{Technology} & U1 & U2 & U3 & U4 & U5 & U6 & U7 & U8 & U9 & U10 \\
+\midrule
+L0 & ECLASS / ECLASS Advanced          & 3 & 2 & 2 & 1 & 0 & 1 & 0 & 1 & 2 & 3 \\
+L0 & IEC CDD (IEC 61360)               & 3 & 2 & 2 & 1 & 0 & 1 & 0 & 1 & 2 & 2 \\
+L0 & IEC 61987 (process measurement)   & 3 & 2 & 2 & 1 & 0 & 1 & 0 & 1 & 2 & 2 \\
+L0 & ETIM                              & 3 & 2 & 1 & 1 & 0 & 0 & 0 & 1 & 2 & 2 \\
+L0 & GS1 (GTIN/GIAI/EPCIS)             & 3 & 1 & 0 & 1 & 1 & 0 & 2 & 1 & 2 & 3 \\
+\midrule
+L1 & \opcua{} (IEC 62541) core         & 2 & 3 & 1 & 2 & 3 & 1 & 2 & 1 & 1 & 3 \\
+L1 & \opcua{} companion specifications & 3 & 3 & 2 & 2 & 3 & 1 & 2 & 1 & 1 & 3 \\
+L1 & Asset Administration Shell (IDTA) & 3 & 3 & 2 & 2 & 2 & 1 & 2 & 1 & 1 & 3 \\
+L1 & AutomationML (IEC 62714)          & 2 & 3 & 1 & 3 & 1 & 1 & 1 & 0 & 1 & 2 \\
+L1 & MTP (VDI/VDE/NAMUR 2658)          & 2 & 3 & 2 & 2 & 3 & 2 & 1 & 0 & 2 & 2 \\
+L1 & PackML (ISA-TR88.00.02)           & 1 & 2 & 0 & 0 & 3 & 2 & 0 & 0 & 3 & 3 \\
+L1 & ISA-95 / IEC 62264 (B2MML)        & 2 & 2 & 1 & 3 & 1 & 0 & 1 & 0 & 2 & 3 \\
+L1 & DTDL (Azure Digital Twins)        & 2 & 3 & 1 & 3 & 2 & 1 & 1 & 2 & 2 & 2 \\
+L1 & W3C WoT Thing Description 1.1     & 3 & 3 & 2 & 1 & 3 & 1 & 1 & 1 & 2 & 2 \\
+L1 & NGSI-LD (ETSI GS CIM 009)         & 3 & 2 & 2 & 3 & 1 & 1 & 3 & 2 & 2 & 2 \\
+L1 & MTConnect                         & 2 & 3 & 2 & 2 & 1 & 0 & 2 & 1 & 2 & 2 \\
+L1 & IEC 61850                         & 3 & 3 & 2 & 2 & 2 & 1 & 2 & 0 & 1 & 3 \\
+L1 & Sparkplug B                       & 2 & 2 & 1 & 1 & 1 & 0 & 2 & 0 & 3 & 3 \\
+\midrule
+L2 & RDF / RDFS                        & 3 & 2 & 0 & 3 & 0 & 0 & 1 & 3 & 1 & 3 \\
+L2 & OWL 2 (EL/QL/RL/DL)               & 3 & 3 & 0 & 3 & 0 & 2 & 0 & 2 & 1 & 3 \\
+L2 & SHACL                             & 2 & 3 & 1 & 2 & 1 & 3 & 1 & 2 & 2 & 3 \\
+L2 & SPARQL 1.1                        & 2 & 1 & 0 & 3 & 0 & 1 & 1 & 3 & 3 & 3 \\
+L2 & JSON-LD 1.1                       & 3 & 1 & 0 & 2 & 0 & 0 & 1 & 1 & 2 & 3 \\
+L2 & SKOS                              & 3 & 1 & 0 & 2 & 0 & 0 & 0 & 2 & 3 & 3 \\
+L2 & PROV-O                            & 3 & 2 & 0 & 3 & 1 & 0 & 3 & 2 & 2 & 2 \\
+L2 & R2RML / RML / OBDA                & 2 & 2 & 0 & 2 & 0 & 0 & 1 & 3 & 3 & 2 \\
+\midrule
+L3 & QUDT                              & 3 & 2 & 3 & 1 & 0 & 2 & 0 & 2 & 2 & 2 \\
+L3 & SOSA / SSN                        & 3 & 2 & 1 & 2 & 1 & 0 & 3 & 2 & 2 & 3 \\
+L3 & Brick                             & 3 & 3 & 1 & 3 & 0 & 1 & 0 & 3 & 2 & 3 \\
+L3 & Project Haystack                  & 2 & 2 & 2 & 2 & 0 & 0 & 1 & 2 & 3 & 3 \\
+L3 & SAREF (+ extensions)              & 3 & 2 & 2 & 2 & 2 & 0 & 1 & 2 & 2 & 2 \\
+L3 & ISO 15926 / RDL                   & 3 & 2 & 2 & 3 & 0 & 1 & 2 & 2 & 0 & 1 \\
+L3 & DEXPI                             & 2 & 3 & 2 & 3 & 0 & 1 & 1 & 1 & 1 & 2 \\
+L3 & IOF / BFO (ISO/IEC 21838)         & 3 & 2 & 1 & 3 & 1 & 1 & 1 & 2 & 1 & 2 \\
+L3 & Catena-X SAMM aspect models       & 3 & 3 & 2 & 2 & 1 & 2 & 2 & 1 & 2 & 2 \\
+L3 & FIWARE Smart Data Models          & 2 & 2 & 2 & 2 & 0 & 1 & 2 & 2 & 2 & 2 \\
+\midrule
+L4 & IDS-RAM / Dataspace Protocol      & 3 & 2 & 0 & 2 & 1 & 2 & 3 & 1 & 1 & 2 \\
+L4 & Gaia-X                            & 3 & 2 & 0 & 2 & 0 & 2 & 3 & 1 & 1 & 2 \\
+L4 & Catena-X / Manufacturing-X        & 3 & 3 & 1 & 2 & 1 & 2 & 3 & 1 & 1 & 2 \\
+L4 & ODRL                              & 2 & 2 & 0 & 2 & 2 & 3 & 2 & 1 & 2 & 2 \\
+L4 & DCAT(-AP)                         & 3 & 1 & 0 & 2 & 0 & 1 & 2 & 2 & 2 & 3 \\
+L4 & W3C VC / DID                      & 3 & 2 & 0 & 1 & 0 & 2 & 3 & 0 & 2 & 2 \\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+Three column-wise observations drive the rest of the paper.
+
+\begin{itemize}
+  \item \textbf{U2 (types) is solved.} A dozen technologies score $3$. This is
+  the industry's genuine achievement and it is why so many ``AI-ready plant
+  data'' offerings look convincing: they surface real types.
+  \item \textbf{U3 (units), U5 (behaviour) and U6 (constraints) are sparse.}
+  Only QUDT scores $3$ on units; only \opcua{} methods, WoT actions, MTP and
+  PackML score $3$ on behaviour; only SHACL and ODRL score $3$ on constraints.
+  Crucially, \emph{no single technology scores $3$ on all three}, so an agent
+  that needs all three, and \S\ref{sec:results} shows it does, must
+  compose several standards.
+  \item \textbf{U9 (economy) is inversely correlated with U2--U7.} The richest
+  models are the most verbose. This is not a criticism of the standards; it is a
+  statement that the semantic layer belongs behind a query interface, not in the
+  prompt.
+\end{itemize}

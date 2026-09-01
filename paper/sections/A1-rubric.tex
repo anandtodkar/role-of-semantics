@@ -1,0 +1,66 @@
+\section{The agent-usability scoring rubric}
+\label{app:rubric}
+
+Scores in Table~\ref{tab:auf-matrix} are assigned against the following rubric.
+A technology is scored on what its \emph{specification} standardises, not on what
+a particular implementation adds, and where a capability is optional or
+extension-dependent the default behaviour is scored.
+
+\begin{table*}[t]
+\centering
+\caption{Four-point rubric for the ten agent-usability criteria.}
+\label{tab:rubric}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{1.6cm}L{3.2cm}L{3.2cm}L{3.2cm}L{3.4cm}@{}}
+\toprule
+& \textbf{0, absent} & \textbf{1, incidental} & \textbf{2, supported} &
+\textbf{3, first class} \\
+\midrule
+U1 identity & names unique only within one system &
+identifiers unique per vendor or per file &
+globally unique identifiers &
+globally unique, versioned and resolvable, with synonym handling \\[2pt]
+U2 types & untyped values & datatype only &
+datatypes, cardinalities and ranges &
+the above plus access rights, enumerations and run-time introspection \\[2pt]
+U3 units & no unit & unit as display string &
+unit identifier from a controlled list &
+quantity kind, dimension vector and affine conversion \\[2pt]
+U4 relations & none & containment only &
+typed relations, non-transitive &
+arbitrary typed relations with transitivity and inverses \\[2pt]
+U5 behaviour & none & operations named but untyped &
+typed operations or commands &
+operations plus a state model with legality conditions \\[2pt]
+U6 constraints & prose only & range or type checks &
+declarative constraints on structure &
+an executable constraint language with reports \\[2pt]
+U7 provenance & none & a single global timestamp &
+per-value timestamp or source &
+per-value time, source, agent and derivation \\[2pt]
+U8 query & fetch whole document & filtered fetch &
+a query language without aggregation &
+query language with joins, aggregation and path traversal \\[2pt]
+U9 economy & serialisation only, very verbose &
+verbose with partial fetch & compact or projectable &
+compact \emph{and} projectable to a minimal faithful slice \\[2pt]
+U10 ecosystem & specification only & one implementation &
+multiple implementations, some open &
+open implementations, converters, public reference data, active governance \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Worked examples.}
+\opcua{} scores U2~$=3$ because \texttt{AccessLevel}, \texttt{DataType} and
+\texttt{EURange} are all readable from the address space at run time, and
+U3~$=1$ because \texttt{EUInformation} carries a display string and a
+UN/CEFACT code but no dimension algebra. PackML scores U5~$=3$ on a state model
+alone and U1~$=1$ because it standardises state names, not identifiers.
+SHACL scores U6~$=3$ and U3~$=1$: it can \emph{check} a unit if the graph
+supplies one but contributes no unit semantics itself. QUDT scores U3~$=3$ and
+U5~$=0$. The pattern of high scores concentrated in one or two columns per
+technology is the empirical content of the non-substitutability claim.
+
+\clearpage

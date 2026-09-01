@@ -1,0 +1,5 @@
+rdflib>=7.0
+pyshacl>=0.26
+numpy>=1.26
+pandas>=2.1
+matplotlib>=3.8

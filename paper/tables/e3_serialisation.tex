@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{E3: token bill of the identical plant in each interchange format (17 assets\, 73 signals\, 2\,465 triples).}
+\label{tab:e3-serialisation}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lrrr}
+\toprule
+Serialisation & KiB & Tokens & vs.\ CSV \\
+\midrule
+Historian CSV (tags only) & 3.8 & 2\,256 & 1.0$\times$ \\
+NGSI-LD entities (JSON-LD) & 18.4 & 11\,233 & 5.0$\times$ \\
+WoT Thing Descriptions (JSON-LD) & 31.1 & 18\,471 & 8.2$\times$ \\
+RDF Turtle (full KG) & 99.3 & 45\,803 & 20.3$\times$ \\
+OPC UA NodeSet2 (XML) & 112.6 & 52\,324 & 23.2$\times$ \\
+AAS Environment (JSON, IDTA v3) & 121.5 & 65\,929 & 29.2$\times$ \\
+RDF JSON-LD (expanded) & 311.6 & 145\,216 & 64.4$\times$ \\
+RDF N-Triples (full KG) & 328.2 & 179\,276 & 79.5$\times$ \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize Semantic richness is not free. An agent cannot be handed a NodeSet2 or an AAS environment directly; the graph must be \emph{queried}, and the answer, rather than the model, placed in the window.\end{minipage}
+\end{table*}

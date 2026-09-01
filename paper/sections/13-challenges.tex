@@ -1,0 +1,90 @@
+\section{Open challenges and a research roadmap}
+\label{sec:challenges}
+
+\paragraph{R1: The ontology construction bottleneck.} No public domain
+ontology covers a bottling line, a paper machine or a battery cell assembly at
+the granularity an agent needs, and hand-building one per plant does not scale.
+The promising direction is bootstrapping from artefacts that already encode the
+structure, \opcua{} address spaces, AutomationML instance hierarchies, P\&IDs
+via DEXPI, PLC projects via PLCopen~XML, with an LLM proposing the alignment
+and a formal checker accepting or rejecting it. The research question is not
+whether models can draft ontologies (they can) but how to obtain a
+\emph{soundness guarantee} on the result; our lift-validate-repair pattern is
+one answer, and its limits are unexplored.
+
+\paragraph{R2: Publishing constraints, not just data.} Interlocks, operating
+envelopes and safety conditions are the highest-value semantic content in a plant
+and the least likely to be machine-readable. We see no technical obstacle to a
+standardised \emph{constraint submodel}, SHACL shapes or an equivalent, carried
+alongside an AAS or an \opcua{} companion model, versioned and signed. This is,
+in our view, the single most useful standardisation action the community could
+take for agent safety.
+
+\paragraph{R3: Temporal and streaming semantics.} We modelled observations as
+points. Real industrial reasoning is about trends, windows, rates of change and
+episodes. RDF-star, named graphs and stream-reasoning proposals exist but no
+convention has taken hold, and the token economics of putting time series in a
+context window are hopeless. The likely answer is the E7 pattern generalised:
+temporal aggregation as a tool, with the semantic layer describing what the
+series \emph{is} and the engine computing over it.
+
+\paragraph{R4: Text-to-query accuracy over industrial schemas.} The query
+architecture we recommend transfers the accuracy problem to query generation.
+Industrial graphs are unlike the encyclopaedic graphs on which text-to-SPARQL is
+usually evaluated: schemas are deeper, identifiers are opaque, and errors are
+consequential. A benchmark for query generation over standardised industrial
+models, with execution-based scoring and a distinction between wrong and
+unsafe, does not exist and should.
+
+\paragraph{R5: Authorisation semantics for autonomous agents.} An agent that
+writes needs the OT analogue of an operator's competency and shift authorisation:
+what may this agent do, to which assets, under which plant states, with what
+human confirmation. ODRL supplies the expression language and IEC~62443
+\cite{iec62443} the security framing, but nothing joins them to the equipment
+model. The
+lift-and-validate pattern extends naturally, validate the proposed action
+against the policy graph as well as the plant graph, and the composition is
+unstudied.
+
+\paragraph{R6: Benchmarks with actions and consequences.} Existing grounding
+and hallucination benchmarks evaluate answers. Industrial agents emit actions,
+and the interesting metrics are asymmetric: a missed detection and a false alarm
+have very different costs, and both differ by fault family. The corpus released
+with this paper is a starting point, twelve labelled fault families with a
+valid control set, but it is one plant and synthetic. A community benchmark
+built from anonymised real installations, with severity-weighted scoring, is
+needed.
+
+\paragraph{R7: Semantic model verification as a first-class problem.} If
+agents are to depend on the semantic layer, the semantic layer must itself be
+verified: are the units on these two tags consistent with the equation that
+relates them, does the declared topology match the P\&ID, is the interlock model
+equivalent to the ladder logic it claims to represent? Each of these is a
+decidable check, none is routine practice, and an incorrect semantic layer is
+more dangerous than none because it is trusted.
+
+\paragraph{R8: Learned projection policies.} Finding~F10 shows that deciding
+\emph{which semantic layer a question needs} is worth more than enlarging the
+context window, and that a lexicon of surface cues already recovers most of the
+gap. A learned router, trained on the fact kinds a question turns out to
+require, which the benchmark supplies as labels, should do better, and would
+turn context assembly into an optimisation problem with a measurable objective
+(coverage per token) rather than a heuristic. The same machinery would decide
+when to stop projecting and issue a query instead, which is currently a manual
+design decision.
+
+\paragraph{R9: Retiring convention-carried semantics.} Finding~F9 shows that
+a substantial share of an un-grounded system's competence rests on tag
+mnemonics, and that the same inference becomes an active liability in plants
+where the convention has decayed. Detecting that decay is tractable and, as far
+as we know, unattempted: an agreement check between what a tag name asserts and
+what the information model states would flag exactly the tags on which a
+language model will be confidently wrong. Every plant with a hand-maintained
+cross-reference spreadsheet already knows it needs this.
+
+\paragraph{R10: Measuring the operator.} Finding~F4, that weak validation
+over-blocks, has a human consequence we did not measure. The rate at which an
+assistant refuses legal instructions is plausibly a stronger determinant of
+adoption than its error rate, and it is directly controlled by the quality of the
+semantic layer. This connects semantic engineering to trust calibration, and is
+straightforwardly testable.

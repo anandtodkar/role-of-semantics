@@ -1,0 +1,59 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Industrial automation spent three decades building machine-readable meaning for
+a purpose that has now changed. The standards were written so that two machines
+could agree; they turn out to be the scaffolding that lets a language model be
+\emph{right on purpose} rather than by coincidence.
+
+This survey mapped that landscape through an agent's eyes and then tested the map.
+The map says that ``semantics'' decomposes into ten separable capabilities, and
+that industrial standardisation has solved the typing problem far more completely
+than the unit, behaviour, constraint and provenance problems. The test says that
+this imbalance is expensive. A fully typed information model, the state of
+practice and the endpoint of most industrial AI programmes, supports
+\CeilingCTwo{} of our task suite, catches \RecallGTwo{} of faulty agent actions,
+raises false alarms on \FPRGTwo{} of legal ones, forbids three quarters of the
+legal action space, and does not improve when given a context window
+$32\times$ larger. Adding a unit calculus, a plant graph, a behavioural model,
+an explicit interlock model and observation provenance takes the same suite to
+\CeilingCFour{}, guardrail recall to \RecallGFour{} with no false alarms, and
+action-space precision to \ActPrecGFour{} at full recall.
+
+Three recommendations follow, in order of return on effort. \emph{Adopt a unit
+ontology}: it is small, mechanical, and it eliminates both a class of silent
+errors and a class of false alarms. \emph{Publish the behaviour and the
+constraints}, namely the PackML states, the interlock guards and the operating envelopes,
+as models rather than as ladder logic and PDFs. They already exist, and they
+are the only thing that catches the failures that matter. \emph{Put the semantic
+layer behind a query interface and a validator}, not into the prompt: serialised
+industrial models cost up to $\MaxSerialRatio\times$ the tokens of a tag list and
+still cannot answer a plant-wide question that a $222$-token query answers
+exactly.
+
+Two objections deserve the answers we measured rather than the answers we
+assumed. The first is that tag names already carry the semantics, so none of
+this is needed. They partly do, a resolver that decodes mnemonics reaches
+\ConvMnemonicDecoded{} on the convention it was built for, but the capability
+swings by \ConvSpreadCOnePlusconv{} points across plants and, where a
+convention has stopped being truthful, produces confident errors at
+\ConvLyingWrong{}. Semantics carried by a convention is semantics on which an
+agent cannot be corrected. The second is that richer models simply cost more
+context than they are worth. At a fixed budget they do, until the retrieval
+layer is told to fetch the semantic layer a question actually needs, at which
+point the ceiling rises from \RouteCFourNeighCeiling{} to
+\RouteCFourRoutedCeiling{} at identical cost. Richness is not expensive;
+projecting it badly is.
+
+The broader point is methodological. Debate about agent reliability tends to
+focus on the model, its scale, its reasoning, its prompt. In an industrial
+setting a large part of the reliability is decided before the model is invoked,
+by whether the representation makes the right answer \emph{expressible} and the
+wrong answer \emph{refutable}. That is a property of the data layer, it is
+measurable. As the ceiling curves show, no amount of model capability
+compensates for getting it wrong.
+
+Every number in this paper is reproducible offline with one command. We hope the
+benchmark, the fault taxonomy and the agent-usability framework are more useful
+than the specific figures, which belong to one synthetic plant. The figures will
+change; the ordering, we expect, will not.

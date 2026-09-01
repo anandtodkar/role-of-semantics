@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\caption{E8: grounding under five tag naming conventions. Descriptions, relations, units, ranges, states and values are identical in every row; only the identifier strings differ. Cells are top-1 accuracy with the fraction resolved \emph{confidently to the wrong tag} in parentheses.}
+\label{tab:e8-convention}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llcccc}
+\toprule
+Naming scheme & Example & C1 & C1+conv & C2+conv & C4 \\
+\midrule
+ISA-5.1 mnemonic (baseline) & \texttt{L1\_FIL\_PT0301\_PV} & 0.79\,(0.21) & 0.95\,(0.05) & 0.95\,(0.05) & 1.00\,(0.00) \\
+sequential I/O address & \texttt{AI\_04213} & 0.53\,(0.47) & 0.53\,(0.47) & 0.95\,(0.05) & 1.00\,(0.00) \\
+KKS / RDS-PP designation & \texttt{=1LCA10CP001XQ01} & 0.89\,(0.11) & 0.89\,(0.11) & 0.95\,(0.05) & 1.00\,(0.00) \\
+OEM browse path & \texttt{Krones.Modulfill.Ch17.Value} & 0.42\,(0.58) & 0.42\,(0.58) & 0.95\,(0.05) & 1.00\,(0.00) \\
+mnemonic, but misleading & \texttt{L2\_PAS\_PT0301\_PV} & 0.84\,(0.16) & 0.63\,(0.37) & 0.95\,(0.05) & 1.00\,(0.00) \\
+\midrule
+\emph{spread across conventions} &  & \textbf{0.47} & \textbf{0.53} & \textbf{0.00} & \textbf{0.00} \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize \textbf{C1} = description text only. \textbf{C1+conv} = description $+$ decoded mnemonic. \textbf{C2+conv} = typed model $+$ decoded mnemonic. \textbf{C4} = resolve the asset, then search its scope. Decoding the mnemonic is the strongest available reading of an un-grounded catalogue, and on the convention it was built for it nearly matches a typed model. It is also the only resolver whose accuracy \emph{falls} when the convention stops being truthful, and the only one whose accuracy varies with the convention at all.\end{minipage}
+\end{table*}

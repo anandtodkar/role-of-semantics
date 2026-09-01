@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\caption{E7: answering by query execution instead of context stuffing.}
+\label{tab:e7-sparql}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llrrrrrcr}
+\toprule
+Task & SPARQL probe & Query & Rows & Result & Total & C4 tok. & Suff.? & Saving \\
+\midrule
+UNI-05 & Total electrical power drawn by the utilities area, unit-normalised & 152 & 1 & 1 & 153 & 5\,373 & \checkmark & 35.1$\times$ \\
+RNG-04 & Every tag in the plant whose latest observation violates an alarm limit & 197 & 1 & 25 & 222 & 741 & $\times$ & 3.3$\times$ \\
+TOP-02 & Transitive downstream closure of the Line 1 pasteuriser & 56 & 3 & 23 & 79 & 5\,461 & \checkmark & 69.1$\times$ \\
+TOP-03 & Every asset belonging to Bottling Line 1 & 62 & 5 & 77 & 139 & 5\,172 & \checkmark & 37.2$\times$ \\
+ACT-04 & Line 1 units that accept Start in their current PackML state & 76 & 1 & 8 & 84 & 5\,172 & \checkmark & 61.6$\times$ \\
+SAF-04 & Writable Line 1 tags protected by an interlock & 101 & 3 & 140 & 241 & 5\,172 & \checkmark & 21.5$\times$ \\
+PRV-04 & Alarms upstream of the Line 1 capper in the preceding five minutes & 172 & 3 & 115 & 287 & 5\,492 & \checkmark & 19.1$\times$ \\
+GRD-01 & Grounded lookup of one homograph-laden mention & 130 & 1 & 19 & 149 & 5\,501 & \checkmark & 36.9$\times$ \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize All queries execute against the same RDF graph and return the correct answer. \emph{Suff.?} records whether the stuffed C4 context contained every required fact. RNG-04 is a plant-wide sweep: it is unanswerable by stuffing at any budget, yet costs 222 tokens as a query.\end{minipage}
+\end{table*}

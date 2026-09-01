@@ -1,0 +1,78 @@
+\section{Layer L4: dataspaces, policy and trust}
+\label{sec:layer4}
+
+An agent that reads a plant is an internal matter. An agent that reasons across
+a supply chain, comparing a supplier's carbon-footprint declaration with its
+own, or correlating a component's field failures with the batch data of the firm
+that made it, crosses an organisational boundary, and at that boundary two new
+questions become semantic rather than administrative: \emph{may I use this?} and
+\emph{can I believe it?}
+
+\subsection{IDS and the Dataspace Protocol}
+
+The International Data Spaces reference architecture \cite{idsa2022ram}, and the
+Dataspace Protocol that grew out of it, define sovereign data exchange between
+organisations:
+identity and attestation for participants, connectors that mediate every
+transfer, catalogues that advertise datasets with DCAT metadata, and
+\emph{usage policies} attached to the data itself and enforced at the receiving
+connector. Eclipse Dataspace Components provides the reference implementation.
+
+\paragraph{Agent affordance.} Usage policy is the important part, and it is
+genuinely semantic. A dataset that arrives annotated with ``may be used for
+quality analysis, may not be redistributed, must be deleted after 90 days'' is
+carrying constraints an agent can be \emph{prevented from violating}, in the
+same mechanical way SHACL prevents an out-of-range setpoint. As agents acquire
+memory and autonomy this stops being a compliance detail: an agent that
+summarises a partner's confidential process data into its own long-term memory
+has, silently, redistributed it.
+
+\subsection{ODRL: policy as a checkable expression}
+
+The Open Digital Rights Language \cite{w3c2018odrl} expresses permissions,
+prohibitions and duties over assets, with constraints (purpose, time, spatial
+scope, count) and parties.
+It is, structurally, SHACL for entitlement, and it is the only L4 technology
+scoring $3$ on U6. The parallel is worth taking seriously as an architecture:
+the same lift-and-validate pattern of \S\ref{sec:shacl} applies unchanged, with
+the ODRL policy graph in place of the shapes graph, and the agent's proposed
+\emph{use} in place of its proposed \emph{action}. We regard the unification of
+action guardrails and usage guardrails under one validation step as the natural
+next step for industrial agent middleware.
+
+\subsection{Gaia-X, Catena-X, Manufacturing-X}
+
+Gaia-X provides the federated trust framework, self-descriptions,
+verifiable credentials, compliance rules, rather than data models. Catena-X
+applies it to the automotive value chain and supplies the semantic content
+(SAMM aspect models, \S\ref{sec:layer3}) that makes shared data interpretable;
+Manufacturing-X generalises the pattern across manufacturing sectors.
+
+\paragraph{Assessment.} From an agent's standpoint the significant contribution
+of the -X initiatives is not the infrastructure but the insistence that
+\emph{every shared dataset has a versioned, machine-readable semantic model}.
+That single governance rule does more for cross-company agent reasoning than any
+protocol choice: it means an agent encountering a partner's data can retrieve the
+aspect model, generate a typed accessor and validate what it receives, instead of
+inferring structure from examples.
+
+\subsection{DCAT, W3C Verifiable Credentials and DIDs}
+
+DCAT (and DCAT-AP) describes datasets, distributions, services and their
+provenance, the discovery layer an agent needs before it can decide what to
+retrieve. Verifiable Credentials and Decentralised Identifiers supply
+cryptographically checkable claims about participants and about data. Together
+they make \emph{trust} a data property rather than a network property, which is
+the precondition for an agent weighing conflicting evidence from sources of
+different standing.
+
+\subsection{Summary of L4, and a caution}
+
+L4 is the least mature layer and the one furthest from the plant floor, and we do
+not exercise it in the experiments. We include it because the trajectory is
+clear: agents are moving from reading one plant to reasoning across many
+organisations, and the semantics of \emph{permission} and \emph{provenance} will
+become as operationally important as the semantics of pressure. The caution is
+that L4's own vocabularies remain thin on U3 and U5, policy without a domain
+model still cannot tell an agent whether an action is physically safe, only
+whether it is contractually allowed.

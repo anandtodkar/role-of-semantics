@@ -1,0 +1,220 @@
+\section{Experimental design}
+\label{sec:design}
+\subsection{Objective and guiding constraint}
+
+We want to attribute accuracy differences to \emph{representations}, not to
+models. That rules out the obvious design, prompt a frontier LLM under
+different context conditions, for three reasons: results would expire with the
+next model release; sampling noise would swamp several of the effects; and any
+delta would confound the representation with the model's prior familiarity with
+the notation. We therefore hold the reader constant by removing it, and measure
+properties that bound what \emph{any} reader can do. Where a real model is
+available, the artefact includes an adapter that runs the identical suite
+(\S\ref{sec:llm-adapter}).
+
+\subsection{The reference plant}
+
+A two-line beverage bottling facility with utilities: \NAssets{} assets and
+\NSignals{} signals, generated from one declarative specification and projected
+into seven representations. The plant is small enough to be fully inspectable and
+large enough to exhibit the pathologies that matter. Those pathologies are
+deliberate and are the experimental treatment:
+
+\begin{itemize}
+  \item \textbf{Homographs.} \NHomographs{} description strings are shared by two
+  or more tags. ``Outlet pressure'' appears on both fillers, both pasteurisers
+  and the compressor; ``Carousel speed'' on fillers and labellers; ``PackML unit
+  current state'' on every unit.
+  \item \textbf{Unit heterogeneity.} Line~1 is metric (\texttt{bar},
+  \texttt{degC}, \texttt{L/min}); Line~2 is a 2016 retrofit in \texttt{psi},
+  \texttt{degF} and \texttt{m3/h}. Recipes are specified in \texttt{bar} and
+  \texttt{mL} regardless of line.
+  \item \textbf{Measurement/setpoint pairs.} Every controlled loop exposes a
+  read-only \texttt{PV} beside a writable \texttt{SP} with near-identical
+  descriptions.
+  \item \textbf{Invisible constraints.} Four interlocks gate writes on
+  conditions that appear nowhere in the tag list: accumulated pasteurisation
+  units, the filler's PackML state, and whether a CIP cycle is running.
+  \item \textbf{Cross-asset dependency.} Fourteen \texttt{feeds} relations link
+  utilities to production units and units to each other; none of them is
+  inferable from tag names.
+\end{itemize}
+
+The full plant, the ontology, the SHACL shapes and every task are in the
+artefact; Appendix~\ref{app:artifacts} lists the files.
+
+\subsection{Context conditions C0--C4}
+
+The five conditions form a cumulative ablation of the AUF criteria
+(Table~\ref{tab:conditions}). Each is a \emph{projection} of the same facts, in
+its own native syntax, so the differences measured are differences of
+representation rather than of content.
+
+\begin{table*}[t]
+\centering
+\caption{The five context conditions. Each row adds capabilities and keeps
+everything above it.}
+\label{tab:conditions}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}L{1.1cm}L{3.2cm}L{6.6cm}L{3.5cm}@{}}
+\toprule
+\textbf{Cond.} & \textbf{Counterpart in practice} & \textbf{Fact kinds added} &
+\textbf{AUF criteria} \\
+\midrule
+C0 & OPC~DA tag list / PLC symbol table & value &, \\
+C1 & historian or SCADA CSV export & description, unit \emph{symbol} & U1 (weak) \\
+C2 & \opcua{} NodeSet2 / AAS submodels & quantity kind, EU range, alarm limits,
+access mode, role, asset membership, ISA-95 parentage, nameplate,
+\texttt{semanticId} & U1, U2 \\
+C3 & + RDF/OWL, QUDT, Brick, ISA-95 & unit dimension and conversion, material and
+utility topology, class taxonomy, location & + U3, U4 \\
+C4 & + PackML, interlock model, SOSA/PROV & PackML state and legal command set,
+interlock guards, observation time, event log, recipe parameters &
++ U5, U6, U7 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{Retrieval.} Conditions C0--C2 have no graph, so they use the retriever
+they can support: TF-IDF cosine over the records, indexed \emph{only} over the
+fields that condition exposes, an agent given a bare tag list cannot search
+descriptions it was never shown. C3 and C4 resolve the entities named in the
+question against the asset taxonomy and then traverse typed relations from them,
+re-ranking the reachable neighbourhood so that the skeleton (assets, relations)
+and any referenced constraints precede bulk signal data.
+
+\paragraph{Budget.} All conditions are given the same context budget, \TokenBudget{}
+tokens by default, because a token budget is the constraint that actually binds
+in production. Where a condition carries a unit ontology, $15\%$ of the budget is
+reserved for the QUDT definition block: conversion factors are schema, not
+payload.
+
+\subsection{Validator tiers G0--G4}
+
+Symmetrically, five tiers of pre-execution validation, each corresponding to the
+semantic assets a deployment actually has (Table~\ref{tab:e4-tiers}). G0 accepts
+everything. G1 checks the JSON call signature. G2 is the pragmatic industrial
+baseline, a tag dictionary with engineering ranges and a unit \emph{string},
+compared literally. G3 adds the RDF graph with SHACL, the QUDT dimensional
+calculus and ISA-95 mereology. G4 adds the PackML behavioural model, the explicit
+interlock model and SOSA/PROV observations.
+
+Tiers G3 and G4 are implemented as one SHACL pass over the whole corpus with
+constraint families filtered per tier, so the two differ only in which semantic
+assets they are permitted to consult, not in engine, encoding or effort.
+
+\subsection{Task suite}
+
+\NTasks{} tasks across eight categories: entity grounding (GRD), unit-correct
+reporting (UNI), limit and range reasoning (RNG), topology and impact analysis
+(TOP), provenance and root cause (PRV), action legality (ACT), interlock and
+safety (SAF), and recipe conformance (REC). Each task declares the \emph{fact
+keys} required to answer it. These are not a subjective judgement: they are the
+atoms a symbolic solver consumes to derive the gold answer, and a context that
+lacks one of them cannot support a grounded answer, only a guess.
+
+\subsection{Metrics}
+
+\paragraph{Grounding (E1).} Top-1 accuracy, mean reciprocal rank and recall@5 of
+the gold tag for the nineteen tasks that name exactly one, plus the count of
+hand-labelled confusable distractors admitted into the top five. We also report
+\emph{verifiable} top-1: the mention is resolved correctly \emph{and} the
+context contains the explicit membership fact, so the resolution can be shown to
+be right rather than merely being right.
+
+\paragraph{Sufficiency and ceiling (E2, E6).} \emph{Fact coverage} is the
+fraction of required facts present in the assembled context. \emph{Ceiling} is
+the fraction of tasks for which coverage is $1$, the accuracy an ideal reader
+that never invents facts would achieve. Reported with Wilson $95\%$ intervals.
+
+\paragraph{Economy (E3).} Tokens for the whole plant in each interchange format,
+and fact coverage per thousand context tokens.
+
+\paragraph{Guardrails (E4).} Over \NCases{} proposed actions (\NFaulty{} faulty
+across twelve families, the remainder valid): detection recall, \emph{diagnosis
+rate} (did the tier name the correct fault family, not merely reject?),
+false-alarm rate on valid actions, and precision.
+
+\paragraph{Action space (E5).} The write action space is enumerated exhaustively
+over $\NSignals{} \times 35 \times 28$ (tag, unit, magnitude) triples and the
+command space over assets $\times$ nine PackML verbs. For each tier we report
+$|A|$, $\log_2|A|$, the bits of reduction against G0, and the precision and
+recall of the admitted set against ground truth.
+
+\paragraph{Query versus stuffing (E7).} For eight tasks, the tokens consumed by a
+SPARQL query plus its result set, against the tokens consumed by the stuffed C4
+context, with a flag for whether that context was in fact sufficient.
+
+\paragraph{Convention robustness (E8).} The plant is re-tagged under
+\NSchemes{} naming conventions, ISA-5.1 mnemonics, sequential I/O addresses,
+KKS designations, OEM browse paths, and a post-merger plant whose mnemonics no
+longer describe the asset they name, with descriptions, relations, units,
+ranges, states and values held constant. Grounding is re-measured under four
+resolver strategies, one of which is permitted to \emph{decode} the mnemonic.
+We report top-1 accuracy, its spread across conventions, and the fraction of
+mentions resolved confidently to the wrong tag.
+
+\paragraph{Projection strategy (E9).} Neighbourhood projection is compared with
+intent-routed projection, in which the constraint, event and recipe layers are
+fetched ahead of payload only when the question gives a reason to. Cues are
+lexical and are available before retrieval, so no gold information is consulted.
+Reported as ceiling, coverage, verifiable grounding and tokens, across the
+budget sweep.
+
+\subsection{Tokenisation}
+
+Token counts use a deterministic byte-pair-encoding surrogate: alphanumeric runs
+split into chunks of at most four characters, punctuation one token each,
+whitespace runs collapsed. This avoids a network dependency and makes the run
+reproducible. Spot checks against a production BPE vocabulary put the absolute
+error below $12\%$; more importantly, the \emph{ratios} between representations,
+which is what every claim here depends on, are stable under either
+tokeniser.
+
+\subsection{The optional LLM adapter}
+\label{sec:llm-adapter}
+
+The artefact includes an adapter that runs the same task suite against a real
+model through an OpenAI-compatible or local endpoint, recording answers,
+validation outcomes and repair rounds. We report no numbers from it, deliberately:
+a single model's score would date the paper and would not support the
+representational claims. It exists so that a reader with a model in hand can
+verify that measured accuracy tracks, and stays below, the ceilings reported
+here.
+
+\subsection{Threats to validity}
+
+\paragraph{Construct validity.} The ceiling measures \emph{evidence presence},
+not answer correctness; a real model may fail on sufficient context. The ceiling
+is therefore an upper bound and should be read as such. Conversely a model may
+guess a fact correctly from naming conventions. Rather than concede this, we
+measure it: Experiment~E1 reports that condition~C1 achieves \GrndTopOneCOne{}
+top-1 grounding, and Experiment~E8 shows that a resolver allowed to decode the
+mnemonic reaches \ConvMnemonicDecoded{}, and that the same resolver varies by
+\ConvSpreadCOnePlusconv{} points across conventions and falls to
+\ConvLyingDecoded{} when the convention stops being truthful. The capability is
+real; it is also unverifiable and non-transferable, which is why we separate
+accuracy from verifiable accuracy throughout.
+
+\paragraph{Internal validity.} Retrieval quality confounds representation
+quality. We mitigate this three ways: every condition is given the strongest
+retriever its representation supports; the budget sweep shows the C2 plateau is
+representational rather than a retrieval artefact (Figure~\ref{fig:ceiling}b);
+and Experiment~E9 isolates the projection strategy explicitly, showing which
+part of the residual C4 shortfall is retrieval and which is representation. The
+residual failure at large budgets (task RNG-04) is a genuine retrieval limit,
+and Experiment~E7 shows the correct remedy is a query, not a bigger window.
+
+\paragraph{External validity.} One synthetic plant of one industry. The
+pathologies are drawn from real installations and the ordering of conditions and
+tiers is unlikely to invert, but the magnitudes are specific to this plant. A
+plant with uniform units would shrink the U3 effect; a plant with more
+interlocks would enlarge the U6 effect. The naming convention is the one
+variable we do vary systematically (E8), and the ordering of resolvers is stable
+across all \NSchemes{} conventions. The artefact is parameterised so that the
+others can be tested.
+
+\paragraph{Conclusion validity.} The corpus sizes are modest ($\NTasks{}$ tasks,
+$\NCases{}$ actions), so we report Wilson intervals throughout and refrain from
+significance claims on the smaller per-family cells.

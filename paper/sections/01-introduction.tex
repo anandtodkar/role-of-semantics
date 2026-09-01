@@ -1,0 +1,143 @@
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{The gap between a competent model and a competent operator}
+
+The current wave of industrial AI rests on a simple observation: a large
+language model that can read a manual, write a query and call a function is,
+in principle, a general-purpose operator's assistant. The demonstrations are
+compelling. Summarise the shift log, explain an alarm, draft the structured
+text for a new interlock, propose a setpoint. The deployments are not. The
+failure is rarely a failure of fluency or even of reasoning; it is a failure of
+\emph{reference}. The model does not know which physical thing the words denote.
+
+Consider a request that any operator answers in three seconds: \emph{``what is
+the outlet pressure of the Line~1 filler?''} In the reference plant used
+throughout this paper, five distinct tags carry the description string
+``Outlet pressure''. Two of them are on fillers, on different production lines,
+commissioned nine years apart; one is calibrated in \texttt{bar} and the other
+in \texttt{psi}. A sixth tag, on the same filler, is the pressure
+\emph{setpoint} rather than the measurement, and is writable where the other is
+not. A model handed a historian export sees six rows of near-identical English
+and a column of numbers. It will answer. It may well answer correctly, because
+the tag mnemonics encode the plant hierarchy for a reader who knows the
+convention. But nothing in the representation makes the answer \emph{checkable},
+and nothing prevents the same model, in the same session, from proposing a write
+to the read-only measurement instead of the setpoint, in the wrong unit, while
+the machine is in a state that forbids the change.
+
+This is the problem that semantic technologies address, and industrial
+automation has been addressing it, at considerable expense, for three decades:
+\opcua{} information models, the Asset Administration Shell, ECLASS property
+dictionaries, AutomationML engineering exchange, ISA-95 equipment hierarchies,
+PackML state machines and the Module Type Package. From the web side, the list
+includes RDF, OWL, SHACL, SPARQL, QUDT, SOSA/SSN and a shelf of domain ontologies. The
+motivation was machine-to-machine interoperability, not machine comprehension.
+The question this paper asks is whether that investment now pays a second
+dividend: \emph{how much of what a language agent needs is already standardised,
+which pieces are missing, and what does each piece actually buy in measurable
+accuracy?}
+
+\subsection{Why this is a survey \emph{and} an experiment}
+
+Surveys of industrial semantic technology exist, and so does a fast-growing
+literature on grounding language models with knowledge graphs. They do not meet.
+Standards surveys evaluate technologies against interoperability requirements
+such as coverage, tool support and conformance, which are the wrong criteria for
+an agent. Knowledge-graph--RAG papers evaluate on open-domain question answering
+over encyclopaedic graphs, where there are no units, no interlocks, no
+read-only variables and no consequence to being wrong.
+
+We therefore do two things at once. First (\S\ref{sec:layer0}--\S\ref{sec:layer4})
+we survey the field through a lens built for agents: a ten-criterion
+\emph{agent-usability framework} (\S\ref{sec:framework}) that asks of every
+technology what it lets an agent \emph{resolve}, \emph{type}, \emph{convert},
+\emph{traverse}, \emph{do}, \emph{check}, \emph{trust}, \emph{query},
+\emph{afford} and \emph{deploy}. Second (\S\ref{sec:design}--\S\ref{sec:results})
+we build a reproducible testbed in which those criteria are ablated one layer at
+a time, and measure the consequences.
+
+The experimental design deliberately avoids benchmarking a particular model.
+Model rankings expire within months, and an accuracy delta measured on one model
+tells you little about the representation, because the reader is not held
+constant. Instead we measure properties of the representation itself:
+
+\begin{itemize}
+  \item \textbf{Grounding.} Can a fixed resolution algorithm map a
+  natural-language mention onto the right tag, given only what this
+  representation exposes?
+  \item \textbf{Sufficiency ceiling.} Does the retrieved context contain
+  \emph{every} fact the question requires? A perfect reader cannot exceed this;
+  a gap here is a gap no prompting, fine-tuning or scaling can close.
+  \item \textbf{Guardrail efficacy.} Of a corpus of faulty agent actions,
+  how many can be \emph{proved} wrong, and how many legal actions are wrongly
+  rejected?
+  \item \textbf{Action-space fidelity.} How much of the emittable call space
+  does the representation eliminate, and does it eliminate the right part?
+  \item \textbf{Context economy.} What does all this cost in tokens, when is
+  it cheaper to run a query than to fill a window, and does a rich
+  representation waste its budget on layers the question never asked about?
+  \item \textbf{Robustness.} How much of the un-grounded baseline's apparent
+  competence is really the tag naming convention, and what happens in a plant
+  whose convention is different, absent, or untruthful?
+\end{itemize}
+
+\subsection{Contributions}
+
+\begin{enumerate}[label=\textbf{C\arabic*.},leftmargin=2.6em]
+  \item \textbf{A layered map of industrial semantics for agents.} We organise
+  42 standards and vocabularies into five layers
+  (L0 identification, L1 information models, L2 formal semantics, L3 domain
+  ontologies, L4 dataspaces) and show that the layers are not interchangeable:
+  each contributes a distinct and non-substitutable agent affordance
+  (\S\ref{sec:framework}--\S\ref{sec:layer4}).
+
+  \item \textbf{The agent-usability framework (AUF).} Ten criteria with a
+  published four-point rubric (Appendix~\ref{app:rubric}), applied uniformly to
+  every surveyed technology, yielding a comparison matrix
+  (Table~\ref{tab:auf-matrix}) that makes the field's blind spots visible: unit
+  semantics, behavioural semantics and constraint semantics are supported by far
+  fewer standards than type semantics.
+
+  \item \textbf{A reproducible industrial grounding benchmark.} A reference
+  bottling plant with \NAssets{} assets and \NSignals{} signals, projected into
+  seven interchange formats (RDF, \opcua{} NodeSet2, AAS~JSON, WoT~TD, NGSI-LD,
+  JSON-LD and a historian CSV) from one declarative source, re-taggable under
+  \NSchemes{} naming conventions, plus \NTasks{} agent tasks with declared
+  evidence requirements and \NCases{} labelled proposed agent actions across
+  twelve fault families (\S\ref{sec:design}).
+
+  \item \textbf{Nine experiments quantifying what each semantic layer buys.}
+  Grounding, sufficiency, serialisation economy, guardrail efficacy,
+  action-space reduction, the accuracy ceiling, query-versus-stuffing,
+  robustness to the tag naming convention, and the effect of intent-routed
+  projection (\S\ref{sec:results}).
+
+  \item \textbf{Ten findings and a design pattern.} Chief among them: a fully
+  typed information model, which is the current state of practice, is a
+  \emph{local optimum} that leaves the most dangerous failure modes undetectable
+  (\S\ref{sec:discussion}); and constraint checking should be treated as a
+  first-class deliverable of the semantic layer rather than a by-product.
+
+  \item \textbf{An open artefact.} Every table, figure and number in this paper
+  is regenerated by \texttt{python run\_experiments.py}, offline, deterministically,
+  in under a minute (Appendix~\ref{app:artifacts}).
+\end{enumerate}
+
+\subsection{The thesis, in one paragraph}
+
+Semantics is not one thing, and the parts of it that industry has standardised
+best are not the parts that agents need most. Identification and typing, the
+mature part of the field, lift entity grounding from \GrndTopOneCZero{} to
+\GrndTopOneCTwo{} and let a validator catch bad references, bad ranges and bad
+permissions. They do essentially nothing for the failures that hurt: a command
+that is illegal in the current machine state, a write that violates an
+interlock, a number that is right in the wrong unit, an answer that contradicts
+the observation it claims to quote. Those require unit ontologies, behavioural
+models, explicit constraint models and provenance, and adding them lifts
+guardrail recall from \RecallGTwo{} to \RecallGFour{} and the task ceiling from
+\CeilingCTwo{} to \CeilingCFour{}. Two corollaries matter commercially: solving
+grounding by shipping a bigger, better-typed catalogue into a bigger context
+window is measurably a dead end (Figure~\ref{fig:ceiling}b); and the competence
+that makes an un-grounded pipeline look adequate is largely the tag naming
+convention, which is semantics that cannot be audited (\S\ref{sec:e8}).

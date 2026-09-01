@@ -1,0 +1,78 @@
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Grounding language models with structure.} Retrieval-augmented
+generation established the general pattern of conditioning generation on
+retrieved evidence \cite{lewis2020rag}, and a substantial line of work has since
+argued that \emph{structured} evidence outperforms passage retrieval when
+questions require aggregation or multi-hop traversal, most visibly the
+community around graph-structured retrieval \cite{edge2024graphrag} and hybrid
+graph/vector systems \cite{sarmah2024hybridrag}. Surveys of knowledge-graph
+augmentation of language models \cite{pan2024unifying} map the design space.
+Our results are consistent with that finding and refine it. In an industrial
+setting the decisive structure is not the entity graph that general-domain
+GraphRAG systems extract from text; it is the \emph{engineering} structure that
+already exists in standards: units, ranges, access rights, topology, state
+machines and interlocks. Text-derived graphs cannot recover this material
+because it was never written in text. Two consequences follow: industrial knowledge-graph
+construction should start from the control and engineering systems rather than
+from document extraction, and the corresponding benchmarks need to include
+actions and constraints, not only questions.
+
+\paragraph{Measuring truthfulness and faithfulness.} Benchmarks such as
+TruthfulQA \cite{lin2022truthfulqa} and fine-grained factuality measures such as
+FActScore \cite{min2023factscore} evaluate free-text claims against reference
+knowledge. Industrial answers differ in kind: they are numeric, unit-bearing and
+tied to a specific asset at a specific time, which makes faithfulness
+\emph{decidable} rather than estimable. Our \textsc{f-value} check
+(\S\ref{sec:layer3}) is one instance. An answer modelled as an observation can
+be compared exactly, by query, with the observation it claims to report.
+
+\paragraph{Tool use and function calling.} The agentic turn rests on models
+emitting structured calls against declared tool schemas
+\cite{schick2023toolformer,yao2023react}, and the evaluation of that capability
+has become a benchmark discipline in its own right \cite{patil2024gorilla}.
+Those evaluations hold the schema fixed and vary the model. We do the reverse:
+Experiment~E5 holds the model out entirely and varies the \emph{schema},
+measuring how much of the error surface a semantically derived schema removes
+before the model is even invoked.
+
+\paragraph{Constraints and neuro-symbolic verification.} The idea of checking
+generated output against a formal specification recurs across program synthesis,
+constrained decoding and schema-guided generation. SHACL
+\cite{knublauch2017shacl} provides the industrial-strength instance of this for
+graph data, and the shapes literature has explored validation and repair. What
+is new here is the application to \emph{agent actions in a physical plant}, where
+the constraint set is not a data-quality convention but the plant's operating
+envelope, and where we can therefore quantify detection and false alarms per
+fault family.
+
+\paragraph{Industrial semantic interoperability.} There is a long tradition of
+work on \opcua{} information modelling, on the Asset Administration Shell as an
+Industrie~4.0 digital twin \cite{idta2023aas}, on AutomationML for engineering
+exchange, and on ontology-based integration in manufacturing. Reviews in this
+tradition evaluate against interoperability criteria such as coverage, mapping
+effort and conformance. That is the right frame for machine-to-machine
+integration and the wrong one for agents. The agent-usability framework of
+\S\ref{sec:framework} is our attempt to supply the missing frame.
+
+\paragraph{Domain ontologies and units.} SOSA/SSN \cite{haller2019ssn} for
+observations, Brick \cite{balaji2016brick} for building equipment, SAREF for
+smart devices, and QUDT \cite{qudt} for quantities and units are the vocabularies
+this paper leans on most. Their design has been evaluated for modelling adequacy;
+their value \emph{as agent infrastructure}, and in QUDT's case its
+disproportionate value, has not, to our knowledge, been quantified before.
+
+\paragraph{LLMs in automation engineering.} A growing body of work applies
+language models to control-code generation, engineering document processing and
+operator assistance, generally reporting that domain context materially improves
+results and that verification remains the open problem. Our study is
+complementary in method: rather than measuring one pipeline end-to-end, we
+isolate the representational variable and bound what any pipeline built on it can
+achieve.
+
+\paragraph{Positioning.} To our knowledge this is the first work to (i) assess
+the industrial semantic technology landscape explicitly against agent-usability
+criteria, (ii) ablate the semantic stack in a controlled testbed with a
+model-independent accuracy ceiling, and (iii) quantify per-fault-family guardrail
+efficacy and action-space fidelity for industrial agent actions.

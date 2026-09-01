@@ -1,0 +1,2665 @@
+@prefix aas: <https://admin-shell.io/aas/3/0/> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix eclass: <https://api.eclass-cdp.com/0173-1%2301-> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plant: <https://w3id.org/semindus/plant/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sio: <https://w3id.org/semindus/ontology#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+qk:Density a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^-3.M^1" .
+
+qk:Energy a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^2.M^1.T^-2" .
+
+qk:Force a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^1.M^1.T^-2" .
+
+unit:A a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:ElectricCurrent ;
+    qudt:symbol "A" ;
+    sio:dimensionVector "I^1" .
+
+unit:CentiM3 a qudt:Unit ;
+    qudt:conversionMultiplier 1e-06 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Volume ;
+    qudt:symbol "cm3" ;
+    sio:dimensionVector "L^3" .
+
+unit:GM a qudt:Unit ;
+    qudt:conversionMultiplier 1e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Mass ;
+    qudt:symbol "g" ;
+    sio:dimensionVector "M^1" .
+
+unit:HR a qudt:Unit ;
+    qudt:conversionMultiplier 3.6e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Time ;
+    qudt:symbol "h" ;
+    sio:dimensionVector "T^1" .
+
+unit:HZ a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Frequency ;
+    qudt:symbol "Hz" ;
+    sio:dimensionVector "T^-1" .
+
+unit:K a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:symbol "K" ;
+    sio:dimensionVector "Theta^1" .
+
+unit:KiloGM a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Mass ;
+    qudt:symbol "kg" ;
+    sio:dimensionVector "M^1" .
+
+unit:KiloGM-PER-HR a qudt:Unit ;
+    qudt:conversionMultiplier 2.777778e-04 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:MassFlowRate ;
+    qudt:symbol "kg/h" ;
+    sio:dimensionVector "M^1.T^-1" .
+
+unit:KiloPA a qudt:Unit ;
+    qudt:conversionMultiplier 1e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:symbol "kPa" ;
+    sio:dimensionVector "L^-1.M^1.T^-2" .
+
+unit:L a qudt:Unit ;
+    qudt:conversionMultiplier 1e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Volume ;
+    qudt:symbol "L" ;
+    sio:dimensionVector "L^3" .
+
+unit:L-PER-SEC a qudt:Unit ;
+    qudt:conversionMultiplier 1e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:VolumeFlowRate ;
+    qudt:symbol "L/s" ;
+    sio:dimensionVector "L^3.T^-1" .
+
+unit:M a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Length ;
+    qudt:symbol "m" ;
+    sio:dimensionVector "L^1" .
+
+unit:M3 a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Volume ;
+    qudt:symbol "m3" ;
+    sio:dimensionVector "L^3" .
+
+unit:MIN a qudt:Unit ;
+    qudt:conversionMultiplier 6e+01 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Time ;
+    qudt:symbol "min" ;
+    sio:dimensionVector "T^1" .
+
+unit:MegaPA a qudt:Unit ;
+    qudt:conversionMultiplier 1e+06 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:symbol "MPa" ;
+    sio:dimensionVector "L^-1.M^1.T^-2" .
+
+unit:MilliBAR a qudt:Unit ;
+    qudt:conversionMultiplier 1e+02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:symbol "mbar" ;
+    sio:dimensionVector "L^-1.M^1.T^-2" .
+
+unit:PA a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:symbol "Pa" ;
+    sio:dimensionVector "L^-1.M^1.T^-2" .
+
+unit:SEC a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Time ;
+    qudt:symbol "s" ;
+    sio:dimensionVector "T^1" .
+
+unit:V a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Voltage ;
+    qudt:symbol "V" ;
+    sio:dimensionVector "L^2.M^1.T^-3.I^-1" .
+
+unit:W a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Power ;
+    qudt:symbol "W" ;
+    sio:dimensionVector "L^2.M^1.T^-3" .
+
+sio:accessMode a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+sio:alarmHigh a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+sio:alarmLow a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+sio:engineeringHigh a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+sio:engineeringLow a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+sio:feeds a owl:ObjectProperty ;
+    rdfs:domain sio:PhysicalAsset ;
+    rdfs:range sio:PhysicalAsset ;
+    owl:inverseOf sio:isFedBy .
+
+sio:guardSignal a owl:ObjectProperty ;
+    rdfs:domain sio:Interlock ;
+    rdfs:range sio:Signal .
+
+sio:hasPart a owl:ObjectProperty ;
+    rdfs:domain sio:PhysicalAsset ;
+    rdfs:range sio:PhysicalAsset ;
+    owl:inverseOf sio:isPartOf .
+
+sio:hasSignal a owl:ObjectProperty ;
+    rdfs:domain sio:PhysicalAsset ;
+    rdfs:range sio:Signal ;
+    rdfs:subPropertyOf ssn:hasProperty .
+
+sio:interlockedBy a owl:ObjectProperty ;
+    rdfs:domain sio:Signal ;
+    rdfs:range sio:Interlock .
+
+sio:isa95Level a owl:DatatypeProperty ;
+    rdfs:domain sio:PhysicalAsset .
+
+sio:opcuaNodeId a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+sio:packMLState a owl:DatatypeProperty ;
+    rdfs:domain sio:PhysicalAsset .
+
+sio:providesService a owl:DatatypeProperty ;
+    rdfs:domain sio:PhysicalAsset .
+
+sio:safetyCritical a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+sio:signalRole a owl:DatatypeProperty ;
+    rdfs:domain sio:Signal .
+
+<https://w3id.org/semindus/plant/event/EV-1001> a prov:Activity,
+        sio:Alarm ;
+    rdfs:comment "Bowl level low-low, filler held"@en ;
+    prov:startedAtTime "2026-07-14T02:15:00+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith plant:L1-FIL ;
+    sio:severity "high" .
+
+<https://w3id.org/semindus/plant/event/EV-1002> a prov:Activity,
+        sio:Alarm ;
+    rdfs:comment "Discharge pressure below low limit"@en ;
+    prov:startedAtTime "2026-07-14T02:11:30+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith plant:UT-CMP ;
+    sio:severity "high" .
+
+<https://w3id.org/semindus/plant/event/EV-1003> a prov:Activity,
+        sio:Maintenance ;
+    rdfs:comment "Air-end bearing replaced, vibration baseline reset"@en ;
+    prov:startedAtTime "2026-06-30T09:00:00+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith plant:UT-CMP ;
+    sio:severity "info" .
+
+<https://w3id.org/semindus/plant/event/EV-1004> a prov:Activity,
+        sio:Alarm ;
+    rdfs:comment "Capping torque out of range on head 7"@en ;
+    prov:startedAtTime "2026-07-14T02:16:10+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith plant:L1-CAP ;
+    sio:severity "medium" .
+
+<https://w3id.org/semindus/plant/event/EV-1005> a prov:Activity,
+        sio:Alarm ;
+    rdfs:comment "Emergency stop pressed, unit aborted"@en ;
+    prov:startedAtTime "2026-07-02T18:40:00+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith plant:L2-LAB ;
+    sio:severity "high" .
+
+<https://w3id.org/semindus/plant/event/EV-1006> a prov:Activity,
+        sio:Alarm ;
+    rdfs:comment "Zone 1 temperature below limit"@en ;
+    prov:startedAtTime "2026-07-14T02:09:45+00:00"^^xsd:dateTime ;
+    prov:wasAssociatedWith plant:L1-PAS ;
+    sio:severity "medium" .
+
+<https://w3id.org/semindus/plant/obs/L1_CAP_ST0402_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-CAP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.2e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_CAP_ST0402_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_CAP_TQ0401_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-CAP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.05e+00 ;
+            qudt:unit unit:N-M ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_CAP_TQ0401_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_CAP_TQC0401_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-CAP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.1e+00 ;
+            qudt:unit unit:N-M ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_CAP_TQC0401_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_CIP_AT0603_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-CIP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.1e+00 ;
+            qudt:unit unit:PERCENT ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_CIP_AT0603_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_CIP_AT0604_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-CIP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.24e+01 ;
+            qudt:unit unit:PH ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_CIP_AT0604_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_CIP_FT0602_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-CIP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4.1e+02 ;
+            qudt:unit unit:L-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_CIP_FT0602_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_CIP_TT0601_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-CIP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 7.9e+01 ;
+            qudt:unit unit:DEG_C ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_CIP_TT0601_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_FT0303_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.8e+02 ;
+            qudt:unit unit:L-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_FT0303_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_KPI0308_OEE> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 7.85e+01 ;
+            qudt:unit unit:PERCENT ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_KPI0308_OEE> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_LIC0304_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 6.2e+01 ;
+            qudt:unit unit:PERCENT ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_LIC0304_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_LT0304_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 6.14e+01 ;
+            qudt:unit unit:PERCENT ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_LT0304_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_PIC0301_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.52e+00 ;
+            qudt:unit unit:BAR ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_PIC0301_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_PT0301_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3e+00 ;
+            qudt:unit unit:BAR ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_PT0301_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_QIC0305_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 5e+02 ;
+            qudt:unit unit:MilliL ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_QIC0305_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_SIC0306_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.2e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_SIC0306_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_ST0306_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.18e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_ST0306_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_FIL_TT0302_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4e+00 ;
+            qudt:unit unit:DEG_C ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_FIL_TT0302_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_LAB_CNT0503_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-LAB ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.42e+02 ;
+            qudt:unit unit:NUM ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_LAB_CNT0503_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_LAB_ST0501_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-LAB ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.15e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_LAB_ST0501_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_LAB_ZT0502_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-LAB ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4e-01 ;
+            qudt:unit unit:MilliM ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_LAB_ZT0502_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_PAS_PT0102_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.1e+00 ;
+            qudt:unit unit:BAR ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_PAS_PT0102_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_PAS_PU0103_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.24e+01 ;
+            qudt:unit unit:UNITLESS ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_PAS_PU0103_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_PAS_TIC0101_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 7.2e+01 ;
+            qudt:unit unit:DEG_C ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_PAS_TIC0101_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L1_PAS_TT0101_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L1-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 7.2e+01 ;
+            qudt:unit unit:DEG_C ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L1_PAS_TT0101_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_CAP_ST0402_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-CAP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.2e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_CAP_ST0402_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_CAP_TQ0401_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-CAP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.05e+00 ;
+            qudt:unit unit:N-M ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_CAP_TQ0401_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_CAP_TQC0401_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-CAP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.1e+00 ;
+            qudt:unit unit:N-M ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_CAP_TQC0401_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_FT0303_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.08e+01 ;
+            qudt:unit unit:M3-PER-HR ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_FT0303_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_KPI0308_OEE> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 7.85e+01 ;
+            qudt:unit unit:PERCENT ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_KPI0308_OEE> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_LIC0304_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 6.2e+01 ;
+            qudt:unit unit:PERCENT ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_LIC0304_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_LT0304_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 6.14e+01 ;
+            qudt:unit unit:PERCENT ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_LT0304_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_PIC0301_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.654e+01 ;
+            qudt:unit unit:PSI ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_PIC0301_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_PT0301_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4.35e+01 ;
+            qudt:unit unit:PSI ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_PT0301_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_QIC0305_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 5e+02 ;
+            qudt:unit unit:MilliL ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_QIC0305_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_SIC0306_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.2e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_SIC0306_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_ST0306_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.18e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_ST0306_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_FIL_TT0302_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-FIL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.92e+01 ;
+            qudt:unit unit:DEG_F ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_FIL_TT0302_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_LAB_CNT0503_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-LAB ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.42e+02 ;
+            qudt:unit unit:NUM ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_LAB_CNT0503_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_LAB_ST0501_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-LAB ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.15e+01 ;
+            qudt:unit unit:REV-PER-MIN ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_LAB_ST0501_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_LAB_ZT0502_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-LAB ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4e-01 ;
+            qudt:unit unit:MilliM ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_LAB_ZT0502_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_PAS_PT0102_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4.495e+01 ;
+            qudt:unit unit:PSI ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_PAS_PT0102_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_PAS_PU0103_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 8.5e+00 ;
+            qudt:unit unit:UNITLESS ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_PAS_PU0103_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_PAS_TIC0101_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.616e+02 ;
+            qudt:unit unit:DEG_F ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_PAS_TIC0101_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/L2_PAS_TT0101_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:L2-PAS ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.616e+02 ;
+            qudt:unit unit:DEG_F ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/L2_PAS_TT0101_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CHL_FT0902_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CHL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 8.4e+01 ;
+            qudt:unit unit:M3-PER-HR ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CHL_FT0902_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CHL_JT0903_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CHL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 2.41e+02 ;
+            qudt:unit unit:KiloW ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CHL_JT0903_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CHL_TIC0901_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CHL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4e+00 ;
+            qudt:unit unit:DEG_C ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CHL_TIC0901_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CHL_TT0901_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CHL ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 4.2e+00 ;
+            qudt:unit unit:DEG_C ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CHL_TT0901_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CMP_JT0803_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CMP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 1.12e+02 ;
+            qudt:unit unit:KiloW ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CMP_JT0803_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CMP_PIC0801_SP> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CMP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 7.5e+00 ;
+            qudt:unit unit:BAR ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CMP_PIC0801_SP> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CMP_PT0801_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CMP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 7.8e+00 ;
+            qudt:unit unit:BAR ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CMP_PT0801_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CMP_TT0802_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CMP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 8.8e+01 ;
+            qudt:unit unit:DEG_C ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CMP_TT0802_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/obs/UT_CMP_VT0804_PV> a sosa:Observation ;
+    sosa:hasFeatureOfInterest plant:UT-CMP ;
+    sosa:hasResult [ a qudt:QuantityValue ;
+            qudt:numericValue 3.2e+00 ;
+            qudt:unit unit:MilliM ] ;
+    sosa:observedProperty <https://w3id.org/semindus/plant/signal/UT_CMP_VT0804_PV> ;
+    sosa:resultTime "2026-07-14T02:20:00+00:00"^^xsd:dateTime .
+
+<https://w3id.org/semindus/plant/product/P-COLA-500> a sio:Product ;
+    rdfs:label "Cola 0.5 L PET"@en ;
+    sio:cap_torque_nm [ qudt:numericValue 2.1e+00 ;
+            qudt:unit unit:N-M ] ;
+    sio:fill_pressure_bar [ qudt:numericValue 2.5e+00 ;
+            qudt:unit unit:BAR ] ;
+    sio:fill_volume_ml [ qudt:numericValue 5e+02 ;
+            qudt:unit unit:MilliL ] ;
+    sio:producedOn plant:L1 ;
+    sio:product_temperature_degC [ qudt:numericValue 4e+00 ;
+            qudt:unit unit:DEG_C ] ;
+    sio:targetRateBPH 36000 .
+
+<https://w3id.org/semindus/plant/product/P-LEMON-1000> a sio:Product ;
+    rdfs:label "Lemonade 1.0 L Glass"@en ;
+    sio:cap_torque_nm [ qudt:numericValue 2.4e+00 ;
+            qudt:unit unit:N-M ] ;
+    sio:fill_pressure_bar [ qudt:numericValue 2.2e+00 ;
+            qudt:unit unit:BAR ] ;
+    sio:fill_volume_ml [ qudt:numericValue 1e+03 ;
+            qudt:unit unit:MilliL ] ;
+    sio:producedOn plant:L2 ;
+    sio:product_temperature_degC [ qudt:numericValue 6e+00 ;
+            qudt:unit unit:DEG_C ] ;
+    sio:targetRateBPH 18000 .
+
+qk:ElectricCurrent a qudt:QuantityKind ;
+    qudt:hasDimensionVector "I^1" .
+
+qk:Frequency a qudt:QuantityKind ;
+    qudt:hasDimensionVector "T^-1" .
+
+qk:MassFlowRate a qudt:QuantityKind ;
+    qudt:hasDimensionVector "M^1.T^-1" .
+
+qk:Voltage a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^2.M^1.T^-3.I^-1" .
+
+sio:CIPSkid a owl:Class ;
+    rdfs:subClassOf sio:ProcessUnit .
+
+sio:Chiller a owl:Class ;
+    rdfs:subClassOf sio:UtilityEquipment ;
+    owl:equivalentClass brick:Chiller .
+
+sio:Compressor a owl:Class ;
+    rdfs:subClassOf sio:UtilityEquipment ;
+    owl:equivalentClass brick:Compressor .
+
+sio:Enterprise a owl:Class ;
+    rdfs:subClassOf sio:PhysicalAsset .
+
+sio:Site a owl:Class ;
+    rdfs:subClassOf sio:PhysicalAsset ;
+    owl:equivalentClass brick:Site .
+
+sio:isFedBy a owl:ObjectProperty ;
+    rdfs:domain sio:PhysicalAsset ;
+    rdfs:range sio:PhysicalAsset .
+
+sio:isPartOf a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:domain sio:PhysicalAsset ;
+    rdfs:range sio:PhysicalAsset .
+
+plant:ENT a sio:Enterprise ;
+    rdfs:label "Global Beverages AG"@en ;
+    skos:notation "ENT" ;
+    sio:criticality "medium" ;
+    sio:hasPart plant:SITE-KA ;
+    sio:isa95Level "Enterprise" ;
+    sio:location "DE" .
+
+<https://w3id.org/semindus/plant/interlock/ILK-01> a sio:Interlock ;
+    rdfs:comment "Product valve may only open when accumulated pasteurisation units >= 15 PU."@en ;
+    sio:guardOperator ">=" ;
+    sio:guardSignal <https://w3id.org/semindus/plant/signal/L1_PAS_PU0103_PV> ;
+    sio:guardValue 1.5e+01 .
+
+<https://w3id.org/semindus/plant/interlock/ILK-02> a sio:Interlock ;
+    rdfs:comment "Fill volume setpoint may only be changed while the filler is Idle, Held or Stopped."@en ;
+    sio:guardOperator "state_in" ;
+    sio:guardSignal <https://w3id.org/semindus/plant/signal/L1_FIL_UNIT_STATE> ;
+    sio:guardValue "Held",
+        "Idle",
+        "Stopped" .
+
+<https://w3id.org/semindus/plant/interlock/ILK-03> a sio:Interlock ;
+    rdfs:comment "Pasteuriser temperature setpoint is locked while a CIP cycle is executing."@en ;
+    sio:guardOperator "state_not_in" ;
+    sio:guardSignal <https://w3id.org/semindus/plant/signal/L1_CIP_UNIT_STATE> ;
+    sio:guardValue "Execute" .
+
+<https://w3id.org/semindus/plant/interlock/ILK-04> a sio:Interlock ;
+    rdfs:comment "Product valve may only open when accumulated pasteurisation units >= 15 PU."@en ;
+    sio:guardOperator ">=" ;
+    sio:guardSignal <https://w3id.org/semindus/plant/signal/L2_PAS_PU0103_PV> ;
+    sio:guardValue 1.5e+01 .
+
+<https://w3id.org/semindus/plant/signal/L1_CAP_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Capper - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L1_CAP_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-CAP ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CAP.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L1_CAP_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Capper - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L1_CAP_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-CAP ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CAP.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L1_CIP_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 CIP Skid - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L1_CIP_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-CIP ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CIP.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L1_FIL_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_XV0307_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Product valve command"@en ;
+    dcterms:description "Product valve command"@en ;
+    qudt:hasQuantityKind qk:Dimensionless ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "Product valve command"@en ;
+    skos:notation "L1_FIL_XV0307_CMD" ;
+    aas:idShort "XV0307Cmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:engineeringHigh 1e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:interlockedBy <https://w3id.org/semindus/plant/interlock/ILK-01> ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.XV0307.CMD" ;
+    sio:safetyCritical true ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L1_LAB_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Labeller - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L1_LAB_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-LAB ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.LAB.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L1_LAB_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Labeller - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L1_LAB_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-LAB ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.LAB.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L1_PAS_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Tunnel Pasteuriser - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L1_PAS_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-PAS ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.PAS.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L1_PAS_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Tunnel Pasteuriser - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L1_PAS_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-PAS ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.PAS.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L2_CAP_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Crowner - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L2_CAP_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-CAP ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.CAP.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L2_CAP_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Crowner - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L2_CAP_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-CAP ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.CAP.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L2_FIL_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L2_FIL_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_XV0307_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Product valve command"@en ;
+    dcterms:description "Product valve command"@en ;
+    qudt:hasQuantityKind qk:Dimensionless ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "Product valve command"@en ;
+    skos:notation "L2_FIL_XV0307_CMD" ;
+    aas:idShort "XV0307Cmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:engineeringHigh 1e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:interlockedBy <https://w3id.org/semindus/plant/interlock/ILK-04> ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.XV0307.CMD" ;
+    sio:safetyCritical true ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L2_LAB_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Labeller - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L2_LAB_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-LAB ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.LAB.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L2_LAB_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Labeller - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L2_LAB_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-LAB ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.LAB.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L2_PAS_UNIT_CMD> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Tunnel Pasteuriser - PackML unit command"@en ;
+    dcterms:description "PackML unit command"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit command"@en ;
+    skos:notation "L2_PAS_UNIT_CMD" ;
+    aas:idShort "UNITCmd" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-PAS ;
+    sio:engineeringHigh 9e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.PAS.UNIT.CMD" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "command" .
+
+<https://w3id.org/semindus/plant/signal/L2_PAS_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Tunnel Pasteuriser - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L2_PAS_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-PAS ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.PAS.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+qk:Acidity a qudt:QuantityKind ;
+    qudt:hasDimensionVector "1" .
+
+qk:Mass a qudt:QuantityKind ;
+    qudt:hasDimensionVector "M^1" .
+
+unit:PH a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Acidity ;
+    qudt:symbol "pH" ;
+    sio:dimensionVector "1" .
+
+sio:Area a owl:Class ;
+    rdfs:subClassOf sio:PhysicalAsset .
+
+sio:Capper a owl:Class ;
+    rdfs:subClassOf sio:ProcessUnit .
+
+sio:Filler a owl:Class ;
+    rdfs:subClassOf sio:ProcessUnit .
+
+sio:Labeller a owl:Class ;
+    rdfs:subClassOf sio:ProcessUnit .
+
+sio:Pasteuriser a owl:Class ;
+    rdfs:subClassOf sio:ProcessUnit .
+
+sio:ProductionLine a owl:Class ;
+    rdfs:subClassOf sio:PhysicalAsset .
+
+sio:UtilityEquipment a owl:Class ;
+    rdfs:subClassOf sio:PhysicalAsset .
+
+<https://w3id.org/semindus/plant/signal/L1_CAP_ST0402_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Capper - Head speed"@en ;
+    dcterms:description "Head speed"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Head speed"@en ;
+    skos:notation "L1_CAP_ST0402_PV" ;
+    aas:idShort "ST0402Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-CAP ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 6e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CAP.ST0402.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_CAP_TQ0401_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Capper - Capping torque"@en ;
+    dcterms:description "Capping torque"@en ;
+    qudt:hasQuantityKind qk:Torque ;
+    qudt:unit unit:N-M ;
+    skos:altLabel "Capping torque"@en ;
+    skos:notation "L1_CAP_TQ0401_PV" ;
+    aas:idShort "TQ0401Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 2.8e+00 ;
+    sio:alarmLow 1.4e+00 ;
+    sio:belongsTo plant:L1-CAP ;
+    sio:engineeringHigh 4e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CAP.TQ0401.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_CAP_TQC0401_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Capper - Capping torque setpoint"@en ;
+    dcterms:description "Capping torque setpoint"@en ;
+    qudt:hasQuantityKind qk:Torque ;
+    qudt:unit unit:N-M ;
+    skos:altLabel "Capping torque setpoint"@en ;
+    skos:notation "L1_CAP_TQC0401_SP" ;
+    aas:idShort "TQC0401Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-CAP ;
+    sio:engineeringHigh 3.2e+00 ;
+    sio:engineeringLow 8e-01 ;
+    sio:opcuaNodeId "ns=3;s=L1.CAP.TQC0401.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L1_CIP_AT0603_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 CIP Skid - Caustic concentration"@en ;
+    dcterms:description "Caustic concentration"@en ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:unit unit:PERCENT ;
+    skos:altLabel "Caustic concentration"@en ;
+    skos:notation "L1_CIP_AT0603_PV" ;
+    aas:idShort "AT0603Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 2.6e+00 ;
+    sio:alarmLow 1.8e+00 ;
+    sio:belongsTo plant:L1-CIP ;
+    sio:engineeringHigh 5e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CIP.AT0603.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_CIP_AT0604_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 CIP Skid - Return pH"@en ;
+    dcterms:description "Return pH"@en ;
+    qudt:hasQuantityKind qk:Acidity ;
+    qudt:unit unit:PH ;
+    skos:altLabel "Return pH"@en ;
+    skos:notation "L1_CIP_AT0604_PV" ;
+    aas:idShort "AT0604Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-CIP ;
+    sio:engineeringHigh 1.4e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CIP.AT0604.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_CIP_FT0602_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 CIP Skid - Return flow"@en ;
+    dcterms:description "Return flow"@en ;
+    qudt:hasQuantityKind qk:VolumeFlowRate ;
+    qudt:unit unit:L-PER-MIN ;
+    skos:altLabel "Return flow"@en ;
+    skos:notation "L1_CIP_FT0602_PV" ;
+    aas:idShort "FT0602Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmLow 2.5e+02 ;
+    sio:belongsTo plant:L1-CIP ;
+    sio:brickClass brick:Flow_Sensor ;
+    sio:engineeringHigh 6e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CIP.FT0602.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAB717#005" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_CIP_TT0601_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 CIP Skid - Return temperature"@en ;
+    dcterms:description "Return temperature"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_C ;
+    skos:altLabel "Return temperature"@en ;
+    skos:notation "L1_CIP_TT0601_PV" ;
+    aas:idShort "TT0601Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmLow 6.8e+01 ;
+    sio:belongsTo plant:L1-CIP ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 1e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CIP.TT0601.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_CIP_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 CIP Skid - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L1_CIP_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-CIP ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.CIP.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_FT0303_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Product flow"@en ;
+    dcterms:description "Product flow"@en ;
+    qudt:hasQuantityKind qk:VolumeFlowRate ;
+    qudt:unit unit:L-PER-MIN ;
+    skos:altLabel "Product flow"@en ;
+    skos:notation "L1_FIL_FT0303_PV" ;
+    aas:idShort "FT0303Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:brickClass brick:Flow_Sensor ;
+    sio:engineeringHigh 4e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.FT0303.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAB717#005" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_KPI0308_OEE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Overall equipment effectiveness"@en ;
+    dcterms:description "Overall equipment effectiveness"@en ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:unit unit:PERCENT ;
+    skos:altLabel "Overall equipment effectiveness"@en ;
+    skos:notation "L1_FIL_KPI0308_OEE" ;
+    aas:idShort "KPI0308Oee" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:engineeringHigh 1e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.KPI0308.OEE" ;
+    sio:safetyCritical false ;
+    sio:signalRole "kpi" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_LIC0304_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Bowl level setpoint"@en ;
+    dcterms:description "Bowl level setpoint"@en ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:unit unit:PERCENT ;
+    skos:altLabel "Bowl level setpoint"@en ;
+    skos:notation "L1_FIL_LIC0304_SP" ;
+    aas:idShort "LIC0304Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:engineeringHigh 9e+01 ;
+    sio:engineeringLow 1e+01 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.LIC0304.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_LT0304_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Bowl level"@en ;
+    dcterms:description "Bowl level"@en ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:unit unit:PERCENT ;
+    skos:altLabel "Bowl level"@en ;
+    skos:notation "L1_FIL_LT0304_PV" ;
+    aas:idShort "LT0304Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 9.2e+01 ;
+    sio:alarmLow 1.5e+01 ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:engineeringHigh 1e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.LT0304.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_PIC0301_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Fill pressure setpoint"@en ;
+    dcterms:description "Fill pressure setpoint"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:BAR ;
+    skos:altLabel "Fill pressure setpoint"@en ;
+    skos:notation "L1_FIL_PIC0301_SP" ;
+    aas:idShort "PIC0301Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 4.5e+00 ;
+    sio:engineeringLow 5e-01 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.PIC0301.SP" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_PT0301_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Outlet pressure"@en ;
+    dcterms:description "Outlet pressure"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:BAR ;
+    skos:altLabel "Outlet pressure"@en ;
+    skos:notation "L1_FIL_PT0301_PV" ;
+    aas:idShort "PT0301Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 4.98e+00 ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 6e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.PT0301.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_QIC0305_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Fill volume setpoint"@en ;
+    dcterms:description "Fill volume setpoint"@en ;
+    qudt:hasQuantityKind qk:Volume ;
+    qudt:unit unit:MilliL ;
+    skos:altLabel "Fill volume setpoint"@en ;
+    skos:notation "L1_FIL_QIC0305_SP" ;
+    aas:idShort "FillVolumeSetpoint" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:engineeringHigh 2e+03 ;
+    sio:engineeringLow 2e+02 ;
+    sio:interlockedBy <https://w3id.org/semindus/plant/interlock/ILK-02> ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.QIC0305.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_SIC0306_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Carousel speed setpoint"@en ;
+    dcterms:description "Carousel speed setpoint"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Carousel speed setpoint"@en ;
+    skos:notation "L1_FIL_SIC0306_SP" ;
+    aas:idShort "SIC0306Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 4.5e+01 ;
+    sio:engineeringLow 5e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.SIC0306.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_ST0306_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Carousel speed"@en ;
+    dcterms:description "Carousel speed"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Carousel speed"@en ;
+    skos:notation "L1_FIL_ST0306_PV" ;
+    aas:idShort "ST0306Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 5e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.ST0306.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_TT0302_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - Product temperature"@en ;
+    dcterms:description "Product temperature"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_C ;
+    skos:altLabel "Product temperature"@en ;
+    skos:notation "L1_FIL_TT0302_PV" ;
+    aas:idShort "TT0302Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 8e+00 ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 4e+01 ;
+    sio:engineeringLow -5e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.TT0302.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_FIL_UNIT_STATE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Rotary Filler - PackML unit current state"@en ;
+    dcterms:description "PackML unit current state"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "PackML unit current state"@en ;
+    skos:notation "L1_FIL_UNIT_STATE" ;
+    aas:idShort "UNITState" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-FIL ;
+    sio:engineeringHigh 1.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.FIL.UNIT.STATE" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "state" .
+
+<https://w3id.org/semindus/plant/signal/L1_LAB_CNT0503_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Labeller - Reject count"@en ;
+    dcterms:description "Reject count"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:NUM ;
+    skos:altLabel "Reject count"@en ;
+    skos:notation "L1_LAB_CNT0503_PV" ;
+    aas:idShort "CNT0503Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-LAB ;
+    sio:engineeringHigh 1e+06 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.LAB.CNT0503.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "kpi" .
+
+<https://w3id.org/semindus/plant/signal/L1_LAB_ST0501_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Labeller - Carousel speed"@en ;
+    dcterms:description "Carousel speed"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Carousel speed"@en ;
+    skos:notation "L1_LAB_ST0501_PV" ;
+    aas:idShort "ST0501Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L1-LAB ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 5.5e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.LAB.ST0501.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_LAB_ZT0502_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Labeller - Label position deviation"@en ;
+    dcterms:description "Label position deviation"@en ;
+    qudt:hasQuantityKind qk:Length ;
+    qudt:unit unit:MilliM ;
+    skos:altLabel "Label position deviation"@en ;
+    skos:notation "L1_LAB_ZT0502_PV" ;
+    aas:idShort "ZT0502Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 1.5e+00 ;
+    sio:alarmLow -1.5e+00 ;
+    sio:belongsTo plant:L1-LAB ;
+    sio:engineeringHigh 5e+00 ;
+    sio:engineeringLow -5e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.LAB.ZT0502.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_PAS_PT0102_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Tunnel Pasteuriser - Outlet pressure"@en ;
+    dcterms:description "Outlet pressure"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:BAR ;
+    skos:altLabel "Outlet pressure"@en ;
+    skos:notation "L1_PAS_PT0102_PV" ;
+    aas:idShort "PT0102Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 8e+00 ;
+    sio:belongsTo plant:L1-PAS ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 1e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.PAS.PT0102.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L1_PAS_TIC0101_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Tunnel Pasteuriser - Zone 1 temperature setpoint"@en ;
+    dcterms:description "Zone 1 temperature setpoint"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_C ;
+    skos:altLabel "Zone 1 temperature setpoint"@en ;
+    skos:notation "L1_PAS_TIC0101_SP" ;
+    aas:idShort "TIC0101Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L1-PAS ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 9.5e+01 ;
+    sio:engineeringLow 2e+01 ;
+    sio:interlockedBy <https://w3id.org/semindus/plant/interlock/ILK-03> ;
+    sio:opcuaNodeId "ns=3;s=L1.PAS.TIC0101.SP" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L1_PAS_TT0101_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Tunnel Pasteuriser - Zone 1 temperature"@en ;
+    dcterms:description "Zone 1 temperature"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_C ;
+    skos:altLabel "Zone 1 temperature"@en ;
+    skos:notation "L1_PAS_TT0101_PV" ;
+    aas:idShort "TT0101Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmLow 6e+01 ;
+    sio:belongsTo plant:L1-PAS ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 1e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.PAS.TT0101.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_CAP_ST0402_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Crowner - Head speed"@en ;
+    dcterms:description "Head speed"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Head speed"@en ;
+    skos:notation "L2_CAP_ST0402_PV" ;
+    aas:idShort "ST0402Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-CAP ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 6e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.CAP.ST0402.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_CAP_TQ0401_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Crowner - Capping torque"@en ;
+    dcterms:description "Capping torque"@en ;
+    qudt:hasQuantityKind qk:Torque ;
+    qudt:unit unit:N-M ;
+    skos:altLabel "Capping torque"@en ;
+    skos:notation "L2_CAP_TQ0401_PV" ;
+    aas:idShort "TQ0401Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 2.8e+00 ;
+    sio:alarmLow 1.4e+00 ;
+    sio:belongsTo plant:L2-CAP ;
+    sio:engineeringHigh 5e+00 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.CAP.TQ0401.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_CAP_TQC0401_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Crowner - Capping torque setpoint"@en ;
+    dcterms:description "Capping torque setpoint"@en ;
+    qudt:hasQuantityKind qk:Torque ;
+    qudt:unit unit:N-M ;
+    skos:altLabel "Capping torque setpoint"@en ;
+    skos:notation "L2_CAP_TQC0401_SP" ;
+    aas:idShort "TQC0401Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-CAP ;
+    sio:engineeringHigh 3.2e+00 ;
+    sio:engineeringLow 8e-01 ;
+    sio:opcuaNodeId "ns=3;s=L2.CAP.TQC0401.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_FT0303_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Product flow"@en ;
+    dcterms:description "Product flow"@en ;
+    qudt:hasQuantityKind qk:VolumeFlowRate ;
+    qudt:unit unit:M3-PER-HR ;
+    skos:altLabel "Product flow"@en ;
+    skos:notation "L2_FIL_FT0303_PV" ;
+    aas:idShort "FT0303Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:brickClass brick:Flow_Sensor ;
+    sio:engineeringHigh 2.4e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.FT0303.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAB717#005" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_KPI0308_OEE> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Overall equipment effectiveness"@en ;
+    dcterms:description "Overall equipment effectiveness"@en ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:unit unit:PERCENT ;
+    skos:altLabel "Overall equipment effectiveness"@en ;
+    skos:notation "L2_FIL_KPI0308_OEE" ;
+    aas:idShort "KPI0308Oee" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:engineeringHigh 1e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.KPI0308.OEE" ;
+    sio:safetyCritical false ;
+    sio:signalRole "kpi" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_LIC0304_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Bowl level setpoint"@en ;
+    dcterms:description "Bowl level setpoint"@en ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:unit unit:PERCENT ;
+    skos:altLabel "Bowl level setpoint"@en ;
+    skos:notation "L2_FIL_LIC0304_SP" ;
+    aas:idShort "LIC0304Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:engineeringHigh 9e+01 ;
+    sio:engineeringLow 1e+01 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.LIC0304.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_LT0304_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Bowl level"@en ;
+    dcterms:description "Bowl level"@en ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:unit unit:PERCENT ;
+    skos:altLabel "Bowl level"@en ;
+    skos:notation "L2_FIL_LT0304_PV" ;
+    aas:idShort "LT0304Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 9.2e+01 ;
+    sio:alarmLow 1.5e+01 ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:engineeringHigh 1e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.LT0304.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_PIC0301_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Fill pressure setpoint"@en ;
+    dcterms:description "Fill pressure setpoint"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:PSI ;
+    skos:altLabel "Fill pressure setpoint"@en ;
+    skos:notation "L2_FIL_PIC0301_SP" ;
+    aas:idShort "PIC0301Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 6.525e+01 ;
+    sio:engineeringLow 5e-01 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.PIC0301.SP" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_PT0301_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Outlet pressure"@en ;
+    dcterms:description "Outlet pressure"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:PSI ;
+    skos:altLabel "Outlet pressure"@en ;
+    skos:notation "L2_FIL_PT0301_PV" ;
+    aas:idShort "PT0301Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 7.221e+01 ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 8.7e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.PT0301.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_QIC0305_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Fill volume setpoint"@en ;
+    dcterms:description "Fill volume setpoint"@en ;
+    qudt:hasQuantityKind qk:Volume ;
+    qudt:unit unit:MilliL ;
+    skos:altLabel "Fill volume setpoint"@en ;
+    skos:notation "L2_FIL_QIC0305_SP" ;
+    aas:idShort "FillVolumeSetpoint" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:engineeringHigh 2e+03 ;
+    sio:engineeringLow 2e+02 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.QIC0305.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_SIC0306_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Carousel speed setpoint"@en ;
+    dcterms:description "Carousel speed setpoint"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Carousel speed setpoint"@en ;
+    skos:notation "L2_FIL_SIC0306_SP" ;
+    aas:idShort "SIC0306Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 4.5e+01 ;
+    sio:engineeringLow 5e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.SIC0306.SP" ;
+    sio:safetyCritical false ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_ST0306_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Carousel speed"@en ;
+    dcterms:description "Carousel speed"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Carousel speed"@en ;
+    skos:notation "L2_FIL_ST0306_PV" ;
+    aas:idShort "ST0306Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 5e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.ST0306.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_FIL_TT0302_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Rotary Filler - Product temperature"@en ;
+    dcterms:description "Product temperature"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_F ;
+    skos:altLabel "Product temperature"@en ;
+    skos:notation "L2_FIL_TT0302_PV" ;
+    aas:idShort "TT0302Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 4.64e+01 ;
+    sio:belongsTo plant:L2-FIL ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 1.04e+02 ;
+    sio:engineeringLow 2.3e+01 ;
+    sio:opcuaNodeId "ns=3;s=L2.FIL.TT0302.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_LAB_CNT0503_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Labeller - Reject count"@en ;
+    dcterms:description "Reject count"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:NUM ;
+    skos:altLabel "Reject count"@en ;
+    skos:notation "L2_LAB_CNT0503_PV" ;
+    aas:idShort "CNT0503Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-LAB ;
+    sio:engineeringHigh 1e+06 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.LAB.CNT0503.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "kpi" .
+
+<https://w3id.org/semindus/plant/signal/L2_LAB_ST0501_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Labeller - Carousel speed"@en ;
+    dcterms:description "Carousel speed"@en ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:unit unit:REV-PER-MIN ;
+    skos:altLabel "Carousel speed"@en ;
+    skos:notation "L2_LAB_ST0501_PV" ;
+    aas:idShort "ST0501Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:L2-LAB ;
+    sio:brickClass brick:Speed_Sensor ;
+    sio:engineeringHigh 5.5e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.LAB.ST0501.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_LAB_ZT0502_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Labeller - Label position deviation"@en ;
+    dcterms:description "Label position deviation"@en ;
+    qudt:hasQuantityKind qk:Length ;
+    qudt:unit unit:MilliM ;
+    skos:altLabel "Label position deviation"@en ;
+    skos:notation "L2_LAB_ZT0502_PV" ;
+    aas:idShort "ZT0502Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 1.5e+00 ;
+    sio:alarmLow -1.5e+00 ;
+    sio:belongsTo plant:L2-LAB ;
+    sio:engineeringHigh 5e+00 ;
+    sio:engineeringLow -5e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.LAB.ZT0502.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_PAS_PT0102_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Tunnel Pasteuriser - Outlet pressure"@en ;
+    dcterms:description "Outlet pressure"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:PSI ;
+    skos:altLabel "Outlet pressure"@en ;
+    skos:notation "L2_PAS_PT0102_PV" ;
+    aas:idShort "PT0102Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 1.16e+02 ;
+    sio:belongsTo plant:L2-PAS ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 1.45e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.PAS.PT0102.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/L2_PAS_TIC0101_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Tunnel Pasteuriser - Zone 1 temperature setpoint"@en ;
+    dcterms:description "Zone 1 temperature setpoint"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_F ;
+    skos:altLabel "Zone 1 temperature setpoint"@en ;
+    skos:notation "L2_PAS_TIC0101_SP" ;
+    aas:idShort "TIC0101Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:L2-PAS ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 2.03e+02 ;
+    sio:engineeringLow 6.8e+01 ;
+    sio:opcuaNodeId "ns=3;s=L2.PAS.TIC0101.SP" ;
+    sio:safetyCritical true ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/L2_PAS_TT0101_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Tunnel Pasteuriser - Zone 1 temperature"@en ;
+    dcterms:description "Zone 1 temperature"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_F ;
+    skos:altLabel "Zone 1 temperature"@en ;
+    skos:notation "L2_PAS_TT0101_PV" ;
+    aas:idShort "TT0101Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmLow 1.4e+02 ;
+    sio:belongsTo plant:L2-PAS ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 2.12e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.PAS.TT0101.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/UT_CHL_FT0902_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Chiller 1 - Chilled water flow"@en ;
+    dcterms:description "Chilled water flow"@en ;
+    qudt:hasQuantityKind qk:VolumeFlowRate ;
+    qudt:unit unit:M3-PER-HR ;
+    skos:altLabel "Chilled water flow"@en ;
+    skos:notation "UT_CHL_FT0902_PV" ;
+    aas:idShort "FT0902Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:UT-CHL ;
+    sio:brickClass brick:Flow_Sensor ;
+    sio:engineeringHigh 1.2e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CHL.FT0902.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAB717#005" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/UT_CHL_JT0903_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Chiller 1 - Active power"@en ;
+    dcterms:description "Active power"@en ;
+    qudt:hasQuantityKind qk:Power ;
+    qudt:unit unit:KiloW ;
+    skos:altLabel "Active power"@en ;
+    skos:notation "UT_CHL_JT0903_PV" ;
+    aas:idShort "JT0903Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:UT-CHL ;
+    sio:brickClass brick:Electrical_Power_Sensor ;
+    sio:engineeringHigh 4e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CHL.JT0903.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAB714#005" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/UT_CHL_TIC0901_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Chiller 1 - Chilled water supply setpoint"@en ;
+    dcterms:description "Chilled water supply setpoint"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_C ;
+    skos:altLabel "Chilled water supply setpoint"@en ;
+    skos:notation "UT_CHL_TIC0901_SP" ;
+    aas:idShort "TIC0901Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:UT-CHL ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 1.2e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CHL.TIC0901.SP" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/UT_CHL_TT0901_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Chiller 1 - Chilled water supply temperature"@en ;
+    dcterms:description "Chilled water supply temperature"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_C ;
+    skos:altLabel "Chilled water supply temperature"@en ;
+    skos:notation "UT_CHL_TT0901_PV" ;
+    aas:idShort "TT0901Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 8e+00 ;
+    sio:belongsTo plant:UT-CHL ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 3e+01 ;
+    sio:engineeringLow -1e+01 ;
+    sio:opcuaNodeId "ns=3;s=UT.CHL.TT0901.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/UT_CMP_JT0803_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Compressed Air Compressor 1 - Active power"@en ;
+    dcterms:description "Active power"@en ;
+    qudt:hasQuantityKind qk:Power ;
+    qudt:unit unit:KiloW ;
+    skos:altLabel "Active power"@en ;
+    skos:notation "UT_CMP_JT0803_PV" ;
+    aas:idShort "JT0803Pv" ;
+    sio:accessMode "r" ;
+    sio:belongsTo plant:UT-CMP ;
+    sio:brickClass brick:Electrical_Power_Sensor ;
+    sio:engineeringHigh 1.6e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CMP.JT0803.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAB714#005" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/UT_CMP_PIC0801_SP> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Compressed Air Compressor 1 - Discharge pressure setpoint"@en ;
+    dcterms:description "Discharge pressure setpoint"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:BAR ;
+    skos:altLabel "Discharge pressure setpoint"@en ;
+    skos:notation "UT_CMP_PIC0801_SP" ;
+    aas:idShort "PIC0801Sp" ;
+    sio:accessMode "rw" ;
+    sio:belongsTo plant:UT-CMP ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 1e+01 ;
+    sio:engineeringLow 5e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CMP.PIC0801.SP" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "setpoint" .
+
+<https://w3id.org/semindus/plant/signal/UT_CMP_PT0801_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Compressed Air Compressor 1 - Outlet pressure"@en ;
+    dcterms:description "Outlet pressure"@en ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:unit unit:BAR ;
+    skos:altLabel "Outlet pressure"@en ;
+    skos:notation "UT_CMP_PT0801_PV" ;
+    aas:idShort "PT0801Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 1.05e+01 ;
+    sio:alarmLow 6e+00 ;
+    sio:belongsTo plant:UT-CMP ;
+    sio:brickClass brick:Pressure_Sensor ;
+    sio:engineeringHigh 1.2e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CMP.PT0801.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAA731#004" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/UT_CMP_TT0802_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Compressed Air Compressor 1 - Discharge temperature"@en ;
+    dcterms:description "Discharge temperature"@en ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:unit unit:DEG_C ;
+    skos:altLabel "Discharge temperature"@en ;
+    skos:notation "UT_CMP_TT0802_PV" ;
+    aas:idShort "TT0802Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 1.05e+02 ;
+    sio:belongsTo plant:UT-CMP ;
+    sio:brickClass brick:Temperature_Sensor ;
+    sio:engineeringHigh 1.4e+02 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CMP.TT0802.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-BAB129#008" ;
+    sio:signalRole "measurement" .
+
+<https://w3id.org/semindus/plant/signal/UT_CMP_VT0804_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Compressed Air Compressor 1 - Bearing vibration"@en ;
+    dcterms:description "Bearing vibration"@en ;
+    qudt:hasQuantityKind qk:Length ;
+    qudt:unit unit:MilliM ;
+    skos:altLabel "Bearing vibration"@en ;
+    skos:notation "UT_CMP_VT0804_PV" ;
+    aas:idShort "VT0804Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmHigh 7.1e+00 ;
+    sio:belongsTo plant:UT-CMP ;
+    sio:engineeringHigh 2e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=UT.CMP.VT0804.PV" ;
+    sio:safetyCritical false ;
+    sio:signalRole "measurement" .
+
+qk:Dimensionless a qudt:QuantityKind ;
+    qudt:hasDimensionVector "1" .
+
+qk:Time a qudt:QuantityKind ;
+    qudt:hasDimensionVector "T^1" .
+
+plant:AREA-FILL a sio:Area ;
+    rdfs:label "Filling Hall"@en ;
+    skos:notation "AREA-FILL" ;
+    sio:criticality "medium" ;
+    sio:hasPart plant:L1,
+        plant:L2 ;
+    sio:isPartOf plant:SITE-KA ;
+    sio:isa95Level "Area" ;
+    sio:location "Building 3" .
+
+plant:AREA-UTIL a sio:Area ;
+    rdfs:label "Utilities"@en ;
+    skos:notation "AREA-UTIL" ;
+    sio:criticality "medium" ;
+    sio:hasPart plant:UT-CHL,
+        plant:UT-CMP ;
+    sio:isPartOf plant:SITE-KA ;
+    sio:isa95Level "Area" ;
+    sio:location "Building 1" .
+
+plant:SITE-KA a sio:Site ;
+    rdfs:label "Karlsruhe Bottling Plant"@en ;
+    skos:notation "SITE-KA" ;
+    sio:criticality "medium" ;
+    sio:hasPart plant:AREA-FILL,
+        plant:AREA-UTIL ;
+    sio:isPartOf plant:ENT ;
+    sio:isa95Level "Site" ;
+    sio:location "Karlsruhe, DE" .
+
+<https://w3id.org/semindus/plant/signal/L1_PAS_PU0103_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 1 Tunnel Pasteuriser - Accumulated pasteurisation units"@en ;
+    dcterms:description "Accumulated pasteurisation units"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "Accumulated pasteurisation units"@en ;
+    skos:notation "L1_PAS_PU0103_PV" ;
+    aas:idShort "PU0103Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmLow 1.5e+01 ;
+    sio:belongsTo plant:L1-PAS ;
+    sio:engineeringHigh 6e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L1.PAS.PU0103.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "kpi" .
+
+<https://w3id.org/semindus/plant/signal/L2_PAS_PU0103_PV> a sosa:ObservableProperty,
+        sio:Signal ;
+    rdfs:label "Line 2 Tunnel Pasteuriser - Accumulated pasteurisation units"@en ;
+    dcterms:description "Accumulated pasteurisation units"@en ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:unit unit:UNITLESS ;
+    skos:altLabel "Accumulated pasteurisation units"@en ;
+    skos:notation "L2_PAS_PU0103_PV" ;
+    aas:idShort "PU0103Pv" ;
+    sio:accessMode "r" ;
+    sio:alarmLow 1.5e+01 ;
+    sio:belongsTo plant:L2-PAS ;
+    sio:engineeringHigh 6e+01 ;
+    sio:engineeringLow 0e+00 ;
+    sio:opcuaNodeId "ns=3;s=L2.PAS.PU0103.PV" ;
+    sio:safetyCritical false ;
+    sio:semanticId "0173-1#02-AAO683#002" ;
+    sio:signalRole "kpi" .
+
+qk:Power a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^2.M^1.T^-3" .
+
+unit:KiloW a qudt:Unit ;
+    qudt:conversionMultiplier 1e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Power ;
+    qudt:symbol "kW" ;
+    sio:dimensionVector "L^2.M^1.T^-3" .
+
+unit:L-PER-MIN a qudt:Unit ;
+    qudt:conversionMultiplier 1.666667e-05 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:VolumeFlowRate ;
+    qudt:symbol "L/min" ;
+    sio:dimensionVector "L^3.T^-1" .
+
+unit:M3-PER-HR a qudt:Unit ;
+    qudt:conversionMultiplier 2.777778e-04 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:VolumeFlowRate ;
+    qudt:symbol "m3/h" ;
+    sio:dimensionVector "L^3.T^-1" .
+
+unit:NUM a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Count ;
+    qudt:symbol "#" ;
+    sio:dimensionVector "1" .
+
+qk:Length a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^1" .
+
+qk:Torque a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^2.M^1.T^-2" .
+
+sio:ProcessUnit a owl:Class ;
+    rdfs:subClassOf sio:PhysicalAsset .
+
+qk:Volume a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^3" .
+
+unit:DEG_F a qudt:Unit ;
+    qudt:conversionMultiplier 5.555556e-01 ;
+    qudt:conversionOffset 2.553722e+02 ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:symbol "degF" ;
+    sio:dimensionVector "Theta^1" .
+
+unit:MilliL a qudt:Unit ;
+    qudt:conversionMultiplier 1e-06 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Volume ;
+    qudt:symbol "mL" ;
+    sio:dimensionVector "L^3" .
+
+unit:MilliM a qudt:Unit ;
+    qudt:conversionMultiplier 1e-03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Length ;
+    qudt:symbol "mm" ;
+    sio:dimensionVector "L^1" .
+
+unit:PSI a qudt:Unit ;
+    qudt:conversionMultiplier 6.894757e+03 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:symbol "psi" ;
+    sio:dimensionVector "L^-1.M^1.T^-2" .
+
+plant:L2 a sio:ProductionLine ;
+    rdfs:label "Bottling Line 2"@en ;
+    skos:notation "L2" ;
+    sio:criticality "medium" ;
+    sio:hasPart plant:L2-CAP,
+        plant:L2-FIL,
+        plant:L2-LAB,
+        plant:L2-PAS ;
+    sio:isPartOf plant:AREA-FILL ;
+    sio:isa95Level "WorkCenter" ;
+    sio:location "Filling Hall / Bay B" .
+
+qk:VolumeFlowRate a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^3.T^-1" .
+
+plant:L1 a sio:ProductionLine ;
+    rdfs:label "Bottling Line 1"@en ;
+    skos:notation "L1" ;
+    sio:criticality "high" ;
+    sio:hasPart plant:L1-CAP,
+        plant:L1-CIP,
+        plant:L1-FIL,
+        plant:L1-LAB,
+        plant:L1-PAS ;
+    sio:isPartOf plant:AREA-FILL ;
+    sio:isa95Level "WorkCenter" ;
+    sio:location "Filling Hall / Bay A" .
+
+qk:DimensionlessRatio a qudt:QuantityKind ;
+    qudt:hasDimensionVector "1" .
+
+qk:AngularVelocity a qudt:QuantityKind ;
+    qudt:hasDimensionVector "T^-1" .
+
+unit:N-M a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Torque ;
+    qudt:symbol "N.m" ;
+    sio:dimensionVector "L^2.M^1.T^-2" .
+
+plant:L1-LAB a sio:Labeller,
+        sio:PackMLUnit ;
+    rdfs:label "Line 1 Labeller"@en ;
+    dcterms:created "2021-07-02"^^xsd:date ;
+    skos:notation "L1-LAB" ;
+    sio:criticality "medium" ;
+    sio:eclassClass eclass:36-05-02-06 ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L1_LAB_CNT0503_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_LAB_ST0501_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_LAB_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L1_LAB_UNIT_STATE>,
+        <https://w3id.org/semindus/plant/signal/L1_LAB_ZT0502_PV> ;
+    sio:isFedBy plant:L1-CAP ;
+    sio:isPartOf plant:L1 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Stop",
+        "Unhold" ;
+    sio:manufacturer "Krones AG" ;
+    sio:modelDesignation "Contiroll HS" ;
+    sio:packMLState "Held" ;
+    sio:serialNumber "LAB-2021-8825" .
+
+plant:L2-CAP a sio:Capper,
+        sio:PackMLUnit ;
+    rdfs:label "Line 2 Crowner"@en ;
+    dcterms:created "2016-09-30"^^xsd:date ;
+    skos:notation "L2-CAP" ;
+    sio:criticality "medium" ;
+    sio:eclassClass eclass:36-05-02-04 ;
+    sio:feeds plant:L2-LAB ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L2_CAP_ST0402_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_CAP_TQ0401_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_CAP_TQC0401_SP>,
+        <https://w3id.org/semindus/plant/signal/L2_CAP_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L2_CAP_UNIT_STATE> ;
+    sio:isFedBy plant:L2-FIL ;
+    sio:isPartOf plant:L2 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Reset" ;
+    sio:manufacturer "Sidel" ;
+    sio:modelDesignation "EvoCAP" ;
+    sio:packMLState "Stopped" ;
+    sio:serialNumber "CAP-2016-2212" .
+
+plant:L2-LAB a sio:Labeller,
+        sio:PackMLUnit ;
+    rdfs:label "Line 2 Labeller"@en ;
+    dcterms:created "2016-09-30"^^xsd:date ;
+    skos:notation "L2-LAB" ;
+    sio:criticality "medium" ;
+    sio:eclassClass eclass:36-05-02-06 ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L2_LAB_CNT0503_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_LAB_ST0501_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_LAB_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L2_LAB_UNIT_STATE>,
+        <https://w3id.org/semindus/plant/signal/L2_LAB_ZT0502_PV> ;
+    sio:isFedBy plant:L2-CAP ;
+    sio:isPartOf plant:L2 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Clear" ;
+    sio:manufacturer "Sidel" ;
+    sio:modelDesignation "Evolabel" ;
+    sio:packMLState "Aborted" ;
+    sio:serialNumber "LAB-2016-2213" .
+
+unit:BAR a qudt:Unit ;
+    qudt:conversionMultiplier 1e+05 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Pressure ;
+    qudt:symbol "bar" ;
+    sio:dimensionVector "L^-1.M^1.T^-2" .
+
+plant:L2-PAS a sio:PackMLUnit,
+        sio:Pasteuriser ;
+    rdfs:label "Line 2 Tunnel Pasteuriser"@en ;
+    dcterms:created "2016-09-30"^^xsd:date ;
+    skos:notation "L2-PAS" ;
+    sio:criticality "high" ;
+    sio:eclassClass eclass:36-05-01-01 ;
+    sio:feeds plant:L2-FIL ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L2_PAS_PT0102_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_PAS_PU0103_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_PAS_TIC0101_SP>,
+        <https://w3id.org/semindus/plant/signal/L2_PAS_TT0101_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_PAS_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L2_PAS_UNIT_STATE> ;
+    sio:isPartOf plant:L2 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Start",
+        "Stop" ;
+    sio:manufacturer "Sidel" ;
+    sio:modelDesignation "Gebo Pasteuriser" ;
+    sio:packMLState "Idle" ;
+    sio:providesService "Cool",
+        "Heat",
+        "Hold" ;
+    sio:serialNumber "PAS-2016-2210" .
+
+plant:UT-CHL a sio:Chiller ;
+    rdfs:label "Chiller 1"@en ;
+    dcterms:created "2017-03-08"^^xsd:date ;
+    skos:notation "UT-CHL" ;
+    sio:criticality "high" ;
+    sio:eclassClass eclass:36-01-05-02 ;
+    sio:feeds plant:L1-FIL,
+        plant:L1-PAS,
+        plant:L2-FIL ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/UT_CHL_FT0902_PV>,
+        <https://w3id.org/semindus/plant/signal/UT_CHL_JT0903_PV>,
+        <https://w3id.org/semindus/plant/signal/UT_CHL_TIC0901_SP>,
+        <https://w3id.org/semindus/plant/signal/UT_CHL_TT0901_PV> ;
+    sio:isPartOf plant:AREA-UTIL ;
+    sio:isa95Level "WorkUnit" ;
+    sio:manufacturer "Johnson Controls" ;
+    sio:modelDesignation "YMC2 Magnetic Bearing" ;
+    sio:serialNumber "CHL-2017-0442" .
+
+qk:Temperature a qudt:QuantityKind ;
+    qudt:hasDimensionVector "Theta^1" .
+
+plant:L1-CAP a sio:Capper,
+        sio:PackMLUnit ;
+    rdfs:label "Line 1 Capper"@en ;
+    dcterms:created "2021-07-02"^^xsd:date ;
+    skos:notation "L1-CAP" ;
+    sio:criticality "medium" ;
+    sio:eclassClass eclass:36-05-02-04 ;
+    sio:feeds plant:L1-LAB ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L1_CAP_ST0402_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_CAP_TQ0401_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_CAP_TQC0401_SP>,
+        <https://w3id.org/semindus/plant/signal/L1_CAP_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L1_CAP_UNIT_STATE> ;
+    sio:isFedBy plant:L1-FIL,
+        plant:UT-CMP ;
+    sio:isPartOf plant:L1 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Hold",
+        "Stop",
+        "Suspend" ;
+    sio:manufacturer "Krones AG" ;
+    sio:modelDesignation "Modulcap 12" ;
+    sio:packMLState "Execute" ;
+    sio:serialNumber "CAP-2021-8824" .
+
+plant:L1-CIP a sio:CIPSkid,
+        sio:PackMLUnit ;
+    rdfs:label "Line 1 CIP Skid"@en ;
+    dcterms:created "2020-02-20"^^xsd:date ;
+    skos:notation "L1-CIP" ;
+    sio:criticality "medium" ;
+    sio:eclassClass eclass:36-05-08-02 ;
+    sio:feeds plant:L1-FIL,
+        plant:L1-PAS ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L1_CIP_AT0603_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_CIP_AT0604_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_CIP_FT0602_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_CIP_TT0601_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_CIP_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L1_CIP_UNIT_STATE> ;
+    sio:isPartOf plant:L1 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Start",
+        "Stop" ;
+    sio:manufacturer "GEA Group" ;
+    sio:modelDesignation "ECOclean 3000" ;
+    sio:packMLState "Idle" ;
+    sio:providesService "Acid",
+        "Caustic",
+        "PreRinse",
+        "Rinse" ;
+    sio:serialNumber "CIP-2020-1190" .
+
+qk:Pressure a qudt:QuantityKind ;
+    qudt:hasDimensionVector "L^-1.M^1.T^-2" .
+
+unit:PERCENT a qudt:Unit ;
+    qudt:conversionMultiplier 1e-02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:DimensionlessRatio ;
+    qudt:symbol "%" ;
+    sio:dimensionVector "1" .
+
+plant:L1-PAS a sio:PackMLUnit,
+        sio:Pasteuriser ;
+    rdfs:label "Line 1 Tunnel Pasteuriser"@en ;
+    dcterms:created "2019-04-11"^^xsd:date ;
+    skos:notation "L1-PAS" ;
+    sio:criticality "high" ;
+    sio:eclassClass eclass:36-05-01-01 ;
+    sio:feeds plant:L1-FIL ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L1_PAS_PT0102_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_PAS_PU0103_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_PAS_TIC0101_SP>,
+        <https://w3id.org/semindus/plant/signal/L1_PAS_TT0101_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_PAS_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L1_PAS_UNIT_STATE> ;
+    sio:isFedBy plant:L1-CIP,
+        plant:UT-CHL ;
+    sio:isPartOf plant:L1 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Hold",
+        "Stop",
+        "Suspend" ;
+    sio:manufacturer "KHS GmbH" ;
+    sio:modelDesignation "Innopas SX" ;
+    sio:packMLState "Execute" ;
+    sio:providesService "Cool",
+        "Heat",
+        "Hold" ;
+    sio:serialNumber "PAS-2019-4471" .
+
+unit:DEG_C a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 2.7315e+02 ;
+    qudt:hasQuantityKind qk:Temperature ;
+    qudt:symbol "degC" ;
+    sio:dimensionVector "Theta^1" .
+
+unit:REV-PER-MIN a qudt:Unit ;
+    qudt:conversionMultiplier 1.666667e-02 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:AngularVelocity ;
+    qudt:symbol "rpm" ;
+    sio:dimensionVector "T^-1" .
+
+plant:UT-CMP a sio:Compressor ;
+    rdfs:label "Compressed Air Compressor 1"@en ;
+    dcterms:created "2018-05-14"^^xsd:date ;
+    skos:notation "UT-CMP" ;
+    sio:criticality "high" ;
+    sio:eclassClass eclass:36-01-03-01 ;
+    sio:feeds plant:L1-CAP,
+        plant:L1-FIL,
+        plant:L2-FIL ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/UT_CMP_JT0803_PV>,
+        <https://w3id.org/semindus/plant/signal/UT_CMP_PIC0801_SP>,
+        <https://w3id.org/semindus/plant/signal/UT_CMP_PT0801_PV>,
+        <https://w3id.org/semindus/plant/signal/UT_CMP_TT0802_PV>,
+        <https://w3id.org/semindus/plant/signal/UT_CMP_VT0804_PV> ;
+    sio:isPartOf plant:AREA-UTIL ;
+    sio:isa95Level "WorkUnit" ;
+    sio:manufacturer "Atlas Copco" ;
+    sio:modelDesignation "ZR 160 VSD+" ;
+    sio:serialNumber "CMP-2018-0091" .
+
+sio:PhysicalAsset a owl:Class .
+
+qk:Count a qudt:QuantityKind ;
+    qudt:hasDimensionVector "1" .
+
+unit:UNITLESS a qudt:Unit ;
+    qudt:conversionMultiplier 1e+00 ;
+    qudt:conversionOffset 0e+00 ;
+    qudt:hasQuantityKind qk:Dimensionless ;
+    qudt:symbol "1" ;
+    sio:dimensionVector "1" .
+
+plant:L2-FIL a sio:Filler,
+        sio:PackMLUnit ;
+    rdfs:label "Line 2 Rotary Filler"@en ;
+    dcterms:created "2016-09-30"^^xsd:date ;
+    skos:notation "L2-FIL" ;
+    sio:criticality "high" ;
+    sio:eclassClass eclass:36-05-02-01 ;
+    sio:feeds plant:L2-CAP ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L2_FIL_FT0303_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_KPI0308_OEE>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_LIC0304_SP>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_LT0304_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_PIC0301_SP>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_PT0301_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_QIC0305_SP>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_SIC0306_SP>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_ST0306_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_TT0302_PV>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_UNIT_STATE>,
+        <https://w3id.org/semindus/plant/signal/L2_FIL_XV0307_CMD> ;
+    sio:isFedBy plant:L2-PAS,
+        plant:UT-CHL,
+        plant:UT-CMP ;
+    sio:isPartOf plant:L2 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Reset" ;
+    sio:manufacturer "Sidel" ;
+    sio:modelDesignation "EvoFILL Glass" ;
+    sio:packMLState "Stopped" ;
+    sio:providesService "CIP",
+        "Fill",
+        "Flush" ;
+    sio:serialNumber "FIL-2016-2211" .
+
+plant:L1-FIL a sio:Filler,
+        sio:PackMLUnit ;
+    rdfs:label "Line 1 Rotary Filler"@en ;
+    dcterms:created "2021-07-02"^^xsd:date ;
+    skos:notation "L1-FIL" ;
+    sio:criticality "high" ;
+    sio:eclassClass eclass:36-05-02-01 ;
+    sio:feeds plant:L1-CAP ;
+    sio:hasSignal <https://w3id.org/semindus/plant/signal/L1_FIL_FT0303_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_KPI0308_OEE>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_LIC0304_SP>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_LT0304_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_PIC0301_SP>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_PT0301_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_QIC0305_SP>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_SIC0306_SP>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_ST0306_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_TT0302_PV>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_UNIT_CMD>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_UNIT_STATE>,
+        <https://w3id.org/semindus/plant/signal/L1_FIL_XV0307_CMD> ;
+    sio:isFedBy plant:L1-CIP,
+        plant:L1-PAS,
+        plant:UT-CHL,
+        plant:UT-CMP ;
+    sio:isPartOf plant:L1 ;
+    sio:isa95Level "WorkUnit" ;
+    sio:legalCommand "Abort",
+        "Hold",
+        "Stop",
+        "Suspend" ;
+    sio:manufacturer "Krones AG" ;
+    sio:modelDesignation "Modulfill VFS-C 72/12" ;
+    sio:packMLState "Execute" ;
+    sio:providesService "CIP",
+        "Fill",
+        "Flush" ;
+    sio:serialNumber "FIL-2021-8823" .
+
+sio:Signal a owl:Class ;
+    rdfs:subClassOf sosa:ObservableProperty .
+

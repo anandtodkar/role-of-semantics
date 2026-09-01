@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <NamespaceUris><Uri>https://w3id.org/semindus/opcua</Uri></NamespaceUris>
+  <Models><Model ModelUri="https://w3id.org/semindus/opcua" Version="1.0.0" PublicationDate="2026-07-14T00:00:00Z"/></Models>
+  <UAObject NodeId="ns=3;s=ENT" BrowseName="3:ENT">
+    <DisplayName>Global Beverages AG</DisplayName>
+    <Description>Enterprise at ISA-95 level Enterprise</Description>
+    <References>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=3;s=SITE-KA" BrowseName="3:SITE-KA">
+    <DisplayName>Karlsruhe Bottling Plant</DisplayName>
+    <Description>Site at ISA-95 level Site</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=ENT</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=3;s=AREA-FILL" BrowseName="3:AREA-FILL">
+    <DisplayName>Filling Hall</DisplayName>
+    <Description>Area at ISA-95 level Area</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=SITE-KA</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=3;s=AREA-UTIL" BrowseName="3:AREA-UTIL">
+    <DisplayName>Utilities</DisplayName>
+    <Description>Area at ISA-95 level Area</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=SITE-KA</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=3;s=L1" BrowseName="3:L1">
+    <DisplayName>Bottling Line 1</DisplayName>
+    <Description>ProductionLine at ISA-95 level WorkCenter</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=AREA-FILL</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=3;s=L1-PAS" BrowseName="3:L1-PAS">
+    <DisplayName>Line 1 Tunnel Pasteuriser</DisplayName>
+    <Description>Pasteuriser at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L1</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.PAS.TT0101.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.PAS.TIC0101.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.PAS.PT0102.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.PAS.PU0103.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.PAS.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.PAS.UNIT.CMD</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L1.PAS.TT0101.PV" BrowseName="3:L1_PAS_TT0101_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Zone 1 temperature</DisplayName>
+    <Description>Zone 1 temperature</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.TT0101.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.TT0101.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.TT0101.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.PAS.TT0101.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>100.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.TT0101.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.PAS.TT0101.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degC</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.TIC0101.SP" BrowseName="3:L1_PAS_TIC0101_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Zone 1 temperature setpoint</DisplayName>
+    <Description>Zone 1 temperature setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.TIC0101.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.TIC0101.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.TIC0101.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.PAS.TIC0101.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>20.0</Low><High>95.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.TIC0101.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.PAS.TIC0101.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degC</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.PT0102.PV" BrowseName="3:L1_PAS_PT0102_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Outlet pressure</DisplayName>
+    <Description>Outlet pressure</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.PT0102.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.PT0102.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.PT0102.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.PAS.PT0102.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>10.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.PT0102.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.PAS.PT0102.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>bar</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.PU0103.PV" BrowseName="3:L1_PAS_PU0103_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Accumulated pasteurisation units</DisplayName>
+    <Description>Accumulated pasteurisation units</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.PU0103.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.PU0103.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.PU0103.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.PAS.PU0103.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>60.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.PU0103.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.PAS.PU0103.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.UNIT.STATE" BrowseName="3:L1_PAS_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.PAS.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.PAS.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.UNIT.CMD" BrowseName="3:L1_PAS_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.PAS.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.PAS.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.PAS.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.PAS.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L1-FIL" BrowseName="3:L1-FIL">
+    <DisplayName>Line 1 Rotary Filler</DisplayName>
+    <Description>Filler at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L1</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.PT0301.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.PIC0301.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.TT0302.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.FT0303.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.LIC0304.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.LT0304.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.QIC0305.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.SIC0306.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.ST0306.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.XV0307.CMD</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.UNIT.CMD</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.FIL.KPI0308.OEE</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L1.FIL.PT0301.PV" BrowseName="3:L1_FIL_PT0301_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Outlet pressure</DisplayName>
+    <Description>Outlet pressure</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.PT0301.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.PT0301.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.PT0301.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.PT0301.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>6.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.PT0301.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.PT0301.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>bar</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.PIC0301.SP" BrowseName="3:L1_FIL_PIC0301_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Fill pressure setpoint</DisplayName>
+    <Description>Fill pressure setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.PIC0301.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.PIC0301.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.PIC0301.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.PIC0301.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.5</Low><High>4.5</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.PIC0301.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.PIC0301.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>bar</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.TT0302.PV" BrowseName="3:L1_FIL_TT0302_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Product temperature</DisplayName>
+    <Description>Product temperature</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.TT0302.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.TT0302.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.TT0302.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.TT0302.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>-5.0</Low><High>40.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.TT0302.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.TT0302.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degC</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.FT0303.PV" BrowseName="3:L1_FIL_FT0303_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Product flow</DisplayName>
+    <Description>Product flow</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.FT0303.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.FT0303.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.FT0303.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.FT0303.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>400.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.FT0303.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.FT0303.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>L/min</Text></DisplayName><Description><Text>VolumeFlowRate</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.LIC0304.SP" BrowseName="3:L1_FIL_LIC0304_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Bowl level setpoint</DisplayName>
+    <Description>Bowl level setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.LIC0304.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.LIC0304.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.LIC0304.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.LIC0304.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>10.0</Low><High>90.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.LIC0304.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.LIC0304.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>%</Text></DisplayName><Description><Text>DimensionlessRatio</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.LT0304.PV" BrowseName="3:L1_FIL_LT0304_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Bowl level</DisplayName>
+    <Description>Bowl level</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.LT0304.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.LT0304.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.LT0304.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.LT0304.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>100.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.LT0304.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.LT0304.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>%</Text></DisplayName><Description><Text>DimensionlessRatio</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.QIC0305.SP" BrowseName="3:L1_FIL_QIC0305_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Fill volume setpoint</DisplayName>
+    <Description>Fill volume setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.QIC0305.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.QIC0305.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.QIC0305.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.QIC0305.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>200.0</Low><High>2000.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.QIC0305.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.QIC0305.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>mL</Text></DisplayName><Description><Text>Volume</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.SIC0306.SP" BrowseName="3:L1_FIL_SIC0306_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Carousel speed setpoint</DisplayName>
+    <Description>Carousel speed setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.SIC0306.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.SIC0306.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.SIC0306.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.SIC0306.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>5.0</Low><High>45.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.SIC0306.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.SIC0306.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.ST0306.PV" BrowseName="3:L1_FIL_ST0306_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Carousel speed</DisplayName>
+    <Description>Carousel speed</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.ST0306.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.ST0306.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.ST0306.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.ST0306.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>50.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.ST0306.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.ST0306.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.XV0307.CMD" BrowseName="3:L1_FIL_XV0307_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Product valve command</DisplayName>
+    <Description>Product valve command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.XV0307.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.XV0307.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.XV0307.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.XV0307.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>1.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.XV0307.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.XV0307.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.UNIT.STATE" BrowseName="3:L1_FIL_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.UNIT.CMD" BrowseName="3:L1_FIL_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.KPI0308.OEE" BrowseName="3:L1_FIL_KPI0308_OEE" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Overall equipment effectiveness</DisplayName>
+    <Description>Overall equipment effectiveness</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.KPI0308.OEE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.FIL.KPI0308.OEE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.KPI0308.OEE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.FIL.KPI0308.OEE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>100.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.FIL.KPI0308.OEE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.FIL.KPI0308.OEE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>%</Text></DisplayName><Description><Text>DimensionlessRatio</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L1-CAP" BrowseName="3:L1-CAP">
+    <DisplayName>Line 1 Capper</DisplayName>
+    <Description>Capper at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L1</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CAP.TQ0401.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CAP.TQC0401.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CAP.ST0402.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CAP.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CAP.UNIT.CMD</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L1.CAP.TQ0401.PV" BrowseName="3:L1_CAP_TQ0401_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Capping torque</DisplayName>
+    <Description>Capping torque</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.TQ0401.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.TQ0401.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.TQ0401.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CAP.TQ0401.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>4.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.TQ0401.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CAP.TQ0401.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>N.m</Text></DisplayName><Description><Text>Torque</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.TQC0401.SP" BrowseName="3:L1_CAP_TQC0401_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Capping torque setpoint</DisplayName>
+    <Description>Capping torque setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.TQC0401.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.TQC0401.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.TQC0401.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CAP.TQC0401.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.8</Low><High>3.2</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.TQC0401.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CAP.TQC0401.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>N.m</Text></DisplayName><Description><Text>Torque</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.ST0402.PV" BrowseName="3:L1_CAP_ST0402_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Head speed</DisplayName>
+    <Description>Head speed</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.ST0402.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.ST0402.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.ST0402.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CAP.ST0402.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>60.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.ST0402.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CAP.ST0402.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.UNIT.STATE" BrowseName="3:L1_CAP_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CAP.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CAP.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.UNIT.CMD" BrowseName="3:L1_CAP_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CAP.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CAP.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CAP.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CAP.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L1-LAB" BrowseName="3:L1-LAB">
+    <DisplayName>Line 1 Labeller</DisplayName>
+    <Description>Labeller at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L1</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.LAB.ST0501.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.LAB.ZT0502.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.LAB.CNT0503.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.LAB.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.LAB.UNIT.CMD</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L1.LAB.ST0501.PV" BrowseName="3:L1_LAB_ST0501_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Carousel speed</DisplayName>
+    <Description>Carousel speed</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.ST0501.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.ST0501.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.ST0501.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.LAB.ST0501.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>55.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.ST0501.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.LAB.ST0501.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.ZT0502.PV" BrowseName="3:L1_LAB_ZT0502_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Label position deviation</DisplayName>
+    <Description>Label position deviation</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.ZT0502.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.ZT0502.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.ZT0502.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.LAB.ZT0502.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>-5.0</Low><High>5.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.ZT0502.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.LAB.ZT0502.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>mm</Text></DisplayName><Description><Text>Length</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.CNT0503.PV" BrowseName="3:L1_LAB_CNT0503_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Reject count</DisplayName>
+    <Description>Reject count</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.CNT0503.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.CNT0503.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.CNT0503.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.LAB.CNT0503.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>1000000.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.CNT0503.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.LAB.CNT0503.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>#</Text></DisplayName><Description><Text>Count</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.UNIT.STATE" BrowseName="3:L1_LAB_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.LAB.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.LAB.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.UNIT.CMD" BrowseName="3:L1_LAB_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.LAB.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.LAB.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.LAB.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.LAB.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L1-CIP" BrowseName="3:L1-CIP">
+    <DisplayName>Line 1 CIP Skid</DisplayName>
+    <Description>CIPSkid at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L1</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CIP.TT0601.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CIP.FT0602.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CIP.AT0603.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CIP.AT0604.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CIP.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L1.CIP.UNIT.CMD</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L1.CIP.TT0601.PV" BrowseName="3:L1_CIP_TT0601_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Return temperature</DisplayName>
+    <Description>Return temperature</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CIP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.TT0601.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.TT0601.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.TT0601.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CIP.TT0601.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>100.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.TT0601.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CIP.TT0601.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degC</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.FT0602.PV" BrowseName="3:L1_CIP_FT0602_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Return flow</DisplayName>
+    <Description>Return flow</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CIP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.FT0602.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.FT0602.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.FT0602.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CIP.FT0602.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>600.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.FT0602.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CIP.FT0602.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>L/min</Text></DisplayName><Description><Text>VolumeFlowRate</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.AT0603.PV" BrowseName="3:L1_CIP_AT0603_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Caustic concentration</DisplayName>
+    <Description>Caustic concentration</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CIP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.AT0603.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.AT0603.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.AT0603.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CIP.AT0603.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>5.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.AT0603.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CIP.AT0603.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>%</Text></DisplayName><Description><Text>DimensionlessRatio</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.AT0604.PV" BrowseName="3:L1_CIP_AT0604_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Return pH</DisplayName>
+    <Description>Return pH</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CIP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.AT0604.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.AT0604.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.AT0604.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CIP.AT0604.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>14.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.AT0604.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CIP.AT0604.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>pH</Text></DisplayName><Description><Text>Acidity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.UNIT.STATE" BrowseName="3:L1_CIP_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CIP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CIP.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CIP.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.UNIT.CMD" BrowseName="3:L1_CIP_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L1-CIP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L1.CIP.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L1.CIP.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L1.CIP.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L1.CIP.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L2" BrowseName="3:L2">
+    <DisplayName>Bottling Line 2</DisplayName>
+    <Description>ProductionLine at ISA-95 level WorkCenter</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=AREA-FILL</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=3;s=L2-PAS" BrowseName="3:L2-PAS">
+    <DisplayName>Line 2 Tunnel Pasteuriser</DisplayName>
+    <Description>Pasteuriser at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L2</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.PAS.TT0101.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.PAS.TIC0101.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.PAS.PT0102.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.PAS.PU0103.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.PAS.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.PAS.UNIT.CMD</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L2.PAS.TT0101.PV" BrowseName="3:L2_PAS_TT0101_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Zone 1 temperature</DisplayName>
+    <Description>Zone 1 temperature</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.TT0101.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.TT0101.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.TT0101.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.PAS.TT0101.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>212.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.TT0101.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.PAS.TT0101.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degF</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.TIC0101.SP" BrowseName="3:L2_PAS_TIC0101_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Zone 1 temperature setpoint</DisplayName>
+    <Description>Zone 1 temperature setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.TIC0101.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.TIC0101.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.TIC0101.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.PAS.TIC0101.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>68.0</Low><High>203.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.TIC0101.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.PAS.TIC0101.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degF</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.PT0102.PV" BrowseName="3:L2_PAS_PT0102_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Outlet pressure</DisplayName>
+    <Description>Outlet pressure</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.PT0102.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.PT0102.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.PT0102.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.PAS.PT0102.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>145.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.PT0102.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.PAS.PT0102.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>psi</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.PU0103.PV" BrowseName="3:L2_PAS_PU0103_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Accumulated pasteurisation units</DisplayName>
+    <Description>Accumulated pasteurisation units</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.PU0103.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.PU0103.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.PU0103.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.PAS.PU0103.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>60.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.PU0103.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.PAS.PU0103.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.UNIT.STATE" BrowseName="3:L2_PAS_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.PAS.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.PAS.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.UNIT.CMD" BrowseName="3:L2_PAS_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-PAS</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.PAS.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.PAS.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.PAS.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.PAS.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L2-FIL" BrowseName="3:L2-FIL">
+    <DisplayName>Line 2 Rotary Filler</DisplayName>
+    <Description>Filler at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L2</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.PT0301.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.PIC0301.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.TT0302.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.FT0303.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.LIC0304.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.LT0304.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.QIC0305.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.SIC0306.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.ST0306.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.XV0307.CMD</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.UNIT.CMD</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.FIL.KPI0308.OEE</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L2.FIL.PT0301.PV" BrowseName="3:L2_FIL_PT0301_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Outlet pressure</DisplayName>
+    <Description>Outlet pressure</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.PT0301.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.PT0301.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.PT0301.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.PT0301.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>87.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.PT0301.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.PT0301.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>psi</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.PIC0301.SP" BrowseName="3:L2_FIL_PIC0301_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Fill pressure setpoint</DisplayName>
+    <Description>Fill pressure setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.PIC0301.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.PIC0301.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.PIC0301.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.PIC0301.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.5</Low><High>65.25</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.PIC0301.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.PIC0301.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>psi</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.TT0302.PV" BrowseName="3:L2_FIL_TT0302_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Product temperature</DisplayName>
+    <Description>Product temperature</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.TT0302.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.TT0302.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.TT0302.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.TT0302.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>23.0</Low><High>104.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.TT0302.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.TT0302.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degF</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.FT0303.PV" BrowseName="3:L2_FIL_FT0303_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Product flow</DisplayName>
+    <Description>Product flow</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.FT0303.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.FT0303.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.FT0303.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.FT0303.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>24.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.FT0303.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.FT0303.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>m3/h</Text></DisplayName><Description><Text>VolumeFlowRate</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.LIC0304.SP" BrowseName="3:L2_FIL_LIC0304_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Bowl level setpoint</DisplayName>
+    <Description>Bowl level setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.LIC0304.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.LIC0304.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.LIC0304.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.LIC0304.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>10.0</Low><High>90.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.LIC0304.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.LIC0304.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>%</Text></DisplayName><Description><Text>DimensionlessRatio</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.LT0304.PV" BrowseName="3:L2_FIL_LT0304_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Bowl level</DisplayName>
+    <Description>Bowl level</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.LT0304.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.LT0304.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.LT0304.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.LT0304.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>100.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.LT0304.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.LT0304.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>%</Text></DisplayName><Description><Text>DimensionlessRatio</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.QIC0305.SP" BrowseName="3:L2_FIL_QIC0305_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Fill volume setpoint</DisplayName>
+    <Description>Fill volume setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.QIC0305.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.QIC0305.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.QIC0305.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.QIC0305.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>200.0</Low><High>2000.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.QIC0305.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.QIC0305.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>mL</Text></DisplayName><Description><Text>Volume</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.SIC0306.SP" BrowseName="3:L2_FIL_SIC0306_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Carousel speed setpoint</DisplayName>
+    <Description>Carousel speed setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.SIC0306.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.SIC0306.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.SIC0306.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.SIC0306.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>5.0</Low><High>45.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.SIC0306.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.SIC0306.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.ST0306.PV" BrowseName="3:L2_FIL_ST0306_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Carousel speed</DisplayName>
+    <Description>Carousel speed</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.ST0306.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.ST0306.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.ST0306.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.ST0306.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>50.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.ST0306.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.ST0306.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.XV0307.CMD" BrowseName="3:L2_FIL_XV0307_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Product valve command</DisplayName>
+    <Description>Product valve command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.XV0307.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.XV0307.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.XV0307.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.XV0307.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>1.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.XV0307.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.XV0307.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.UNIT.STATE" BrowseName="3:L2_FIL_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.UNIT.CMD" BrowseName="3:L2_FIL_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.KPI0308.OEE" BrowseName="3:L2_FIL_KPI0308_OEE" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Overall equipment effectiveness</DisplayName>
+    <Description>Overall equipment effectiveness</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-FIL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.KPI0308.OEE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.FIL.KPI0308.OEE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.KPI0308.OEE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.FIL.KPI0308.OEE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>100.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.FIL.KPI0308.OEE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.FIL.KPI0308.OEE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>%</Text></DisplayName><Description><Text>DimensionlessRatio</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L2-CAP" BrowseName="3:L2-CAP">
+    <DisplayName>Line 2 Crowner</DisplayName>
+    <Description>Capper at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L2</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.CAP.TQ0401.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.CAP.TQC0401.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.CAP.ST0402.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.CAP.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.CAP.UNIT.CMD</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L2.CAP.TQ0401.PV" BrowseName="3:L2_CAP_TQ0401_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Capping torque</DisplayName>
+    <Description>Capping torque</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.TQ0401.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.TQ0401.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.TQ0401.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.CAP.TQ0401.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>5.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.TQ0401.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.CAP.TQ0401.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>N.m</Text></DisplayName><Description><Text>Torque</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.TQC0401.SP" BrowseName="3:L2_CAP_TQC0401_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Capping torque setpoint</DisplayName>
+    <Description>Capping torque setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.TQC0401.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.TQC0401.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.TQC0401.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.CAP.TQC0401.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.8</Low><High>3.2</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.TQC0401.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.CAP.TQC0401.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>N.m</Text></DisplayName><Description><Text>Torque</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.ST0402.PV" BrowseName="3:L2_CAP_ST0402_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Head speed</DisplayName>
+    <Description>Head speed</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.ST0402.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.ST0402.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.ST0402.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.CAP.ST0402.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>60.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.ST0402.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.CAP.ST0402.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.UNIT.STATE" BrowseName="3:L2_CAP_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.CAP.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.CAP.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.UNIT.CMD" BrowseName="3:L2_CAP_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-CAP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.CAP.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.CAP.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.CAP.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.CAP.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=L2-LAB" BrowseName="3:L2-LAB">
+    <DisplayName>Line 2 Labeller</DisplayName>
+    <Description>Labeller at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=L2</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.LAB.ST0501.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.LAB.ZT0502.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.LAB.CNT0503.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.LAB.UNIT.STATE</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=L2.LAB.UNIT.CMD</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=L2.LAB.ST0501.PV" BrowseName="3:L2_LAB_ST0501_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Carousel speed</DisplayName>
+    <Description>Carousel speed</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.ST0501.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.ST0501.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.ST0501.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.LAB.ST0501.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>55.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.ST0501.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.LAB.ST0501.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>rpm</Text></DisplayName><Description><Text>AngularVelocity</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.ZT0502.PV" BrowseName="3:L2_LAB_ZT0502_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Label position deviation</DisplayName>
+    <Description>Label position deviation</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.ZT0502.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.ZT0502.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.ZT0502.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.LAB.ZT0502.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>-5.0</Low><High>5.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.ZT0502.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.LAB.ZT0502.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>mm</Text></DisplayName><Description><Text>Length</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.CNT0503.PV" BrowseName="3:L2_LAB_CNT0503_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Reject count</DisplayName>
+    <Description>Reject count</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.CNT0503.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.CNT0503.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.CNT0503.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.LAB.CNT0503.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>1000000.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.CNT0503.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.LAB.CNT0503.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>#</Text></DisplayName><Description><Text>Count</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.UNIT.STATE" BrowseName="3:L2_LAB_UNIT_STATE" DataType="i=7" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>PackML unit current state</DisplayName>
+    <Description>PackML unit current state</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.UNIT.STATE.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.UNIT.STATE.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.UNIT.STATE.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.LAB.UNIT.STATE">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>17.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.UNIT.STATE.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.LAB.UNIT.STATE">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.UNIT.CMD" BrowseName="3:L2_LAB_UNIT_CMD" DataType="i=7" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>PackML unit command</DisplayName>
+    <Description>PackML unit command</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=L2-LAB</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.UNIT.CMD.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=L2.LAB.UNIT.CMD.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.UNIT.CMD.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=L2.LAB.UNIT.CMD">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>9.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=L2.LAB.UNIT.CMD.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=L2.LAB.UNIT.CMD">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>1</Text></DisplayName><Description><Text>Dimensionless</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=UT-CMP" BrowseName="3:UT-CMP">
+    <DisplayName>Compressed Air Compressor 1</DisplayName>
+    <Description>Compressor at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=AREA-UTIL</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CMP.PT0801.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CMP.PIC0801.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CMP.TT0802.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CMP.JT0803.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CMP.VT0804.PV</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=UT.CMP.PT0801.PV" BrowseName="3:UT_CMP_PT0801_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Outlet pressure</DisplayName>
+    <Description>Outlet pressure</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CMP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.PT0801.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.PT0801.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.PT0801.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CMP.PT0801.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>12.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.PT0801.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CMP.PT0801.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>bar</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.PIC0801.SP" BrowseName="3:UT_CMP_PIC0801_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Discharge pressure setpoint</DisplayName>
+    <Description>Discharge pressure setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CMP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.PIC0801.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.PIC0801.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.PIC0801.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CMP.PIC0801.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>5.0</Low><High>10.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.PIC0801.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CMP.PIC0801.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>bar</Text></DisplayName><Description><Text>Pressure</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.TT0802.PV" BrowseName="3:UT_CMP_TT0802_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Discharge temperature</DisplayName>
+    <Description>Discharge temperature</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CMP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.TT0802.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.TT0802.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.TT0802.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CMP.TT0802.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>140.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.TT0802.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CMP.TT0802.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degC</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.JT0803.PV" BrowseName="3:UT_CMP_JT0803_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Active power</DisplayName>
+    <Description>Active power</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CMP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.JT0803.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.JT0803.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.JT0803.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CMP.JT0803.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>160.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.JT0803.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CMP.JT0803.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>kW</Text></DisplayName><Description><Text>Power</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.VT0804.PV" BrowseName="3:UT_CMP_VT0804_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Bearing vibration</DisplayName>
+    <Description>Bearing vibration</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CMP</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.VT0804.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CMP.VT0804.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.VT0804.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CMP.VT0804.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>20.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CMP.VT0804.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CMP.VT0804.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>mm</Text></DisplayName><Description><Text>Length</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAObject NodeId="ns=3;s=UT-CHL" BrowseName="3:UT-CHL">
+    <DisplayName>Chiller 1</DisplayName>
+    <Description>Chiller at ISA-95 level WorkUnit</Description>
+    <References>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=3;s=AREA-UTIL</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CHL.TT0901.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CHL.TIC0901.SP</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CHL.FT0902.PV</Reference>
+      <Reference ReferenceType="HasComponent">ns=3;s=UT.CHL.JT0903.PV</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=3;s=UT.CHL.TT0901.PV" BrowseName="3:UT_CHL_TT0901_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Chilled water supply temperature</DisplayName>
+    <Description>Chilled water supply temperature</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CHL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.TT0901.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.TT0901.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.TT0901.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CHL.TT0901.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>-10.0</Low><High>30.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.TT0901.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CHL.TT0901.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degC</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.TIC0901.SP" BrowseName="3:UT_CHL_TIC0901_SP" DataType="i=11" AccessLevel="3" UserAccessLevel="3">
+    <DisplayName>Chilled water supply setpoint</DisplayName>
+    <Description>Chilled water supply setpoint</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CHL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.TIC0901.SP.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.TIC0901.SP.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.TIC0901.SP.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CHL.TIC0901.SP">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>12.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.TIC0901.SP.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CHL.TIC0901.SP">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>degC</Text></DisplayName><Description><Text>Temperature</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.FT0902.PV" BrowseName="3:UT_CHL_FT0902_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Chilled water flow</DisplayName>
+    <Description>Chilled water flow</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CHL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.FT0902.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.FT0902.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.FT0902.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CHL.FT0902.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>120.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.FT0902.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CHL.FT0902.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>m3/h</Text></DisplayName><Description><Text>VolumeFlowRate</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.JT0903.PV" BrowseName="3:UT_CHL_JT0903_PV" DataType="i=11" AccessLevel="1" UserAccessLevel="1">
+    <DisplayName>Active power</DisplayName>
+    <Description>Active power</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=3;s=UT-CHL</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.JT0903.PV.EURange</Reference>
+      <Reference ReferenceType="HasProperty">ns=3;s=UT.CHL.JT0903.PV.EngineeringUnits</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.JT0903.PV.EURange" BrowseName="EURange" DataType="i=884" ParentNodeId="ns=3;s=UT.CHL.JT0903.PV">
+    <DisplayName>EURange</DisplayName>
+    <Value><ExtensionObject><Body><Range><Low>0.0</Low><High>400.0</High></Range></Body></ExtensionObject></Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=3;s=UT.CHL.JT0903.PV.EngineeringUnits" BrowseName="EngineeringUnits" DataType="i=887" ParentNodeId="ns=3;s=UT.CHL.JT0903.PV">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <Value><ExtensionObject><Body><EUInformation><NamespaceUri>http://www.opcfoundation.org/UA/units/un/cefact</NamespaceUri><DisplayName><Text>kW</Text></DisplayName><Description><Text>Power</Text></Description></EUInformation></Body></ExtensionObject></Value>
+  </UAVariable>
+</UANodeSet>

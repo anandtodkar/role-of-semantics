@@ -1,0 +1,165 @@
+\section{Layer L3: domain ontologies and vocabularies}
+\label{sec:layer3}
+
+L3 is where meaning becomes domain-specific: what a quantity \emph{is}, what an
+observation \emph{is}, what an air handling unit or a distillation column
+\emph{is}. Two of these, units and observations, turn out to carry
+disproportionate weight for agents.
+
+\subsection{QUDT: the unit calculus}
+\label{sec:qudt}
+
+QUDT \cite{qudt} models quantity kinds, units, dimension vectors, systems of
+units and constants. Its essential construction is that a unit carries
+(i) a \emph{quantity kind} with a seven-dimensional vector over the SI base
+quantities and (ii) an affine conversion to the coherent SI unit
+(\texttt{qudt:conversionMultiplier}, \texttt{qudt:conversionOffset}). Two
+quantities are commensurable if and only if their dimension vectors are equal;
+conversion is then arithmetic.
+
+\paragraph{Why this is the highest-value single vocabulary for industrial
+agents.} Industrial plants are unit-heterogeneous as a matter of history, not of
+carelessness: a retrofitted line keeps its \texttt{psi} and \texttt{degF}
+instruments while the new line is metric, and both feed the same MES. The
+failure modes this creates are exactly the ones type systems cannot see:
+
+\begin{itemize}
+  \item \textbf{Dimensional nonsense} (\textsc{f-dim}), writing a temperature
+  into a pressure setpoint. Catchable by comparing dimension vectors, and by
+  nothing weaker.
+  \item \textbf{Silent scale error} (\textsc{f-unitscale}), writing $58$ where
+  the tag expects \texttt{bar} but the agent was thinking \texttt{psi}. The value
+  is a plausible number of the right dimension. A flat catalogue that checks the
+  number against the range in whatever unit was stated accepts it. Only the
+  conversion catches it.
+  \item \textbf{False alarms}, the mirror image, and the one practitioners
+  underestimate. A legal setpoint expressed as $250$~\texttt{kPa} for a tag
+  ranged $0.5$--$4.5$~\texttt{bar} is correct; a validator without a unit
+  calculus rejects it. In Experiment~E4 this is the entire source of tier~G2's
+  \FPRGTwo{} false-alarm rate, and in Experiment~E5 it is why G2 forbids
+  $100\% - \ActRecGTwo{}$ of legal actions.
+\end{itemize}
+
+Affine units make the point sharpest. \texttt{degC} to \texttt{degF} requires an
+offset; a multiplier-only conversion table, the common shortcut, is simply
+wrong for temperature, the most-used quantity in process automation. QUDT is the
+only surveyed technology scoring $3$ on U3.
+
+\paragraph{Practical note.} An agent does not need all of QUDT. The slice
+required is small: for each unit in play, a symbol, a quantity kind, a dimension
+vector, a multiplier and an offset. In our implementation that block costs a few
+hundred tokens and is treated as \emph{schema}, reserved out of the context
+budget before payload is added, without that reservation, unit-conversion
+tasks fail not because the information is absent but because it is at the end of
+the queue.
+
+Alternatives exist, the Ontology of Units of Measure (OM), UCUM, UN/CEFACT
+codes, but only QUDT and OM carry the dimension algebra. UN/CEFACT codes, which
+\opcua{} and NGSI-LD reference, are identifiers without a calculus: necessary,
+not sufficient.
+
+\subsection{SOSA/SSN: observation semantics}
+
+SOSA/SSN (W3C Recommendation) separates the \emph{sensor}, the
+\emph{observable property}, the \emph{feature of interest}, the
+\emph{observation} and the \emph{result}. That five-way separation is more
+useful to an agent than it first appears, because it makes the following
+distinct and separately checkable: what was measured, of what thing, by what
+device, when, and with what value.
+
+\paragraph{Agent affordance.} Three failure modes collapse without it. Answering
+about the \emph{property} when asked about the \emph{asset} (or vice versa);
+quoting a value without a time (\textsc{f-stale}); and asserting a number that
+the observation does not support (\textsc{f-value}, eight cases in our corpus,
+detectable only at tier~G4). Once an answer is modelled as an observation with a
+result, ``is this answer faithful to the data?'' becomes a graph query rather
+than a judgement call, and that is the basis of a genuinely automatable
+faithfulness check for numeric answers, which is otherwise the hardest part of
+RAG evaluation.
+
+\subsection{Brick, Haystack, RealEstateCore, SAREF}
+
+\emph{Brick} \cite{balaji2016brick} is an RDF/OWL ontology of building
+equipment, points and locations with relations such as \texttt{hasPoint},
+\texttt{feeds} and \texttt{isLocatedIn}. Its design lesson generalises well beyond buildings: it
+deliberately restricts itself to a small, closed set of relations and a deep
+class taxonomy, which keeps queries writable by non-experts, a real advantage
+when the query author is a language model.
+
+\emph{Project Haystack} \cite{haystack} takes the opposite approach: additive
+tagging rather than
+classification. It is more forgiving of messy reality and less amenable to
+formal reasoning; the two communities have converged substantially, and the
+Brick--Haystack alignment work is a useful template for anyone reconciling a
+formal ontology with a tagging convention already in production.
+
+\emph{RealEstateCore} extends into space, occupancy and building-management
+concerns, and is notable for being one of the few domain ontologies with a
+first-class DTDL rendering, an existence proof that L1 and L3 can be
+published as one artefact.
+
+\emph{SAREF} (ETSI TS~103~264 \cite{etsi2020saref}) plus its vertical extensions
+(SAREF4BLDG, SAREF4ENER, SAREF4INMA for manufacturing, and others) models
+devices, functions, commands, states and services. Its \texttt{Function}/\texttt{Command}/
+\texttt{State} triad gives it a genuine, if shallow, behavioural model
+(U5~$=2$), rare among L3 ontologies.
+
+\paragraph{Assessment for industrial agents.} Brick's coverage of process
+equipment is thin, and none of these four covers a bottling line. The
+transferable contribution is structural: a small closed relation set, a deep
+class hierarchy, and a convention for attaching points to equipment. Our
+reference ontology follows exactly that pattern and aligns to Brick where a
+class exists.
+
+\subsection{Process-industry ontologies: ISO 15926, DEXPI, IOF}
+
+\emph{ISO~15926} \cite{iso15926} is the most ambitious semantic model in the
+survey: a 4D
+upper ontology plus a large reference data library for process plant lifecycle
+data. Its expressive power is real and its usability is poor; the temporal-part
+modelling that makes it rigorous also makes queries hard to write and results
+hard to explain. For agents its practical value today lies in the reference data
+library as a source of terms rather than in the upper ontology.
+
+\emph{DEXPI} \cite{dexpi} standardises P\&ID exchange: equipment, piping, instrumentation
+and their connectivity, with an RDF rendering available. For an agent doing
+process reasoning, ``what is between the pump and the tank?'', ``which valves
+isolate this section?'', DEXPI is the only standard that carries the answer,
+and its connectivity graph is directly the structure that Experiment~E2 shows to
+be decisive for topology tasks.
+
+\emph{IOF} (Industrial Ontologies Foundry \cite{iof}), built on BFO
+(ISO/IEC~21838-2), supplies a principled upper and mid-level ontology for
+manufacturing (core, maintenance, supply chain modules). Its promise for agents is
+\emph{compositionality}: modules that combine without contradiction, so an agent
+can reason across maintenance and production without an ad-hoc bridge. Its
+practical maturity trails its design quality, and the BFO commitment imposes a
+modelling discipline that most industrial teams find costly.
+
+\subsection{Cross-industry: Catena-X SAMM and FIWARE Smart Data Models}
+
+Catena-X's Semantic Aspect Meta Model \cite{catenax} defines \emph{aspect
+models}, versioned,
+semantically annotated data contracts (product carbon footprint, traceability,
+battery passport) from which APIs, JSON schemas and documentation are generated.
+This is the most industrially convincing pattern in the whole survey for agent
+work, because it produces, from one source, both the human documentation and the
+machine-checkable schema. FIWARE Smart Data Models does something similar for
+NGSI-LD across smart cities, agriculture, energy and manufacturing, with a large
+library of ready JSON schemas and contexts.
+
+\paragraph{Why this pattern matters for agents.} A tool schema generated from a
+versioned semantic model is a tool schema that cannot drift from the data it
+describes. Every constraint in the aspect model, enumerations, ranges, units,
+required fields, lands in the function signature and is therefore enforceable
+by constrained decoding rather than by hoping the model remembers.
+Experiment~E5 measures exactly this effect.
+
+\subsection{Summary of L3}
+
+L3 contributes what neither L1 nor L2 can: the unit calculus (QUDT), observation
+and provenance structure (SOSA/SSN), and domain taxonomies that let an agent
+generalise from one plant to another. Its weakness is coverage, there is no
+Brick for a bottling line, and that gap, rather than any technical obstacle, is
+the main reason industrial agent projects still start by building a bespoke
+ontology. We return to this in \S\ref{sec:challenges}.

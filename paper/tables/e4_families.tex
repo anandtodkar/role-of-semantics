@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\caption{E4: detection by fault family.}
+\label{tab:e4-families}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llrccccc}
+\toprule
+Family & Failure mode & $n$ & G0 & G1 & G2 & G3 & G4 \\
+\midrule
+F-ACC & write to a read-only variable & 8 & 0 & 0 & 8 & 8 & 8 \\
+F-CARD & missing mandatory argument & 8 & 0 & 8 & 8 & 8 & 8 \\
+F-DIM & dimensionally incompatible unit & 13 & 0 & 0 & 13 & 13 & 13 \\
+F-ENUM & value outside a closed enumeration & 4 & 0 & 4 & 4 & 4 & 4 \\
+F-ILK & interlock / guard condition violated & 3 & 0 & 0 & 0 & 0 & 3 \\
+F-RANGE & value outside the engineering range & 8 & 0 & 0 & 8 & 8 & 8 \\
+F-REF & reference to a non-existent tag or asset & 12 & 0 & 0 & 12 & 12 & 12 \\
+F-SCOPE & action outside the authorised ISA-95 scope & 5 & 0 & 0 & 0 & 5 & 5 \\
+F-STALE & decision based on stale evidence & 4 & 0 & 0 & 0 & 0 & 4 \\
+F-STATE & illegal state transition (PackML) & 7 & 0 & 0 & 0 & 0 & 7 \\
+F-UNITSCALE & correct dimension, wrong scale (silent unit error) & 4 & 0 & 0 & 4 & 4 & 4 \\
+F-VALUE & numeric answer contradicting the observation & 8 & 0 & 0 & 0 & 0 & 8 \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize The last five fault families, namely interlock violation, illegal state transition, stale evidence and unfaithful read-back, are invisible to every tier that lacks an explicit behavioural, constraint or provenance model, no matter how complete its type information is.\end{minipage}
+\end{table*}

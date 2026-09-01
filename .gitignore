@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# LaTeX build products
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.xdv
+paper/main.pdf
+
+# Downloaded LaTeX engine (see paper/build.ps1 for how it is obtained)
+.tools/
+
+# Generated: reproduce with `python code/run_experiments.py --dump-artifacts`
+# (kept in the repository so the paper builds without running the experiments)
+# artifacts/
+# results/
+# paper/tables/
+# paper/figures/
+# paper/generated_macros.tex

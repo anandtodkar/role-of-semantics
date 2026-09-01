@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{E2/E3/E6: context sufficiency, accuracy ceiling, context economy and the per-category breakdown, at a 6000-token budget over 35 tasks.}
+\label{tab:e6-ceiling}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lccccccccccccc}
+\toprule
+Cond. & Fact cov. & Ceiling & 95\% CI & Tokens & Cov./1k & GRD & UNI & RNG & TOP & PRV & ACT & SAF & REC \\
+\midrule
+C0 & 0.100 & 0.000 & [0.00, 0.10] & 407 & 0.247 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+C1 & 0.252 & 0.000 & [0.00, 0.10] & 1310 & 0.192 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+C2 & 0.549 & 0.229 & [0.12, 0.39] & 5193 & 0.106 & 1.00 & 0.00 & 0.60 & 0.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+C3 & 0.761 & 0.514 & [0.36, 0.67] & 5332 & 0.143 & 1.00 & 0.80 & 0.80 & 1.00 & 0.00 & 0.00 & 0.00 & 0.00 \\
+C4 & 0.857 & 0.857 & [0.71, 0.94] & 5290 & 0.162 & 0.80 & 0.80 & 0.60 & 1.00 & 0.75 & 1.00 & 1.00 & 1.00 \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize \emph{Ceiling} is the fraction of tasks for which the retrieved context expresses \emph{every} fact the question needs; no reader, however capable, can exceed it without guessing. Conditions are defined in Table~\ref{tab:conditions}. Categories: \textbf{GRD} entity grounding / disambiguation; \textbf{UNI} unit-correct reporting and conversion; \textbf{RNG} limit and range reasoning; \textbf{TOP} topology and impact analysis; \textbf{PRV} provenance and root cause; \textbf{ACT} action legality (behavioural model); \textbf{SAF} interlock and safety reasoning; \textbf{REC} recipe / specification conformance.\end{minipage}
+\end{table*}

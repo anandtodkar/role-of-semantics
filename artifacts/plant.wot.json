@@ -1,0 +1,1934 @@
+[
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Pasteuriser"
+    ],
+    "id": "urn:semindus:L1-PAS",
+    "title": "Line 1 Tunnel Pasteuriser",
+    "description": "Pasteuriser - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L1_PAS_TT0101_PV": {
+        "title": "Zone 1 temperature",
+        "type": "number",
+        "unit": "qudt:DEG_C",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.PAS.TT0101.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_PAS_TIC0101_SP": {
+        "title": "Zone 1 temperature setpoint",
+        "type": "number",
+        "unit": "qudt:DEG_C",
+        "minimum": 20.0,
+        "maximum": 95.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.PAS.TIC0101.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_PAS_PT0102_PV": {
+        "title": "Outlet pressure",
+        "type": "number",
+        "unit": "qudt:BAR",
+        "minimum": 0.0,
+        "maximum": 10.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.PAS.PT0102.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_PAS_PU0103_PV": {
+        "title": "Accumulated pasteurisation units",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 60.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.PAS.PU0103.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_PAS_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.PAS.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_PAS_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.PAS.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1-PAS.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Filler"
+    ],
+    "id": "urn:semindus:L1-FIL",
+    "title": "Line 1 Rotary Filler",
+    "description": "Filler - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L1_FIL_PT0301_PV": {
+        "title": "Outlet pressure",
+        "type": "number",
+        "unit": "qudt:BAR",
+        "minimum": 0.0,
+        "maximum": 6.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.PT0301.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_PIC0301_SP": {
+        "title": "Fill pressure setpoint",
+        "type": "number",
+        "unit": "qudt:BAR",
+        "minimum": 0.5,
+        "maximum": 4.5,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.PIC0301.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_TT0302_PV": {
+        "title": "Product temperature",
+        "type": "number",
+        "unit": "qudt:DEG_C",
+        "minimum": -5.0,
+        "maximum": 40.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.TT0302.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_FT0303_PV": {
+        "title": "Product flow",
+        "type": "number",
+        "unit": "qudt:L-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 400.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:VolumeFlowRate",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.FT0303.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_LIC0304_SP": {
+        "title": "Bowl level setpoint",
+        "type": "number",
+        "unit": "qudt:PERCENT",
+        "minimum": 10.0,
+        "maximum": 90.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:DimensionlessRatio",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.LIC0304.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_LT0304_PV": {
+        "title": "Bowl level",
+        "type": "number",
+        "unit": "qudt:PERCENT",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:DimensionlessRatio",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.LT0304.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_QIC0305_SP": {
+        "title": "Fill volume setpoint",
+        "type": "number",
+        "unit": "qudt:MilliL",
+        "minimum": 200.0,
+        "maximum": 2000.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Volume",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.QIC0305.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_SIC0306_SP": {
+        "title": "Carousel speed setpoint",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 5.0,
+        "maximum": 45.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.SIC0306.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_ST0306_PV": {
+        "title": "Carousel speed",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 50.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.ST0306.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_XV0307_CMD": {
+        "title": "Product valve command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Dimensionless",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.XV0307.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_FIL_KPI0308_OEE": {
+        "title": "Overall equipment effectiveness",
+        "type": "number",
+        "unit": "qudt:PERCENT",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:DimensionlessRatio",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.FIL.KPI0308.OEE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1-FIL.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Capper"
+    ],
+    "id": "urn:semindus:L1-CAP",
+    "title": "Line 1 Capper",
+    "description": "Capper - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L1_CAP_TQ0401_PV": {
+        "title": "Capping torque",
+        "type": "number",
+        "unit": "qudt:N-M",
+        "minimum": 0.0,
+        "maximum": 4.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Torque",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CAP.TQ0401.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CAP_TQC0401_SP": {
+        "title": "Capping torque setpoint",
+        "type": "number",
+        "unit": "qudt:N-M",
+        "minimum": 0.8,
+        "maximum": 3.2,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Torque",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CAP.TQC0401.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CAP_ST0402_PV": {
+        "title": "Head speed",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 60.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CAP.ST0402.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CAP_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CAP.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CAP_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CAP.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1-CAP.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Labeller"
+    ],
+    "id": "urn:semindus:L1-LAB",
+    "title": "Line 1 Labeller",
+    "description": "Labeller - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L1_LAB_ST0501_PV": {
+        "title": "Carousel speed",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 55.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.LAB.ST0501.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_LAB_ZT0502_PV": {
+        "title": "Label position deviation",
+        "type": "number",
+        "unit": "qudt:MilliM",
+        "minimum": -5.0,
+        "maximum": 5.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Length",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.LAB.ZT0502.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_LAB_CNT0503_PV": {
+        "title": "Reject count",
+        "type": "number",
+        "unit": "qudt:NUM",
+        "minimum": 0.0,
+        "maximum": 1000000.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.LAB.CNT0503.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_LAB_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.LAB.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_LAB_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.LAB.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1-LAB.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:CIPSkid"
+    ],
+    "id": "urn:semindus:L1-CIP",
+    "title": "Line 1 CIP Skid",
+    "description": "CIPSkid - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L1_CIP_TT0601_PV": {
+        "title": "Return temperature",
+        "type": "number",
+        "unit": "qudt:DEG_C",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CIP.TT0601.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CIP_FT0602_PV": {
+        "title": "Return flow",
+        "type": "number",
+        "unit": "qudt:L-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 600.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:VolumeFlowRate",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CIP.FT0602.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CIP_AT0603_PV": {
+        "title": "Caustic concentration",
+        "type": "number",
+        "unit": "qudt:PERCENT",
+        "minimum": 0.0,
+        "maximum": 5.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:DimensionlessRatio",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CIP.AT0603.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CIP_AT0604_PV": {
+        "title": "Return pH",
+        "type": "number",
+        "unit": "qudt:PH",
+        "minimum": 0.0,
+        "maximum": 14.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Acidity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CIP.AT0604.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CIP_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CIP.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L1_CIP_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1.CIP.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L1-CIP.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Pasteuriser"
+    ],
+    "id": "urn:semindus:L2-PAS",
+    "title": "Line 2 Tunnel Pasteuriser",
+    "description": "Pasteuriser - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L2_PAS_TT0101_PV": {
+        "title": "Zone 1 temperature",
+        "type": "number",
+        "unit": "qudt:DEG_F",
+        "minimum": 0.0,
+        "maximum": 212.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.PAS.TT0101.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_PAS_TIC0101_SP": {
+        "title": "Zone 1 temperature setpoint",
+        "type": "number",
+        "unit": "qudt:DEG_F",
+        "minimum": 68.0,
+        "maximum": 203.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.PAS.TIC0101.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_PAS_PT0102_PV": {
+        "title": "Outlet pressure",
+        "type": "number",
+        "unit": "qudt:PSI",
+        "minimum": 0.0,
+        "maximum": 145.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.PAS.PT0102.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_PAS_PU0103_PV": {
+        "title": "Accumulated pasteurisation units",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 60.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.PAS.PU0103.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_PAS_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.PAS.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_PAS_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.PAS.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2-PAS.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Filler"
+    ],
+    "id": "urn:semindus:L2-FIL",
+    "title": "Line 2 Rotary Filler",
+    "description": "Filler - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L2_FIL_PT0301_PV": {
+        "title": "Outlet pressure",
+        "type": "number",
+        "unit": "qudt:PSI",
+        "minimum": 0.0,
+        "maximum": 87.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.PT0301.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_PIC0301_SP": {
+        "title": "Fill pressure setpoint",
+        "type": "number",
+        "unit": "qudt:PSI",
+        "minimum": 0.5,
+        "maximum": 65.25,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.PIC0301.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_TT0302_PV": {
+        "title": "Product temperature",
+        "type": "number",
+        "unit": "qudt:DEG_F",
+        "minimum": 23.0,
+        "maximum": 104.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.TT0302.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_FT0303_PV": {
+        "title": "Product flow",
+        "type": "number",
+        "unit": "qudt:M3-PER-HR",
+        "minimum": 0.0,
+        "maximum": 24.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:VolumeFlowRate",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.FT0303.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_LIC0304_SP": {
+        "title": "Bowl level setpoint",
+        "type": "number",
+        "unit": "qudt:PERCENT",
+        "minimum": 10.0,
+        "maximum": 90.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:DimensionlessRatio",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.LIC0304.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_LT0304_PV": {
+        "title": "Bowl level",
+        "type": "number",
+        "unit": "qudt:PERCENT",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:DimensionlessRatio",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.LT0304.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_QIC0305_SP": {
+        "title": "Fill volume setpoint",
+        "type": "number",
+        "unit": "qudt:MilliL",
+        "minimum": 200.0,
+        "maximum": 2000.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Volume",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.QIC0305.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_SIC0306_SP": {
+        "title": "Carousel speed setpoint",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 5.0,
+        "maximum": 45.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.SIC0306.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_ST0306_PV": {
+        "title": "Carousel speed",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 50.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.ST0306.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_XV0307_CMD": {
+        "title": "Product valve command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Dimensionless",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.XV0307.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_FIL_KPI0308_OEE": {
+        "title": "Overall equipment effectiveness",
+        "type": "number",
+        "unit": "qudt:PERCENT",
+        "minimum": 0.0,
+        "maximum": 100.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:DimensionlessRatio",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.FIL.KPI0308.OEE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2-FIL.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Capper"
+    ],
+    "id": "urn:semindus:L2-CAP",
+    "title": "Line 2 Crowner",
+    "description": "Capper - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L2_CAP_TQ0401_PV": {
+        "title": "Capping torque",
+        "type": "number",
+        "unit": "qudt:N-M",
+        "minimum": 0.0,
+        "maximum": 5.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Torque",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.CAP.TQ0401.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_CAP_TQC0401_SP": {
+        "title": "Capping torque setpoint",
+        "type": "number",
+        "unit": "qudt:N-M",
+        "minimum": 0.8,
+        "maximum": 3.2,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Torque",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.CAP.TQC0401.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_CAP_ST0402_PV": {
+        "title": "Head speed",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 60.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.CAP.ST0402.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_CAP_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.CAP.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_CAP_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.CAP.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2-CAP.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Labeller"
+    ],
+    "id": "urn:semindus:L2-LAB",
+    "title": "Line 2 Labeller",
+    "description": "Labeller - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "L2_LAB_ST0501_PV": {
+        "title": "Carousel speed",
+        "type": "number",
+        "unit": "qudt:REV-PER-MIN",
+        "minimum": 0.0,
+        "maximum": 55.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:AngularVelocity",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.LAB.ST0501.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_LAB_ZT0502_PV": {
+        "title": "Label position deviation",
+        "type": "number",
+        "unit": "qudt:MilliM",
+        "minimum": -5.0,
+        "maximum": 5.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Length",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.LAB.ZT0502.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_LAB_CNT0503_PV": {
+        "title": "Reject count",
+        "type": "number",
+        "unit": "qudt:NUM",
+        "minimum": 0.0,
+        "maximum": 1000000.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.LAB.CNT0503.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_LAB_UNIT_STATE": {
+        "title": "PackML unit current state",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 17.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.LAB.UNIT.STATE",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "L2_LAB_UNIT_CMD": {
+        "title": "PackML unit command",
+        "type": "number",
+        "unit": "qudt:UNITLESS",
+        "minimum": 0.0,
+        "maximum": 9.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Count",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2.LAB.UNIT.CMD",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {
+      "packmlCommand": {
+        "title": "PackML unit command",
+        "input": {
+          "type": "string",
+          "enum": [
+            "Reset",
+            "Start",
+            "Stop",
+            "Hold",
+            "Unhold",
+            "Suspend",
+            "Unsuspend",
+            "Abort",
+            "Clear"
+          ]
+        },
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=L2-LAB.UNIT.CMD",
+            "op": [
+              "invokeaction"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Compressor"
+    ],
+    "id": "urn:semindus:UT-CMP",
+    "title": "Compressed Air Compressor 1",
+    "description": "Compressor - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "UT_CMP_PT0801_PV": {
+        "title": "Outlet pressure",
+        "type": "number",
+        "unit": "qudt:BAR",
+        "minimum": 0.0,
+        "maximum": 12.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CMP.PT0801.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "UT_CMP_PIC0801_SP": {
+        "title": "Discharge pressure setpoint",
+        "type": "number",
+        "unit": "qudt:BAR",
+        "minimum": 5.0,
+        "maximum": 10.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Pressure",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CMP.PIC0801.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "UT_CMP_TT0802_PV": {
+        "title": "Discharge temperature",
+        "type": "number",
+        "unit": "qudt:DEG_C",
+        "minimum": 0.0,
+        "maximum": 140.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CMP.TT0802.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "UT_CMP_JT0803_PV": {
+        "title": "Active power",
+        "type": "number",
+        "unit": "qudt:KiloW",
+        "minimum": 0.0,
+        "maximum": 160.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Power",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CMP.JT0803.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "UT_CMP_VT0804_PV": {
+        "title": "Bearing vibration",
+        "type": "number",
+        "unit": "qudt:MilliM",
+        "minimum": 0.0,
+        "maximum": 20.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Length",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CMP.VT0804.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {}
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2022/wot/td/v1.1",
+      {
+        "qudt": "http://qudt.org/vocab/unit/",
+        "qk": "http://qudt.org/vocab/quantitykind/",
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "@type": [
+      "Thing",
+      "sio:Chiller"
+    ],
+    "id": "urn:semindus:UT-CHL",
+    "title": "Chiller 1",
+    "description": "Chiller - ISA-95 WorkUnit",
+    "securityDefinitions": {
+      "nosec_sc": {
+        "scheme": "nosec"
+      }
+    },
+    "security": "nosec_sc",
+    "properties": {
+      "UT_CHL_TT0901_PV": {
+        "title": "Chilled water supply temperature",
+        "type": "number",
+        "unit": "qudt:DEG_C",
+        "minimum": -10.0,
+        "maximum": 30.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CHL.TT0901.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "UT_CHL_TIC0901_SP": {
+        "title": "Chilled water supply setpoint",
+        "type": "number",
+        "unit": "qudt:DEG_C",
+        "minimum": 0.0,
+        "maximum": 12.0,
+        "readOnly": false,
+        "observable": true,
+        "@type": "qk:Temperature",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CHL.TIC0901.SP",
+            "op": [
+              "readproperty",
+              "writeproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "UT_CHL_FT0902_PV": {
+        "title": "Chilled water flow",
+        "type": "number",
+        "unit": "qudt:M3-PER-HR",
+        "minimum": 0.0,
+        "maximum": 120.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:VolumeFlowRate",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CHL.FT0902.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      },
+      "UT_CHL_JT0903_PV": {
+        "title": "Active power",
+        "type": "number",
+        "unit": "qudt:KiloW",
+        "minimum": 0.0,
+        "maximum": 400.0,
+        "readOnly": true,
+        "observable": true,
+        "@type": "qk:Power",
+        "forms": [
+          {
+            "href": "opc.tcp://plant.example/ns=3;s=UT.CHL.JT0903.PV",
+            "op": [
+              "readproperty"
+            ],
+            "contentType": "application/opcua+json"
+          }
+        ]
+      }
+    },
+    "actions": {}
+  }
+]

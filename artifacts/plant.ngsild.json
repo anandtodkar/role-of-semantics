@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "urn:ngsi-ld:Enterprise:ENT",
+    "type": "Enterprise",
+    "name": {
+      "type": "Property",
+      "value": "Global Beverages AG"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "Enterprise"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ]
+  },
+  {
+    "id": "urn:ngsi-ld:Site:SITE-KA",
+    "type": "Site",
+    "name": {
+      "type": "Property",
+      "value": "Karlsruhe Bottling Plant"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "Site"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:ENT"
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Area:AREA-FILL",
+    "type": "Area",
+    "name": {
+      "type": "Property",
+      "value": "Filling Hall"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "Area"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:SITE-KA"
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Area:AREA-UTIL",
+    "type": "Area",
+    "name": {
+      "type": "Property",
+      "value": "Utilities"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "Area"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:SITE-KA"
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:ProductionLine:L1",
+    "type": "ProductionLine",
+    "name": {
+      "type": "Property",
+      "value": "Bottling Line 1"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkCenter"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:AREA-FILL"
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Pasteuriser:L1-PAS",
+    "type": "Pasteuriser",
+    "name": {
+      "type": "Property",
+      "value": "Line 1 Tunnel Pasteuriser"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L1"
+    },
+    "TT0101Pv": {
+      "type": "Property",
+      "value": 72.0,
+      "unitCode": "degC",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_PAS_TT0101_PV"
+      }
+    },
+    "TIC0101Sp": {
+      "type": "Property",
+      "value": 72.0,
+      "unitCode": "degC",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_PAS_TIC0101_SP"
+      }
+    },
+    "PT0102Pv": {
+      "type": "Property",
+      "value": 3.1,
+      "unitCode": "bar",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_PAS_PT0102_PV"
+      }
+    },
+    "PU0103Pv": {
+      "type": "Property",
+      "value": 22.4,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_PAS_PU0103_PV"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_PAS_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_PAS_UNIT_CMD"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Filler:L1-FIL",
+    "type": "Filler",
+    "name": {
+      "type": "Property",
+      "value": "Line 1 Rotary Filler"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L1"
+    },
+    "PT0301Pv": {
+      "type": "Property",
+      "value": 3.0,
+      "unitCode": "bar",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_PT0301_PV"
+      }
+    },
+    "PIC0301Sp": {
+      "type": "Property",
+      "value": 2.52,
+      "unitCode": "bar",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_PIC0301_SP"
+      }
+    },
+    "TT0302Pv": {
+      "type": "Property",
+      "value": 4.0,
+      "unitCode": "degC",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_TT0302_PV"
+      }
+    },
+    "FT0303Pv": {
+      "type": "Property",
+      "value": 180.0,
+      "unitCode": "L/min",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_FT0303_PV"
+      }
+    },
+    "LIC0304Sp": {
+      "type": "Property",
+      "value": 62.0,
+      "unitCode": "%",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_LIC0304_SP"
+      }
+    },
+    "LT0304Pv": {
+      "type": "Property",
+      "value": 61.4,
+      "unitCode": "%",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_LT0304_PV"
+      }
+    },
+    "FillVolumeSetpoint": {
+      "type": "Property",
+      "value": 500.0,
+      "unitCode": "mL",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_QIC0305_SP"
+      }
+    },
+    "SIC0306Sp": {
+      "type": "Property",
+      "value": 32.0,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_SIC0306_SP"
+      }
+    },
+    "ST0306Pv": {
+      "type": "Property",
+      "value": 31.8,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_ST0306_PV"
+      }
+    },
+    "XV0307Cmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_XV0307_CMD"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_UNIT_CMD"
+      }
+    },
+    "KPI0308Oee": {
+      "type": "Property",
+      "value": 78.5,
+      "unitCode": "%",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_FIL_KPI0308_OEE"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Capper:L1-CAP",
+    "type": "Capper",
+    "name": {
+      "type": "Property",
+      "value": "Line 1 Capper"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L1"
+    },
+    "TQ0401Pv": {
+      "type": "Property",
+      "value": 2.05,
+      "unitCode": "N.m",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CAP_TQ0401_PV"
+      }
+    },
+    "TQC0401Sp": {
+      "type": "Property",
+      "value": 2.1,
+      "unitCode": "N.m",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CAP_TQC0401_SP"
+      }
+    },
+    "ST0402Pv": {
+      "type": "Property",
+      "value": 32.0,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CAP_ST0402_PV"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CAP_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CAP_UNIT_CMD"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Labeller:L1-LAB",
+    "type": "Labeller",
+    "name": {
+      "type": "Property",
+      "value": "Line 1 Labeller"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L1"
+    },
+    "ST0501Pv": {
+      "type": "Property",
+      "value": 31.5,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_LAB_ST0501_PV"
+      }
+    },
+    "ZT0502Pv": {
+      "type": "Property",
+      "value": 0.4,
+      "unitCode": "mm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_LAB_ZT0502_PV"
+      }
+    },
+    "CNT0503Pv": {
+      "type": "Property",
+      "value": 142.0,
+      "unitCode": "#",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_LAB_CNT0503_PV"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_LAB_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_LAB_UNIT_CMD"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:CIPSkid:L1-CIP",
+    "type": "CIPSkid",
+    "name": {
+      "type": "Property",
+      "value": "Line 1 CIP Skid"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L1"
+    },
+    "TT0601Pv": {
+      "type": "Property",
+      "value": 79.0,
+      "unitCode": "degC",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CIP_TT0601_PV"
+      }
+    },
+    "FT0602Pv": {
+      "type": "Property",
+      "value": 410.0,
+      "unitCode": "L/min",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CIP_FT0602_PV"
+      }
+    },
+    "AT0603Pv": {
+      "type": "Property",
+      "value": 2.1,
+      "unitCode": "%",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CIP_AT0603_PV"
+      }
+    },
+    "AT0604Pv": {
+      "type": "Property",
+      "value": 12.4,
+      "unitCode": "pH",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CIP_AT0604_PV"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CIP_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L1_CIP_UNIT_CMD"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:ProductionLine:L2",
+    "type": "ProductionLine",
+    "name": {
+      "type": "Property",
+      "value": "Bottling Line 2"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkCenter"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:AREA-FILL"
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Pasteuriser:L2-PAS",
+    "type": "Pasteuriser",
+    "name": {
+      "type": "Property",
+      "value": "Line 2 Tunnel Pasteuriser"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L2"
+    },
+    "TT0101Pv": {
+      "type": "Property",
+      "value": 161.6,
+      "unitCode": "degF",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_PAS_TT0101_PV"
+      }
+    },
+    "TIC0101Sp": {
+      "type": "Property",
+      "value": 161.6,
+      "unitCode": "degF",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_PAS_TIC0101_SP"
+      }
+    },
+    "PT0102Pv": {
+      "type": "Property",
+      "value": 44.95,
+      "unitCode": "psi",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_PAS_PT0102_PV"
+      }
+    },
+    "PU0103Pv": {
+      "type": "Property",
+      "value": 8.5,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_PAS_PU0103_PV"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_PAS_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_PAS_UNIT_CMD"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Filler:L2-FIL",
+    "type": "Filler",
+    "name": {
+      "type": "Property",
+      "value": "Line 2 Rotary Filler"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L2"
+    },
+    "PT0301Pv": {
+      "type": "Property",
+      "value": 43.5,
+      "unitCode": "psi",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_PT0301_PV"
+      }
+    },
+    "PIC0301Sp": {
+      "type": "Property",
+      "value": 36.54,
+      "unitCode": "psi",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_PIC0301_SP"
+      }
+    },
+    "TT0302Pv": {
+      "type": "Property",
+      "value": 39.2,
+      "unitCode": "degF",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_TT0302_PV"
+      }
+    },
+    "FT0303Pv": {
+      "type": "Property",
+      "value": 10.8,
+      "unitCode": "m3/h",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_FT0303_PV"
+      }
+    },
+    "LIC0304Sp": {
+      "type": "Property",
+      "value": 62.0,
+      "unitCode": "%",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_LIC0304_SP"
+      }
+    },
+    "LT0304Pv": {
+      "type": "Property",
+      "value": 61.4,
+      "unitCode": "%",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_LT0304_PV"
+      }
+    },
+    "FillVolumeSetpoint": {
+      "type": "Property",
+      "value": 500.0,
+      "unitCode": "mL",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_QIC0305_SP"
+      }
+    },
+    "SIC0306Sp": {
+      "type": "Property",
+      "value": 32.0,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_SIC0306_SP"
+      }
+    },
+    "ST0306Pv": {
+      "type": "Property",
+      "value": 31.8,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_ST0306_PV"
+      }
+    },
+    "XV0307Cmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_XV0307_CMD"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_UNIT_CMD"
+      }
+    },
+    "KPI0308Oee": {
+      "type": "Property",
+      "value": 78.5,
+      "unitCode": "%",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_FIL_KPI0308_OEE"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Capper:L2-CAP",
+    "type": "Capper",
+    "name": {
+      "type": "Property",
+      "value": "Line 2 Crowner"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L2"
+    },
+    "TQ0401Pv": {
+      "type": "Property",
+      "value": 2.05,
+      "unitCode": "N.m",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_CAP_TQ0401_PV"
+      }
+    },
+    "TQC0401Sp": {
+      "type": "Property",
+      "value": 2.1,
+      "unitCode": "N.m",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_CAP_TQC0401_SP"
+      }
+    },
+    "ST0402Pv": {
+      "type": "Property",
+      "value": 32.0,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_CAP_ST0402_PV"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_CAP_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_CAP_UNIT_CMD"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Labeller:L2-LAB",
+    "type": "Labeller",
+    "name": {
+      "type": "Property",
+      "value": "Line 2 Labeller"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:L2"
+    },
+    "ST0501Pv": {
+      "type": "Property",
+      "value": 31.5,
+      "unitCode": "rpm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_LAB_ST0501_PV"
+      }
+    },
+    "ZT0502Pv": {
+      "type": "Property",
+      "value": 0.4,
+      "unitCode": "mm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_LAB_ZT0502_PV"
+      }
+    },
+    "CNT0503Pv": {
+      "type": "Property",
+      "value": 142.0,
+      "unitCode": "#",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_LAB_CNT0503_PV"
+      }
+    },
+    "UNITState": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_LAB_UNIT_STATE"
+      }
+    },
+    "UNITCmd": {
+      "type": "Property",
+      "value": null,
+      "unitCode": "1",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "L2_LAB_UNIT_CMD"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Compressor:UT-CMP",
+    "type": "Compressor",
+    "name": {
+      "type": "Property",
+      "value": "Compressed Air Compressor 1"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:AREA-UTIL"
+    },
+    "PT0801Pv": {
+      "type": "Property",
+      "value": 7.8,
+      "unitCode": "bar",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CMP_PT0801_PV"
+      }
+    },
+    "PIC0801Sp": {
+      "type": "Property",
+      "value": 7.5,
+      "unitCode": "bar",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CMP_PIC0801_SP"
+      }
+    },
+    "TT0802Pv": {
+      "type": "Property",
+      "value": 88.0,
+      "unitCode": "degC",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CMP_TT0802_PV"
+      }
+    },
+    "JT0803Pv": {
+      "type": "Property",
+      "value": 112.0,
+      "unitCode": "kW",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CMP_JT0803_PV"
+      }
+    },
+    "VT0804Pv": {
+      "type": "Property",
+      "value": 3.2,
+      "unitCode": "mm",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CMP_VT0804_PV"
+      }
+    }
+  },
+  {
+    "id": "urn:ngsi-ld:Chiller:UT-CHL",
+    "type": "Chiller",
+    "name": {
+      "type": "Property",
+      "value": "Chiller 1"
+    },
+    "isa95Level": {
+      "type": "Property",
+      "value": "WorkUnit"
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.7.jsonld",
+      {
+        "sio": "https://w3id.org/semindus/ontology#"
+      }
+    ],
+    "isPartOf": {
+      "type": "Relationship",
+      "object": "urn:ngsi-ld:Asset:AREA-UTIL"
+    },
+    "TT0901Pv": {
+      "type": "Property",
+      "value": 4.2,
+      "unitCode": "degC",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CHL_TT0901_PV"
+      }
+    },
+    "TIC0901Sp": {
+      "type": "Property",
+      "value": 4.0,
+      "unitCode": "degC",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CHL_TIC0901_SP"
+      }
+    },
+    "FT0902Pv": {
+      "type": "Property",
+      "value": 84.0,
+      "unitCode": "m3/h",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CHL_FT0902_PV"
+      }
+    },
+    "JT0903Pv": {
+      "type": "Property",
+      "value": 241.0,
+      "unitCode": "kW",
+      "observedAt": "2026-07-14T02:20:00Z",
+      "sourceTag": {
+        "type": "Property",
+        "value": "UT_CHL_JT0903_PV"
+      }
+    }
+  }
+]

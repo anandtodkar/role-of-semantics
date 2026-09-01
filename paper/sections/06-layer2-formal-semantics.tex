@@ -1,0 +1,190 @@
+\section{Layer L2: formal semantics with RDF, OWL, SHACL and SPARQL}
+\label{sec:layer2}
+
+L1 tells an agent what things \emph{are}. L2 tells it what \emph{follows}, what
+is \emph{forbidden}, and how to \emph{ask}. This is the layer
+industrial practice most often skips, and the experiments in
+\S\ref{sec:results} suggest that skipping it caps agent accuracy at roughly the
+\CeilingCTwo{} mark regardless of how good the type model is.
+
+\subsection{RDF and RDFS: the join substrate}
+
+RDF \cite{w3c2014rdf} represents everything as subject--predicate--object
+triples over IRIs and literals. Its virtues for agents are unglamorous and large.
+
+\emph{Schemaless join.} Merging an \opcua{} address space, an AAS environment, a
+maintenance log and a recipe database requires no shared schema and no ETL
+target, only shared IRIs. Our reference graph does exactly this: signals from
+the control system, nameplates from the AAS, topology from the engineering model,
+events from the historian and recipes from the MES, in \NTriples{} triples with
+no integration schema.
+
+\emph{Open-world assumption.} An agent working over a plant model must
+distinguish ``no interlock is recorded'' from ``there is no interlock''. RDF's
+open world makes the distinction expressible; closed-world SQL thinking makes it
+disappear, and the disappearance is dangerous in exactly the safety-relevant
+cases.
+
+\emph{Named graphs and quads} give per-source provenance for free, which is what
+makes an agent's evidence auditable.
+
+\paragraph{Limitation.} RDF alone says nothing about units, behaviour or
+constraints (U3, U5, U6 all $0$), and its verbose serialisations are the
+worst-in-class on U9: expanded JSON-LD and N-Triples measured at
+$64\times$ and $\MaxSerialRatio\times$ the tag-list token cost respectively
+(Table~\ref{tab:e3-serialisation}). Turtle is the only serialisation we would
+put anywhere near a context window, and even then only in projected slices.
+
+\subsection{OWL 2: inference and its limits}
+
+OWL~2 \cite{w3c2012owl} adds class and property axioms with a
+description-logic semantics: subsumption, equivalence, disjointness, domains and
+ranges, cardinality, property characteristics (transitive, symmetric, inverse,
+functional). Its
+profiles trade expressivity for tractability: EL for large terminologies, QL
+for query rewriting over databases, RL for rule-based forward chaining.
+
+\paragraph{Agent affordances.} Two matter. \emph{Materialised inference}
+converts implicit facts into retrievable ones: declaring
+\texttt{isPartOf} transitive means ``every asset in the site'' is a query rather
+than a recursive traversal the agent must implement. Declaring
+\texttt{feeds}~/~\texttt{isFedBy} inverse means impact analysis works in both
+directions from one asserted set. \emph{Consistency checking} catches
+contradictory assertions, so an agent that concludes a node is both a
+\texttt{Sensor} and an \texttt{Actuator} can be told it is wrong, not merely
+scored as unlikely.
+
+\paragraph{Where OWL is the wrong tool.} OWL's open-world, no-unique-name
+semantics makes it a poor \emph{validator}. ``This signal must have exactly one
+unit'' is, in OWL, not a constraint that can be violated but an axiom from which
+the reasoner will happily infer that two differently-named units are the same
+thing. Practitioners have repeatedly rediscovered this; it is the reason SHACL
+exists, and it is why we use OWL for the T-Box and SHACL for validation in our
+implementation.
+
+\subsection{SHACL: turning generation into a checkable proposition}
+\label{sec:shacl}
+
+SHACL \cite{knublauch2017shacl} (W3C Recommendation, 2017) validates RDF graphs
+against \emph{shapes}:
+node shapes with target declarations and property shapes carrying constraint
+components (\texttt{minCount}, \texttt{datatype}, \texttt{in},
+\texttt{minInclusive}, \texttt{class}, \texttt{node}, \texttt{closed}), plus
+\texttt{sh:sparql} for constraints that need the full query language. Validation
+returns a report: focus node, path, severity, message.
+
+This is, in our assessment, the most under-exploited technology in the entire
+survey for agent work, and the experimental centrepiece of this paper. The
+pattern is simple and general:
+
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item the agent proposes an action or an answer;
+  \item the proposal is \emph{lifted} into RDF against the plant graph;
+  \item SHACL validates the union;
+  \item a conforming proposal executes; a violating one is returned to the model
+  \emph{with the validation report as a repair signal}.
+\end{enumerate}
+
+Generation stays statistical; acceptance becomes deductive. The report is not
+merely a rejection: \texttt{sh:message} with interpolated result variables
+produces a natural-language explanation the model can act on, which is why we
+report \emph{diagnosis rate} alongside detection rate in Experiment~E4. A
+guardrail that says only ``no'' is far less useful in a repair loop than one
+that says \emph{which} constraint failed and by how much.
+
+Listing~\ref{lst:shacl} shows the constraint that catches the most dangerous
+fault family in our corpus. Note that it is not expressible without \emph{both}
+L2 (SPARQL over a graph) and L3 (QUDT conversion factors), a concrete instance
+of the non-substitutability claim of \S\ref{sec:framework}.
+
+\begin{lstlisting}[language=turtle,float=*,floatplacement=t,caption={A unit-aware
+range constraint. The proposed value is converted into the signal's own unit
+through the QUDT affine conversion before the engineering range is applied. A
+validator without unit semantics either accepts a value that is out of range (a
+false negative) or rejects a legal value expressed in a different unit (a false
+alarm). In Experiment~E4, tier~G2 does both.},label={lst:shacl}]
+shp:SetpointWriteShape a sh:NodeShape ;
+  sh:targetClass sio:SetpointWrite ;
+  sh:sparql [ a sh:SPARQLConstraint ;
+    sh:message "F-RANGE: {?conv} is outside [{?lo},{?hi}] of {?sigtag}" ;
+    sh:select """
+      SELECT $this ?conv ?lo ?hi ?sigtag WHERE {
+        $this sio:targetSignal ?sig ; sio:value ?v ; sio:valueUnit ?u .
+        ?sig qudt:unit ?su ; sio:engineeringLow ?lo ;
+             sio:engineeringHigh ?hi ; skos:notation ?sigtag .
+        ?u  qudt:conversionMultiplier ?mu ; qudt:conversionOffset ?ou ;
+            sio:dimensionVector ?du .
+        ?su qudt:conversionMultiplier ?ms ; qudt:conversionOffset ?os ;
+            sio:dimensionVector ?ds .
+        FILTER (?du = ?ds)
+        BIND ((((?v * ?mu) + ?ou) - ?os) / ?ms AS ?conv)
+        FILTER (?conv < ?lo || ?conv > ?hi) } """ ] .
+\end{lstlisting}
+
+\subsection{SPARQL: the aggregation escape hatch}
+
+SPARQL~1.1 \cite{w3c2013sparql} supplies pattern matching, \texttt{OPTIONAL},
+negation, property paths (including transitive \texttt{+} and \texttt{*}),
+aggregation, subqueries, federation and \texttt{ASK}. For an agent it plays three distinct roles.
+
+\emph{Retrieval.} A SPARQL \texttt{CONSTRUCT} or \texttt{DESCRIBE} produces a
+faithful, minimal subgraph. This is the projection operation that L1 formats lack
+and that U9 demands.
+
+\emph{Computation.} Aggregations, joins and transitive closures are evaluated by
+the engine, not by the model. Experiment~E7 quantifies this: eight questions that
+consumed $5{,}000$--$5{,}500$ tokens of stuffed context are answered by a query
+plus its result set in $79$--$314$ tokens, a saving of up to
+$\MaxQuerySaving\times$. One of them, a plant-wide alarm sweep, is not
+answerable by stuffing at \emph{any} budget while costing about two hundred
+tokens as a query.
+
+\emph{Verification.} An \texttt{ASK} query is a truth test. An agent that says
+``the compressor feeds the Line~1 filler'' can have the claim checked in one
+round trip.
+
+\paragraph{The text-to-SPARQL problem.} All of this presumes the agent can write
+the query. Query generation over an unfamiliar schema is itself an accuracy
+problem, well studied for SQL and less so for SPARQL, and it is the main risk of
+the query-based architecture. The mitigation we recommend, and implement in the
+artefact, is not free-form generation but \emph{parameterised query templates
+exposed as tools}: the agent chooses a template and binds arguments, so the
+argument space is constrained (Experiment~E5) and the query is correct by
+construction.
+
+\subsection{JSON-LD, SKOS, PROV-O, and the mapping languages}
+
+\emph{JSON-LD~1.1} \cite{w3c2020jsonld} is the diplomatic solution to the L1/L2
+divide: a document
+that is ordinary JSON to a REST client and RDF to a graph engine, differing only
+by a \texttt{@context}. It is the reason WoT~TD and NGSI-LD can be simultaneously
+developer-friendly and semantically grounded, and it is the least disruptive way
+to add semantics to an existing industrial API.
+
+\emph{SKOS} handles what ontologies handle badly: the messy synonymy of real
+plants. \texttt{skos:altLabel} and \texttt{skos:notation} are how an agent maps
+``the filler'', ``FIL'', ``Modulfill'' and \texttt{L1-FIL} to one entity, and
+in our implementation they are literally the fields the entity resolver reads.
+
+\emph{PROV-O} \cite{w3c2013prov} supplies the vocabulary for U7: activities, agents, entities,
+\texttt{wasDerivedFrom}, \texttt{wasAssociatedWith}, \texttt{startedAtTime}. Its
+importance rises sharply the moment agents write as well as read: an autonomous
+change to a plant needs an audit trail with the same standing as an operator's
+signature.
+
+\emph{R2RML, RML and OBDA} (\eg Ontop) let the graph be \emph{virtual}. Given
+that plant data lives in historians and relational stores and is far too large to
+materialise as triples, virtual graphs are the realistic deployment path: the
+agent queries SPARQL, the engine rewrites to SQL, the historian answers. This
+also resolves the freshness problem that a materialised graph creates.
+
+\subsection{Summary of L2}
+
+L2 contributes precisely the capabilities that L1 lacks and that our experiments
+show to be decisive: transitive relational reasoning (U4), checkable constraints
+(U6), provenance (U7) and aggregation pushdown (U8). It contributes nothing on
+units (U3), which is L3's job, and it is expensive on U9 unless used as a
+query interface rather than a serialisation. The single most actionable
+recommendation of this survey is that the L2 layer should be adopted for
+\emph{validation and query}, even by organisations that have no intention of
+replacing their L1 models with RDF.

@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{E5: size and fidelity of the admissible action space.}
+\label{tab:e5-actionspace}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lrrcc rrcc}
+\toprule
+Tier & $|A|$ & $\Delta$bits & Prec. & Rec. & $|A|$ & $\Delta$bits & Prec. & Rec. \\
+\midrule
+G0 & 71\,540 & 0.00 & 0.010 & 1.000 & 153 & 0.00 & 0.170 & 1.000 \\
+G1 & 71\,540 & 0.00 & 0.010 & 1.000 & 153 & 0.00 & 0.170 & 1.000 \\
+G2 & 190 & 8.56 & 0.937 & 0.251 & 81 & 0.92 & 0.321 & 1.000 \\
+G3 & 755 & 6.57 & 0.940 & 1.000 & 81 & 0.92 & 0.321 & 1.000 \\
+G4 & 710 & 6.65 & 1.000 & 1.000 & 26 & 2.56 & 1.000 & 1.000 \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize Left block: \texttt{write\_setpoint(tag,value,unit)} enumerated over $73$ tags $\times$ $35$ units $\times$ $28$ magnitudes. Right block: \texttt{packml\_command(asset,command)}. \emph{Precision} is the probability that an admitted call is genuinely executable; \emph{recall} is the fraction of executable calls the tier still allows. G2 buys its reduction by forbidding legal work.\end{minipage}
+\end{table*}

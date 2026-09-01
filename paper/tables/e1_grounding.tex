@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{E1: entity grounding under homograph pressure. 19 mentions, each resolvable to exactly one tag; 22 description strings in the plant are shared by two or more tags.}
+\label{tab:e1-grounding}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llcccccc}
+\toprule
+Cond. & Representation & Top-1 & Acc@1 & Verif@1 & MRR & Recall@5 & Distractors@5 \\
+\midrule
+C0 & OPC DA / PLC symbol table & 0/19 & 0.000 & 0.000 & 0.000 & 0.000 & 0 \\
+C1 & SCADA/historian CSV & 15/19 & 0.789 & 0.000 & 0.866 & 1.000 & 10 \\
+C2 & OPC UA NodeSet2 / AAS submodels & 18/19 & 0.947 & 0.947 & 0.974 & 1.000 & 7 \\
+C3 & RDF/OWL + QUDT + Brick + ISA-95 & 19/19 & 1.000 & 1.000 & 1.000 & 1.000 & 4 \\
+C4 & PackML + interlocks + SOSA/PROV & 19/19 & 1.000 & 0.842 & 1.000 & 1.000 & 4 \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize \emph{Verif@1} is the fraction of mentions resolved correctly \emph{and} supported by an explicit membership fact in the context; a correct answer that cannot be shown to be correct is a guess that happened to land. \emph{Distractors@5} counts hand-labelled confusable tags admitted into the top five. C0 indexes tag mnemonics only; C1--C2 add free text and types; C3--C4 resolve the asset first and search only inside its scope. C4's shortfall on Verif@1 is a budget artefact, removed by intent routing (Table~\ref{tab:e9-routing}).\end{minipage}
+\end{table*}
