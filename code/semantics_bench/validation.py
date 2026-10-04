@@ -428,6 +428,64 @@ def tier_g2(c: Case) -> set[str]:
     return found
 
 
+def tier_gproc(c: Case) -> set[str]:
+    """A non-RDF procedural baseline (Experiment E4b).
+
+    This answers the reviewer's question of whether the guardrail gains come from
+    \"any strong rule system\" or specifically from explicit semantics. It is the
+    validator a competent engineer would hand-write on top of a *typed catalogue
+    plus a hard-coded unit-conversion table*: everything G2 does, but units are
+    *converted* before the range check instead of compared as strings. That one
+    addition - a unit calculus expressed as bespoke Python rather than as QUDT -
+    is enough to accept legal re-expressions of a value (removing G2's false
+    alarms) and to catch silent scale errors.
+
+    What it cannot reach without re-implementing a whole model by hand is the
+    behavioural, relational, constraint and provenance families: F-SCOPE needs
+    the ISA-95 mereology, F-ILK the interlock model, F-STATE the PackML state
+    machine, F-STALE and F-VALUE the observation/provenance store. The point of
+    the comparison is precisely that these would each have to be coded, tested
+    and maintained per plant, whereas the semantic stack supplies them as
+    declarative, reusable assets.
+    """
+    found = tier_g1(c)
+    if c.kind == "command":
+        if c.payload.get("asset") not in P.ASSETS_BY_ID:
+            found.add("F-REF")
+        return found
+    tag = c.payload.get("tag")
+    if tag is None:
+        return found
+    sig = _SIG.get(tag)
+    if sig is None:
+        found.add("F-REF")
+        return found
+    if c.kind == "write" and sig.access == "r":
+        found.add("F-ACC")
+    v, u = c.payload.get("value"), c.payload.get("unit")
+    if isinstance(v, (int, float)) and u is not None:
+        try:
+            native = U.convert(float(v), u, sig.unit)  # hard-coded conversion
+        except U.DimensionError:
+            found.add("F-DIM")
+        else:
+            if c.kind == "write" and (native < sig.eng_low or native > sig.eng_high):
+                found.add("F-RANGE")
+    return found
+
+
+#: the comparison cohort for E4b: the pragmatic baseline, the procedural
+#: baseline, and the two graph tiers. ``GP`` is deliberately *not* in ``TIERS``
+#: so that the headline G0--G4 tables and macros are untouched.
+PROC_COHORT = ("G2", "GP", "G3", "G4")
+PROC_LABEL = {
+    "G2": "G2 flat catalogue (unit \\emph{string})",
+    "GP": "G-proc bespoke code (unit \\emph{calculus})",
+    "G3": "G3 RDF + SHACL + QUDT",
+    "G4": "G4 full semantic stack",
+}
+
+
 _MSG_FAMILY_CACHE: dict[str, set[str]] = {}
 
 
@@ -488,6 +546,11 @@ def evaluate(cases: list[Case] | None = None) -> tuple[list[Case], dict]:
         c.detected_by = {t: bool(fams[t]) for t in TIERS}
         c.diagnosed_by = {t: (c.gold in fams[t]) for t in TIERS}
         c.families = {t: sorted(fams[t]) for t in TIERS}
+        # non-RDF procedural baseline (E4b); kept out of TIERS on purpose
+        gp = _reclassify(tier_gproc(c), c)
+        c.detected_by["GP"] = bool(gp)
+        c.diagnosed_by["GP"] = c.gold in gp
+        c.families["GP"] = sorted(gp)
     meta = {"shacl_seconds": shacl_seconds,
             "n_cases": len(cases),
             "n_faulty": sum(1 for c in cases if c.gold != VALID),

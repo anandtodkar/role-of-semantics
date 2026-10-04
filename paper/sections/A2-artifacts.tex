@@ -165,3 +165,32 @@ bounded, permissioned number attached to a machine; C3 makes the unit
 \emph{computable} and the machine \emph{located in a plant}; C4 states what may
 be done to the machine right now. Only the last of these lets an agent be
 prevented from doing something wrong.
+
+\subsection{Openness and licensing}
+
+The reference plant is entirely synthetic: assets, tags, values, events and
+recipes are generated from the declarative specification in \texttt{plant.py} and
+describe no real installation, so the data carry no confidentiality or licensing
+constraint and are released in full. The vocabularies the paper leans on, namely
+QUDT, SOSA/SSN, Brick, PROV-O and the RDF/OWL/SHACL stack, are used by reference
+under their own open terms (W3C Document / Software licences and CC-BY); the
+artefact does not redistribute them. What it does ship is a small alignment
+ontology (\texttt{vocab.py}), authored for this work, that maps the plant onto
+those vocabularies; it is released under the same open licence as the code. The
+standards assessed in Table~\ref{tab:auf-matrix} are evaluated from their public
+specifications. No proprietary engineering data, vendor NodeSet2 file or customer
+tag catalogue is included or required.
+
+\subsection{Parameterisation and extension}
+
+Every pathology rate is a parameter of the generator, not a constant of the
+plant: the homograph set, the metric/imperial split, the interlock list and the
+naming scheme are all arguments to \texttt{plant.py} and \texttt{naming.py}. This
+is what lets Experiment~E8 re-tag the plant under \NSchemes{} conventions with
+all other facts held constant, and it is the hook through which the sensitivity
+analysis requested in \S\ref{sec:threats} is run. Ingesting a real \opcua{}
+NodeSet2 or AAS environment and regenerating the same evaluation suite from it
+requires only an importer that populates the same intermediate plant model; the
+rest of the pipeline is agnostic to how that model was obtained. We regard that
+importer as the single most valuable extension of the artefact and the clearest
+path from this benchmark to on-site evaluation.

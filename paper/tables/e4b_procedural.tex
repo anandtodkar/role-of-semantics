@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{E4b: is the guardrail gain from \emph{any} strong rule system, or from explicit semantics? A non-RDF procedural validator (G-proc) with a hard-coded unit-conversion table is compared against the flat catalogue and the two graph tiers.}
+\label{tab:e4b-procedural}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Validator & Recall & False alarms & FP rate & Diagnosis & Unit-scale diag. & Behavioural \\
+\midrule
+G2 flat catalogue (unit \emph{string}) & 0.679 & 4 & 0.075 & 0.631 & 0/4 & 0/22 \\
+G-proc bespoke code (unit \emph{calculus}) & 0.679 & 0 & 0.000 & 0.679 & 4/4 & 0/22 \\
+G3 RDF + SHACL + QUDT & 0.738 & 0 & 0.000 & 0.738 & 4/4 & 0/22 \\
+G4 full semantic stack & 1.000 & 0 & 0.000 & 1.000 & 4/4 & 22/22 \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize \emph{Unit-scale diag.} is \emph{correct diagnosis} of \textsc{f-unitscale} (silent scale errors): the flat catalogue rejects them for the wrong reason (a unit-string mismatch), so it scores zero here although it happens to reject. \emph{Behavioural} is detection across \textsc{f-ilk}, \textsc{f-state}, \textsc{f-stale} and \textsc{f-value}. Procedural code with a unit calculus matches the RDF+QUDT tier on the unit families and eliminates the flat catalogue's false alarms, so the unit result is \emph{not} RDF-specific. The behavioural, interlock, temporal and provenance families remain out of reach until the corresponding model is re-implemented by hand; the semantic stack supplies each as a declarative, reusable asset instead.\end{minipage}
+\end{table}

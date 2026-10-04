@@ -83,6 +83,97 @@ def _table(caption: str, label: str, spec: str, header: list[str],
 # Tables
 # ---------------------------------------------------------------------------
 
+#: human-readable gloss for each fact kind, and the AUF criterion it serves.
+#: Kept here rather than in ``conditions`` so that the empirical fact model and
+#: its narrative labelling cannot silently diverge from the code that emits it.
+FACT_KIND_INFO: dict[str, tuple[str, str]] = {
+    "value": ("sampled value", "--"),
+    "desc": ("description string", "U1"),
+    "unit": ("unit \\emph{symbol}", "U3*"),
+    "qk": ("quantity kind", "U3"),
+    "range": ("engineering range", "U2"),
+    "alarm": ("alarm limits", "U2"),
+    "access": ("access mode (r/w)", "U2"),
+    "role": ("signal role (PV/SP)", "U2"),
+    "sig_of": ("signal--asset membership", "U4"),
+    "parent": ("asset parentage", "U4"),
+    "label": ("asset display name", "U1"),
+    "nameplate": ("manufacturer nameplate", "U1"),
+    "semid": ("semantic id (IRDI)", "U1"),
+    "isa95": ("ISA-95 level", "U4"),
+    "location": ("physical location", "U4"),
+    "class": ("ontology class", "U4"),
+    "dim": ("unit dimension vector", "U3"),
+    "conv": ("unit conversion factor", "U3"),
+    "feeds": ("material/utility topology", "U4"),
+    "state": ("PackML state", "U5"),
+    "legalcmd": ("legal command set", "U5"),
+    "interlock": ("interlock guard", "U6"),
+    "time": ("observation timestamp", "U7"),
+    "event": ("event-log entry", "U7"),
+    "recipe": ("recipe parameters", "U6"),
+}
+
+
+def table_factkeys(res: dict) -> str:
+    """Fact kind x condition presence matrix, generated from ``conditions``.
+
+    This is the auditable form of the ``same facts, different representations''
+    claim: every fact kind the benchmark knows about, the AUF criterion it
+    serves, and exactly which conditions are able to express it.  A condition
+    cannot advantage a task on a fact kind whose cell here is empty.
+    """
+    rows = []
+    for kind in C.FACT_KINDS:
+        label, auf = FACT_KIND_INFO.get(kind, (kind, "--"))
+        cells = ["\\checkmark" if cond.can(kind) else "" for cond in C.CONDITIONS]
+        rows.append(["\\texttt{" + _esc(kind) + "}", label, auf] + cells)
+    return _table(
+        "The fact model. Every fact kind the benchmark distinguishes, the "
+        "agent-usability criterion it serves, and the context conditions able to "
+        "express it. A fact key is a kind together with the identifiers it ranges "
+        "over (e.g.\\ \\texttt{sig\\_of:L1\\_FIL\\_PT0301\\_PV|L1-FIL}); a task is "
+        "answerable under a condition only if every fact key it requires is "
+        "expressible there.",
+        "factkeys", "llc" + "c" * len(C.CONDITIONS),
+        ["Fact kind", "Meaning", "AUF"] + [c.key for c in C.CONDITIONS], rows,
+        "\\emph{U3*} marks the unit \\emph{symbol}, which C1 carries as an opaque "
+        "string; the dimension and conversion that make it a calculus (U3) arrive "
+        "only at C3. Because each condition is exactly the set of ticked rows, the "
+        "accuracy differences in \\S\\ref{sec:results} are differences in which "
+        "facts are present, not in how a fixed fact set is phrased.",
+        small=True)
+
+
+def table_design_ref(res: dict) -> str:
+    """Task categories and fault families, defined up front, from the code."""
+    cats = list(TK.CATEGORIES.items())
+    fams = list(V.FAULT_FAMILIES.items())
+    n = max(len(cats), len(fams))
+    rows = []
+    for i in range(n):
+        if i < len(cats):
+            ck, cd = cats[i]
+            left = ["\\textbf{" + ck + "}", _esc(cd)]
+        else:
+            left = ["", ""]
+        if i < len(fams):
+            fk, fd = fams[i]
+            right = ["\\textsc{" + _esc(fk.lower()) + "}", _esc(fd)]
+        else:
+            right = ["", ""]
+        rows.append(left + right)
+    return _table(
+        "The eight task categories (left) and twelve action fault families "
+        "(right) exercised by the benchmark, defined before the experiments that "
+        "use them.",
+        "design-ref", "lL{4.6cm}lL{4.8cm}",
+        ["Cat.", "Task category", "Family", "Fault family"], rows,
+        "Task categories drive Experiments E1--E9 (\\S\\ref{sec:results}); fault "
+        "families drive the guardrail and action-space experiments E4--E5. "
+        "Per-family detection by validator tier is reported in "
+        "Table~\\ref{tab:e4-families}.")
+
 
 def table_e1(res: dict) -> str:
     agg = defaultdict(list)
@@ -194,6 +285,35 @@ def table_e4_families(res: dict) -> str:
         "stale evidence and unfaithful read-back, are invisible to every tier that "
         "lacks an explicit behavioural, constraint or provenance model, no matter how "
         "complete its type information is.")
+
+
+def table_e4b(res: dict) -> str:
+    rows = []
+    for r in res["e4b_procedural"]:
+        rows.append([r["label"],  # controlled LaTeX from V.PROC_LABEL
+                     f"{r['recall']:.3f}", str(r["false_alarms"]),
+                     f"{r['fp_rate']:.3f}", f"{r['diagnosis_rate']:.3f}",
+                     f"{r['unitscale_caught']}/{r['unitscale_n']}",
+                     f"{r['behavioural_caught']}/{r['behavioural_n']}"])
+    return _table(
+        "E4b: is the guardrail gain from \\emph{any} strong rule system, or from "
+        "explicit semantics? A non-RDF procedural validator (G-proc) with a "
+        "hard-coded unit-conversion table is compared against the flat catalogue "
+        "and the two graph tiers.",
+        "e4b-procedural", "lcccccc",
+        ["Validator", "Recall", "False alarms", "FP rate", "Diagnosis",
+         "Unit-scale diag.", "Behavioural"], rows,
+        "\\emph{Unit-scale diag.} is \\emph{correct diagnosis} of \\textsc{f-unitscale} "
+        "(silent scale errors): the flat catalogue rejects them for the wrong reason "
+        "(a unit-string mismatch), so it scores zero here although it happens to "
+        "reject. \\emph{Behavioural} is detection across \\textsc{f-ilk}, "
+        "\\textsc{f-state}, \\textsc{f-stale} and \\textsc{f-value}. Procedural "
+        "code with a unit calculus matches the RDF+QUDT tier on the unit families "
+        "and eliminates the flat catalogue's false alarms, so the unit result is "
+        "\\emph{not} RDF-specific. The behavioural, interlock, temporal and "
+        "provenance families remain out of reach until the corresponding model is "
+        "re-implemented by hand; the semantic stack supplies each as a "
+        "declarative, reusable asset instead.", wide=False)
 
 
 def table_e5(res: dict) -> str:
@@ -482,9 +602,11 @@ def emit(results_path: str | Path = "../results/results.json",
     fdir.mkdir(parents=True, exist_ok=True)
 
     for name, fn in [
+        ("design_ref", table_design_ref), ("factkeys", table_factkeys),
         ("e1_grounding", table_e1), ("e6_ceiling", table_e6),
         ("e3_serialisation", table_e3),
         ("e4_tiers", table_e4_tiers), ("e4_families", table_e4_families),
+        ("e4b_procedural", table_e4b),
         ("e5_actionspace", table_e5), ("e5_schema", table_schema),
         ("e7_sparql", table_e7), ("e8_convention", table_e8),
         ("e9_routing", table_e9),
@@ -506,6 +628,9 @@ def emit(results_path: str | Path = "../results/results.json",
         r"\newcommand{\NFaulty}{%d}" % res["e4_meta"]["n_faulty"],
         r"\newcommand{\NHomographs}{%d}" % res["config"]["n_homographs"],
         r"\newcommand{\TokenBudget}{%d}" % res["config"]["token_budget"],
+        r"\newcommand{\NFactKinds}{%d}" % len(C.FACT_KINDS),
+        r"\newcommand{\NFamilies}{%d}" % len(V.FAULT_FAMILIES),
+        r"\newcommand{\NCategories}{%d}" % len(TK.CATEGORIES),
     ]
     for r in res["e6_ceiling"]:
         macros.append(r"\newcommand{\Ceiling%s}{%.0f\%%}"
@@ -526,6 +651,15 @@ def emit(results_path: str | Path = "../results/results.json",
     for k, v in agg.items():
         macros.append(r"\newcommand{\GrndTopOne%s}{%.0f\%%}"
                       % (_alpha(k), 100 * sum(1 for x in v if x["top1"]) / len(v)))
+    proc = {r["tier"]: r for r in res["e4b_procedural"]}
+    if "GP" in proc:
+        gp = proc["GP"]
+        macros.append(r"\newcommand{\ProcRecall}{%.0f\%%}" % (100 * gp["recall"]))
+        macros.append(r"\newcommand{\ProcFalseAlarms}{%d}" % gp["false_alarms"])
+        macros.append(r"\newcommand{\ProcBehavCaught}{%d}" % gp["behavioural_caught"])
+        macros.append(r"\newcommand{\ProcBehavN}{%d}" % gp["behavioural_n"])
+        macros.append(r"\newcommand{\ProcUnitScale}{%d}" % gp["unitscale_caught"])
+        macros.append(r"\newcommand{\GTwoFalseAlarms}{%d}" % proc["G2"]["false_alarms"])
     ratio = max(r["ratio_to_csv"] for r in res["e3_serialisation"])
     macros.append(r"\newcommand{\MaxSerialRatio}{%.0f}" % ratio)
     macros.append(r"\newcommand{\MaxQuerySaving}{%.0f}"

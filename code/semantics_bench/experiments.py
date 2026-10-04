@@ -316,7 +316,31 @@ def e4_guardrails() -> tuple[list[dict], list[dict], dict]:
         for tier in V.TIERS:
             row[tier] = sum(1 for c in sub if c.detected_by[tier])
         per_family.append(row)
-    return per_tier, per_family, meta
+
+    # ---- E4b: non-RDF procedural baseline vs. the semantic tiers -----------
+    faulty = [c for c in cases if c.gold != V.VALID]
+    behavioural = ("F-ILK", "F-STATE", "F-STALE", "F-VALUE")
+    n_behav = sum(1 for c in faulty if c.gold in behavioural)
+    n_uscale = sum(1 for c in faulty if c.gold == "F-UNITSCALE")
+    proc = []
+    for tier in V.PROC_COHORT:
+        pairs = [(c.gold != V.VALID, c.detected_by[tier]) for c in cases]
+        sc = score_binary(pairs)
+        diagnosed = sum(1 for c in faulty if c.diagnosed_by[tier])
+        proc.append({
+            "tier": tier, "label": V.PROC_LABEL[tier],
+            "recall": sc.recall, "false_alarms": sc.fp,
+            "fp_rate": sc.false_positive_rate,
+            "diagnosis_rate": diagnosed / len(faulty) if faulty else 0.0,
+            "unitscale_caught": sum(1 for c in faulty
+                                    if c.gold == "F-UNITSCALE" and c.diagnosed_by[tier]),
+            "unitscale_n": n_uscale,
+            "behavioural_caught": sum(1 for c in faulty
+                                      if c.gold in behavioural and c.detected_by[tier]),
+            "behavioural_n": n_behav,
+        })
+    meta = {**meta, "behavioural_families": list(behavioural)}
+    return per_tier, per_family, meta, proc
 
 
 # ---------------------------------------------------------------------------
@@ -373,7 +397,7 @@ def run_all(outdir: str | Path = "../results") -> dict:
     context = e2_context()
     sweep = e2_budget_sweep()
     serial = e3_serialisation_cost()
-    tiers, families, meta = e4_guardrails()
+    tiers, families, meta, proc = e4_guardrails()
     writes, cmds, schema_tokens = e5_action_space()
     ceiling = e6_ceiling(context)
     convention = e8_convention_robustness()
@@ -402,6 +426,7 @@ def run_all(outdir: str | Path = "../results") -> dict:
         "e4_tiers": tiers,
         "e4_families": families,
         "e4_meta": meta,
+        "e4b_procedural": proc,
         "e5_writes": writes,
         "e5_commands": cmds,
         "e5_schema_tokens": schema_tokens,

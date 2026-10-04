@@ -76,3 +76,41 @@ the industrial semantic technology landscape explicitly against agent-usability
 criteria, (ii) ablate the semantic stack in a controlled testbed with a
 model-independent accuracy ceiling, and (iii) quantify per-fault-family guardrail
 efficacy and action-space fidelity for industrial agent actions.
+Table~\ref{tab:novelty} places the paper against the closest lines of work on the
+dimensions that distinguish it.
+
+\begin{table*}[t]
+\centering
+\caption{Positioning against the closest related work. \checkmark{} denotes a
+central contribution, (\checkmark) a partial or incidental one, and a blank its
+absence. The combination in the final row, not any single column, is what we
+claim is new.}
+\label{tab:novelty}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}L{4.3cm}cccccc@{}}
+\toprule
+\textbf{Work / line} & \textbf{Action}      & \textbf{Validator}   & \textbf{Naming} & \textbf{Model-indep.} & \textbf{Reprod.} & \textbf{Engineering} \\
+                     & \textbf{legality}    & \textbf{false alarms} & \textbf{robustness} & \textbf{ceiling}   & \textbf{artefact} & \textbf{KG source} \\
+\midrule
+GraphRAG \cite{edge2024graphrag}           &            &            &            &            & (\checkmark) &            \\
+HybridRAG \cite{sarmah2024hybridrag}       &            &            &            &            & (\checkmark) &            \\
+KG-for-LLM survey \cite{pan2024unifying}   &            &            &            &            &            & (\checkmark) \\
+Tool/function benchmarks \cite{patil2024gorilla} & (\checkmark) &      &            &            & \checkmark &            \\
+SHACL validation \cite{knublauch2017shacl} &            & (\checkmark) &          &            & \checkmark &            \\
+Semantic interoperability reviews \cite{idta2023aas} & &          &            &            &            & (\checkmark) \\
+\midrule
+\textbf{This work}                         & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\paragraph{What we do not claim.} To keep the contribution precise: we do
+\emph{not} propose a new ontology or vocabulary, and we reuse QUDT, SOSA/SSN,
+Brick and PROV-O as published; we do \emph{not} claim SHACL is the only, or the
+optimal, constraint mechanism, and \S\ref{sec:results} reports a non-RDF
+procedural validator as a baseline against exactly this objection; we do
+\emph{not} claim the agent-usability scores of Table~\ref{tab:auf-matrix} are the
+only defensible assessment, only that they are an explicit and reproducible one;
+and we do \emph{not} claim a specific model's accuracy, which is why the central
+measure is a representation ceiling rather than a leaderboard number.

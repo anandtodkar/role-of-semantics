@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\caption{The eight task categories (left) and twelve action fault families (right) exercised by the benchmark, defined before the experiments that use them.}
+\label{tab:design-ref}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{lL{4.6cm}lL{4.8cm}}
+\toprule
+Cat. & Task category & Family & Fault family \\
+\midrule
+\textbf{GRD} & entity grounding / disambiguation & \textsc{f-ref} & reference to a non-existent tag or asset \\
+\textbf{UNI} & unit-correct reporting and conversion & \textsc{f-card} & missing mandatory argument \\
+\textbf{RNG} & limit and range reasoning & \textsc{f-enum} & value outside a closed enumeration \\
+\textbf{TOP} & topology and impact analysis & \textsc{f-acc} & write to a read-only variable \\
+\textbf{PRV} & provenance and root cause & \textsc{f-range} & value outside the engineering range \\
+\textbf{ACT} & action legality (behavioural model) & \textsc{f-dim} & dimensionally incompatible unit \\
+\textbf{SAF} & interlock and safety reasoning & \textsc{f-unitscale} & correct dimension, wrong scale (silent unit error) \\
+\textbf{REC} & recipe / specification conformance & \textsc{f-scope} & action outside the authorised ISA-95 scope \\
+ &  & \textsc{f-ilk} & interlock / guard condition violated \\
+ &  & \textsc{f-state} & illegal state transition (PackML) \\
+ &  & \textsc{f-stale} & decision based on stale evidence \\
+ &  & \textsc{f-value} & numeric answer contradicting the observation \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize Task categories drive Experiments E1--E9 (\S\ref{sec:results}); fault families drive the guardrail and action-space experiments E4--E5. Per-family detection by validator tier is reported in Table~\ref{tab:e4-families}.\end{minipage}
+\end{table*}

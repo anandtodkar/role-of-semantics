@@ -156,13 +156,38 @@ G2 adds \textsc{f-ref}, \textsc{f-acc} and \textsc{f-range}. G3 adds
 by accident. G4, and only G4, catches \textsc{f-ilk}, \textsc{f-state},
 \textsc{f-stale} and \textsc{f-value}: twenty-two cases, $26\%$ of the faulty
 corpus, comprising every failure mode that can move a plant into an unsafe or
-non-conforming state. No amount of type information reaches them.
+non-conforming state. In this benchmark no tier lacking an explicit behavioural,
+constraint or provenance model reaches them, however complete its type
+information.
 
 \paragraph{Full semantics is not over-constraining.} G4 attains
 \RecallGFour{} recall at \FPRGFour{} false alarms and $1.000$ diagnosis. The
 common objection, that formal validation will block legitimate work, is
 not supported: it is the \emph{weak} validator that over-blocks, precisely
 because it must be conservative about what it cannot understand.
+
+\subsection{E4b: Is the gain from semantics or from any strong rule system?}
+
+\input{tables/e4b_procedural}
+
+A natural objection is that G4's advantage reflects having \emph{any} sufficiently
+strong rule engine, not the semantic stack in particular. Experiment~E4b tests it
+directly (Table~\ref{tab:e4b-procedural}) with a non-RDF procedural validator,
+G-proc: the checks a competent engineer would hand-write on a typed catalogue
+augmented with a hard-coded unit-conversion table, with no RDF graph, no SHACL, no
+interlock or state model and no provenance store. The result splits cleanly along
+exactly the line the paper draws. On \emph{units}, G-proc matches the RDF+QUDT
+tier: it removes all \GTwoFalseAlarms{} of the flat catalogue's false alarms and
+correctly diagnoses every silent scale error, so the unit result is a property of
+having a \emph{calculus}, not of RDF, and we do not claim otherwise. On
+\emph{behaviour} G-proc collapses to the flat catalogue, catching
+\ProcBehavCaught{} of the \ProcBehavN{} interlock, illegal-state, staleness and
+faithfulness faults: these require the interlock model, the PackML state machine
+and the observation store, none of which a unit table holds. The distinctive
+contribution of the semantic stack is thus the behavioural, constraint and
+provenance models, supplied as declarative and reusable assets; bespoke code can
+reach the same faults only by re-implementing each model by hand, per plant, and
+maintaining and testing it there, which is the cost the semantic approach removes.
 
 \subsection{E5: The admissible action space}
 
@@ -218,7 +243,8 @@ plant; no top-$k$ retrieval assembles it, and the sweep confirms the stuffed
 context is insufficient at every budget tested. As a query it costs $222$ tokens
 and returns one row. There is a class of industrial question, aggregate,
 plant-wide, threshold-crossing, that is not a context problem at all, and
-treating it as one guarantees a confidently wrong answer.
+treating it as one, under top-$k$ retrieval at every budget we tested, yields a
+confidently wrong answer.
 
 \subsection{E8: Is grounding robust to the naming convention?}
 \label{sec:e8}

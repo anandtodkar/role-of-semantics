@@ -1,0 +1,39 @@
+\begin{table*}[t]
+\centering
+\caption{The fact model. Every fact kind the benchmark distinguishes, the agent-usability criterion it serves, and the context conditions able to express it. A fact key is a kind together with the identifiers it ranges over (e.g.\ \texttt{sig\_of:L1\_FIL\_PT0301\_PV|L1-FIL}); a task is answerable under a condition only if every fact key it requires is expressible there.}
+\label{tab:factkeys}
+\footnotesize
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
+\begin{tabular}{llcccccc}
+\toprule
+Fact kind & Meaning & AUF & C0 & C1 & C2 & C3 & C4 \\
+\midrule
+\texttt{value} & sampled value & -- & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\texttt{desc} & description string & U1 &  & \checkmark & \checkmark & \checkmark & \checkmark \\
+\texttt{unit} & unit \emph{symbol} & U3* &  & \checkmark & \checkmark & \checkmark & \checkmark \\
+\texttt{qk} & quantity kind & U3 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{range} & engineering range & U2 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{alarm} & alarm limits & U2 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{access} & access mode (r/w) & U2 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{role} & signal role (PV/SP) & U2 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{sig\_of} & signal--asset membership & U4 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{parent} & asset parentage & U4 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{label} & asset display name & U1 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{nameplate} & manufacturer nameplate & U1 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{semid} & semantic id (IRDI) & U1 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{isa95} & ISA-95 level & U4 &  &  & \checkmark & \checkmark & \checkmark \\
+\texttt{location} & physical location & U4 &  &  &  & \checkmark & \checkmark \\
+\texttt{class} & ontology class & U4 &  &  &  & \checkmark & \checkmark \\
+\texttt{dim} & unit dimension vector & U3 &  &  &  & \checkmark & \checkmark \\
+\texttt{conv} & unit conversion factor & U3 &  &  &  & \checkmark & \checkmark \\
+\texttt{feeds} & material/utility topology & U4 &  &  &  & \checkmark & \checkmark \\
+\texttt{state} & PackML state & U5 &  &  &  &  & \checkmark \\
+\texttt{legalcmd} & legal command set & U5 &  &  &  &  & \checkmark \\
+\texttt{interlock} & interlock guard & U6 &  &  &  &  & \checkmark \\
+\texttt{time} & observation timestamp & U7 &  &  &  &  & \checkmark \\
+\texttt{event} & event-log entry & U7 &  &  &  &  & \checkmark \\
+\texttt{recipe} & recipe parameters & U6 &  &  &  &  & \checkmark \\
+\bottomrule
+\end{tabular}}
+\\[4pt]\begin{minipage}{\linewidth}\footnotesize \emph{U3*} marks the unit \emph{symbol}, which C1 carries as an opaque string; the dimension and conversion that make it a calculus (U3) arrive only at C3. Because each condition is exactly the set of ticked rows, the accuracy differences in \S\ref{sec:results} are differences in which facts are present, not in how a fixed fact set is phrased.\end{minipage}
+\end{table*}

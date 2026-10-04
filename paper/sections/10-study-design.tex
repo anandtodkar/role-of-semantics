@@ -43,6 +43,49 @@ deliberate and are the experimental treatment:
 The full plant, the ontology, the SHACL shapes and every task are in the
 artefact; Appendix~\ref{app:artifacts} lists the files.
 
+These pathologies are not invented for the benchmark; each is a documented
+property of real installations, and Table~\ref{tab:pathology-source} gives the
+provenance of every one. The reference plant is best understood as a minimal
+configuration that exhibits all of them at once, rather than as a claim that any
+single site is this dense; \S\ref{sec:threats} returns to how the \emph{magnitude}
+of each effect scales with the rate at which its pathology occurs.
+
+\begin{table*}[t]
+\centering
+\caption{Provenance of the injected pathologies. Each is an attested feature of
+real industrial installations, not a synthetic contrivance. ``Practice'' denotes
+a widespread commissioning or integration convention rather than a single
+normative clause.}
+\label{tab:pathology-source}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}L{3.1cm}L{8.8cm}L{3.9cm}@{}}
+\toprule
+\textbf{Pathology} & \textbf{Basis in real installations} & \textbf{Source} \\
+\midrule
+Homograph descriptions & Replicated lines and vendor faceplate libraries reuse
+identical \texttt{DisplayName}/description text across instances; OPC~UA
+\texttt{DisplayName} is explicitly non-unique. & \opcua{}
+\cite{iec62541}; vendor templating (practice) \\
+Unit heterogeneity (metric/imperial) & Brownfield retrofits and acquired lines
+leave mixed units in one historian; the unit-scale hazard is the Mars Climate
+Orbiter failure class. & ISA-5.1 \cite{isa51}; MCO board \cite{mco}; historian
+exports (practice) \\
+PV/SP homographs & ISA-5.1 loop numbering pairs a measurement and its controller
+on one loop, with near-identical descriptions. & ISA-5.1 \cite{isa51} \\
+Invisible interlocks & Guard conditions live in IEC~61131-3 PLC logic and safety
+functions, not in the address space handed to an agent. & \opcua{} address space
+\cite{iec62541}; IEC~62443 \cite{iec62443} (practice) \\
+Cross-asset \texttt{feeds} topology & Material and utility flow is carried by
+P\&IDs and the ISA-95 model, and is not recoverable from tag strings. & ISA-95
+\cite{iec62264}; DEXPI \cite{dexpi} \\
+Naming-scheme diversity (E8) & Real sites tag by ISA-5.1 mnemonics, sequential
+I/O addresses, KKS, OEM browse paths, or inconsistent post-merger schemes. &
+ISA-5.1 \cite{isa51}; KKS \cite{kks} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
 \subsection{Context conditions C0--C4}
 
 The five conditions form a cumulative ablation of the AUF criteria
@@ -90,6 +133,38 @@ in production. Where a condition carries a unit ontology, $15\%$ of the budget i
 reserved for the QUDT definition block: conversion factors are schema, not
 payload.
 
+\subsection{The fact model and its auditability}
+\label{sec:factmodel}
+
+The claim that each condition is a projection of the \emph{same facts} is only
+as credible as it is auditable, so we fix a single fact vocabulary and define
+every condition and every task over it.
+
+\paragraph{Fact key.} A \emph{fact key} is a pair $(\kappa,\langle
+e_1,\dots,e_n\rangle)$ of a \emph{kind} $\kappa$, drawn from a closed vocabulary
+of \NFactKinds{} kinds, and a tuple of the entity identifiers it ranges over,
+written $\kappa{:}e_1|\dots|e_n$. For instance
+\texttt{sig\_of:L1\_FIL\_PT0301\_PV|L1-FIL} is the fact that a specific signal
+belongs to a specific asset, and \texttt{conv:psi|bar} the fact that two units
+are inter-convertible. The complete vocabulary of kinds, the agent-usability
+criterion each serves, and the conditions able to express each are enumerated in
+Table~\ref{tab:factkeys}.
+
+\paragraph{Conditions and tasks over the vocabulary.} A condition is identified
+with the subset of kinds its representation can carry; the fact keys it makes
+available are exactly those whose kind it can express and whose entities survive
+the token budget. A task declares the set of fact keys required to derive its
+gold answer, the atoms the reference symbolic solver consumes, and is
+\emph{answerable} under a condition only if every required key is available.
+Fact coverage and the ceiling (\S\ref{sec:metrics}) are computed over these
+sets. Crucially, the five conditions are \emph{nested subsets} of one kind
+vocabulary (Table~\ref{tab:factkeys}): a later condition never re-phrases a fact
+an earlier one already had, it only adds kinds the earlier one could not
+express. This is what licenses attributing accuracy differences to
+representation rather than content.
+
+\input{tables/factkeys}
+
 \subsection{Validator tiers G0--G4}
 
 Symmetrically, five tiers of pre-execution validation, each corresponding to the
@@ -106,6 +181,13 @@ assets they are permitted to consult, not in engine, encoding or effort.
 
 \subsection{Task suite}
 
+The benchmark exercises \NCategories{} task categories and, for the guardrail
+experiments, \NFamilies{} action fault families; both are defined up front in
+Table~\ref{tab:design-ref} so that the results can be read without forward
+references.
+
+\input{tables/design_ref}
+
 \NTasks{} tasks across eight categories: entity grounding (GRD), unit-correct
 reporting (UNI), limit and range reasoning (RNG), topology and impact analysis
 (TOP), provenance and root cause (PRV), action legality (ACT), interlock and
@@ -115,6 +197,7 @@ atoms a symbolic solver consumes to derive the gold answer, and a context that
 lacks one of them cannot support a grounded answer, only a guess.
 
 \subsection{Metrics}
+\label{sec:metrics}
 
 \paragraph{Grounding (E1).} Top-1 accuracy, mean reciprocal rank and recall@5 of
 the gold tag for the nineteen tasks that name exactly one, plus the count of
@@ -133,8 +216,15 @@ and fact coverage per thousand context tokens.
 
 \paragraph{Guardrails (E4).} Over \NCases{} proposed actions (\NFaulty{} faulty
 across twelve families, the remainder valid): detection recall, \emph{diagnosis
-rate} (did the tier name the correct fault family, not merely reject?),
-false-alarm rate on valid actions, and precision.
+rate}, false-alarm rate on valid actions, and precision. Each faulty action
+carries exactly one \emph{injected} gold fault family. A tier, however, emits a
+\emph{set} of flagged families (one SHACL pass can report several violations of a
+single action); we count the action as \emph{detected} if that set is non-empty
+and as \emph{correctly diagnosed} if the gold family is a member of it. Diagnosis
+is therefore not penalised when a tier reports additional, genuine concurrent
+violations alongside the injected one; it fails only when the injected fault is
+absent from the reported set, which is the case of a tier rejecting for the wrong
+reason.
 
 \paragraph{Action space (E5).} The write action space is enumerated exhaustively
 over $\NSignals{} \times 35 \times 28$ (tag, unit, magnitude) triples and the
@@ -144,7 +234,14 @@ recall of the admitted set against ground truth.
 
 \paragraph{Query versus stuffing (E7).} For eight tasks, the tokens consumed by a
 SPARQL query plus its result set, against the tokens consumed by the stuffed C4
-context, with a flag for whether that context was in fact sufficient.
+context, with a flag for whether that context was in fact sufficient. The eight
+SPARQL probes are hand-authored against the alignment ontology, one per task; we
+make no claim that query \emph{generation} is solved. The experiment isolates a
+narrower point, that \emph{once} the query exists the token economics and
+answerability favour execution over stuffing, and translating a natural-language
+question into such a query over a stable, standardised schema is a well-studied
+text-to-SPARQL problem. Automating that step from the ontology is the obvious
+scaling path and is left to future work (\S\ref{sec:threats}).
 
 \paragraph{Convention robustness (E8).} The plant is re-tagged under
 \NSchemes{} naming conventions, ISA-5.1 mnemonics, sequential I/O addresses,
@@ -184,6 +281,7 @@ verify that measured accuracy tracks, and stays below, the ceilings reported
 here.
 
 \subsection{Threats to validity}
+\label{sec:threats}
 
 \paragraph{Construct validity.} The ceiling measures \emph{evidence presence},
 not answer correctness; a real model may fail on sufficient context. The ceiling
@@ -198,22 +296,42 @@ real; it is also unverifiable and non-transferable, which is why we separate
 accuracy from verifiable accuracy throughout.
 
 \paragraph{Internal validity.} Retrieval quality confounds representation
-quality. We mitigate this three ways: every condition is given the strongest
-retriever its representation supports; the budget sweep shows the C2 plateau is
-representational rather than a retrieval artefact (Figure~\ref{fig:ceiling}b);
-and Experiment~E9 isolates the projection strategy explicitly, showing which
-part of the residual C4 shortfall is retrieval and which is representation. The
-residual failure at large budgets (task RNG-04) is a genuine retrieval limit,
-and Experiment~E7 shows the correct remedy is a query, not a bigger window.
+quality, and C3/C4 additionally use a graph retriever where C0--C2 use a lexical
+one, so a difference between them is in principle a difference of \emph{algorithm}
+as well as of representation. We separate the two. The primary measure, fact
+coverage, is computed over the fact-key sets of \S\ref{sec:factmodel} and is
+\emph{independent of ranking}: it counts whether a required key is present in the
+assembled context, not where a retriever placed it. The monotonic coverage rise
+reported in \S\ref{sec:results} is therefore purely representational, and a
+retriever can only lower coverage below what a representation permits, never
+raise it above. A missing fact kind (an empty cell in Table~\ref{tab:factkeys})
+caps coverage regardless of how cleverly the context is assembled, which is
+exactly the C2 plateau. We further mitigate the ranking confound three ways:
+every condition is given the strongest retriever its representation supports; the
+budget sweep shows the C2 plateau survives a $32\times$ larger window
+(Figure~\ref{fig:ceiling}b), so it is not a retrieval artefact; and
+Experiment~E9 isolates the projection strategy explicitly. The residual failure
+at large budgets (task RNG-04) is a genuine retrieval limit, and Experiment~E7
+shows the correct remedy is a query, not a bigger window. A fully crossed
+retriever~$\times$~representation control, giving the typed model the graph
+retriever and vice versa, would close the confound completely and is the natural
+next experiment.
 
-\paragraph{External validity.} One synthetic plant of one industry. The
-pathologies are drawn from real installations and the ordering of conditions and
-tiers is unlikely to invert, but the magnitudes are specific to this plant. A
-plant with uniform units would shrink the U3 effect; a plant with more
-interlocks would enlarge the U6 effect. The naming convention is the one
-variable we do vary systematically (E8), and the ordering of resolvers is stable
-across all \NSchemes{} conventions. The artefact is parameterised so that the
-others can be tested.
+\paragraph{External validity.} One synthetic plant of one industry. Each injected
+pathology is nonetheless an attested property of real installations, with its
+provenance given in Table~\ref{tab:pathology-source}, and the ordering of
+conditions and tiers is unlikely to invert, though the magnitudes are specific to
+this plant. The dependence is monotone and signed, not arbitrary: a plant with
+uniform units shrinks the U3 effect; a plant with more interlocks enlarges the U6
+effect; a plant with no interlocks removes the C2--C4 safety gap while leaving the
+grounding and unit gaps intact. The naming convention is the one variable we vary
+systematically (E8), and the ordering of resolvers is stable across all
+\NSchemes{} conventions. Every pathology rate is a parameter of the generator
+(Appendix~\ref{app:artifacts}), so a sensitivity sweep over homograph rate, unit
+heterogeneity and interlock count is a direct re-run of the suite; conducting it
+across a grid, and anchoring the ceilings against one or two time-stamped real
+models through the adapter of \S\ref{sec:llm-adapter}, is the most valuable
+extension of this study.
 
 \paragraph{Conclusion validity.} The corpus sizes are modest ($\NTasks{}$ tasks,
 $\NCases{}$ actions), so we report Wilson intervals throughout and refrain from

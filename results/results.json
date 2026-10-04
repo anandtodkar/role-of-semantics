@@ -3045,14 +3045,14 @@
     {
       "format": "RDF JSON-LD (expanded)",
       "bytes": 319057,
-      "tokens": 145216,
-      "ratio_to_csv": 64.36879432624113
+      "tokens": 145260,
+      "ratio_to_csv": 64.38829787234043
     },
     {
       "format": "RDF N-Triples (full KG)",
       "bytes": 336089,
-      "tokens": 179276,
-      "ratio_to_csv": 79.46631205673759
+      "tokens": 179241,
+      "ratio_to_csv": 79.45079787234043
     }
   ],
   "e4_tiers": [
@@ -3255,11 +3255,67 @@
     }
   ],
   "e4_meta": {
-    "shacl_seconds": 11.070825999995577,
+    "shacl_seconds": 8.479776700001821,
     "n_cases": 137,
     "n_faulty": 84,
-    "n_valid": 53
+    "n_valid": 53,
+    "behavioural_families": [
+      "F-ILK",
+      "F-STATE",
+      "F-STALE",
+      "F-VALUE"
+    ]
   },
+  "e4b_procedural": [
+    {
+      "tier": "G2",
+      "label": "G2 flat catalogue (unit \\emph{string})",
+      "recall": 0.6785714285714286,
+      "false_alarms": 4,
+      "fp_rate": 0.07547169811320754,
+      "diagnosis_rate": 0.6309523809523809,
+      "unitscale_caught": 0,
+      "unitscale_n": 4,
+      "behavioural_caught": 0,
+      "behavioural_n": 22
+    },
+    {
+      "tier": "GP",
+      "label": "G-proc bespoke code (unit \\emph{calculus})",
+      "recall": 0.6785714285714286,
+      "false_alarms": 0,
+      "fp_rate": 0.0,
+      "diagnosis_rate": 0.6785714285714286,
+      "unitscale_caught": 4,
+      "unitscale_n": 4,
+      "behavioural_caught": 0,
+      "behavioural_n": 22
+    },
+    {
+      "tier": "G3",
+      "label": "G3 RDF + SHACL + QUDT",
+      "recall": 0.7380952380952381,
+      "false_alarms": 0,
+      "fp_rate": 0.0,
+      "diagnosis_rate": 0.7380952380952381,
+      "unitscale_caught": 4,
+      "unitscale_n": 4,
+      "behavioural_caught": 0,
+      "behavioural_n": 22
+    },
+    {
+      "tier": "G4",
+      "label": "G4 full semantic stack",
+      "recall": 1.0,
+      "false_alarms": 0,
+      "fp_rate": 0.0,
+      "diagnosis_rate": 1.0,
+      "unitscale_caught": 4,
+      "unitscale_n": 4,
+      "behavioural_caught": 22,
+      "behavioural_n": 22
+    }
+  ],
   "e5_writes": [
     {
       "tier": "G0",
