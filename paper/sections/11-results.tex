@@ -9,7 +9,8 @@ generated directly from \texttt{results.json}.
 
 \input{tables/e1_grounding}
 
-Grounding is where semantics pays first and most visibly.
+Grounding is the first capability that semantics affects, and the effect is the
+most visible.
 
 Condition~C0, a bare tag list, resolves nothing
 (\GrndTopOneCZero{} top-1, MRR $0.000$). This is not an artefact of a weak
@@ -18,33 +19,33 @@ only field C0 exposes. A mnemonic such as \texttt{L1\_FIL\_PT0301\_PV} shares
 almost no lexical surface with ``the outlet pressure of the Line~1 filler'', so
 without a description there is nothing to match.
 
-Condition~C1, adding the description and unit symbol, jumps to
-\GrndTopOneCOne{} top-1 and MRR $0.866$. This deserves emphasis, because it is
-the number that makes ungrounded pipelines look adequate in demonstrations:
-\emph{four times out of five, a plain historian export is enough}. The remaining
-fifth is the problem, and so is the mechanism: C1 succeeds by lexical
-coincidence between an English question and an English description, with the
-plant hierarchy inferred from a naming convention that no machine has verified.
-It admits ten hand-labelled distractors into its top five, more than any other
-condition, so its errors are precisely the confusions that matter (the wrong
-line, the setpoint instead of the measurement).
+Condition~C1, which adds the description and unit symbol, rises to
+\GrndTopOneCOne{} top-1 and MRR $0.866$. This figure is notable because it is
+consistent with the adequate performance of ungrounded pipelines in
+demonstrations: a plain historian export resolves roughly four of five mentions.
+The remaining fifth is the difficulty, as is the mechanism: C1 succeeds by lexical
+coincidence between an English question and an English description, with the plant
+hierarchy inferred from a naming convention that no machine has verified. It
+admits ten hand-labelled distractors into its top five, more than any other
+condition, so its errors are concentrated in the confusable cases that matter (the
+wrong line, or the setpoint instead of the measurement).
 
 Condition~C2 reaches \GrndTopOneCTwo{} (MRR $0.974$) because typed metadata,
 including asset membership, role and quantity kind, gives the retriever fields that
 discriminate. Conditions C3 and C4 reach \GrndTopOneCFour{} with MRR $1.000$,
 and by a different mechanism: they resolve the \emph{asset} first, from the
-taxonomy and its synonyms, and search only inside its scope. The distractor count
-halves from ten to four. The distinction matters operationally: C2 ranks the
-right answer first, C3/C4 make the wrong answers unreachable.
+taxonomy and its synonyms, and search only within its scope. The distractor count
+halves from ten to four. The distinction is operationally meaningful: C2 ranks the
+correct answer first, whereas C3/C4 render the incorrect answers unreachable.
 
-\paragraph{Correct is not the same as grounded.} The \emph{Verif@1} column
-separates the two. C1 resolves \GrndTopOneCOne{} of mentions correctly and
-\VerifCOne{} verifiably: it never carries the membership fact, so not one of its
+\paragraph{Correctness versus verifiable grounding.} The \emph{Verif@1} column
+separates the two. C1 resolves \GrndTopOneCOne{} of mentions correctly but
+\VerifCOne{} verifiably: it never carries the membership fact, so none of its
 correct answers can be shown to be correct. C2 and C3 reach \VerifCTwo{} and
-\VerifCThree{}. This gap is the whole difference between a system that is
-usually right and a system that can be audited, and it is invisible to any
-metric that scores answers alone. C4's \VerifCFour{} is lower than its accuracy
-for a budget reason addressed in \S\ref{sec:e9}.
+\VerifCThree{}. This gap distinguishes a system that is usually correct from one
+that can be audited, and it is invisible to any metric that scores answers alone.
+C4's \VerifCFour{} is lower than its accuracy for a budget reason addressed in
+\S\ref{sec:e9}.
 
 \subsection{E2, E3, E6: Sufficiency, ceiling and context economy}
 
@@ -63,39 +64,38 @@ $2.8$ percentage points as the window grows $32\times$.}
 Fact coverage rises monotonically, $0.100 \to 0.252 \to 0.549 \to 0.761 \to
 0.857$, but the ceiling, which requires \emph{complete} coverage, rises much
 more sharply: \CeilingCZero{}, \CeilingCOne{}, \CeilingCTwo{}, \CeilingCThree{},
-\CeilingCFour{}. Partial evidence is worth little; a task with $80\%$ of its
-facts present is still a task the agent must guess at.
+\CeilingCFour{}. Partial evidence is of limited value: a task with $80\%$ of its
+required facts present still forces the agent to guess.
 
-Three results here are worth separating.
+Three results merit separate discussion.
 
-\paragraph{(i) The typed-model plateau.} Figure~\ref{fig:ceiling}b is the single
-most consequential plot in the paper. Increasing the context budget from $750$
-to $24{,}000$ tokens, a factor of $32$, moves C2's ceiling from $0.229$ to
-$0.257$. It moves C4's from $0.171$ to $0.971$. A fully typed information model
-does not become sufficient when you give it a bigger window, because the missing
-facts are not \emph{elsewhere in the document}; they are \emph{not in the
-document}. Conversely, the richer representations are budget-limited rather than
-representation-limited, and buying context solves their problem.
+\paragraph{(i) The typed-model plateau.} Figure~\ref{fig:ceiling}b reports the
+central quantitative result of the ablation. Increasing the context budget from
+$750$ to $24{,}000$ tokens, a factor of $32$, moves C2's ceiling from $0.229$ to
+$0.257$, and C4's from $0.171$ to $0.971$. A fully typed information model does
+not become sufficient as the window grows, because the missing facts are not
+located elsewhere in the document; they are \emph{absent} from it. Conversely, the
+richer representations are budget-limited rather than representation-limited, so
+additional context resolves their shortfall.
 
-\paragraph{(ii) Where each layer earns its keep.}
+\paragraph{(ii) The layer responsible for each capability.}
 The category columns of Table~\ref{tab:e6-ceiling} localise the effect. C2
 already handles grounding ($1.00$) and most range reasoning ($0.60$). Adding
-units and topology (C3) takes unit-correct reporting from $0.00$ to $0.80$ and
-topology from $0.00$ to $1.00$, neither is touched by more type information.
-Adding behaviour, constraints and provenance (C4) takes action legality from
-$0.00$ to $1.00$, interlock safety from $0.00$ to $1.00$, provenance from $0.00$
-to $0.75$ and recipe conformance from $0.00$ to $1.00$. Every category has
-exactly one layer that unlocks it, which is the non-substitutability claim of
-\S\ref{sec:framework} holding empirically.
+units and topology (C3) raises unit-correct reporting from $0.00$ to $0.80$ and
+topology from $0.00$ to $1.00$, neither of which improves with additional type
+information. Adding behaviour, constraints and provenance (C4) raises action
+legality from $0.00$ to $1.00$, interlock safety from $0.00$ to $1.00$, provenance
+from $0.00$ to $0.75$ and recipe conformance from $0.00$ to $1.00$. Every category
+is enabled by exactly one layer, which is the non-substitutability claim of
+\S\ref{sec:framework} confirmed empirically.
 
 \paragraph{(iii) Richness competes for budget.} C4 scores $0.80$ on grounding
 where C3 scores $1.00$, and $0.60$ on range reasoning where C3 scores $0.80$.
 This is not noise: at a fixed budget the additional interlock, event and state
-material displaces signal records that other questions need. It is a real cost
-of semantic richness. As \S\ref{sec:e9} shows, it is a cost of
-\emph{dumping a neighbourhood}, not a cost of the representation. It disappears
-entirely once retrieval spends budget on a layer only when the question asks for
-it.
+material displaces signal records that other questions require. It is a genuine
+cost of semantic richness. As \S\ref{sec:e9} shows, it is a cost of serialising an
+entire neighbourhood, not a property of the representation, and it is eliminated
+once retrieval allocates budget to a layer only when the question requires it.
 
 \input{tables/e3_serialisation}
 
@@ -107,16 +107,16 @@ it.
 \label{fig:tokens}
 \end{figure*}
 
-Table~\ref{tab:e3-serialisation} prices semantic richness. The same
-\NAssets{} assets and \NSignals{} signals cost $2{,}256$ tokens as a historian
-CSV, $52{,}324$ as \opcua{} NodeSet2 ($23\times$), $65{,}929$ as an AAS
-environment ($29\times$) and $179{,}342$ as N-Triples
-($\MaxSerialRatio\times$). Note also that context economy, measured as coverage
-per thousand tokens, is \emph{worst} at C2 ($0.106$) and recovers at C3--C4
-($0.143$, $0.162$): a typed model is verbose without being sufficient, whereas
-the ontological layers at least convert their verbosity into answered questions.
-The practical reading is unambiguous, these formats are transfer syntaxes for
-machines with disks, not context for models with windows.
+Table~\ref{tab:e3-serialisation} quantifies the token cost of semantic richness.
+The same \NAssets{} assets and \NSignals{} signals cost $2{,}256$ tokens as a
+historian CSV, $52{,}324$ as \opcua{} NodeSet2 ($23\times$), $65{,}929$ as an AAS
+environment ($29\times$) and roughly $179{,}000$ as N-Triples
+($\MaxSerialRatio\times$). Context economy, measured as coverage per thousand
+tokens, is lowest at C2 ($0.106$) and recovers at C3--C4 ($0.143$, $0.162$): a
+typed model is verbose without being sufficient, whereas the ontological layers
+convert their verbosity into answerable questions. The practical implication is
+that these formats are transfer syntaxes for machines with storage, not context
+for models with bounded windows.
 
 \subsection{E4: Guardrail efficacy}
 
@@ -136,35 +136,35 @@ Over \NCases{} proposed actions (\NFaulty{} faulty), detection recall runs
 \RecallGZero{}, \RecallGOne{}, \RecallGTwo{}, \RecallGThree{},
 \RecallGFour{}. Three findings.
 
-\paragraph{The flat catalogue is a trap.} Tier~G2, a tag dictionary with
+\paragraph{Limitations of the flat catalogue.} Tier~G2, a tag dictionary with
 engineering ranges and a unit string, which is what most industrial ``semantic
-layer'' products implement, reaches \RecallGTwo{} recall and looks
-respectable. But it is the only tier that raises false alarms
-(\FPRGTwo{} of valid actions rejected), and its diagnosis rate ($0.631$) falls
-below its detection rate: it rejects the four unit-scale errors for the wrong
-reason (reporting a unit mismatch rather than a range violation) and rejects
-four perfectly legal actions whose only sin is being expressed in a different
-but commensurable unit. Both behaviours have the same root cause, comparing
-units as strings, and both are corrosive in production, because an operator
-who sees the assistant refuse a legal instruction stops trusting it faster than
-one who sees it make a catchable mistake.
+layer'' products implement, reaches \RecallGTwo{} recall, which appears adequate.
+It is, however, the only tier that raises false alarms (\FPRGTwo{} of valid
+actions rejected), and its diagnosis rate ($0.631$) falls below its detection
+rate: it rejects the four unit-scale errors for the wrong reason (reporting a unit
+mismatch rather than a range violation) and rejects four legal actions whose only
+deviation is being expressed in a different but commensurable unit. Both
+behaviours share a single cause, the comparison of units as strings, and both are
+detrimental in production, because an operator who observes the assistant refuse a
+legal instruction loses trust faster than one who observes it make a detectable
+error.
 
 \paragraph{Each tier opens a distinct band.} Figure~\ref{fig:guardrails}b shows
 the block structure plainly. G1 catches only \textsc{f-card} and \textsc{f-enum}.
 G2 adds \textsc{f-ref}, \textsc{f-acc} and \textsc{f-range}. G3 adds
-\textsc{f-scope} and gets \textsc{f-dim}/\textsc{f-unitscale} right rather than
-by accident. G4, and only G4, catches \textsc{f-ilk}, \textsc{f-state},
+\textsc{f-scope} and detects \textsc{f-dim}/\textsc{f-unitscale} correctly rather
+than incidentally. G4, and only G4, catches \textsc{f-ilk}, \textsc{f-state},
 \textsc{f-stale} and \textsc{f-value}: twenty-two cases, $26\%$ of the faulty
 corpus, comprising every failure mode that can move a plant into an unsafe or
 non-conforming state. In this benchmark no tier lacking an explicit behavioural,
 constraint or provenance model reaches them, however complete its type
 information.
 
-\paragraph{Full semantics is not over-constraining.} G4 attains
+\paragraph{Full semantics does not over-constrain.} G4 attains
 \RecallGFour{} recall at \FPRGFour{} false alarms and $1.000$ diagnosis. The
-common objection, that formal validation will block legitimate work, is
-not supported: it is the \emph{weak} validator that over-blocks, precisely
-because it must be conservative about what it cannot understand.
+common objection that formal validation blocks legitimate work is not supported:
+the \emph{weak} validator is the one that over-blocks, because it must be
+conservative about what it cannot interpret.
 
 \subsection{E4b: Is the gain from semantics or from any strong rule system?}
 
@@ -206,8 +206,7 @@ reduction partly by excluding legal actions.}
 Enumerating $\NSignals{} \times 35 \times 28 = 71{,}540$ syntactically
 well-formed \texttt{write\_setpoint} calls, only $710$ are genuinely executable
 which gives a prior probability of \ActPrecGZero{} that an arbitrary well-formed call is
-legal. This is the quantitative statement of why unconstrained tool use in an OT
-environment is unacceptable.
+legal. This quantifies the risk of unconstrained tool use in an OT environment.
 
 Tier~G2 removes $8.56$ bits, admitting $190$ calls at \ActPrecGTwo{} precision
 but only at \ActRecGTwo{} recall. It forbids three quarters of the legal action
@@ -215,18 +214,18 @@ space, all of it consisting of values correctly expressed in a commensurable
 unit. Tier~G3 admits $755$ calls at $0.940$ precision and full recall; tier~G4
 admits $710$ at \ActPrecGFour{} precision and \ActRecGFour{} recall, the
 difference being the two tags whose interlocks are currently unsatisfied. For
-PackML commands the effect is starker still: $153$ well-formed calls, $26$ legal,
-so a tier without the state machine offers at best $0.321$ precision while G4
+PackML commands the effect is larger: of $153$ well-formed calls, $26$ are legal,
+so a tier without the state machine offers at best $0.321$ precision whereas G4
 reaches $1.000$.
 
 Table~\ref{tab:e5-schema} shows the cost of pushing these constraints into the
 tool schema itself: $205$ tokens for an unconstrained
 \texttt{write\_setpoint}, $2{,}317$ for the fully constrained version carrying
 tag enumerations, per-tag ranges, accepted units, semantic identifiers, interlock
-status and the current legal command set. Two thousand tokens is a small price
+status and the current legal command set. Two thousand tokens is a modest cost
 for moving $6.65$ bits of constraint from the model's memory into the decoder's
-grammar, and unlike context, a tool schema is paid once per session rather
-than once per turn.
+grammar; moreover, a tool schema is paid once per session rather than once per
+turn.
 
 \subsection{E7: Query execution versus context stuffing}
 
@@ -237,14 +236,13 @@ tokens; the same questions answered by SPARQL cost $79$--$314$ tokens including
 the query text, a saving of $17.5$ to $\MaxQuerySaving\times$. Every query
 returns the correct answer.
 
-The decisive row is RNG-04, ``which tags anywhere in the plant are outside their
+The clearest case is RNG-04, ``which tags anywhere in the plant are outside their
 alarm limits''. Its evidence is every observation and every alarm limit in the
 plant; no top-$k$ retrieval assembles it, and the sweep confirms the stuffed
 context is insufficient at every budget tested. As a query it costs $222$ tokens
-and returns one row. There is a class of industrial question, aggregate,
-plant-wide, threshold-crossing, that is not a context problem at all, and
-treating it as one, under top-$k$ retrieval at every budget we tested, yields a
-confidently wrong answer.
+and returns one row. A class of industrial questions, aggregate, plant-wide and
+threshold-crossing, is not a context-assembly problem at all; under top-$k$
+retrieval at every budget tested, treating it as one yields an incorrect answer.
 
 \subsection{E8: Is grounding robust to the naming convention?}
 \label{sec:e8}
@@ -252,12 +250,12 @@ confidently wrong answer.
 \input{tables/e8_convention}
 
 Experiment~E1 showed a plain historian export resolving \GrndTopOneCOne{} of
-mentions. That number is the reason un-grounded pipelines demonstrate well, and
-it deserves to be attacked rather than explained away, because it rests on
-something no machine has verified: the tag mnemonic.
-\texttt{L1\_FIL\_PT0301\_PV} tells a reader who knows the convention that this
-is a pressure transmitter on the Line~1 filler. That is real semantics. It is
-also unwritten, unversioned, unenforced and site-specific.
+mentions. That figure explains why un-grounded pipelines perform well in
+demonstrations, and it warrants scrutiny, because it rests on something no machine
+has verified: the tag mnemonic. \texttt{L1\_FIL\_PT0301\_PV} indicates, to a
+reader who knows the convention, a pressure transmitter on the Line~1 filler. This
+is genuine semantics, but it is unwritten, unversioned, unenforced and
+site-specific.
 
 E8 re-tags the plant under \NSchemes{} conventions drawn from real installations
 including ISA-5.1 mnemonics, sequential I/O addresses, KKS designations, OEM browse
@@ -284,14 +282,13 @@ collapses back to description matching. The typed model and the graph vary by
 \ConvSpreadCTwoPlusconv{} and \ConvSpreadCFour{} points respectively: they are
 \emph{invariant}, because membership is stated rather than inferred.
 
-\paragraph{When the convention lies, decoding is worse than ignoring it.} On the
-inconsistent plant, \texttt{C1+conv} scores \ConvLyingDecoded{}, below the
+\paragraph{When the convention is untruthful, decoding underperforms ignoring it.}
+On the inconsistent plant, \texttt{C1+conv} scores \ConvLyingDecoded{}, below the
 $0.84$ of the same resolver with decoding switched off, and resolves
 \ConvLyingWrong{} of mentions confidently to the wrong tag. The convention is
 syntactically perfect and semantically false, and nothing in the representation
-contradicts it. This is the sharpest available statement of what ``ungrounded''
-means: not that the system is uninformed, but that it has no way to be
-corrected.
+contradicts it. This illustrates precisely what ``ungrounded'' means: not that the
+system is uninformed, but that it cannot be corrected.
 
 Two further observations. First, convention-invariance is bought at C2, not C3
 because an explicit membership relation is enough; the ontology is not required for
@@ -326,22 +323,77 @@ specification words for recipes, to decide which layers to fetch ahead of
 payload. The lexicon is small and inspectable; the claim is not that it is
 optimal but that the signal is cheap.
 
-The trade-off disappears. At the \TokenBudget-token budget the C4 ceiling rises
+The trade-off is eliminated. At the \TokenBudget-token budget the C4 ceiling rises
 from \RouteCFourNeighCeiling{} to \RouteCFourRoutedCeiling{}, and verifiable
 grounding from \RouteCFourNeighVerif{} to \RouteCFourRoutedVerif{}, at
 essentially identical cost (\RouteCFourNeighTokens{} against
 \RouteCFourRoutedTokens{} tokens). No category degrades: grounding returns to
 $1.00$, provenance from $0.75$ to $1.00$, range reasoning from $0.60$ to
-$0.80$, while action legality and interlock safety stay at $1.00$.
-Figure~\ref{fig:convention}b shows the gain is largest where budget is
-tightest, C4 at $3{,}000$ tokens rises from $0.514$ to $0.629$, which is
-the regime that matters, since a real agent shares its window with instructions,
-tool schemas and history.
+$0.80$, while action legality and interlock safety remain at $1.00$.
+Figure~\ref{fig:convention}b shows that the gain is largest where the budget is
+tightest: C4 at $3{,}000$ tokens rises from $0.514$ to $0.629$. This is the
+operationally relevant regime, since a deployed agent shares its window with
+instructions, tool schemas and history.
 
-The correct conclusion is not that richness is free, but that it is only
-expensive when projected badly. A semantic layer with five layers of content and
-no notion of which one the question needs will spend its budget on the wrong
-one.
+The conclusion is not that richness is free, but that it is costly only when
+projected indiscriminately. A representation with several content layers and no
+mechanism for selecting the one the question requires expends its budget on the
+others.
+
+\subsection{E11: A real-model sanity check}
+\label{sec:e11}
+
+\input{tables/e11_realmodel}
+
+The results above are model-free by construction. To check that the ceilings
+predict the behaviour of a real agent, we ran the task suite through a
+contemporary model (\texttt{\EllModel}, \EllRepeats{} repeats per task, accessed
+\EllDate) using the adapter of \S\ref{sec:llm-adapter}. This is a dated sanity
+check rather than a contribution: a single model's scores would age and do not
+bear on the representational claims. We include it because a reviewer reasonably
+asks whether representation ceilings track real success.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/fig_e11}
+\caption{E11. (a) Real-model accuracy against the model-free sufficiency ceiling
+by condition. (b) Per-category accuracy by condition; the block structure
+reproduces the ceiling's (Table~\ref{tab:e6-ceiling}).}
+\label{fig:e11}
+\end{figure*}
+
+Three things hold, and all three were predicted. \textbf{First}, accuracy rises
+monotonically with the semantic stack, \EllAccCZero{} $\to$ \EllAccCOne{} $\to$
+\EllAccCTwo{} $\to$ \EllAccCThree{} $\to$ \EllAccCFour{}, and the per-category
+pattern matches the ceiling almost exactly (Figure~\ref{fig:e11}b): action
+legality, interlock safety, recipe conformance and provenance remain at zero until
+C4 supplies the behavioural, constraint and provenance layers, while topology and
+unit reporting appear at C3. The layer that unlocks a category for an ideal reader
+is the layer that unlocks it for this model.
+
+\textbf{Second}, where evidence is sufficient the model stays \emph{below} the
+ceiling, by a margin that widens with task difficulty: accuracy on
+sufficient-context tasks falls from $0.96$ at C2 to $0.64$ at C4, because the
+tasks C4 makes answerable are the multi-step behavioural and safety questions. The
+ceiling is an upper bound, as stated in \S\ref{sec:threats}, and a real model does
+not saturate it.
+
+\textbf{Third}, at C1 and C2 accuracy \emph{exceeds} the ceiling (\EllAccCOne{}
+against a $0\%$ ceiling, \EllAccCTwo{} against $23\%$). This is not a
+contradiction but the unverifiable competence of \S\ref{sec:e8} appearing on cue:
+with no stated membership facts the model answers correctly by decoding tag
+mnemonics, the capability E8 shows is non-transferable and collapses when the
+convention changes or is untruthful. The excess accuracy is exactly the part that
+cannot be audited. Both halves of the construct-validity caveat of
+\S\ref{sec:threats} are thus observed in one run: the model guesses above the
+ceiling where conventions permit, and falls below it where reasoning is hard.
+
+Refusal behaviour supports this reading. Instructed to answer only from the
+context, the model produced a wrong, non-refused answer on at most $10\%$ of
+insufficient-context tasks (C2) and none at C3--C4: it fails safe far more often
+than it fails loud. We stress the limits of this check: one model, one date, a
+heuristic grader with the raw answers archived for audit, and \EllRepeats{}
+repeats; it corroborates the ordering, and nothing more is claimed of it.
 
 \subsection{Summary of results}
 

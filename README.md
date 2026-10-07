@@ -1,4 +1,4 @@
-# The Role of Semantics and Contextualised Data in Enhancing AI Results
+# The Role of Semantics in Grounding AI Agents for Industrial Automation: A Survey and Empirical Evaluation
 
 **A survey of semantic technologies in industrial automation and their usability
 for large language models and AI agents — with a reproducible benchmark.**

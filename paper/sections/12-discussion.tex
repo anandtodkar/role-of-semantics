@@ -5,26 +5,29 @@
 \paragraph{F1: Semantics is not one capability, and the parts are not
 interchangeable.} Every question category in the study has exactly one layer that
 unlocks it (Table~\ref{tab:e6-ceiling}), and every fault family has exactly
-one tier that first detects it (Figure~\ref{fig:guardrails}b). Adding more of
-what you already have does not substitute for what you lack. The practical
-consequence is that ``we have a semantic layer'' is not a meaningful claim; the
-meaningful claim names which of U1--U8 it supplies.
+one tier that first detects it (Figure~\ref{fig:guardrails}b). Adding more of a
+capability already present does not substitute for one that is absent. The
+practical consequence is that ``we have a semantic layer'' is not a meaningful
+claim; the meaningful claim names which of U1--U8 it supplies.
 
 \paragraph{F2: The fully typed information model is a local optimum, and a
 dangerous one.} A complete \opcua{} address space or AAS environment scores
 \CeilingCTwo{} on the task suite and \RecallGTwo{} on guardrails while
-\emph{looking} like the solved case. It is exactly the configuration most
-industrial AI programmes reach and stop at. It handles the demonstrations
+\emph{appearing} to be the solved case. It is the configuration that most
+industrial AI programmes reach and then halt at. It handles the demonstrations
 (grounding, ranges, permissions) and misses the incidents (interlocks, states,
 staleness, unfaithful numbers). We regard this as the most important finding in
-the paper because it is the failure mode of a well-run project rather than a
-careless one.
+the paper, because it is the failure mode of a well-run project rather than a
+careless one. The real-model check bears this out: in Experiment~E11 the model
+answers only \EllAccCTwo{} of tasks correctly at C2, and the action-legality,
+interlock-safety, recipe and provenance categories stay at zero until C4 supplies
+the missing layers (Figure~\ref{fig:e11}b).
 
 \paragraph{F3: Bigger context windows do not fix missing semantics.}
-A $32\times$ increase in budget buys condition~C2 $2.8$ percentage points of
-ceiling. The industry reflex is to ask for longer context, better retrieval and
-more chunks, but that addresses the wrong bottleneck when the representation
-never encoded the fact. Conversely, for representations that \emph{do} encode it,
+A $32\times$ increase in budget gains condition~C2 $2.8$ percentage points of
+ceiling. The common response is to request longer context, better retrieval and
+more chunks; this addresses the wrong bottleneck when the representation never
+encoded the fact. Conversely, for representations that \emph{do} encode it,
 budget is exactly the binding constraint, which is why the same plot shows C4
 climbing from $0.171$ to $0.971$.
 
@@ -43,12 +46,12 @@ approach. If an organisation can adopt exactly one thing from this survey, it
 should be a unit ontology, not a bigger information model.
 
 \paragraph{F6: Behaviour is the most neglected relative to its value.}
-PackML is thirty years old, tiny, and present in a large fraction of packaging
-and discrete machinery, and it is almost never \emph{published} as a model an
-agent can read. It is the entire content of criterion U5 for those lines,
-converts command-space precision from $0.321$ to $1.000$, and costs a few hundred
-tokens. The gap here is organisational, not technical: the state machine exists
-in the PLC and stops at the PLC.
+PackML is thirty years old, compact, and present in a large fraction of packaging
+and discrete machinery, yet it is almost never \emph{published} as a model an
+agent can read. It constitutes the entire content of criterion U5 for those lines,
+raises command-space precision from $0.321$ to $1.000$, and costs a few hundred
+tokens. The gap is organisational, not technical: the state machine exists in the
+PLC and remains there.
 
 \paragraph{F7: Constraint checking should be a first-class deliverable.}
 The lift-validate-repair loop of \S\ref{sec:shacl} converts the agent's output
@@ -57,14 +60,14 @@ in the study that catches the dangerous families. Yet no industrial semantic
 standard \emph{ships} constraints: interlocks live in ladder logic, safety
 conditions in PDFs, operating envelopes in engineering spreadsheets. Publishing
 them as SHACL shapes alongside the information model is a modest engineering
-effort with a step-change in agent safety.
+effort with a substantial improvement in agent safety.
 
-\paragraph{F8: Query, do not stuff.} Aggregate and plant-wide questions are
-categorically not context problems. Pushing them into a query engine saved up to
-$\MaxQuerySaving\times$ tokens and answered a question that no window could hold.
-The corollary for architecture is that the semantic layer belongs behind a tool
-interface, and the tools should be parameterised query templates rather than
-free-form graph access.
+\paragraph{F8: Query execution outperforms context stuffing.} Aggregate and
+plant-wide questions are categorically not context problems. Evaluating them in a
+query engine saved up to $\MaxQuerySaving\times$ tokens and answered a question
+that no window could hold. The architectural corollary is that the semantic layer
+belongs behind a tool interface, and the tools should be parameterised query
+templates rather than free-form graph access.
 
 \paragraph{F9: Naming conventions are semantics that cannot be audited.}
 A reader that decodes tag mnemonics grounds \ConvMnemonicDecoded{} of mentions
@@ -80,20 +83,25 @@ invariant to the convention ($\ConvSpreadCTwoPlusconv{}$ points of spread). The
 lesson generalises beyond tag names: any semantics carried by a convention
 rather than by an assertion is semantics an agent cannot be corrected on, and
 the more fluent the model, the more confidently it will exploit it.
+Experiment~E11 observes exactly this: at C1 and C2 the real model's accuracy
+\emph{exceeds} the evidence ceiling (\EllAccCOne{} and \EllAccCTwo{} against
+ceilings of $0\%$ and $23\%$), because it is decoding mnemonics rather than
+reading stated facts. The excess is precisely the accuracy that cannot be audited.
 
 \paragraph{F10: Richness is only expensive when projected badly.} Adding
 layers to the context does make them compete for budget: at
 \TokenBudget{} tokens the full stack loses grounding and range tasks that the
 leaner C3 answers, because interlocks, events and recipes crowd out the signal
-records. This is a real effect and a real objection to ``more semantics''. It is
-also entirely an artefact of dumping a topological neighbourhood. Routing on
-cues available before retrieval lifts the ceiling from
+records. This is a genuine effect and a legitimate objection to ``more
+semantics''. It is, however, entirely an artefact of serialising a topological
+neighbourhood. Routing on cues available before retrieval raises the ceiling
+from
 \RouteCFourNeighCeiling{} to \RouteCFourRoutedCeiling{} and verifiable grounding
 from \RouteCFourNeighVerif{} to \RouteCFourRoutedVerif{} at the same token cost,
 with no category degrading. The design rule is that a semantic layer should be
 asked \emph{which} of its layers a question needs before it is asked for
-content; a graph that cannot answer that question will spend its budget on the
-wrong thing.
+content; a graph that cannot answer that question will expend its budget on the
+wrong content.
 
 \subsection{A maturity model}
 
@@ -125,9 +133,9 @@ guards, freshness, faithfulness & \CeilingCFour{} & \RecallGFour{} \\
 \end{tabular}
 \end{table*}
 
-Most organisations we would characterise as sitting at S1 or S2. The jump that
-matters is S2~$\to$~S4, and it is not primarily a data-modelling exercise, the
-information already exists, in PLCs, P\&IDs and engineering documents. It is a
+Most organisations can be characterised as at S1 or S2. The important transition
+is S2~$\to$~S4, and it is not primarily a data-modelling exercise: the information
+already exists, in PLCs, P\&IDs and engineering documents. It is a
 \emph{publication} exercise.
 
 \subsection{Cost, and what to do first}
@@ -141,9 +149,9 @@ model is a transcription of ladder logic engineering already maintains, and
 PackML states are already in the controller. Second, the semantic layer need not
 be complete to be useful: coverage rose gradually across our conditions while
 the ceiling rose in steps, so value accrues when a \emph{capability} is
-completed, not when the plant is fully modelled, modelling one line
-completely beats modelling every line partially. Third, LLMs are themselves now
-a credible tool for the construction work, proposing submodel mappings,
+completed, not when the plant is fully modelled: completing the model of one line
+is more valuable than partially modelling every line. Third, LLMs are themselves
+now a credible tool for the construction work, proposing submodel mappings,
 drafting SHACL shapes from prose specifications, aligning tag catalogues to
 dictionaries, provided the output is verified against the same formal
 machinery. That symmetry, models building the semantics that constrains models,
@@ -151,11 +159,12 @@ is discussed in \S\ref{sec:challenges}.
 
 \subsection{What we did not measure}
 
-We did not measure real model accuracy, latency or cost of the full loop; nor
-multi-agent settings; nor time-series semantics beyond single observations,
-which is a significant omission for condition monitoring; nor the human factors
-of operator trust, where our false-alarm finding (F4) has an obvious but untested
-implication. The intent router of F10 is a hand-written lexicon rather than a
+We measured real-model accuracy only as a single dated sanity check
+(Experiment~E11, \S\ref{sec:e11}), not as a contribution; we did not measure the
+latency or cost of the full agent loop, nor multi-agent settings, nor time-series
+semantics beyond single observations, which is a significant omission for
+condition monitoring, nor the human factors of operator trust, where our
+false-alarm finding (F4) has an obvious but untested implication. The intent router of F10 is a hand-written lexicon rather than a
 learned policy, so its numbers are a lower bound on what routing can achieve and
 an upper bound on how much engineering it requires. The artefact is structured so
 that each of these can be added without re-deriving the framework.

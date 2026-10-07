@@ -8,9 +8,11 @@ different context conditions, for three reasons: results would expire with the
 next model release; sampling noise would swamp several of the effects; and any
 delta would confound the representation with the model's prior familiarity with
 the notation. We therefore hold the reader constant by removing it, and measure
-properties that bound what \emph{any} reader can do. Where a real model is
-available, the artefact includes an adapter that runs the identical suite
-(\S\ref{sec:llm-adapter}).
+properties that bound what \emph{any} reader can do. This model-free design is the
+primary one; separately, a single contemporary model is run through the identical
+suite as a dated sanity check (Experiment~E11, \S\ref{sec:e11}), which confirms
+that a real model's accuracy follows the ceilings without any central claim
+depending on it.
 
 \subsection{The reference plant}
 
@@ -273,12 +275,13 @@ tokeniser.
 \label{sec:llm-adapter}
 
 The artefact includes an adapter that runs the same task suite against a real
-model through an OpenAI-compatible or local endpoint, recording answers,
-validation outcomes and repair rounds. We report no numbers from it, deliberately:
-a single model's score would date the paper and would not support the
-representational claims. It exists so that a reader with a model in hand can
-verify that measured accuracy tracks, and stays below, the ceilings reported
-here.
+model through an OpenAI-compatible, Azure OpenAI or local endpoint, recording
+answers and validation outcomes. We use it for a single dated sanity check
+(Experiment~E11, \S\ref{sec:e11}) and for nothing else: a single model's score
+would age and would not support the representational claims. E11 confirms that
+measured accuracy follows the ceiling ordering across conditions, falls below the
+ceiling where evidence is sufficient, and exceeds it only where naming conventions
+permit unverifiable guesses (\S\ref{sec:e8}).
 
 \subsection{Threats to validity}
 \label{sec:threats}
@@ -286,8 +289,11 @@ here.
 \paragraph{Construct validity.} The ceiling measures \emph{evidence presence},
 not answer correctness; a real model may fail on sufficient context. The ceiling
 is therefore an upper bound and should be read as such. Conversely a model may
-guess a fact correctly from naming conventions. Rather than concede this, we
-measure it: Experiment~E1 reports that condition~C1 achieves \GrndTopOneCOne{}
+guess a fact correctly from naming conventions. Both effects are observed directly
+in Experiment~E11 (\S\ref{sec:e11}): the real model falls below the ceiling where
+evidence is sufficient and exceeds it where conventions permit a guess. Rather
+than concede the second effect, we measure it: Experiment~E1 reports that
+condition~C1 achieves \GrndTopOneCOne{}
 top-1 grounding, and Experiment~E8 shows that a resolver allowed to decode the
 mnemonic reaches \ConvMnemonicDecoded{}, and that the same resolver varies by
 \ConvSpreadCOnePlusconv{} points across conventions and falls to

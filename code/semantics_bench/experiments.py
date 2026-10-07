@@ -1,16 +1,16 @@
-"""The nine experiments, all deterministic and offline.
+"""The nine deterministic and offline experiments.
 
 ======  ==========================================================
 E1      entity grounding under homograph pressure, separating
-        correct resolution from *verifiable* resolution
+        correct resolution from verifiable resolution
 E2      context sufficiency: can the retrieved context support a
         grounded answer at all?
 E3      context economy: coverage per thousand tokens, and the
-        token bill of each serialisation of the *same* plant
+        token bill of each serialisation of the same plant
 E4      guardrail efficacy: detection, diagnosis and false alarms
         across the five validator tiers
 E5      action-space reduction and fidelity (bits, precision, recall)
-E6      end-to-end task accuracy with a *context-bounded oracle* -
+E6      end-to-end task accuracy with a context-bounded oracle -
         an answerer that is perfect at reading but cannot invent,
         giving the accuracy ceiling each representation permits
 E7      answering by query execution instead of context stuffing
@@ -22,7 +22,7 @@ E9      neighbourhood projection versus intent-routed projection
 E6 deserves a word.  We do not benchmark a particular LLM: model rankings
 expire, and attributing an accuracy delta to a representation requires holding
 the reader constant.  Instead we bound the problem from above.  The oracle
-answers correctly **iff** the context expresses every fact the question needs.
+answers correctly iff the context expresses every fact the question needs.
 Any real model is at or below this ceiling, so a gap in the ceiling is a gap no
 amount of prompting, fine-tuning or scaling can close.  :mod:`semantics_bench.llm`
 provides an adapter for running the identical suite against a real model when

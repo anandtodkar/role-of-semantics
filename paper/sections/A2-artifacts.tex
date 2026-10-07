@@ -18,6 +18,13 @@ every file in \texttt{paper/tables} and \texttt{paper/figures}, and rewrites
 is drawn. Runtime is under a minute on a laptop; the dominant cost is the SHACL
 pass over the action corpus.
 
+The real-model sanity check (Experiment~E11) is produced separately, on demand, by
+\texttt{run\_e11.py}, which calls a hosted or local model and therefore sits
+\emph{outside} this deterministic offline pipeline. Its output is a timestamped
+results file recording every raw answer, together with the single table, figure
+and macro file (\texttt{generated\_macros\_e11.tex}) it feeds; the API key is read
+only from the environment and is never committed.
+
 \subsection{Repository layout}
 
 \begin{table*}[t]
@@ -55,8 +62,8 @@ validator tiers G0--G4 \\
 \texttt{toolgen.py} & action-space enumeration and tool-schema
 projection \\
 \texttt{sparql\_probe.py} & the E7 SPARQL probes \\
-\texttt{llm.py} & optional adapter for running the suite
-against a real model \\
+\texttt{llm.py} & adapter for running the suite against a
+real model (OpenAI, Azure OpenAI or Ollama); used for the E11 sanity check \\
 \texttt{code/tests/} & unit tests for the unit calculus, state machine, shapes,
 retrieval and metrics \\
 \texttt{artifacts/} & the plant serialised in all seven formats \\

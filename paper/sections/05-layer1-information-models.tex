@@ -103,7 +103,7 @@ plant topology explicitly, which is exactly the structure that Experiment~E2
 shows to be decisive for impact-analysis tasks (TOP-01--05). Converters between
 AutomationML and the AAS are mature, and the pragmatic pattern of lifting
 engineering topology out of AutomationML and publishing it as AAS submodels or
-RDF is one of the cheapest routes to a plant graph.
+RDF is one of the least expensive routes to a plant graph.
 
 \paragraph{Limitation.} It is an engineering-time artefact. It does not carry
 run-time values, states or events, so on its own it can support planning but not
@@ -141,14 +141,14 @@ IEC~62264 \cite{iec62264} standardises the enterprise-to-control hierarchy
 production schedules, definitions and performance, with B2MML as its XML
 binding.
 
-\paragraph{Agent affordance.} These two are small, cheap and disproportionately
-valuable. PackML is the entire content of criterion U5 for packaging and
-discrete lines: it turns ``can I start the filler?'' from a judgement into a
-lookup, and it is what makes fault family \textsc{f-state} catchable. That
-family accounts for seven cases in our corpus and is undetectable by every other
-tier. PackML is also
-\emph{token-cheap}: the complete state machine is a few hundred tokens, the best
-value-per-token of any artefact we measured. ISA-95 supplies the mereology that
+\paragraph{Agent affordance.} These two are small, inexpensive and
+disproportionately valuable. PackML is the entire content of criterion U5 for
+packaging and discrete lines: it converts ``can I start the filler?'' from a
+judgement into a lookup, and it is what makes fault family \textsc{f-state}
+catchable. That family accounts for seven cases in our corpus and is undetectable
+by every other tier. PackML is also \emph{inexpensive in tokens}: the complete
+state machine is a few hundred tokens, the best value per token of any artefact we
+measured. ISA-95 supplies the mereology that
 scopes every query an agent asks (``the Line~1 tags'', ``the utilities area
 total''), and its absence is why fault family \textsc{f-scope} is invisible below
 tier~G3.

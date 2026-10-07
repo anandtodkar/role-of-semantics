@@ -1,7 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%  The Role of Semantics and Contextualised Data in Enhancing AI Results
-%  A survey of semantic technologies in industrial automation and their
-%  usability for large language models and AI agents.
+%  The Role of Semantics in Grounding AI Agents for Industrial Automation:
+%  A Survey and Empirical Evaluation.
+%  Semantic technologies in industrial automation and their usability for
+%  large language models and AI agents.
 %
 %  IEEE format (IEEEtran).  Switch "journal" -> "conference" in the class
 %  options for a conference submission.
@@ -95,12 +96,15 @@
 \newcommand{\cross}{\ensuremath{\times}}
 
 \input{generated_macros}
+% E11 (real-model sanity check) macros: a dated artefact, generated separately by
+% report.emit_e11(); guarded so the paper still builds if it is absent.
+\IfFileExists{generated_macros_e11.tex}{\input{generated_macros_e11}}{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-\title{The Role of Semantics and Contextualised Data in Grounding Industrial
-AI Agents: A Survey and Empirical Evaluation}
+\title{The Role of Semantics in Grounding AI Agents for Industrial
+Automation: A Survey and Empirical Evaluation}
 
 % IEEE journal authors use \author (not \IEEEauthorblockN, which is mainly for conferences).
 \author{Anand~Todkar%
@@ -111,24 +115,25 @@ E-mail: anand.todkar@siemens.com.}%
 single command; see Appendix~\ref{app:artifacts}.}}
 % Header for IEEE Transactions (optional; fill in volume/issue after acceptance).
 \markboth{IEEE Transactions on Industrial Informatics,~Vol.~XX, No.~XX, Month~2026}%
-{Todkar: Semantics and Contextualised Data for Grounding Industrial AI Agents}
+{Todkar: Semantics for Grounding AI Agents in Industrial Automation}
 \maketitle
 
 \begin{abstract}
-Large language model agents fail in industrial automation not because they
-reason badly, but because the data they are given does not say what it means. A
-tag named \texttt{L1\_FIL\_PT0301\_PV} described as ``Outlet pressure'' is, to a
-model, an English phrase; to the plant it is a read-only variable on a specific
-machine, in \texttt{bar}, bounded by an engineering range, guarded by an
-interlock, and meaningful only in a specific operating state. Each qualification
-is carried by a semantic technology, and almost none survive the journey into a
-prompt. This paper surveys 42 industrial semantic technologies as \emph{agent
-infrastructure}, among them \opcua, the Asset Administration Shell, ECLASS,
+Large language model agents fail in industrial automation less often from faulty
+reasoning than from under-specified data. A tag named \texttt{L1\_FIL\_PT0301\_PV}
+described as ``Outlet pressure'' is, to a model, an English phrase; to the plant
+it is a read-only variable on a specific machine, in \texttt{bar}, bounded by an
+engineering range, guarded by an interlock, and meaningful only in a specific
+operating state. Each qualification is carried by a semantic technology, and few
+of them reach the prompt. This paper surveys 42 industrial semantic technologies
+as \emph{agent infrastructure}, among them \opcua, the Asset Administration Shell,
+ECLASS,
 AutomationML, MTP, PackML, ISA-95, RDF/OWL/SHACL/SPARQL, QUDT, SOSA/SSN, Brick,
 SAREF and IDS, organising them into five layers and scoring each against a
 ten-criterion agent-usability framework. The survey finds an imbalance:
-machine-readable typing is solved, whereas unit, behavioural and constraint
-semantics are supported by very few standards and by no single one of them. We
+machine-readable typing is effectively solved, whereas unit, behavioural and
+constraint semantics are supported by very few standards and by no single one of
+them. We
 then quantify the consequences on a reproducible reference plant through nine
 experiments that ablate the semantic stack across five context conditions, five
 validator tiers and \NSchemes{} tag naming conventions. A fully typed
@@ -137,8 +142,8 @@ for only \CeilingCTwo{} of \NTasks{} agent tasks, catches \RecallGTwo{} of
 \NFaulty{} faulty agent actions, raises false alarms on \FPRGTwo{} of legal
 ones, and does not improve when the context window grows $32\times$. Adding
 unit, topological, behavioural, constraint and provenance semantics reaches
-\CeilingCFour{} and \RecallGFour{} with no false alarms. We distil ten findings,
-chief among them that type information without these layers is a local optimum
+\CeilingCFour{} and \RecallGFour{} with no false alarms. We report ten findings;
+the principal one is that type information without these layers is a local optimum
 that leaves the most dangerous failure modes undetectable.
 \end{abstract}
 
