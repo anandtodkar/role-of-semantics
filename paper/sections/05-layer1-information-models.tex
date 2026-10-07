@@ -158,15 +158,10 @@ particular is frequently \emph{implemented} without being \emph{published}: the
 states exist in the PLC, but nothing exposes them as a model, which is the
 practical reason so many deployed agents cannot use them.
 
-\subsection{DTDL, W3C WoT Thing Description, NGSI-LD}
+\subsection{W3C WoT Thing Description and NGSI-LD}
 
-Three technologies converge from three directions on the same shape, a
+Two technologies converge from different directions on the same shape, a
 JSON(-LD) description of a thing's properties, actions or commands, and events.
-
-\emph{DTDL} (Digital Twins Definition Language, Azure Digital Twins)
-\cite{dtdl} offers interfaces with telemetry, properties, commands, components
-and typed relationships, and a graph query language over the twin graph. It is
-the strongest of the three on relations plus query, and the weakest on openness.
 
 \emph{W3C WoT Thing Description~1.1} \cite{w3c2023wot} is a W3C Recommendation
 and, for our purposes, the most elegant: properties, actions and events each
@@ -190,20 +185,29 @@ domain depth. None carries a plant taxonomy, an equipment state model or an
 engineering-range convention, so they are complements to \opcua/AAS rather than
 replacements.
 
-\subsection{Sector-specific models: MTConnect, IEC 61850, Sparkplug B}
+\subsection{The deployed reality: IEC 61850 and the MQTT Unified Namespace}
 
-MTConnect \cite{mtconnect} (machine tools) offers a clean, read-oriented XML
-model with \texttt{DataItem}s that carry a type, a subtype, units and native
-units. It is one of the few standards that distinguishes reporting units from
-native units, which is a small but real U3 contribution. IEC~61850
-\cite{iec61850} (substation automation) has arguably the most rigorous naming
-and data-model discipline in all of automation: logical nodes and standardised
-data objects give near-perfect L0/L1 alignment inside its domain. Sparkplug~B
-\cite{sparkplug} is included as the pragmatic counterpoint: it
-adds a birth-certificate metadata payload to MQTT, giving a minimal but
-genuinely useful type and unit hint at very low token cost. It is a
-reminder that a modest, universally deployed semantic increment can be worth more
-than a rich, rarely deployed one.
+IEC~61850 \cite{iec61850} (substation automation) has arguably the most rigorous
+naming and data-model discipline in all of automation: logical nodes and
+standardised data objects give near-perfect L0/L1 alignment inside its domain,
+which is why it scores well on identity and typing. Its reach, however, stops at
+the energy sector.
+
+The pattern that dominates greenfield IIoT deployments is different in kind: an
+MQTT \emph{Unified Namespace} (UNS) carrying \emph{Sparkplug~B} \cite{sparkplug}
+payloads. Sparkplug~B adds a birth-certificate metadata payload to MQTT, giving
+typed metrics and a defined topic namespace at very low token cost; the UNS
+organises those topics into a single, real-time, hierarchical source of truth,
+conventionally shaped along the ISA-95 levels. This is operationally powerful, but
+for an agent it sits at the C0--C1 end of our scale: it delivers values on the
+wire with a datatype and a namespace, and no more. Its structure is carried by
+\emph{topic-string convention} rather than by any asserted, machine-checkable
+relation, so it inherits precisely the auditability problem of \S\ref{sec:e8} --- a
+mnemonic hierarchy no machine has verified. We therefore do not score the UNS (an
+architecture pattern, not a specification) or Sparkplug~B (a transport payload,
+not a semantic model) in Table~\ref{tab:auf-matrix}; we note them because making
+this stack agent-ready is exactly a matter of attaching the typed, unit-bearing,
+constraint-checkable layers the rest of this survey assesses.
 
 \subsection{Summary of L1}
 
@@ -231,7 +235,6 @@ WoT TD & Affordances with protocol bindings and external semantic annotation &
 No domain depth \\
 NGSI-LD & Per-attribute unit code and \texttt{observedAt} provenance & Weak
 behaviour model \\
-DTDL & Twin graph with a query language & Vendor-bound \\
 \bottomrule
 \end{tabular}
 \end{table*}

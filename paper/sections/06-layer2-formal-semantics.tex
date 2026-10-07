@@ -152,31 +152,22 @@ exposed as tools}: the agent chooses a template and binds arguments, so the
 argument space is constrained (Experiment~E5) and the query is correct by
 construction.
 
-\subsection{JSON-LD, SKOS, PROV-O, and the mapping languages}
+\subsection{PROV-O: provenance for agent writes}
 
-\emph{JSON-LD~1.1} \cite{w3c2020jsonld} is the diplomatic solution to the L1/L2
-divide: a document
-that is ordinary JSON to a REST client and RDF to a graph engine, differing only
-by a \texttt{@context}. It is the reason WoT~TD and NGSI-LD can be simultaneously
-developer-friendly and semantically grounded, and it is the least disruptive way
-to add semantics to an existing industrial API.
+PROV-O \cite{w3c2013prov} supplies the vocabulary for U7: activities, agents,
+entities, \texttt{wasDerivedFrom}, \texttt{wasAssociatedWith},
+\texttt{startedAtTime}. Its importance rises sharply the moment agents write as
+well as read: an autonomous change to a plant needs an audit trail with the same
+standing as an operator's signature.
 
-\emph{SKOS} handles what ontologies handle badly: the messy synonymy of real
-plants. \texttt{skos:altLabel} and \texttt{skos:notation} are how an agent maps
-``the filler'', ``FIL'', ``Modulfill'' and \texttt{L1-FIL} to one entity, and
-in our implementation they are literally the fields the entity resolver reads.
-
-\emph{PROV-O} \cite{w3c2013prov} supplies the vocabulary for U7: activities, agents, entities,
-\texttt{wasDerivedFrom}, \texttt{wasAssociatedWith}, \texttt{startedAtTime}. Its
-importance rises sharply the moment agents write as well as read: an autonomous
-change to a plant needs an audit trail with the same standing as an operator's
-signature.
-
-\emph{R2RML, RML and OBDA} (\eg Ontop) let the graph be \emph{virtual}. Given
-that plant data lives in historians and relational stores and is far too large to
-materialise as triples, virtual graphs are the realistic deployment path: the
-agent queries SPARQL, the engine rewrites to SQL, the historian answers. This
-also resolves the freshness problem that a materialised graph creates.
+It is the only one of the further L2 vocabularies we score separately
+(Table~\ref{tab:auf-matrix}); the rest are enabling tooling rather than distinct
+agent-usability entries. Three matter in a deployment: \emph{SKOS}
+(\texttt{skos:altLabel}/\texttt{skos:notation} are the synonymy fields our entity
+resolver reads), \emph{JSON-LD} (the JSON/RDF bridge that lets WoT~TD and NGSI-LD
+be developer-friendly and grounded at once), and the \emph{R2RML/OBDA} mapping
+languages that keep the graph \emph{virtual} over the historian --- the realistic
+deployment path when plant data is too large to materialise as triples.
 
 \subsection{Summary of L2}
 

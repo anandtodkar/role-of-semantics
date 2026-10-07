@@ -77,26 +77,16 @@ than a judgement call, and that is the basis of a genuinely automatable
 faithfulness check for numeric answers, which is otherwise the hardest part of
 RAG evaluation.
 
-\subsection{Brick, Haystack, RealEstateCore, SAREF}
+\subsection{Brick and SAREF}
 
 \emph{Brick} \cite{balaji2016brick} is an RDF/OWL ontology of building
 equipment, points and locations with relations such as \texttt{hasPoint},
-\texttt{feeds} and \texttt{isLocatedIn}. Its design lesson generalises well beyond buildings: it
-deliberately restricts itself to a small, closed set of relations and a deep
-class taxonomy, which keeps queries writable by non-experts, a real advantage
-when the query author is a language model.
-
-\emph{Project Haystack} \cite{haystack} takes the opposite approach: additive
-tagging rather than
-classification. It is more forgiving of messy reality and less amenable to
-formal reasoning; the two communities have converged substantially, and the
-Brick--Haystack alignment work is a useful template for anyone reconciling a
-formal ontology with a tagging convention already in production.
-
-\emph{RealEstateCore} extends into space, occupancy and building-management
-concerns, and is notable for being one of the few domain ontologies with a
-first-class DTDL rendering, an existence proof that L1 and L3 can be
-published as one artefact.
+\texttt{feeds} and \texttt{isLocatedIn}. Its design lesson generalises well beyond
+buildings: it deliberately restricts itself to a small, closed set of relations
+and a deep class taxonomy, which keeps queries writable by non-experts, a real
+advantage when the query author is a language model. (The additive-tagging
+alternative, Project Haystack \cite{haystack}, has largely converged with Brick
+and adds no distinct agent affordance.)
 
 \emph{SAREF} (ETSI TS~103~264 \cite{etsi2020saref}) plus its vertical extensions
 (SAREF4BLDG, SAREF4ENER, SAREF4INMA for manufacturing, and others) models
@@ -105,55 +95,21 @@ devices, functions, commands, states and services. Its \texttt{Function}/\texttt
 (U5~$=2$), rare among L3 ontologies.
 
 \paragraph{Assessment for industrial agents.} Brick's coverage of process
-equipment is thin, and none of these four covers a bottling line. The
-transferable contribution is structural: a small closed relation set, a deep
-class hierarchy, and a convention for attaching points to equipment. Our
-reference ontology follows exactly that pattern and aligns to Brick where a
-class exists.
+equipment is thin, and neither covers a bottling line. The transferable
+contribution is structural: a small closed relation set, a deep class hierarchy,
+and a convention for attaching points to equipment. Our reference ontology follows
+exactly that pattern and aligns to Brick where a class exists.
 
-\subsection{Process-industry ontologies: ISO 15926, DEXPI, IOF}
+\subsection{DEXPI: process connectivity}
 
-\emph{ISO~15926} \cite{iso15926} is the most ambitious semantic model in the
-survey: a 4D
-upper ontology plus a large reference data library for process plant lifecycle
-data. Its expressive power is real and its usability is poor; the temporal-part
-modelling that makes it rigorous also makes queries hard to write and results
-hard to explain. For agents its practical value today lies in the reference data
-library as a source of terms rather than in the upper ontology.
-
-\emph{DEXPI} \cite{dexpi} standardises P\&ID exchange: equipment, piping, instrumentation
-and their connectivity, with an RDF rendering available. For an agent doing
-process reasoning, ``what is between the pump and the tank?'', ``which valves
-isolate this section?'', DEXPI is the only standard that carries the answer,
+\emph{DEXPI} \cite{dexpi} standardises P\&ID exchange: equipment, piping,
+instrumentation and their connectivity, with an RDF rendering available. For an
+agent doing process reasoning, ``what is between the pump and the tank?'', ``which
+valves isolate this section?'', DEXPI is the only standard that carries the answer,
 and its connectivity graph is directly the structure that Experiment~E2 shows to
-be decisive for topology tasks.
-
-\emph{IOF} (Industrial Ontologies Foundry \cite{iof}), built on BFO
-(ISO/IEC~21838-2), supplies a principled upper and mid-level ontology for
-manufacturing (core, maintenance, supply chain modules). Its promise for agents is
-\emph{compositionality}: modules that combine without contradiction, so an agent
-can reason across maintenance and production without an ad-hoc bridge. Its
-practical maturity trails its design quality, and the BFO commitment imposes a
-modelling discipline that most industrial teams find costly.
-
-\subsection{Cross-industry: Catena-X SAMM and FIWARE Smart Data Models}
-
-Catena-X's Semantic Aspect Meta Model \cite{catenax} defines \emph{aspect
-models}, versioned,
-semantically annotated data contracts (product carbon footprint, traceability,
-battery passport) from which APIs, JSON schemas and documentation are generated.
-This is the most industrially convincing pattern in the whole survey for agent
-work, because it produces, from one source, both the human documentation and the
-machine-checkable schema. FIWARE Smart Data Models does something similar for
-NGSI-LD across smart cities, agriculture, energy and manufacturing, with a large
-library of ready JSON schemas and contexts.
-
-\paragraph{Why this pattern matters for agents.} A tool schema generated from a
-versioned semantic model is a tool schema that cannot drift from the data it
-describes. Every constraint in the aspect model, enumerations, ranges, units,
-required fields, lands in the function signature and is therefore enforceable
-by constrained decoding rather than by hoping the model remembers.
-Experiment~E5 measures exactly this effect.
+be decisive for topology tasks. The more ambitious process ontologies
+(ISO~15926 \cite{iso15926} and IOF/BFO \cite{iof}) are rigorous but costly to use
+and thinly adopted, so we note them without assessing them as agent infrastructure.
 
 \subsection{Summary of L3}
 

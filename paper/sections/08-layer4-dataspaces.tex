@@ -40,13 +40,14 @@ the ODRL policy graph in place of the shapes graph, and the agent's proposed
 action guardrails and usage guardrails under one validation step as the natural
 next step for industrial agent middleware.
 
-\subsection{Gaia-X, Catena-X, Manufacturing-X}
+\subsection{Catena-X and Manufacturing-X}
 
-Gaia-X provides the federated trust framework, self-descriptions,
-verifiable credentials, compliance rules, rather than data models. Catena-X
-applies it to the automotive value chain and supplies the semantic content
-(SAMM aspect models, \S\ref{sec:layer3}) that makes shared data interpretable;
-Manufacturing-X generalises the pattern across manufacturing sectors.
+Catena-X applies the dataspace idea to the automotive value chain and, crucially,
+supplies versioned, machine-readable semantic content --- its aspect models ---
+that makes shared data interpretable; Manufacturing-X generalises the pattern
+across manufacturing sectors. (The underlying federation framework, Gaia-X,
+supplies trust and compliance machinery rather than data models, and we do not
+assess it separately.)
 
 \paragraph{Assessment.} From an agent's standpoint the significant contribution
 of the -X initiatives is not the infrastructure but the insistence that
@@ -56,23 +57,14 @@ protocol choice: it means an agent encountering a partner's data can retrieve th
 aspect model, generate a typed accessor and validate what it receives, instead of
 inferring structure from examples.
 
-\subsection{DCAT, W3C Verifiable Credentials and DIDs}
-
-DCAT (and DCAT-AP) describes datasets, distributions, services and their
-provenance, the discovery layer an agent needs before it can decide what to
-retrieve. Verifiable Credentials and Decentralised Identifiers supply
-cryptographically checkable claims about participants and about data. Together
-they make \emph{trust} a data property rather than a network property, which is
-the precondition for an agent weighing conflicting evidence from sources of
-different standing.
-
 \subsection{Summary of L4, and a caution}
 
 L4 is the least mature layer and the one furthest from the plant floor, and we do
 not exercise it in the experiments. We include it because the trajectory is
 clear: agents are moving from reading one plant to reasoning across many
-organisations, and the semantics of \emph{permission} and \emph{provenance} will
-become as operationally important as the semantics of pressure. The caution is
+organisations, and the semantics of \emph{permission}, \emph{provenance} and
+\emph{trust} (the latter carried by dataset catalogues and verifiable credentials)
+will become as operationally important as the semantics of pressure. The caution is
 that L4's own vocabularies remain thin on U3 and U5, policy without a domain
 model still cannot tell an agent whether an action is physically safe, only
 whether it is contractually allowed.
