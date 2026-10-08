@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{R4: synthetic missing-evidence and dispatch-time state probes. These are not PLC trials or physical safety measurements.}
+\label{tab:revision-degradation}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Probe & Disposition \\
+\midrule
+before\_state\_change & accept \\
+after\_state\_change & reject \\
+missing\_state & abstain \\
+missing\_unit & reject \\
+unknown\_unit & reject \\
+malformed\_time & reject \\
+missing\_observation & abstain \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,246 @@
+\documentclass[10pt,journal,letterpaper]{IEEEtran}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,booktabs,array,graphicx}
+\usepackage{cite}
+\usepackage[hidelinks]{hyperref}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\input{generated_revision}
+\begin{document}
+\title{Engineering Semantics for Grounded Industrial Agents: An Equal-Information Evaluation}
+\author{Anand~Todkar, Jitendra~Solanki, Mrinmoy~Sarkar}
+\maketitle
+\begin{abstract}
+Industrial agents must associate requests with the correct equipment, interpret
+unit-bearing observations and propose commands consistent with current machine
+state. We investigate how explicit engineering facts support these tasks, while
+separating their information content from representation and validation engine.
+An agent-usability framework connects engineering capabilities to operational
+failure modes. On a synthetic reference plant, an equally informed procedural
+validator and a declarative SHACL validator agree on all \RevisionCases{}
+proposed actions, each detecting every injected fault without rejecting legal
+actions. Thus this corpus supports the value of the supplied engineering facts,
+not an accuracy advantage for SHACL over competent procedural code. Additional
+controls cross retrieval strategies with context conditions, remove individual
+capabilities, probe missing evidence and check serialisation fidelity. A physical
+S7-1500/industrial-PC testbed protocol is specified but has not yet been executed.
+Transfer effort, operational latency and physical outcomes remain open evidence
+requirements rather than claimed results.
+\end{abstract}
+\begin{IEEEkeywords}
+Industrial agents, semantic interoperability, OPC UA, action validation,
+engineering knowledge graphs, programmable logic controllers.
+\end{IEEEkeywords}
+
+\noindent\textit{Working revision, not submission-ready. Physical trials,
+independent annotation, AUF reliability, specific competitor verification and
+the current journal page policy remain pending.}
+
+\section{Introduction}
+A request to change a machine setting contains several distinct obligations:
+identify the machine and writable signal, interpret the requested unit, obtain
+current evidence, and respect operating-state and process guards. These are
+supervisory decisions above the controller's deterministic loop. An agent's
+plausible response is not itself evidence that a proposed command is admissible.
+
+Industrial standards already describe much of this information. The problem
+examined here is how to expose and check those facts at agent runtime, not whether
+RDF is intrinsically safer than an information model or procedural implementation.
+OPC UA and AAS can carry richer profiles than a flat typed catalogue; our
+experimental conditions are selected projections, not upper bounds on the
+standards' capabilities \cite{iec62541,idta2023aas}.
+
+We pursue three contributions: (1) a capability framework linking engineering
+evidence to agent failures; (2) an operational integration pattern for retrieval,
+typed tools and pre-dispatch validation; and (3) controlled evaluation separating
+missing information, retrieval limitations and implementation choice. The third
+contribution currently has synthetic evidence only. Industrial transfer and
+physical execution must be evaluated before deployment claims are made.
+
+\section{Positioning and Scope}
+RAMI 4.0 is an industrial reference architecture, whereas the proposed view
+organises the evidence needed for individual agent decisions. They are
+complementary: information and functional concerns provide engineering inputs;
+communication concerns deliver observations and commands; integration and asset
+concerns anchor physical identity; business concerns supply authorisation and
+policy. This is a conceptual crosswalk, not a normative mapping or demonstrated
+improvement over RAMI. The exact RAMI edition and source must be verified before
+submission.
+
+The five survey layers classify identification, information models, formal
+semantics, domain vocabularies and cross-organisational policy. They are not a
+strict dependency hierarchy. Context conditions C0--C4 and validator tiers
+G0--G4 are experimental treatments assembled from these sources, not the survey
+layers themselves. Dataspace policy is not evaluated here.
+
+Graph retrieval and knowledge-graph augmentation provide relevant prior art
+\cite{edge2024graphrag,pan2024unifying}. SHACL is an existing validation language,
+not our invention \cite{knublauch2017shacl}. The contribution cannot be the
+generic combination of an LLM and a graph. Specific neurosymbolic industrial
+systems, including the suggested CausalTrace comparator, require source and
+artefact verification; no capability absence or superiority is asserted before
+that review. The quoted 94\% MAP@3 result is not used without a verified dataset,
+ranked-cause task and common evaluation protocol.
+
+\section{Capability Framework and Operational Method}
+The agent-usability framework (AUF) separates identity (U1), types and access
+(U2), quantities and conversion (U3), relations (U4), behaviour (U5), constraints
+(U6), provenance and time (U7), query pushdown (U8), context economy (U9), and
+ecosystem/deployability (U10). These are complementary capabilities; cumulative
+ablation does not establish mathematical orthogonality.
+
+The practical distinction is between facts a source can express, facts a
+deployment actually publishes and facts available at decision time. A unit
+conversion requires both source and target definitions or a documented external
+conversion service. State legality requires a current state and transition model.
+An interlock requires its guard, dependencies and observations. Absent evidence
+is distinct from evidence of an illegal command.
+
+The proposed runtime resolves the target, fetches the relevant evidence, generates
+a typed tool proposal and validates it. An incomplete evidence set produces
+abstention or a request for refresh. A proposal permitted at planning time is
+checked again at dispatch; the PLC retains independent, current-state checks and
+final actuator authority. A finite retry budget, operator approval and an audit
+trail are required for repair. No LLM participates in a hard-real-time loop.
+
+AUF scores remain expert assessments until independently checked. The planned
+assessment uses two scorers, specification-clause evidence, ordinal agreement
+and adjudication, then tests whether AUF-guided capability selection improves a
+held-out installation within a fixed integration budget. Those results are not
+available in this revision.
+
+\section{Controlled Evaluation}
+The existing generated reference plant contains 17 assets and 73 signals. Its
+35 tasks and 137 proposed actions are retained for comparability, not presented
+as independently collected industrial workloads. All revision outputs are
+isolated from the original manuscript and archived results.
+
+\subsection{R1: Equal-information validation}
+Both implementations receive the same engineering ranges, unit calculus,
+asset containment, PackML state/commands, interlocks and observations. The
+procedural implementation reads those declarative reference data without calling
+SHACL. Predictions do not inspect gold labels. Raw constraint-family sets are
+compared; diagnosis maps an injected scale error to a range violation identically
+for both implementations, rather than adding labels to predictions from gold.
+Detection, false positives and diagnosis are reported separately. Binomial Wilson
+intervals are archived but are descriptive for this designed corpus, not evidence
+of installation-wide incident prevalence.
+
+\subsection{R2: Retrieval crossed with context}
+Lexical retrieval is evaluated under all conditions. Membership-scoped retrieval
+is added where published asset membership is available; both scoped strategies
+use a fixed manually supplied entity resolver. Graph traversal is restricted to
+C3/C4. Each supported strategy is tested at 1,500, 6,000 and 24,000 surrogate
+tokens with a fixed condition renderer. An unbudgeted all-elements context is an
+oracle diagnostic, not a deployable retriever. No required-fact set is used for
+ranking. This matrix separates some retrieval effects but does not equalise all
+notation familiarity or entity-linking assumptions.
+
+\subsection{R3--R5: Ablation, degradation and fidelity}
+R3 removes units, flow topology, behaviour, constraints or provenance separately.
+The context ordering remains fixed to full C4 as a diagnostic intervention;
+it is not evidence that an ablated deployment could build that ordering. The
+validator separately removes access to relevant checking capabilities and counts
+abstentions, which must not be counted as detections. Context flow topology and
+validator containment are different interventions and cannot be pooled as one
+effect size.
+
+R4 probes missing state, unknown/missing unit definitions, malformed timestamps,
+missing observations and a synthetic planning-to-dispatch state change. R5
+serialises one RDF graph and parses each syntax back, qualifying an
+equal-information comparison only if graph isomorphism is preserved.
+
+Evidence sufficiency is the fraction of tasks whose declared required facts are
+present. It is not an unconditional accuracy bound: alternative derivations,
+external knowledge and inferred conventions may change answerability. Conversion
+facts are conservatively counted only when both unit definitions occur in the
+context. Token counts are a deterministic surrogate, not model billing tokens.
+
+\section{Results and Interpretation}
+\input{tables/r1_equal}
+R1 produces \RevisionDisagreements{} raw-family disagreements. Both implementations
+detect every injected fault and accept every legal reference action
+(Table~\ref{tab:revision-equal}). This is a negative result for an
+engine-superiority claim and positive evidence that the supplied facts can be
+checked independently. Standardisation, reuse and maintenance advantages need
+separate effort measurements.
+
+\input{tables/r2_retrieval}
+Table~\ref{tab:revision-retrieval} distinguishes restricted contexts from
+unbudgeted evidence. Under the audited conversion definition, a task may lack
+an explicit target-unit definition even when the original bookkeeping marked
+conversion as available. Differences from archived results are therefore not
+silently treated as replication failures or attributed solely to routing.
+
+\input{tables/r3_ablation}
+Removal effects depend on the workload and budget
+(Table~\ref{tab:revision-ablation}). Smaller contexts can offset lost capability
+for some tasks; lack of a net sufficiency decrease does not prove a capability
+unnecessary. Additional per-category and per-task outputs are archived. The
+corpus was designed around these failure families, so general necessity requires
+independently authored tasks and external workloads.
+
+\input{tables/r4_degradation}
+The synthetic state probe permits a volume change in Idle and rejects it after
+a change to Execute. It demonstrates the test harness's revalidation rule, not
+that a real PLC/agent pipeline prevents a timing race. Missing evidence remains
+visible in the verdict even when a separately proven fault also requires rejection.
+
+\input{tables/r5_serialisation}
+The installed RDFLib Turtle serializer rounds some double literals, causing a
+strict graph mismatch despite identical triple counts. Such output is excluded
+from equal-information claims; N-Triples and JSON-LD qualify in this run.
+Preserving datatype and numeric precision is a deployment requirement, not
+merely a token-economy detail.
+
+\section{Physical Testbed Protocol: Pending}
+We propose an S7-1500 controlling two guarded 24~V handling stations, optionally
+coupled to a low-head water-filling module with physical level/flow sensors. An
+IPC427E hosts the agent and semantic/validation services; an IPC227G can provide
+an edge gateway or separate disturbance/replay service. Actual CPU order number,
+firmware, OPC UA support/licence, I/O and IPC resources must be recorded before
+commissioning. A PLC with simulated I/O is hardware-in-the-loop evidence, not
+physical process validation.
+
+Three workflows exercise unit-correct reporting, admissible setpoint/state
+proposals and incident diagnosis. Baselines receive identical available
+engineering evidence and tool permissions. Tasks and root-cause labels are
+reviewed by an independent engineer; assets or operating episodes, not question
+paraphrases, define held-out splits. Trials begin in read-only shadow mode.
+Invalid proposals are never sent to actuators. Approved legal proposals are
+bounded by PLC-side guards, operator supervision and an independently assessed
+stop function. A standard CPU is not presumed safety-rated.
+
+Primary outcomes are grounded-answer correctness, invalid proposals admitted,
+legal proposals rejected and complete legal task execution. Record observation
+age, validation/dispatch latency, controller acknowledgement and actual process
+response separately. Real-time claims require an agreed supervisory deadline
+and measured tail latency; the synthetic 15-minute cutoff is not a physical
+freshness setting. A held-out station/configuration measures mapping edits,
+custom code changes, regression failures and engineer-hours. Full protocol and
+recording requirements are in the revision artefact; no trial results are claimed.
+
+\section{Limitations and Deployment Implications}
+The benchmark has one generated plant, authored tasks and injected faults.
+Equal-information procedural validation shares the reference rules and does not
+provide independent truth. Repeated model runs must be analysed within episodes,
+not treated as independent incidents. Corrupted constraints, incorrect mappings,
+incomplete interlock inventories, unseen fault combinations and future-dated
+evidence remain additional threats. The current harness is not a live dispatcher.
+
+Physical evaluation must distinguish agent proposal quality from gateway rejection
+and PLC protection. Zero observed invalid actions cannot establish a safety
+integrity level. Dataspace permission is a separate untested extension: ODRL
+expresses policies, while trusted enforcement and downstream-use control require
+additional mechanisms; it is not automatically interchangeable with SHACL.
+
+\section{Conclusion}
+The controlled corpus supports engineering-evidence checks, not an inherent
+accuracy advantage of semantic graphs over an equally informed rule program.
+The proposed framework is useful only insofar as it helps expose, select and
+maintain the facts industrial decisions require. Physical performance, independent
+capability assessment and transfer effort are the next evidence gates.
+
+\bibliographystyle{IEEEtran}
+\bibliography{../paper/refs}
+\end{document}

@@ -14,6 +14,86 @@ from semantics_bench import tasks as TK
 from semantics_bench import toolgen as TG
 from semantics_bench import units as U
 from semantics_bench import validation as V
+from semantics_bench import revision as REV
+
+
+class TestRevisionControls(unittest.TestCase):
+    def test_serialisation_control_preserves_the_same_graph(self):
+        rows = REV.equal_information_serialisation()
+        self.assertEqual(len(rows), 3)
+        faithful = [row for row in rows if row["included_equal_information"]]
+        self.assertTrue(all(row["roundtrip_isomorphic"] for row in faithful))
+        self.assertTrue({"nt", "json-ld"} <= {row["syntax"] for row in faithful})
+        for row in faithful:
+            self.assertEqual(row["missing_triples"], 0)
+            self.assertEqual(row["added_triples"], 0)
+        self.assertEqual(len({row["triples"] for row in rows}), 1)
+
+    def test_equal_information_validator_matches_raw_shacl(self):
+        result = REV.equal_information_validation()
+        self.assertEqual(result["disagreements"], [])
+        for row in result["summary"]:
+            self.assertEqual(row["recall"], 1.0)
+            self.assertEqual(row["false_positive_rate"], 0.0)
+
+    def test_prediction_does_not_consult_gold_label(self):
+        from dataclasses import replace
+        snapshot = REV.Snapshot.reference()
+        for case in V.build_corpus():
+            first = REV.validate_procedural(case, snapshot)
+            second = REV.validate_procedural(replace(case, gold="arbitrary"), snapshot)
+            self.assertEqual(first, second)
+
+    def test_nonfinite_and_boolean_values_are_rejected(self):
+        snapshot = REV.Snapshot.reference()
+        for value in (True, float("nan"), float("inf"), "330"):
+            case = V.Case("malformed", "write", V.VALID,
+                          {"tag": "L1_FIL_QIC0305_SP", "value": value, "unit": "MilliL"})
+            self.assertIn("F-CARD", REV.validate_procedural(case, snapshot).faults)
+
+    def test_ablation_reports_abstention_separately(self):
+        result = REV.capability_ablation()
+        rows = {row["validator"]: row for row in result["validators"]}
+        self.assertEqual(rows["none"]["abstentions"], 0)
+        self.assertGreater(rows["units"]["valid_abstentions"], 0)
+
+    def test_degradation_and_dispatch_revalidation(self):
+        probes = {row["probe"]: row for row in REV.degradation_probes()}
+        self.assertEqual(probes["before_state_change"]["disposition"], "accept")
+        self.assertEqual(probes["after_state_change"]["disposition"], "reject")
+        self.assertIn("F-ILK", probes["after_state_change"]["faults"])
+        self.assertIn("guard_state", probes["missing_state"]["missing"])
+        self.assertIn("units", probes["unknown_unit"]["missing"])
+        self.assertIn("evidence_time", probes["malformed_time"]["missing"])
+        self.assertEqual(probes["missing_observation"]["disposition"], "abstain")
+
+    def test_conversion_facts_require_both_definitions(self):
+        element = C.ELEMENT_BY_ID["L1_FIL_PT0301_PV"]
+        _text, facts, _tokens = REV.audited_context([element], C.BY_KEY["C4"], None)
+        self.assertIn(C.fact("conv", "BAR", "BAR"), facts)
+        self.assertNotIn(C.fact("conv", "BAR", "PSI"), facts)
+
+    def test_crossed_retrieval_respects_budgets(self):
+        rows = REV.retrieval_controls((1500,))
+        self.assertTrue(rows)
+        for row in rows:
+            if row["budget"] is not None:
+                self.assertLessEqual(row["tokens"], row["budget"])
+        self.assertFalse(any(row["condition"] == "C2" and row["strategy"] == "graph"
+                             for row in rows))
+        self.assertTrue(any(row["condition"] == "C2" and row["strategy"] == "membership"
+                            for row in rows))
+
+    def test_ablation_cannot_create_oracle_evidence(self):
+        from dataclasses import replace
+        _text, full, _tokens = REV.audited_context(list(C.ELEMENTS), C.BY_KEY["C4"], None)
+        for removed in REV.CAPABILITIES:
+            condition = replace(C.BY_KEY["C4"],
+                                kinds=C.BY_KEY["C4"].kinds - REV.REMOVED_KINDS[removed])
+            _text, facts, _tokens = REV.audited_context(list(C.ELEMENTS), condition, None)
+            self.assertLessEqual(facts, full)
+            self.assertFalse({key.split(":", 1)[0] for key in facts}
+                             & REV.REMOVED_KINDS[removed])
 
 
 class TestUnits(unittest.TestCase):

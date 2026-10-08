@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{R3: capability removal. Context sufficiency uses a fixed full-C4 ordering; abstentions are not detections. Context topology removes flow only; validator topology removes scope-containment checks.}
+\label{tab:revision-ablation}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Removed & Suff. & Recall & Abstain \\
+\midrule
+none & 0.800 & 1.000 & 0 \\
+behaviour & 0.629 & 0.893 & 37 \\
+constraints & 0.686 & 0.964 & 20 \\
+provenance & 0.743 & 0.845 & 40 \\
+topology & 0.629 & 0.940 & 5 \\
+units & 0.800 & 0.607 & 60 \\
+\bottomrule
+\end{tabular}
+\end{table}

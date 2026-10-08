@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{R2: crossed retrieval at 6,000 surrogate tokens. Oracle-all is unbudgeted and diagnostic only. Membership uses a fixed shared entity resolver.}
+\label{tab:revision-retrieval}
+\begin{tabular}{@{}llll@{}}
+\toprule
+Context & Retrieval & Suff. & Coverage \\
+\midrule
+C2 & lexical & 0.229 & 0.549 \\
+C2 & oracle\_all & 0.314 & 0.649 \\
+C2 & membership & 0.229 & 0.485 \\
+C4 & lexical & 0.714 & 0.846 \\
+C4 & oracle\_all & 0.971 & 0.995 \\
+C4 & membership & 0.457 & 0.688 \\
+C4 & graph & 0.800 & 0.929 \\
+\bottomrule
+\end{tabular}
+\end{table}
