@@ -1,0 +1,83 @@
+\input{tables/auf_matrix}
+\subsection{Assessment rubric and operational failure mapping}
+For U1 the key failure is selecting a different physical entity. U2 concerns
+malformed calls, invented fields, illegal enumeration members and read-only writes.
+U3 separates dimensional incompatibility from compatible units at the wrong scale.
+U4 supports containment-based scope and topological impact; U5 describes legal
+commands and transitions; U6 publishes checkable guards. U7 binds answers and
+decisions to source, time and quality. U8 moves aggregation to a query engine,
+U9 asks whether relevant evidence fits the available budget, and U10 records
+whether tools, converters and governance permit deployment. A capability can be
+valuable even when implemented procedurally: AUF assesses what is made available,
+not which syntax deserves credit.
+
+Table~\ref{tab:auf-matrix} retains the original 24 technology assessments. The
+criterion-specific ordinal rubric distinguishes absent, partial/indirect,
+explicit/incomplete and strongest specified support. Scores are not interval
+measurements and must not be averaged into an accuracy prediction. Technology
+versions, extensions and exposed profiles can change a judgement. The matrix
+is a navigation aid, not a claim that every deployment satisfies all scored
+criteria. Type-system support is widespread, whereas unit calculus and executable
+constraint coverage concentrate in fewer rows. This motivates composition,
+not a universal requirement to adopt every listed technology.
+
+\subsection{An evidence contract for each proposal}
+Let $F$ denote available engineering facts and $R(q)$ the declared evidence
+requirements of task $q$. The reported coverage and sufficiency are
+\begin{equation}
+ c(q,F)=\frac{|R(q)\cap F|}{|R(q)|},\quad
+ s(q,F)=\mathbf{1}[R(q)\subseteq F].
+\end{equation}
+These quantify a particular evidence contract; another valid derivation may
+need a different requirement set. For an action, validation has three dispositions:
+reject if a violation is proved, abstain if required evidence is unresolved, and
+accept only relative to the checked contract if neither condition applies.
+Acceptance is not a proof that all physical hazards have been modelled.
+
+For compatible affine units, a proposed source value $x$ is converted by
+\begin{equation}
+ x_t=\frac{m_sx+b_s-b_t}{m_t},
+\end{equation}
+with dimension compatibility checked first. Engineering bounds apply to $x_t$,
+not the source numeral. A faithful numeric answer additionally compares $x_t$
+with a referenced observation under a declared tolerance. A writable point's
+guard predicates and operating state are separate from that numeric check.
+
+\subsection{Runtime insertion points and engineering ownership}
+Semantics enters retrieval, tool-schema synthesis, constrained decoding and
+post-proposal verification. Retrieval resolves equipment before projecting
+relevant values, relationships and guards. Tool schemas can constrain identifiers,
+enumerations and types; only decoder-enforced features eliminate calls at
+generation time. Snapshot-dependent conditions still require live validation.
+A repair report should name the violated rule and missing evidence; retries
+remain bounded and authorization unchanged.
+
+The source model stays behind a query interface. A parameterised service can
+answer a plant-wide aggregate, expose current admissible commands or return
+an evidence slice with provenance. MCP is one possible transport for such tools,
+not a source of equipment truth. Integration must authenticate callers, constrain
+scope, preserve mapping versions and avoid unrestricted graph or PLC access.
+Figure~\ref{fig:runtime} separates supervisory proposal generation from
+controller-side execution authority.
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[font=\footnotesize, box/.style={draw,align=center,minimum height=11mm,text width=32mm},arr/.style={-{Stealth},thick}]
+\node[box] (source) at (0,0) {Engineering sources\\OPC UA/AAS, recipes, guards};
+\node[box] (evidence) at (4,0) {Evidence service\\units, state, time, provenance};
+\node[box] (agent) at (8,0) {Agent proposal\\typed tools and bounded repair};
+\node[box] (gate) at (12,0) {Dispatch gate\\refresh, scope, approval};
+\node[box] (plc) at (12,-1.8) {S7-1500 controller\\current guards and acknowledgement};
+\node[box] (rig) at (8,-1.8) {Physical process\\sensors and bounded actuators};
+\node[box] (audit) at (4,-1.8) {Independent trace\\proposal, decisions, outcome};
+\draw[arr] (source)--(evidence);
+\draw[arr] (evidence)--(agent);
+\draw[arr] (agent)--(gate);
+\draw[arr] (gate)--(plc);
+\draw[arr] (plc)--(rig);
+\draw[arr] (rig)--(audit);
+\draw[arr] (audit)--(evidence);
+\end{tikzpicture}
+\caption{Proposed supervisory architecture. Evidence supports the agent; dispatch and PLC checks retain current-condition authority. This is a design, not evidence of a completed physical trial.}
+\label{fig:runtime}
+\end{figure*}

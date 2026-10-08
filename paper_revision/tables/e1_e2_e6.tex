@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\footnotesize
+\caption{E1/E2/E6: archived grounding and evidence sufficiency at 6,000 surrogate tokens. Sufficiency uses the original declared-fact bookkeeping, not a universal accuracy bound.}
+\label{tab:archive-context}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrrrrrrrrr@{}}
+\toprule
+Context & Top-1 & MRR & R@5 & Verif. & Distr@5 & Coverage & Suff. & Tokens & Cov./1k \\
+\midrule
+C0 & 0.000 & 0.000 & 0.000 & 0.000 & 0 & 0.100 & 0.000 & 407 & 0.247 \\
+C1 & 0.789 & 0.866 & 1.000 & 0.000 & 10 & 0.252 & 0.000 & 1310 & 0.192 \\
+C2 & 0.947 & 0.974 & 1.000 & 0.947 & 7 & 0.549 & 0.229 & 5193 & 0.106 \\
+C3 & 1.000 & 1.000 & 1.000 & 1.000 & 4 & 0.761 & 0.514 & 5332 & 0.143 \\
+C4 & 1.000 & 1.000 & 1.000 & 0.842 & 4 & 0.857 & 0.857 & 5290 & 0.162 \\
+\bottomrule
+\end{tabular}
+\end{table*}

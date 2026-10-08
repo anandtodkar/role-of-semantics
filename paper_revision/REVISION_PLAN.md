@@ -127,8 +127,13 @@ Document manual corrections rather than silently changing labels after results.
 | Layout contingency | 0.5 |
 | Total | 10.0 |
 
-The current draft is intentionally shorter and incomplete. Reserve physical
-results space now; do not compress fonts/margins to accommodate the full survey.
+The expanded draft now compiles to ten pages including references. It restores
+all original experiment groups, the 24-technology matrix, R1-R5 and a detailed
+hardware protocol, without shrinking the IEEE 10pt text or altering margins.
+Physical results remain pending and must replace protocol/discussion space
+rather than silently increasing the page count. The E11 generated full-suite
+summary does not match the retained five-response smoke archive and must be
+reconciled before submission.
 Keep the architecture, testbed, decisive comparisons and uncertainty in the
 main paper. Move full matrices, scoring evidence, raw cases, alternate formats,
 secondary budget sweeps and reproduction detail to allowed supplements.
@@ -150,7 +155,7 @@ secondary budget sweeps and reproduction detail to allowed supplements.
 
 Do not submit this draft as a validated physical deployment. Proceed with the
 research-led TII framing after independent evaluation, source verification,
-runtime measurements and real hardware/process evidence. If only a PLC simulated
+runtime measurements, reconciled E11 provenance and real hardware/process evidence. If only a PLC simulated
 process is available, state that boundary and reconsider claims or venue. A tie
 against equally informed code leaves reuse and maintenance as hypotheses until
 P4 measures them.

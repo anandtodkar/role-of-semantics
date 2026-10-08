@@ -10,6 +10,7 @@ from collections import defaultdict
 from pathlib import Path
 
 from semantics_bench import revision as REV
+from semantics_bench import archive_report
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -122,6 +123,9 @@ def main() -> None:
     result_path = result_dir / "revision_results.json"
     result_path.write_text(json.dumps(results, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     emit(results, destination)
+    manifest = archive_report.emit(ROOT, destination)
+    print(f"Restored archive tables: {len(manifest['tables'])}")
+    print(f"E11 raw responses available: {sum(run['raw_rows'] for run in manifest['e11_archives'])}")
     for row in results["r1_equal_information"]["summary"]:
         print(f"R1 {row['validator']}: n={row['n']}, recall={row['recall']:.3f}, "
               f"FPR={row['false_positive_rate']:.3f}")

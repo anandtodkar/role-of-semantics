@@ -1,13 +1,24 @@
 \documentclass[10pt,journal,letterpaper]{IEEEtran}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{newtxtext}
 \usepackage{amsmath,amssymb,booktabs,array,graphicx}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
 \usepackage{cite}
 \usepackage[hidelinks]{hyperref}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setcounter{topnumber}{4}
+\setcounter{totalnumber}{6}
+\setcounter{dbltopnumber}{3}
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\dbltopfraction}{0.9}
+\renewcommand{\textfraction}{0.08}
+\emergencystretch=1em
 \input{generated_revision}
 \begin{document}
-\title{Engineering Semantics for Grounded Industrial Agents: An Equal-Information Evaluation}
+\title{Grounding Industrial AI Agents with Engineering Semantics: A Layered Framework and Controlled Evaluation}
 \author{Anand~Todkar, Jitendra~Solanki, Mrinmoy~Sarkar}
 \maketitle
 \begin{abstract}
@@ -20,9 +31,12 @@ failure modes. On a synthetic reference plant, an equally informed procedural
 validator and a declarative SHACL validator agree on all \RevisionCases{}
 proposed actions, each detecting every injected fault without rejecting legal
 actions. Thus this corpus supports the value of the supplied engineering facts,
-not an accuracy advantage for SHACL over competent procedural code. Additional
+not an accuracy advantage for SHACL over competent procedural code. The original
+benchmark covers grounding, sufficiency, format cost, faults, action spaces,
+query execution, naming and routed retrieval. Additional
 controls cross retrieval strategies with context conditions, remove individual
-capabilities, probe missing evidence and check serialisation fidelity. A physical
+capabilities, probe missing evidence and check serialisation fidelity. Retained
+GPT results are included with an explicit raw-data provenance qualification. A physical
 S7-1500/industrial-PC testbed protocol is specified but has not yet been executed.
 Transfer effort, operational latency and physical outcomes remain open evidence
 requirements rather than claimed results.
@@ -34,7 +48,7 @@ engineering knowledge graphs, programmable logic controllers.
 
 \noindent\textit{Working revision, not submission-ready. Physical trials,
 independent annotation, AUF reliability, specific competitor verification and
-the current journal page policy remain pending.}
+the current journal page policy remain pending; E11 full-suite raw data is incomplete.}
 
 \section{Introduction}
 A request to change a machine setting contains several distinct obligations:
@@ -82,6 +96,7 @@ artefact verification; no capability absence or superiority is asserted before
 that review. The quoted 94\% MAP@3 result is not used without a verified dataset,
 ranked-cause task and common evaluation protocol.
 
+\input{sections/standards}
 \section{Capability Framework and Operational Method}
 The agent-usability framework (AUF) separates identity (U1), types and access
 (U2), quantities and conversion (U3), relations (U4), behaviour (U5), constraints
@@ -109,11 +124,32 @@ and adjudication, then tests whether AUF-guided capability selection improves a
 held-out installation within a fixed integration budget. Those results are not
 available in this revision.
 
+\input{sections/method_details}
 \section{Controlled Evaluation}
 The existing generated reference plant contains 17 assets and 73 signals. Its
 35 tasks and 137 proposed actions are retained for comparability, not presented
 as independently collected industrial workloads. All revision outputs are
 isolated from the original manuscript and archived results.
+
+\subsection{Original context conditions and task corpus}
+The two-line beverage plant combines 22 shared descriptions, metric/imperial
+units, PV/SP pairs, four interlocks and 14 feed relations. C0 exposes tags and
+values; C1 adds descriptions/unit symbols; C2 adds quantity kinds, ranges,
+alarms, access, roles, membership, parentage and selected semantic identifiers.
+C3 adds unit definitions/conversions, topology, taxonomy and location. C4 adds
+states/legal commands, guards, observation time, events and recipes. These
+are selected profiles, not limitations inherent to their host standards.
+
+Tasks cover grounding (GRD), units (UNI), ranges (RNG), topology (TOP), provenance
+(PRV), action legality (ACT), guards (SAF) and recipes (REC); 19 identify a single
+gold tag. The proposed-action corpus has 84 faulty and 53 legal controls across
+12 injected families. G0 accepts everything; G1 checks signatures; G2 adds
+references/access/ranges and literal units; G3 adds unit/relational checks;
+G4 adds behaviour, guards and observations. Original lexical versus graph
+retrieval changes jointly with the conditions, a confound partially isolated
+by R2. The 6,000-token default and six-point budget sweep use the surrogate
+tokenizer. Every task declares required fact keys, making omissions inspectable,
+but the authors' designed taxonomy limits external validity.
 
 \subsection{R1: Equal-information validation}
 Both implementations receive the same engineering ranges, unit calculus,
@@ -156,7 +192,8 @@ external knowledge and inferred conventions may change answerability. Conversion
 facts are conservatively counted only when both unit definitions occur in the
 context. Token counts are a deterministic surrogate, not model billing tokens.
 
-\section{Results and Interpretation}
+\input{sections/original_results}
+\section{Revision Controls and Interpretation}
 \input{tables/r1_equal}
 R1 produces \RevisionDisagreements{} raw-family disagreements. Both implementations
 detect every injected fault and accept every legal reference action
@@ -193,32 +230,35 @@ from equal-information claims; N-Triples and JSON-LD qualify in this run.
 Preserving datatype and numeric precision is a deployment requirement, not
 merely a token-economy detail.
 
-\section{Physical Testbed Protocol: Pending}
-We propose an S7-1500 controlling two guarded 24~V handling stations, optionally
-coupled to a low-head water-filling module with physical level/flow sensors. An
-IPC427E hosts the agent and semantic/validation services; an IPC227G can provide
-an edge gateway or separate disturbance/replay service. Actual CPU order number,
-firmware, OPC UA support/licence, I/O and IPC resources must be recorded before
-commissioning. A PLC with simulated I/O is hardware-in-the-loop evidence, not
-physical process validation.
+\section{GPT Evaluation and E11 Provenance}
+\input{tables/e11_archive}
+\input{tables/e11_verified}
+The original generated E11 report names the Azure deployment
+\texttt{gpt-5.6-sol}, dated 2026-10-06, with 35 tasks per condition and three
+repeats. Its retained aggregates rise from zero to 55\% accuracy and from
+100\% to 28\% refusal (Table~\ref{tab:revision-e11}). At C2 the reported
+29\% accuracy exceeds 23\% sufficiency, illustrating why sufficiency is not
+an unconditional accuracy bound. Reported conditional accuracy decreases
+from 96\% at C2 to 64\% at C4. Naming conventions and model priors are
+possible explanations, not causally identified mechanisms in this run.
 
-Three workflows exercise unit-correct reporting, admissible setpoint/state
-proposals and incident diagnosis. Baselines receive identical available
-engineering evidence and tool permissions. Tasks and root-cause labels are
-reviewed by an independent engineer; assets or operating episodes, not question
-paraphrases, define held-out splits. Trials begin in read-only shadow mode.
-Invalid proposals are never sent to actuators. Approved legal proposals are
-bounded by PLC-side guards, operator supervision and an independently assessed
-stop function. A standard CPU is not presumed safety-rated.
+However, the only retained raw JSON, including its committed historical version,
+contains GRD-01 with one repeat in each condition: five responses, not the
+525 implied by the full-suite report. Table~\ref{tab:e11-verified} is generated
+from those rows and matches the archive's own counts. The smoke test refuses
+at C0 and answers that grounding task correctly at C1--C4. It cannot corroborate
+behavioural, safety, recipe or provenance categories, nor establish full-suite
+accuracy. The retained aggregate table is included transparently but cannot
+currently be reconstructed; reconciliation is required before submission.
 
-Primary outcomes are grounded-answer correctness, invalid proposals admitted,
-legal proposals rejected and complete legal task execution. Record observation
-age, validation/dispatch latency, controller acknowledgement and actual process
-response separately. Real-time claims require an agreed supervisory deadline
-and measured tail latency; the synthetic 15-minute cutoff is not a physical
-freshness setting. A held-out station/configuration measures mapping edits,
-custom code changes, regression failures and engineer-hours. Full protocol and
-recording requirements are in the revision artefact; no trial results are claimed.
+The model string is a recorded deployment identifier, not independently verified
+public model lineage. Only one archive exists; no plural-model comparison is
+claimed. Heuristic grading and sufficiency labels require manual audit for any
+recovered full run. New calls would be a new dated evaluation, not recovery.
+Prompts, responses, sampling/tool settings, grader version and evidence definition
+must be frozen together; repeats are not independent industrial observations.
+
+\input{sections/hardware}
 
 \section{Limitations and Deployment Implications}
 The benchmark has one generated plant, authored tasks and injected faults.

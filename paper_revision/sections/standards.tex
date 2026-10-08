@@ -1,0 +1,119 @@
+\section{Five Layers of Engineering Semantics}
+\label{sec:layers}
+The layers organise sources by their role in agent grounding, rather than
+replacing lifecycle or hierarchy axes in industrial reference architectures.
+One standard can contribute several capabilities, and a deployment can combine
+them without materialising all five layers in one graph. Specifications and
+reference documentation provide the survey evidence; exposed implementation
+profiles must be assessed separately.
+
+\subsection{L0: Identification and property dictionaries}
+ECLASS, IEC common data dictionaries and industrial reference identifiers link
+an engineering property to a stable definition; GS1 identifiers distinguish
+products and individual assets across systems. This is useful when two suppliers
+use different labels for the same quantity, or the same label for different
+quantities. An agent should resolve to an identifier whose mapping is inspectable,
+not simply to the closest English description. Concept identity and instance
+identity are distinct: identifying ``pressure'' does not identify the pressure
+transmitter on a particular filler. The latter needs asset membership and a
+specific observation source. Persistent identifiers also require governed mappings
+when hardware is replaced; stability of a string alone does not establish
+continuity of the physical asset \cite{eclass,iec61360,iec61987,iso29002}.
+
+The practical mechanism is a versioned mapping from source identifiers to asset
+instances and property concepts. A mapping should identify the responsible source,
+validity interval and replacement history. Dictionary lookup reduces ambiguity
+between vendors, but cannot resolve an observation's current owner without an
+instance model. Hence L0 supports reference integrity while L1 and observation
+metadata complete the operational referent.
+
+\subsection{L1: Information and interface models}
+OPC UA combines typed address spaces, attributes, access rights and callable
+methods; companion models add domain content \cite{iec62541}. AAS supplies
+submodels, semantic identifiers and structured asset descriptions
+\cite{idta2023aas}. AutomationML supports engineering exchange, ISA-95 describes
+equipment hierarchy, and MTP and PackML contribute services and behaviour.
+WoT Thing Descriptions and NGSI-LD provide additional interface and entity
+representations. These technologies make introspection and tool construction
+possible \cite{iec62714,iec62264,vdi2658,isa88,w3c2023wot,etsi2023ngsild,iec61850},
+but the content actually exposed must be audited. An agent cannot
+check an unpublished interlock simply because the host standard is extensible.
+
+Conversely, it is inaccurate to describe all information models as static or
+incapable of behaviour: state-machine and method information can be represented
+in this layer. The bottleneck is often an engineering publication decision.
+Controllers, alarm configurations and recipes already contain constraints, but
+their relation to a supervisory command is not necessarily delivered through
+the agent-facing interface. Typed access is a necessary integration baseline,
+not sufficient evidence of a complete operating envelope.
+
+The integration must also distinguish access rights from operating permission.
+A point can be technically writable yet unavailable in the current state or
+outside an operator's scope. An engineering range is not necessarily a recipe
+limit or a safety limit. Collapsing these into a single numeric boundary loses
+the reason for a rejection and makes changes difficult to audit. Model versions
+and the origin of each constraint therefore belong in the agent evidence contract.
+
+\subsection{L2: Formal semantics, validation and query}
+RDF provides globally named relations and a common graph substrate. OWL can
+support class and relation entailment, while SHACL checks a finite data graph
+against explicit shapes \cite{knublauch2017shacl}. The distinction matters:
+open-world logical consistency does not by itself enforce a closed set of
+mandatory action parameters or establish that all interlocks have been supplied.
+A deployment must declare which constraints are enforced, what missing data
+means and which reasoning profile is supported.
+
+SPARQL executes joins, traversals, filtering and aggregation outside the language
+model, returning a bounded result rather than every supporting record. PROV-O
+can associate transformations and observations with sources and versions. Neither
+a successful query nor shape conformance establishes the correctness of the
+engineering mapping. Graph construction, source calibration, shape completeness
+and unit fidelity remain upstream obligations. Declarative constraints can be
+shared and inspected, but a competent procedural implementation may enforce
+exactly the same rules; the R1 control makes that comparison explicit.
+
+Validation concerns the proposed action and its referenced snapshot, not only
+data quality of the underlying graph. Lifting a proposal into a small action
+graph makes target, value, unit, scope and evidence time explicit. A report can
+then distinguish signature errors, incompatible quantities, violated guards and
+missing observations. A repair loop should preserve the original authorization
+and provide a bounded opportunity to correct the proposal, rather than weakening
+the constraint after repeated refusal.
+
+\subsection{L3: Quantities, observations and domain relations}
+QUDT supplies quantity kinds, dimensions and conversion metadata \cite{qudt}.
+The distinction between a display symbol and a conversion definition is crucial:
+``bar'' and ``psi'' name compatible units but do not themselves state the
+conversion coefficient. SOSA/SSN distinguishes a sensor, an observed property,
+an observation and its result \cite{haller2019ssn}. This permits an answer to
+cite the measurement and acquisition time it claims to report, rather than
+present a number detached from a source.
+
+Brick supplies typed equipment relations \cite{balaji2016brick}; SAREF and its
+extensions describe devices and domain functions; DEXPI carries process-engineering
+structure. These should be selected for actual industrial fit rather than treated
+as interchangeable taxonomies. Flow connectivity, containment and observation
+provenance are different relations. A compressor feeding several units supports
+impact analysis, but a flow graph alone does not establish the causal mechanism
+of a recorded failure. Root-cause analysis needs incident evidence and a validated
+causal/diagnostic model beyond generic graph traversal.
+
+Observation quality and freshness must also be preserved through conversion.
+Expressing a stale sample in another unit does not make it current, and retaining
+a value without its source quality loses the reason an operator might decline
+to act. Engineering tolerances belong to the comparison procedure: matching
+observations exactly is inappropriate when sensor resolution, rounding and
+calibration uncertainty are material. The reference benchmark's numeric tolerance
+is therefore a reproducible experimental setting, not a universal industrial rule.
+
+\subsection{L4: Cross-organisational policy and trust}
+Dataspaces add participant identity, catalogue metadata, exchange agreements and
+usage-policy mechanisms \cite{idsa2022ram}. Catena-X/Manufacturing-X highlight
+versioned shared semantic models; ODRL expresses permissions, prohibitions and
+duties \cite{w3c2018odrl}. A supplier observation may be structurally interpretable
+yet unsuitable for a particular purpose or untrusted. Policies are therefore a
+separate gate from physical operating constraints. Policy expressions do not
+automatically enforce downstream confidentiality, and keeping information in an
+agent's memory is not universally equivalent to redistribution. Enforcement
+depends on the policy, processing boundary and trusted runtime. L4 is included
+for architectural completeness and is not experimentally validated here.

@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{E4: archived validator results on 84 faulty and 53 valid actions. Intervals are descriptive Wilson recall intervals.}
+\label{tab:archive-guardrails}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+Tier & Caught & Recall & 95\% CI & Diag. & FPR \\
+\midrule
+G0 & 0/84 & 0.000 & [0.00,0.04] & 0.000 & 0.000 \\
+G1 & 12/84 & 0.143 & [0.08,0.23] & 0.143 & 0.000 \\
+G2 & 57/84 & 0.679 & [0.57,0.77] & 0.631 & 0.075 \\
+G3 & 62/84 & 0.738 & [0.64,0.82] & 0.738 & 0.000 \\
+G4 & 84/84 & 1.000 & [0.96,1.00] & 1.000 & 0.000 \\
+\bottomrule
+\end{tabular}
+\end{table}

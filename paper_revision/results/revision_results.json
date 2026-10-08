@@ -11,6 +11,7 @@
     "tokenizer": "deterministic surrogate, not model billing tokens",
     "sources_sha256": {
       "__init__.py": "6a4eaba5368ad1479b7fba501ca5a07d742e68c05c142544ba6e36acd2ddcd04",
+      "archive_report.py": "c810a821217c49989d57407a49927a1a29936c1e3238a878cfa14de1ae07ef57",
       "conditions.py": "9f1e85ccbf853cc5b7579d065c21d5f84b2bb800f7fd781fe239a7907ad41331",
       "experiments.py": "115d72dbaf504f3ae5cdf8320fc570ae4e8e02e94eb328c860bbdf1974cda05d",
       "kg.py": "b25ab3aa90d33f53b0d80fee782a5045aa6fcfc420860c6b0a6c6848e98658f3",
@@ -74,7 +75,7 @@
         ]
       }
     ],
-    "shacl_batch_seconds": 5.618672100012191,
+    "shacl_batch_seconds": 5.841921300045215,
     "disagreements": [],
     "cases": [
       {
@@ -27040,7 +27041,7 @@
       "missing_triples": 0,
       "added_triples": 0,
       "bytes_utf8": 336089,
-      "surrogate_tokens": 179200
+      "surrogate_tokens": 179432
     },
     {
       "syntax": "json-ld",
@@ -27050,7 +27051,7 @@
       "missing_triples": 0,
       "added_triples": 0,
       "bytes_utf8": 319057,
-      "surrogate_tokens": 145212
+      "surrogate_tokens": 145326
     }
   ],
   "r2_summary": [

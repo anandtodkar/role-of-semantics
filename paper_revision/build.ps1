@@ -1,4 +1,4 @@
-param([switch]$Regen)
+param([switch]$Regen, [string]$TectonicPath)
 
 $ErrorActionPreference = 'Stop'
 Push-Location $PSScriptRoot
@@ -13,7 +13,13 @@ try {
         latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
     }
     elseif (Get-Command tectonic -ErrorAction SilentlyContinue) {
-        tectonic -X compile main.tex
+        tectonic -X compile main.tex --keep-logs
+    }
+    elseif ($TectonicPath -and (Test-Path $TectonicPath)) {
+        & $TectonicPath -X compile main.tex --keep-logs
+    }
+    elseif (Test-Path (Join-Path $env:LOCALAPPDATA 'RoleOfSemanticsTools/tectonic/tectonic.exe')) {
+        & (Join-Path $env:LOCALAPPDATA 'RoleOfSemanticsTools/tectonic/tectonic.exe') -X compile main.tex --keep-logs
     }
     elseif (Get-Command pdflatex -ErrorAction SilentlyContinue) {
         pdflatex -interaction=nonstopmode -halt-on-error main.tex

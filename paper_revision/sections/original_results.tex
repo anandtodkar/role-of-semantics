@@ -1,0 +1,108 @@
+\section{Original Benchmark Results}
+\label{sec:original-results}
+\input{tables/e1_e2_e6}
+\input{tables/e6_categories}
+\subsection{E1, E2 and E6: Resolution and evidence sufficiency}
+Table~\ref{tab:archive-context} distinguishes locating a likely tag from carrying
+enough facts for a checkable answer. C1 resolves 79\% of single-tag questions
+but provides no explicit membership proof; C2 reaches 95\% top-1 with 23\%
+task sufficiency. C3/C4 achieve perfect top-1 resolution under their scoped
+resolver, yet context can omit a fact required for audit. Verifiable grounding
+checks the membership evidence, not merely whether the ranked identifier equals
+the gold identifier.
+
+Table~\ref{tab:archive-categories} localises the archived treatment effects.
+Typing supports identity and many range questions; unit/topology facts support
+quantity reporting and impact tasks; state, guards and provenance support the
+remaining operational categories. These categories were constructed around the
+capabilities, so the block structure is evidence within the benchmark, not a
+proof that every future task has one uniquely necessary layer.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.94\linewidth]{../paper/figures/fig_ceiling.pdf}
+\caption{Retained E2/E6 figure. The original axis term ``ceiling'' means declared-evidence sufficiency, not an unconditional LLM accuracy bound. Original conversion bookkeeping is preserved; audited R2 results are separate.}
+\label{fig:archive-budget}
+\end{figure*}
+Increasing the budget from 750 to 24,000 tokens raises C2's archived sufficiency
+from 0.229 to 0.257, versus 0.171 to 0.971 for C4. More space cannot reveal fact
+kinds omitted by the selected projection, but can help a richer projection retain
+them. This does not establish that a more complete OPC UA/AAS profile would
+show the same plateau. At fixed budgets extra state, event and guard records
+can displace measurements, motivating task-dependent retrieval.
+
+\subsection{E3: Format costs and context economy}
+\input{tables/e3_formats}
+The archived CSV costs 2,256 surrogate tokens, OPC UA XML 52,324 and AAS JSON
+65,929 (Table~\ref{tab:archive-formats}); N-Triples is substantially larger.
+These figures describe emitted artefacts, not an intrinsic ranking of standards:
+CSV carries fewer facts, projections differ and formatting affects the count.
+An exchange format can be useful even if it is poor prompt material. The
+engineering implication is to serve typed queries or selected evidence slices,
+while R5 checks whether syntax-only comparisons preserve the graph. Billing
+claims require the actual model tokenizer and repeated tool-schema overhead.
+
+\subsection{E4 and E4b: Faults, false alarms and procedural checks}
+\input{tables/e4_guardrails}
+\input{tables/e4_families}
+\input{tables/e4b_procedural}
+G2 detects 57 of 84 faulty proposals, but rejects four legal unit re-expressions.
+G3 detects 62 without those false alarms, and G4 detects all 84
+(Table~\ref{tab:archive-guardrails}). Literal unit comparison explains both
+unnecessary rejection and incorrect diagnosis of scale errors. The family
+breakdown (Table~\ref{tab:archive-families}) includes invalid references,
+arguments/enumerations, access, ranges, dimension/scale, scope, guards, states,
+staleness and unfaithful values. Behaviour/provenance families total 22 faults
+in this designed corpus, not a frequency estimate for real incidents.
+
+The original GP baseline supplies unit calculus but not full behaviour, guard
+or observation models (Table~\ref{tab:archive-procedural}). It removes unit
+false alarms but cannot show semantic validation outperforming equally informed
+procedural rules. R1 supplies that comparison. Archived diagnosis also identifies
+the injected scale family through gold-dependent reclassification; the revised
+raw-family audit avoids that prediction-time label dependence.
+
+\subsection{E5: Admissible calls and schema cost}
+\input{tables/e5_actions}
+The reference enumerates 71,540 well-formed write triples and 153 command calls.
+Only 710 writes and 26 commands are legal in its current state. G2 admits 190
+writes because literal-unit restrictions exclude many legal re-expressions;
+G3 admits 755 and G4 the 710 reference-legal writes. Table~\ref{tab:archive-actions}
+reports admitted-set precision and recall. Uniform-call legality is a property
+of this enumeration, not an estimate of an LLM's proposal distribution.
+
+The write schema grows from 205 surrogate tokens at C0 to 981 at C2, 1,669 at
+C3 and 2,317 at C4. Static enums and numeric limits can constrain generation,
+but live-state facts in a cached schema expire. Cost is not assumed to be paid
+only once: models may receive tools repeatedly, and refresh policies must be
+documented. Decoder support and later validation jointly determine which calls
+are impossible versus merely checked after generation.
+
+\subsection{E7: Query execution instead of stuffing}
+\input{tables/e7_queries}
+Eight hand-authored queries cost 79--287 tokens including results, against
+741--5,501 for stuffed C4 contexts (Table~\ref{tab:archive-queries}). Savings
+range from about 3.3 to 69 times in the saved JSON. RNG-04 checks plant-wide alarm violations;
+its top-$k$ context is insufficient at all tested budgets, while a query returns
+the needed aggregate. This concerns execution of an existing correct query, not
+query generation, repairs, endpoint latency or access control. Parameterised
+reviewed queries can expose this benefit without arbitrary graph access.
+
+\subsection{E8 and E9: Naming and projection robustness}
+\label{sec:e8}
+\input{tables/e8_naming}
+\input{tables/e9_routing}
+Re-tagging changes identifiers but holds engineering facts fixed. Mnemonic
+decoding reaches 95\% grounding on its native convention but varies by 53
+percentage points across schemes. With misleading mnemonics it reaches 63\%
+against 84\% without decoding. Explicit membership keeps the typed resolver
+at 95\% and the graph resolver at 100\% for these perturbations
+(Table~\ref{tab:archive-naming}). The original ``confidently wrong'' field means
+a non-empty wrong resolution, not calibrated model confidence.
+
+Original routed C4 projection raises declared sufficiency from 0.857 to 0.943
+and verifiable grounding from 0.842 to 1.000 at nearly equal token cost
+(Table~\ref{tab:archive-routing}). The router is a fixed lexicon, not a learned
+policy or universal lower bound. R2's conversion audit changes sufficient-task
+sets; the two findings must not be pooled as though the evidence definitions
+were identical.

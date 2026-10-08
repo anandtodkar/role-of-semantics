@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering\footnotesize
+\caption{E8: top-1 accuracy / wrong non-empty resolution across naming conventions. Wrong non-empty resolution is not calibrated model confidence.}
+\label{tab:archive-naming}
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Scheme & C1 & C1+decode & C2+decode & C4 \\
+\midrule
+mnemonic & 0.79/0.21 & 0.95/0.05 & 0.95/0.05 & 1.00/0.00 \\
+opaque & 0.53/0.47 & 0.53/0.47 & 0.95/0.05 & 1.00/0.00 \\
+kks & 0.89/0.11 & 0.89/0.11 & 0.95/0.05 & 1.00/0.00 \\
+vendor & 0.42/0.58 & 0.42/0.58 & 0.95/0.05 & 1.00/0.00 \\
+inconsistent & 0.84/0.16 & 0.63/0.37 & 0.95/0.05 & 1.00/0.00 \\
+\bottomrule
+\end{tabular}
+\end{table}

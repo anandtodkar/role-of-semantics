@@ -15,9 +15,32 @@ from semantics_bench import toolgen as TG
 from semantics_bench import units as U
 from semantics_bench import validation as V
 from semantics_bench import revision as REV
+from semantics_bench import archive_report
 
 
 class TestRevisionControls(unittest.TestCase):
+    def test_e11_archive_counts_are_audited(self):
+        from pathlib import Path
+        root = Path(__file__).resolve().parents[2]
+        for path in (root / "results").glob("e11_*.json"):
+            inspected = archive_report.inspect_e11(path)
+            self.assertTrue(all(row["count_matches"] for row in inspected["checks"]))
+            self.assertEqual(inspected["raw_rows"], sum(row["raw_n"] for row in inspected["checks"]))
+
+    def test_archive_tables_cover_all_saved_experiments(self):
+        from pathlib import Path
+        from tempfile import TemporaryDirectory
+        root = Path(__file__).resolve().parents[2]
+        with TemporaryDirectory() as directory:
+            result = archive_report.emit(root, Path(directory))
+            self.assertEqual(len(result["tables"]), 11)
+            self.assertIn("e4b_procedural.tex", result["tables"])
+            self.assertIn("e11_verified.tex", result["tables"])
+            for name in result["tables"]:
+                table = (Path(directory) / "tables" / name).read_text()
+                self.assertIn("\\label{", table)
+                self.assertIn("\\bottomrule", table)
+
     def test_serialisation_control_preserves_the_same_graph(self):
         rows = REV.equal_information_serialisation()
         self.assertEqual(len(rows), 3)

@@ -1,0 +1,117 @@
+\section{Hardware-Based Evaluation Design}
+\label{sec:hardware}
+\subsection{Evidence status and physical configuration}
+No physical trial logs are present. R4 is a software snapshot probe, not a
+hardware result. The available S7-1500 controllers and IPC227G/IPC427E computers
+make a lab study feasible, but access to a PLC alone does not demonstrate
+process operation. PLC-simulated I/O would constitute hardware-in-the-loop
+evidence; physical validation needs actual sensors, actuators and independently
+observed outcomes. This section specifies the evaluation to conduct and cannot
+substitute for its measurements.
+
+The recommended rig is two guarded 24~V handling/indexing stations, optionally
+coupled to a low-head water-filling module. Real presence sensors and physical
+counters support identity/state tasks; speed feedback or an encoder is needed
+if actual speed tracking is assessed. A reservoir, bounded pump/valve and catch
+vessel, with level switches, flow sensing or a calibrated scale, support
+unit-correct fill-volume tasks. Avoid adding a pressure or heater hazard solely
+to imitate the generated plant. Final equipment and permitted disturbances
+require a competent engineer's local risk assessment.
+
+The S7-1500 owns sequencing, operating guards, final output authority and command
+acknowledgement. IPC427E hosts the gateway, graph/SHACL services, full procedural
+baseline, experiment supervisor and historian. IPC227G can provide read acquisition
+or separate replay/disturbance services; its exact order number and resources
+must be checked. LLM inference can be remote or on a suitable additional host;
+the IPCs are not presumed capable of running a large model locally. Record
+CPU order number, firmware, TIA version, I/O, OPC UA support/licence, IPC OS,
+RAM and network interfaces. A standard CPU is not presumed safety-rated.
+
+\subsection{Command interface and current-state protection}
+The agent receives allowlisted supervisory tools, not raw outputs or unrestricted
+memory/programming access. Publish immutable asset IDs, source NodeIds, units,
+access, bounds, current state, observation time/quality and mapping versions.
+Use similar DisplayNames on Stations A/B but unique identities so that grounding
+errors are observable without compromising actual control.
+
+A command mailbox should carry a unique request ID, target, opcode, native-unit
+value, approval reference and expiry/state reference. Multi-field OPC UA writes
+are not presumed atomic: stage parameters and use a sequence/commit handshake;
+the PLC reads a consistent request before execution. It independently checks
+current guards and states, rejects expired/duplicate or unauthorised requests,
+and records acceptance/rejection reason and acknowledgement ID. A proposal
+valid in Idle must not be executed after a transition to Execute merely because
+an earlier graph snapshot permitted it.
+
+Commission duplication, reconnect and timeout behaviour without an LLM first.
+If evidence is stale, quality bad, mapping inconsistent or acknowledgement
+missing, refresh or abstain rather than issuing an uncertain retry. PLC-side
+guards and appropriate independent stop/protection remain authoritative if
+the graph, IPC, model or network fails. OPC UA security configuration and
+accounts follow local engineering practice; credentials never enter trial logs.
+The agent remains outside hard-real-time control loops.
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Planned hardware scenarios. None has a measured outcome yet. Invalid proposals are assessed in shadow mode, not sent to actuators.}
+\label{tab:hardware-plan}
+\begin{tabular}{@{}P{2.4cm}P{5.5cm}@{}}
+\toprule
+Scenario & Required observable outcome \\
+\midrule
+Identity/access & Correct Station A/B source; PV/SP distinction; no PV write. \\
+Units/fill & Converted value with declared units, sensor tolerance and measured volume. \\
+State/guard & Legal command and vessel/level guard checked against current PLC state. \\
+Stale/reconnect & Observation age, quality, refresh/abstention and reconnect trace. \\
+Dispatch race & State change between proposal and commit; current-state rejection. \\
+Scope/topology & A feeds B; unavailable B or restricted scope reflected in decision. \\
+Incident cause & Engineer-labelled disturbance, evidence and ranked cause candidates. \\
+Transfer & Held-out station/configuration; edits, regression failures and engineer-hours. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Trial sequence and matched comparisons}
+Start with manual/controller-only commissioning, calibration and protection
+verification. Freeze an independently reviewed task list, operating envelope,
+labels and episode split before running models. In read-only shadow mode,
+compare proposed actions over the same live snapshots. Never execute a known
+invalid action to demonstrate rejection. Approved legal, bounded proposals can
+then be enabled under supervision, with independent sensor outcome logging.
+Unsafe disturbances use replay and retain replay provenance rather than being
+reported as physical incidents.
+
+Compare a realistic typed OPC UA/AAS baseline, equally informed structured-record
+retrieval, full procedural validation and declarative integration. Preserve model,
+prompts, permissions, snapshots and approval policy within paired comparisons.
+The typed baseline must retain behaviour it actually exposes. Hold out Station B
+or a changed recipe/configuration to measure reuse instead of tailoring rules
+to every test case. Track mapping/rule/code edits, regression tests and engineering
+time, including commissioning and correction. An accuracy tie can coexist with
+maintenance differences, but those differences must be measured.
+
+\subsection{Measurements, incident diagnosis and uncertainty}
+Primary outcomes are grounded-answer/evidence correctness, invalid proposals
+admitted, legal proposals rejected and complete legal task execution. Distinguish
+proposal errors, gateway rejection, controller rejection and physical outcome;
+successful PLC protection must not be credited as correct agent reasoning.
+Record retrieval, validation, dispatch, controller-acknowledgement and total
+latency separately, including p50/p95 and supervisory deadline misses. Freshness
+limits are selected for the workload, not copied from the benchmark's synthetic
+15-minute cutoff. Use monotonic local durations and synchronised UTC for
+cross-device correlation, with clock uncertainty recorded.
+
+For incident diagnosis, candidate causes and multi-cause labels are fixed before
+ranking. Vessel absence, an approved sensor outage or downstream blockage can
+provide interpretable episodes. A graph path or retrieved alarm is not a causal
+proof. MAP@3 is appropriate only for the defined ranked-cause task; the suggested
+94\% comparison cannot be used without matching inputs, dataset and protocol.
+Specific CausalTrace reproduction remains dependent on source and artefact access.
+
+Use episode/asset-level held-out splits, not paraphrases, and treat model repeats
+within episodes as correlated. Pilot variability and engineer-agreed thresholds
+determine sample sizes. Even zero events in 300 independent trials gives an
+approximate 95\% upper risk bound of 1\%, not proven safety; correlated trials
+require episode-level intervals or clustered analysis. The supplied JSON schema
+records provenance, snapshot, proposal, approval, gateway/PLC decisions and
+actual outcome. Physical, hardware-in-the-loop and replay traces remain separate.

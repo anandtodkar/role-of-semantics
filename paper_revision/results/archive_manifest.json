@@ -1,0 +1,137 @@
+{
+  "baseline_source": "results\\results.json",
+  "baseline_sha256": "80008f8d98a23f14577df75b508f152f19edeaf8bec514b552ec592099c49b83",
+  "baseline_config": {
+    "token_budget": 6000,
+    "max_elements": 200,
+    "n_tasks": 35,
+    "n_signals": 73,
+    "n_assets": 17,
+    "n_homographs": 22,
+    "kg_triples": 2465,
+    "n_cases": 137
+  },
+  "e11_archives": [
+    {
+      "source": "e11_azure_gpt-5.6-sol_gpt-5.6-sol_20261006-2011.json",
+      "sha256": "166d14082ac30a04ea426e18bb84ca5d11ef714790f9a9f65a0fa6a765ee388b",
+      "model": "gpt-5.6-sol",
+      "timestamp": "2026-10-06T20:11:13",
+      "declared_tasks": 1,
+      "declared_repeats": 1,
+      "raw_rows": 5,
+      "observed_tasks": [
+        "GRD-01"
+      ],
+      "checks": [
+        {
+          "condition": "C0",
+          "reported_n": 1,
+          "raw_n": 1,
+          "count_matches": true
+        },
+        {
+          "condition": "C1",
+          "reported_n": 1,
+          "raw_n": 1,
+          "count_matches": true
+        },
+        {
+          "condition": "C2",
+          "reported_n": 1,
+          "raw_n": 1,
+          "count_matches": true
+        },
+        {
+          "condition": "C3",
+          "reported_n": 1,
+          "raw_n": 1,
+          "count_matches": true
+        },
+        {
+          "condition": "C4",
+          "reported_n": 1,
+          "raw_n": 1,
+          "count_matches": true
+        }
+      ],
+      "per_condition": [
+        {
+          "condition": "C0",
+          "n": 1,
+          "accuracy": 0.0,
+          "refusal_rate": 1.0,
+          "correct_when_sufficient": null,
+          "hallucination_rate_when_insufficient": 0.0,
+          "ceiling": 0.0
+        },
+        {
+          "condition": "C1",
+          "n": 1,
+          "accuracy": 1.0,
+          "refusal_rate": 0.0,
+          "correct_when_sufficient": null,
+          "hallucination_rate_when_insufficient": 0.0,
+          "ceiling": 0.0
+        },
+        {
+          "condition": "C2",
+          "n": 1,
+          "accuracy": 1.0,
+          "refusal_rate": 0.0,
+          "correct_when_sufficient": 1.0,
+          "hallucination_rate_when_insufficient": null,
+          "ceiling": 0.22857142857142856
+        },
+        {
+          "condition": "C3",
+          "n": 1,
+          "accuracy": 1.0,
+          "refusal_rate": 0.0,
+          "correct_when_sufficient": 1.0,
+          "hallucination_rate_when_insufficient": null,
+          "ceiling": 0.5142857142857142
+        },
+        {
+          "condition": "C4",
+          "n": 1,
+          "accuracy": 1.0,
+          "refusal_rate": 0.0,
+          "correct_when_sufficient": 1.0,
+          "hallucination_rate_when_insufficient": null,
+          "ceiling": 0.8571428571428571
+        }
+      ],
+      "per_category": {
+        "GRD": {
+          "C0": 0.0,
+          "C1": 1.0,
+          "C2": 1.0,
+          "C3": 1.0,
+          "C4": 1.0
+        }
+      }
+    }
+  ],
+  "tables": [
+    "e1_e2_e6.tex",
+    "e6_categories.tex",
+    "e3_formats.tex",
+    "e4_guardrails.tex",
+    "e4_families.tex",
+    "e4b_procedural.tex",
+    "e5_actions.tex",
+    "e7_queries.tex",
+    "e8_naming.tex",
+    "e9_routing.tex",
+    "e11_verified.tex"
+  ],
+  "schema_tokens": {
+    "C0": 205,
+    "C1": 218,
+    "C2": 981,
+    "C3": 1669,
+    "C4": 2317
+  },
+  "warning": "Original full-suite E11 generated aggregates do not match the available smoke-test raw archive."
+}
