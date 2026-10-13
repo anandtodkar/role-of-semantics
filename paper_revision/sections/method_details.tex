@@ -1,25 +1,26 @@
 \input{tables/auf_matrix}
 \subsection{Assessment rubric and operational failure mapping}
-For U1 the key failure is selecting a different physical entity. U2 concerns
-malformed calls, invented fields, illegal enumeration members and read-only writes.
-U3 separates dimensional incompatibility from compatible units at the wrong scale.
-U4 supports containment-based scope and topological impact; U5 describes legal
-commands and transitions; U6 publishes checkable guards. U7 binds answers and
-decisions to source, time and quality. U8 moves aggregation to a query engine,
-U9 asks whether relevant evidence fits the available budget, and U10 records
-whether tools, converters and governance permit deployment. A capability can be
-valuable even when implemented procedurally: AUF assesses what is made available,
-not which syntax deserves credit.
+The ten capabilities were selected by tracing the minimum evidence needs of a
+bounded industrial-agent cycle, then adding its deployment constraints. U1--U8
+cover resolving the requested asset (identity), interpreting its interface
+(types/access), interpreting values (units), locating it in plant context
+(relations), determining available operations (behaviour), checking proposed
+actions (constraints), establishing whether observations are current and
+traceable (provenance), and obtaining relevant facts efficiently (query). Each
+addresses a distinct failure class in the benchmark taxonomy. U9 and U10 are
+cross-cutting feasibility criteria: whether a faithful evidence slice fits the
+agent's context budget, and whether implementations, converters and governance
+support deployment. Thus AUF is a coverage-oriented checklist for industrial
+grounding and supervisory action, not a claim to enumerate every need of every
+agent or prove mathematical completeness. Some criteria interact; none dictates
+a preferred serialization. Procedural code may provide the same facts and checks
+as a semantic technology.
 
-Table~\ref{tab:auf-matrix} retains the original 24 technology assessments. The
-criterion-specific ordinal rubric distinguishes absent, partial/indirect,
-explicit/incomplete and strongest specified support. Scores are not interval
-measurements and must not be averaged into an accuracy prediction. Technology
-versions, extensions and exposed profiles can change a judgement. The matrix
-is a navigation aid, not a claim that every deployment satisfies all scored
-criteria. Type-system support is widespread, whereas unit calculus and executable
-constraint coverage concentrate in fewer rows. This motivates composition,
-not a universal requirement to adopt every listed technology.
+Table~\ref{tab:auf-matrix} retains 24 assessments. Scores distinguish absent,
+partial/indirect, explicit/incomplete and strongest criterion-specific support;
+they are ordinal, not an accuracy predictor. Versions and exposed profiles can
+change judgements. Widespread typing but concentrated unit/constraint support
+motivates selective composition, not adoption of every technology.
 
 \subsection{An evidence contract for each proposal}
 Let $F$ denote available engineering facts and $R(q)$ the declared evidence
@@ -63,7 +64,7 @@ controller-side execution authority.
 \begin{figure*}[t]
 \centering
 \begin{tikzpicture}[font=\footnotesize, box/.style={draw,align=center,minimum height=11mm,text width=32mm},arr/.style={-{Stealth},thick}]
-\node[box] (source) at (0,0) {Engineering sources\\OPC UA/AAS, recipes, guards};
+\node[box] (source) at (0,0) {PLC $\to$ IIH acquisition\\Engineering models and guards};
 \node[box] (evidence) at (4,0) {Evidence service\\units, state, time, provenance};
 \node[box] (agent) at (8,0) {Agent proposal\\typed tools and bounded repair};
 \node[box] (gate) at (12,0) {Dispatch gate\\refresh, scope, approval};

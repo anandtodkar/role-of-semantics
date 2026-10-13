@@ -20,13 +20,6 @@ specific observation source. Persistent identifiers also require governed mappin
 when hardware is replaced; stability of a string alone does not establish
 continuity of the physical asset \cite{eclass,iec61360,iec61987,iso29002}.
 
-The practical mechanism is a versioned mapping from source identifiers to asset
-instances and property concepts. A mapping should identify the responsible source,
-validity interval and replacement history. Dictionary lookup reduces ambiguity
-between vendors, but cannot resolve an observation's current owner without an
-instance model. Hence L0 supports reference integrity while L1 and observation
-metadata complete the operational referent.
-
 \subsection{L1: Information and interface models}
 OPC UA combines typed address spaces, attributes, access rights and callable
 methods; companion models add domain content \cite{iec62541}. AAS supplies
@@ -39,20 +32,11 @@ possible \cite{iec62714,iec62264,vdi2658,isa88,w3c2023wot,etsi2023ngsild,iec6185
 but the content actually exposed must be audited. An agent cannot
 check an unpublished interlock simply because the host standard is extensible.
 
-Conversely, it is inaccurate to describe all information models as static or
-incapable of behaviour: state-machine and method information can be represented
-in this layer. The bottleneck is often an engineering publication decision.
-Controllers, alarm configurations and recipes already contain constraints, but
-their relation to a supervisory command is not necessarily delivered through
-the agent-facing interface. Typed access is a necessary integration baseline,
-not sufficient evidence of a complete operating envelope.
-
-The integration must also distinguish access rights from operating permission.
-A point can be technically writable yet unavailable in the current state or
-outside an operator's scope. An engineering range is not necessarily a recipe
-limit or a safety limit. Collapsing these into a single numeric boundary loses
-the reason for a rejection and makes changes difficult to audit. Model versions
-and the origin of each constraint therefore belong in the agent evidence contract.
+These models can carry methods and states; the limitation is what a deployment
+publishes, not an inherent inability to express behaviour. Access rights differ
+from current-state permission, and engineering ranges differ from recipe/safety
+limits. Preserve each constraint's origin and version rather than collapse them
+into one writable flag or numeric bound.
 
 \subsection{L2: Formal semantics, validation and query}
 RDF provides globally named relations and a common graph substrate. OWL can
@@ -72,13 +56,9 @@ and unit fidelity remain upstream obligations. Declarative constraints can be
 shared and inspected, but a competent procedural implementation may enforce
 exactly the same rules; the R1 control makes that comparison explicit.
 
-Validation concerns the proposed action and its referenced snapshot, not only
-data quality of the underlying graph. Lifting a proposal into a small action
-graph makes target, value, unit, scope and evidence time explicit. A report can
-then distinguish signature errors, incompatible quantities, violated guards and
-missing observations. A repair loop should preserve the original authorization
-and provide a bounded opportunity to correct the proposal, rather than weakening
-the constraint after repeated refusal.
+Validation lifts the proposal's target, value, unit, scope and evidence time into
+an action graph. Reports distinguish violations from missing evidence; bounded
+repair retains authorization and never weakens guards to avoid refusal.
 
 \subsection{L3: Quantities, observations and domain relations}
 QUDT supplies quantity kinds, dimensions and conversion metadata \cite{qudt}.
@@ -97,14 +77,6 @@ provenance are different relations. A compressor feeding several units supports
 impact analysis, but a flow graph alone does not establish the causal mechanism
 of a recorded failure. Root-cause analysis needs incident evidence and a validated
 causal/diagnostic model beyond generic graph traversal.
-
-Observation quality and freshness must also be preserved through conversion.
-Expressing a stale sample in another unit does not make it current, and retaining
-a value without its source quality loses the reason an operator might decline
-to act. Engineering tolerances belong to the comparison procedure: matching
-observations exactly is inappropriate when sensor resolution, rounding and
-calibration uncertainty are material. The reference benchmark's numeric tolerance
-is therefore a reproducible experimental setting, not a universal industrial rule.
 
 \subsection{L4: Cross-organisational policy and trust}
 Dataspaces add participant identity, catalogue metadata, exchange agreements and

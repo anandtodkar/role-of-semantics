@@ -54,15 +54,24 @@ the original tables. R2/R3 are evidence measures, not actual LLM accuracy.
 
 | ID | Experiment | Protocol and outputs | Dependency |
 | --- | --- | --- | --- |
-| P1 | Physical grounding/reporting | Independently written questions, physical observations, unit/value/source/time scoring | Commissioned sensors and reviewed task set |
-| P2 | Physical legal task completion | Shadow proposals, then approved bounded legal commands; separate gateway and PLC rejection | Risk assessment and controller handshake |
-| P3 | State/freshness robustness | State change between plan and dispatch, stale subscriptions, reconnect, mapping version change | Timestamped independent trace |
+| P1 | Physical grounding/reporting | Independently written questions, physical observations, unit/value/source/time scoring | Commissioned sensors and reviewed task set; not run in this environment |
+| P2 | Physical legal task completion | Shadow proposals, then approved bounded legal commands; separate gateway and PLC rejection | Risk assessment and controller handshake; no actuation attempted |
+| P3 | State/freshness robustness | State change between plan and dispatch, stale subscriptions, reconnect, mapping version change | Timestamped independent trace; only an offline probe exists |
 | P4 | Transfer/maintenance | Freeze methods; hold out station B/configuration; measure engineer-hours, edits and regressions | Mapping/rule freeze and engineer log |
 | P5 | RCA comparator | Verify CausalTrace source/code; matched incidents, evidence and candidate causes; MAP@3 only if appropriate | Real reviewed incident corpus and comparator |
 | P6 | AUF reliability | Two independent raters, versioned spec-clause evidence, ordinal agreement and adjudication | Domain experts and source registry |
 | P7 | AUF utility | Budget-matched AUF-guided vs normal capability selection on held-out configuration | Independent teams or counterbalanced assignment |
 | P8 | Cross-model agent evaluation | At least two available model families; frozen prompts/tools, repeats within episodes | Model access, privacy and cost approval |
 | P9 | Real token/runtime cost | Real model tokenizer; retrieval/validation/dispatch p50/p95 and deadline misses | Selected runtime and commissioned hardware |
+| P10 | PLC/IIH model preservation | Compare PLC source with IIH 2.6.1 on Industrial Edge IPC427E; map identifiers and audit metadata, matched observations and task effects | Source/aggregate exports, downstream extraction method and snapshot mapping |
+| A1 | KUKA NodeSet projection | Preserve supplied KUKA instance plus Robotics/DI model dependencies; compare structural retention in AAS/RDF/JSON-LD/NGSI-LD/CSV and RDF syntax round trips | Completed as ad hoc structural check; no task-accuracy or live-server claim |
+
+The complete E11 harness was dry-run with the mock backend (525 rows). This
+checks the output path and task/condition loop only; the mock reads gold labels.
+No real model call was made because this environment has no backend/model/endpoint
+configuration. The E11 code also needs a PLC/IIH-backed task/context adapter
+before a new real-model run can substantiate the new acquisition. Keep the mock
+artifact out of manuscript results.
 
 Do not invent measurements for these protocols. Archived E11 is a model run on
 synthetic context, not physical industrial validation. No LLM credentials or PLC

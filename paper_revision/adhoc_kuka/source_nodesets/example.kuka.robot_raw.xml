@@ -1,0 +1,1423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" LastModified="2021-05-03T02:00:35.3300125Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
+  <NamespaceUris>
+    <Uri>http://example.kuka-demo.robot</Uri>
+    <Uri>http://opcfoundation.org/UA/DI/</Uri>
+    <Uri>http://opcfoundation.org/UA/Robotics/</Uri>
+  </NamespaceUris>
+  <Aliases>
+    <Alias Alias="Boolean">i=1</Alias>
+    <Alias Alias="SByte">i=2</Alias>
+    <Alias Alias="Byte">i=3</Alias>
+    <Alias Alias="Int16">i=4</Alias>
+    <Alias Alias="UInt16">i=5</Alias>
+    <Alias Alias="Int32">i=6</Alias>
+    <Alias Alias="UInt32">i=7</Alias>
+    <Alias Alias="Int64">i=8</Alias>
+    <Alias Alias="UInt64">i=9</Alias>
+    <Alias Alias="Float">i=10</Alias>
+    <Alias Alias="Double">i=11</Alias>
+    <Alias Alias="DateTime">i=13</Alias>
+    <Alias Alias="String">i=12</Alias>
+    <Alias Alias="ByteString">i=15</Alias>
+    <Alias Alias="Guid">i=14</Alias>
+    <Alias Alias="XmlElement">i=16</Alias>
+    <Alias Alias="NodeId">i=17</Alias>
+    <Alias Alias="ExpandedNodeId">i=18</Alias>
+    <Alias Alias="QualifiedName">i=20</Alias>
+    <Alias Alias="LocalizedText">i=21</Alias>
+    <Alias Alias="StatusCode">i=19</Alias>
+    <Alias Alias="Structure">i=22</Alias>
+    <Alias Alias="Number">i=26</Alias>
+    <Alias Alias="Integer">i=27</Alias>
+    <Alias Alias="UInteger">i=28</Alias>
+    <Alias Alias="HasComponent">i=47</Alias>
+    <Alias Alias="HasProperty">i=46</Alias>
+    <Alias Alias="Organizes">i=35</Alias>
+    <Alias Alias="HasEventSource">i=36</Alias>
+    <Alias Alias="HasNotifier">i=48</Alias>
+    <Alias Alias="HasSubtype">i=45</Alias>
+    <Alias Alias="HasTypeDefinition">i=40</Alias>
+    <Alias Alias="HasModellingRule">i=37</Alias>
+    <Alias Alias="HasEncoding">i=38</Alias>
+    <Alias Alias="HasDescription">i=39</Alias>
+  </Aliases>
+  <UAObject NodeId="ns=1;i=5000" BrowseName="0:http://example.kuka.robot">
+    <DisplayName>http://example.kuka.robot</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6000</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6001</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6002</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6003</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6004</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6005</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6006</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6007</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">i=11715</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=11616</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5001" BrowseName="1:KUKABfr">
+    <DisplayName>KUKABfr</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5002</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5003</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5004</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=2;i=5001</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1002</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5002" BrowseName="3:Controllers">
+    <DisplayName>Controllers</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5003" BrowseName="3:MotionDevices">
+    <DisplayName>MotionDevices</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5004" BrowseName="3:SafetyStates">
+    <DisplayName>SafetyStates</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5007</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5005" BrowseName="3:KRC1">
+    <DisplayName>KRC1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5008</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5009</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5010</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6009</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6010</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6011</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1003</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5006" BrowseName="3:MotionDevice_1">
+    <DisplayName>MotionDevice_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5011</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5012</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5013</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6012</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6013</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6014</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6015</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6016</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1004</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5007" BrowseName="3:0">
+    <DisplayName>0</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5014</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5004</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1013</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5008" BrowseName="3:CurrentUser">
+    <DisplayName>CurrentUser</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6017</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=18175</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5009" BrowseName="3:Software">
+    <DisplayName>Software</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5015</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5010" BrowseName="3:TaskControls">
+    <DisplayName>TaskControls</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5016</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5011" BrowseName="3:Axes">
+    <DisplayName>Axes</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5017</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5027</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5012" BrowseName="2:ParameterSet">
+    <DisplayName>ParameterSet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6018</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5013" BrowseName="3:PowerTrains">
+    <DisplayName>PowerTrains</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5018</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5023</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5014" BrowseName="2:ParameterSet">
+    <DisplayName>ParameterSet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6019</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6020</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6021</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5007</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5015" BrowseName="3:Software_1">
+    <DisplayName>Software_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6022</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6023</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6024</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=2;i=15106</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5016" BrowseName="3:TaskControls_1">
+    <DisplayName>TaskControls_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5019</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6025</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1011</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5017" BrowseName="1:Axis_1">
+    <DisplayName>Axis_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5020</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6026</Reference>
+      <Reference ReferenceType="ns=3;i=18178" IsForward="false">ns=1;i=5018</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5011</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=16601</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5018" BrowseName="3:PowerTrain_1">
+    <DisplayName>PowerTrain_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5024</Reference>
+      <Reference ReferenceType="ns=3;i=18178">ns=1;i=5017</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5013</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=16794</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5019" BrowseName="2:ParameterSet">
+    <DisplayName>ParameterSet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6027</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6028</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5016</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5020" BrowseName="2:ParameterSet">
+    <DisplayName>ParameterSet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6029</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5021" BrowseName="1:Motor_1">
+    <DisplayName>Motor_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5022</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6030</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6031</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6032</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6033</Reference>
+      <Reference ReferenceType="ns=3;i=18181">ns=1;i=5024</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5018</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1019</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5022" BrowseName="2:ParameterSet">
+    <DisplayName>ParameterSet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6035</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5023" BrowseName="3:PowerTrain_2">
+    <DisplayName>PowerTrain_2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5025</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=5029</Reference>
+      <Reference ReferenceType="ns=3;i=18178">ns=1;i=5027</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5013</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=16794</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5024" BrowseName="1:Gear_1">
+    <DisplayName>Gear_1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6044</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6045</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6046</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6047</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6048</Reference>
+      <Reference ReferenceType="ns=3;i=18181" IsForward="false">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5018</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1022</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5025" BrowseName="1:Motor_2">
+    <DisplayName>Motor_2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5026</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6037</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6038</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6039</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6040</Reference>
+      <Reference ReferenceType="ns=3;i=18181">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5023</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1019</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5026" BrowseName="2:ParameterSet">
+    <DisplayName>ParameterSet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6041</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5025</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5027" BrowseName="1:Axis_2">
+    <DisplayName>Axis_2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=5028</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6043</Reference>
+      <Reference ReferenceType="ns=3;i=18178" IsForward="false">ns=1;i=5023</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5011</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=16601</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5028" BrowseName="2:ParameterSet">
+    <DisplayName>ParameterSet</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6051</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5027</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5029" BrowseName="1:Gear_2">
+    <DisplayName>Gear_2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6053</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6054</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6055</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6056</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6057</Reference>
+      <Reference ReferenceType="ns=3;i=18181">ns=3;i=18764</Reference>
+      <Reference ReferenceType="ns=3;i=18181" IsForward="false">ns=1;i=5025</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5023</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=3;i=1022</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=6000" BrowseName="IsNamespaceSubset" DataType="Boolean">
+    <DisplayName>IsNamespaceSubset</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">false</Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6001" BrowseName="NamespacePublicationDate" DataType="DateTime">
+    <DisplayName>NamespacePublicationDate</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <DateTime xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">2020-08-11T00:00:00Z</DateTime>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6002" BrowseName="NamespaceUri" DataType="String">
+    <DisplayName>NamespaceUri</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">http://example.kuka.robot</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6003" BrowseName="NamespaceVersion" DataType="String">
+    <DisplayName>NamespaceVersion</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1.00</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6004" BrowseName="StaticNodeIdTypes" DataType="i=256" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>StaticNodeIdTypes</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <ListOfInt32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd" />
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6005" BrowseName="StaticNumericNodeIdRange" DataType="i=291" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>StaticNumericNodeIdRange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6006" BrowseName="StaticStringNodeIdPattern" DataType="String">
+    <DisplayName>StaticStringNodeIdPattern</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6007" BrowseName="DefaultRolePermissions" DataType="i=96" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>DefaultRolePermissions</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5000</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6008" BrowseName="2:Manufacturer" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text>KUKA</Text>
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6009" BrowseName="2:Model" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text>IIWA</Text>
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6010" BrowseName="2:ProductCode" DataType="String">
+    <DisplayName>ProductCode</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6011" BrowseName="2:SerialNumber" DataType="String">
+    <DisplayName>SerialNumber</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5005</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">KUKA1111</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6012" BrowseName="2:Manufacturer" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6013" BrowseName="2:Model" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6014" BrowseName="3:MotionDeviceCategory" DataType="ns=2;i=18193">
+    <DisplayName>MotionDeviceCategory</DisplayName>
+    <Description>The variable MotionDeviceCategory provides the kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373.</Description>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6015" BrowseName="2:ProductCode" DataType="String">
+    <DisplayName>ProductCode</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6016" BrowseName="2:SerialNumber" DataType="String">
+    <DisplayName>SerialNumber</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5006</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6017" BrowseName="3:Level" DataType="String">
+    <DisplayName>Level</DisplayName>
+    <Description>The weight of the load mounted on one mounting point.</Description>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5008</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6018" BrowseName="3:SpeedOverride" DataType="Double">
+    <DisplayName>SpeedOverride</DisplayName>
+    <Description>SpeedOverride provides the current speed setting in percent of programmed speed (0 - 100%).</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5012</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Double xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6019" BrowseName="3:EmergencyStop" DataType="Boolean">
+    <DisplayName>EmergencyStop</DisplayName>
+    <Description>The EmergencyStop variable is TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active.</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">false</Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6020" BrowseName="3:OperationalMode" DataType="ns=2;i=3006">
+    <DisplayName>OperationalMode</DisplayName>
+    <Description>The OperationalMode variable provides information about the current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011 Ch.5.7 Operational Modes.</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6021" BrowseName="3:ProtectiveStop" DataType="Boolean">
+    <DisplayName>ProtectiveStop</DisplayName>
+    <Description>The ProtectiveStop variable is TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active.</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">false</Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6022" BrowseName="2:Manufacturer" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text>KUKA</Text>
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6023" BrowseName="2:Model" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6024" BrowseName="2:SoftwareRevision" DataType="String">
+    <DisplayName>SoftwareRevision</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Sunrise1.5</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6025" BrowseName="2:ComponentName" DataType="LocalizedText">
+    <DisplayName>ComponentName</DisplayName>
+    <Description>A user writable name provided by the vendor, integrator or user of the device.</Description>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5016</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6026" BrowseName="3:MotionProfile" DataType="ns=2;i=3008">
+    <DisplayName>MotionProfile</DisplayName>
+    <Description>The kind of axis motion as defined with the AxisMotionProfileEnumeration.</Description>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5017</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6027" BrowseName="3:TaskProgramLoaded" DataType="Boolean">
+    <DisplayName>TaskProgramLoaded</DisplayName>
+    <Description>The TaskProgramLoaded variable is TRUE if a task program is loaded in the task control, FALSE otherwise.</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">true</Boolean>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6028" BrowseName="3:TaskProgramName" DataType="String">
+    <DisplayName>TaskProgramName</DisplayName>
+    <Description>A customer given identifier for the task program.</Description>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5019</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">Move2Home</String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6029" BrowseName="3:ActualPosition" DataType="Double">
+    <DisplayName>ActualPosition</DisplayName>
+    <Description>The axis position inclusive Unit and RangeOfMotion.</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6034</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5020</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=17497</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Double xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">24.633773357902548</Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6030" BrowseName="2:Manufacturer" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6031" BrowseName="2:Model" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6032" BrowseName="2:ProductCode" DataType="String">
+    <DisplayName>ProductCode</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6033" BrowseName="2:SerialNumber" DataType="String">
+    <DisplayName>SerialNumber</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6034" BrowseName="EngineeringUnits" DataType="i=887">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6029</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6035" BrowseName="3:MotorTemperature" DataType="Double">
+    <DisplayName>MotorTemperature</DisplayName>
+    <Description>The motor temperature provides the temperature of the motor. If there is no temperature sensor the value is set to \"null\".</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6036</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5022</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=17497</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Double xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">14.790983993928407</Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6036" BrowseName="EngineeringUnits" DataType="i=887">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6035</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6037" BrowseName="2:Manufacturer" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6038" BrowseName="2:Model" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6039" BrowseName="2:ProductCode" DataType="String">
+    <DisplayName>ProductCode</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6040" BrowseName="2:SerialNumber" DataType="String">
+    <DisplayName>SerialNumber</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6041" BrowseName="3:MotorTemperature" DataType="Double">
+    <DisplayName>MotorTemperature</DisplayName>
+    <Description>The motor temperature provides the temperature of the motor. If there is no temperature sensor the value is set to \"null\".</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6042</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5026</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=17497</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Double xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">15.905572225295739</Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6042" BrowseName="EngineeringUnits" DataType="i=887">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6041</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6043" BrowseName="3:MotionProfile" DataType="ns=2;i=3008">
+    <DisplayName>MotionProfile</DisplayName>
+    <Description>The kind of axis motion as defined with the AxisMotionProfileEnumeration.</Description>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5027</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6044" BrowseName="3:GearRatio" DataType="i=18806">
+    <DisplayName>GearRatio</DisplayName>
+    <Description>The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side).</Description>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6049</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6050</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5024</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=17709</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6045" BrowseName="2:Manufacturer" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6046" BrowseName="2:Model" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6047" BrowseName="2:ProductCode" DataType="String">
+    <DisplayName>ProductCode</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6048" BrowseName="2:SerialNumber" DataType="String">
+    <DisplayName>SerialNumber</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6049" BrowseName="Denominator" DataType="UInt32">
+    <DisplayName>Denominator</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6044</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <UInt32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6050" BrowseName="Numerator" DataType="Int32">
+    <DisplayName>Numerator</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6044</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6051" BrowseName="3:ActualPosition" DataType="Double">
+    <DisplayName>ActualPosition</DisplayName>
+    <Description>The axis position inclusive Unit and RangeOfMotion.</Description>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6052</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5028</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=17497</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Double xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">23.85719006595071</Double>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6052" BrowseName="EngineeringUnits" DataType="i=887">
+    <DisplayName>EngineeringUnits</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6051</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6053" BrowseName="3:GearRatio" DataType="i=18806">
+    <DisplayName>GearRatio</DisplayName>
+    <Description>The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side).</Description>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6058</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6059</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=17709</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6054" BrowseName="2:Manufacturer" DataType="LocalizedText">
+    <DisplayName>Manufacturer</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6055" BrowseName="2:Model" DataType="LocalizedText">
+    <DisplayName>Model</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <LocalizedText xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <Locale p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+        <Text p2:nil="true" xmlns:p2="http://www.w3.org/2001/XMLSchema-instance" />
+      </LocalizedText>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6056" BrowseName="2:ProductCode" DataType="String">
+    <DisplayName>ProductCode</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6057" BrowseName="2:SerialNumber" DataType="String">
+    <DisplayName>SerialNumber</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      </String>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6058" BrowseName="Denominator" DataType="UInt32">
+    <DisplayName>Denominator</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6053</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <UInt32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</UInt32>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6059" BrowseName="Numerator" DataType="Int32">
+    <DisplayName>Numerator</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=6053</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+    </References>
+    <Extensions>
+      <Extension>
+        <TobeSynced xmlns="">True</TobeSynced>
+      </Extension>
+    </Extensions>
+    <Value>
+      <Int32 xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">0</Int32>
+    </Value>
+  </UAVariable>
+</UANodeSet>

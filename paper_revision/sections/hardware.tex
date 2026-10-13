@@ -1,13 +1,11 @@
 \section{Hardware-Based Evaluation Design}
 \label{sec:hardware}
-\subsection{Evidence status and physical configuration}
-No physical trial logs are present. R4 is a software snapshot probe, not a
-hardware result. The available S7-1500 controllers and IPC227G/IPC427E computers
-make a lab study feasible, but access to a PLC alone does not demonstrate
-process operation. PLC-simulated I/O would constitute hardware-in-the-loop
-evidence; physical validation needs actual sensors, actuators and independently
-observed outcomes. This section specifies the evaluation to conduct and cannot
-substitute for its measurements.
+\subsection{Controller acquisition and physical validation boundary}
+IIH 2.6.1 on an Industrial Edge IPC427E collects the CPU 1518-4 PN/DP
+test-variable model. This author-confirmed 2026-10-08 acquisition has no attached
+source/aggregate exports or mapping audit. R4 remains an offline probe; no
+physical sensor/actuator trial logs are available. The scenarios below are
+proposed physical validation, not measured acquisition outcomes.
 
 The recommended rig is two guarded 24~V handling/indexing stations, optionally
 coupled to a low-head water-filling module. Real presence sensors and physical
@@ -18,10 +16,10 @@ unit-correct fill-volume tasks. Avoid adding a pressure or heater hazard solely
 to imitate the generated plant. Final equipment and permitted disturbances
 require a competent engineer's local risk assessment.
 
-The S7-1500 owns sequencing, operating guards, final output authority and command
-acknowledgement. IPC427E hosts the gateway, graph/SHACL services, full procedural
-baseline, experiment supervisor and historian. IPC227G can provide read acquisition
-or separate replay/disturbance services; its exact order number and resources
+In the proposed execution study, the S7-1500 retains sequencing, operating guards,
+output authority and acknowledgement. The acquisition IPC427E could also host
+the graph/SHACL services, procedural baseline, supervisor and historian after
+resource checks. IPC227G can provide separate replay/disturbance services; its exact order number and resources
 must be checked. LLM inference can be remote or on a suitable additional host;
 the IPCs are not presumed capable of running a large model locally. Record
 CPU order number, firmware, TIA version, I/O, OPC UA support/licence, IPC OS,

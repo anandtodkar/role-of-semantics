@@ -1,5 +1,50 @@
 # Proposed S7-1500 / IPC industrial grounding testbed
 
+## Acquisition Already Reported
+
+The author confirms collection on 2026-10-08 using IIH 2.6.1 on an Industrial
+Edge IPC427E, connected to the OPC UA server of an S7-1500 CPU 1518-4 PN/DP.
+IIH is the aggregation layer; its upstream OPC UA client reads the PLC source.
+Values were PLC-hosted test variables, not physical sensor I/O.
+See `protocol/acquisition_manifest.json` for confirmed details and missing capture
+metadata. This controller acquisition is distinct from the physical trials below.
+Attach the raw export and verify its mapping to the stored reference model before
+attributing reproduced measurements to that capture. The earlier E11 run dated
+2026-10-06 is not a result of this new acquisition.
+
+## PLC-to-IIH Model Preservation Audit
+
+The deployment has been reported, but its source and aggregate exports are not
+attached. Do not equate "same underlying signals" with identical address spaces.
+The IIH downstream extraction method or exposed endpoint must be documented
+before choosing a capture/import procedure.
+
+1. Capture the selected PLC model directly and the corresponding IIH view under
+   documented permissions. Record capture time, namespace URIs, server identity,
+   software versions and scope. Do not assume numeric namespace indexes are stable.
+2. Freeze test-variable values or use a versioned PLC sample/counter to match
+   observations. Differences from asynchronous sampling are not model-transform
+   errors; record source versus acquisition/server timestamps separately.
+3. Construct a source-to-IIH node map with explicit stable identifiers. Compare
+   matched node count and reference relationships; list deliberately omitted or
+   renamed nodes rather than hiding them in an overall percentage.
+4. Audit datatype, value rank, descriptions, engineering units/ranges, source
+   quality and timestamps. Record unsupported, absent, transformed and preserved
+   fields separately. An aggregation view may intentionally change access rights;
+   do not treat upstream writability as downstream authorization.
+5. Transform one matched, versioned snapshot into each benchmark format and audit
+   its fact inventory. Keep authored unit/behaviour/guard enrichment separate from
+   metadata actually acquired from the PLC or IIH.
+6. Re-run paired grounding, evidence coverage and validator tests only after the
+   snapshot is linked to the benchmark. Report model-retention counts and per-field
+   coverage, then task-level effects. No such measurements have been conducted
+   or inferred from the reported deployment.
+
+This is an information-preservation/integration test, distinct from physical
+actuation trials and from R5's RDF syntax-isomorphism test. It can reveal whether
+the aggregation boundary loses the facts an agent needs without attributing
+additional semantics to IIH merely because it republishes or aggregates signals.
+
 ## Recommendation
 
 Build a two-station guarded 24 V handling cell, optionally augmented with a
@@ -19,7 +64,7 @@ a competent engineer's local risk assessment.
 | Hardware | Recommended role | Verify before commitment |
 | --- | --- | --- |
 | S7-1500 | Deterministic sequencing, state, operating guards, output authority and command acknowledgements | CPU order number, firmware, TIA version, OPC UA server capability/license, I/O |
-| IPC427E | Agent gateway, local graph/SHACL, procedural baseline, experiment supervisor and historian | CPU/RAM/SSD/OS, network interfaces, software/runtime compatibility |
+| IPC427E | Confirmed Industrial Edge/IIH 2.6.1 acquisition host; proposed additional agent/validation services | CPU/RAM/SSD/OS, network interfaces, resources and co-deployment compatibility |
 | IPC227G | Optional acquisition/gateway or separate disturbance/replay service | Exact model/order number, compute/storage, OS, NICs; do not assume its specifications |
 | Additional PLC, if available | Held-out station B or independent transfer configuration | Matching engineering access, I/O and commissioning approval |
 

@@ -1,0 +1,2279 @@
+@prefix opcua: <https://w3id.org/semindus/opcua-instance#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5000> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"0:http://example.kuka.robot\",\"NodeId\":\"ns=1;i=5000\"}" ;
+    opcua:browseName "0:http://example.kuka.robot" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "http://example.kuka.robot" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5000" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6001" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6000" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6005" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6007" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6004" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6003" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6002" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=11715" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=11616" ] ;
+    opcua:sourceNodeId "ns=1;i=5000" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5001> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"1:KUKABfr\",\"NodeId\":\"ns=1;i=5001\"}" ;
+    opcua:browseName "1:KUKABfr" ;
+    opcua:browseNameNamespace "http://example.kuka-demo.robot" ;
+    opcua:displayName "KUKABfr" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5001" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5003" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=35" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/DI/;i=5001" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1002" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5002" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5004" ] ;
+    opcua:sourceNodeId "ns=1;i=5001" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5002> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:Controllers\",\"NodeId\":\"ns=1;i=5002\"}" ;
+    opcua:browseName "3:Controllers" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "Controllers" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5002" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=61" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5001" ] ;
+    opcua:sourceNodeId "ns=1;i=5002" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5003> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:MotionDevices\",\"NodeId\":\"ns=1;i=5003\"}" ;
+    opcua:browseName "3:MotionDevices" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "MotionDevices" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5003" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5001" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=61" ] ;
+    opcua:sourceNodeId "ns=1;i=5003" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5004> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:SafetyStates\",\"NodeId\":\"ns=1;i=5004\"}" ;
+    opcua:browseName "3:SafetyStates" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "SafetyStates" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5004" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5007" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5001" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=61" ] ;
+    opcua:sourceNodeId "ns=1;i=5004" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5005> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:KRC1\",\"NodeId\":\"ns=1;i=5005\"}" ;
+    opcua:browseName "3:KRC1" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "KRC1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5005" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6011" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1003" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5010" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5002" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6008" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6010" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5009" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6009" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5008" ] ;
+    opcua:sourceNodeId "ns=1;i=5005" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5006> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:MotionDevice_1\",\"NodeId\":\"ns=1;i=5006\"}" ;
+    opcua:browseName "3:MotionDevice_1" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "MotionDevice_1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5006" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6012" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6013" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5003" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5011" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1004" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6015" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5012" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6016" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6014" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5013" ] ;
+    opcua:sourceNodeId "ns=1;i=5006" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5007> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:0\",\"NodeId\":\"ns=1;i=5007\"}" ;
+    opcua:browseName "3:0" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "0" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5007" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1013" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5014" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5004" ] ;
+    opcua:sourceNodeId "ns=1;i=5007" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5008> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:CurrentUser\",\"NodeId\":\"ns=1;i=5008\"}" ;
+    opcua:browseName "3:CurrentUser" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "CurrentUser" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5008" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6017" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=18175" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ] ;
+    opcua:sourceNodeId "ns=1;i=5008" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5009> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:Software\",\"NodeId\":\"ns=1;i=5009\"}" ;
+    opcua:browseName "3:Software" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "Software" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5009" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5015" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=61" ] ;
+    opcua:sourceNodeId "ns=1;i=5009" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5010> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:TaskControls\",\"NodeId\":\"ns=1;i=5010\"}" ;
+    opcua:browseName "3:TaskControls" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "TaskControls" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5010" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5016" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=61" ] ;
+    opcua:sourceNodeId "ns=1;i=5010" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5011> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:Axes\",\"NodeId\":\"ns=1;i=5011\"}" ;
+    opcua:browseName "3:Axes" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "Axes" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5011" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=61" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5027" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5017" ] ;
+    opcua:sourceNodeId "ns=1;i=5011" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5012> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ParameterSet\",\"NodeId\":\"ns=1;i=5012\"}" ;
+    opcua:browseName "2:ParameterSet" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ParameterSet" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5012" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=58" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6018" ] ;
+    opcua:sourceNodeId "ns=1;i=5012" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5013> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:PowerTrains\",\"NodeId\":\"ns=1;i=5013\"}" ;
+    opcua:browseName "3:PowerTrains" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "PowerTrains" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5013" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5018" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=61" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5023" ] ;
+    opcua:sourceNodeId "ns=1;i=5013" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5014> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ParameterSet\",\"NodeId\":\"ns=1;i=5014\"}" ;
+    opcua:browseName "2:ParameterSet" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ParameterSet" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5014" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6019" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=58" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5007" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6020" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6021" ] ;
+    opcua:sourceNodeId "ns=1;i=5014" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5015> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:Software_1\",\"NodeId\":\"ns=1;i=5015\"}" ;
+    opcua:browseName "3:Software_1" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "Software_1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5015" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6023" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6022" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6024" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5009" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/DI/;i=15106" ] ;
+    opcua:sourceNodeId "ns=1;i=5015" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5016> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:TaskControls_1\",\"NodeId\":\"ns=1;i=5016\"}" ;
+    opcua:browseName "3:TaskControls_1" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "TaskControls_1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5016" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5010" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1011" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5019" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6025" ] ;
+    opcua:sourceNodeId "ns=1;i=5016" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5017> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"1:Axis_1\",\"NodeId\":\"ns=1;i=5017\"}" ;
+    opcua:browseName "1:Axis_1" ;
+    opcua:browseNameNamespace "http://example.kuka-demo.robot" ;
+    opcua:displayName "Axis_1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5017" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5020" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5011" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6026" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=16601" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18178" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5018" ] ;
+    opcua:sourceNodeId "ns=1;i=5017" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5018> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:PowerTrain_1\",\"NodeId\":\"ns=1;i=5018\"}" ;
+    opcua:browseName "3:PowerTrain_1" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "PowerTrain_1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5018" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5024" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5021" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=16794" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5013" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18178" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5017" ] ;
+    opcua:sourceNodeId "ns=1;i=5018" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5019> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ParameterSet\",\"NodeId\":\"ns=1;i=5019\"}" ;
+    opcua:browseName "2:ParameterSet" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ParameterSet" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5019" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5016" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=58" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6028" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6027" ] ;
+    opcua:sourceNodeId "ns=1;i=5019" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5020> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ParameterSet\",\"NodeId\":\"ns=1;i=5020\"}" ;
+    opcua:browseName "2:ParameterSet" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ParameterSet" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5020" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6029" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5017" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=58" ] ;
+    opcua:sourceNodeId "ns=1;i=5020" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5021> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"1:Motor_1\",\"NodeId\":\"ns=1;i=5021\"}" ;
+    opcua:browseName "1:Motor_1" ;
+    opcua:browseNameNamespace "http://example.kuka-demo.robot" ;
+    opcua:displayName "Motor_1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5021" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1019" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5018" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6030" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18181" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5024" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6033" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6031" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6032" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5022" ] ;
+    opcua:sourceNodeId "ns=1;i=5021" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5022> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ParameterSet\",\"NodeId\":\"ns=1;i=5022\"}" ;
+    opcua:browseName "2:ParameterSet" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ParameterSet" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5022" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=58" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6035" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5021" ] ;
+    opcua:sourceNodeId "ns=1;i=5022" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5023> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:PowerTrain_2\",\"NodeId\":\"ns=1;i=5023\"}" ;
+    opcua:browseName "3:PowerTrain_2" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:displayName "PowerTrain_2" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5023" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5025" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=16794" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5029" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18178" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5027" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5013" ] ;
+    opcua:sourceNodeId "ns=1;i=5023" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5024> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"1:Gear_1\",\"NodeId\":\"ns=1;i=5024\"}" ;
+    opcua:browseName "1:Gear_1" ;
+    opcua:browseNameNamespace "http://example.kuka-demo.robot" ;
+    opcua:displayName "Gear_1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5024" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6047" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6045" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18181" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5021" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6046" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5018" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6048" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1022" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6044" ] ;
+    opcua:sourceNodeId "ns=1;i=5024" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5025> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"1:Motor_2\",\"NodeId\":\"ns=1;i=5025\"}" ;
+    opcua:browseName "1:Motor_2" ;
+    opcua:browseNameNamespace "http://example.kuka-demo.robot" ;
+    opcua:displayName "Motor_2" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5025" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6039" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5026" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1019" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5023" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6040" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6037" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6038" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18181" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5029" ] ;
+    opcua:sourceNodeId "ns=1;i=5025" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5026> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ParameterSet\",\"NodeId\":\"ns=1;i=5026\"}" ;
+    opcua:browseName "2:ParameterSet" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ParameterSet" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5026" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6041" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=58" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5025" ] ;
+    opcua:sourceNodeId "ns=1;i=5026" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5027> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"1:Axis_2\",\"NodeId\":\"ns=1;i=5027\"}" ;
+    opcua:browseName "1:Axis_2" ;
+    opcua:browseNameNamespace "http://example.kuka-demo.robot" ;
+    opcua:displayName "Axis_2" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5027" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6043" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5028" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18178" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5023" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=16601" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5011" ] ;
+    opcua:sourceNodeId "ns=1;i=5027" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5028> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ParameterSet\",\"NodeId\":\"ns=1;i=5028\"}" ;
+    opcua:browseName "2:ParameterSet" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ParameterSet" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5028" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6051" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5027" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=58" ] ;
+    opcua:sourceNodeId "ns=1;i=5028" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5029> a opcua:UAObject ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"1:Gear_2\",\"NodeId\":\"ns=1;i=5029\"}" ;
+    opcua:browseName "1:Gear_2" ;
+    opcua:browseNameNamespace "http://example.kuka-demo.robot" ;
+    opcua:displayName "Gear_2" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=5029" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAObject" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6055" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18181" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=18764" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6056" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6053" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6057" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5023" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6054" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/Robotics/;i=18181" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5025" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/Robotics/;i=1022" ] ;
+    opcua:sourceNodeId "ns=1;i=5029" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6000> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"IsNamespaceSubset\",\"DataType\":\"Boolean\",\"NodeId\":\"ns=1;i=6000\"}" ;
+    opcua:browseName "IsNamespaceSubset" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "IsNamespaceSubset" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6000" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ] ;
+    opcua:sourceDataType "Boolean" ;
+    opcua:sourceNodeId "ns=1;i=6000" ;
+    opcua:valueJson "false" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Boolean>false</ns1:Boolean>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6001> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"NamespacePublicationDate\",\"DataType\":\"DateTime\",\"NodeId\":\"ns=1;i=6001\"}" ;
+    opcua:browseName "NamespacePublicationDate" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "NamespacePublicationDate" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=13" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6001" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "DateTime" ;
+    opcua:sourceNodeId "ns=1;i=6001" ;
+    opcua:valueJson "\"2020-08-11T00:00:00Z\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:DateTime>2020-08-11T00:00:00Z</ns1:DateTime>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6002> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"NamespaceUri\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6002\"}" ;
+    opcua:browseName "NamespaceUri" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "NamespaceUri" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6002" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6002" ;
+    opcua:valueJson "\"http://example.kuka.robot\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>http://example.kuka.robot</ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6003> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"NamespaceVersion\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6003\"}" ;
+    opcua:browseName "NamespaceVersion" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "NamespaceVersion" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6003" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6003" ;
+    opcua:valueJson "\"1.00\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>1.00</ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6004> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"ArrayDimensions\":\"0\",\"BrowseName\":\"StaticNodeIdTypes\",\"DataType\":\"i=256\",\"NodeId\":\"ns=1;i=6004\",\"ValueRank\":\"1\"}" ;
+    opcua:browseName "StaticNodeIdTypes" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "StaticNodeIdTypes" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=256" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6004" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "i=256" ;
+    opcua:sourceNodeId "ns=1;i=6004" ;
+    opcua:valueJson "[]" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:ListOfInt32 />
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6005> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"ArrayDimensions\":\"0\",\"BrowseName\":\"StaticNumericNodeIdRange\",\"DataType\":\"i=291\",\"NodeId\":\"ns=1;i=6005\",\"ValueRank\":\"1\"}" ;
+    opcua:browseName "StaticNumericNodeIdRange" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "StaticNumericNodeIdRange" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=291" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6005" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ] ;
+    opcua:sourceDataType "i=291" ;
+    opcua:sourceNodeId "ns=1;i=6005" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6006> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"StaticStringNodeIdPattern\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6006\"}" ;
+    opcua:browseName "StaticStringNodeIdPattern" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "StaticStringNodeIdPattern" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6006" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6006" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6007> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"ArrayDimensions\":\"0\",\"BrowseName\":\"DefaultRolePermissions\",\"DataType\":\"i=96\",\"NodeId\":\"ns=1;i=6007\",\"ValueRank\":\"1\"}" ;
+    opcua:browseName "DefaultRolePermissions" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "DefaultRolePermissions" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=96" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6007" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5000" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "i=96" ;
+    opcua:sourceNodeId "ns=1;i=6007" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6008> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Manufacturer\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6008\"}" ;
+    opcua:browseName "2:Manufacturer" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Manufacturer" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6008" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6008" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":\"KUKA\"}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text>KUKA</ns1:Text>
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6009> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Model\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6009\"}" ;
+    opcua:browseName "2:Model" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Model" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6009" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6009" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":\"IIWA\"}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text>IIWA</ns1:Text>
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6010> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ProductCode\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6010\"}" ;
+    opcua:browseName "2:ProductCode" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ProductCode" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6010" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6010" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6011> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:SerialNumber\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6011\"}" ;
+    opcua:browseName "2:SerialNumber" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "SerialNumber" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6011" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5005" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6011" ;
+    opcua:valueJson "\"KUKA1111\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>KUKA1111</ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6012> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Manufacturer\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6012\"}" ;
+    opcua:browseName "2:Manufacturer" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Manufacturer" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6012" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6012" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6013> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Model\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6013\"}" ;
+    opcua:browseName "2:Model" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Model" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6013" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6013" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6014> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:MotionDeviceCategory\",\"DataType\":\"ns=2;i=18193\",\"NodeId\":\"ns=1;i=6014\"}" ;
+    opcua:browseName "3:MotionDeviceCategory" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The variable MotionDeviceCategory provides the kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373." ;
+    opcua:displayName "MotionDeviceCategory" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/DI/;i=18193" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6014" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "ns=2;i=18193" ;
+    opcua:sourceNodeId "ns=1;i=6014" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Int32>0</ns1:Int32>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6015> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ProductCode\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6015\"}" ;
+    opcua:browseName "2:ProductCode" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ProductCode" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6015" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6015" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6016> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:SerialNumber\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6016\"}" ;
+    opcua:browseName "2:SerialNumber" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "SerialNumber" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6016" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5006" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6016" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6017> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:Level\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6017\"}" ;
+    opcua:browseName "3:Level" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The weight of the load mounted on one mounting point." ;
+    opcua:displayName "Level" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6017" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5008" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6017" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6018> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:SpeedOverride\",\"DataType\":\"Double\",\"NodeId\":\"ns=1;i=6018\"}" ;
+    opcua:browseName "3:SpeedOverride" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "SpeedOverride provides the current speed setting in percent of programmed speed (0 - 100%)." ;
+    opcua:displayName "SpeedOverride" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=11" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6018" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5012" ] ;
+    opcua:sourceDataType "Double" ;
+    opcua:sourceNodeId "ns=1;i=6018" ;
+    opcua:valueJson "0.0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Double>0</ns1:Double>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6019> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:EmergencyStop\",\"DataType\":\"Boolean\",\"NodeId\":\"ns=1;i=6019\"}" ;
+    opcua:browseName "3:EmergencyStop" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The EmergencyStop variable is TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active." ;
+    opcua:displayName "EmergencyStop" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6019" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5014" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "Boolean" ;
+    opcua:sourceNodeId "ns=1;i=6019" ;
+    opcua:valueJson "false" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Boolean>false</ns1:Boolean>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6020> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:OperationalMode\",\"DataType\":\"ns=2;i=3006\",\"NodeId\":\"ns=1;i=6020\"}" ;
+    opcua:browseName "3:OperationalMode" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The OperationalMode variable provides information about the current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011 Ch.5.7 Operational Modes." ;
+    opcua:displayName "OperationalMode" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/DI/;i=3006" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6020" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5014" ] ;
+    opcua:sourceDataType "ns=2;i=3006" ;
+    opcua:sourceNodeId "ns=1;i=6020" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Int32>0</ns1:Int32>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6021> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:ProtectiveStop\",\"DataType\":\"Boolean\",\"NodeId\":\"ns=1;i=6021\"}" ;
+    opcua:browseName "3:ProtectiveStop" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The ProtectiveStop variable is TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active." ;
+    opcua:displayName "ProtectiveStop" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6021" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5014" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "Boolean" ;
+    opcua:sourceNodeId "ns=1;i=6021" ;
+    opcua:valueJson "false" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Boolean>false</ns1:Boolean>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6022> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Manufacturer\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6022\"}" ;
+    opcua:browseName "2:Manufacturer" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Manufacturer" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6022" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5015" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6022" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":\"KUKA\"}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text>KUKA</ns1:Text>
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6023> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Model\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6023\"}" ;
+    opcua:browseName "2:Model" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Model" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6023" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5015" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6023" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6024> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:SoftwareRevision\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6024\"}" ;
+    opcua:browseName "2:SoftwareRevision" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "SoftwareRevision" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6024" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5015" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6024" ;
+    opcua:valueJson "\"Sunrise1.5\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>Sunrise1.5</ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6025> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ComponentName\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6025\"}" ;
+    opcua:browseName "2:ComponentName" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:description "A user writable name provided by the vendor, integrator or user of the device." ;
+    opcua:displayName "ComponentName" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6025" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5016" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6025" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6026> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:MotionProfile\",\"DataType\":\"ns=2;i=3008\",\"NodeId\":\"ns=1;i=6026\"}" ;
+    opcua:browseName "3:MotionProfile" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The kind of axis motion as defined with the AxisMotionProfileEnumeration." ;
+    opcua:displayName "MotionProfile" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/DI/;i=3008" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6026" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5017" ] ;
+    opcua:sourceDataType "ns=2;i=3008" ;
+    opcua:sourceNodeId "ns=1;i=6026" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Int32>0</ns1:Int32>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6027> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:TaskProgramLoaded\",\"DataType\":\"Boolean\",\"NodeId\":\"ns=1;i=6027\"}" ;
+    opcua:browseName "3:TaskProgramLoaded" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The TaskProgramLoaded variable is TRUE if a task program is loaded in the task control, FALSE otherwise." ;
+    opcua:displayName "TaskProgramLoaded" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=1" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6027" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5019" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "Boolean" ;
+    opcua:sourceNodeId "ns=1;i=6027" ;
+    opcua:valueJson "true" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Boolean>true</ns1:Boolean>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6028> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:TaskProgramName\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6028\"}" ;
+    opcua:browseName "3:TaskProgramName" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "A customer given identifier for the task program." ;
+    opcua:displayName "TaskProgramName" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6028" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5019" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6028" ;
+    opcua:valueJson "\"Move2Home\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>Move2Home</ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6029> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:ActualPosition\",\"DataType\":\"Double\",\"NodeId\":\"ns=1;i=6029\"}" ;
+    opcua:browseName "3:ActualPosition" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The axis position inclusive Unit and RangeOfMotion." ;
+    opcua:displayName "ActualPosition" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=11" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6029" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6034" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=17497" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5020" ] ;
+    opcua:sourceDataType "Double" ;
+    opcua:sourceNodeId "ns=1;i=6029" ;
+    opcua:valueJson "24.633773357902548" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Double>24.633773357902548</ns1:Double>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6030> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Manufacturer\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6030\"}" ;
+    opcua:browseName "2:Manufacturer" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Manufacturer" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6030" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5021" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6030" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6031> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Model\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6031\"}" ;
+    opcua:browseName "2:Model" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Model" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6031" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5021" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6031" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6032> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ProductCode\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6032\"}" ;
+    opcua:browseName "2:ProductCode" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ProductCode" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6032" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5021" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6032" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6033> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:SerialNumber\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6033\"}" ;
+    opcua:browseName "2:SerialNumber" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "SerialNumber" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6033" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5021" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6033" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6034> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"EngineeringUnits\",\"DataType\":\"i=887\",\"NodeId\":\"ns=1;i=6034\"}" ;
+    opcua:browseName "EngineeringUnits" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "EngineeringUnits" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=887" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6034" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6029" ] ;
+    opcua:sourceDataType "i=887" ;
+    opcua:sourceNodeId "ns=1;i=6034" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6035> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:MotorTemperature\",\"DataType\":\"Double\",\"NodeId\":\"ns=1;i=6035\"}" ;
+    opcua:browseName "3:MotorTemperature" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The motor temperature provides the temperature of the motor. If there is no temperature sensor the value is set to \\\"null\\\"." ;
+    opcua:displayName "MotorTemperature" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=11" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6035" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5022" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6036" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=17497" ] ;
+    opcua:sourceDataType "Double" ;
+    opcua:sourceNodeId "ns=1;i=6035" ;
+    opcua:valueJson "14.790983993928407" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Double>14.790983993928407</ns1:Double>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6036> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"EngineeringUnits\",\"DataType\":\"i=887\",\"NodeId\":\"ns=1;i=6036\"}" ;
+    opcua:browseName "EngineeringUnits" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "EngineeringUnits" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=887" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6036" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6035" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "i=887" ;
+    opcua:sourceNodeId "ns=1;i=6036" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6037> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Manufacturer\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6037\"}" ;
+    opcua:browseName "2:Manufacturer" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Manufacturer" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6037" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5025" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6037" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6038> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Model\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6038\"}" ;
+    opcua:browseName "2:Model" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Model" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6038" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5025" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6038" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6039> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ProductCode\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6039\"}" ;
+    opcua:browseName "2:ProductCode" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ProductCode" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6039" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5025" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6039" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6040> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:SerialNumber\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6040\"}" ;
+    opcua:browseName "2:SerialNumber" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "SerialNumber" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6040" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5025" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6040" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6041> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:MotorTemperature\",\"DataType\":\"Double\",\"NodeId\":\"ns=1;i=6041\"}" ;
+    opcua:browseName "3:MotorTemperature" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The motor temperature provides the temperature of the motor. If there is no temperature sensor the value is set to \\\"null\\\"." ;
+    opcua:displayName "MotorTemperature" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=11" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6041" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6042" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=17497" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5026" ] ;
+    opcua:sourceDataType "Double" ;
+    opcua:sourceNodeId "ns=1;i=6041" ;
+    opcua:valueJson "15.905572225295739" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Double>15.905572225295739</ns1:Double>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6042> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"EngineeringUnits\",\"DataType\":\"i=887\",\"NodeId\":\"ns=1;i=6042\"}" ;
+    opcua:browseName "EngineeringUnits" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "EngineeringUnits" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=887" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6042" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6041" ] ;
+    opcua:sourceDataType "i=887" ;
+    opcua:sourceNodeId "ns=1;i=6042" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6043> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:MotionProfile\",\"DataType\":\"ns=2;i=3008\",\"NodeId\":\"ns=1;i=6043\"}" ;
+    opcua:browseName "3:MotionProfile" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The kind of axis motion as defined with the AxisMotionProfileEnumeration." ;
+    opcua:displayName "MotionProfile" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/DI/;i=3008" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6043" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5027" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "ns=2;i=3008" ;
+    opcua:sourceNodeId "ns=1;i=6043" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Int32>0</ns1:Int32>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6044> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:GearRatio\",\"DataType\":\"i=18806\",\"NodeId\":\"ns=1;i=6044\"}" ;
+    opcua:browseName "3:GearRatio" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side)." ;
+    opcua:displayName "GearRatio" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=18806" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6044" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6050" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=17709" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5024" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6049" ] ;
+    opcua:sourceDataType "i=18806" ;
+    opcua:sourceNodeId "ns=1;i=6044" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6045> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Manufacturer\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6045\"}" ;
+    opcua:browseName "2:Manufacturer" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Manufacturer" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6045" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5024" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6045" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6046> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Model\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6046\"}" ;
+    opcua:browseName "2:Model" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Model" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6046" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5024" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6046" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6047> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ProductCode\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6047\"}" ;
+    opcua:browseName "2:ProductCode" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ProductCode" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6047" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5024" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6047" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6048> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:SerialNumber\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6048\"}" ;
+    opcua:browseName "2:SerialNumber" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "SerialNumber" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6048" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5024" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6048" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6049> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"Denominator\",\"DataType\":\"UInt32\",\"NodeId\":\"ns=1;i=6049\"}" ;
+    opcua:browseName "Denominator" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "Denominator" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=7" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6049" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6044" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "UInt32" ;
+    opcua:sourceNodeId "ns=1;i=6049" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:UInt32>0</ns1:UInt32>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6050> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"Numerator\",\"DataType\":\"Int32\",\"NodeId\":\"ns=1;i=6050\"}" ;
+    opcua:browseName "Numerator" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "Numerator" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=6" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6050" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6044" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "Int32" ;
+    opcua:sourceNodeId "ns=1;i=6050" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Int32>0</ns1:Int32>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6051> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:ActualPosition\",\"DataType\":\"Double\",\"NodeId\":\"ns=1;i=6051\"}" ;
+    opcua:browseName "3:ActualPosition" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The axis position inclusive Unit and RangeOfMotion." ;
+    opcua:displayName "ActualPosition" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=11" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6051" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5028" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6052" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=17497" ] ;
+    opcua:sourceDataType "Double" ;
+    opcua:sourceNodeId "ns=1;i=6051" ;
+    opcua:valueJson "23.85719006595071" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Double>23.85719006595071</ns1:Double>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6052> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"EngineeringUnits\",\"DataType\":\"i=887\",\"NodeId\":\"ns=1;i=6052\"}" ;
+    opcua:browseName "EngineeringUnits" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "EngineeringUnits" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=887" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6052" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6051" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "i=887" ;
+    opcua:sourceNodeId "ns=1;i=6052" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6053> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"3:GearRatio\",\"DataType\":\"i=18806\",\"NodeId\":\"ns=1;i=6053\"}" ;
+    opcua:browseName "3:GearRatio" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/Robotics/" ;
+    opcua:description "The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side)." ;
+    opcua:displayName "GearRatio" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=18806" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6053" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6058" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5029" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=17709" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6059" ] ;
+    opcua:sourceDataType "i=18806" ;
+    opcua:sourceNodeId "ns=1;i=6053" .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6054> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Manufacturer\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6054\"}" ;
+    opcua:browseName "2:Manufacturer" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Manufacturer" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6054" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5029" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6054" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6055> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:Model\",\"DataType\":\"LocalizedText\",\"NodeId\":\"ns=1;i=6055\"}" ;
+    opcua:browseName "2:Model" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "Model" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=21" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6055" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5029" ] ;
+    opcua:sourceDataType "LocalizedText" ;
+    opcua:sourceNodeId "ns=1;i=6055" ;
+    opcua:valueJson "{\"Locale\":null,\"Text\":null}" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns1:LocalizedText>
+        <ns1:Locale xsi:nil="true" />
+        <ns1:Text xsi:nil="true" />
+      </ns1:LocalizedText>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6056> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:ProductCode\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6056\"}" ;
+    opcua:browseName "2:ProductCode" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "ProductCode" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6056" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5029" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6056" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6057> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"2:SerialNumber\",\"DataType\":\"String\",\"NodeId\":\"ns=1;i=6057\"}" ;
+    opcua:browseName "2:SerialNumber" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/DI/" ;
+    opcua:displayName "SerialNumber" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=12" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6057" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=68" ],
+        [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=46" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=5029" ] ;
+    opcua:sourceDataType "String" ;
+    opcua:sourceNodeId "ns=1;i=6057" ;
+    opcua:valueJson "\"\"" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:String>
+      </ns1:String>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6058> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"Denominator\",\"DataType\":\"UInt32\",\"NodeId\":\"ns=1;i=6058\"}" ;
+    opcua:browseName "Denominator" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "Denominator" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=7" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6058" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6053" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "UInt32" ;
+    opcua:sourceNodeId "ns=1;i=6058" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:UInt32>0</ns1:UInt32>
+    </ns0:Value>
+  """ .
+
+<urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6059> a opcua:UAVariable ;
+    opcua:additionalMetadataXml "[]" ;
+    opcua:attributesJson "{\"BrowseName\":\"Numerator\",\"DataType\":\"Int32\",\"NodeId\":\"ns=1;i=6059\"}" ;
+    opcua:browseName "Numerator" ;
+    opcua:browseNameNamespace "http://opcfoundation.org/UA/" ;
+    opcua:displayName "Numerator" ;
+    opcua:expandedDataType "nsu=http://opcfoundation.org/UA/;i=6" ;
+    opcua:expandedNodeId "nsu=http://example.kuka-demo.robot;i=6059" ;
+    opcua:namespaceUri "http://example.kuka-demo.robot" ;
+    opcua:nodeClass "UAVariable" ;
+    opcua:reference [ opcua:isForward false ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=47" ;
+            opcua:targetNodeId "nsu=http://example.kuka-demo.robot;i=6053" ],
+        [ opcua:isForward true ;
+            opcua:referenceType "nsu=http://opcfoundation.org/UA/;i=40" ;
+            opcua:targetNodeId "nsu=http://opcfoundation.org/UA/;i=63" ] ;
+    opcua:sourceDataType "Int32" ;
+    opcua:sourceNodeId "ns=1;i=6059" ;
+    opcua:valueJson "0" ;
+    opcua:valueXml """<ns0:Value xmlns:ns0="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:ns1="http://opcfoundation.org/UA/2008/02/Types.xsd">
+      <ns1:Int32>0</ns1:Int32>
+    </ns0:Value>
+  """ .
+

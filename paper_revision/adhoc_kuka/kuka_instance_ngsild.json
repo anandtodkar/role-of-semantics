@@ -1,0 +1,6268 @@
+[
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5000",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5000"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5000"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "0:http://example.kuka.robot"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "http://example.kuka.robot"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6001"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6002"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6003"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6004"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6007"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=11715"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=11616"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5001",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5001"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5001"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "1:KUKABfr"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "KUKABfr"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5002"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5003"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5004"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=35",
+          "isForward": false,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/DI/;i=5001"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1002"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5002",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5002"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5002"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:Controllers"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Controllers"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5001"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=61"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5003",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5003"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5003"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:MotionDevices"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "MotionDevices"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5001"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=61"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5004",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5004"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5004"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:SafetyStates"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SafetyStates"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5007"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5001"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=61"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5005",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5005"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5005"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:KRC1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "KRC1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5008"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5009"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5010"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6008"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6009"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6010"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6011"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5002"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1003"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5006",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5006"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5006"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:MotionDevice_1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "MotionDevice_1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5011"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5012"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5013"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6012"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6013"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6014"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6015"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6016"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5003"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1004"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5007",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5007"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5007"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:0"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "0"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5014"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5004"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1013"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5008",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5008"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5008"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:CurrentUser"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "CurrentUser"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6017"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=18175"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5009",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5009"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5009"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:Software"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Software"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5015"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=61"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5010",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5010"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5010"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:TaskControls"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "TaskControls"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5016"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=61"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5011",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5011"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5011"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:Axes"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Axes"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5017"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5027"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=61"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5012",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5012"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5012"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ParameterSet"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ParameterSet"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6018"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=58"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5013",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5013"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5013"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:PowerTrains"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "PowerTrains"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5018"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5023"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=61"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5014",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5014"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5014"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ParameterSet"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ParameterSet"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6019"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6020"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5007"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=58"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5015",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5015"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5015"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:Software_1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Software_1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6022"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6023"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5009"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/DI/;i=15106"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5016",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5016"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5016"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:TaskControls_1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "TaskControls_1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5019"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5010"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1011"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5017",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5017"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5017"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "1:Axis_1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Axis_1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5020"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6026"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18178",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5018"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5011"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=16601"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5018",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5018"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5018"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:PowerTrain_1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "PowerTrain_1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18178",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5017"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5013"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=16794"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5019",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5019"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5019"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ParameterSet"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ParameterSet"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6027"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6028"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5016"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=58"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5020",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5020"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5020"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ParameterSet"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ParameterSet"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5017"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=58"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5021",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5021"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5021"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "1:Motor_1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Motor_1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5022"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6030"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6031"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6032"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6033"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18181",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5018"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1019"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5022",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5022"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5022"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ParameterSet"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ParameterSet"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6035"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=58"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5023",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5023"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5023"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:PowerTrain_2"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "PowerTrain_2"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18178",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5027"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5013"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=16794"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5024",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5024"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5024"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "1:Gear_1"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Gear_1"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6044"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6045"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6046"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6047"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6048"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18181",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5018"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1022"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5025",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5025"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5025"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "1:Motor_2"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Motor_2"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5026"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6037"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6038"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6039"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6040"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18181",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5023"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1019"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5026",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5026"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5026"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ParameterSet"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ParameterSet"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6041"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=58"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5027",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5027"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5027"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "1:Axis_2"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Axis_2"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5028"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6043"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18178",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5023"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5011"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=16601"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5028",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5028"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5028"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ParameterSet"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ParameterSet"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6051"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5027"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=58"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D5029",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=5029"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=5029"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAObject"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "1:Gear_2"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Gear_2"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6053"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6054"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6055"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6056"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6057"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18181",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=18764"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/Robotics/;i=18181",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5023"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/Robotics/;i=1022"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6000",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6000"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6000"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "IsNamespaceSubset"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "IsNamespaceSubset"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Boolean"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": false
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6001",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6001"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6001"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "NamespacePublicationDate"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "NamespacePublicationDate"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "DateTime"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": "2020-08-11T00:00:00Z"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6002",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6002"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6002"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "NamespaceUri"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "NamespaceUri"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": "http://example.kuka.robot"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6003",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6003"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6003"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "NamespaceVersion"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "NamespaceVersion"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": "1.00"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6004",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6004"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6004"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "StaticNodeIdTypes"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "StaticNodeIdTypes"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=256"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": []
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6005",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6005"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6005"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "StaticNumericNodeIdRange"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "StaticNumericNodeIdRange"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=291"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6006",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6006"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6006"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "StaticStringNodeIdPattern"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "StaticStringNodeIdPattern"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6007",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6007"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6007"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "DefaultRolePermissions"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "DefaultRolePermissions"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=96"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5000"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6008",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6008"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6008"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Manufacturer"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Manufacturer"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": "KUKA"
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6009",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6009"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6009"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Model"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Model"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": "IIWA"
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6010",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6010"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6010"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ProductCode"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ProductCode"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6011",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6011"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6011"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:SerialNumber"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SerialNumber"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": "KUKA1111"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5005"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6012",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6012"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6012"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Manufacturer"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Manufacturer"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6013",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6013"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6013"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Model"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Model"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6014",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6014"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6014"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:MotionDeviceCategory"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "MotionDeviceCategory"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The variable MotionDeviceCategory provides the kind of motion device defined by MotionDeviceCategoryEnumeration based on ISO 8373."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "ns=2;i=18193"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6015",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6015"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6015"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ProductCode"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ProductCode"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6016",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6016"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6016"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:SerialNumber"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SerialNumber"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5006"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6017",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6017"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6017"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:Level"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Level"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The weight of the load mounted on one mounting point."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5008"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6018",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6018"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6018"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:SpeedOverride"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SpeedOverride"
+    },
+    "description": {
+      "type": "Property",
+      "value": "SpeedOverride provides the current speed setting in percent of programmed speed (0 - 100%)."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Double"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0.0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5012"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6019",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6019"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6019"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:EmergencyStop"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "EmergencyStop"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The EmergencyStop variable is TRUE if one or more of the emergency stop functions in the robot system are active, FALSE otherwise. If the EmergencyStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed emergency stop functions are active."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Boolean"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": false
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5014"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6020",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6020"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6020"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:OperationalMode"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "OperationalMode"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The OperationalMode variable provides information about the current operational mode. Allowed values are described in OperationalModeEnumeration, see ISO 10218-1:2011 Ch.5.7 Operational Modes."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "ns=2;i=3006"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5014"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6021",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6021"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6021"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:ProtectiveStop"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ProtectiveStop"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The ProtectiveStop variable is TRUE if one or more of the enabled protective stop functions in the system are active, FALSE otherwise. If the ProtectiveStopFunctions object is provided, then the value of this variable is TRUE if one or more of the listed protective stop functions are enabled and active."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Boolean"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": false
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5014"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6022",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6022"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6022"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Manufacturer"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Manufacturer"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": "KUKA"
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5015"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6023",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6023"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6023"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Model"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Model"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5015"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6024",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6024"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6024"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:SoftwareRevision"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SoftwareRevision"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": "Sunrise1.5"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5015"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6025",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6025"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6025"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ComponentName"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ComponentName"
+    },
+    "description": {
+      "type": "Property",
+      "value": "A user writable name provided by the vendor, integrator or user of the device."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5016"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6026",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6026"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6026"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:MotionProfile"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "MotionProfile"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The kind of axis motion as defined with the AxisMotionProfileEnumeration."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "ns=2;i=3008"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5017"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6027",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6027"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6027"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:TaskProgramLoaded"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "TaskProgramLoaded"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The TaskProgramLoaded variable is TRUE if a task program is loaded in the task control, FALSE otherwise."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Boolean"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": true
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5019"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6028",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6028"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6028"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:TaskProgramName"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "TaskProgramName"
+    },
+    "description": {
+      "type": "Property",
+      "value": "A customer given identifier for the task program."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": "Move2Home"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5019"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6029",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6029"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6029"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:ActualPosition"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ActualPosition"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The axis position inclusive Unit and RangeOfMotion."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Double"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 24.633773357902548
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6034"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5020"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=17497"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6030",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6030"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6030"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Manufacturer"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Manufacturer"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6031",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6031"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6031"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Model"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Model"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6032",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6032"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6032"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ProductCode"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ProductCode"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6033",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6033"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6033"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:SerialNumber"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SerialNumber"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5021"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6034",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6034"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6034"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=887"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6035",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6035"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6035"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:MotorTemperature"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "MotorTemperature"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The motor temperature provides the temperature of the motor. If there is no temperature sensor the value is set to \\\"null\\\"."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Double"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 14.790983993928407
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6036"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5022"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=17497"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6036",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6036"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6036"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=887"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6035"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6037",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6037"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6037"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Manufacturer"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Manufacturer"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6038",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6038"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6038"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Model"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Model"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6039",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6039"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6039"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ProductCode"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ProductCode"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6040",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6040"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6040"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:SerialNumber"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SerialNumber"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5025"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6041",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6041"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6041"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:MotorTemperature"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "MotorTemperature"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The motor temperature provides the temperature of the motor. If there is no temperature sensor the value is set to \\\"null\\\"."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Double"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 15.905572225295739
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6042"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5026"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=17497"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6042",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6042"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6042"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=887"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6041"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6043",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6043"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6043"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:MotionProfile"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "MotionProfile"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The kind of axis motion as defined with the AxisMotionProfileEnumeration."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "ns=2;i=3008"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5027"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6044",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6044"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6044"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:GearRatio"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "GearRatio"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side)."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=18806"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6049"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6050"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=17709"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6045",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6045"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6045"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Manufacturer"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Manufacturer"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6046",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6046"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6046"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Model"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Model"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6047",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6047"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6047"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ProductCode"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ProductCode"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6048",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6048"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6048"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:SerialNumber"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SerialNumber"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5024"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6049",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6049"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6049"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "Denominator"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Denominator"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "UInt32"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6044"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6050",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6050"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6050"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "Numerator"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Numerator"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Int32"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6044"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6051",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6051"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6051"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:ActualPosition"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ActualPosition"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The axis position inclusive Unit and RangeOfMotion."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Double"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 23.85719006595071
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6052"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5028"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=17497"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6052",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6052"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6052"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "EngineeringUnits"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=887"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6051"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6053",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6053"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6053"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "3:GearRatio"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "GearRatio"
+    },
+    "description": {
+      "type": "Property",
+      "value": "The transmission ratio of the gear expressed as a fraction as input velocity (motor side) by output velocity (load side)."
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "i=18806"
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6058"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": true,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6059"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=17709"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6054",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6054"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6054"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Manufacturer"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Manufacturer"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6055",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6055"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6055"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:Model"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Model"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "LocalizedText"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": {
+        "Locale": null,
+        "Text": null
+      }
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6056",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6056"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6056"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:ProductCode"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "ProductCode"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6057",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6057"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6057"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "2:SerialNumber"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "SerialNumber"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "String"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": ""
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=46",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=5029"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=68"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6058",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6058"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6058"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "Denominator"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Denominator"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "UInt32"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6053"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  },
+  {
+    "id": "urn:opcua-node:http%3A%2F%2Fexample.kuka-demo.robot:i%3D6059",
+    "type": "OPCUAInstanceNode",
+    "sourceNodeId": {
+      "type": "Property",
+      "value": "ns=1;i=6059"
+    },
+    "expandedNodeId": {
+      "type": "Property",
+      "value": "nsu=http://example.kuka-demo.robot;i=6059"
+    },
+    "nodeClass": {
+      "type": "Property",
+      "value": "UAVariable"
+    },
+    "browseName": {
+      "type": "Property",
+      "value": "Numerator"
+    },
+    "displayName": {
+      "type": "Property",
+      "value": "Numerator"
+    },
+    "dataType": {
+      "type": "Property",
+      "value": "Int32"
+    },
+    "nodeValue": {
+      "type": "Property",
+      "value": 0
+    },
+    "additionalNodeMetadataXml": {
+      "type": "Property",
+      "value": []
+    },
+    "references": {
+      "type": "Property",
+      "value": [
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=47",
+          "isForward": false,
+          "targetNodeId": "nsu=http://example.kuka-demo.robot;i=6053"
+        },
+        {
+          "referenceType": "nsu=http://opcfoundation.org/UA/;i=40",
+          "isForward": true,
+          "targetNodeId": "nsu=http://opcfoundation.org/UA/;i=63"
+        }
+      ]
+    },
+    "@context": [
+      "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context-v1.8.jsonld",
+      {
+        "opcua": "https://w3id.org/semindus/opcua-instance#",
+        "sourceNodeId": "opcua:sourceNodeId",
+        "expandedNodeId": "opcua:expandedNodeId",
+        "nodeClass": "opcua:nodeClass",
+        "browseName": "opcua:browseName",
+        "displayName": "opcua:displayName",
+        "description": "opcua:description",
+        "dataType": "opcua:dataType",
+        "nodeValue": "opcua:nodeValue",
+        "references": "opcua:references"
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "sourceInstanceSha256": "b22cf92cb49ef263bf86a3da0fc7d8b7c865e13ee500ead418175afcd0340778",
+  "sourceInstanceFile": "example.kuka.robot_raw.xml",
+  "sourceInstanceNodes": 90,
+  "sourceInstanceReferences": 277,
+  "sourceVariables": 60,
+  "sourceVariablesWithEmbeddedValues": 52,
+  "uniqueExpandedNodeIds": 90,
+  "outputs": {
+    "canonical_json": {
+      "nodeCount": 90,
+      "referenceCount": 277
+    },
+    "aas_v3_projection": {
+      "nodeCount": 90,
+      "relationshipElementCount": 277,
+      "idSetMatchesSource": true,
+      "officialSchemaValidated": false
+    },
+    "rdf": {
+      "tripleCount": 2249,
+      "nodeCount": 90,
+      "referenceCount": 277,
+      "idSetMatchesSource": true
+    },
+    "ngsi_ld_snapshot": {
+      "entityCount": 90,
+      "referenceCount": 277,
+      "idSetMatchesSource": true
+    },
+    "csv": {
+      "rowCount": 90,
+      "referenceCount": 277,
+      "idSetMatchesSource": true
+    }
+  },
+  "rdfSyntaxRoundTrips": [
+    {
+      "syntax": "turtle",
+      "serializedBytes": 129362,
+      "tripleCount": 2249,
+      "roundTripIsomorphic": true
+    },
+    {
+      "syntax": "nt",
+      "serializedBytes": 343201,
+      "tripleCount": 2249,
+      "roundTripIsomorphic": true
+    },
+    {
+      "syntax": "json-ld",
+      "serializedBytes": 336179,
+      "tripleCount": 2249,
+      "roundTripIsomorphic": true
+    }
+  ],
+  "scope": "Structural and serialization comparison only; no LLM task accuracy, safety or physical trial is inferred.",
+  "serializationCosts": [
+    {
+      "file": "kuka_instance_snapshot.json",
+      "bytes": 345178,
+      "surrogateTokens": 126765,
+      "sha256": "1f2ba145faffab21a28c9853d21049123dc3b46f45ff792ddd0e0783b16382ca"
+    },
+    {
+      "file": "kuka_instance_aas_v3.json",
+      "bytes": 697695,
+      "surrogateTokens": 228711,
+      "sha256": "dda2a1774f22e26ad3dc9a3e3553183ba36fd8ecbd22bf132bc81575ad3a5cf8"
+    },
+    {
+      "file": "kuka_instance.ttl",
+      "bytes": 131641,
+      "surrogateTokens": 58935,
+      "sha256": "05a344c6cdbe4286bb635bb72b843df6550315ef30e92307fd3c267aaf16d09a"
+    },
+    {
+      "file": "kuka_instance.jsonld",
+      "bytes": 348251,
+      "surrogateTokens": 154514,
+      "sha256": "a3e3f8a2213ea622fb9042a4cefb8678d5676631acce9b4e62b8d761fffd59da"
+    },
+    {
+      "file": "kuka_instance_ngsild.json",
+      "bytes": 186723,
+      "surrogateTokens": 76842,
+      "sha256": "5b626d410d1064f55b5c4c0bf25e3da29d319534d7ac1c0fabc565142c173353"
+    },
+    {
+      "file": "kuka_instance.csv",
+      "bytes": 168531,
+      "surrogateTokens": 94799,
+      "sha256": "0a8d6224e8cc18ec4e90382c9440a05ce82537b55730757fc5da48128f8aaf2a"
+    }
+  ],
+  "comparisonNote": "Counts and byte/token costs compare these emitted projections only; no external AAS/NGSI-LD conformance validator was run."
+}

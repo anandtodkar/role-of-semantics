@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "provenance_status": "author_confirmed_acquisition; capture_export_not_attached",
+  "capture_date": "2026-10-08",
+  "controller_family": "SIMATIC S7-1500",
+  "cpu": "1518-4 PN/DP",
+  "interface": "OPC UA information model hosted on the PLC",
+  "aggregation_layer": {
+    "product": "Siemens Industrial Information Hub",
+    "abbreviation": "IIH",
+    "version": "2.6.1",
+    "platform": "Siemens Industrial Edge",
+    "device": "IPC427E",
+    "role": "Aggregation server; OPC UA client toward the upstream PLC server",
+    "deployment_status": "author_confirmed_used_for_acquisition",
+    "downstream_extraction_method": null,
+    "aggregate_export_path": null,
+    "source_to_aggregate_mapping_path": null,
+    "model_equivalence_status": "not yet verified; do not assume unchanged namespaces, NodeIds or metadata"
+  },
+  "acquisition_chain": ["S7-1500 CPU 1518-4 PN/DP OPC UA server", "IIH 2.6.1 on Industrial Edge IPC427E", "Offline reference snapshot and format projections"],
+  "value_origin": "PLC-hosted test variables",
+  "physical_sensor_io": false,
+  "firmware": null,
+  "tia_portal_version": null,
+  "capture_time_utc": null,
+  "raw_capture_path": null,
+  "raw_capture_sha256": null,
+  "reference_snapshot_linkage": "not yet verified against code/semantics_bench/plant.py",
+  "projection_formats": ["OPC UA NodeSet2", "AAS JSON", "RDF", "JSON-LD", "WoT TD", "NGSI-LD", "CSV"],
+  "archived_result_boundary": "Existing results are unchanged; the E11 run dated 2026-10-06 cannot originate from this 2026-10-08 capture.",
+  "required_follow_up": ["Attach PLC-source and IIH-aggregated acquisition exports", "Record firmware and capture time", "Specify the downstream IIH extraction method", "Verify source-to-IIH identifier mappings and metadata retention", "Verify linkage to the stored reference snapshot", "Identify authored enrichment and injected fault cases", "Reproduce evaluations against the captured snapshot"]
+}

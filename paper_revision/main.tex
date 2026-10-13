@@ -22,33 +22,31 @@
 \author{Anand~Todkar, Jitendra~Solanki, Mrinmoy~Sarkar}
 \maketitle
 \begin{abstract}
-Industrial agents must associate requests with the correct equipment, interpret
-unit-bearing observations and propose commands consistent with current machine
-state. We investigate how explicit engineering facts support these tasks, while
-separating their information content from representation and validation engine.
-An agent-usability framework connects engineering capabilities to operational
-failure modes. On a synthetic reference plant, an equally informed procedural
-validator and a declarative SHACL validator agree on all \RevisionCases{}
-proposed actions, each detecting every injected fault without rejecting legal
-actions. Thus this corpus supports the value of the supplied engineering facts,
-not an accuracy advantage for SHACL over competent procedural code. The original
-benchmark covers grounding, sufficiency, format cost, faults, action spaces,
-query execution, naming and routed retrieval. Additional
-controls cross retrieval strategies with context conditions, remove individual
-capabilities, probe missing evidence and check serialisation fidelity. Retained
-GPT results are included with an explicit raw-data provenance qualification. A physical
-S7-1500/industrial-PC testbed protocol is specified but has not yet been executed.
-Transfer effort, operational latency and physical outcomes remain open evidence
-requirements rather than claimed results.
+Industrial AI agents must resolve operator requests to equipment, interpret
+unit-bearing values and respect access, state and process constraints. In
+brownfield plants these facts are distributed across controller models,
+engineering records and live observations; plausible answers can therefore be
+ungrounded and invalid actions can appear well typed. The core contribution is
+an evaluation of industrial information standards by their usefulness to AI
+agents. We introduce the agent-usability framework (AUF), organize 24 standards
+and vocabularies into five complementary layers, and assess how their semantics
+support grounding and action checking. On an authored two-line reference plant (17 assets,
+73 signals, 35 tasks and 137 proposals), top-1 grounding rises from 79\% with
+descriptions to 95\% with a typed model and 100\% with scoped graph retrieval.
+Declared-fact sufficiency rises from 23\% for the typed context to 86\% for the
+full context. A full validator detects 84/84 injected faults with no false alarms
+among 53 legal actions; an equally informed procedural validator matches it,
+showing the measured benefit is in explicit engineering facts, not SHACL itself.
+A separate IIH-attributed KUKA NodeSet projection retains 90 instance NodeIds
+and 277 references across AAS, RDF, NGSI-LD and CSV outputs, while exposing
+source namespace and datatype-index inconsistencies. The results provide an
+evidence-centered method for identifying semantic gaps and integrating retrieval
+with pre-action validation in industrial-agent workflows.
 \end{abstract}
 \begin{IEEEkeywords}
 Industrial agents, semantic interoperability, OPC UA, action validation,
 engineering knowledge graphs, programmable logic controllers.
 \end{IEEEkeywords}
-
-\noindent\textit{Working revision, not submission-ready. Physical trials,
-independent annotation, AUF reliability, specific competitor verification and
-the current journal page policy remain pending; E11 full-suite raw data is incomplete.}
 
 \section{Introduction}
 A request to change a machine setting contains several distinct obligations:
@@ -68,8 +66,10 @@ We pursue three contributions: (1) a capability framework linking engineering
 evidence to agent failures; (2) an operational integration pattern for retrieval,
 typed tools and pre-dispatch validation; and (3) controlled evaluation separating
 missing information, retrieval limitations and implementation choice. The third
-contribution currently has synthetic evidence only. Industrial transfer and
-physical execution must be evaluated before deployment claims are made.
+contribution uses controlled test cases and offline reference snapshots. PLC
+acquisition is distinct from validating physical process operation. Accordingly,
+the evaluation supports conclusions about grounding, evidence sufficiency,
+pre-action checks and model projection.
 
 \section{Positioning and Scope}
 RAMI 4.0 is an industrial reference architecture, whereas the proposed view
@@ -90,7 +90,11 @@ layers themselves. Dataspace policy is not evaluated here.
 Graph retrieval and knowledge-graph augmentation provide relevant prior art
 \cite{edge2024graphrag,pan2024unifying}. SHACL is an existing validation language,
 not our invention \cite{knublauch2017shacl}. The contribution cannot be the
-generic combination of an LLM and a graph. Specific neurosymbolic industrial
+generic combination of an LLM and a graph. Our earlier IIH Semantics framework
+\cite{todkar2025semanticitot} describes Industrial Edge deployment, OPC UA aggregation, RDF/SPARQL
+and an automatically derived GraphQL type schema. This study evaluates evidence
+sufficiency, action validation and controlled ablations, rather than claiming
+that integration architecture as new. Specific neurosymbolic industrial
 systems, including the suggested CausalTrace comparator, require source and
 artefact verification; no capability absence or superiority is asserted before
 that review. The quoted 94\% MAP@3 result is not used without a verified dataset,
@@ -126,10 +130,37 @@ available in this revision.
 
 \input{sections/method_details}
 \section{Controlled Evaluation}
-The existing generated reference plant contains 17 assets and 73 signals. Its
+The stored reference-plant model contains 17 assets and 73 signals. Its
 35 tasks and 137 proposed actions are retained for comparability, not presented
 as independently collected industrial workloads. All revision outputs are
 isolated from the original manuscript and archived results.
+
+\subsection{PLC acquisition and cross-format transformation}
+The authors report acquisition on 2026-10-08 using Siemens IIH 2.6.1 on an
+Industrial Edge IPC427E; the product reference is the v2.6 documentation
+\cite{siemensIIH26firststeps}, distinct from the installed patch version.
+This aggregation server connects as an OPC UA client
+to the S7-1500 CPU 1518-4 PN/DP server, reading test variables rather than
+physical I/O. The workflow is PLC $\to$ IIH $\to$ offline snapshot and NodeSet2,
+AAS JSON, RDF, JSON-LD, WoT TD, NGSI-LD and CSV projections.
+
+The PLC is the source; IIH provides an aggregated view. A preservation audit
+must map source/IIH identifiers and compare types, references, units, access and
+timestamps rather than assume identical models. Exports, downstream extraction
+and linkage to stored declarations remain undocumented. Added engineering
+semantics require separate provenance. Archived results remain unchanged;
+E11 dated 2026-10-06 cannot originate from this capture. Acquisition alone does
+not validate physical process operation.
+
+\subsection{Ad hoc KUKA NodeSet projection check}
+Separately from the generated bottling benchmark, the supplied KUKA instance
+NodeSet and Robotics/DI companion models were projected into AAS, RDF/JSON-LD,
+NGSI-LD and CSV. All 90 source instance NodeIds and 277 references were retained
+in each projection; the RDF syntaxes round-trip isomorphically. The source
+namespace mismatch and six datatype-index conflicts are reported, not repaired.
+This structural check is not fed into E1--E11 and supports no task-accuracy,
+physical-operation or external AAS/NGSI-LD conformance claim; byte costs and
+full audit are in the ad hoc artifact bundle.
 
 \subsection{Original context conditions and task corpus}
 The two-line beverage plant combines 22 shared descriptions, metric/imperial
@@ -261,7 +292,7 @@ must be frozen together; repeats are not independent industrial observations.
 \input{sections/hardware}
 
 \section{Limitations and Deployment Implications}
-The benchmark has one generated plant, authored tasks and injected faults.
+The benchmark has one reference-plant model, authored tasks and injected faults.
 Equal-information procedural validation shares the reference rules and does not
 provide independent truth. Repeated model runs must be analysed within episodes,
 not treated as independent incidents. Corrupted constraints, incorrect mappings,
@@ -282,5 +313,5 @@ maintain the facts industrial decisions require. Physical performance, independe
 capability assessment and transfer effort are the next evidence gates.
 
 \bibliographystyle{IEEEtran}
-\bibliography{../paper/refs}
+\bibliography{../paper/refs,refs}
 \end{document}

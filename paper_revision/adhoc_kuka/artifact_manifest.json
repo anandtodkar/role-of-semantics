@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "caseId": "kuka_iih_nodeset_example",
+  "generatedAtUtc": "2026-10-12T23:19:10+00:00",
+  "runner": {
+    "python": "3.13.15",
+    "rdflib": "7.6.0"
+  },
+  "inputs": {
+    "instance": {
+      "file": "example.kuka.robot_raw.xml",
+      "sha256": "b22cf92cb49ef263bf86a3da0fc7d8b7c865e13ee500ead418175afcd0340778"
+    },
+    "robotics_companion": {
+      "file": "Opc.Ua.Robotics.NodeSet2.xml",
+      "sha256": "625a767d08acb1329c308b83b64c23008863130198db49bbd325838fe7ba79bc"
+    },
+    "device_integration_companion": {
+      "file": "Opc.Ua.Di.NodeSet2.xml",
+      "sha256": "306486121d5affa1efb25666f15200be3e685da4a23f2eb7b64c4873a9959bd0"
+    }
+  },
+  "outputs": {
+    "source_nodesets/example.kuka.robot_raw.xml": "b22cf92cb49ef263bf86a3da0fc7d8b7c865e13ee500ead418175afcd0340778",
+    "source_nodesets/Opc.Ua.Robotics.NodeSet2.xml": "625a767d08acb1329c308b83b64c23008863130198db49bbd325838fe7ba79bc",
+    "source_nodesets/Opc.Ua.Di.NodeSet2.xml": "306486121d5affa1efb25666f15200be3e685da4a23f2eb7b64c4873a9959bd0",
+    "kuka_instance_snapshot.json": "1f2ba145faffab21a28c9853d21049123dc3b46f45ff792ddd0e0783b16382ca",
+    "kuka_instance_aas_v3.json": "dda2a1774f22e26ad3dc9a3e3553183ba36fd8ecbd22bf132bc81575ad3a5cf8",
+    "kuka_instance.ttl": "05a344c6cdbe4286bb635bb72b843df6550315ef30e92307fd3c267aaf16d09a",
+    "kuka_instance.jsonld": "a3e3f8a2213ea622fb9042a4cefb8678d5676631acce9b4e62b8d761fffd59da",
+    "kuka_instance_ngsild.json": "5b626d410d1064f55b5c4c0bf25e3da29d319534d7ac1c0fabc565142c173353",
+    "kuka_instance.csv": "0a8d6224e8cc18ec4e90382c9440a05ce82537b55730757fc5da48128f8aaf2a",
+    "comparison.json": "54176ec06be82635bb2c4c2a4882e6d2aedc29fe197037aab3840bbd640be7ad",
+    "comparison.tex": "58afe2735d75a539cc18fccaa4707585670d79d701eaff4b938abbfd2c789d51",
+    "ADHOC_REPORT.md": "905a75225aa527d7096eed7bc6045055d7f42088a5c4a378e3f4835a451d398a"
+  },
+  "scope": "offline projections and structural diagnostics; no live-server, AAS-schema, NGSI-LD-broker, LLM or physical validation"
+}
