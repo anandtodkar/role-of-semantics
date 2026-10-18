@@ -84,7 +84,7 @@ memory into the decoder's grammar. Experiment~E5 measures it.
 sampling, so a malformed or out-of-enumeration call is not merely rejected but
 \emph{unrepresentable}. \emph{Verdict:} eliminates \textsc{f-card},
 \textsc{f-enum} and, when the tag enumeration is included, \textsc{f-ref} at
-generation time. It cannot express state- or data-dependent constraints, which
+generation time. It cannot express state or data dependent constraints, which
 is why P5 remains necessary.
 
 \paragraph{P5: Post-hoc verification and repair.} Lift the agent's output into
@@ -92,60 +92,61 @@ the graph, validate with SHACL/OWL/policy, and feed the validation report back
 for repair. \emph{Verdict:} the only point at which the dangerous families
 (\textsc{f-ilk}, \textsc{f-state}, \textsc{f-stale}, \textsc{f-value}) can be
 caught. Experiment~E4 measures it.
+%%%
 
 \begin{figure*}[t]
 \centering
-\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{%
 \begin{tikzpicture}[
-  font=\footnotesize,
-  box/.style={draw=gray!60,rounded corners=2pt,align=center,minimum height=7.5mm,
-              inner sep=3pt,fill=white},
-  sem/.style={box,fill=blue!5,draw=blue!40},
-  agent/.style={box,fill=orange!8,draw=orange!50},
-  arr/.style={-{Stealth[length=2mm]},gray!70,thick},
-  lab/.style={font=\scriptsize\itshape,text=gray!70}
+  font=\scriptsize,
+  source/.style={draw=blue!55,fill=blue!5,rounded corners=2pt,align=center,
+                 text width=2cm,minimum height=2.25cm,inner sep=4pt},
+  graph/.style={draw=blue!55,fill=blue!8,rounded corners=2pt,align=center,
+                text width=2.20cm,minimum height=2.35cm,inner sep=4pt},
+  service/.style={draw=orange!60!black,fill=orange!8,rounded corners=2pt,
+                  align=center,text width=2.35cm,minimum height=8mm,inner sep=3pt},
+  model/.style={draw=gray!65,fill=gray!8,rounded corners=2pt,align=center,
+                text width=1.75cm,minimum height=1.35cm,inner sep=4pt},
+  gate/.style={draw=orange!60!black,fill=orange!5,rounded corners=2pt,
+               align=center,text width=1.8cm,minimum height=1.75cm,inner sep=4pt},
+  plc/.style={draw=green!45!black,fill=green!7,rounded corners=2pt,align=center,
+              text width=2.2cm,minimum height=1.75cm,inner sep=4pt},
+  flow/.style={-{Stealth[length=2mm]},gray!75,thick},
+  feedback/.style={-{Stealth[length=2mm]},orange!75!black,thick,dashed},
+  label/.style={font=\scriptsize\itshape,text=gray!70}
 ]
-% semantic layer
-\node[sem,minimum width=26mm] (l1) at (0,0) {L1 models\\\opcua, AAS, MTP};
-\node[sem,minimum width=26mm,below=2.5mm of l1] (l3) {L3 ontologies\\QUDT, SOSA, Brick};
-\node[sem,minimum width=26mm,below=2.5mm of l3] (l0) {L0 dictionaries\\ECLASS, IEC CDD};
-\node[sem,minimum width=26mm,above=2.5mm of l1] (l4) {L4 policy\\ODRL, IDS};
-\node[draw=blue!30,rounded corners=3pt,fit=(l4)(l1)(l3)(l0),inner sep=4pt,
-      label={[font=\scriptsize\bfseries,text=blue!55]below:semantic sources}] (src) {};
+\node[source] (src) at (1.35,0) {\textbf{Engineering sources}\\[2pt]
+  L0: identifiers\\L1: OPC UA, AAS, MTP\\
+  L3: QUDT, SOSA/SSN\\L4: policy and trust};
+\node[graph] (kg) at (4.5,0) {\textbf{Plant knowledge graph}\\[2pt]
+  L2: RDF / OWL\\SHACL shapes\\SPARQL queries};
+\node[service] (ctx) at (7.65,1.12) {\textbf{P2 Retrieval}\\resolve, traverse, project};
+\node[service] (tools) at (7.65,0) {\textbf{P3 Tool schema}\\typed fields, units, ranges};
+\node[service] (decode) at (7.65,-1.12) {\textbf{P4 Decoding}\\constrain emitted calls};
+\node[model] (llm) at (10.65,0) {\textbf{LLM agent}\\goal to proposal};
+\node[gate] (verify) at (13.6,0) {\textbf{P5 Validate}\\target, units, state, guards\\reject with repair reason};
+\node[plc] (plant) at (17,0) {\textbf{PLC / OT}\\current guard check\\acknowledged action};
 
-\node[sem,minimum width=28mm,minimum height=30mm,right=12mm of src] (kg)
-  {\textbf{Plant knowledge}\\\textbf{graph} (L2)\\[2pt]RDF $+$ OWL T-Box\\
-   SHACL shapes\\SPARQL endpoint};
-\draw[arr] (src.east) -- node[lab,above]{lift / map} (kg.west);
-
-% agent loop
-\node[agent,minimum width=25mm,right=13mm of kg,yshift=13mm] (ctx) {P2 context assembly\\\scriptsize resolve $\to$ traverse $\to$ project};
-\node[agent,minimum width=25mm,below=3.5mm of ctx] (tools) {P3 tool synthesis\\\scriptsize enums, ranges, units};
-\node[agent,minimum width=25mm,below=3.5mm of tools] (dec) {P4 constrained decoding};
-\node[agent,minimum width=25mm,below=3.5mm of dec] (ver) {P5 verification \& repair\\\scriptsize SHACL report $\to$ prompt};
-
-\draw[arr] (kg.east|-ctx) -- (ctx.west);
-\draw[arr] (kg.east|-tools) -- (tools.west);
-\draw[arr] (kg.east|-ver) -- (ver.west);
-
-\node[box,fill=gray!8,minimum width=20mm,right=12mm of tools] (llm) {\textbf{LLM}\\\scriptsize agent loop};
-\draw[arr] (ctx.east) -- ++(4mm,0) |- (llm.north);
-\draw[arr] (tools.east) -- (llm.west);
-\draw[arr] (dec.east) -- ++(4mm,0) |- (llm.south west);
-\draw[arr] (llm.south) -- ++(0,-6mm) -| node[lab,pos=0.25,below]{proposed action} (ver.south);
-\draw[arr] (ver.north west) -- ++(-3mm,0) |- ++(-2mm,20mm) node[lab,above,pos=0.9]{repair};
-
-\node[box,fill=green!6,draw=green!45,minimum width=20mm,below=9mm of llm] (act) {plant / OT\\\scriptsize \opcua{} write, method call};
-\draw[arr] (ver.east) -- ++(5mm,0) |- node[lab,above,pos=0.75]{conforming} (act.east);
-\end{tikzpicture}}
-\caption{Reference architecture. The semantic sources are lifted into one plant
-knowledge graph, which is never serialised into the prompt; instead it serves
-four distinct functions, context projection (P2), tool-schema synthesis (P3),
-decoding constraints (P4) and post-hoc verification (P5). Only a conforming
-action reaches the plant, and a non-conforming one returns to the model as a
-structured repair signal rather than a refusal.}
+\draw[flow] (src.east) -- node[label,above]{lift / map} (kg.west);
+\draw[flow] (kg.east) -- (ctx.west);
+\draw[flow] (kg.east) -- (tools.west);
+\draw[flow] (kg.east) -- (decode.west);
+\draw[flow] (ctx.east) -- (llm.north west);
+\draw[flow] (tools.east) -- (llm.west);
+\draw[flow] (decode.east) -- (llm.south west);
+\draw[flow] (llm.east) -- node[label,above]{action} (verify.west);
+\draw[feedback] (verify.north) -- ++(0,0.5)
+  -- node[label,above]{rejected: repair reason}
+  ($(llm.north)+(0,0.7)$) -- (llm.north);
+\draw[flow] (verify.east) -- node[label,above]{validated} (plant.west);
+\end{tikzpicture}
+\caption{Agent-grounding architecture. Engineering models feed a queryable
+knowledge graph. Retrieval, tool-schema synthesis and constrained decoding
+support proposal generation; a separate validation gate checks the proposal
+before the PLC applies its own current-state guards. Rejected proposals return
+with a repair reason.}
 \label{fig:architecture}
 \end{figure*}
+%%%
 
 \subsection{The Model Context Protocol as the delivery vehicle}
 
