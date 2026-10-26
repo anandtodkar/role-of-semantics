@@ -1,0 +1,38 @@
+\section{Comparative Capability Analysis}
+\label{sec:capabilities}
+
+\input{tables/auf_matrix}
+
+Table~\ref{tab:auf-matrix} codes \AufTechnologies{} technologies (\AufCells{} cells).
+Each row is linked to its specification; clause-level locators are being added to the
+released evidence register (\AufLocated{} of \AufCells{} cells located,
+\AufUncited{} row awaiting a specification reference). Reading the matrix by column
+yields four observations.
+
+\paragraph{Typing is solved; consequential semantics are sparse.} \AufTypesFirstClass{}
+technologies are first class on U2, which explains why ``AI-ready'' data layers that expose
+types appear convincing. First-class support is rare for units (\AufUnitsFirstClass{}),
+behaviour (\AufBehaviourFirstClass{}) and constraints (\AufConstraintsFirstClass{}), the
+capabilities that separate a well-typed proposal from an admissible one.
+
+\paragraph{No single technology provides the evidence contract.} \AufAllThreeFirstClass{}
+technologies are first class on all of U3, U5 and U6, and only \AufAllThreeStrong{}
+(\AufAllThreeStrongNames{}) reaches at least ``supported'' on all three. An agent that
+needs unit, behaviour and constraint evidence must therefore compose standards, for
+example an information model for types and states, a unit ontology for conversion and a
+constraint language for guards.
+
+\paragraph{Richness and economy trade off.} The richest information models score lowest on
+context economy (U9). This is not a defect of the standards but indicates that semantic
+models belong behind query and projection interfaces rather than in prompts (U8).
+
+\paragraph{Provenance is available but separate.} First-class provenance
+(\AufProvenanceFirstClass{} technologies) concentrates in observation, provenance,
+context-entity and dataspace models, whereas the machine-interface models \opcua{} and AAS
+are only supported on U7. Freshness checks therefore require joining layers at runtime.
+
+These observations concern what specifications standardise. Deployed profiles can expose
+more (\opcua{} methods with state machines) or less (an AAS without constraint submodels),
+which is why agent systems are coded on what they actually use
+(Section~\ref{sec:agents}) and why the case study compares emitted profiles
+(Section~\ref{sec:case}).

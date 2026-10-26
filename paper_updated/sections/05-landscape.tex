@@ -1,0 +1,47 @@
+\section{Engineering-Semantics Technology Landscape}
+\label{sec:landscape}
+
+AUF states what an agent needs; the five layers state where capabilities come from. The
+layers classify sources by role and are not an industrial reference architecture or a
+strict dependency hierarchy: one standard may contribute to several layers, and a
+deployment can combine them without materialising one graph. RAMI~4.0 remains the
+reference architecture; the layers are a complementary evidence view.
+
+\paragraph{L0: Identification and dictionaries.} ECLASS, IEC common data dictionaries and
+IRDIs give properties stable, cross-vendor definitions \cite{eclass,iec61360,iec61987,iso29002};
+GS1 identifiers distinguish products and individual assets. Concept identity is not
+instance identity: identifying ``pressure'' does not identify the transmitter on one filler,
+which needs asset membership and an observation source. Persistent identifiers also need
+governed mappings when hardware is replaced.
+
+\paragraph{L1: Information and interface models.} \opcua{} combines typed address spaces,
+access levels, engineering ranges and callable methods, with companion specifications for
+domain content \cite{iec62541}; the AAS supplies submodels with semantic identifiers
+\cite{idta2023aas,idta2023nameplate}. AutomationML carries engineering exchange
+\cite{iec62714}, ISA-95 equipment hierarchies \cite{iec62264}, and MTP and PackML services
+and state machines \cite{vdi2658,isa88}; WoT Thing Descriptions, NGSI-LD and IEC~61850
+provide further interface and entity models \cite{w3c2023wot,etsi2023ngsild,iec61850}. These
+models make introspection and tool synthesis possible, but what a deployment exposes must
+be audited: an agent cannot check an interlock that was never published, even when the
+host standard could express it.
+
+\paragraph{L2: Formal semantics, query and validation.} RDF provides globally named
+relations, OWL entailment over classes and properties, SHACL closed-world checks of a data
+graph against shapes, and SPARQL joins, traversal and aggregation outside the model
+\cite{w3c2014rdf,w3c2012owl,knublauch2017shacl,w3c2013sparql}; PROV-O records derivation
+and responsibility \cite{w3c2013prov}. Open-world consistency does not enforce mandatory
+action parameters, and shape conformance does not establish that the engineering mapping
+or the set of interlocks is complete.
+
+\paragraph{L3: Quantities, observations and domain relations.} QUDT supplies quantity
+kinds, dimension vectors and conversion factors \cite{qudt}; a display symbol such as
+``bar'' does not itself state a conversion. SOSA/SSN separates sensors, observed properties,
+observations and results \cite{haller2019ssn}, so that an answer can cite the measurement
+and time it reports. Brick, SAREF and DEXPI contribute typed equipment and process
+relations \cite{balaji2016brick,etsi2020saref,dexpi}; flow topology supports impact
+analysis but not causal diagnosis without incident evidence.
+
+\paragraph{L4: Cross-organisational policy and trust.} Dataspaces add participant identity,
+catalogues, contracts and usage policies \cite{idsa2022ram,catenax}; ODRL expresses
+permissions and duties \cite{w3c2018odrl}. Policy is a gate separate from physical
+operating constraints, and an ODRL statement does not by itself enforce downstream use.

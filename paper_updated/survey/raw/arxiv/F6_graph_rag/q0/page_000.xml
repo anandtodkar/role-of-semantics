@@ -1,0 +1,449 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/2/hgoweRFANXDEQiF8Phw5Mjfh0</id>
+  <title>arXiv Query: search_query=(all:GraphRAG OR all:"graph retrieval-augmented" OR all:"knowledge graph retrieval-augmented") AND (all:industrial OR all:manufacturing OR all:maintenance)&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-20T20:14:23Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:GraphRAG+OR+(all:%22graph+retrieval-augmented%22+OR+all:%22knowledge+graph+retrieval-augmented%22))+AND+(all:industrial+OR+(all:manufacturing+OR+all:maintenance))&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>16</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.26432v1</id>
+    <title>E-Layout: Layout-Stage Logic Restructuring via RL-Optimized Equality-Saturated Graph Retrieval-Augmented Generation</title>
+    <updated>2026-10-19T13:56:48Z</updated>
+    <link href="https://arxiv.org/abs/2610.26432v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.26432v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Achieving high sign-off performance in advanced ICs increasingly depends on layout-stage optimization under realistic physical conditions. While recent efforts have moved toward synthesis-layout fusion, most existing works still focus on bringing estimated physical information earlier into synthesis, whose optimization does not fully correlate with real layout-stage behavior. Meanwhile, layout-stage optimization remains largely restricted to a fixed logic structure, relying mainly on buffering and sizing. This fundamentally constrains the optimization space under realistic physical conditions. To address this, we present E-Layout, an ML-driven framework for post-placement layout restructuring. E-Layout jointly optimizes logic transformation and physical implementation across multiple subcircuits under design-level timing feedback. This enables the selection of the most timing-beneficial set of disjoint restructured subcircuits to form the optimized circuit. Specifically, it first constructs equivalence-preserving logic alternatives via e-graph equality saturation, then couples logic selection with physical realization through a graph-based retrieval-augmented generation (RAG) model, and finally refines these local logic-physical decisions with reinforcement learning under design-level timing feedback. Evaluated on 9 diverse designs, it achieves on average 6% TNS improvement and 2% WNS improvement, while even reducing area by 1%, over an industry-leading commercial physical design flow.</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-19T13:56:48Z</published>
+    <arxiv:comment>Accepted by ICCAD'26</arxiv:comment>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Wenji Fang</name>
+    </author>
+    <author>
+      <name>Rongjian Liang</name>
+    </author>
+    <author>
+      <name>Yi-Chen Lu</name>
+    </author>
+    <author>
+      <name>Cunxi Yu</name>
+    </author>
+    <author>
+      <name>Chen Chen</name>
+    </author>
+    <author>
+      <name>Shang Liu</name>
+    </author>
+    <author>
+      <name>Chenhui Deng</name>
+    </author>
+    <author>
+      <name>Wenkai Li</name>
+    </author>
+    <author>
+      <name>Haoxing Ren</name>
+    </author>
+    <author>
+      <name>Zhiyao Xie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10237v1</id>
+    <title>The Answer Path and the Grounding Instruction in LLM Question Answering over Knowledge Graphs</title>
+    <updated>2026-09-09T14:31:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.10237v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10237v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A graph retrieval-augmented generation pipeline chooses which triples to put in the prompt, a syntax to write them in, an order to write them in, and a sentence telling the model what to do with them. We vary all four over six large language models and two knowledge-graph question answering benchmarks. Two of the four choices move the answer and the other two are flat. The first is whether the answer path, the triples needed to reach the answer, is in the prompt at all. Holding the number of triples fixed and replacing every triple that is not on the chain with material from an unrelated entity changes answer accuracy by +0.003 F1, while removing the chain costs most of what the graph was worth. Retrieval budget belongs on recall, and precision in the range we can test buys nothing. There is no retriever here: subgraphs come from gold SPARQL, so precision describes the context we build, not a system setting. The second is the grounding instruction. With no facts in the prompt, telling a model to answer using only the provided facts drops F1 from 0.299 to 0.035, a factor of 8.63. That figure describes an evaluation with an empty context arm rather than a working pipeline, and an experiment that applies the instruction to its context arm but not to its no-context baseline manufactures a spurious finding that graph context hurts at depth. We found one in our own results and retract it. Syntax, triple order and subgraph size produce no effect we can measure at multi-hop depth. The comparison that would price the grounding instruction against correct context is not measurable with a format-sensitive scorer, because the instruction determines the response format; we report it as an open contrast rather than a number.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T14:31:11Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Arquimedes Canedo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.02011v1</id>
+    <title>Seed-Anchored Budget-Bounded Graph Rendering for Question Answering on Industry-Standard Power-Grid Information and Exchange Models</title>
+    <updated>2026-09-02T02:39:05Z</updated>
+    <link href="https://arxiv.org/abs/2609.02011v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.02011v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model question answering over power-grid models must respect a fixed context budget. We introduce seed-anchored graph rendering, a deterministic method that prioritizes query-local graph evidence without adding method-specific tuned or learned parameters beyond the shared hop bound and context budget. The method provides a checkable condition under which predefined seed-local answer-bearing render units are preserved in a greedy bounded-context prefix. We evaluate the approach on Common Information Model (CIM) network models exchanged through the Common Grid Model Exchange Standard (CGMES). On two budget-binding CGMES encodings, naive descriptions-first rendering retains local evidence for every single-hop item but only 0.12 and 0.00 of multi-hop items, whereas seed-anchored rendering retains all such evidence. On a preregistered fresh 100-item bank from the SmallGrid topology family, accuracy rises from 0.450 to 0.970 under a fixed 8,000-character context budget. Under a common retrieval and rendering pipeline, the standards-native seed-anchored graph matches or exceeds extracted graph representations produced by LightRAG, Microsoft GraphRAG, and HippoRAG, while avoiding LLM graph-construction tokens. The results are specific to the evaluated CIM/CGMES models, reader, and context budget; they concern budget-bounded retrieval rather than general question answering.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-02T02:39:05Z</published>
+    <arxiv:comment>Submitted to Engineering Applications of Artificial Intelligence</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Jayakumar Manoharan</name>
+    </author>
+    <author>
+      <name>Yamini Sehgal</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2607.24663v1</id>
+    <title>A corrective agentic hybrid RAG and an operations-grounded evaluation for a scientific facility</title>
+    <updated>2026-07-27T17:01:30Z</updated>
+    <link href="https://arxiv.org/abs/2607.24663v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.24663v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Scientific user facilities accumulate decades of operational knowledge that no single search index covers: electronic logbooks, technical documents, internal wikis, operations chat messages, maintenance records, and live control-system data. We present APS-RAG, Advanced Photon Source Retrieval Augmented Generation, a deployed platform that makes the institutional knowledge at the Advanced Photon Source (APS) accessible to staff through natural-language queries, along with an operations-grounded evaluation. The retrieval engine fuses dense, sparse, and knowledge-graph (KG) channels with query-type-adaptive reciprocal-rank fusion, adds a corrective agentic loop, and runs a native-tool ReAct executor over a Model Context Protocol (MCP) tooling layer. We construct APS-Bench, a 50-question, question-answering (QA) dataset with auditable gold answers. Every retrieval-augmented variant numerically improves strict vital-nugget recall over a naive BM25 baseline (63.8%), with the full corrective Agentic GraphRAG scoring (70.3%). The cross-encoder reranker contributes significantly to answer quality: removing it and allowing the LLM to score relevance drastically reduces strict vital recall by 32.8%. The graph channel and corrective loop contribute positively as expected, but the performance gains are marginal. Additionally, we also compare the performance of open-source and closed-source LLMs in final answer synthesis. We release the APS-Bench construction methodology, the six-layer evaluation harness, and the underlying codebase, along with the '/aps-rag' retrieval agent skill framework, to support reproduction and adoption at other facilities. Together, the deployed platform and its operations-grounded evaluation present a promising workflow for trustworthy, statistically grounded AI assistance in facility operations, transferable to other large scientific instruments.</summary>
+    <category term="physics.acc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-27T17:01:30Z</published>
+    <arxiv:primary_category term="physics.acc-ph"/>
+    <author>
+      <name>Rajat Sainju</name>
+    </author>
+    <author>
+      <name>Dariusz Jarosz</name>
+    </author>
+    <author>
+      <name>Hairong Shang</name>
+    </author>
+    <author>
+      <name>Michael Prince</name>
+    </author>
+    <author>
+      <name>Ryan M. Aydelott</name>
+    </author>
+    <author>
+      <name>Mathew J. Cherukara</name>
+    </author>
+    <author>
+      <name>Yine Sun</name>
+    </author>
+    <author>
+      <name>Michael D. Borland</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.13307v1</id>
+    <title>Suppressing Domain-Specific Hallucination in Construction LLMs: A Knowledge Graph Foundation for GraphRAG and QLoRA on River and Sediment Control Technical Standards</title>
+    <updated>2026-03-03T15:51:29Z</updated>
+    <link href="https://arxiv.org/abs/2603.13307v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.13307v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper addresses the challenge of answering technical questions derived from Japan's River and Sediment Control Technical Standards -- a multi-volume regulatory document covering survey, planning, design, and maintenance of river levees, dams, and sabo structures -- using open-source large language models running entirely on local hardware. We implement and evaluate three complementary approaches: Case A (plain 20B LLM baseline), Case B (8B LLM with QLoRA domain fine-tuning on 715 graph-derived QA pairs), and Case C (20B LLM augmented with a Neo4j knowledge graph via GraphRAG). All three cases use the Swallow series of Japanese-adapted LLMs and are evaluated on a 100-question benchmark spanning 8 technical categories, judged automatically by an independent LLM (Qwen2.5-14B, score 0--3). The key finding is a performance inversion: the 8B QLoRA fine-tuned model (Case B) achieves a judge average of 2.92/3 -- surpassing both the 20B plain baseline (Case A: 2.29/3, $+$0.63) and the 20B GraphRAG approach (Case C: 2.62/3, $+$0.30) -- while running at 3$\times$ faster latency (14.2s vs. 42.2s for Case A). GraphRAG provides moderate gains ($+$0.33 over baseline) but is outperformed by domain-specific fine-tuning in both quality and efficiency. We document the full engineering pipeline, including knowledge graph construction (200 nodes, 268 relations), QLoRA training data generation from Neo4j relations, training on a single GPU (16 GB VRAM) using unsloth, GGUF Q4_K_M quantisation and Ollama deployment, and the graph retrieval and re-ranking design. High-level engineering lessons are distilled in the main body; implementation pitfalls and toolchain details are documented in Supplementary Materials.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-03T15:51:29Z</published>
+    <arxiv:comment>17 pages, 5 figures, 8 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Takato Yasuno</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.22584v1</id>
+    <title>Towards Faithful Industrial RAG: A Reinforced Co-adaptation Framework for Advertising QA</title>
+    <updated>2026-02-26T03:35:09Z</updated>
+    <link href="https://arxiv.org/abs/2602.22584v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.22584v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industrial advertising question answering (QA) is a high-stakes task in which hallucinated content, particularly fabricated URLs, can lead to financial loss, compliance violations, and legal risk. Although Retrieval-Augmented Generation (RAG) is widely adopted, deploying it in production remains challenging because industrial knowledge is inherently relational, frequently updated, and insufficiently aligned with generation objectives. We propose a reinforced co-adaptation framework that jointly optimizes retrieval and generation through two components: (1) Graph-aware Retrieval (GraphRAG), which models entity-relation structure over a high-citation knowledge subgraph for multi-hop, domain-specific evidence selection; and (2) evidence-constrained reinforcement learning via Group Relative Policy Optimization (GRPO) with multi-dimensional rewards covering faithfulness, style compliance, safety, and URL validity. Experiments on an internal advertising QA dataset show consistent gains across expert-judged dimensions including accuracy, completeness, and safety, while reducing the hallucination rate by 72\%. A two-week online A/B test demonstrates a 28.6\% increase in like rate, a 46.2\% decrease in dislike rate, and a 92.7\% reduction in URL hallucination. The system has been running in production for over half a year and has served millions of QA interactions.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-26T03:35:09Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Wenwei Li</name>
+    </author>
+    <author>
+      <name>Ming Xu</name>
+    </author>
+    <author>
+      <name>Tianle Xia</name>
+    </author>
+    <author>
+      <name>Lingxiang Hu</name>
+    </author>
+    <author>
+      <name>Yiding Sun</name>
+    </author>
+    <author>
+      <name>Linfang Shang</name>
+    </author>
+    <author>
+      <name>Liqun Liu</name>
+    </author>
+    <author>
+      <name>Peng Shu</name>
+    </author>
+    <author>
+      <name>Huan Yu</name>
+    </author>
+    <author>
+      <name>Jie Jiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2511.08274v1</id>
+    <title>Multi-Agent GraphRAG: A Text-to-Cypher Framework for Labeled Property Graphs</title>
+    <updated>2025-11-11T14:04:00Z</updated>
+    <link href="https://arxiv.org/abs/2511.08274v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2511.08274v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>While Retrieval-Augmented Generation (RAG) methods commonly draw information from unstructured documents, the emerging paradigm of GraphRAG aims to leverage structured data such as knowledge graphs. Most existing GraphRAG efforts focus on Resource Description Framework (RDF) knowledge graphs, relying on triple representations and SPARQL queries. However, the potential of Cypher and Labeled Property Graph (LPG) databases to serve as scalable and effective reasoning engines within GraphRAG pipelines remains underexplored in current research literature. To fill this gap, we propose Multi-Agent GraphRAG, a modular LLM agentic system for text-to-Cypher query generation serving as a natural language interface to LPG-based graph data. Our proof-of-concept system features an LLM-based workflow for automated Cypher queries generation and execution, using Memgraph as the graph database backend. Iterative content-aware correction and normalization, reinforced by an aggregated feedback loop, ensures both semantic and syntactic refinement of generated queries. We evaluate our system on the CypherBench graph dataset covering several general domains with diverse types of queries. In addition, we demonstrate performance of the proposed workflow on a property graph derived from the IFC (Industry Foundation Classes) data, representing a digital twin of a building. This highlights how such an approach can bridge AI with real-world applications at scale, enabling industrial digital automation use cases.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-11-11T14:04:00Z</published>
+    <arxiv:comment>Code to be released</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Anton Gusarov</name>
+    </author>
+    <author>
+      <name>Anastasia Volkova</name>
+    </author>
+    <author>
+      <name>Valentin Khrulkov</name>
+    </author>
+    <author>
+      <name>Andrey Kuznetsov</name>
+    </author>
+    <author>
+      <name>Evgenii Maslov</name>
+    </author>
+    <author>
+      <name>Ivan Oseledets</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05254v3</id>
+    <title>TagRAG: Tag-guided Hierarchical Knowledge Graph Retrieval-Augmented Generation</title>
+    <updated>2026-05-02T13:19:46Z</updated>
+    <link href="https://arxiv.org/abs/2601.05254v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05254v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Retrieval-Augmented Generation enhances language models by retrieving external knowledge to support informed and grounded responses. However, traditional RAG methods rely on fragment-level retrieval, limiting their ability to address query-focused summarization queries. GraphRAG introduces a graph-based paradigm for global knowledge reasoning, yet suffers from inefficiencies in information extraction, costly resource consumption, and poor adaptability to incremental updates. To overcome these limitations, we propose TagRAG, a tag-guided hierarchical knowledge graph RAG framework designed for efficient global reasoning and scalable graph maintenance. TagRAG introduces two key components: (1) Tag Knowledge Graph Construction, which extracts object tags and their relationships from documents and organizes them into hierarchical domain tag chains for structured knowledge representation, and (2) Tag-Guided Retrieval-Augmented Generation, which retrieves domain-centric tag chains to localize and synthesize relevant knowledge during inference. This design significantly adapts to smaller language models, improves retrieval granularity, and supports efficient knowledge increment. Extensive experiments on UltraDomain datasets spanning Agriculture, Computer Science, Law, and cross-domain settings demonstrate that TagRAG achieves an average winning rate of 78.36% against baselines while maintaining about 14.6x construction and 1.9x retrieval efficiency compared with GraphRAG.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-18T08:24:49Z</published>
+    <arxiv:comment>Accepted by ACL 2026 Findings</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Wenbiao Tao</name>
+    </author>
+    <author>
+      <name>Xinyuan Li</name>
+    </author>
+    <author>
+      <name>Yunshi Lan</name>
+    </author>
+    <author>
+      <name>Weining Qian</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.04252v1</id>
+    <title>A Graph-Retrieval-Augmented Generation Framework Enhances Decision-Making in the Circular Economy</title>
+    <updated>2025-06-01T07:49:47Z</updated>
+    <link href="https://arxiv.org/abs/2506.04252v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.04252v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) hold promise for sustainable manufacturing, but often hallucinate industrial codes and emission factors, undermining regulatory and investment decisions. We introduce CircuGraphRAG, a retrieval-augmented generation (RAG) framework that grounds LLMs outputs in a domain-specific knowledge graph for the circular economy. This graph connects 117,380 industrial and waste entities with classification codes and GWP100 emission data, enabling structured multi-hop reasoning. Natural language queries are translated into SPARQL and verified subgraphs are retrieved to ensure accuracy and traceability. Compared with Standalone LLMs and Naive RAG, CircuGraphRAG achieves superior performance in single-hop and multi-hop question answering, with ROUGE-L F1 scores up to 1.0, while baseline scores below 0.08. It also improves efficiency, halving the response time and reducing token usage by 16% in representative tasks. CircuGraphRAG provides fact-checked, regulatory-ready support for circular economy planning, advancing reliable, low-carbon resource decision making.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-01T07:49:47Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yang Zhao</name>
+    </author>
+    <author>
+      <name>Chengxiao Dai</name>
+    </author>
+    <author>
+      <name>Dusit Niyato</name>
+    </author>
+    <author>
+      <name>Chuan Fu Tan</name>
+    </author>
+    <author>
+      <name>Keyi Xiang</name>
+    </author>
+    <author>
+      <name>Yueyang Wang</name>
+    </author>
+    <author>
+      <name>Zhiquan Yeo</name>
+    </author>
+    <author>
+      <name>Daren Tan Zong Loong</name>
+    </author>
+    <author>
+      <name>Jonathan Low Zhaozhi</name>
+    </author>
+    <author>
+      <name>Eugene H. Z. HO</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.24584v3</id>
+    <title>AutoChemSchematic AI: Agentic Physics-Aware Automation for Chemical Manufacturing Scale-Up</title>
+    <updated>2025-08-18T16:52:22Z</updated>
+    <link href="https://arxiv.org/abs/2505.24584v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.24584v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent advances in generative AI have accelerated the discovery of novel chemicals and materials. However, scaling these discoveries to industrial production remains a major bottleneck due to the synthesis gap -- the need to develop entirely new manufacturing processes. This challenge requires detailed engineering blueprints: PFDs for equipment layouts and material/energy flows, and PIDs for process plant operations. Current AI systems cannot yet reliably generate these critical engineering schematics, creating a fundamental obstacle to manufacturing scale-up of novel discoveries. We present a closed-loop, physics-aware framework for automated generation of industrially viable PFDs and PIDs. The framework integrates three key components: (1) domain-specialized small language models (SLMs) trained for auto-generation of PFDs and PIDs, (2) a hierarchical knowledge graph containing process flow and instrumentation descriptions for 1,020+ chemicals for Graph Retrieval-Augmented Generation (GRAG), and (3) an open-source chemical process simulator for modeling, simulation, optimization, and analysis of novel chemical processes. The SLMs are trained through a multi-stage pipeline on synthetic datasets, with process simulator-in-the-loop validation ensuring feasibility. To enhance computational efficiency, the framework implements structural pruning (width and depth) guided by importance heuristics to reduce language model size while preserving accuracy, followed by advanced inference optimizations including FlashAttention, Lookahead Decoding, PagedAttention with KV-cache quantization, and Test-Time Inference Scaling. Experimental results demonstrate that our framework generates simulator-validated process descriptions with high fidelity.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-30T13:32:00Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sakhinana Sagar Srinivas</name>
+    </author>
+    <author>
+      <name>Shivam Gupta</name>
+    </author>
+    <author>
+      <name>Venkataramana Runkana</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.19667v3</id>
+    <title>Tripartite-GraphRAG via Plugin Ontologies</title>
+    <updated>2025-09-09T10:38:54Z</updated>
+    <link href="https://arxiv.org/abs/2504.19667v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.19667v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have shown remarkable capabilities across various domains, yet they struggle with knowledge-intensive tasks in areas that demand factual accuracy, e.g. industrial automation and healthcare. Key limitations include their tendency to hallucinate, lack of source traceability (provenance), and challenges in timely knowledge updates. Combining language models with knowledge graphs (GraphRAG) offers promising avenues for overcoming these deficits. However, a major challenge lies in creating such a knowledge graph in the first place. Here, we propose a novel approach that combines LLMs with a tripartite knowledge graph representation, which is constructed by connecting complex, domain-specific objects via a curated ontology of corresponding, domain-specific concepts to relevant sections within chunks of text through a concept-anchored pre-analysis of source documents starting from an initial lexical graph. Subsequently, we formulate LLM prompt creation as an unsupervised node classification problem allowing for the optimization of information density, coverage, and arrangement of LLM prompts at significantly reduced lengths. An initial experimental evaluation of our approach on a healthcare use case, involving multi-faceted analyses of patient anamneses given a set of medical concepts as well as a series of clinical guideline literature, indicates its potential to optimize information density, coverage, and arrangement of LLM prompts while significantly reducing their lengths, which, in turn, may lead to reduced costs as well as more consistent and reliable LLM outputs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-28T10:43:35Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Michael Banf</name>
+    </author>
+    <author>
+      <name>Johannes Kuhn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.16813v1</id>
+    <title>LLM-assisted Graph-RAG Information Extraction from IFC Data</title>
+    <updated>2025-04-23T15:31:11Z</updated>
+    <link href="https://arxiv.org/abs/2504.16813v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.16813v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>IFC data has become the general building information standard for collaborative work in the construction industry. However, IFC data can be very complicated because it allows for multiple ways to represent the same product information. In this research, we utilise the capabilities of LLMs to parse the IFC data with Graph Retrieval-Augmented Generation (Graph-RAG) technique to retrieve building object properties and their relations. We will show that, despite limitations due to the complex hierarchy of the IFC data, the Graph-RAG parsing enhances generative LLMs like GPT-4o with graph-based knowledge, enabling natural language query-response retrieval without the need for a complex pipeline.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-23T15:31:11Z</published>
+    <arxiv:comment>2025 European Conference on Computing in Construction</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Sima Iranmanesh</name>
+    </author>
+    <author>
+      <name>Hadeel Saadany</name>
+    </author>
+    <author>
+      <name>Edlira Vakaj</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.05937v1</id>
+    <title>Accelerating Manufacturing Scale-Up from Material Discovery Using Agentic Web Navigation and Retrieval-Augmented AI for Process Engineering Schematics Design</title>
+    <updated>2024-12-08T13:36:42Z</updated>
+    <link href="https://arxiv.org/abs/2412.05937v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.05937v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Process Flow Diagrams (PFDs) and Process and Instrumentation Diagrams (PIDs) are critical tools for industrial process design, control, and safety. However, the generation of precise and regulation-compliant diagrams remains a significant challenge, particularly in scaling breakthroughs from material discovery to industrial production in an era of automation and digitalization. This paper introduces an autonomous agentic framework to address these challenges through a twostage approach involving knowledge acquisition and generation. The framework integrates specialized sub-agents for retrieving and synthesizing multimodal data from publicly available online sources and constructs ontological knowledge graphs using a Graph Retrieval-Augmented Generation (Graph RAG) paradigm. These capabilities enable the automation of diagram generation and open-domain question answering (ODQA) tasks with high contextual accuracy. Extensive empirical experiments demonstrate the frameworks ability to deliver regulation-compliant diagrams with minimal expert intervention, highlighting its practical utility for industrial applications.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-08T13:36:42Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Sakhinana Sagar Srinivas</name>
+    </author>
+    <author>
+      <name>Akash Das</name>
+    </author>
+    <author>
+      <name>Shivam Gupta</name>
+    </author>
+    <author>
+      <name>Venkataramana Runkana</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.04119v3</id>
+    <title>GRAF: Graph Retrieval Augmented by Facts for Romanian Legal Multi-Choice Question Answering</title>
+    <updated>2025-06-05T17:37:25Z</updated>
+    <link href="https://arxiv.org/abs/2412.04119v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.04119v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Pre-trained Language Models (PLMs) have shown remarkable performances in recent years, setting a new paradigm for NLP research and industry. The legal domain has received some attention from the NLP community partly due to its textual nature. Some tasks from this domain are represented by question-answering (QA) tasks. This work explores the legal domain Multiple-Choice QA (MCQA) for a low-resource language. The contribution of this work is multi-fold. We first introduce JuRO, the first openly available Romanian legal MCQA dataset, comprising three different examinations and a number of 10,836 total questions. Along with this dataset, we introduce CROL, an organized corpus of laws that has a total of 93 distinct documents with their modifications from 763 time spans, that we leveraged in this work for Information Retrieval (IR) techniques. Moreover, we are the first to propose Law-RoG, a Knowledge Graph (KG) for the Romanian language, and this KG is derived from the aforementioned corpus. Lastly, we propose a novel approach for MCQA, Graph Retrieval Augmented by Facts (GRAF), which achieves competitive results with generally accepted SOTA methods and even exceeds them in most settings.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-05T12:37:27Z</published>
+    <arxiv:comment>Accepted to ACL 2025 Findings</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Cristian-George Crăciun</name>
+    </author>
+    <author>
+      <name>Răzvan-Alexandru Smădu</name>
+    </author>
+    <author>
+      <name>Dumitru-Clementin Cercel</name>
+    </author>
+    <author>
+      <name>Mihaela-Claudia Cercel</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.09420v5</id>
+    <title>Enhancing Startup Success Predictions in Venture Capital: A GraphRAG Augmented Multivariate Time Series Method</title>
+    <updated>2025-03-22T12:47:44Z</updated>
+    <link href="https://arxiv.org/abs/2408.09420v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.09420v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the Venture Capital (VC) industry, predicting the success of startups is challenging due to limited financial data and the need for subjective revenue forecasts. Previous methods based on time series analysis often fall short as they fail to incorporate crucial inter-company relationships such as competition and collaboration. To fill the gap, this paper aims to introduce a novel approach using GraphRAG augmented time series model. With GraphRAG, time series predictive methods are enhanced by integrating these vital relationships into the analysis framework, allowing for a more dynamic understanding of the startup ecosystem in venture capital. Our experimental results demonstrate that our model significantly outperforms previous models in startup success predictions.</summary>
+    <category term="q-fin.CP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-18T09:31:13Z</published>
+    <arxiv:comment>ICLR 2025 Financial AI</arxiv:comment>
+    <arxiv:primary_category term="q-fin.CP"/>
+    <author>
+      <name>Zitian Gao</name>
+    </author>
+    <author>
+      <name>Yihao Xiao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.08921v2</id>
+    <title>Graph Retrieval-Augmented Generation: A Survey</title>
+    <updated>2024-09-10T15:38:56Z</updated>
+    <link href="https://arxiv.org/abs/2408.08921v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.08921v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently, Retrieval-Augmented Generation (RAG) has achieved remarkable success in addressing the challenges of Large Language Models (LLMs) without necessitating retraining. By referencing an external knowledge base, RAG refines LLM outputs, effectively mitigating issues such as ``hallucination'', lack of domain-specific knowledge, and outdated information. However, the complex structure of relationships among different entities in databases presents challenges for RAG systems. In response, GraphRAG leverages structural information across entities to enable more precise and comprehensive retrieval, capturing relational knowledge and facilitating more accurate, context-aware responses. Given the novelty and potential of GraphRAG, a systematic review of current technologies is imperative. This paper provides the first comprehensive overview of GraphRAG methodologies. We formalize the GraphRAG workflow, encompassing Graph-Based Indexing, Graph-Guided Retrieval, and Graph-Enhanced Generation. We then outline the core technologies and training methods at each stage. Additionally, we examine downstream tasks, application domains, evaluation methodologies, and industrial use cases of GraphRAG. Finally, we explore future research directions to inspire further inquiries and advance progress in the field. In order to track recent progress in this field, we set up a repository at \url{https://github.com/pengboci/GraphRAG-Survey}.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-15T12:20:24Z</published>
+    <arxiv:comment>Ongoing work. Compared to the first version, several references have been added and a GitHub repository link has been provided</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Boci Peng</name>
+    </author>
+    <author>
+      <name>Yun Zhu</name>
+    </author>
+    <author>
+      <name>Yongchao Liu</name>
+    </author>
+    <author>
+      <name>Xiaohe Bo</name>
+    </author>
+    <author>
+      <name>Haizhou Shi</name>
+    </author>
+    <author>
+      <name>Chuntao Hong</name>
+    </author>
+    <author>
+      <name>Yan Zhang</name>
+    </author>
+    <author>
+      <name>Siliang Tang</name>
+    </author>
+  </entry>
+</feed>

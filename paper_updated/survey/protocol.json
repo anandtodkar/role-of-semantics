@@ -1,0 +1,268 @@
+{
+  "version": "1.1.1",
+  "frozen_utc": "2026-10-20",
+  "changes": "1.1.0: window 2021-2026 with foundational work via snowballing; families F6-F8 and R1 added; Crossref added as relevance-capped open source. 1.1.1: IEEE Xplore command-search strings for all families (unfielded terms search All Metadata); search terms unchanged.",
+  "title": "Engineering semantics for trustworthy industrial AI agents: systematic state-of-the-art review",
+  "research_questions": {
+    "RQ1": "What engineering-information capabilities are required for industrial AI agents to ground observations and actions?",
+    "RQ2": "Which industrial standards, information models, semantic technologies and knowledge representations provide these capabilities?",
+    "RQ3": "How do existing industrial AI-agent architectures obtain identity, units, topology, behaviour, constraints, provenance and runtime state?",
+    "RQ4": "Which engineering capabilities remain missing or weakly supported in current industrial-agent research?",
+    "RQ5": "What architectural patterns are emerging for combining probabilistic AI reasoning with deterministic engineering validation?",
+    "RQ6": "What empirical evidence exists that engineering semantics improve grounding, action correctness, transferability, auditability or context efficiency?"
+  },
+  "time_window": {
+    "from_year": 2021,
+    "to_year": 2026
+  },
+  "time_window_rationale": "Instruction-tuned LLMs and tool-using agents; foundational work (RAG, ReAct, Toolformer, SHACL, standards) enters through backward snowballing and the specification stream.",
+  "languages": [
+    "en"
+  ],
+  "evidence_streams": {
+    "specifications": "Normative documents from IEC, ISO, ISA, VDI/VDE/NAMUR, W3C, ETSI, OPC Foundation, IDTA, ECLASS, GS1, IDSA; scored on what they standardise (specification capability).",
+    "peer_reviewed": "Journal, conference and book-chapter literature; eligible for Matrix B and RQ6 evidence.",
+    "preprints": "arXiv and posted content; coded separately, labelled non-peer-reviewed, never pooled as equivalent evidence.",
+    "vendor_material": "Product documentation and demonstrations; cited only for implementation capability, never as evaluation evidence."
+  },
+  "databases": {
+    "subscription_run_by_authors": [
+      "ieee_xplore",
+      "scopus",
+      "web_of_science",
+      "acm_dl",
+      "sciencedirect",
+      "springerlink"
+    ],
+    "open_api_run_by_tooling": [
+      "openalex",
+      "arxiv",
+      "crossref",
+      "semanticscholar"
+    ],
+    "relevance_capped": [
+      "crossref",
+      "semanticscholar"
+    ],
+    "non_peer_reviewed": [
+      "arxiv"
+    ]
+  },
+  "harvest": {
+    "max_records_per_query": 2000,
+    "max_records_crossref": 300,
+    "max_records_semanticscholar": 300,
+    "double_code_fraction": 0.2,
+    "seed": 20261020
+  },
+  "automation_rules": {
+    "description": "Deterministic pre-screening on title+abstract (PRISMA 2020: records marked ineligible by automation tools). Case-insensitive regular expressions; a record must match both groups.",
+    "A1_ai_term": "large language model|\\bllms?\\b|foundation model|generative ai|\\bgpt|chatgpt|\\bagents?\\b|agentic|multi-agent|knowledge graph|ontolog|retrieval[- ]augmented|\\brag\\b|graphrag|neuro-?symbolic|semantic (web|interoperability|grounding)|function calling|tool use",
+    "A2_industrial_term": "industr|manufactur|automation|\\bplcs?\\b|cyber-physical|production|factory|factories|process control|opc[ -]?ua|asset administration shell|automationml|robot|maintenance|\\bplant|engineering|control system|iec 61131|scada|\\bmes\\b"
+  },
+  "search_families": [
+    {
+      "id": "F1_industrial_agents",
+      "description": "LLM or foundation-model agents in industrial automation, manufacturing and cyber-physical systems",
+      "queries": {
+        "openalex": "(\"large language model\" OR LLM OR \"foundation model\" OR \"agentic AI\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR PLC) AND agent",
+        "arxiv": "(all:\"large language model\" OR all:LLM OR all:\"agentic\") AND (all:\"industrial automation\" OR all:manufacturing OR all:\"cyber-physical\" OR all:PLC) AND all:agent",
+        "crossref": [
+          "large language model agent industrial automation",
+          "LLM agent manufacturing system",
+          "agentic AI cyber-physical production system",
+          "LLM PLC control code agent"
+        ],
+        "ieee_xplore": "(\"large language model\" OR llm OR \"foundation model\" OR \"agentic ai\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR plc) AND agent",
+        "scopus": "TITLE-ABS-KEY((\"large language model\" OR llm OR \"foundation model\" OR \"agentic ai\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR plc) AND agent)",
+        "web_of_science": "TS=((\"large language model\" OR LLM OR \"foundation model\" OR \"agentic AI\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR PLC) AND agent)"
+      }
+    },
+    {
+      "id": "F2_knowledge_graphs",
+      "description": "Industrial and engineering knowledge graphs or ontologies combined with LLMs",
+      "queries": {
+        "openalex": "(\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing OR engineering) AND (\"large language model\" OR LLM)",
+        "arxiv": "(all:\"knowledge graph\" OR all:ontology) AND (all:\"industrial automation\" OR all:manufacturing) AND (all:\"large language model\" OR all:LLM)",
+        "crossref": [
+          "industrial knowledge graph large language model",
+          "manufacturing ontology LLM",
+          "engineering knowledge graph LLM automation"
+        ],
+        "scopus": "TITLE-ABS-KEY((\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing OR engineering) AND (\"large language model\" OR llm))",
+        "web_of_science": "TS=((\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing OR engineering) AND (\"large language model\" OR LLM))",
+        "ieee_xplore": "(\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing OR engineering) AND (\"large language model\" OR llm)"
+      }
+    },
+    {
+      "id": "F3_information_models",
+      "description": "OPC UA, AAS, AutomationML and related information models with LLMs or agents",
+      "queries": {
+        "openalex": "(\"OPC UA\" OR \"Asset Administration Shell\" OR AutomationML OR \"Module Type Package\") AND (\"large language model\" OR LLM OR \"generative AI\" OR agent)",
+        "arxiv": "(all:\"OPC UA\" OR all:\"Asset Administration Shell\" OR all:AutomationML) AND (all:\"large language model\" OR all:LLM OR all:agent)",
+        "crossref": [
+          "OPC UA large language model",
+          "asset administration shell large language model",
+          "AutomationML LLM",
+          "OPC UA information model agent generative AI"
+        ],
+        "scopus": "TITLE-ABS-KEY((\"OPC UA\" OR \"Asset Administration Shell\" OR automationml OR \"Module Type Package\") AND (\"large language model\" OR llm OR \"generative AI\" OR agent))",
+        "web_of_science": "TS=((\"OPC UA\" OR \"Asset Administration Shell\" OR AutomationML OR \"Module Type Package\") AND (\"large language model\" OR LLM OR \"generative AI\" OR agent))",
+        "ieee_xplore": "(\"OPC UA\" OR \"Asset Administration Shell\" OR automationml OR \"Module Type Package\") AND (\"large language model\" OR llm OR \"generative AI\" OR agent)"
+      }
+    },
+    {
+      "id": "F4_runtime_validation",
+      "description": "Runtime validation, deterministic guardrails and action checking of LLM outputs in control and CPS",
+      "queries": {
+        "openalex": "(\"large language model\" OR LLM) AND (validation OR guardrail OR verification OR \"formal methods\") AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR PLC OR robot)",
+        "arxiv": "(all:\"large language model\" OR all:LLM) AND (all:validation OR all:guardrail OR all:verification) AND (all:\"industrial automation\" OR all:\"control system\" OR all:PLC OR all:\"cyber-physical\")",
+        "crossref": [
+          "LLM guardrail industrial control system",
+          "verification of LLM generated PLC code",
+          "safe LLM action validation cyber-physical"
+        ],
+        "scopus": "TITLE-ABS-KEY((\"large language model\" OR llm) AND (validation OR guardrail OR verification OR \"formal methods\") AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR plc))",
+        "web_of_science": "TS=((\"large language model\" OR LLM) AND (validation OR guardrail OR verification OR \"formal methods\") AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR PLC))",
+        "ieee_xplore": "(\"large language model\" OR llm) AND (validation OR guardrail OR verification OR \"formal methods\") AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR plc)"
+      }
+    },
+    {
+      "id": "F5_semantic_grounding",
+      "description": "Semantic grounding and semantic interoperability for LLMs or agents in industry",
+      "queries": {
+        "openalex": "(\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\" OR \"semantic web\") AND (\"large language model\" OR LLM OR agent) AND (industrial OR manufacturing OR automation)",
+        "arxiv": "(all:\"semantic grounding\" OR all:\"semantic interoperability\" OR all:\"semantic web\") AND (all:\"large language model\" OR all:LLM OR all:agent) AND (all:industrial OR all:manufacturing)",
+        "crossref": [
+          "semantic interoperability large language model industry 4.0",
+          "semantic grounding LLM industrial data"
+        ],
+        "scopus": "TITLE-ABS-KEY((\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\" OR \"semantic web\") AND (\"large language model\" OR llm OR agent) AND (industrial OR manufacturing OR automation))",
+        "web_of_science": "TS=((\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\" OR \"semantic web\") AND (\"large language model\" OR LLM OR agent) AND (industrial OR manufacturing OR automation))",
+        "ieee_xplore": "(\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\" OR \"semantic web\") AND (\"large language model\" OR llm OR agent) AND (industrial OR manufacturing OR automation)"
+      }
+    },
+    {
+      "id": "F6_graph_rag",
+      "description": "Graph-RAG and KG-RAG applied to industrial or engineering data",
+      "queries": {
+        "openalex": "(GraphRAG OR \"graph retrieval-augmented\" OR \"knowledge graph retrieval-augmented\" OR \"KG-RAG\") AND (industrial OR manufacturing OR engineering OR maintenance)",
+        "arxiv": "(all:GraphRAG OR all:\"graph retrieval-augmented\" OR all:\"knowledge graph retrieval-augmented\") AND (all:industrial OR all:manufacturing OR all:maintenance)",
+        "crossref": [
+          "graph retrieval augmented generation manufacturing",
+          "knowledge graph RAG industrial maintenance"
+        ],
+        "scopus": "TITLE-ABS-KEY((graphrag OR \"graph retrieval-augmented\" OR \"knowledge graph retrieval-augmented\" OR \"kg-rag\") AND (industrial OR manufacturing OR engineering OR maintenance))",
+        "web_of_science": "TS=((GraphRAG OR \"graph retrieval-augmented\" OR \"knowledge graph retrieval-augmented\" OR \"KG-RAG\") AND (industrial OR manufacturing OR engineering OR maintenance))",
+        "ieee_xplore": "(graphrag OR \"graph retrieval-augmented\" OR \"knowledge graph retrieval-augmented\" OR \"kg-rag\") AND (industrial OR manufacturing OR engineering OR maintenance)"
+      }
+    },
+    {
+      "id": "F7_neurosymbolic_tools",
+      "description": "Neurosymbolic, ontology-grounded and typed-tool industrial agents",
+      "queries": {
+        "openalex": "(neurosymbolic OR \"neuro-symbolic\" OR \"ontology-grounded\" OR \"function calling\" OR \"tool use\") AND (\"large language model\" OR LLM) AND (industrial OR manufacturing OR automation)",
+        "arxiv": "(all:neurosymbolic OR all:\"neuro-symbolic\" OR all:\"function calling\" OR all:\"tool use\") AND (all:\"large language model\" OR all:LLM) AND (all:industrial OR all:manufacturing OR all:automation)",
+        "crossref": [
+          "neurosymbolic AI industrial automation LLM",
+          "LLM function calling industrial automation",
+          "ontology grounded LLM agent manufacturing"
+        ],
+        "scopus": "TITLE-ABS-KEY((neurosymbolic OR \"neuro-symbolic\" OR \"ontology-grounded\" OR \"function calling\" OR \"tool use\") AND (\"large language model\" OR llm) AND (industrial OR manufacturing OR automation))",
+        "web_of_science": "TS=((neurosymbolic OR \"neuro-symbolic\" OR \"ontology-grounded\" OR \"function calling\" OR \"tool use\") AND (\"large language model\" OR LLM) AND (industrial OR manufacturing OR automation))",
+        "ieee_xplore": "(neurosymbolic OR \"neuro-symbolic\" OR \"ontology-grounded\" OR \"function calling\" OR \"tool use\") AND (\"large language model\" OR llm) AND (industrial OR manufacturing OR automation)"
+      }
+    },
+    {
+      "id": "F8_safety_provenance",
+      "description": "Industrial AI safety, provenance and trustworthiness of LLM-based decisions",
+      "queries": {
+        "openalex": "(\"large language model\" OR LLM OR \"AI agent\") AND (safety OR provenance OR trustworthy OR traceability) AND (\"industrial automation\" OR \"process industry\" OR \"industrial control\")",
+        "arxiv": "(all:\"large language model\" OR all:LLM) AND (all:safety OR all:provenance OR all:trustworthy) AND (all:\"industrial automation\" OR all:\"process industry\" OR all:\"industrial control\")",
+        "crossref": [
+          "trustworthy LLM industrial automation safety",
+          "provenance traceability LLM industrial decision"
+        ],
+        "scopus": "TITLE-ABS-KEY((\"large language model\" OR llm OR \"AI agent\") AND (safety OR provenance OR trustworthy OR traceability) AND (\"industrial automation\" OR \"process industry\" OR \"industrial control\"))",
+        "web_of_science": "TS=((\"large language model\" OR LLM OR \"AI agent\") AND (safety OR provenance OR trustworthy OR traceability) AND (\"industrial automation\" OR \"process industry\" OR \"industrial control\"))",
+        "ieee_xplore": "(\"large language model\" OR llm OR \"AI agent\") AND (safety OR provenance OR trustworthy OR traceability) AND (\"industrial automation\" OR \"process industry\" OR \"industrial control\")"
+      }
+    },
+    {
+      "id": "R1_related_surveys",
+      "description": "Surveys and reviews closest to this survey (gap analysis)",
+      "queries": {
+        "openalex": "(survey OR review OR \"state of the art\") AND (\"large language model\" OR LLM OR \"generative AI\" OR \"knowledge graph\" OR \"semantic interoperability\") AND (\"industrial automation\" OR manufacturing OR \"industry 4.0\")",
+        "arxiv": "(ti:survey OR ti:review) AND (all:\"large language model\" OR all:LLM OR all:\"knowledge graph\") AND (all:\"industrial automation\" OR all:manufacturing OR all:\"industry 4.0\")",
+        "crossref": [
+          "survey large language models manufacturing",
+          "review large language models industrial automation",
+          "survey knowledge graphs manufacturing",
+          "review semantic interoperability industry 4.0",
+          "survey asset administration shell",
+          "review OPC UA information modeling",
+          "survey LLM agents cyber-physical systems"
+        ],
+        "scopus": "TITLE((survey OR review OR \"state of the art\")) AND TITLE-ABS-KEY((\"large language model\" OR llm OR \"generative AI\" OR \"knowledge graph\" OR \"semantic interoperability\") AND (\"industrial automation\" OR manufacturing OR \"industry 4.0\"))",
+        "web_of_science": "TI=(survey OR review OR \"state of the art\") AND TS=((\"large language model\" OR LLM OR \"generative AI\" OR \"knowledge graph\" OR \"semantic interoperability\") AND (\"industrial automation\" OR manufacturing OR \"industry 4.0\"))",
+        "ieee_xplore": "(\"Document Title\":survey OR \"Document Title\":review OR \"Document Title\":\"state of the art\") AND ((\"large language model\" OR llm OR \"generative AI\" OR \"knowledge graph\" OR \"semantic interoperability\") AND (\"industrial automation\" OR manufacturing OR \"industry 4.0\"))"
+      }
+    }
+  ],
+  "inclusion": {
+    "I1": "Addresses industrial AI or LLM agents, or engineering semantics used by them",
+    "I2": "Concerns industrial semantic interoperability, engineering knowledge graphs or industrial information models with an AI/agent consumer",
+    "I3": "Concerns grounding, tool use, retrieval or runtime action validation in an industrial/engineering context",
+    "I4": "Concerns engineering constraints, provenance or state models used to check AI outputs",
+    "I5": "Survey or review of any of the above (gap analysis only, not Matrix B)"
+  },
+  "exclusion": {
+    "E1": "No industrial or engineering context (generic, consumer or enterprise chatbots)",
+    "E2": "Generic RAG or KG construction without engineering semantics",
+    "E3": "Not about AI agents, LLMs or their information supply",
+    "E4": "Duplicate or superseded version (conference version of a later journal paper)",
+    "E5": "Insufficient documentation to code (abstract only, editorial, poster without method)",
+    "E6": "Full text not accessible",
+    "E7": "Not in English or outside the time window"
+  },
+  "quality_items": {
+    "Q1": "Architecture and information sources are described sufficiently to code AUF capabilities",
+    "Q2": "Evaluation method is stated (none, simulation, testbed, physical plant)",
+    "Q3": "Data, tasks or artefacts are available or reproducibly described",
+    "Q4": "Baselines or ablations isolate the semantic contribution",
+    "Q5": "Limitations and safety boundaries are discussed"
+  },
+  "quality_scale": "0 no, 1 partial, 2 yes",
+  "capability_levels": {
+    "specification": "what the standard or language can express by default",
+    "implementation": "what a cited implementation or deployment profile exposes",
+    "runtime": "what the agent actually receives or checks at decision time"
+  },
+  "agent_coding": {
+    "grounding_category": {
+      "A": "prompt or document grounded",
+      "B": "typed API or tool grounded",
+      "C": "knowledge-graph grounded",
+      "D": "semantically validated proposals",
+      "E": "controller-authoritative (validation plus dispatch gate and controller checks)"
+    },
+    "capability_scale": "0 absent, 1 implicit or prose only, 2 explicit machine-readable, 3 explicit and checked at runtime; code only what the paper demonstrates, 'nr' if not reported",
+    "fields": [
+      "application_domain",
+      "grounding_source",
+      "retrieval_query",
+      "context_management",
+      "runtime_validation",
+      "controller_authority",
+      "evaluation_level",
+      "dataset_benchmark",
+      "reproducibility"
+    ],
+    "evaluation_levels": [
+      "none",
+      "simulation",
+      "testbed",
+      "physical"
+    ]
+  }
+}

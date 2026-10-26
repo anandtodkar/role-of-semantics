@@ -1,0 +1,64 @@
+\section{Controlled Case Study}
+\label{sec:case}
+
+The case study asks whether capability gaps identified by AUF manifest as observable
+grounding and validation failures. It uses an authored two-line bottling plant (17 assets,
+73 signals, 22 shared descriptions, metric and imperial units, four interlocks, 14 feed
+relations) with 35 tasks that declare their required facts and 137 proposed actions
+(84 injected faults in 12 families, 53 legal). Context conditions C0--C4 expose
+progressively more capabilities: tags and values; descriptions and unit symbols; a typed
+\opcua{}/AAS-like profile; units, topology and taxonomy; and behaviour, guards and
+provenance. Validator tiers G0--G4 check the same capability sets. Sufficiency is the
+fraction of tasks whose declared facts are all present within a 6,000-token budget
+(deterministic surrogate tokenizer); it is not a bound on model accuracy. Tasks, faults and
+validators share one authored specification, so the study illustrates mechanisms and is
+not an external validation.
+
+\input{tables/cs1_exposure}
+
+\paragraph{CS1: Progressive exposure.} Top-1 grounding rises from \CsTopCOne{} with
+descriptions to \CsTopCTwo{} with a typed profile, yet sufficiency at C2 is only
+\CsSuffCTwo{}, rising to \CsSuffCFour{} at C4 (Table~\ref{tab:cs1}). Validator recall rises
+from \CsRecallGTwo{} at G2, which also raises false alarms on \CsFPRGTwo{} of legal actions
+through literal unit comparison, to \CsRecallGFour{} at G4 without false alarms. Typing
+resolves the target but not whether the action is admissible.
+
+\input{tables/cs2_retrieval}
+\input{tables/cs3_ablation}
+
+\paragraph{CS2: Retrieval.} At equal budget, graph traversal yields the highest
+sufficiency where relations exist, membership-scoped retrieval is cheapest but omits
+evidence, and lexical retrieval cannot compensate for capabilities the context lacks
+(Table~\ref{tab:cs2}). Evidence availability and retrieval are separate variables.
+
+\paragraph{CS3: Capability removal.} Removing one capability at a time reduces sufficiency,
+recall or both, and turns detections into abstentions on missing evidence
+(Table~\ref{tab:cs3}). Removing unit semantics leaves task sufficiency unchanged in this
+budget yet causes the largest loss of fault recall: the effect of a capability depends on
+whether it is needed to answer or to check.
+
+\input{tables/cs4_equal}
+
+\paragraph{CS4: Representation versus information.} A procedural validator and a SHACL
+validator given identical engineering facts produce \CsDisagreements{} raw-family
+disagreements (Table~\ref{tab:cs4}). The measured benefit lies in explicit engineering
+evidence, not in the validation technology; reuse, auditability and maintenance effort
+remain to be measured.
+
+\input{tables/cs5_opcua_aas}
+
+\paragraph{CS5: OPC~UA versus AAS.} The plant's \opcua{} NodeSet2 and AAS v3 projections
+were parsed back into \CsFacts{} matched facts (Table~\ref{tab:cs5}). The \opcua{} profile
+recovers \CsOpcuaFacts{} (\CsOpcuaPct{}), including access levels, engineering ranges and
+hierarchy; the AAS profile recovers \CsAasFacts{} (\CsAasPct{}), including semantic
+identifiers, nameplates, operating state and values; their union reaches \CsUnionFacts{}
+(\CsUnionPct{}). \opcua{} \texttt{EUInformation} is attached to the unit, so
+\CsQkConflicts{} count-type signals report the unit's quantity kind rather than the
+signal's. Neither projection carries flow topology, legal commands, interlocks or
+observation timestamps, which C4 requires. The serialisations cost \CsOpcuaTokens{} and
+\CsAasTokens{} surrogate tokens. Both standards can express more through companion models,
+qualifiers or additional submodels; the result shows that the emitted profiles are
+complementary and jointly incomplete, not that either standard is inferior. A second,
+derived pilot, an IIH-attributed KUKA robot NodeSet and its loss-aware AAS projection,
+retains all \CsKukaRetained{} of \CsKukaFacts{} source facts, including 90 nodes and
+277 references; it verifies conversion fidelity only.

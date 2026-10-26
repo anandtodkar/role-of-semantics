@@ -1,0 +1,1642 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/vO0ViLFB6SwJrkJb9SwDW4tpyhQ</id>
+  <title>arXiv Query: search_query=(all:"large language model" OR all:LLM) AND (all:"industrial automation" OR all:manufacturing OR all:"cyber-physical" OR all:PLC) AND all:agent&amp;id_list=&amp;start=100&amp;max_results=100</title>
+  <updated>2026-10-20T19:47:19Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22large+language+model%22+OR+all:LLM)+AND+((all:%22industrial+automation%22+OR+(all:manufacturing+OR+(all:%22cyber-physical%22+OR+all:PLC)))+AND+all:agent)&amp;start=100&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>157</opensearch:totalResults>
+  <opensearch:startIndex>100</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2510.07363v2</id>
+    <title>L2M-AID: Autonomous Cyber-Physical Defense by Fusing Semantic Reasoning of Large Language Models with Multi-Agent Reinforcement Learning (Preprint)</title>
+    <updated>2025-10-14T07:56:55Z</updated>
+    <link href="https://arxiv.org/abs/2510.07363v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.07363v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing integration of Industrial IoT (IIoT) exposes critical cyber-physical systems to sophisticated, multi-stage attacks that elude traditional defenses lacking contextual awareness. This paper introduces L2M-AID, a novel framework for Autonomous Industrial Defense using LLM-empowered, Multi-agent reinforcement learning. L2M-AID orchestrates a team of collaborative agents, each driven by a Large Language Model (LLM), to achieve adaptive and resilient security. The core innovation lies in the deep fusion of two AI paradigms: we leverage an LLM as a semantic bridge to translate vast, unstructured telemetry into a rich, contextual state representation, enabling agents to reason about adversary intent rather than merely matching patterns. This semantically-aware state empowers a Multi-Agent Reinforcement Learning (MARL) algorithm, MAPPO, to learn complex cooperative strategies. The MARL reward function is uniquely engineered to balance security objectives (threat neutralization) with operational imperatives, explicitly penalizing actions that disrupt physical process stability. To validate our approach, we conduct extensive experiments on the benchmark SWaT dataset and a novel synthetic dataset generated based on the MITRE ATT&amp;CK for ICS framework. Results demonstrate that L2M-AID significantly outperforms traditional IDS, deep learning anomaly detectors, and single-agent RL baselines across key metrics, achieving a 97.2% detection rate while reducing false positives by over 80% and improving response times by a factor of four. Crucially, it demonstrates superior performance in maintaining physical process stability, presenting a robust new paradigm for securing critical national infrastructure.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-08T17:46:39Z</published>
+    <arxiv:comment>This preprint was submitted to IEEE TrustCom 2025. The accepted version will be published under copyright 2025 IEEE</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Tianxiang Xu</name>
+    </author>
+    <author>
+      <name>Zhichao Wen</name>
+    </author>
+    <author>
+      <name>Xinyu Zhao</name>
+    </author>
+    <author>
+      <name>Jun Wang</name>
+    </author>
+    <author>
+      <name>Yan Li</name>
+    </author>
+    <author>
+      <name>Chang Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.06343v2</id>
+    <title>Leveraging Large Language Models for Cybersecurity Risk Assessment -- A Case from Forestry Cyber-Physical Systems</title>
+    <updated>2025-10-11T19:52:40Z</updated>
+    <link href="https://arxiv.org/abs/2510.06343v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.06343v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In safety-critical software systems, cybersecurity activities become essential, with risk assessment being one of the most critical. In many software teams, cybersecurity experts are either entirely absent or represented by only a small number of specialists. As a result, the workload for these experts becomes high, and software engineers would need to conduct cybersecurity activities themselves. This creates a need for a tool to support cybersecurity experts and engineers in evaluating vulnerabilities and threats during the risk assessment process. This paper explores the potential of leveraging locally hosted large language models (LLMs) with retrieval-augmented generation to support cybersecurity risk assessment in the forestry domain while complying with data protection and privacy requirements that limit external data sharing. We performed a design science study involving 12 experts in interviews, interactive sessions, and a survey within a large-scale project. The results demonstrate that LLMs can assist cybersecurity experts by generating initial risk assessments, identifying threats, and providing redundancy checks. The results also highlight the necessity for human oversight to ensure accuracy and compliance. Despite trust concerns, experts were willing to utilize LLMs in specific evaluation and assistance roles, rather than solely relying on their generative capabilities. This study provides insights that encourage the use of LLM-based agents to support the risk assessment process of cyber-physical systems in safety-critical domains.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-07T18:07:16Z</published>
+    <arxiv:comment>Accepted at Autonomous Agents in Software Engineering (AgenticSE) Workshop, co-located with ASE 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Fikret Mert Gultekin</name>
+    </author>
+    <author>
+      <name>Oscar Lilja</name>
+    </author>
+    <author>
+      <name>Ranim Khojah</name>
+    </author>
+    <author>
+      <name>Rebekka Wohlrab</name>
+    </author>
+    <author>
+      <name>Marvin Damschen</name>
+    </author>
+    <author>
+      <name>Mazen Mohamad</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.03859v1</id>
+    <title>Adaptive and Explainable AI Agents for Anomaly Detection in Critical IoT Infrastructure using LLM-Enhanced Contextual Reasoning</title>
+    <updated>2025-10-04T16:12:45Z</updated>
+    <link href="https://arxiv.org/abs/2510.03859v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.03859v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ensuring that critical IoT systems function safely and smoothly depends a lot on finding anomalies quickly. As more complex systems, like smart healthcare, energy grids and industrial automation, appear, it is easier to see the shortcomings of older methods of detection. Monitoring failures usually happen in dynamic, high dimensional situations, especially when data is incomplete, messy or always evolving. Such limits point out the requirement for adaptive, intelligent systems that always improve and think. LLMs are now capable of significantly changing how context is understood and semantic inference is done across all types of data. This proposal suggests using an LLM supported contextual reasoning method along with XAI agents to improve how anomalies are found in significant IoT environments. To discover hidden patterns and notice inconsistencies in data streams, it uses attention methods, avoids dealing with details from every time step and uses memory buffers with meaning. Because no code AI stresses transparency and interpretability, people can check and accept the AI's decisions, helping ensure AI follows company policies. The two architectures are put together in a test that compares the results of the traditional model with those of the suggested LLM enhanced model. Important measures to check are the accuracy of detection, how much inaccurate information is included in the results, how clearly the findings can be read and how fast the system responds under different test situations. The metaheuristic is tested in simulations of real world smart grid and healthcare contexts to check its adaptability and reliability. From the study, we see that the new approach performs much better than most existing models in both accuracy and interpretation, so it could be a good fit for future anomaly detection tasks in IoT</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-04T16:12:45Z</published>
+    <arxiv:comment>22 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Raghav Sharma</name>
+    </author>
+    <author>
+      <name>Manan Mehta</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.02567v3</id>
+    <title>Agentic Additive Manufacturing Alloy Evaluation</title>
+    <updated>2026-01-06T15:11:53Z</updated>
+    <link href="https://arxiv.org/abs/2510.02567v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.02567v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agentic systems enable the intelligent use of research tooling, augmenting a researcher's ability to investigate and propose novel solutions to existing problems. Within Additive Manufacturing (AM), alloy selection and evaluation remains a complex challenge, often requiring expertise in the various domains of materials science, thermodynamic simulations, and experimental analysis. Large Language Model (LLM) enabled agents can facilitate this endeavor by utilizing their extensive knowledge base to dispatch tool calls via Model Context Protocol (MCP) to perform actions such as thermophysical property diagram calculations and lack of fusion process map generation. In addition, the multi-agent system can effectively reason through complex user prompts and provide analysis on the lack of fusion process window of common alloys such as SS316L and IN718 along with proposed composition variants of known alloys. These agents can dynamically adjust their task trajectory to the outcomes of tool call results, effectively enabling autonomous decision-making in practical environments. This work aims to showcase the benefits of adopting a LLM enabled multi-agent system to automate and accelerate the task of evaluating proposed additive manufacturing alloys, both novel and known.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-02T21:06:04Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Additive Manufacturing Letters, Vol. 17, January 2026, Article 100355</arxiv:journal_ref>
+    <author>
+      <name>Peter Pak</name>
+    </author>
+    <author>
+      <name>Achuth Chandrasekhar</name>
+    </author>
+    <author>
+      <name>Amir Barati Farimani</name>
+    </author>
+    <arxiv:doi>10.1016/j.addlet.2026.100355</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.addlet.2026.100355" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.20705v1</id>
+    <title>Building Information Models to Robot-Ready Site Digital Twins (BIM2RDT): An Agentic AI Safety-First Framework</title>
+    <updated>2025-09-25T03:12:42Z</updated>
+    <link href="https://arxiv.org/abs/2509.20705v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.20705v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The adoption of cyber-physical systems and jobsite intelligence that connects design models, real-time site sensing, and autonomous field operations can dramatically enhance digital management in the construction industry. This paper introduces BIM2RDT (Building Information Models to Robot-Ready Site Digital Twins), an agentic artificial intelligence (AI) framework designed to transform static Building Information Modeling (BIM) into dynamic, robot-ready digital twins (DTs) that prioritize safety during execution. The framework bridges the gap between pre-existing BIM data and real-time site conditions by integrating three key data streams: geometric and semantic information from BIM models, activity data from IoT sensor networks, and visual-spatial data collected by robots during site traversal. The methodology introduces Semantic-Gravity ICP (SG-ICP), a point cloud registration algorithm that leverages large language model (LLM) reasoning. Unlike traditional methods, SG-ICP utilizes an LLM to infer object-specific, plausible orientation priors based on BIM semantics, improving alignment accuracy by avoiding convergence on local minima. This creates a feedback loop where robot-collected data updates the DT, which in turn optimizes paths for missions. The framework employs YOLOE object detection and Shi-Tomasi corner detection to identify and track construction elements while using BIM geometry as a priori maps. The framework also integrates real-time Hand-Arm Vibration (HAV) monitoring, mapping sensor-detected safety events to the digital twin using IFC standards for intervention. Experiments demonstrate SG-ICP's superiority over standard ICP, achieving RMSE reductions of 64.3%--88.3% in alignment across scenarios with occluded features, ensuring plausible orientations. HAV integration triggers warnings upon exceeding exposure limits, enhancing compliance with ISO 5349-1.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-25T03:12:42Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Reza Akhavian</name>
+    </author>
+    <author>
+      <name>Mani Amani</name>
+    </author>
+    <author>
+      <name>Johannes Mootz</name>
+    </author>
+    <author>
+      <name>Robert Ashe</name>
+    </author>
+    <author>
+      <name>Behrad Beheshti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.11431v1</id>
+    <title>Securing AI Agents: Implementing Role-Based Access Control for Industrial Applications</title>
+    <updated>2025-09-14T20:58:08Z</updated>
+    <link href="https://arxiv.org/abs/2509.11431v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.11431v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The emergence of Large Language Models (LLMs) has significantly advanced solutions across various domains, from political science to software development. However, these models are constrained by their training data, which is static and limited to information available up to a specific date. Additionally, their generalized nature often necessitates fine-tuning -- whether for classification or instructional purposes -- to effectively perform specific downstream tasks. AI agents, leveraging LLMs as their core, mitigate some of these limitations by accessing external tools and real-time data, enabling applications such as live weather reporting and data analysis. In industrial settings, AI agents are transforming operations by enhancing decision-making, predictive maintenance, and process optimization. For example, in manufacturing, AI agents enable near-autonomous systems that boost productivity and support real-time decision-making. Despite these advancements, AI agents remain vulnerable to security threats, including prompt injection attacks, which pose significant risks to their integrity and reliability. To address these challenges, this paper proposes a framework for integrating Role-Based Access Control (RBAC) into AI agents, providing a robust security guardrail. This framework aims to support the effective and scalable deployment of AI agents, with a focus on on-premises implementations.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-14T20:58:08Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Aadil Gani Ganie</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.09215v3</id>
+    <title>Enabling Regulatory Multi-Agent Collaboration: Architecture, Challenges, and Solutions</title>
+    <updated>2026-09-28T15:11:12Z</updated>
+    <link href="https://arxiv.org/abs/2509.09215v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.09215v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs)-empowered autonomous agents are transforming both digital and physical environments by enabling adaptive, multi-agent collaboration. While these agents offer significant opportunities across domains such as finance, healthcare, and smart manufacturing, their unpredictable behaviors and heterogeneous capabilities pose substantial governance and accountability challenges. In this paper, we propose a blockchain-enabled layered architecture for regulatory agent collaboration, comprising an agent layer, an off-chain computation layer, and an on-chain anchoring layer. Within this framework, we design three key modules: (i) an agent behavior tracing and arbitration module for automated accountability, (ii) a dynamic reputation evaluation module for trust assessment in collaborative scenarios, and (iii) a malicious behavior forecasting module for early detection of adversarial activities. Our approach establishes a systematic foundation for trustworthy, resilient, and scalable regulatory mechanisms in large-scale agent ecosystems. Finally, we discuss the future research directions for blockchain-enabled regulatory frameworks in multi-agent systems.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-11T07:46:00Z</published>
+    <arxiv:comment>This work has been submitted to the IEEE for possible publication</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Qinnan Hu</name>
+    </author>
+    <author>
+      <name>Yuntao Wang</name>
+    </author>
+    <author>
+      <name>Yuan Gao</name>
+    </author>
+    <author>
+      <name>Zhou Su</name>
+    </author>
+    <author>
+      <name>Linkang Du</name>
+    </author>
+    <author>
+      <name>Qichao Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2509.01813v3</id>
+    <title>ShortageSim: Simulating Drug Shortages under Information Asymmetry</title>
+    <updated>2025-11-25T02:05:28Z</updated>
+    <link href="https://arxiv.org/abs/2509.01813v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2509.01813v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Drug shortages pose critical risks to patient care and healthcare systems worldwide, yet the effectiveness of regulatory interventions remains poorly understood due to information asymmetries in pharmaceutical supply chains. We propose \textbf{ShortageSim}, addresses this challenge by providing the first simulation framework that evaluates the impact of regulatory interventions on competition dynamics under information asymmetry. Using Large Language Model (LLM)-based agents, the framework models the strategic decisions of drug manufacturers and institutional buyers, in response to shortage alerts given by the regulatory agency. Unlike traditional game theory models that assume perfect rationality and complete information, ShortageSim simulates heterogeneous interpretations on regulatory announcements and the resulting decisions. Experiments on self-processed dataset of historical shortage events show that ShortageSim reduces the resolution lag for production disruption cases by up to 84\%, achieving closer alignment to real-world trajectories than the zero-shot baseline. Our framework confirms the effect of regulatory alert in addressing shortages and introduces a new method for understanding competition in multi-stage environments under uncertainty. We open-source ShortageSim and a dataset of 2,925 FDA shortage events, providing a novel framework for future research on policy design and testing in supply chains under information asymmetry.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-09-01T22:39:28Z</published>
+    <arxiv:comment>Accepted by AAAI 2026. Oral presentation. 25 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Mingxuan Cui</name>
+    </author>
+    <author>
+      <name>Yilan Jiang</name>
+    </author>
+    <author>
+      <name>Duo Zhou</name>
+    </author>
+    <author>
+      <name>Cheng Qian</name>
+    </author>
+    <author>
+      <name>Yuji Zhang</name>
+    </author>
+    <author>
+      <name>Qiong Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.19114v1</id>
+    <title>DELIVER: A System for LLM-Guided Coordinated Multi-Robot Pickup and Delivery using Voronoi-Based Relay Planning</title>
+    <updated>2025-08-26T15:17:08Z</updated>
+    <link href="https://arxiv.org/abs/2508.19114v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.19114v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present DELIVER (Directed Execution of Language-instructed Item Via Engineered Relay), a fully integrated framework for cooperative multi-robot pickup and delivery driven by natural language commands. DELIVER unifies natural language understanding, spatial decomposition, relay planning, and motion execution to enable scalable, collision-free coordination in real-world settings. Given a spoken or written instruction, a lightweight instance of LLaMA3 interprets the command to extract pickup and delivery locations. The environment is partitioned using a Voronoi tessellation to define robot-specific operating regions. Robots then compute optimal relay points along shared boundaries and coordinate handoffs. A finite-state machine governs each robot's behavior, enabling robust execution. We implement DELIVER on the MultiTRAIL simulation platform and validate it in both ROS2-based Gazebo simulations and real-world hardware using TurtleBot3 robots. Empirical results show that DELIVER maintains consistent mission cost across varying team sizes while reducing per-agent workload by up to 55% compared to a single-agent system. Moreover, the number of active relay agents remains low even as team size increases, demonstrating the system's scalability and efficient agent utilization. These findings underscore DELIVER's modular and extensible architecture for language-guided multi-robot coordination, advancing the frontiers of cyber-physical system integration.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-26T15:17:08Z</published>
+    <arxiv:comment>Submission under review at the 2026 IEEE/SICE International Symposium on System Integration (SII 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Alkesh K. Srivastava</name>
+    </author>
+    <author>
+      <name>Jared Michael Levin</name>
+    </author>
+    <author>
+      <name>Alexander Derrico</name>
+    </author>
+    <author>
+      <name>Philip Dames</name>
+    </author>
+    <arxiv:doi>10.1109/SII64115.2026.11404461</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/SII64115.2026.11404461" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.05503v1</id>
+    <title>AutoIAD: Manager-Driven Multi-Agent Collaboration for Automated Industrial Anomaly Detection</title>
+    <updated>2025-08-07T15:36:38Z</updated>
+    <link href="https://arxiv.org/abs/2508.05503v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.05503v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industrial anomaly detection (IAD) is critical for manufacturing quality control, but conventionally requires significant manual effort for various application scenarios. This paper introduces AutoIAD, a multi-agent collaboration framework, specifically designed for end-to-end automated development of industrial visual anomaly detection. AutoIAD leverages a Manager-Driven central agent to orchestrate specialized sub-agents (including Data Preparation, Data Loader, Model Designer, Trainer) and integrates a domain-specific knowledge base, which intelligently handles the entire pipeline using raw industrial image data to develop a trained anomaly detection model. We construct a comprehensive benchmark using MVTec AD datasets to evaluate AutoIAD across various LLM backends. Extensive experiments demonstrate that AutoIAD significantly outperforms existing general-purpose agentic collaboration frameworks and traditional AutoML frameworks in task completion rate and model performance (AUROC), while effectively mitigating issues like hallucination through iterative refinement. Ablation studies further confirm the crucial roles of the Manager central agent and the domain knowledge base module in producing robust and high-quality IAD solutions.</summary>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-07T15:36:38Z</published>
+    <arxiv:primary_category term="cs.CV"/>
+    <author>
+      <name>Dongwei Ji</name>
+    </author>
+    <author>
+      <name>Bingzhang Hu</name>
+    </author>
+    <author>
+      <name>Yi Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.03014v2</id>
+    <title>Survey of Large Language Models in Extended Reality: Technical Paradigms and Application Frontiers</title>
+    <updated>2025-10-11T11:39:39Z</updated>
+    <link href="https://arxiv.org/abs/2508.03014v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.03014v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language understanding and generation, and their integration with Extended Reality (XR) is poised to transform how users interact with immersive environments. This survey provides a comprehensive review of recent developments at the intersection of LLMs and XR, offering a structured organization of research along both technical and application dimensions. We propose a taxonomy of LLM-enhanced XR systems centered on key technical paradigms -- such as interactive agent control, XR development toolkits, and generative scene synthesis -- and discuss how these paradigms enable novel capabilities in XR. In parallel, we examine how LLM-driven techniques support practical XR applications across diverse domains, including immersive education, clinical healthcare, and industrial manufacturing. By connecting these technical paradigms with application frontiers, our survey highlights current trends, delineates design considerations, and identifies open challenges in building LLM-augmented XR systems. This work provides insights that can guide researchers and practitioners in advancing the state of the art in intelligent XR experiences.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-05T02:46:34Z</published>
+    <arxiv:comment>Withdrawn by the authors after identifying improper reuse of illustrative materials and partial omission of citations in certain sections. A revised version will be prepared to ensure accurate attribution, and comprehensive citation coverage</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Jingyan Wang</name>
+    </author>
+    <author>
+      <name>Yang Zhao</name>
+    </author>
+    <author>
+      <name>Haotian Mao</name>
+    </author>
+    <author>
+      <name>Xubo Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.17134v1</id>
+    <title>Resilient Multi-Agent Negotiation for Medical Supply Chains:Integrating LLMs and Blockchain for Transparent Coordination</title>
+    <updated>2025-07-23T02:14:42Z</updated>
+    <link href="https://arxiv.org/abs/2507.17134v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.17134v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Global health emergencies, such as the COVID-19 pandemic, have exposed critical weaknesses in traditional medical supply chains, including inefficiencies in resource allocation, lack of transparency, and poor adaptability to dynamic disruptions. This paper presents a novel hybrid framework that integrates blockchain technology with a decentralized, large language model (LLM) powered multi-agent negotiation system to enhance the resilience and accountability of medical supply chains during crises. In this system, autonomous agents-representing manufacturers, distributors, and healthcare institutions-engage in structured, context-aware negotiation and decision-making processes facilitated by LLMs, enabling rapid and ethical allocation of scarce medical resources. The off-chain agent layer supports adaptive reasoning and local decision-making, while the on-chain blockchain layer ensures immutable, transparent, and auditable enforcement of decisions via smart contracts. The framework also incorporates a formal cross-layer communication protocol to bridge decentralized negotiation with institutional enforcement. A simulation environment emulating pandemic scenarios evaluates the system's performance, demonstrating improvements in negotiation efficiency, fairness of allocation, supply chain responsiveness, and auditability. This research contributes an innovative approach that synergizes blockchain trust guarantees with the adaptive intelligence of LLM-driven agents, providing a robust and scalable solution for critical supply chain coordination under uncertainty.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-23T02:14:42Z</published>
+    <arxiv:comment>11 pages, 6 figure</arxiv:comment>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Mariam ALMutairi</name>
+    </author>
+    <author>
+      <name>Hyungmin Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.15268v2</id>
+    <title>IM-Chat: A Multi-agent LLM Framework Integrating Tool-Calling and Diffusion Modeling for Knowledge Transfer in Injection Molding Industry</title>
+    <updated>2025-10-22T14:04:44Z</updated>
+    <link href="https://arxiv.org/abs/2507.15268v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.15268v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The injection molding industry faces critical challenges in preserving and transferring field knowledge, particularly as experienced workers retire and multilingual barriers hinder effective communication. This study introduces IM-Chat, a multi-agent framework based on large language models (LLMs), designed to facilitate knowledge transfer in injection molding. IM-Chat integrates both limited documented knowledge (e.g., troubleshooting tables, manuals) and extensive field data modeled through a data-driven process condition generator that infers optimal manufacturing settings from environmental inputs such as temperature and humidity, enabling robust and context-aware task resolution. By adopting a retrieval-augmented generation (RAG) strategy and tool-calling agents within a modular architecture, IM-Chat ensures adaptability without the need for fine-tuning. Performance was assessed across 100 single-tool and 60 hybrid tasks for GPT-4o, GPT-4o-mini, and GPT-3.5-turbo by domain experts using a 10-point rubric focused on relevance and correctness, and was further supplemented by automated evaluation using GPT-4o guided by a domain-adapted instruction prompt. The evaluation results indicate that more capable models tend to achieve higher accuracy, particularly in complex, tool-integrated scenarios. In addition, compared with the fine-tuned single-agent LLM, IM-Chat demonstrated superior accuracy, particularly in quantitative reasoning, and greater scalability in handling multiple information sources. Overall, these findings demonstrate the viability of multi-agent LLM systems for industrial knowledge workflows and establish IM-Chat as a scalable and generalizable approach to AI-assisted decision support in manufacturing.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-21T06:13:53Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Junhyeong Lee</name>
+    </author>
+    <author>
+      <name>Joon-Young Kim</name>
+    </author>
+    <author>
+      <name>Heekyu Kim</name>
+    </author>
+    <author>
+      <name>Inhyo Lee</name>
+    </author>
+    <author>
+      <name>Seunghwa Ryu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.07115v1</id>
+    <title>Autonomous Control Leveraging LLMs: An Agentic Framework for Next-Generation Industrial Automation</title>
+    <updated>2025-07-03T11:20:22Z</updated>
+    <link href="https://arxiv.org/abs/2507.07115v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.07115v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing complexity of modern chemical processes, coupled with workforce shortages and intricate fault scenarios, demands novel automation paradigms that blend symbolic reasoning with adaptive control. In this work, we introduce a unified agentic framework that leverages large language models (LLMs) for both discrete fault-recovery planning and continuous process control within a single architecture. We adopt Finite State Machines (FSMs) as interpretable operating envelopes: an LLM-driven planning agent proposes recovery sequences through the FSM, a Simulation Agent executes and checks each transition, and a Validator-Reprompting loop iteratively refines invalid plans. In Case Study 1, across 180 randomly generated FSMs of varying sizes (4-25 states, 4-300 transitions), GPT-4o and GPT-4o-mini achieve 100% valid-path success within five reprompts-outperforming open-source LLMs in both accuracy and latency. In Case Study 2, the same framework modulates dual-heater inputs on a laboratory TCLab platform (and its digital twin) to maintain a target average temperature under persistent asymmetric disturbances. Compared to classical PID control, our LLM-based controller attains similar performance, while ablation of the prompting loop reveals its critical role in handling nonlinear dynamics. We analyze key failure modes-such as instruction following lapses and coarse ODE approximations. Our results demonstrate that, with structured feedback and modular agents, LLMs can unify high-level symbolic planningand low-level continuous control, paving the way towards resilient, language-driven automation in chemical engineering.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-03T11:20:22Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Javal Vyas</name>
+    </author>
+    <author>
+      <name>Mehmet Mercangoz</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.01376v1</id>
+    <title>AI Agents and Agentic AI-Navigating a Plethora of Concepts for Future Manufacturing</title>
+    <updated>2025-07-02T05:31:17Z</updated>
+    <link href="https://arxiv.org/abs/2507.01376v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.01376v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI agents are autonomous systems designed to perceive, reason, and act within dynamic environments. With the rapid advancements in generative AI (GenAI), large language models (LLMs) and multimodal large language models (MLLMs) have significantly improved AI agents' capabilities in semantic comprehension, complex reasoning, and autonomous decision-making. At the same time, the rise of Agentic AI highlights adaptability and goal-directed autonomy in dynamic and complex environments. LLMs-based AI Agents (LLM-Agents), MLLMs-based AI Agents (MLLM-Agents), and Agentic AI contribute to expanding AI's capabilities in information processing, environmental perception, and autonomous decision-making, opening new avenues for smart manufacturing. However, the definitions, capability boundaries, and practical applications of these emerging AI paradigms in smart manufacturing remain unclear. To address this gap, this study systematically reviews the evolution of AI and AI agent technologies, examines the core concepts and technological advancements of LLM-Agents, MLLM-Agents, and Agentic AI, and explores their potential applications in and integration into manufacturing, along with the potential challenges they may face.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-02T05:31:17Z</published>
+    <arxiv:comment>Submitted to JMS(March 2025)</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yinwang Ren</name>
+    </author>
+    <author>
+      <name>Yangyang Liu</name>
+    </author>
+    <author>
+      <name>Tang Ji</name>
+    </author>
+    <author>
+      <name>Xun Xu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.00914v1</id>
+    <title>Large Language Model Powered Intelligent Urban Agents: Concepts, Capabilities, and Applications</title>
+    <updated>2025-07-01T16:18:29Z</updated>
+    <link href="https://arxiv.org/abs/2507.00914v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.00914v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The long-standing vision of intelligent cities is to create efficient, livable, and sustainable urban environments using big data and artificial intelligence technologies. Recently, the advent of Large Language Models (LLMs) has opened new ways toward realizing this vision. With powerful semantic understanding and reasoning capabilities, LLMs can be deployed as intelligent agents capable of autonomously solving complex problems across domains. In this article, we focus on Urban LLM Agents, which are LLM-powered agents that are semi-embodied within the hybrid cyber-physical-social space of cities and used for system-level urban decision-making. First, we introduce the concept of urban LLM agents, discussing their unique capabilities and features. Second, we survey the current research landscape from the perspective of agent workflows, encompassing urban sensing, memory management, reasoning, execution, and learning. Third, we categorize the application domains of urban LLM agents into five groups: urban planning, transportation, environment, public safety, and urban society, presenting representative works in each group. Finally, we discuss trustworthiness and evaluation issues that are critical for real-world deployment, and identify several open problems for future research. This survey aims to establish a foundation for the emerging field of urban LLM agents and to provide a roadmap for advancing the intersection of LLMs and urban intelligence. A curated list of relevant papers and open-source resources is maintained and continuously updated at https://github.com/usail-hkust/Awesome-Urban-LLM-Agents.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-01T16:18:29Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Jindong Han</name>
+    </author>
+    <author>
+      <name>Yansong Ning</name>
+    </author>
+    <author>
+      <name>Zirui Yuan</name>
+    </author>
+    <author>
+      <name>Hang Ni</name>
+    </author>
+    <author>
+      <name>Fan Liu</name>
+    </author>
+    <author>
+      <name>Tengfei Lyu</name>
+    </author>
+    <author>
+      <name>Hao Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11180v2</id>
+    <title>Beyond Formal Semantics for Capabilities and Skills: Model Context Protocol in Manufacturing</title>
+    <updated>2025-12-09T14:19:21Z</updated>
+    <link href="https://arxiv.org/abs/2506.11180v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.11180v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Explicit modeling of capabilities and skills -- whether based on ontologies, Asset Administration Shells, or other technologies -- requires considerable manual effort and often results in representations that are not easily accessible to Large Language Models (LLMs). In this work-in-progress paper, we present an alternative approach based on the recently introduced Model Context Protocol (MCP). MCP allows systems to expose functionality through a standardized interface that is directly consumable by LLM-based agents. We conduct a prototypical evaluation on a laboratory-scale manufacturing system, where resource functions are made available via MCP. A general-purpose LLM is then tasked with planning and executing a multi-step process, including constraint handling and the invocation of resource functions via MCP. The results indicate that such an approach can enable flexible industrial automation without relying on explicit semantic models. This work lays the basis for further exploration of external tool integration in LLM-driven production systems.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-12T13:02:16Z</published>
+    <arxiv:comment>\c{opyright} 2025 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Luis Miguel Vieira da Silva</name>
+    </author>
+    <author>
+      <name>Aljosha Köcher</name>
+    </author>
+    <author>
+      <name>Felix Gehlhoff</name>
+    </author>
+    <arxiv:doi>10.1109/ETFA65518.2025.11205601</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ETFA65518.2025.11205601" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.08119v2</id>
+    <title>SOP-Bench: Complex Industrial SOPs for Evaluating LLM Agents</title>
+    <updated>2026-02-23T17:05:34Z</updated>
+    <link href="https://arxiv.org/abs/2506.08119v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.08119v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLM-based agents struggle to execute complex, multi-step Standard Operating Procedures (SOPs) that are fundamental to industrial automation. Existing benchmarks fail to capture the procedural complexity and tool orchestration demands of real-world workflows. We introduce SOP-Bench, a benchmark of 2,000+ tasks from human expert-authored SOPs across 12 business domains (healthcare, logistics, finance, content moderation, etc.). Using a human-AI collaborative framework, experts crafted authentic SOPs while AI generated artifacts (tools, APIs, datasets), all human-validated, yielding realistic tasks with executable interfaces and ground-truth outputs.
+  SOP-Bench serves as a research enabler for systematically investigating agent architectures, model capabilities, and deployment considerations across diverse procedural tasks. We demonstrate its utility through illustrative experiments with a subset of frontier models across Function-Calling (FC) and ReAct agents, revealing critical insights. For example, (1) newer models do not guarantee better performance - Claude 4 family outperforms Claude 4.5 family on ReAct tasks (Claude 4 Opus: 72.4% vs. Claude 4.5 Sonnet: 63.3% task success rate), demonstrating that production upgrades require validation; (2) no single model-agent combination dominates: best performances range from 57% to 100% depending on domain. These examples illustrate how SOP-Bench enables isolating and studying specific dimensions of agent performance without costly production experiments. Our goal is not to rank model capabilities or build optimal agents, but to provide a rigorous evaluation framework that enables the researchers and practitioners to systematically investigate agent design choices, model selection, and deployment strategies. We release the benchmark at https://github.com/amazon-science/sop-bench.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-09T18:20:12Z</published>
+    <arxiv:comment>Under review</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Subhrangshu Nandi</name>
+    </author>
+    <author>
+      <name>Arghya Datta</name>
+    </author>
+    <author>
+      <name>Rohith Nama</name>
+    </author>
+    <author>
+      <name>Udita Patel</name>
+    </author>
+    <author>
+      <name>Nikhil Vichare</name>
+    </author>
+    <author>
+      <name>Indranil Bhattacharya</name>
+    </author>
+    <author>
+      <name>Prince Grover</name>
+    </author>
+    <author>
+      <name>Shivam Asija</name>
+    </author>
+    <author>
+      <name>Giuseppe Carenini</name>
+    </author>
+    <author>
+      <name>Wei Zhang</name>
+    </author>
+    <author>
+      <name>Arushi Gupta</name>
+    </author>
+    <author>
+      <name>Sreyoshi Bhaduri</name>
+    </author>
+    <author>
+      <name>Jing Xu</name>
+    </author>
+    <author>
+      <name>Huzefa Raja</name>
+    </author>
+    <author>
+      <name>Shayan Ray</name>
+    </author>
+    <author>
+      <name>Aaron Chan</name>
+    </author>
+    <author>
+      <name>Esther Xu Fei</name>
+    </author>
+    <author>
+      <name>Gaoyuan Du</name>
+    </author>
+    <author>
+      <name>Zuhaib Akhtar</name>
+    </author>
+    <author>
+      <name>Harshita Asnani</name>
+    </author>
+    <author>
+      <name>Weian Chan</name>
+    </author>
+    <author>
+      <name>Ming Xiong</name>
+    </author>
+    <author>
+      <name>Francesco Carbone</name>
+    </author>
+    <author>
+      <name>Jeetu Mirchandani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.04980v1</id>
+    <title>Agentic AI for Intent-Based Industrial Automation</title>
+    <updated>2025-06-05T12:50:54Z</updated>
+    <link href="https://arxiv.org/abs/2506.04980v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.04980v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The recent development of Agentic AI systems, empowered by autonomous large language models (LLMs) agents with planning and tool-usage capabilities, enables new possibilities for the evolution of industrial automation and reduces the complexity introduced by Industry 4.0. This work proposes a conceptual framework that integrates Agentic AI with the intent-based paradigm, originally developed in network research, to simplify human-machine interaction (HMI) and better align automation systems with the human-centric, sustainable, and resilient principles of Industry 5.0. Based on the intent-based processing, the framework allows human operators to express high-level business or operational goals in natural language, which are decomposed into actionable components. These intents are broken into expectations, conditions, targets, context, and information that guide sub-agents equipped with specialized tools to execute domain-specific tasks. A proof of concept was implemented using the CMAPSS dataset and Google Agent Developer Kit (ADK), demonstrating the feasibility of intent decomposition, agent orchestration, and autonomous decision-making in predictive maintenance scenarios. The results confirm the potential of this approach to reduce technical barriers and enable scalable, intent-driven automation, despite data quality and explainability concerns.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-05T12:50:54Z</published>
+    <arxiv:comment>Preprint - Submitted to 16th IEEE/IAS International Conference on Industry Applications - INDUSCON 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Marcos Lima Romero</name>
+    </author>
+    <author>
+      <name>Ricardo Suyama</name>
+    </author>
+    <arxiv:doi>10.1109/INDUSCON66435.2025.11241317</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/INDUSCON66435.2025.11241317" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.06381v2</id>
+    <title>DURA-CPS: A Multi-Role Orchestrator for Dependability Assurance in LLM-Enabled Cyber-Physical Systems</title>
+    <updated>2025-06-13T03:57:22Z</updated>
+    <link href="https://arxiv.org/abs/2506.06381v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.06381v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Cyber-Physical Systems (CPS) increasingly depend on advanced AI techniques to operate in critical applications. However, traditional verification and validation methods often struggle to handle the unpredictable and dynamic nature of AI components. In this paper, we introduce DURA-CPS, a novel framework that employs multi-role orchestration to automate the iterative assurance process for AI-powered CPS. By assigning specialized roles (e.g., safety monitoring, security assessment, fault injection, and recovery planning) to dedicated agents within a simulated environment, DURA-CPS continuously evaluates and refines AI behavior against a range of dependability requirements. We demonstrate the framework through a case study involving an autonomous vehicle navigating an intersection with an AI-based planner. Our results show that DURA-CPS effectively detects vulnerabilities, manages performance impacts, and supports adaptive recovery strategies, thereby offering a structured and extensible solution for rigorous V&amp;V in safety- and security-critical systems.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-04T21:04:21Z</published>
+    <arxiv:comment>Accepted to the 55th Annual IEEE/IFIP International Conference on Dependable Systems and Networks Workshops (DSN-W)</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Trisanth Srinivasan</name>
+    </author>
+    <author>
+      <name>Santosh Patapati</name>
+    </author>
+    <author>
+      <name>Himani Musku</name>
+    </author>
+    <author>
+      <name>Idhant Gode</name>
+    </author>
+    <author>
+      <name>Aditya Arora</name>
+    </author>
+    <author>
+      <name>Samvit Bhattacharya</name>
+    </author>
+    <author>
+      <name>Abubakr Nazriev</name>
+    </author>
+    <author>
+      <name>Sanika Hirave</name>
+    </author>
+    <author>
+      <name>Zaryab Kanjiani</name>
+    </author>
+    <author>
+      <name>Srinjoy Ghose</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03801v1</id>
+    <title>From Theory to Practice: Real-World Use Cases on Trustworthy LLM-Driven Process Modeling, Prediction and Automation</title>
+    <updated>2025-06-04T10:12:09Z</updated>
+    <link href="https://arxiv.org/abs/2506.03801v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.03801v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional Business Process Management (BPM) struggles with rigidity, opacity, and scalability in dynamic environments while emerging Large Language Models (LLMs) present transformative opportunities alongside risks. This paper explores four real-world use cases that demonstrate how LLMs, augmented with trustworthy process intelligence, redefine process modeling, prediction, and automation. Grounded in early-stage research projects with industrial partners, the work spans manufacturing, modeling, life-science, and design processes, addressing domain-specific challenges through human-AI collaboration. In manufacturing, an LLM-driven framework integrates uncertainty-aware explainable Machine Learning (ML) with interactive dialogues, transforming opaque predictions into auditable workflows. For process modeling, conversational interfaces democratize BPMN design. Pharmacovigilance agents automate drug safety monitoring via knowledge-graph-augmented LLMs. Finally, sustainable textile design employs multi-agent systems to navigate regulatory and environmental trade-offs. We intend to examine tensions between transparency and efficiency, generalization and specialization, and human agency versus automation. By mapping these trade-offs, we advocate for context-sensitive integration prioritizing domain needs, stakeholder values, and iterative human-in-the-loop workflows over universal solutions. This work provides actionable insights for researchers and practitioners aiming to operationalize LLMs in critical BPM environments.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-04T10:12:09Z</published>
+    <arxiv:comment>Accepted to the Next Gen Data and Process Management: Large Language Models and Beyond workshop at SIGMOD 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Peter Pfeiffer</name>
+    </author>
+    <author>
+      <name>Alexander Rombach</name>
+    </author>
+    <author>
+      <name>Maxim Majlatow</name>
+    </author>
+    <author>
+      <name>Nijat Mehdiyev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22814v2</id>
+    <title>A Large Language Model-Enabled Control Architecture for Dynamic Resource Capability Exploration in Multi-Agent Manufacturing Systems</title>
+    <updated>2025-06-28T20:02:25Z</updated>
+    <link href="https://arxiv.org/abs/2505.22814v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.22814v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Manufacturing environments are becoming more complex and unpredictable due to factors such as demand variations and shorter product lifespans. This complexity requires real-time decision-making and adaptation to disruptions. Traditional control approaches highlight the need for advanced control strategies capable of overcoming unforeseen challenges, as they demonstrate limitations in responsiveness within dynamic industrial settings. Multi-agent systems address these challenges through decentralization of decision-making, enabling systems to respond dynamically to operational changes. However, current multi-agent systems encounter challenges related to real-time adaptation, context-aware decision-making, and the dynamic exploration of resource capabilities. Large language models provide the possibility to overcome these limitations through context-aware decision-making capabilities. This paper introduces a large language model-enabled control architecture for multi-agent manufacturing systems to dynamically explore resource capabilities in response to real-time disruptions. A simulation-based case study demonstrates that the proposed architecture improves system resilience and flexibility. The case study findings show improved throughput and efficient resource utilization compared to existing approaches.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-28T19:43:12Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Jonghan Lim</name>
+    </author>
+    <author>
+      <name>Ilya Kovalenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.22804v1</id>
+    <title>Dynamic Task Adaptation for Multi-Robot Manufacturing Systems with Large Language Models</title>
+    <updated>2025-05-28T19:26:07Z</updated>
+    <link href="https://arxiv.org/abs/2505.22804v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.22804v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recent manufacturing systems are increasingly adopting multi-robot collaboration to handle complex and dynamic environments. While multi-agent architectures support decentralized coordination among robot agents, they often face challenges in enabling real-time adaptability for unexpected disruptions without predefined rules. Recent advances in large language models offer new opportunities for context-aware decision-making to enable adaptive responses to unexpected changes. This paper presents an initial exploratory implementation of a large language model-enabled control framework for dynamic task reassignment in multi-robot manufacturing systems. A central controller agent leverages the large language model's ability to interpret structured robot configuration data and generate valid reassignments in response to robot failures. Experiments in a real-world setup demonstrate high task success rates in recovering from failures, highlighting the potential of this approach to improve adaptability in multi-robot manufacturing systems.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-28T19:26:07Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Jonghan Lim</name>
+    </author>
+    <author>
+      <name>Ilya Kovalenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.19662v4</id>
+    <title>FieldWorkArena: Agentic AI Benchmark for Real Field Work Tasks</title>
+    <updated>2026-06-07T05:49:00Z</updated>
+    <link href="https://arxiv.org/abs/2505.19662v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.19662v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper introduces FieldWorkArena, a benchmark for agentic AI targeting real-world field work. With the recent increase in demand for agentic AI, they are built to detect and document safety hazards, procedural violations, and other critical incidents across real-world manufacturing and retail environments. Whereas most agentic AI benchmarks focus on performance in simulated or digital environments, our work addresses the fundamental challenge of evaluating agents in the real-world. In this paper, we improve the evaluation function from previous methods to assess the performance of agentic AI in diverse real-world tasks. Our dataset comprises on-site captured images/videos in factories, warehouses and retails. Tasks were meticulously developed through interviews with site workers and managers. Evaluation results confirmed that performance evaluation considering the characteristics of Multimodal LLM (MLLM) such as GPT-4o is feasible. Furthermore, this study identifies both the effectiveness and limitations of the proposed new evaluation methodology. The complete dataset and evaluation program are publicly accessible on the website (https://en-documents.research.global.fujitsu.com/fieldworkarena/)</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CV" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-26T08:21:46Z</published>
+    <arxiv:comment>27 pages, 10 figures, 7 tables [ICPR 2026 Accepted] Changes from previous version: added supplemental material</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Jun Takahashi</name>
+    </author>
+    <author>
+      <name>Atsunori Moteki</name>
+    </author>
+    <author>
+      <name>Akiyoshi Uchida</name>
+    </author>
+    <author>
+      <name>Shoichi Masui</name>
+    </author>
+    <author>
+      <name>Fan Yang</name>
+    </author>
+    <author>
+      <name>Kanji Uchino</name>
+    </author>
+    <author>
+      <name>Yueqi Song</name>
+    </author>
+    <author>
+      <name>Yonatan Bisk</name>
+    </author>
+    <author>
+      <name>Graham Neubig</name>
+    </author>
+    <author>
+      <name>Ikuo Kusajima</name>
+    </author>
+    <author>
+      <name>Yasuto Watanabe</name>
+    </author>
+    <author>
+      <name>Hiroyuki Ishida</name>
+    </author>
+    <author>
+      <name>Koki Nakagawa</name>
+    </author>
+    <author>
+      <name>Shan Jiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.16120v3</id>
+    <title>LLM-Powered AI Agent Systems and Their Applications in Industry</title>
+    <updated>2026-06-12T11:30:01Z</updated>
+    <link href="https://arxiv.org/abs/2505.16120v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.16120v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The emergence of Large Language Models (LLMs) has reshaped agent systems. Unlike traditional rule-based agents with limited task scope, LLM-powered agents offer greater flexibility, cross-domain reasoning, and natural language interaction. Moreover, with the integration of multi-modal LLMs, current agent systems are highly capable of processing diverse data modalities, including text, images, audio, and structured tabular data, enabling richer and more adaptive real-world behavior. This paper comprehensively examines the evolution of agent systems from the pre-LLM era to current LLM-powered architectures. We categorize agent systems into software-based, physical, and adaptive hybrid systems, highlighting applications across customer service, software development, manufacturing automation, personalized education, financial trading, and healthcare. We further discuss the primary challenges posed by LLM-powered agents, including high inference latency, output uncertainty, lack of evaluation metrics, and security vulnerabilities, and propose potential solutions to mitigate these concerns.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-22T01:52:15Z</published>
+    <arxiv:comment>This is the author's accepted version of the paper accepted to appear at IEEE AIIoT 2025. The final version will be available via IEEE Xplore. \c{opyright}2025 IEEE. Personal use of this material is permitted</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Guannan Liang</name>
+    </author>
+    <author>
+      <name>Qianqian Tong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.12981v2</id>
+    <title>From Assistants to Adversaries: Exploring the Security Risks of Mobile LLM Agents</title>
+    <updated>2025-05-20T07:02:05Z</updated>
+    <link href="https://arxiv.org/abs/2505.12981v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.12981v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The growing adoption of large language models (LLMs) has led to a new paradigm in mobile computing--LLM-powered mobile AI agents--capable of decomposing and automating complex tasks directly on smartphones. However, the security implications of these agents remain largely unexplored. In this paper, we present the first comprehensive security analysis of mobile LLM agents, encompassing three representative categories: System-level AI Agents developed by original equipment manufacturers (e.g., YOYO Assistant), Third-party Universal Agents (e.g., Zhipu AI AutoGLM), and Emerging Agent Frameworks (e.g., Alibaba Mobile Agent). We begin by analyzing the general workflow of mobile agents and identifying security threats across three core capability dimensions: language-based reasoning, GUI-based interaction, and system-level execution. Our analysis reveals 11 distinct attack surfaces, all rooted in the unique capabilities and interaction patterns of mobile LLM agents, and spanning their entire operational lifecycle. To investigate these threats in practice, we introduce AgentScan, a semi-automated security analysis framework that systematically evaluates mobile LLM agents across all 11 attack scenarios. Applying AgentScan to nine widely deployed agents, we uncover a concerning trend: every agent is vulnerable to targeted attacks. In the most severe cases, agents exhibit vulnerabilities across eight distinct attack vectors. These attacks can cause behavioral deviations, privacy leakage, or even full execution hijacking. Based on these findings, we propose a set of defensive design principles and practical recommendations for building secure mobile LLM agents. Our disclosures have received positive feedback from two major device vendors. Overall, this work highlights the urgent need for standardized security practices in the fast-evolving landscape of LLM-driven mobile automation.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-19T11:17:46Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Liangxuan Wu</name>
+    </author>
+    <author>
+      <name>Chao Wang</name>
+    </author>
+    <author>
+      <name>Tianming Liu</name>
+    </author>
+    <author>
+      <name>Yanjie Zhao</name>
+    </author>
+    <author>
+      <name>Haoyu Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.11077v2</id>
+    <title>LLM-Enhanced Symbolic Control for Safety-Critical Applications</title>
+    <updated>2025-05-29T15:22:09Z</updated>
+    <link href="https://arxiv.org/abs/2505.11077v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.11077v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Motivated by Smart Manufacturing and Industry 4.0, we introduce a framework for synthesizing Abstraction-Based Controller Design (ABCD) for reach-avoid problems from Natural Language (NL) specifications using Large Language Models (LLMs). A Code Agent interprets an NL description of the control problem and translates it into a formal language interpretable by state-of-the-art symbolic control software, while a Checker Agent verifies the correctness of the generated code and enhances safety by identifying specification mismatches. Evaluations show that the system handles linguistic variability and improves robustness over direct planning with LLMs. The proposed approach lowers the barrier to formal control synthesis by enabling intuitive, NL-based task definition while maintaining safety guarantees through automated validation.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-16T10:08:25Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Amir Bayat</name>
+    </author>
+    <author>
+      <name>Alessandro Abate</name>
+    </author>
+    <author>
+      <name>Necmiye Ozay</name>
+    </author>
+    <author>
+      <name>Raphael M. Jungers</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05177v1</id>
+    <title>MARK: Memory Augmented Refinement of Knowledge</title>
+    <updated>2025-05-08T12:28:00Z</updated>
+    <link href="https://arxiv.org/abs/2505.05177v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05177v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) assist in specialized tasks but struggle to align with evolving domain knowledge without costly fine-tuning. Domain knowledge consists of: Knowledge: Immutable facts (e.g., 'A stone is solid') and generally accepted principles (e.g., ethical standards); Refined Memory: Evolving insights shaped by business needs and real-world changes. However, a significant gap often exists between a domain expert's deep, nuanced understanding and the system's domain knowledge, which can hinder accurate information retrieval and application. Our Memory-Augmented Refinement of Knowledge (MARK) framework enables LLMs to continuously learn without retraining by leveraging structured refined memory, inspired by the Society of Mind. MARK operates through specialized agents, each serving a distinct role: Residual Refined Memory Agent: Stores and retrieves domain-specific insights to maintain context over time; User Question Refined Memory Agent: Captures user-provided facts, abbreviations, and terminology for better comprehension; LLM Response Refined Memory Agent: Extracts key elements from responses for refinement and personalization. These agents analyse stored refined memory, detect patterns, resolve contradictions, and improve response accuracy. Temporal factors like recency and frequency prioritize relevant information while discarding outdated insights. MARK enhances LLMs in multiple ways: Ground Truth Strategy: Reduces hallucinations by establishing a structured reference; Domain-Specific Adaptation: Essential for fields like healthcare, law, and manufacturing, where proprietary insights are absent from public datasets; Personalized AI Assistants: Improves virtual assistants by remembering user preferences, ensuring coherent responses over time.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T12:28:00Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Anish Ganguli</name>
+    </author>
+    <author>
+      <name>Prabal Deb</name>
+    </author>
+    <author>
+      <name>Debleena Banerjee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.05108v2</id>
+    <title>Multi-agent Embodied AI: Advances and Future Directions</title>
+    <updated>2025-06-21T18:06:15Z</updated>
+    <link href="https://arxiv.org/abs/2505.05108v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.05108v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Embodied artificial intelligence (Embodied AI) plays a pivotal role in the application of advanced technologies in the intelligent era, where AI systems are integrated with physical bodies that enable them to perceive, reason, and interact with their environments. Through the use of sensors for input and actuators for action, these systems can learn and adapt based on real-world feedback, allowing them to perform tasks effectively in dynamic and unpredictable environments. As techniques such as deep learning (DL), reinforcement learning (RL), and large language models (LLMs) mature, embodied AI has become a leading field in both academia and industry, with applications spanning robotics, healthcare, transportation, and manufacturing. However, most research has focused on single-agent systems that often assume static, closed environments, whereas real-world embodied AI must navigate far more complex scenarios. In such settings, agents must not only interact with their surroundings but also collaborate with other agents, necessitating sophisticated mechanisms for adaptation, real-time learning, and collaborative problem-solving. Despite increasing interest in multi-agent systems, existing research remains narrow in scope, often relying on simplified models that fail to capture the full complexity of dynamic, open environments for multi-agent embodied AI. Moreover, no comprehensive survey has systematically reviewed the advancements in this area. As embodied AI rapidly evolves, it is crucial to deepen our understanding of multi-agent embodied AI to address the challenges presented by real-world applications. To fill this gap and foster further development in the field, this paper reviews the current state of research, analyzes key contributions, and identifies challenges and future directions, providing insights to guide innovation and progress in this field.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-08T10:13:53Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Zhaohan Feng</name>
+    </author>
+    <author>
+      <name>Ruiqi Xue</name>
+    </author>
+    <author>
+      <name>Lei Yuan</name>
+    </author>
+    <author>
+      <name>Yang Yu</name>
+    </author>
+    <author>
+      <name>Ning Ding</name>
+    </author>
+    <author>
+      <name>Meiqin Liu</name>
+    </author>
+    <author>
+      <name>Bingzhao Gao</name>
+    </author>
+    <author>
+      <name>Jian Sun</name>
+    </author>
+    <author>
+      <name>Xinhu Zheng</name>
+    </author>
+    <author>
+      <name>Gang Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.02024v4</id>
+    <title>From Mind to Machine: The Rise of Manus AI as a Fully Autonomous Digital Agent</title>
+    <updated>2026-07-24T17:29:49Z</updated>
+    <link href="https://arxiv.org/abs/2505.02024v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.02024v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Manus AI is a general-purpose AI agent introduced in early 2025, marking a significant advancement in autonomous artificial intelligence. Developed by the Chinese startup Monica.im, Manus is designed to bridge the gap between "mind" and "hand" - combining the reasoning and planning capabilities of large language models with the ability to execute complex, end-to-end tasks that produce tangible outcomes. This paper presents a comprehensive overview of Manus AI, exploring its core technical architecture, diverse applications across sectors such as healthcare, finance, manufacturing, robotics, and gaming, as well as its key strengths, current limitations, and future potential. Positioned as a preview of what lies ahead, Manus AI represents a shift toward intelligent agents that can translate high-level intentions into real-world actions, heralding a new era of human-AI collaboration.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-04T08:24:00Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Minjie Shen</name>
+    </author>
+    <author>
+      <name>Yanshu Li</name>
+    </author>
+    <author>
+      <name>Lulu Chen</name>
+    </author>
+    <author>
+      <name>Zhichao Fan</name>
+    </author>
+    <author>
+      <name>Yanhang Li</name>
+    </author>
+    <author>
+      <name>Qikai Yang</name>
+    </author>
+    <author>
+      <name>Haochen Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.02509v1</id>
+    <title>A Memory-Augmented LLM-Driven Method for Autonomous Merging of 3D Printing Work Orders</title>
+    <updated>2025-04-03T11:50:29Z</updated>
+    <link href="https://arxiv.org/abs/2504.02509v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.02509v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>With the rapid development of 3D printing, the demand for personalized and customized production on the manufacturing line is steadily increasing. Efficient merging of printing workpieces can significantly enhance the processing efficiency of the production line. Addressing the challenge, a Large Language Model (LLM)-driven method is established in this paper for the autonomous merging of 3D printing work orders, integrated with a memory-augmented learning strategy. In industrial scenarios, both device and order features are modeled into LLM-readable natural language prompt templates, and develop an order-device matching tool along with a merging interference checking module. By incorporating a self-memory learning strategy, an intelligent agent for autonomous order merging is constructed, resulting in improved accuracy and precision in order allocation. The proposed method effectively leverages the strengths of LLMs in industrial applications while reducing hallucination.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-03T11:50:29Z</published>
+    <arxiv:comment>6 pages, 5 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yuhao Liu</name>
+    </author>
+    <author>
+      <name>Maolin Yang</name>
+    </author>
+    <author>
+      <name>Pingyu Jiang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.02141v1</id>
+    <title>On Simulation-Guided LLM-based Code Generation for Safe Autonomous Driving Software</title>
+    <updated>2025-04-02T21:35:11Z</updated>
+    <link href="https://arxiv.org/abs/2504.02141v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.02141v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automated Driving System (ADS) is a safety-critical software system responsible for the interpretation of the vehicle's environment and making decisions accordingly. The unbounded complexity of the driving context, including unforeseeable events, necessitate continuous improvement, often achieved through iterative DevOps processes. However, DevOps processes are themselves complex, making these improvements both time- and resource-intensive. Automation in code generation for ADS using Large Language Models (LLM) is one potential approach to address this challenge. Nevertheless, the development of ADS requires rigorous processes to verify, validate, assess, and qualify the code before it can be deployed in the vehicle and used. In this study, we developed and evaluated a prototype for automatic code generation and assessment using a designed pipeline of a LLM-based agent, simulation model, and rule-based feedback generator in an industrial setup. The LLM-generated code is evaluated automatically in a simulation model against multiple critical traffic scenarios, and an assessment report is provided as feedback to the LLM for modification or bug fixing. We report about the experimental results of the prototype employing Codellama:34b, DeepSeek (r1:32b and Coder:33b), CodeGemma:7b, Mistral:7b, and GPT4 for Adaptive Cruise Control (ACC) and Unsupervised Collision Avoidance by Evasive Manoeuvre (CAEM). We finally assessed the tool with 11 experts at two Original Equipment Manufacturers (OEMs) by conducting an interview study.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-02T21:35:11Z</published>
+    <arxiv:comment>Accepted in the 29th International Conference on Evaluation and Assessment in Software Engineering (EASE)</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Ali Nouri</name>
+    </author>
+    <author>
+      <name>Johan Andersson</name>
+    </author>
+    <author>
+      <name>Kailash De Jesus Hornig</name>
+    </author>
+    <author>
+      <name>Zhennan Fei</name>
+    </author>
+    <author>
+      <name>Emil Knabe</name>
+    </author>
+    <author>
+      <name>Hakan Sivencrona</name>
+    </author>
+    <author>
+      <name>Beatriz Cabrero-Daniel</name>
+    </author>
+    <author>
+      <name>Christian Berger</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.09617v1</id>
+    <title>Factorio Learning Environment</title>
+    <updated>2025-03-06T20:13:02Z</updated>
+    <link href="https://arxiv.org/abs/2503.09617v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.09617v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) are rapidly saturating existing benchmarks, necessitating new open-ended evaluations. We introduce the Factorio Learning Environment (FLE), based on the game of Factorio, that tests agents in long-term planning, program synthesis, and resource optimization. FLE provides exponentially scaling challenges -- from basic automation to complex factories processing millions of resource units per second. We provide two settings: (1) lab-play consisting of eight structured tasks with fixed resources, and (2) open-play with the unbounded task of building the largest factory on an procedurally generated map. We demonstrate across both settings that models still lack strong spatial reasoning. In lab-play, we find that LLMs exhibit promising short-horizon skills, yet are unable to operate effectively in constrained environments, reflecting limitations in error analysis. In open-play, while LLMs discover automation strategies that improve growth (e.g electric-powered drilling), they fail to achieve complex automation (e.g electronic-circuit manufacturing).</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-06T20:13:02Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Jack Hopkins</name>
+    </author>
+    <author>
+      <name>Mart Bakler</name>
+    </author>
+    <author>
+      <name>Akbir Khan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2503.03889v1</id>
+    <title>Pretrained LLMs as Real-Time Controllers for Robot Operated Serial Production Line</title>
+    <updated>2025-03-05T20:43:49Z</updated>
+    <link href="https://arxiv.org/abs/2503.03889v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2503.03889v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The manufacturing industry is undergoing a transformative shift, driven by cutting-edge technologies like 5G, AI, and cloud computing. Despite these advancements, effective system control, which is crucial for optimizing production efficiency, remains a complex challenge due to the intricate, knowledge-dependent nature of manufacturing processes and the reliance on domain-specific expertise. Conventional control methods often demand heavy customization, considerable computational resources, and lack transparency in decision-making. In this work, we investigate the feasibility of using Large Language Models (LLMs), particularly GPT-4, as a straightforward, adaptable solution for controlling manufacturing systems, specifically, mobile robot scheduling. We introduce an LLM-based control framework to assign mobile robots to different machines in robot assisted serial production lines, evaluating its performance in terms of system throughput. Our proposed framework outperforms traditional scheduling approaches such as First-Come-First-Served (FCFS), Shortest Processing Time (SPT), and Longest Processing Time (LPT). While it achieves performance that is on par with state-of-the-art methods like Multi-Agent Reinforcement Learning (MARL), it offers a distinct advantage by delivering comparable throughput without the need for extensive retraining. These results suggest that the proposed LLM-based solution is well-suited for scenarios where technical expertise, computational resources, and financial investment are limited, while decision transparency and system scalability are critical concerns.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-03-05T20:43:49Z</published>
+    <arxiv:comment>20 pages, 7 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Muhammad Waseem</name>
+    </author>
+    <author>
+      <name>Kshitij Bhatta</name>
+    </author>
+    <author>
+      <name>Chen Li</name>
+    </author>
+    <author>
+      <name>Qing Chang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.08944v1</id>
+    <title>Physical AI Agents: Integrating Cognitive Intelligence with Real-World Action</title>
+    <updated>2025-01-15T16:46:32Z</updated>
+    <link href="https://arxiv.org/abs/2501.08944v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.08944v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Vertical AI Agents are revolutionizing industries by delivering domain-specific intelligence and tailored solutions. However, many sectors, such as manufacturing, healthcare, and logistics, demand AI systems capable of extending their intelligence into the physical world, interacting directly with objects, environments, and dynamic conditions. This need has led to the emergence of Physical AI Agents--systems that integrate cognitive reasoning, powered by specialized LLMs, with precise physical actions to perform real-world tasks.
+  This work introduces Physical AI Agents as an evolution of shared principles with Vertical AI Agents, tailored for physical interaction. We propose a modular architecture with three core blocks--perception, cognition, and actuation--offering a scalable framework for diverse industries. Additionally, we present the Physical Retrieval Augmented Generation (Ph-RAG) design pattern, which connects physical intelligence to industry-specific LLMs for real-time decision-making and reporting informed by physical context.
+  Through case studies, we demonstrate how Physical AI Agents and the Ph-RAG framework are transforming industries like autonomous vehicles, warehouse robotics, healthcare, and manufacturing, offering businesses a pathway to integrate embodied AI for operational efficiency and innovation.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-15T16:46:32Z</published>
+    <arxiv:comment>27 pages, 3 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Fouad Bousetouane</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2412.02410v2</id>
+    <title>AutoPLC: Generating Vendor-Aware Structured Text for Programmable Logic Controllers</title>
+    <updated>2025-08-03T04:26:10Z</updated>
+    <link href="https://arxiv.org/abs/2412.02410v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2412.02410v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Among the programming languages for Programmable Logic Controllers (PLCs), Structured Text (ST) is widely adopted for industrial automation due to its expressiveness and flexibility. However, major vendors implement ST with proprietary extensions and hardware-specific libraries - Siemens' SCL and CODESYS' ST each differ in syntax and functionality. This fragmentation forces engineers to relearn implementation details across platforms, creating substantial productivity barriers. To address this challenge, we developed AutoPLC, a framework capable of automatically generating vendor-aware ST code directly from natural language requirements. Our solution begins by building two essential knowledge sources tailored to each vendor's specifications: a structured API library containing platform-exclusive functions, and an annotated case database that captures real-world implementation experience. Building on these foundations, we created a four-stage generation process that combines step-wise planning (enhanced with a lightweight natural language state machine support for control logic), contextual case retrieval using LLM-based reranking, API recommendation guided by industrial data, and dynamic validation through direct interaction with vendor IDEs. Implemented for Siemens TIA Portal and the CODESYS platform, AutoPLC achieves 90%+ compilation success on our 914-task benchmark (covering general-purpose and process control functions), outperforming all selected baselines, at an average cost of only $0.13 per task. Experienced PLC engineers positively assessed the practical utility of the generated code, including cases that failed compilation. We open-source our framework at https://github.com/cangkui/AutoPLC.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-12-03T12:05:56Z</published>
+    <arxiv:comment>12 pages, 3 figures. Replaces "A Multi-Agent Framework for Extensible Structured Text Generation in PLCs" with an updated AutoPLC framework and new experiments</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Donghao Yang</name>
+    </author>
+    <author>
+      <name>Aolang Wu</name>
+    </author>
+    <author>
+      <name>Tianyi Zhang</name>
+    </author>
+    <author>
+      <name>Li Zhang</name>
+    </author>
+    <author>
+      <name>Fang Liu</name>
+    </author>
+    <author>
+      <name>Xiaoli Lian</name>
+    </author>
+    <author>
+      <name>Yuming Ren</name>
+    </author>
+    <author>
+      <name>Jiaji Tian</name>
+    </author>
+    <author>
+      <name>Xiaoyin Che</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.15356v3</id>
+    <title>Regulator-Manufacturer AI Agents Modeling: Mathematical Feedback-Driven Multi-Agent LLM Framework</title>
+    <updated>2026-08-26T14:22:25Z</updated>
+    <link href="https://arxiv.org/abs/2411.15356v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.15356v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing complexity of regulatory updates from global authorities presents significant challenges for medical device manufacturers, necessitating agile strategies to sustain compliance and maintain market access. Concurrently, regulatory bodies must effectively monitor manufacturers' responses and develop strategic surveillance plans. This study employs a multi-agent modeling approach, enhanced with Large Language Models (LLMs), to simulate regulatory dynamics and examine the adaptive behaviors of key actors, including regulatory bodies, manufacturers, and competitors. These agents operate within a simulated environment governed by regulatory flow theory, capturing the impacts of regulatory changes on compliance decisions, market adaptation, and innovation strategies. Our findings illuminate the influence of regulatory shifts on industry behaviour and identify strategic opportunities for improving regulatory practices, optimizing compliance, and fostering innovation. By leveraging the integration of multi-agent systems and LLMs, this research provides a novel perspective and offers actionable insights for stakeholders navigating the evolving regulatory landscape of the medical device industry.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-22T22:02:56Z</published>
+    <arxiv:comment>v3 adds a technical clarification note on the implementation and quantitative analyses; the body of the paper is unchanged from v2</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yu Han</name>
+    </author>
+    <author>
+      <name>Zekun Guo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2411.05904v1</id>
+    <title>Autonomous Industrial Control using an Agentic Framework with Large Language Models</title>
+    <updated>2024-11-08T18:23:14Z</updated>
+    <link href="https://arxiv.org/abs/2411.05904v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2411.05904v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As chemical plants evolve towards full autonomy, the need for effective fault handling and control in dynamic, unpredictable environments becomes increasingly critical. This paper proposes an innovative approach to industrial automation, introducing validation and reprompting architectures utilizing large language model (LLM)-based autonomous control agents. The proposed agentic system, comprising of operator, validator, and reprompter agents, enables autonomous management of control tasks, adapting to unforeseen disturbances without human intervention. By utilizing validation and reprompting architectures, the framework allows agents to recover from errors and continuously improve decision-making in real-time industrial scenarios. We hypothesize that this mechanism will enhance performance and reliability across a variety of LLMs, offering a path toward fully autonomous systems capable of handling unexpected challenges, paving the way for robust, adaptive control in complex industrial environments. To demonstrate the concept's effectiveness, we created a simple case study involving a temperature control experiment embedded on a microcontroller device, validating the proposed approach.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-11-08T18:23:14Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Javal Vyas</name>
+    </author>
+    <author>
+      <name>Mehmet Mercangöz</name>
+    </author>
+    <arxiv:doi>10.1016/j.ifacol.2025.07.170</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.ifacol.2025.07.170" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.21909v3</id>
+    <title>SceneGenAgent: Precise Industrial Scene Generation with Coding Agent</title>
+    <updated>2025-06-26T06:24:08Z</updated>
+    <link href="https://arxiv.org/abs/2410.21909v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.21909v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The modeling of industrial scenes is essential for simulations in industrial manufacturing. While large language models (LLMs) have shown significant progress in generating general 3D scenes from textual descriptions, generating industrial scenes with LLMs poses a unique challenge due to their demand for precise measurements and positioning, requiring complex planning over spatial arrangement. To address this challenge, we introduce SceneGenAgent, an LLM-based agent for generating industrial scenes through C# code. SceneGenAgent ensures precise layout planning through a structured and calculable format, layout verification, and iterative refinement to meet the quantitative requirements of industrial scenarios. Experiment results demonstrate that LLMs powered by SceneGenAgent exceed their original performance, reaching up to 81.0% success rate in real-world industrial scene generation tasks and effectively meeting most scene generation requirements. To further enhance accessibility, we construct SceneInstruct, a dataset designed for fine-tuning open-source LLMs to integrate into SceneGenAgent. Experiments show that fine-tuning open-source LLMs on SceneInstruct yields significant performance improvements, with Llama3.1-70B approaching the capabilities of GPT-4o. Our code and data are available at https://github.com/THUDM/SceneGenAgent .</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-29T10:01:40Z</published>
+    <arxiv:comment>Accepted to ACL 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Xiao Xia</name>
+    </author>
+    <author>
+      <name>Dan Zhang</name>
+    </author>
+    <author>
+      <name>Zibo Liao</name>
+    </author>
+    <author>
+      <name>Zhenyu Hou</name>
+    </author>
+    <author>
+      <name>Tianrui Sun</name>
+    </author>
+    <author>
+      <name>Jing Li</name>
+    </author>
+    <author>
+      <name>Ling Fu</name>
+    </author>
+    <author>
+      <name>Yuxiao Dong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.17462v3</id>
+    <title>Decoding Time Series with LLMs: A Multi-Agent Framework for Cross-Domain Annotation</title>
+    <updated>2025-05-19T08:07:54Z</updated>
+    <link href="https://arxiv.org/abs/2410.17462v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.17462v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Time series data is ubiquitous across various domains, including manufacturing, finance, and healthcare. High-quality annotations are essential for effectively understanding time series and facilitating downstream tasks; however, obtaining such annotations is challenging, particularly in mission-critical domains. In this paper, we propose TESSA, a multi-agent system designed to automatically generate both general and domain-specific annotations for time series data. TESSA introduces two agents: a general annotation agent and a domain-specific annotation agent. The general agent captures common patterns and knowledge across multiple source domains, leveraging both time-series-wise and text-wise features to generate general annotations. Meanwhile, the domain-specific agent utilizes limited annotations from the target domain to learn domain-specific terminology and generate targeted annotations. Extensive experiments on multiple synthetic and real-world datasets demonstrate that TESSA effectively generates high-quality annotations, outperforming existing methods.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-22T22:43:14Z</published>
+    <arxiv:comment>29 pages, 12 figures, 32 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Minhua Lin</name>
+    </author>
+    <author>
+      <name>Zhengzhang Chen</name>
+    </author>
+    <author>
+      <name>Yanchi Liu</name>
+    </author>
+    <author>
+      <name>Xujiang Zhao</name>
+    </author>
+    <author>
+      <name>Zongyu Wu</name>
+    </author>
+    <author>
+      <name>Junxiang Wang</name>
+    </author>
+    <author>
+      <name>Xiang Zhang</name>
+    </author>
+    <author>
+      <name>Suhang Wang</name>
+    </author>
+    <author>
+      <name>Haifeng Chen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.14209v2</id>
+    <title>Agents4PLC: Automating Closed-loop PLC Code Generation and Verification in Industrial Control Systems using LLM-based Agents</title>
+    <updated>2024-12-25T02:54:02Z</updated>
+    <link href="https://arxiv.org/abs/2410.14209v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.14209v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In industrial control systems, the generation and verification of Programmable Logic Controller (PLC) code are critical for ensuring operational efficiency and safety. While Large Language Models (LLMs) have made strides in automated code generation, they often fall short in providing correctness guarantees and specialized support for PLC programming. To address these challenges, this paper introduces Agents4PLC, a novel framework that not only automates PLC code generation but also includes code-level verification through an LLM-based multi-agent system. We first establish a comprehensive benchmark for verifiable PLC code generation area, transitioning from natural language requirements to human-written-verified formal specifications and reference PLC code. We further enhance our `agents' specifically for industrial control systems by incorporating Retrieval-Augmented Generation (RAG), advanced prompt engineering techniques, and Chain-of-Thought strategies. Evaluation against the benchmark demonstrates that Agents4PLC significantly outperforms previous methods, achieving superior results across a series of increasingly rigorous metrics. This research not only addresses the critical challenges in PLC programming but also highlights the potential of our framework to generate verifiable code applicable to real-world industrial applications.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-18T06:51:13Z</published>
+    <arxiv:comment>12 pages (references included), 6 figures and 3 tables. New version updated with fixed site and github repo and along with some minor adjustements</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Zihan Liu</name>
+    </author>
+    <author>
+      <name>Ruinan Zeng</name>
+    </author>
+    <author>
+      <name>Dongxia Wang</name>
+    </author>
+    <author>
+      <name>Gengyun Peng</name>
+    </author>
+    <author>
+      <name>Jingyi Wang</name>
+    </author>
+    <author>
+      <name>Qiang Liu</name>
+    </author>
+    <author>
+      <name>Peiyu Liu</name>
+    </author>
+    <author>
+      <name>Wenhai Wang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.07677v1</id>
+    <title>Smart Audit System Empowered by LLM</title>
+    <updated>2024-10-10T07:36:15Z</updated>
+    <link href="https://arxiv.org/abs/2410.07677v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.07677v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Manufacturing quality audits are pivotal for ensuring high product standards in mass production environments. Traditional auditing processes, however, are labor-intensive and reliant on human expertise, posing challenges in maintaining transparency, accountability, and continuous improvement across complex global supply chains. To address these challenges, we propose a smart audit system empowered by large language models (LLMs). Our approach introduces three innovations: a dynamic risk assessment model that streamlines audit procedures and optimizes resource allocation; a manufacturing compliance copilot that enhances data processing, retrieval, and evaluation for a self-evolving manufacturing knowledge base; and a Re-act framework commonality analysis agent that provides real-time, customized analysis to empower engineers with insights for supplier improvement. These enhancements elevate audit efficiency and effectiveness, with testing scenarios demonstrating an improvement of over 24%.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-10T07:36:15Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Xu Yao</name>
+    </author>
+    <author>
+      <name>Xiaoxu Wu</name>
+    </author>
+    <author>
+      <name>Xi Li</name>
+    </author>
+    <author>
+      <name>Huan Xu</name>
+    </author>
+    <author>
+      <name>Chenlei Li</name>
+    </author>
+    <author>
+      <name>Ping Huang</name>
+    </author>
+    <author>
+      <name>Si Li</name>
+    </author>
+    <author>
+      <name>Xiaoning Ma</name>
+    </author>
+    <author>
+      <name>Jiulong Shan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.18009v2</id>
+    <title>Control Industrial Automation System with Large Language Model Agents</title>
+    <updated>2025-06-12T21:26:21Z</updated>
+    <link href="https://arxiv.org/abs/2409.18009v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.18009v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional industrial automation systems require specialized expertise to operate and complex reprogramming to adapt to new processes. Large language models offer the intelligence to make them more flexible and easier to use. However, LLMs' application in industrial settings is underexplored. This paper introduces a framework for integrating LLMs to achieve end-to-end control of industrial automation systems. At the core of the framework are an agent system designed for industrial tasks, a structured prompting method, and an event-driven information modeling mechanism that provides real-time data for LLM inference. The framework supplies LLMs with real-time events on different context semantic levels, allowing them to interpret the information, generate production plans, and control operations on the automation system. It also supports structured dataset creation for fine-tuning on this downstream application of LLMs. Our contribution includes a formal system design, proof-of-concept implementation, and a method for generating task-specific datasets for LLM fine-tuning and testing. This approach enables a more adaptive automation system that can respond to spontaneous events, while allowing easier operation and configuration through natural language for more intuitive human-machine interaction. We provide demo videos and detailed data on GitHub: https://github.com/YuchenXia/LLM4IAS.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-09-26T16:19:37Z</published>
+    <arxiv:comment>Pre-print accepted at 30th IEEE ETFA 2025</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Yuchen Xia</name>
+    </author>
+    <author>
+      <name>Nasser Jazdi</name>
+    </author>
+    <author>
+      <name>Jize Zhang</name>
+    </author>
+    <author>
+      <name>Chaitanya Shah</name>
+    </author>
+    <author>
+      <name>Michael Weyrich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.14307v3</id>
+    <title>LLM-3D Print: Large Language Models To Monitor and Control 3D Printing</title>
+    <updated>2025-09-27T21:10:20Z</updated>
+    <link href="https://arxiv.org/abs/2408.14307v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.14307v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industry 4.0 has revolutionized manufacturing by driving digitalization and shifting the paradigm toward additive manufacturing (AM). Fused Deposition Modeling (FDM), a key AM technology, enables the creation of highly customized, cost-effective products with minimal material waste through layer-by-layer extrusion, posing a significant challenge to traditional subtractive methods. However, the susceptibility of material extrusion techniques to errors often requires expert intervention to detect and mitigate defects that can severely compromise product quality. While automated error detection and machine learning models exist, their generalizability across diverse 3D printer setups, firmware, and sensors is limited, and deep learning methods require extensive labeled datasets, hindering scalability and adaptability. To address these challenges, we present a process monitoring and control framework that leverages pre-trained Large Language Models (LLMs) alongside 3D printers to detect and address printing defects. The LLM evaluates print quality by analyzing images captured after each layer or print segment, identifying failure modes and querying the printer for relevant parameters. It then generates and executes a corrective action plan. We validated the effectiveness of the proposed framework in identifying defects by comparing it against a control group of engineers with diverse AM expertise. Our evaluation demonstrated that LLM-based agents not only accurately identify common 3D printing errors, such as inconsistent extrusion, stringing, warping, and layer adhesion, but also effectively determine the parameters causing these failures and autonomously correct them without any need for human intervention.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-26T14:38:19Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <arxiv:journal_ref>Additive Manufacturing, Vol. 114, September 2025, Article 105027</arxiv:journal_ref>
+    <author>
+      <name>Yayati Jadhav</name>
+    </author>
+    <author>
+      <name>Peter Pak</name>
+    </author>
+    <author>
+      <name>Amir Barati Farimani</name>
+    </author>
+    <arxiv:doi>10.1016/j.addma.2025.105027</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.addma.2025.105027" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.12775v2</id>
+    <title>Intelligent OPC Engineer Assistant for Semiconductor Manufacturing</title>
+    <updated>2024-08-27T06:02:55Z</updated>
+    <link href="https://arxiv.org/abs/2408.12775v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.12775v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Advancements in chip design and manufacturing have enabled the processing of complex tasks such as deep learning and natural language processing, paving the way for the development of artificial general intelligence (AGI). AI, on the other hand, can be leveraged to innovate and streamline semiconductor technology from planning and implementation to manufacturing. In this paper, we present \textit{Intelligent OPC Engineer Assistant}, an AI/LLM-powered methodology designed to solve the core manufacturing-aware optimization problem known as optical proximity correction (OPC). The methodology involves a reinforcement learning-based OPC recipe search and a customized multi-modal agent system for recipe summarization. Experiments demonstrate that our methodology can efficiently build OPC recipes on various chip designs with specially handled design topologies, a task that typically requires the full-time effort of OPC engineers with years of experience.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-23T00:49:36Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Guojin Chen</name>
+    </author>
+    <author>
+      <name>Haoyu Yang</name>
+    </author>
+    <author>
+      <name>Bei Yu</name>
+    </author>
+    <author>
+      <name>Haoxing Ren</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.01893v2</id>
+    <title>Large Language Model-Enabled Multi-Agent Manufacturing Systems</title>
+    <updated>2024-06-21T14:54:46Z</updated>
+    <link href="https://arxiv.org/abs/2406.01893v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.01893v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional manufacturing faces challenges adapting to dynamic environments and quickly responding to manufacturing changes. The use of multi-agent systems has improved adaptability and coordination but requires further advancements in rapid human instruction comprehension, operational adaptability, and coordination through natural language integration. Large language models like GPT-3.5 and GPT-4 enhance multi-agent manufacturing systems by enabling agents to communicate in natural language and interpret human instructions for decision-making. This research introduces a novel framework where large language models enhance the capabilities of agents in manufacturing, making them more adaptable, and capable of processing context-specific instructions. A case study demonstrates the practical application of this framework, showing how agents can effectively communicate, understand tasks, and execute manufacturing processes, including precise G-code allocation among agents. The findings highlight the importance of continuous large language model integration into multi-agent manufacturing systems and the development of sophisticated agent communication protocols for a more flexible manufacturing system.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-04T01:57:37Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Jonghan Lim</name>
+    </author>
+    <author>
+      <name>Birgit Vogel-Heuser</name>
+    </author>
+    <author>
+      <name>Ilya Kovalenko</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.20774v3</id>
+    <title>Can We Trust Embodied Agents? Exploring Backdoor Attacks against Embodied LLM-based Decision-Making Systems</title>
+    <updated>2025-04-30T17:59:57Z</updated>
+    <link href="https://arxiv.org/abs/2405.20774v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.20774v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have shown significant promise in real-world decision-making tasks for embodied artificial intelligence, especially when fine-tuned to leverage their inherent common sense and reasoning abilities while being tailored to specific applications. However, this fine-tuning process introduces considerable safety and security vulnerabilities, especially in safety-critical cyber-physical systems. In this work, we propose the first comprehensive framework for Backdoor Attacks against LLM-based Decision-making systems (BALD) in embodied AI, systematically exploring the attack surfaces and trigger mechanisms. Specifically, we propose three distinct attack mechanisms: word injection, scenario manipulation, and knowledge injection, targeting various components in the LLM-based decision-making pipeline. We perform extensive experiments on representative LLMs (GPT-3.5, LLaMA2, PaLM2) in autonomous driving and home robot tasks, demonstrating the effectiveness and stealthiness of our backdoor triggers across various attack channels, with cases like vehicles accelerating toward obstacles and robots placing knives on beds. Our word and knowledge injection attacks achieve nearly 100% success rate across multiple models and datasets while requiring only limited access to the system. Our scenario manipulation attack yields success rates exceeding 65%, reaching up to 90%, and does not require any runtime system intrusion. We also assess the robustness of these attacks against defenses, revealing their resilience. Our findings highlight critical security vulnerabilities in embodied LLM systems and emphasize the urgent need for safeguarding these systems to mitigate potential risks.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-27T17:59:43Z</published>
+    <arxiv:comment>Accepted paper at ICLR 2025, 31 pages, including main paper, references, and appendix</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Ruochen Jiao</name>
+    </author>
+    <author>
+      <name>Shaoyuan Xie</name>
+    </author>
+    <author>
+      <name>Justin Yue</name>
+    </author>
+    <author>
+      <name>Takami Sato</name>
+    </author>
+    <author>
+      <name>Lixu Wang</name>
+    </author>
+    <author>
+      <name>Yixuan Wang</name>
+    </author>
+    <author>
+      <name>Qi Alfred Chen</name>
+    </author>
+    <author>
+      <name>Qi Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2405.16887v2</id>
+    <title>A Large Language Model-based multi-agent manufacturing system for intelligent shopfloor</title>
+    <updated>2025-09-22T13:20:33Z</updated>
+    <link href="https://arxiv.org/abs/2405.16887v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2405.16887v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As customer demand for multi-variety and small-batch production increases, dynamic disturbances place greater demands on manufacturing systems. To address such challenges, researchers proposed the multi-agent manufacturing system. However, conventional agent negotiation typically relies on pre-defined and fixed heuristic rules, which are ill-suited to managing complex and fluctuating disturbances. In current implementations, mainstream approaches based on reinforcement learning require the development of simulators and training models specific to a given shopfloor, necessitating substantial computational resources and lacking scalability. To overcome this limitation, the present study proposes a Large Language Model-based (LLM-based) multi-agent manufacturing system for intelligent shopfloor management. By defining the diverse modules of agents and their collaborative methods, this system facilitates the processing of all workpieces with minimal human intervention. The agents in this system consist of the Machine Server Module (MSM), Bid Inviter Module (BIM), Bidder Module (BM), Thinking Module (TM), and Decision Module (DM). By harnessing the reasoning capabilities of LLMs, these modules enable agents to dynamically analyze shopfloor information and select appropriate processing machines. The LLM-based modules, predefined by system prompts, provide dynamic functionality for the system without the need for pre-training. Extensive experiments were conducted in physical shopfloor settings. The results demonstrate that the proposed system exhibits strong adaptability, and achieves superior performance (makespan) and stability (as measured by sample standard deviation) compared to other approaches without requiring pre-training.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-05-27T07:10:04Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Zhao Z, Tang D, Liu C, et al. A Large language model-based multi-agent manufacturing system for intelligent shopfloors[J]. Advanced Engineering Informatics, 2026, 69: 103888</arxiv:journal_ref>
+    <author>
+      <name>Zhen Zhao</name>
+    </author>
+    <author>
+      <name>Dunbing Tang</name>
+    </author>
+    <author>
+      <name>Changchun Liu</name>
+    </author>
+    <author>
+      <name>Liping Wang</name>
+    </author>
+    <author>
+      <name>Zequn Zhang</name>
+    </author>
+    <author>
+      <name>Haihua Zhu</name>
+    </author>
+    <author>
+      <name>Kai Chen</name>
+    </author>
+    <author>
+      <name>Qingwei Nie</name>
+    </author>
+    <author>
+      <name>Yuchen Ji</name>
+    </author>
+    <arxiv:doi>10.1016/j.aei.2025.103888</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.aei.2025.103888" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.16809v1</id>
+    <title>An LLM-Based Digital Twin for Optimizing Human-in-the Loop Systems</title>
+    <updated>2024-03-25T14:32:28Z</updated>
+    <link href="https://arxiv.org/abs/2403.16809v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.16809v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing prevalence of Cyber-Physical Systems and the Internet of Things (CPS-IoT) applications and Foundation Models are enabling new applications that leverage real-time control of the environment. For example, real-time control of Heating, Ventilation and Air-Conditioning (HVAC) systems can reduce its usage when not needed for the comfort of human occupants, hence reducing energy consumption. Collecting real-time feedback on human preferences in such human-in-the-loop (HITL) systems, however, is difficult in practice. We propose the use of large language models (LLMs) to deal with the challenges of dynamic environments and difficult-to-obtain data in CPS optimization. In this paper, we present a case study that employs LLM agents to mimic the behaviors and thermal preferences of various population groups (e.g. young families, the elderly) in a shopping mall. The aggregated thermal preferences are integrated into an agent-in-the-loop based reinforcement learning algorithm AitL-RL, which employs the LLM as a dynamic simulation of the physical environment to learn how to balance between energy savings and occupant comfort. Our results show that LLMs are capable of simulating complex population movements within large open spaces. Besides, AitL-RL demonstrates superior performance compared to the popular existing policy of set point control, suggesting that adaptive and personalized decision-making is critical for efficient optimization in CPS-IoT applications. Through this case study, we demonstrate the potential of integrating advanced Foundation Models like LLMs into CPS-IoT to enhance system adaptability and efficiency. The project's code can be found on our GitHub repository.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-25T14:32:28Z</published>
+    <arxiv:comment>Accepted at International Workshop on Foundation Models for Cyber-Physical Systems &amp; Internet of Things (FMSys) 2024, Co-located at CPS-IoT Week 2024</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Hanqing Yang</name>
+    </author>
+    <author>
+      <name>Marie Siew</name>
+    </author>
+    <author>
+      <name>Carlee Joe-Wong</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2402.10172v1</id>
+    <title>OptiMUS: Scalable Optimization Modeling with (MI)LP Solvers and Large Language Models</title>
+    <updated>2024-02-15T18:19:18Z</updated>
+    <link href="https://arxiv.org/abs/2402.10172v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2402.10172v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Optimization problems are pervasive in sectors from manufacturing and distribution to healthcare. However, most such problems are still solved heuristically by hand rather than optimally by state-of-the-art solvers because the expertise required to formulate and solve these problems limits the widespread adoption of optimization tools and techniques. This paper introduces OptiMUS, a Large Language Model (LLM)-based agent designed to formulate and solve (mixed integer) linear programming problems from their natural language descriptions. OptiMUS can develop mathematical models, write and debug solver code, evaluate the generated solutions, and improve its model and code based on these evaluations. OptiMUS utilizes a modular structure to process problems, allowing it to handle problems with long descriptions and complex data without long prompts. Experiments demonstrate that OptiMUS outperforms existing state-of-the-art methods on easy datasets by more than $20\%$ and on hard datasets (including a new dataset, NLP4LP, released with this paper that features long and complex problems) by more than $30\%$.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-02-15T18:19:18Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Ali AhmadiTeshnizi</name>
+    </author>
+    <author>
+      <name>Wenzhi Gao</name>
+    </author>
+    <author>
+      <name>Madeleine Udell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2401.07764v2</id>
+    <title>When Large Language Model Agents Meet 6G Networks: Perception, Grounding, and Alignment</title>
+    <updated>2024-02-16T19:15:31Z</updated>
+    <link href="https://arxiv.org/abs/2401.07764v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2401.07764v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>AI agents based on multimodal large language models (LLMs) are expected to revolutionize human-computer interaction and offer more personalized assistant services across various domains like healthcare, education, manufacturing, and entertainment. Deploying LLM agents in 6G networks enables users to access previously expensive AI assistant services via mobile devices democratically, thereby reducing interaction latency and better preserving user privacy. Nevertheless, the limited capacity of mobile devices constrains the effectiveness of deploying and executing local LLMs, which necessitates offloading complex tasks to global LLMs running on edge servers during long-horizon interactions. In this article, we propose a split learning system for LLM agents in 6G networks leveraging the collaboration between mobile devices and edge servers, where multiple LLMs with different roles are distributed across mobile devices and edge servers to perform user-agent interactive tasks collaboratively. In the proposed system, LLM agents are split into perception, grounding, and alignment modules, facilitating inter-module communications to meet extended user requirements on 6G network functions, including integrated sensing and communication, digital twins, and task-oriented communications. Furthermore, we introduce a novel model caching algorithm for LLMs within the proposed system to improve model utilization in context, thus reducing network costs of the collaborative mobile and edge LLM agents.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-01-15T15:20:59Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Minrui Xu</name>
+    </author>
+    <author>
+      <name>Dusit Niyato</name>
+    </author>
+    <author>
+      <name>Jiawen Kang</name>
+    </author>
+    <author>
+      <name>Zehui Xiong</name>
+    </author>
+    <author>
+      <name>Shiwen Mao</name>
+    </author>
+    <author>
+      <name>Zhu Han</name>
+    </author>
+    <author>
+      <name>Dong In Kim</name>
+    </author>
+    <author>
+      <name>Khaled B. Letaief</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.11970v1</id>
+    <title>Large Language Models Empowered Agent-based Modeling and Simulation: A Survey and Perspectives</title>
+    <updated>2023-12-19T09:06:45Z</updated>
+    <link href="https://arxiv.org/abs/2312.11970v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.11970v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agent-based modeling and simulation has evolved as a powerful tool for modeling complex systems, offering insights into emergent behaviors and interactions among diverse agents. Integrating large language models into agent-based modeling and simulation presents a promising avenue for enhancing simulation capabilities. This paper surveys the landscape of utilizing large language models in agent-based modeling and simulation, examining their challenges and promising future directions. In this survey, since this is an interdisciplinary field, we first introduce the background of agent-based modeling and simulation and large language model-empowered agents. We then discuss the motivation for applying large language models to agent-based simulation and systematically analyze the challenges in environment perception, human alignment, action generation, and evaluation. Most importantly, we provide a comprehensive overview of the recent works of large language model-empowered agent-based modeling and simulation in multiple scenarios, which can be divided into four domains: cyber, physical, social, and hybrid, covering simulation of both real-world and virtual environments. Finally, since this area is new and quickly evolving, we discuss the open problems and promising future directions.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-19T09:06:45Z</published>
+    <arxiv:comment>37 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Chen Gao</name>
+    </author>
+    <author>
+      <name>Xiaochong Lan</name>
+    </author>
+    <author>
+      <name>Nian Li</name>
+    </author>
+    <author>
+      <name>Yuan Yuan</name>
+    </author>
+    <author>
+      <name>Jingtao Ding</name>
+    </author>
+    <author>
+      <name>Zhilun Zhou</name>
+    </author>
+    <author>
+      <name>Fengli Xu</name>
+    </author>
+    <author>
+      <name>Yong Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2312.05019v2</id>
+    <title>Vision-based Learning for Drones: A Survey</title>
+    <updated>2024-01-02T06:13:16Z</updated>
+    <link href="https://arxiv.org/abs/2312.05019v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2312.05019v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Drones as advanced cyber-physical systems are undergoing a transformative shift with the advent of vision-based learning, a field that is rapidly gaining prominence due to its profound impact on drone autonomy and functionality. Different from existing task-specific surveys, this review offers a comprehensive overview of vision-based learning in drones, emphasizing its pivotal role in enhancing their operational capabilities under various scenarios. We start by elucidating the fundamental principles of vision-based learning, highlighting how it significantly improves drones' visual perception and decision-making processes. We then categorize vision-based control methods into indirect, semi-direct, and end-to-end approaches from the perception-control perspective. We further explore various applications of vision-based drones with learning capabilities, ranging from single-agent systems to more complex multi-agent and heterogeneous system scenarios, and underscore the challenges and innovations characterizing each area. Finally, we explore open questions and potential solutions, paving the way for ongoing research and development in this dynamic and rapidly evolving field. With growing large language models (LLMs) and embodied intelligence, vision-based learning for drones provides a promising but challenging road towards artificial general intelligence (AGI) in 3D physical world.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-12-08T12:57:13Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <arxiv:journal_ref>IEEE Transactions on Neural Networks and Learning Systems, 2025</arxiv:journal_ref>
+    <author>
+      <name>Jiaping Xiao</name>
+    </author>
+    <author>
+      <name>Rangya Zhang</name>
+    </author>
+    <author>
+      <name>Yuhang Zhang</name>
+    </author>
+    <author>
+      <name>Mir Feroskhan</name>
+    </author>
+    <arxiv:doi>10.1109/TNNLS.2025.3564184</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TNNLS.2025.3564184" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.19998v1</id>
+    <title>Generative retrieval-augmented ontologic graph and multi-agent strategies for interpretive large language model-based materials design</title>
+    <updated>2023-10-30T20:31:50Z</updated>
+    <link href="https://arxiv.org/abs/2310.19998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.19998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transformer neural networks show promising capabilities, in particular for uses in materials analysis, design and manufacturing, including their capacity to work effectively with both human language, symbols, code, and numerical data. Here we explore the use of large language models (LLMs) as a tool that can support engineering analysis of materials, applied to retrieving key information about subject areas, developing research hypotheses, discovery of mechanistic relationships across disparate areas of knowledge, and writing and executing simulation codes for active knowledge generation based on physical ground truths. When used as sets of AI agents with specific features, capabilities, and instructions, LLMs can provide powerful problem solution strategies for applications in analysis and design problems. Our experiments focus on using a fine-tuned model, MechGPT, developed based on training data in the mechanics of materials domain. We first affirm how finetuning endows LLMs with reasonable understanding of domain knowledge. However, when queried outside the context of learned matter, LLMs can have difficulty to recall correct information. We show how this can be addressed using retrieval-augmented Ontological Knowledge Graph strategies that discern how the model understands what concepts are important and how they are related. Illustrated for a use case of relating distinct areas of knowledge - here, music and proteins - such strategies can also provide an interpretable graph structure with rich information at the node, edge and subgraph level. We discuss nonlinear sampling strategies and agent-based modeling applied to complex question answering, code generation and execution in the context of automated force field development from actively learned Density Functional Theory (DFT) modeling, and data analysis.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-30T20:31:50Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Markus J. Buehler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.06116v2</id>
+    <title>OptiMUS: Optimization Modeling Using MIP Solvers and large language models</title>
+    <updated>2023-10-30T18:23:45Z</updated>
+    <link href="https://arxiv.org/abs/2310.06116v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.06116v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Optimization problems are pervasive across various sectors, from manufacturing and distribution to healthcare. However, most such problems are still solved heuristically by hand rather than optimally by state-of-the-art solvers, as the expertise required to formulate and solve these problems limits the widespread adoption of optimization tools and techniques. We introduce OptiMUS, a Large Language Model (LLM)-based agent designed to formulate and solve MILP problems from their natural language descriptions. OptiMUS is capable of developing mathematical models, writing and debugging solver code, developing tests, and checking the validity of generated solutions. To benchmark our agent, we present NLP4LP, a novel dataset of linear programming (LP) and mixed integer linear programming (MILP) problems. Our experiments demonstrate that OptiMUS solves nearly twice as many problems as a basic LLM prompting strategy. OptiMUS code and NLP4LP dataset are available at \href{https://github.com/teshnizi/OptiMUS}{https://github.com/teshnizi/OptiMUS}</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-09T19:47:03Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Ali AhmadiTeshnizi</name>
+    </author>
+    <author>
+      <name>Wenzhi Gao</name>
+    </author>
+    <author>
+      <name>Madeleine Udell</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.04441v1</id>
+    <title>STEPS: A Benchmark for Order Reasoning in Sequential Tasks</title>
+    <updated>2023-06-07T13:58:55Z</updated>
+    <link href="https://arxiv.org/abs/2306.04441v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.04441v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Various human activities can be abstracted into a sequence of actions in natural text, i.e. cooking, repairing, manufacturing, etc. Such action sequences heavily depend on the executing order, while disorder in action sequences leads to failure of further task execution by robots or AI agents. Therefore, to verify the order reasoning capability of current neural models in sequential tasks, we propose a challenging benchmark , named STEPS. STEPS involves two subtask settings, focusing on determining the rationality of given next step in recipes and selecting the reasonable step from the multi-choice question, respectively. We describe the data construction and task formulations, and benchmark most of significant Large Language Models (LLMs). The experimental results demonstrate 1) The commonsense reasoning of action orders in sequential tasks are challenging to resolve via zero-shot prompting or few-shot in-context learning for LLMs; 2) Prompting method still significantly lags behind tuning-based method on STEPS.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-07T13:58:55Z</published>
+    <arxiv:comment>Work in Progress</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Weizhi Wang</name>
+    </author>
+    <author>
+      <name>Hong Wang</name>
+    </author>
+    <author>
+      <name>Xifeng Yan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.14721v4</id>
+    <title>Towards autonomous system: flexible modular production system enhanced with large language model agents</title>
+    <updated>2023-07-24T09:49:55Z</updated>
+    <link href="https://arxiv.org/abs/2304.14721v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.14721v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we present a novel framework that combines large language models (LLMs), digital twins and industrial automation system to enable intelligent planning and control of production processes. We retrofit the automation system for a modular production facility and create executable control interfaces of fine-granular functionalities and coarse-granular skills. Low-level functionalities are executed by automation components, and high-level skills are performed by automation modules. Subsequently, a digital twin system is developed, registering these interfaces and containing additional descriptive information about the production system. Based on the retrofitted automation system and the created digital twins, LLM-agents are designed to interpret descriptive information in the digital twins and control the physical system through service interfaces. These LLM-agents serve as intelligent agents on different levels within an automation system, enabling autonomous planning and control of flexible production. Given a task instruction as input, the LLM-agents orchestrate a sequence of atomic functionalities and skills to accomplish the task. We demonstrate how our implemented prototype can handle un-predefined tasks, plan a production process, and execute the operations. This research highlights the potential of integrating LLMs into industrial automation systems in the context of smart factory for more agile, flexible, and adaptive production processes, while it also underscores the critical insights and limitations for future work. Demos at: https://github.com/YuchenXia/GPT4IndustrialAutomation</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-28T09:42:18Z</published>
+    <arxiv:comment>This is the pre-print draft manuscript. The peer-reviewed version will be published exclusively by IEEE after the conference, which is set to take place from September 12th to 15th, 2023. We've made several improvements to the final version of the paper based on valuable feedback and suggestions from other researchers</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <arxiv:journal_ref>2023 IEEE 28th International Conference on Emerging Technologies and Factory Automation (ETFA)</arxiv:journal_ref>
+    <author>
+      <name>Yuchen Xia</name>
+    </author>
+    <author>
+      <name>Manthan Shenoy</name>
+    </author>
+    <author>
+      <name>Nasser Jazdi</name>
+    </author>
+    <author>
+      <name>Michael Weyrich</name>
+    </author>
+    <arxiv:doi>10.1109/ETFA54631.2023.10275362</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ETFA54631.2023.10275362" title="doi"/>
+  </entry>
+</feed>

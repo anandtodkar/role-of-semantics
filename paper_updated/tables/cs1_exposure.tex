@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{CS1: progressive capability exposure on the authored reference plant (17 assets, 73 signals, 35 tasks, 84 faulty and 53 legal proposals). Suff.: declared required facts present at 6,000 surrogate tokens (not an accuracy bound). Context C$k$ is paired with validator G$k$.}
+\label{tab:cs1}
+\begin{tabular}{@{}llrrrlrr@{}}
+\toprule
+Ctx. & Projection & Top-1 & Verif. & Suff. & Val. & Recall & FPR \\
+\midrule
+C0 & OPC DA / PLC symbol table & 0\% & 0\% & 0\% & G0 & 0\% & 0\% \\
+C1 & SCADA/historian CSV & 79\% & 0\% & 0\% & G1 & 14\% & 0\% \\
+C2 & OPC UA NodeSet2 / AAS submodels & 95\% & 95\% & 23\% & G2 & 68\% & 8\% \\
+C3 & RDF/OWL + QUDT + Brick + ISA-95 & 100\% & 100\% & 51\% & G3 & 74\% & 0\% \\
+C4 & PackML + interlocks + SOSA/PROV & 100\% & 84\% & 86\% & G4 & 100\% & 0\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

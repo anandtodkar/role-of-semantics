@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/zwp6JZZJDyhpEI8u5s0O6W0ZAFs</id>
+  <title>arXiv Query: search_query=(ti:survey OR ti:review) AND (all:"large language model" OR all:LLM OR all:"knowledge graph") AND (all:"industrial automation" OR all:manufacturing OR all:"industry 4.0")&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-20T20:15:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(ti:survey+OR+ti:review)+AND+((all:%22large+language+model%22+OR+(all:LLM+OR+all:%22knowledge+graph%22))+AND+(all:%22industrial+automation%22+OR+(all:manufacturing+OR+all:%22industry+4.0%22)))&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.26348v2</id>
+    <title>When Synthetic Users Fail: A Cross-Domain Benchmark of LLM-Simulated Human Survey Responses</title>
+    <updated>2026-10-04T06:11:21Z</updated>
+    <link href="https://arxiv.org/abs/2607.26348v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.26348v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) are increasingly used as synthetic users, stand-ins for human respondents whose simulated answers feed product, policy, and market decisions. We ask when this substitution is valid and when it fails, and package the answer as an evaluation framework for intelligent synthetic-user systems. A single protocol, run across four models spanning two families and an 8B-to-frontier capability range, is applied to two independent domains of real human-response data: U.S. general social attitudes (General Social Survey) and cross-cultural values (World Values Survey). Every model is benchmarked against a suite of non-LLM baselines fit on held-out human data. Under demographic prompting and the survey-simulation protocols we test, two failures replicate across both domains, all four models, and both families. First, at the individual level no LLM beats even the strongest baseline; on cross-cultural values every model falls well below it, and the gap survives distance-aware and proper scoring. Second, models systematically over-determine demographics, treating identity as far more predictive of attitudes than it is among real people, a distortion present for nearly every question-group combination and robust to a coding-invariant measure. Neither failure is remedied by a larger, more capable model. A decision-impact analysis shows why this matters in practice: on a segment-targeting task the models inflate between-segment gaps two to fourfold, would direct a team to the wrong segment in half of U.S. and most cross-cultural cases, and manufacture segment splits that do not exist in real people. We publicly release the cross-domain benchmark and validation framework, including all code and data, so that teams can determine in advance when synthetic-user evidence is safe for decision support and when it is not.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-28T23:43:00Z</published>
+    <arxiv:comment>19 pages, 5 figures, 4 tables. Preprint; under review. Code and data are publicly available at: https://github.com/ZihanChen1995/when-synthetic-users-fail-a-cross-domain-benchmark-of-llm-simulated-human-survey-responses</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Zihan Chen</name>
+    </author>
+    <author>
+      <name>Di Zhu</name>
+    </author>
+    <author>
+      <name>Lei Nico Zheng</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.00061v1</id>
+    <title>Advancing Multi-Robot Networks via MLLM-Driven Sensing, Communication, and Computation: A Comprehensive Survey</title>
+    <updated>2026-03-31T06:26:53Z</updated>
+    <link href="https://arxiv.org/abs/2604.00061v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.00061v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Imagine advanced humanoid robots, powered by multimodal large language models (MLLMs), coordinating missions across industries like warehouse logistics, manufacturing, and safety rescue. While individual robots show local autonomy, realistic tasks demand coordination among multiple agents sharing vast streams of sensor data. Communication is indispensable, yet transmitting comprehensive data can overwhelm networks, especially when a system-level orchestrator or cloud-based MLLM fuses multimodal inputs for route planning or anomaly detection.
+  These tasks are often initiated by high-level natural language instructions. This intent serves as a filter for resource optimization: by understanding the goal via MLLMs, the system can selectively activate relevant sensing modalities, dynamically allocate bandwidth, and determine computation placement. Thus, R2X is fundamentally an intent-to-resource orchestration problem where sensing, communication, and computation are jointly optimized to maximize task-level success under resource constraints.
+  This survey examines how integrated design paves the way for multi-robot coordination under MLLM guidance. We review state-of-the-art sensing modalities, communication strategies, and computing approaches, highlighting how reasoning is split between on-device models and powerful edge/cloud servers. We present four end-to-end demonstrations (sense -&gt; communicate -&gt; compute -&gt; act): (i) digital-twin warehouse navigation with predictive link context, (ii) mobility-driven proactive MCS control, (iii) a FollowMe robot with a semantic-sensing switch, and (iv) real-hardware open-vocabulary trash sorting via edge-assisted MLLM grounding. We emphasize system-level metrics -- payload, latency, and success -- to show why R2X orchestration outperforms purely on-device baselines.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-31T06:26:53Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Hyun Jong Yang</name>
+    </author>
+    <author>
+      <name>Howon Lee</name>
+    </author>
+    <author>
+      <name>Kyuhong Shim</name>
+    </author>
+    <author>
+      <name>Jeongho Kwak</name>
+    </author>
+    <author>
+      <name>Hyunsoo Kim</name>
+    </author>
+    <author>
+      <name>Donghoon Kim</name>
+    </author>
+    <author>
+      <name>Khoa Anh Ngo</name>
+    </author>
+    <author>
+      <name>Sehyun Ryu</name>
+    </author>
+    <author>
+      <name>Jaehyun Choi</name>
+    </author>
+    <author>
+      <name>Youbin Kim</name>
+    </author>
+    <author>
+      <name>Chanjun Moon</name>
+    </author>
+    <author>
+      <name>Michael Ryoo</name>
+    </author>
+    <author>
+      <name>Byonghyo Shim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.15672v1</id>
+    <title>DRCY: Agentic Hardware Design Reviews</title>
+    <updated>2026-03-13T15:37:58Z</updated>
+    <link href="https://arxiv.org/abs/2603.15672v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.15672v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Hardware design errors discovered after fabrication require costly physical respins that can delay products by months. Existing electronic design automation (EDA) tools enforce structural connectivity rules. However, they cannot verify that connections are \emph{semantically} correct with respect to component datasheets. For example, that a symbol's pinout matches the manufacturer's specification, or that a voltage regulator's feedback resistors produce the intended output. We present DRCY, the first production-ready multi-agent LLM system that automates first-pass schematic connection review by autonomously fetching component datasheets, performing pin-by-pin analysis against extracted specifications, and posting findings as inline comments on design reviews. DRCY is deployed in production on AllSpice Hub, a collaborative hardware design platform, where it runs as a CI/CD action triggered on design review submissions. DRCY is used regularly by major hardware companies for use-cases ranging from multi-agent vehicle design to space exploration. We describe DRCY's five-agent pipeline architecture, its agentic datasheet retrieval system with self-evaluation, and its multi-run consensus mechanism for improving reliability on safety-critical analyses</summary>
+    <category term="cs.AR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-13T15:37:58Z</published>
+    <arxiv:primary_category term="cs.AR"/>
+    <author>
+      <name>Kyle Dumont</name>
+    </author>
+    <author>
+      <name>Nicholas Herbert</name>
+    </author>
+    <author>
+      <name>Hayder Tirmazi</name>
+    </author>
+    <author>
+      <name>Shrikanth Upadhayaya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.22680v1</id>
+    <title>From Electrochemical Energy Storage to Next-Generation Intelligent Battery Technologies for Electric Vehicles: A Survey</title>
+    <updated>2025-12-27T19:07:22Z</updated>
+    <link href="https://arxiv.org/abs/2512.22680v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.22680v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This study provides a comprehensive overview of recent advances in electrochemical energy storage, including Na+ -ion, metal-ion, and metal-air batteries, alongside innovations in electrode engineering, electrolytes, and solid-electrolyte interphase control. It also explores the integration of machine learning, digital twins, large language models and predictive analytics to enable intelligent battery management systems, enhancing performance, safety, and operational longevity. Key challenges, research gaps, and future prospects are addressed, highlighting opportunities presented by hybrid chemistry, scalable manufacturing, sustainability, and AI-driven optimization. This survey aims to provide researchers, engineers, and industry profesionnals with a comprehensive understanding of next-generation battery technologies for the evolving electric vehicles sector.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-27T19:07:22Z</published>
+    <arxiv:comment>This work was supervised by leading professor in the field (Pr. Mohamed Trari, Pr. Waseem Haider, Pr. Ylias Sabri)</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Abderaouf Bahi</name>
+    </author>
+    <author>
+      <name>Amel Ourici</name>
+    </author>
+    <author>
+      <name>Chaima Lagraa</name>
+    </author>
+    <author>
+      <name>Siham Lameche</name>
+    </author>
+    <author>
+      <name>Soundess Halimi</name>
+    </author>
+    <author>
+      <name>Inoussa Mouiche</name>
+    </author>
+    <author>
+      <name>Ylias Sabri</name>
+    </author>
+    <author>
+      <name>Waseem Haider</name>
+    </author>
+    <author>
+      <name>Mohamed Trari</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2508.03014v2</id>
+    <title>Survey of Large Language Models in Extended Reality: Technical Paradigms and Application Frontiers</title>
+    <updated>2025-10-11T11:39:39Z</updated>
+    <link href="https://arxiv.org/abs/2508.03014v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2508.03014v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have demonstrated remarkable capabilities in natural language understanding and generation, and their integration with Extended Reality (XR) is poised to transform how users interact with immersive environments. This survey provides a comprehensive review of recent developments at the intersection of LLMs and XR, offering a structured organization of research along both technical and application dimensions. We propose a taxonomy of LLM-enhanced XR systems centered on key technical paradigms -- such as interactive agent control, XR development toolkits, and generative scene synthesis -- and discuss how these paradigms enable novel capabilities in XR. In parallel, we examine how LLM-driven techniques support practical XR applications across diverse domains, including immersive education, clinical healthcare, and industrial manufacturing. By connecting these technical paradigms with application frontiers, our survey highlights current trends, delineates design considerations, and identifies open challenges in building LLM-augmented XR systems. This work provides insights that can guide researchers and practitioners in advancing the state of the art in intelligent XR experiences.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-08-05T02:46:34Z</published>
+    <arxiv:comment>Withdrawn by the authors after identifying improper reuse of illustrative materials and partial omission of citations in certain sections. A revised version will be prepared to ensure accurate attribution, and comprehensive citation coverage</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Jingyan Wang</name>
+    </author>
+    <author>
+      <name>Yang Zhao</name>
+    </author>
+    <author>
+      <name>Haotian Mao</name>
+    </author>
+    <author>
+      <name>Xubo Yang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.09368v2</id>
+    <title>Anomaly Detection and Generation with Diffusion Models: A Survey</title>
+    <updated>2026-10-03T10:51:08Z</updated>
+    <link href="https://arxiv.org/abs/2506.09368v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.09368v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Anomaly detection (AD) plays a pivotal role across diverse domains, including cybersecurity, finance, healthcare, and industrial manufacturing, by identifying unexpected patterns that deviate from established norms in real-world data. Recent advancements in deep learning, specifically diffusion models (DMs), have sparked significant interest due to their ability to learn complex data distributions and generate high-fidelity samples, offering a robust framework for unsupervised AD. In this survey, we comprehensively review anomaly detection and generation with diffusion models (ADGDM), presenting a tutorial-style analysis of the theoretical foundations and practical implementations and spanning images, videos, time series, tabular, and multimodal data. Crucially, unlike existing surveys that often treat anomaly detection and generation as separate problems, we highlight their inherent synergistic relationship. We reveal how DMs enable a reinforcing cycle where generation techniques directly address the fundamental challenge of anomaly data scarcity, while detection methods provide critical feedback to improve generation fidelity and relevance, advancing both capabilities beyond their individual potential. A detailed taxonomy categorizes ADGDM methods based on anomaly scoring mechanisms, conditioning strategies, and architectural designs, analyzing their strengths and limitations. We final discuss key challenges including scalability and computational efficiency, and outline promising future directions such as efficient architectures, conditioning strategies, and integration with foundation models (e.g., visual-language models and large language models). By synthesizing recent advances and outlining open research questions, this survey aims to guide researchers and practitioners in leveraging DMs for innovative AD solutions across diverse applications.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-11T03:29:18Z</published>
+    <arxiv:comment>20 pages, 11 figures, 13 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Jing Liu</name>
+    </author>
+    <author>
+      <name>Chengfang Li</name>
+    </author>
+    <author>
+      <name>Rui Xi</name>
+    </author>
+    <author>
+      <name>Wenchao Li</name>
+    </author>
+    <author>
+      <name>Liang Cao</name>
+    </author>
+    <author>
+      <name>Jin Wang</name>
+    </author>
+    <author>
+      <name>Laurence T. Yang</name>
+    </author>
+    <author>
+      <name>Junsong Yuan</name>
+    </author>
+    <author>
+      <name>Wei Zhou</name>
+    </author>
+    <arxiv:doi>10.1109/TPAMI.2026.3739960</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/TPAMI.2026.3739960" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.17586v1</id>
+    <title>Large Language Models in the IoT Ecosystem -- A Survey on Security Challenges and Applications</title>
+    <updated>2025-05-23T07:46:27Z</updated>
+    <link href="https://arxiv.org/abs/2505.17586v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.17586v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Internet of Things (IoT) and Large Language Models (LLMs) have been two major emerging players in the information technology era. Although there has been significant coverage of their individual capabilities, our literature survey sheds some light on the integration and interaction of LLMs and IoT devices - a mutualistic relationship in which both parties leverage the capabilities of the other. LLMs like OpenAI's ChatGPT, Anthropic's Claude, Google's Gemini/BERT, any many more, all demonstrate powerful capabilities in natural language understanding and generation, enabling more intuitive and context-aware interactions across diverse IoT applications such as smart cities, healthcare systems, industrial automation, and smart home environments. Despite these opportunities, integrating these resource-intensive LLMs into IoT devices that lack the state-of-the-art computational power is a challenging task. The security of these edge devices is another major concern as they can easily act as a backdoor to private networks if the LLM integration is sloppy and unsecured. This literature survey systematically explores the current state-of-the-art in applying LLMs within IoT, emphasizing their applications in various domains/sectors of society, the significant role they play in enhancing IoT security through anomaly detection and threat mitigation, and strategies for effective deployment using edge computing frameworks. Finally, this survey highlights existing challenges, identifies future research directions, and underscores the need for cross-disciplinary collaboration to fully realize the transformative potential of integrating LLMs and IoT.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-23T07:46:27Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Kushal Khatiwada</name>
+    </author>
+    <author>
+      <name>Jayden Hopper</name>
+    </author>
+    <author>
+      <name>Joseph Cheatham</name>
+    </author>
+    <author>
+      <name>Ayan Joshi</name>
+    </author>
+    <author>
+      <name>Sabur Baidya</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.01821v5</id>
+    <title>Edge-Cloud Collaborative Computing on Distributed Intelligence and Model Optimization: A Survey</title>
+    <updated>2026-03-18T13:31:23Z</updated>
+    <link href="https://arxiv.org/abs/2505.01821v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.01821v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Edge-cloud collaborative computing (ECCC) has emerged as a pivotal paradigm for addressing the computational demands of modern intelligent applications, integrating cloud resources with edge devices to enable efficient, low-latency processing. Recent advancements in AI, particularly deep learning and large language models (LLMs), have dramatically enhanced the capabilities of these distributed systems, yet introduce significant challenges in model deployment and resource management. In this survey, we comprehensive examine the intersection of distributed intelligence and model optimization within edge-cloud environments, providing a structured tutorial on fundamental architectures, enabling technologies, and emerging applications. Additionally, we systematically analyze model optimization approaches, including compression, adaptation, and neural architecture search, alongside AI-driven resource management strategies that balance performance, energy efficiency, and latency requirements. We further explore critical aspects of privacy protection and security enhancement within ECCC systems and examines practical deployments through diverse applications, spanning autonomous driving, healthcare, and industrial automation. Performance analysis and benchmarking techniques are also thoroughly explored to establish evaluation standards for these complex systems. Furthermore, the review identifies critical research directions including LLMs deployment, 6G integration, neuromorphic computing, and quantum computing, offering a roadmap for addressing persistent challenges in heterogeneity management, real-time processing, and scalability. By bridging theoretical advancements and practical deployments, this survey offers researchers and practitioners a holistic perspective on leveraging AI to optimize distributed computing environments, fostering innovation in next-generation intelligent systems.</summary>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-03T13:55:38Z</published>
+    <arxiv:comment>Accepted by IEEE ComST. 45 pages, 13 figures, 10 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.DC"/>
+    <author>
+      <name>Jing Liu</name>
+    </author>
+    <author>
+      <name>Yao Du</name>
+    </author>
+    <author>
+      <name>Kun Yang</name>
+    </author>
+    <author>
+      <name>Jiaqi Wu</name>
+    </author>
+    <author>
+      <name>Yan Wang</name>
+    </author>
+    <author>
+      <name>Xiping Hu</name>
+    </author>
+    <author>
+      <name>Zehua Wang</name>
+    </author>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Peng Sun</name>
+    </author>
+    <author>
+      <name>Azzedine Boukerche</name>
+    </author>
+    <author>
+      <name>Victor C. M. Leung</name>
+    </author>
+    <arxiv:doi>10.1109/COMST.2026.3669216</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/COMST.2026.3669216" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.11430v5</id>
+    <title>A Survey on Diffusion Models for Anomaly Detection</title>
+    <updated>2025-02-27T02:05:55Z</updated>
+    <link href="https://arxiv.org/abs/2501.11430v5" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.11430v5" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Diffusion models (DMs) have emerged as a powerful class of generative AI models, showing remarkable potential in anomaly detection (AD) tasks across various domains, such as cybersecurity, fraud detection, healthcare, and manufacturing. The intersection of these two fields, termed diffusion models for anomaly detection (DMAD), offers promising solutions for identifying deviations in increasingly complex and high-dimensional data. In this survey, we review recent advances in DMAD research. We begin by presenting the fundamental concepts of AD and DMs, followed by a comprehensive analysis of classic DM architectures including DDPMs, DDIMs, and Score SDEs. We further categorize existing DMAD methods into reconstruction-based, density-based, and hybrid approaches, providing detailed examinations of their methodological innovations. We also explore the diverse tasks across different data modalities, encompassing image, time series, video, and multimodal data analysis. Furthermore, we discuss critical challenges and emerging research directions, including computational efficiency, model interpretability, robustness enhancement, edge-cloud collaboration, and integration with large language models. The collection of DMAD research papers and resources is available at https://github.com/fdjingliu/DMAD.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-20T12:06:54Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Jing Liu</name>
+    </author>
+    <author>
+      <name>Zhenchao Ma</name>
+    </author>
+    <author>
+      <name>Zepu Wang</name>
+    </author>
+    <author>
+      <name>Chenxuanyin Zou</name>
+    </author>
+    <author>
+      <name>Jiayang Ren</name>
+    </author>
+    <author>
+      <name>Zehua Wang</name>
+    </author>
+    <author>
+      <name>Liang Song</name>
+    </author>
+    <author>
+      <name>Bo Hu</name>
+    </author>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Victor C. M. Leung</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2409.00088v2</id>
+    <title>On-Device Language Models: A Comprehensive Review</title>
+    <updated>2024-09-14T04:01:09Z</updated>
+    <link href="https://arxiv.org/abs/2409.00088v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2409.00088v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The advent of large language models (LLMs) revolutionized natural language processing applications, and running LLMs on edge devices has become increasingly attractive for reasons including reduced latency, data localization, and personalized user experiences. This comprehensive review examines the challenges of deploying computationally expensive LLMs on resource-constrained devices and explores innovative solutions across multiple domains. The paper investigates the development of on-device language models, their efficient architectures, including parameter sharing and modular designs, as well as state-of-the-art compression techniques like quantization, pruning, and knowledge distillation. Hardware acceleration strategies and collaborative edge-cloud deployment approaches are analyzed, highlighting the intricate balance between performance and resource utilization. Case studies of on-device language models from major mobile manufacturers demonstrate real-world applications and potential benefits. The review also addresses critical aspects such as adaptive learning, multi-modal capabilities, and personalization. By identifying key research directions and open challenges, this paper provides a roadmap for future advancements in on-device language models, emphasizing the need for interdisciplinary efforts to realize the full potential of ubiquitous, intelligent computing while ensuring responsible and ethical deployment. For a comprehensive review of research work and educational resources on on-device large language models (LLMs), please visit https://github.com/NexaAI/Awesome-LLMs-on-device. To download and run on-device LLMs, visit https://www.nexaai.com/models.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-26T03:33:36Z</published>
+    <arxiv:comment>38 pages, 6 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Jiajun Xu</name>
+    </author>
+    <author>
+      <name>Zhiyuan Li</name>
+    </author>
+    <author>
+      <name>Wei Chen</name>
+    </author>
+    <author>
+      <name>Qun Wang</name>
+    </author>
+    <author>
+      <name>Xin Gao</name>
+    </author>
+    <author>
+      <name>Qi Cai</name>
+    </author>
+    <author>
+      <name>Ziyuan Ling</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2406.09042v1</id>
+    <title>Knowledge Graphs in the Digital Twin: A Systematic Literature Review About the Combination of Semantic Technologies and Simulation in Industrial Automation</title>
+    <updated>2024-06-13T12:28:21Z</updated>
+    <link href="https://arxiv.org/abs/2406.09042v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2406.09042v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The ongoing digitization of the industrial sector has reached a pivotal juncture with the emergence of Digital Twins, offering a digital representation of physical assets and processes. One key aspect of those digital representations are simulation models, enabling a deeper insight in the assets current state and its characteristics. This paper asserts that the next evolutionary step in this digitization journey involves the integration of intelligent linkages between diverse simulation models within the Digital Twin framework. Crucially, for the Digital Twin to be a scalable and cost-effective solution, there is a pressing need for automated adaption, (re-)configuration, and generation of simulation models. Recognizing the inherent challenges in achieving such automation, this paper analyses the utilization of knowledge graphs as a potentially very suitable technological solution. Knowledge graphs, acting as interconnected and interrelated databases, provide a means of seamlessly integrating different data sources, facilitating the efficient integration and automated adaption of data and (simulation) models in the Digital Twin. We conducted a comprehensive literature review to analyze the current landscape of knowledge graphs in the context of Digital Twins with focus on simulation models. By addressing the challenges associated with scalability and maintenance, this research contributes to the effective adaption of Digital Twins in the industrial sector, paving the way for enhanced efficiency, adaptability, and resilience in the face of evolving technological landscapes.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-06-13T12:28:21Z</published>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Franz Georg Listl</name>
+    </author>
+    <author>
+      <name>Daniel Dittler</name>
+    </author>
+    <author>
+      <name>Gary Hildebrandt</name>
+    </author>
+    <author>
+      <name>Valentin Stegmaier</name>
+    </author>
+    <author>
+      <name>Nasser Jazdi</name>
+    </author>
+    <author>
+      <name>Michael Weyrich</name>
+    </author>
+    <arxiv:doi>10.1109/ACCESS.2024.3514923</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ACCESS.2024.3514923" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.07476v1</id>
+    <title>The Survey on Multi-Source Data Fusion in Cyber-Physical-Social Systems:Foundational Infrastructure for Industrial Metaverses and Industries 5.0</title>
+    <updated>2024-04-11T05:09:32Z</updated>
+    <link href="https://arxiv.org/abs/2404.07476v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.07476v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As the concept of Industries 5.0 develops, industrial metaverses are expected to operate in parallel with the actual industrial processes to offer ``Human-Centric" Safe, Secure, Sustainable, Sensitive, Service, and Smartness ``6S" manufacturing solutions. Industrial metaverses not only visualize the process of productivity in a dynamic and evolutional way, but also provide an immersive laboratory experimental environment for optimizing and remodeling the process. Besides, the customized user needs that are hidden in social media data can be discovered by social computing technologies, which introduces an input channel for building the whole social manufacturing process including industrial metaverses. This makes the fusion of multi-source data cross Cyber-Physical-Social Systems (CPSS) the foundational and key challenge. This work firstly proposes a multi-source-data-fusion-driven operational architecture for industrial metaverses on the basis of conducting a comprehensive literature review on the state-of-the-art multi-source data fusion methods. The advantages and disadvantages of each type of method are analyzed by considering the fusion mechanisms and application scenarios. Especially, we combine the strengths of deep learning and knowledge graphs in scalability and parallel computation to enable our proposed framework the ability of prescriptive optimization and evolution. This integration can address the shortcomings of deep learning in terms of explainability and fact fabrication, as well as overcoming the incompleteness and the challenges of construction and maintenance inherent in knowledge graphs. The effectiveness of the proposed architecture is validated through a parallel weaving case study. In the end, we discuss the challenges and future directions of multi-source data fusion cross CPSS for industrial metaverses and social manufacturing in Industries 5.0.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-11T05:09:32Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <arxiv:journal_ref>Information Fusion 2024</arxiv:journal_ref>
+    <author>
+      <name>Xiao Wang</name>
+    </author>
+    <author>
+      <name>Yutong Wang</name>
+    </author>
+    <author>
+      <name>Jing Yang</name>
+    </author>
+    <author>
+      <name>Xiaofeng Jia</name>
+    </author>
+    <author>
+      <name>Lijun Li</name>
+    </author>
+    <author>
+      <name>Weiping Ding</name>
+    </author>
+    <author>
+      <name>Fei-Yue Wang</name>
+    </author>
+    <arxiv:doi>10.1016/j.inffus.2024.102321</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.inffus.2024.102321" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.15168v1</id>
+    <title>Ontologies in Digital Twins: A Systematic Literature Review</title>
+    <updated>2023-08-29T09:52:21Z</updated>
+    <link href="https://arxiv.org/abs/2308.15168v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.15168v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Digital Twins (DT) facilitate monitoring and reasoning processes in cyber-physical systems. They have progressively gained popularity over the past years because of intense research activity and industrial advancements. Cognitive Twins is a novel concept, recently coined to refer to the involvement of Semantic Web technology in DTs. Recent studies address the relevance of ontologies and knowledge graphs in the context of DTs, in terms of knowledge representation, interoperability and automatic reasoning. However, there is no comprehensive analysis of how semantic technologies, and specifically ontologies, are utilized within DTs. This Systematic Literature Review (SLR) is based on the analysis of 82 research articles, that either propose or benefit from ontologies with respect to DT. The paper uses different analysis perspectives, including a structural analysis based on a reference DT architecture, and an application-specific analysis to specifically address the different domains, such as Manufacturing and Infrastructure. The review also identifies open issues and possible research directions on the usage of ontologies and knowledge graphs in DTs.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-29T09:52:21Z</published>
+    <arxiv:comment>The Systematic Literature Review (SLR) is submitted to Future Generation Computer System journal's Special Issue on Digital Twin for Future Networks and Emerging IoT Applications (2023)</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Erkan Karabulut</name>
+    </author>
+    <author>
+      <name>Salvatore F. Pileggi</name>
+    </author>
+    <author>
+      <name>Paul Groth</name>
+    </author>
+    <author>
+      <name>Victoria Degeler</name>
+    </author>
+    <arxiv:doi>10.1016/j.future.2023.12.013</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.future.2023.12.013" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2302.05019v1</id>
+    <title>A Comprehensive Survey on Automatic Knowledge Graph Construction</title>
+    <updated>2023-02-10T02:29:21Z</updated>
+    <link href="https://arxiv.org/abs/2302.05019v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2302.05019v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Automatic knowledge graph construction aims to manufacture structured human knowledge. To this end, much effort has historically been spent extracting informative fact patterns from different data sources. However, more recently, research interest has shifted to acquiring conceptualized structured knowledge beyond informative data. In addition, researchers have also been exploring new ways of handling sophisticated construction tasks in diversified scenarios. Thus, there is a demand for a systematic review of paradigms to organize knowledge structures beyond data-level mentions. To meet this demand, we comprehensively survey more than 300 methods to summarize the latest developments in knowledge graph construction. A knowledge graph is built in three steps: knowledge acquisition, knowledge refinement, and knowledge evolution. The processes of knowledge acquisition are reviewed in detail, including obtaining entities with fine-grained types and their conceptual linkages to knowledge graphs; resolving coreferences; and extracting entity relationships in complex scenarios. The survey covers models for knowledge refinement, including knowledge graph completion, and knowledge fusion. Methods to handle knowledge evolution are also systematically presented, including condition knowledge acquisition, condition knowledge graph completion, and knowledge dynamic. We present the paradigms to compare the distinction among these methods along the axis of the data environment, motivation, and architecture. Additionally, we also provide briefs on accessible resources that can help readers to develop practical knowledge graph systems. The survey concludes with discussions on the challenges and possible directions for future exploration.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-02-10T02:29:21Z</published>
+    <arxiv:comment>This paper contains 50 pages and 22 figures. This paper is submitted to ACM Computing Surveys</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Lingfeng Zhong</name>
+    </author>
+    <author>
+      <name>Jia Wu</name>
+    </author>
+    <author>
+      <name>Qian Li</name>
+    </author>
+    <author>
+      <name>Hao Peng</name>
+    </author>
+    <author>
+      <name>Xindong Wu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2012.09049v1</id>
+    <title>Knowledge Graphs in Manufacturing and Production: A Systematic Literature Review</title>
+    <updated>2020-12-16T16:15:28Z</updated>
+    <link href="https://arxiv.org/abs/2012.09049v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2012.09049v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs in manufacturing and production aim to make production lines more efficient and flexible with higher quality output. This makes knowledge graphs attractive for companies to reach Industry 4.0 goals. However, existing research in the field is quite preliminary, and more research effort on analyzing how knowledge graphs can be applied in the field of manufacturing and production is needed. Therefore, we have conducted a systematic literature review as an attempt to characterize the state-of-the-art in this field, i.e., by identifying exiting research and by identifying gaps and opportunities for further research. To do that, we have focused on finding the primary studies in the existing literature, which were classified and analyzed according to four criteria: bibliometric key facts, research type facets, knowledge graph characteristics, and application scenarios. Besides, an evaluation of the primary studies has also been carried out to gain deeper insights in terms of methodology, empirical evidence, and relevance. As a result, we can offer a complete picture of the domain, which includes such interesting aspects as the fact that knowledge fusion is currently the main use case for knowledge graphs, that empirical research and industrial application are still missing to a large extent, that graph embeddings are not fully exploited, and that technical literature is fast-growing but seems to be still far from its peak.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2020-12-16T16:15:28Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Georg Buchgeher</name>
+    </author>
+    <author>
+      <name>David Gabauer</name>
+    </author>
+    <author>
+      <name>Jorge Martinez-Gil</name>
+    </author>
+    <author>
+      <name>Lisa Ehrlinger</name>
+    </author>
+    <arxiv:doi>10.1109/ACCESS.2021.3070395</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ACCESS.2021.3070395" title="doi"/>
+  </entry>
+</feed>

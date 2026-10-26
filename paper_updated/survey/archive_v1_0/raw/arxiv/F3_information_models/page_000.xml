@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/Rvm7cQcANlwUSw9I9kQk3PV8+sM</id>
+  <title>arXiv Query: search_query=(all:"OPC UA" OR all:"Asset Administration Shell") AND (all:"large language model" OR all:LLM OR all:agent)&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-20T19:47:25Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22OPC+UA%22+OR+all:%22Asset+Administration+Shell%22)+AND+(all:%22large+language+model%22+OR+(all:LLM+OR+all:agent))&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>14</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2610.18426v1</id>
+    <title>Evidence-Governed Deployment Readiness for Networked Agents on Industrial OT Infrastructure</title>
+    <updated>2026-10-13T14:05:16Z</updated>
+    <link href="https://arxiv.org/abs/2610.18426v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.18426v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Deploying a workload on a cyber-secure industrial operational-technology (OT) network requires many cross-layer prerequisites to hold at once, including persistent addressing, name resolution, time synchronization, certificate trust, proxy traversal, and reachable industrial-protocol endpoints. These are owned by different teams, yet current tools treat pre-deployment checking, fault attribution, remediation, and ongoing compliance as separate problems, so evidence is rarely reused across stages. As edge platforms come to host self-adapting agents on shared infrastructure, this fragmentation becomes a governance problem. All four stages ask one question: do a workload's requirements hold on a given network?
+  We present an evidence-governed framework that answers it through a single reference, a versioned network-intent artifact specifying a workload's cross-layer requirements for a specific release. A coverage-driven test loop attaches tested evidence to each requirement before deployment. At a site, readiness is reported as ready, not ready, or undecidable, separating untested requirements from genuine failures; a repair step proposes fixes that preserve co-located workloads; and a drift-watch component re-evaluates the site on change, extending assurance across the workload's lifetime. A multi-workload OPC UA commissioning case illustrates all four stages. By detecting runtime deviations and suspending an agent's guarantees until a refreshed artifact is registered, the framework grounds auditable governance for adapting agent collectives on shared industrial infrastructure.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-13T14:05:16Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Dibyajyoti Nath</name>
+    </author>
+    <author>
+      <name>Nitya Sathyavageeswaran</name>
+    </author>
+    <author>
+      <name>Ziran Min</name>
+    </author>
+    <author>
+      <name>Pavan Athreya Narasimha Murthy</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.01364v1</id>
+    <title>LLM-Driven Multi-Agent Control for Skill-Based Smart Manufacturing</title>
+    <updated>2026-10-01T09:34:25Z</updated>
+    <link href="https://arxiv.org/abs/2610.01364v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2610.01364v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Factories are shifting toward smaller lot sizes with high product customization, requiring frequent re-programming of flexible and reconfigurable automation systems. LLM-based agents can be deployed in two complementary roles: Offline, they generate deterministic production sequences, reducing programming effort; online, they operate live machines and handle unforeseen runtime faults that static programs cannot anticipate. We propose a solution in which each factory module is paired with a dedicated LLM-based agent and an MCP tool server that exposes the module's skills via OPC UA method calls, with agents coordinating over MQTT and grounded by real-time updates of the factory state. We compare three agent architectures (orchestrator, peer-to-peer, and monolithic) across nine production challenges of increasing complexity in a simulation of a physical six-module hexagonal factory, including silent hardware fault detection. The monolithic and peer-to-peer architectures both achieve the highest mean solve rate (93\%), while the orchestrator uniquely resolves a silent conveyor-belt fault in all ten runs by autonomously rerouting plates around the blocked segment. All architectures exhibit emergent fault-diagnosis behavior without any explicit failure-handling logic, establishing standardized MCP tooling, MQTT-based inter-agent communication, and real-time state injection as a viable and reproducible foundation for LLM-programmed smart manufacturing.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-10-01T09:34:25Z</published>
+    <arxiv:comment>Accepted at the 2026 IEEE 31st International Conference on Emerging Technologies and Factory Automation (ETFA). 8 pages, 5 figures, 3 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Kay Köhle</name>
+    </author>
+    <author>
+      <name>Darko Anicic</name>
+    </author>
+    <author>
+      <name>Thomas A. Runkler</name>
+    </author>
+    <author>
+      <name>René Graf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07334v1</id>
+    <title>AAS-RAIL: Improving Information Extraction for Asset Administration Shells through Retrieval-Augmented In-Context Learning</title>
+    <updated>2026-09-07T10:54:00Z</updated>
+    <link href="https://arxiv.org/abs/2609.07334v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07334v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Asset Administration Shell (AAS) is a cornerstone of Industry 4.0 and the Digital Product Passport, providing standardized digital representations of industrial assets. While manufacturers already maintain extensive technical product documentation, generating AAS instances from existing product datasheets remains a labor-intensive task because technical information is extracted from heterogeneous document structures and often involves company-specific terminology and conventions. In this work, we present AAS-RAIL, a retrieval-augmented information extraction (IE) approach that automatically generates Asset Administration Shells from PDF product datasheets using large language models (LLMs). Instead of relying on a fixed set of few-shot examples, the proposed retrieval-augmented in-context learning (RAIL) approach retrieves LLM-generated extraction helpers from similar Asset Administration Shells to provide instance-specific in-context learning (ICL). This enables the model to adapt its extraction behavior to company-specific naming conventions and formatting styles without fine-tuning. Our core contribution is the dynamic selection of company-specific AAS examples for each datasheet, replacing static prompting with an extraction pipeline that adapts to instances and combines semantic retrieval and structured information extraction. The proposed approach is evaluated on a collection of industrial product datasheets using a selection of open- and closed-weight LLMs. Experimental results show that RAIL consistently improves extraction quality over conventional few-shot prompting, yielding relative improvements of 30.4-52.4%. These results demonstrate that our approach provides an effective improvement for company-specific AAS generation.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T10:54:00Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Janek Groß</name>
+    </author>
+    <author>
+      <name>Jens Heidrich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.07290v1</id>
+    <title>Quality Metrics for LLM-Generated Asset Administration Shells: A Perturbation-Based Evaluation Approach</title>
+    <updated>2026-09-07T10:00:47Z</updated>
+    <link href="https://arxiv.org/abs/2609.07290v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.07290v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid digital transformation of manufacturing, often referred to as Industry 4.0, relies on seamless interoperability between physical and software assets. A central enabler is the Asset Administration Shell (AAS), a standardized digital representation of such assets. Recent advances in large language models (LLMs) enable the generation of AAS submodels from unstructured sources such as product datasheets but raise challenges for quality assurance. In particular, unexpected errors, the lack of ground truth references, and the absence of standardized quality metrics hinder reliable adoption. In this work, we evaluate quality metrics for AI-generated AAS using a perturbation-based evaluation framework. By systematically degrading AAS generation along multiple dimensions, we assess how well different metrics reflect quality changes. Based on a dataset of 200 products from multiple manufacturers, we generate 6,400 AAS instances using GPT-4o-mini, Qwen3, and DeepSeek-R1. Our results show that metrics based on exact matching of property names and similarity-based soft matching of property values, in particular value-based recall and name-based F1 score, provide the most reliable indicators of quality degradation. Furthermore, we quantify the impact of different perturbation types and analyze differences across model families and product segments. These findings support the selection of suitable metrics, the tuning of LLM-based pipelines, and the integration of AI-generated AAS into industrial applications.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-07T10:00:47Z</published>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Janek Groß</name>
+    </author>
+    <author>
+      <name>Elena Zentgraf</name>
+    </author>
+    <author>
+      <name>Jens Heidrich</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.24918v1</id>
+    <title>Semantic Graph Unification for Industrial Digital Threads: Bridging 11 Heterogeneous Manufacturing Systems Through Ontology-Driven Knowledge Graphs</title>
+    <updated>2026-08-11T19:15:07Z</updated>
+    <link href="https://arxiv.org/abs/2608.24918v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.24918v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern manufacturing enterprises operate heterogeneous systems -- ERP, MES, PLM, SCADA, QMS, SCM -- each with its own data model and API. The resulting silos prevent holistic analysis, delay root-cause investigation, and obstruct Industry 4.0 traceability. Point-to-point integration scales as O(n^2) and accumulates brittle dependencies. This paper presents an open framework for semantic graph unification of industrial digital threads. An ontology-driven RDF knowledge graph unifies data from 11 simulated sources across nine domains through a five-stage ETL pipeline with automated entity resolution spanning 97 owl:sameAs identity links. The ontology encompasses 78 RDFS classes, 108 object properties, and 243 data properties, drawing on ISA-95, OPC UA, eClass, the Asset Administration Shell, RAMI 4.0, and additional standards. An automated discovery engine applies nine strategy categories -- cross-station correlation, alarm coverage, ECN impact, CUSUM/EWMA drift detection -- to surface insights spanning system boundaries. The primary empirical result: blocking 24 cross-system tools reduces recall from 1.00 to 0.31 (F1 from 1.00 to 0.48), showing that 69% of discoverable signals require cross-system graph joins. Leave-one-out ablation confirms six of nine strategies contribute unique signals. Verification against a 65-signal manifest (16 positive, 49 null) yields F1 = 1.00 (95% Clopper-Pearson CI [0.79, 1.00]); as the manifest was author-constructed, this constitutes verification not independent validation. The graph is exposed to LLM agents via 287 Model Context Protocol tools as a SPARQL-native semantic layer. Five industry templates (aerospace, CPG, pharma, medical devices, turbine blades) demonstrate schema stability across manufacturing verticals.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T19:15:07Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Grama Chethan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.08618v1</id>
+    <title>RAG-Based Auto-Configuration for Industrial Fieldbus Devices</title>
+    <updated>2026-08-09T10:07:13Z</updated>
+    <link href="https://arxiv.org/abs/2608.08618v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.08618v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industrial device commissioning requires engineers to manually extract hundreds of protocol-specific parameters from heterogeneous PDF manuals and transcribe them into supervisory control systems, a time-intensive, error-prone workflow. This paper presents SysName, a production-oriented pipeline that automates device configuration end-to-end for Modbus RTU, OPC-UA, Profibus DP, and CANopen. It builds a hybrid dense-sparse retrieval index augmented by an ontology graph derived from ECLASS, AAS, and SOSA/SSN, using a BGE-M3 encoder with a cross-encoder reranker to surface relevant manual passages. A local LLM (T=0.1) generates ontology-aligned JSON-LD configurations via protocol-specific prompts and a four-step repair pipeline. A two-stage abstention gate, combining a reranker-score threshold and an IRI resolution ratio, blocks unsafe LLM invocations and filters low-coverage configurations before SHACL validation. On a gold set of 28 field-level queries, the hybrid retriever reaches 0.96 HitRate@10, and the reranker raises MRR@10 from 0.56 to 0.63 with perfect score separation for abstention. The generator attains field-level F1=0.87 with exact match on 9 of 12 runs. End-to-end runs on an H100 GPU complete in 2.6-6.6s per device with zero unsafe writes and zero silent failures on a five-device benchmark; every unsuccessful run is flagged by abstention or deployment verification. Component-wise evaluation localises the single systematic failure to OPC-UA generation, invisible to end-to-end metrics alone. A case study commissions a physics-simulated Universal Robots UR5e robot from unmodified vendor documentation (254-page manual, 8-page register list, 496 chunks), reaching field-level F1=1.0 over three runs with read-back and joint-consistency verification. An ablation study and comparison with five industrial-LLM systems complete the analysis.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-09T10:07:13Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Aadil Gani Ganie</name>
+    </author>
+    <author>
+      <name>Saad Ezzini</name>
+    </author>
+    <author>
+      <name>Naveed Farooz Marazi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.03755v1</id>
+    <title>LAP: An Agent-to-Instrument Protocol for Autonomous Science</title>
+    <updated>2026-06-02T15:03:43Z</updated>
+    <link href="https://arxiv.org/abs/2606.03755v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.03755v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Autonomous science is moving from demonstration to infrastructure. Large language model agents now plan experiments, and self-driving laboratories execute them. Yet every such system rebuilds the link between the reasoning agent and the physical instrument from scratch, against fragmented vendor SDKs and standards built for deterministic software clients rather than probabilistic, goal-directed agents. Recent agent-interoperability protocols clarify two of the three edges of an agentic ecosystem (Anthropic's Model Context Protocol (MCP) standardizes the agent-to-tool edge, and Google's Agent2Agent (A2A) the agent-to-agent edge), but neither models the agent-to-instrument edge, where operations are stateful, safety-critical, exclusively owned, physically embodied, and produce measurements with units, calibration, and uncertainty. We present the Lab Agent Protocol (LAP), a protocol design that fills this gap. LAP retains A2A's peer-to-peer, discovery-first, task-lifecycle structure and adds four physical-world primitives: (i) the InstrumentCard, a signed capability and physical-limit description; (ii) first-class reservation for exclusive instrument and sample locking; (iii) a safety-fence handshake with operator-confirmation tokens cryptographically bound to a specific task and its parameters, gating hazardous and irreversible operations; and (iv) a MeasurementResult schema that makes every result physically typed (QUDT/UCUM), calibration-anchored, uncertainty-bearing, and reproducible by construction. We specify roles, a six-layer architecture, the JSON-RPC method set, the task and safety state machines, the error model, and cross-laboratory federation, and walk a closed-loop autonomous campaign through the protocol end-to-end. LAP is transport-compatible with the A2A/MCP ecosystem and encapsulates rather than replaces existing device standards such as SiLA 2 and OPC-UA.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-02T15:03:43Z</published>
+    <arxiv:comment>31 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Linwu Zhu</name>
+    </author>
+    <author>
+      <name>Liqiang Gao</name>
+    </author>
+    <author>
+      <name>Yan Chen</name>
+    </author>
+    <author>
+      <name>Dan Zhu</name>
+    </author>
+    <author>
+      <name>Jian Huang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.20663v1</id>
+    <title>ICSSPulse: A Modular LLM-Assisted Platform for Industrial Control System Penetration Testing</title>
+    <updated>2026-02-24T08:10:40Z</updated>
+    <link href="https://arxiv.org/abs/2602.20663v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.20663v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>It is well established that industrial control systems comprise the operational backbone of modern critical infrastructures, yet their increasing connectivity exposes them to cyber threats that are difficult to study and remedy safely under real-time operational conditions. In this paper, we present ICSSPulse, an open-source, modular, and extensible penetration testing platform designed for the security assessment of ICS communication protocols. To the best of our knowledge, ICSSPulse is the first web-based platform that unifies network scanning, protocol-aware Modbus and OPC~UA interaction, and Large Language Model (LLM)-assisted reporting within a single, lightweight ecosystem. Our platform provides a user-friendly graphical interface that orchestrates enumeration, exploitation, and reporting activities over simulated industrial services, enabling safe and reproducible experimentation. It supports protocol-level discovery, asset enumeration, and controlled read/write interactions, while preserving protocol fidelity and operational transparency. Experimental evaluation using synthetic Modbus test servers, a Factory I/O water treatment scenario, and a custom OPC~UA production-line model demonstrated ICSSPulse's potential to discover active industrial services, enumerate process-relevant assets, and manipulate process variables. A key contribution of this work lies in the integration of an LLM-assisted reporting module that automatically translates technical findings into structured executive and technical reports, with mitigation guidance informed by the ICS MITRE ATT&amp;CK ICS matrix.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-24T08:10:40Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Michail Takaronis</name>
+    </author>
+    <author>
+      <name>Athanasia Kollarou</name>
+    </author>
+    <author>
+      <name>Vyron Kampourakis</name>
+    </author>
+    <author>
+      <name>Vasileios Gkioulos</name>
+    </author>
+    <author>
+      <name>Sokratis Katsikas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.11300v2</id>
+    <title>Beyond touch-based human-machine interface: Control your machines in natural language by utilizing large language models and OPC UA</title>
+    <updated>2026-02-05T07:56:21Z</updated>
+    <link href="https://arxiv.org/abs/2510.11300v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.11300v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper proposes an agent-based approach toward a more natural interface between humans and machines. Large language models equipped with tools and the communication standard OPC UA are utilized to control machines in natural language. Instead of touch interaction, which is currently the state-of-the-art medium for interaction in operations, the proposed approach enables operators to talk or text with machines. This allows commands such as 'Please decrease the temperature by 20 % in machine 1 and start the cleaning operation in machine 2.' The large language model receives the user input and selects one of three predefined tools that connect to an OPC UA server and either change or read the value of a node. Afterwards, the result of the tool execution is passed back to the language model, which then provides a final response to the user. The approach is universally designed and can therefore be applied to any machine that supports the OPC UA standard. The large language model is neither fine-tuned nor requires training data, only the relevant machine credentials and a parameter dictionary are included within the system prompt. The tool-calling ability and their design is evaluated on a demonstrator setup with a Siemens S7-1500 programmable logic controller with four machine parameters. Fifty synthetically generated commands on five different models were tested and the results demonstrate high success rate, with proprietary GPT-5 models achieving accuracies between 96.0 % and 98.0 %, and open-weight models reaching up to 90.0 %. Afterwards the approach was transferred to a deployed spay-coating machine. The proposed concept is supposed to contribute in advancing natural interaction in industrial human-machine interfaces.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-13T11:46:47Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Bernd Hofmann</name>
+    </author>
+    <author>
+      <name>Niklas Piechulek</name>
+    </author>
+    <author>
+      <name>Sven Kreitlein</name>
+    </author>
+    <author>
+      <name>Joerg Franke</name>
+    </author>
+    <author>
+      <name>Patrick Bruendl</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11180v2</id>
+    <title>Beyond Formal Semantics for Capabilities and Skills: Model Context Protocol in Manufacturing</title>
+    <updated>2025-12-09T14:19:21Z</updated>
+    <link href="https://arxiv.org/abs/2506.11180v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.11180v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Explicit modeling of capabilities and skills -- whether based on ontologies, Asset Administration Shells, or other technologies -- requires considerable manual effort and often results in representations that are not easily accessible to Large Language Models (LLMs). In this work-in-progress paper, we present an alternative approach based on the recently introduced Model Context Protocol (MCP). MCP allows systems to expose functionality through a standardized interface that is directly consumable by LLM-based agents. We conduct a prototypical evaluation on a laboratory-scale manufacturing system, where resource functions are made available via MCP. A general-purpose LLM is then tasked with planning and executing a multi-step process, including constraint handling and the invocation of resource functions via MCP. The results indicate that such an approach can enable flexible industrial automation without relying on explicit semantic models. This work lays the basis for further exploration of external tool integration in LLM-driven production systems.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-12T13:02:16Z</published>
+    <arxiv:comment>\c{opyright} 2025 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Luis Miguel Vieira da Silva</name>
+    </author>
+    <author>
+      <name>Aljosha Köcher</name>
+    </author>
+    <author>
+      <name>Felix Gehlhoff</name>
+    </author>
+    <arxiv:doi>10.1109/ETFA65518.2025.11205601</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ETFA65518.2025.11205601" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.17209v4</id>
+    <title>Generation of Asset Administration Shell with Large Language Model Agents: Toward Semantic Interoperability in Digital Twins in the Context of Industry 4.0</title>
+    <updated>2024-06-24T12:04:06Z</updated>
+    <link href="https://arxiv.org/abs/2403.17209v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.17209v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This research introduces a novel approach for achieving semantic interoperability in digital twins and assisting the creation of Asset Administration Shell (AAS) as digital twin model within the context of Industry 4.0. The foundational idea of our research is that the communication based on semantics and the generation of meaningful textual data are directly linked, and we posit that these processes are equivalent if the exchanged information can be serialized in text form. Based on this, we construct a "semantic node" data structure in our research to capture the semantic essence of textual data. Then, a system powered by large language models is designed and implemented to process the "semantic node" and generate standardized digital twin models from raw textual data collected from datasheets describing technical assets. Our evaluation demonstrates an effective generation rate of 62-79%, indicating a substantial proportion of the information from the source text can be translated error-free to the target digital twin instance model with the generative capability of large language models. This result has a direct application in the context of Industry 4.0, and the designed system is implemented as a data model generation tool for reducing the manual effort in creating AAS model. In our evaluation, a comparative analysis of different LLMs and an in-depth ablation study of Retrieval-Augmented Generation (RAG) mechanisms provide insights into the effectiveness of LLM systems for interpreting technical concepts and translating data. Our findings emphasize LLMs' capability to automate AAS instance creation and contribute to the broader field of semantic interoperability for digital twins in industrial applications. The prototype implementation and evaluation results are presented on our GitHub Repository: https://github.com/YuchenXia/AASbyLLM.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-25T21:37:30Z</published>
+    <arxiv:comment>Published in IEEE Access</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yuchen Xia</name>
+    </author>
+    <author>
+      <name>Zhewen Xiao</name>
+    </author>
+    <author>
+      <name>Nasser Jazdi</name>
+    </author>
+    <author>
+      <name>Michael Weyrich</name>
+    </author>
+    <arxiv:doi>10.1109/ACCESS.2024.3415470</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ACCESS.2024.3415470" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.01420v1</id>
+    <title>An Architecture for Deploying Reinforcement Learning in Industrial Environments</title>
+    <updated>2023-06-02T10:22:01Z</updated>
+    <link href="https://arxiv.org/abs/2306.01420v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.01420v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industry 4.0 is driven by demands like shorter time-to-market, mass customization of products, and batch size one production. Reinforcement Learning (RL), a machine learning paradigm shown to possess a great potential in improving and surpassing human level performance in numerous complex tasks, allows coping with the mentioned demands. In this paper, we present an OPC UA based Operational Technology (OT)-aware RL architecture, which extends the standard RL setting, combining it with the setting of digital twins. Moreover, we define an OPC UA information model allowing for a generalized plug-and-play like approach for exchanging the RL agent used. In conclusion, we demonstrate and evaluate the architecture, by creating a proof of concept. By means of solving a toy example, we show that this architecture can be used to determine the optimal policy using a real control system.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-02T10:22:01Z</published>
+    <arxiv:comment>This preprint has not undergone peer review or any post-submission improvements or corrections. The Version of Record of this contribution is published in Computer Aided Systems Theory - EUROCAST 2022 and is available online at https://doi.org/10.1007/978-3-031-25312-6_67</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Moreno-Díaz, R., Pichler, F., Quesada-Arencibia, A. (eds) Computer Aided Systems Theory - EUROCAST 2022. EUROCAST 2022. Lecture Notes in Computer Science, vol 13789. Springer, Cham</arxiv:journal_ref>
+    <author>
+      <name>Georg Schäfer</name>
+    </author>
+    <author>
+      <name>Reuf Kozlica</name>
+    </author>
+    <author>
+      <name>Stefan Wegenkittl</name>
+    </author>
+    <author>
+      <name>Stefan Huber</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-031-25312-6_67</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-031-25312-6_67" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2305.06001v1</id>
+    <title>Digital Twins of Business Processes as Enablers for IT / OT Integration</title>
+    <updated>2023-05-10T09:20:25Z</updated>
+    <link href="https://arxiv.org/abs/2305.06001v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2305.06001v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The vision of Industry 4.0 introduces new requirements to Operational Technology (OT) systems. Solutions for these requirements already exist in the Information Technology (IT) world, however, due to the different characteristics of both worlds, these solutions often cannot be directly used in the world of OT. We therefore propose an Industrial Business Process Twin (IBPT), allowing to apply methods of one world to another not directly but, instead, to a representation, that is in bidirectional exchange with the other world. The proposed IBPT entity acts as an intermediary, decoupling the worlds of IT and OT, thus allowing for an integration of IT and OT components of different manufacturers and platforms. Using this approach, we demonstrate the four essential Industry 4.0 design principles information transparency, technical assistance, interconnection and decentralized decisions based on the gamified Industry 4.0 scenario of playing the game of Nine Men's Morris. This scenario serves well for agent based Artificial Intelligence (AI)-research and education. We develop an Open Platform Communications Unified Architecture (OPC UA) information and communication model and then evaluate the IBPT component with respect to the different views of the Reference Architecture Model Industry 4.0 (RAMI4.0).</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-05-10T09:20:25Z</published>
+    <arxiv:comment>Submitted to INDIN2023 conference</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <arxiv:journal_ref>2023 IEEE 21st International Conference on Industrial Informatics (INDIN)</arxiv:journal_ref>
+    <author>
+      <name>Hannes Waclawek</name>
+    </author>
+    <author>
+      <name>Georg Schäfer</name>
+    </author>
+    <author>
+      <name>Christoph Binder</name>
+    </author>
+    <author>
+      <name>Eduard Hirsch</name>
+    </author>
+    <author>
+      <name>Stefan Huber</name>
+    </author>
+    <arxiv:doi>10.1109/INDIN51400.2023.10217905</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/INDIN51400.2023.10217905" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1903.00065v2</id>
+    <title>Apply SOA Paradigms in Cyber-Physical System to Enhance Interoperability: State-of-the-Art Review</title>
+    <updated>2019-03-04T09:11:47Z</updated>
+    <link href="https://arxiv.org/abs/1903.00065v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1903.00065v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Cyber-Physical System (CPS) is considered to be the next generation of intelligent industrial automation systems that integrate computing, communication and control technologies. In CPS, the interoperability requirements between devices and processes are growing rapidly. However, the diversity and heterogeneity of technologies and standards between information technology (IT) and operational technology (OT) in industrial systems pose significant challenges. Service-Oriented Architecture (SOA) provides a software design pattern in which software components are connected only through messaging, which is consistent with the fundamentals of modularity and communication in distributed automation systems. SOA is considered to be a key technology for improving interoperability in next-generation industrial automation systems. This paper introduces the latest research advances in applying SOA paradigms to CPS to improve interoperability, including: Open Platform Communications Unified Architecture (OPC UA) and related extensions, implementing SOA at the manufacturing device level, integrating legacy systems in SOA-based automation systems, Plug-and-Play in SOA-based automation systems, dynamic configuration in SOA-based automation systems and the combination of SOA with Multi-Agent Systems and Evolvable Production Systems.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2019-02-13T11:44:53Z</published>
+    <arxiv:comment>6 pages, 0 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Su Zhang</name>
+    </author>
+  </entry>
+</feed>

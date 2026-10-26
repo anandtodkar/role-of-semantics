@@ -1,0 +1,1213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/6x0UXWR/sO6C0+mXJ5t2Md1Pu+I</id>
+  <title>arXiv Query: search_query=(all:"large language model" OR all:LLM OR all:"agentic") AND (all:"industrial automation" OR all:manufacturing OR all:"cyber-physical" OR all:PLC) AND all:agent&amp;id_list=&amp;start=700&amp;max_results=100</title>
+  <updated>2026-10-20T20:12:58Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22large+language+model%22+OR+(all:LLM+OR+all:%22agentic%22))+AND+((all:%22industrial+automation%22+OR+(all:manufacturing+OR+(all:%22cyber-physical%22+OR+all:PLC)))+AND+all:agent)&amp;start=700&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>751</opensearch:totalResults>
+  <opensearch:startIndex>700</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/1703.08930v1</id>
+    <title>Alternative Modes of Interaction in Proximal Human-in-the-Loop Operation of Robots</title>
+    <updated>2017-03-27T05:08:02Z</updated>
+    <link href="https://arxiv.org/abs/1703.08930v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1703.08930v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ambiguity and noise in natural language instructions create a significant barrier towards adopting autonomous systems into safety critical workflows involving humans and machines. In this paper, we propose to build on recent advances in electrophysiological monitoring methods and augmented reality technologies, to develop alternative modes of communication between humans and robots involved in large-scale proximal collaborative tasks. We will first introduce augmented reality techniques for projecting a robot's intentions to its human teammate, who can interact with these cues to engage in real-time collaborative plan execution with the robot. We will then look at how electroencephalographic (EEG) feedback can be used to monitor human response to both discrete events, as well as longer term affective states while execution of a plan. These signals can be used by a learning agent, a.k.a an affective robot, to modify its policy. We will present an end-to-end system capable of demonstrating these modalities of interaction. We hope that the proposed system will inspire research in augmenting human-robot interactions with alternative forms of communications in the interests of safety, productivity, and fluency of teaming, particularly in engineered settings such as the factory floor or the assembly line in the manufacturing industry where the use of such wearables can be enforced.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-03-27T05:08:02Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Tathagata Chakraborti</name>
+    </author>
+    <author>
+      <name>Sarath Sreedharan</name>
+    </author>
+    <author>
+      <name>Anagha Kulkarni</name>
+    </author>
+    <author>
+      <name>Subbarao Kambhampati</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.08774v1</id>
+    <title>Interbank Credit and the Money Manufacturing Process. A Systemic Perspective on Financial Stability</title>
+    <updated>2017-02-28T13:05:59Z</updated>
+    <link href="https://arxiv.org/abs/1702.08774v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.08774v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Interbank lending and borrowing occur when financial institutions seek to settle and refinance their mutual positions over time and circumstances. This interactive process involves money creation at the aggregate level. Coordination mismatch on interbank credit may trigger systemic crises. This happened when, since summer 2007, interbank credit coordination did not longer work smoothly across financial institutions, eventually requiring exceptional monetary policies by central banks, and guarantee and bailout interventions by governments. Our article develops an interacting heterogeneous agents-based model of interbank credit coordination under minimal institutions. First, we explore the link between interbank credit coordination and the money generation process. Contrary to received understanding, interbank credit has the capacity to make the monetary system unbound. Second, we develop simulation analysis on imperfect interbank credit coordination, studying impact of interbank dynamics on financial stability and resilience at individual and aggregate levels. Systemically destabilizing forces prove to be related to the working of the banking system over time, especially interbank coordination conditions and circumstances.</summary>
+    <category term="q-fin.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="econ.GN" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-fin.RM" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-28T13:05:59Z</published>
+    <arxiv:primary_category term="q-fin.GN"/>
+    <arxiv:journal_ref>Journal of Economic Interaction and Coordination (2018)</arxiv:journal_ref>
+    <author>
+      <name>Yuri Biondi</name>
+    </author>
+    <author>
+      <name>Feng Zhou</name>
+    </author>
+    <arxiv:doi>10.1007/s11403-018-0230-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s11403-018-0230-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.07638v1</id>
+    <title>Reward-penalty Mechanism for Reverse Supply Chain Network with Asymmetric Information and Carbon Emission Constraints</title>
+    <updated>2017-02-23T04:18:53Z</updated>
+    <link href="https://arxiv.org/abs/1702.07638v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.07638v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We discuss the government's reward and penalty mechanism in the presence of asymmetric information and carbon emission constraint when downstream retailers compete in a reverse supply chain network. Considering five game models which are different in terms of the coordination structure of the reverse supply chain network and power structure of the reward-penalty mechanism: (1) the reverse supply chain network centralized decision-making model; (2) the reverse supply chain network centralized decision-making model with carbon emission constraint; (3) the retailers' competition reverse supply chain network decentralized decision-making model; (4) the retailers' competition reverse supply chain network decentralized decision-making model with carbon emission constraint; (5) the retailers' competition reverse supply chain network decentralized decision-making model with carbon emission constraint and the government's reward-penalty mechanism. Building the participation-incentive contract under each model use the principal-agent theory, and solving the model use the Lagrange multiplier method. We can get the following conclusion: 1) when the government implements the reward-penalty mechanism for carbon emission and recycling simultaneously, the recycling rate as well as the buy-back price offered by the manufacturer are higher than those when the government conducts reward-penalty mechanism exclusively for carbon emission; 2) when the government implements carbon emission constraint, both retailers' selling prices of the new product are higher than those when no carbon emission constraint is forced; 3) there is no certain relationship between the two retailers' selling prices of the new product when the government implements the reward-penalty mechanism only for carbon emission and when it implements the mechanism for carbon emission as well as recycling.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-23T04:18:53Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Xiao-qing Zhang</name>
+    </author>
+    <author>
+      <name>Xi-gang Yuan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1702.03504v2</id>
+    <title>Time, Computational Complexity, and Probability in the Analysis of Distance-Bounding Protocols</title>
+    <updated>2017-10-04T07:10:19Z</updated>
+    <link href="https://arxiv.org/abs/1702.03504v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1702.03504v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Many security protocols rely on the assumptions on the physical properties in which its protocol sessions will be carried out. For instance, Distance Bounding Protocols take into account the round trip time of messages and the transmission velocity to infer an upper bound of the distance between two agents. We classify such security protocols as Cyber-Physical. Time plays a key role in design and analysis of many of these protocols. This paper investigates the foundational differences and the impacts on the analysis when using models with discrete time and models with dense time. We show that there are attacks that can be found by models using dense time, but not when using discrete time. We illustrate this with a novel attack that can be carried out on most Distance Bounding Protocols. In this attack, one exploits the execution delay of instructions during one clock cycle to convince a verifier that he is in a location different from his actual position. We additionally present a probabilistic analysis of this novel attack. As a formal model for representing and analyzing Cyber-Physical properties, we propose a Multiset Rewriting model with dense time suitable for specifying cyber-physical security protocols. We introduce Circle-Configurations and show that they can be used to symbolically solve the reachability problem for our model, and show that for the important class of balanced theories the reachability problem is PSPACE-complete. We also show how our model can be implemented using the computational rewriting tool Maude, the machinery that automatically searches for such attacks.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-02-12T08:22:54Z</published>
+    <arxiv:comment>Extending our POST 2015 paper</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <author>
+      <name>Max Kanovich</name>
+    </author>
+    <author>
+      <name>Tajana Ban Kirigin</name>
+    </author>
+    <author>
+      <name>Vivek Nigam</name>
+    </author>
+    <author>
+      <name>Andre Scedrov</name>
+    </author>
+    <author>
+      <name>Carolyn Talcott</name>
+    </author>
+    <arxiv:doi>10.3233/JCS-0560</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.3233/JCS-0560" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1701.04679v2</id>
+    <title>Self-regulating Supply-Demand Systems</title>
+    <updated>2017-04-09T21:56:05Z</updated>
+    <link href="https://arxiv.org/abs/1701.04679v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1701.04679v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Supply-demand systems in Smart City sectors such as energy, transportation, telecommunication, are subject of unprecedented technological transformations by the Internet of Things. Usually, supply-demand systems involve actors that produce and consume resources, e.g. energy, and they are regulated such that supply meets demand, or demand meets available supply. Mismatches of supply and demand may increase operational costs, can cause catastrophic damage in infrastructure, for instance power blackouts, and may even lead to social unrest and security threats. Long-term, operationally offline and top-down regulatory decision-making by governmental officers, policy makers or system operators may turn out to be ineffective for matching supply-demand under new dynamics and opportunities that Internet of Things technologies bring to supply-demand systems, for instance, interactive cyber-physical systems and software agents running locally in physical assets to monitor and apply automated control actions in real-time. e.g. power flow redistributions by smart transformers to improve the Smart Grid reliability. Existing work on online regulatory mechanisms of matching supply-demand either focuses on game-theoretic solutions with assumptions that cannot be easily met in real-world systems or assume centralized management entities and local access to global information. This paper contributes a generic decentralized self-regulatory framework, which, in contrast to related work, is shaped around standardized control system concepts and Internet of Things technologies for an easier adoption and applicability. The framework involves a decentralized combinatorial optimization mechanism that matches supply-demand under different regulatory scenarios.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2017-01-16T16:53:12Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Evangelos Pournaras</name>
+    </author>
+    <author>
+      <name>Mark Yao</name>
+    </author>
+    <author>
+      <name>Dirk Helbing</name>
+    </author>
+    <arxiv:doi>10.1016/j.future.2017.05.018</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.future.2017.05.018" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1612.04973v1</id>
+    <title>A Compositional Framework for Preference-Aware Agents</title>
+    <updated>2016-12-15T08:48:14Z</updated>
+    <link href="https://arxiv.org/abs/1612.04973v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1612.04973v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A formal description of a Cyber-Physical system should include a rigorous specification of the computational and physical components involved, as well as their interaction. Such a description, thus, lends itself to a compositional model where every module in the model specifies the behavior of a (computational or physical) component or the interaction between different components. We propose a framework based on Soft Constraint Automata that facilitates the component-wise description of such systems and includes the tools necessary to compose subsystems in a meaningful way, to yield a description of the entire system. Most importantly, Soft Constraint Automata allow the description and composition of components' preferences as well as environmental constraints in a uniform fashion. We illustrate the utility of our framework using a detailed description of a patrolling robot, while highlighting methods of composition as well as possible techniques to employ them.</summary>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-12-15T08:48:14Z</published>
+    <arxiv:comment>In Proceedings V2CPS-16, arXiv:1612.04023</arxiv:comment>
+    <arxiv:primary_category term="cs.LO"/>
+    <arxiv:journal_ref>EPTCS 232, 2016, pp. 21-35</arxiv:journal_ref>
+    <author>
+      <name>Tobias Kappé</name>
+      <arxiv:affiliation>LIACS, Leiden University Leiden and Centrum Wiskunde &amp; Informatica Amsterdam, The Netherlands</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Farhad Arbab</name>
+      <arxiv:affiliation>LIACS, Leiden University Leiden and Centrum Wiskunde &amp; Informatica Amsterdam, The Netherlands</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Carolyn Talcott</name>
+      <arxiv:affiliation>SRI International, USA</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.4204/EPTCS.232.6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.4204/EPTCS.232.6" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1611.00518v1</id>
+    <title>A Dynamic Multi Agent based scheduling for flexible flow line manufacturing system accompanied by dynamic customer demand</title>
+    <updated>2016-11-02T09:31:07Z</updated>
+    <link href="https://arxiv.org/abs/1611.00518v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1611.00518v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Dynamic rescheduling decision-making problem is an important issue in modern manufacturing system with the feature of combinational computation complexity. This paper introduces a multi-agent based approach using the detailed process, provided by Prometheus methodology, which used for the design of a simultaneous dynamic rescheduling decision making for flexible flow line manufacturing system that working under dynamic customer demand. The application has been completely modeled with the Prometheus Design Tool (PDT), which offers full support to Prometheus Methodology. The proposed dynamic scheduling decision making system is developed for Automated UPVC door and Windows Company and can be support both static and dynamic scheduling.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-11-02T09:31:07Z</published>
+    <arxiv:comment>Conference</arxiv:comment>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Daniral Roudi</name>
+    </author>
+    <author>
+      <name>Ali Vatankhah Barenji</name>
+    </author>
+    <author>
+      <name>Reza Vatankhah Barenji</name>
+    </author>
+    <author>
+      <name>Majid Hashemipour</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.08439v2</id>
+    <title>Model-based Test Generation for Robotic Software: Automata versus Belief-Desire-Intention Agents</title>
+    <updated>2016-12-12T11:23:48Z</updated>
+    <link href="https://arxiv.org/abs/1609.08439v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.08439v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Robotic code needs to be verified to ensure its safety and functional correctness, especially when the robot is interacting with people. Testing real code in simulation is a viable option. However, generating tests that cover rare scenarios, as well as exercising most of the code, is a challenge amplified by the complexity of the interactions between the environment and the software. Model-based test generation methods can automate otherwise manual processes and facilitate reaching rare scenarios during testing. In this paper, we compare using Belief-Desire-Intention (BDI) agents as models for test generation with more conventional automata-based techniques that exploit model checking, in terms of practicality, performance, transferability to different scenarios, and exploration (`coverage'), through two case studies: a cooperative manufacturing task, and a home care scenario. The results highlight the advantages of using BDI agents for test generation. BDI agents naturally emulate the agency present in Human-Robot Interactions (HRIs), and are thus more expressive than automata. The performance of the BDI-based test generation is at least as high, and the achieved coverage is higher or equivalent, compared to test generation based on model checking automata.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-16T14:07:28Z</published>
+    <arxiv:comment>arXiv admin note: text overlap with arXiv:1603.00656</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Dejanira Araiza-Illan</name>
+    </author>
+    <author>
+      <name>Anthony G. Pipe</name>
+    </author>
+    <author>
+      <name>Kerstin Eder</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1609.03657v1</id>
+    <title>Towards Energy-Efficient Communication Management in the Distributed Control of Networked Cyber-Physical Systems</title>
+    <updated>2016-09-13T02:04:13Z</updated>
+    <link href="https://arxiv.org/abs/1609.03657v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1609.03657v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we study the distributed control of networked cyber-physical systems when a much more energy-efficient distributed communication management strategy is proposed to solve the well-studied consensus problem. In contrast to the existing potential-based network topology control method, the proposed topology control method is based on the variation of communication ranges such that each agent can control its ad hoc communication range. The proposed network topology control technique can not only guarantee network connectivity but also reduce the communication energy. We apply the new network topology control technique, based on variable communication ranges, in a well-studied consensus problem, where the communication range for each agent is designed locally along with a new bounded control algorithm. Theoretical analysis is then provided to show that the proposed network topology control technique can guarantee consensus with bounded communication energy consumption. Finally, simulation examples are provided to show the effectiveness of the proposed energy-efficient distributed topology control technique.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-09-13T02:04:13Z</published>
+    <arxiv:comment>Submitted to American Control Conference</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Yongcan Cao</name>
+    </author>
+    <author>
+      <name>Eduardo Pasiliao</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1608.04203v1</id>
+    <title>Cultural Evolution as a Non-Stationary Stochastic Process</title>
+    <updated>2016-08-15T08:31:27Z</updated>
+    <link href="https://arxiv.org/abs/1608.04203v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1608.04203v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present an individual based model of cultural evolution, where interacting agents are coded by binary strings standing for strategies for action, blueprints for products or attitudes and beliefs. The model is patterned on an established model of biological evolution, the Tangled Nature Model (TNM), where a `tangle' of interactions between agents determines their reproductive success. In addition, our agents also have the ability to copy part of each other's strategy, a feature inspired by the Axelrod model of cultural diversity. Unlike the latter, but similarly to the TNM, the model dynamics goes through a series of metastable stages of increasing length, each characterized by mutually enforcing cultural patterns. These patterns are abruptly replaced by other patterns characteristic of the next metastable period. We analyze the time dependence of the population and diversity in the system, show how different cultures are formed and merge, and how their survival probability lacks, in the model, a finite average life-time. Finally, we use historical data on the number of car manufacturers after the introduction of the automobile to the market, to argue that ourmodel can qualitatively reproduce the flurry of cultural activity which follows a disruptive innovation.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.PE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-08-15T08:31:27Z</published>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <arxiv:journal_ref>Complexity, 21, 214-223, 2016</arxiv:journal_ref>
+    <author>
+      <name>Arwen E. Nicholson</name>
+    </author>
+    <author>
+      <name>Paolo Sibani</name>
+    </author>
+    <arxiv:doi>10.1002/cplx.21681</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1002/cplx.21681" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1606.08741v1</id>
+    <title>Dynamic Watermarking: Active Defense of Networked Cyber-Physical Systems</title>
+    <updated>2016-06-27T06:06:07Z</updated>
+    <link href="https://arxiv.org/abs/1606.08741v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1606.08741v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The coming decades may see the large scale deployment of networked cyber-physical systems to address global needs in areas such as energy, water, healthcare, and transportation. However, as recent events have shown, such systems are vulnerable to cyber attacks. Being safety critical, their disruption or misbehavior can cause economic losses or injuries and loss of life. It is therefore important to secure such networked cyber-physical systems against attacks. In the absence of credible security guarantees, there will be resistance to the proliferation of cyber-physical systems, which are much needed to meet global needs in critical infrastructures and services.
+  This paper addresses the problem of secure control of networked cyber-physical systems. This problem is different from the problem of securing the communication network, since cyber-physical systems at their very essence need sensors and actuators that interface with the physical plant, and malicious agents may tamper with sensors or actuators, as recent attacks have shown.
+  We consider physical plants that are being controlled by multiple actuators and sensors communicating over a network, where some sensors could be "malicious," meaning that they may not report the measurements that they observe. We address a general technique by which the actuators can detect the actions of malicious sensors in the system, and disable closed-loop control based on their information. This technique, called "watermarking," employs the technique of actuators injecting private excitation into the system which will reveal malicious tampering with signals. We show how such an active defense can be used to secure networked systems of sensors and actuators.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.DS" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-06-27T06:06:07Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Bharadwaj Satchidanandan</name>
+    </author>
+    <author>
+      <name>P. R. Kumar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1605.00620v3</id>
+    <title>Game-Theoretic Multi-Agent Control and Network Cost Allocation under Communication Constraints</title>
+    <updated>2017-01-11T04:13:29Z</updated>
+    <link href="https://arxiv.org/abs/1605.00620v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1605.00620v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-agent networked linear dynamic systems have attracted attention of researchers in power systems, intelligent transportation, and industrial automation. The agents might cooperatively optimize a global performance objective, resulting in social optimization, or try to satisfy their own selfish objectives using a noncooperative differential game. However, in these solutions, large volumes of data must be sent from system states to possibly distant control inputs, thus resulting in high cost of the underlying communication network. To enable economically-viable communication, a game-theoretic framework is proposed under the \textit{communication cost}, or \textit{sparsity}, constraint, given by the number of communicating state/control input pairs. As this constraint tightens, the system transitions from dense to sparse communication, providing the trade-off between dynamic system performance and information exchange. Moreover, using the proposed sparsity-constrained distributed social optimization and noncooperative game algorithms, we develop a method to allocate the costs of the communication infrastructure fairly and according to the agents' diverse needs for feedback and cooperation. Numerical results illustrate utilization of the proposed algorithms to enable and ensure economic fairness of wide-area control among power companies.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-05-02T19:06:45Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Feier Lian</name>
+    </author>
+    <author>
+      <name>Aranya Chakrabortty</name>
+    </author>
+    <author>
+      <name>Alexandra Duel-Hallen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.05508v3</id>
+    <title>Intelligent Agent-Based Stimulation for Testing Robotic Software in Human-Robot Interactions</title>
+    <updated>2016-07-13T09:30:11Z</updated>
+    <link href="https://arxiv.org/abs/1604.05508v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.05508v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The challenges of robotic software testing extend beyond conventional software testing. Valid, realistic and interesting tests need to be generated for multiple programs and hardware running concurrently, deployed into dynamic environments with people. We investigate the use of Belief-Desire-Intention (BDI) agents as models for test generation, in the domain of human-robot interaction (HRI) in simulations. These models provide rational agency, causality, and a reasoning mechanism for planning, which emulate both intelligent and adaptive robots, as well as smart testing environments directed by humans. We introduce reinforcement learning (RL) to automate the exploration of the BDI models using a reward function based on coverage feedback. Our approach is evaluated using a collaborative manufacture example, where the robotic software under test is stimulated indirectly via a simulated human co-worker. We conclude that BDI agents provide intuitive models for test generation in the HRI domain. Our results demonstrate that RL can fully automate BDI model exploration, leading to very effective coverage-directed test generation.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-19T10:33:34Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Dejanira Araiza-Illan</name>
+    </author>
+    <author>
+      <name>Anthony G. Pipe</name>
+    </author>
+    <author>
+      <name>Kerstin Eder</name>
+    </author>
+    <arxiv:doi>10.1145/3022099.3022101</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3022099.3022101" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1604.02979v1</id>
+    <title>Toward a Science of Autonomy for Physical Systems</title>
+    <updated>2016-04-11T14:39:22Z</updated>
+    <link href="https://arxiv.org/abs/1604.02979v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1604.02979v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Our lives have been immensely improved by decades of automation research -- we are more comfortable, more productive and safer than ever before. Just imagine a world where familiar automation technologies have failed. In that world, thermostats don't work -- you have to monitor your home heating system manually. Cruise control for your car doesn't exist. Every elevator has to have a human operator to hit the right floor, most manufactured products are assembled by hand, and you have to wash your own dishes. Who would willingly adopt that world -- the world of last century -- today? Physical systems -- elevators, cars, home appliances, manufacturing equipment -- were more troublesome, ore time consuming, less safe, and far less convenient. Now, suppose we put ourselves in the place someone 20 years in the future, a future of autonomous systems. A future where transportation is largely autonomous, more efficient, and far safer; a future where dangerous occupations like mining or disaster response are performed by autonomous systems supervised remotely by humans; a future where manufacturing and healthcare are twice as productive per person-hour by having smart monitoring and readily re-tasked autonomous physical agents; a future where the elderly and infirm have 24 hour in-home autonomous support for the basic activities, both physical and social, of daily life. In a future world where these capabilities are commonplace, why would someone come back to today's world where someone has to put their life at risk to do a menial job, we lose time to mindless activities that have no intrinsic value, or be consumed with worry that a loved one is at risk in their own home? In what follows, and in a series of associated essays, we expand on these ideas, and frame both the opportunities and challenges posed by autonomous physical systems.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-04-11T14:39:22Z</published>
+    <arxiv:comment>A Computing Community Consortium (CCC) white paper, 6 pages</arxiv:comment>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Gregory D. Hager</name>
+    </author>
+    <author>
+      <name>Daniela Rus</name>
+    </author>
+    <author>
+      <name>Vijay Kumar</name>
+    </author>
+    <author>
+      <name>Henrik Christensen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1603.07766v1</id>
+    <title>Simulation Platform for Multi Agent Based Manufacturing Control System Based on The Hybrid Agent</title>
+    <updated>2016-03-24T21:59:32Z</updated>
+    <link href="https://arxiv.org/abs/1603.07766v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1603.07766v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Agent based distributed manufacturing control and scheduling systems are subsets of new manufacturing systems. Multi agent systems (MAS) not only drive design and engineering control solutions but also influence flexibility, agility, and re-configurability, which makes MASs a better centralized systems than its traditional counterparts. However, implementation of all MASs in the real factories are timely, also extremely costly. A simulation environment that would allow independent development and testing of the services and business processes of the related manufacturing hardware is needed. This paper presents the design and implementation of a userfriendly simulation platform for multi agent based manufacturing control systems by considering the shop floor level. The proposed simulation platform can simulate the software level of the factory by considering the hardware level of the mentioned factory. An example of the simulation platform is presented for a flexible manufacturing system, which is located in EMU CIM lab.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-03-24T21:59:32Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Ali Vatankhah barenji</name>
+    </author>
+    <author>
+      <name>Amir Shaygan</name>
+    </author>
+    <author>
+      <name>Reza Vatankhah Barenji</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1603.06390v1</id>
+    <title>Learning Dynamic Robot-to-Human Object Handover from Human Feedback</title>
+    <updated>2016-03-21T11:30:04Z</updated>
+    <link href="https://arxiv.org/abs/1603.06390v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1603.06390v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Object handover is a basic, but essential capability for robots interacting with humans in many applications, e.g., caring for the elderly and assisting workers in manufacturing workshops. It appears deceptively simple, as humans perform object handover almost flawlessly. The success of humans, however, belies the complexity of object handover as collaborative physical interaction between two agents with limited communication. This paper presents a learning algorithm for dynamic object handover, for example, when a robot hands over water bottles to marathon runners passing by the water station. We formulate the problem as contextual policy search, in which the robot learns object handover by interacting with the human. A key challenge here is to learn the latent reward of the handover task under noisy human feedback. Preliminary experiments show that the robot learns to hand over a water bottle naturally and that it adapts to the dynamics of human motion. One challenge for the future is to combine the model-free learning algorithm with a model-based planning approach and enable the robot to adapt over human preferences and object characteristics, such as shape, weight, and surface texture.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2016-03-21T11:30:04Z</published>
+    <arxiv:comment>Appears in the Proceedings of the International Symposium on Robotics Research (ISRR) 2015</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Andras Kupcsik</name>
+    </author>
+    <author>
+      <name>David Hsu</name>
+    </author>
+    <author>
+      <name>Wee Sun Lee</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1511.02963v2</id>
+    <title>Analysis and Design of Actuation-Sensing-Communication Interconnection Structures towards Secured/Resilient Closed-loop Systems</title>
+    <updated>2017-02-22T23:22:50Z</updated>
+    <link href="https://arxiv.org/abs/1511.02963v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1511.02963v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper considers the analysis and design of resilient/robust decentralized control systems. Specifically, we aim to assess how the pairing of sensors and actuators lead to architectures that are resilient to attacks/hacks for industrial control systems and other complex cyber-physical systems. We consider inherent structural properties such as internal fixed modes of a dynamical system depending on actuation, sensing, and interconnection/communication structure for linear discrete time-invariant dynamical systems. We introduce the notion of resilient fixed-modes free system that ensures the non-existence of fixed modes when the actuation-sensing-communication structure is compromised due to attacks by a malicious agent on actuators, sensors, or communication components and natural failures. Also, we provide a graph-theoretical characterization for the resilient structurally fixed modes that enables to capture the non-existence of resilient fixed modes for almost all possible systems' realizations. Additionally, we address the minimum actuation-sensing-communication co-design ensuring the non-existence of resiliently structurally fixed modes, which we show to be NP-hard. Notwithstanding, we identify conditions that are often satisfied in engineering settings and under which the co-design problem is solvable in polynomial-time complexity. Furthermore, we leverage the structural insights and properties to provide a convex optimization method to design the gain for a parametrized system and satisfying the sparsity of a given information pattern. Thus, exploring the interplay between structural and non-structural systems to ensure their resilience. Finally, the efficacy of the proposed approach is demonstrated on a power grid example.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-11-10T02:02:51Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Sergio Pequito</name>
+    </author>
+    <author>
+      <name>Farshad Khorrami</name>
+    </author>
+    <author>
+      <name>Prashanth Krishnamurthy</name>
+    </author>
+    <author>
+      <name>George J. Pappas</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1509.03214v1</id>
+    <title>Simple, Flexible, and Interoperable SCADA System Based on Agent Technology</title>
+    <updated>2015-08-15T06:52:51Z</updated>
+    <link href="https://arxiv.org/abs/1509.03214v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1509.03214v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>SCADA (Supervisory Control and Data Acquisition) is concerned with gathering process information from industrial control processes found in utilities such as power grids, water networks, transportation, manufacturing, etc., to provide the human operators with the required real-time access to industrial processes to be monitored and controlled either locally (on-site)or remotely (i.e., through Internet). Conventional solutions such as custom SCADA packages, custom communication protocols, and centralized architectures are no longer appropriate for engineering this type of systems because of their highly distribution and their uncertain continuously changing working environments. Multi-agent systems (MAS) appeared as a new architectural style for engineering complex and highly dynamic applications such as SCADA systems. In this paper, we propose an approach for simply developing flexible and interoperable SCADA systems based on the integration of MAS and OPC process protocol. The proposed SCADA system has the following advantages: 1) simple (easier to be implemented); 2) flexible (able to adapt to its environment dynamic changes); and 3) interoperable (relative to the underlying control systems, which belongs to diverse of vendors). The applicability of the proposed approach is demonstrated by a real case study example carried out in a paper mill.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-08-15T06:52:51Z</published>
+    <arxiv:comment>16 pages. arXiv admin note: text overlap with arXiv:1009.5346 by other authors without attribution</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <arxiv:journal_ref>Intelligent Control and Automation, 2015, 6, 184-199</arxiv:journal_ref>
+    <author>
+      <name>Hosny A. Abbas</name>
+    </author>
+    <author>
+      <name>Samir I. Shaheen</name>
+    </author>
+    <author>
+      <name>Mohammed H. Amin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.06136v1</id>
+    <title>Robots and humans as co-workers?</title>
+    <updated>2015-07-22T11:28:58Z</updated>
+    <link href="https://arxiv.org/abs/1507.06136v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.06136v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The design of work organisation systems with automated equipment is facing new challenges and the emergence of new concepts. The social aspects that are related with new concepts on the complex work environments (CWE) are becoming more relevant for that design. The work with autonomous systems implies options in the design of workplaces. Especially that happens in such complex environments. The concepts of "agents", "co-working" or "human-centred technical systems" reveal new dimensions related to human-computer interaction (HCI). With an increase in the number and complexity of those human-technology interfaces, the capacities of human intervention can become limited, originating further problems. The case of robotics is used to exemplify the issues related with automation in working environments and the emergence of new HCI approaches that would include social implications. We conclude that studies on technology assessment of industrial robotics and autonomous agents on manufacturing environment should also focus on the human involvement strategies in organisations. A needed participatory strategy implies a new approach to workplaces design. This means that the research focus must be on the relation between technology and social dimensions not as separate entities, but integrated in the design of an interaction system.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-22T11:28:58Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>António Brandão Moniz</name>
+      <arxiv:affiliation>IET</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.04628v1</id>
+    <title>Investigation into the potential use of Poly (vinyl alcohol)/Methylglyoxal fibres as antibacterial wound dressing components</title>
+    <updated>2015-07-16T16:01:43Z</updated>
+    <link href="https://arxiv.org/abs/1507.04628v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.04628v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As problems of antibiotic resistance increase, a continuing need for effective bioactive wound dressings is anticipated for the treatment of infected chronic wounds. Naturally derived antibacterial agents, such as Manuka honey, consist of a mixture of compounds, more than one of which can influence antimicrobial potency. The non-peroxide bacteriostatic properties of Manuka honey have been previously linked to the presence of methylglyoxal (MGO). The incorporation of MGO as a functional antibacterial additive during fibre production was explored as a potential route for manufacturing wound dressing components. Synthetic MGO and polyvinyl alcohol (PVA) were fabricated into webs of sub-micron fibres by means of electrostatic spinning of an aqueous spinning solution. Composite fabrics were also produced by direct deposition of the PVA-MGO fibres onto a preformed spunbonded nonwoven substrate. Attenuated Total Reflectance Fourier Transform Infrared (ATR-FTIR) and Proton Nuclear Magnetic Resonance (&lt;p&gt;&lt;sup&gt;1&lt;/sup&gt;H-NMR) spectroscopies confirmed the presence of MGO within the resulting fibre structure. The antibacterial activity of the fibres was studied using strains of Staphylococcus aureus and Escherichia coli. Strong antibacterial activity, as well as diffusion of MGO from the fibres was observed at a concentration of 1.55mg/&lt;p&gt;cm&lt;sup&gt;-1&lt;/sup&gt;.</summary>
+    <category term="physics.chem-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="q-bio.TO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-16T16:01:43Z</published>
+    <arxiv:comment>13 pages, 5 figurses, 2 tables in Journal of Biomaterials Applications 2015</arxiv:comment>
+    <arxiv:primary_category term="physics.chem-ph"/>
+    <author>
+      <name>Sophie E. L. Bulman</name>
+    </author>
+    <author>
+      <name>Parikshit Goswami</name>
+    </author>
+    <author>
+      <name>Giuseppe Tronci</name>
+    </author>
+    <author>
+      <name>Stephen J. Russell</name>
+    </author>
+    <author>
+      <name>Chris Carr</name>
+    </author>
+    <arxiv:doi>10.1177/0885328214556159</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1177/0885328214556159" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1507.03827v1</id>
+    <title>A Novel Proposal for Manufacturing Steel: OSRAM's CO$_2$ Steel Making Process</title>
+    <updated>2015-07-14T12:42:27Z</updated>
+    <link href="https://arxiv.org/abs/1507.03827v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1507.03827v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we propose a concept to utilise Carbon-dioxide for Steel-Making and would like to name it after the first author as OSRAM-CO$_2$-SM process. We found in our lab experiments that the carbon content in high-carbon ferro-chrome metallic powders has come down from 7% to 1% when pure CO$_2$ gas with partial pressure of 1 atmosphere is passed through a horizontal retort furnace maintained at 1100$^o$ C for 24 hours. Our results clearly demonstrated that decarburisation can be very effective, when CO$_2$ is used at temperatures where it is unstable and the Boudouard reaction which is endothermic in nature is more favoured. Based on these findings, we propose the OSRAM-CO$_2$-SM process in which CO$_2$ shall be used as the decarburising agent. CO$_2$ is to be passed into a specially designed converter provided with heating mechanism to maintain the contents from blast furnace in a molten state for decarburisation of the melt. The out coming hot gases consisting of CO has to be burnt in a combustion chamber with stochiometric proportions of pure O$_2$ to produce CO$_2$ at a partial pressure close to 1 atm.The process will be extremely useful as it involves reuse and recycle of CO$_2$ and in turn would reduce the overall amount of CO$_2$ discharged into the atmosphere.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-07-14T12:42:27Z</published>
+    <arxiv:comment>5 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <author>
+      <name>O. Seetha Ramayya</name>
+    </author>
+    <author>
+      <name>O. S. K. S. Sastri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1506.05608v1</id>
+    <title>Cooperative Control in Production and Logistics</title>
+    <updated>2015-06-18T10:09:33Z</updated>
+    <link href="https://arxiv.org/abs/1506.05608v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1506.05608v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Classical applications of control engineering and information and communication technology (ICT) in production and logistics are often done in a rigid, centralized and hierarchical way. These inflexible approaches are typically not able to cope with the complexities of the manufacturing environment, such as the instabilities, uncertainties and abrupt changes caused by internal and external disturbances, or a large number and variety of interacting, interdependent elements. A paradigm shift, e.g., novel organizing principles and methods, is needed for supporting the interoperability of dynamic alliances of agile and networked systems. Several solution proposals argue that the future of manufacturing and logistics lies in network-like, dynamic, open and reconfigurable systems of cooperative autonomous entities.
+  The paper overviews various distributed approaches and technologies of control engineering and ICT that can support the realization of cooperative structures from the resource level to the level of networked enterprises. Standard results as well as recent advances from control theory, through cooperative game theory, distributed machine learning to holonic systems, cooperative enterprise modelling, system integration, and autonomous logistics processes are surveyed. A special emphasis is put on the theoretical developments and industrial applications of Robustly Feasible Model Predictive Control (RFMPC). Two case studies are also discussed: i) a holonic, PROSA-based approach to generate short-term forecasts for an additive manufacturing system by means of a delegate multi-agent system (D-MAS); and ii) an application of distributed RFMPC to a drinking water distribution system.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-06-18T10:09:33Z</published>
+    <arxiv:comment>Status Report prepared by the IFAC Coordinating Committee on Manufacturing and Logistics Systems</arxiv:comment>
+    <arxiv:primary_category term="eess.SY"/>
+    <arxiv:journal_ref>Annual Reviews in Control, Volume 39, 2015, Pages 12-29</arxiv:journal_ref>
+    <author>
+      <name>László Monostori</name>
+    </author>
+    <author>
+      <name>Paul Valckenaers</name>
+    </author>
+    <author>
+      <name>Alexandre Dolgui</name>
+    </author>
+    <author>
+      <name>Hervé Panetto</name>
+    </author>
+    <author>
+      <name>Mietek Brdys</name>
+    </author>
+    <author>
+      <name>Balázs Csanád Csáji</name>
+    </author>
+    <arxiv:doi>10.1016/j.arcontrol.2015.03.001</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.arcontrol.2015.03.001" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1505.02759v1</id>
+    <title>How Resilient Are Our Societies? Analyses, Models, and Preliminary Results</title>
+    <updated>2015-05-08T09:59:55Z</updated>
+    <link href="https://arxiv.org/abs/1505.02759v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1505.02759v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional social organizations such as those for the management of healthcare and civil defence are the result of designs and realizations that matched well with an operational context considerably different from the one we are experiencing today: A simpler world, characterized by a greater amount of resources to match less users producing lower peaks of requests. The new context reveals all the fragility of our societies: unmanageability is just around the corner unless we do not complement the "old recipes" with smarter forms of social organization. Here we analyze this problem and propose a refinement to our fractal social organizations as a model for resilient cyber-physical societies. Evidence to our claims is provided by simulating our model in terms of multi-agent systems.</summary>
+    <category term="cs.OH" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-05-08T09:59:55Z</published>
+    <arxiv:comment>Paper submitted for publication in the Proc. of SERENE 2015 (http://serene.disim.univaq.it/2015/)</arxiv:comment>
+    <arxiv:primary_category term="cs.OH"/>
+    <author>
+      <name>Vincenzo De Florio</name>
+    </author>
+    <author>
+      <name>Arianit Pajaziti</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.07193v1</id>
+    <title>Secure Zones: An Attribute-Based Encryption advisory system for safe firearms</title>
+    <updated>2015-04-27T18:11:54Z</updated>
+    <link href="https://arxiv.org/abs/1504.07193v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.07193v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents an application of the highly expressive Attribute-Based Encryption to implement Secure Zones for firearms. Within these zones, radio-transmitted local policies based on attributes of the user and the firearm are received by embedded hardware in the firearms, which then advises the user about safe operations. The Secure Zones utilize Attribute-Based Encryption to encode the policies and user attributes, and providing privacy and security through it cryptography. We describe a holistic approach to evolving the firearm to a cyber-physical system to aid in augmenting safety. We introduce a conceptual model for a firearm equipped with sensors and a context-aware software agent. Based on the information from the sensors, the agent can access the context and inform the user of potential unsafe operations. To support Secure Zones and the cyber-physical firearm model, we propose a Key Infrastructure Scheme for key generation, distribution, and management, and a Context-Aware Software Agent Framework for Firearms.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-27T18:11:54Z</published>
+    <arxiv:comment>Communications and Network Security (CNS), 2013 IEEE Conference on. arXiv admin note: substantial text overlap with arXiv:1411.1733</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Marcos Portnoi</name>
+    </author>
+    <author>
+      <name>Chien-Chung Shen</name>
+    </author>
+    <arxiv:doi>10.1109/CNS.2013.6682746</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/CNS.2013.6682746" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1504.06810v1</id>
+    <title>Self-triggered Coordination over a Shared Network under Denial-of-Service</title>
+    <updated>2015-04-26T12:19:49Z</updated>
+    <link href="https://arxiv.org/abs/1504.06810v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1504.06810v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The issue of security has become ever more prevalent in the analysis and design of cyber-physical systems. In this paper, we analyze a consensus network in the presence of Denial-of-Service (DoS) attacks, namely attacks that prevent communication among the network agents. By introducing a notion of Persistency-of-Communication (PoC), we provide a characterization of DoS frequency and duration such that consensus is not destroyed. An example is given to substantiate the analysis.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2015-04-26T12:19:49Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Danial Senejohnny</name>
+    </author>
+    <author>
+      <name>Pietro Tesi</name>
+    </author>
+    <author>
+      <name>Claudio De Persis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1412.1772v1</id>
+    <title>Heart Rate Monitoring as an Easy Way to Increase Engagement in Human-Agent Interaction</title>
+    <updated>2014-12-04T19:08:05Z</updated>
+    <link href="https://arxiv.org/abs/1412.1772v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1412.1772v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Physiological sensors are gaining the attention of manufacturers and users. As denoted by devices such as smartwatches or the newly released Kinect 2 -- which can covertly measure heartbeats -- or by the popularity of smartphone apps that track heart rate during fitness activities. Soon, physiological monitoring could become widely accessible and transparent to users. We demonstrate how one could take advantage of this situation to increase users' engagement and enhance user experience in human-agent interaction. We created an experimental protocol involving embodied agents -- "virtual avatars". Those agents were displayed alongside a beating heart. We compared a condition in which this feedback was simply duplicating the heart rates of users to another condition in which it was set to an average heart rate. Results suggest a superior social presence of agents when they display feedback similar to users' internal state. This physiological "similarity-attraction" effect may lead, with little effort, to a better acceptance of agents and robots by the general public.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-12-04T19:08:05Z</published>
+    <arxiv:comment>PhyCS - International Conference on Physiological Computing Systems, Feb 2015, Angers, France. SCITEPRESS, \&amp;lt;http://www.phycs.org/\&amp;gt</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Jérémy Frey</name>
+      <arxiv:affiliation>INRIA Bordeaux - Sud-Ouest, LaBRI</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1411.5060v2</id>
+    <title>Settling the Complexity of Arrow-Debreu Markets under Leontief and PLC Utilities, using the Classes FIXP and \Exists-R</title>
+    <updated>2020-05-21T03:23:51Z</updated>
+    <link href="https://arxiv.org/abs/1411.5060v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1411.5060v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper resolves two of the handful of remaining questions on the computability of market equilibria, a central theme within algorithmic game theory (AGT). Our results are as follows:
+  1. We show FIXP-hardness of computing equilibria in Arrow-Debreu markets under Leontief utility functions, and Arrow-Debreu markets under linear utility functions and Leontief production sets. We note that these are the first FIXP-hardness results ever since the introduction of the class FIXP and the hardness of 3-Nash established therein.
+  2. We note that for the problems stated above, the corresponding results showing membership in FIXP were established after imposing suitable sufficiency conditions to render the problems total, as is customary in economics. However, if all instances are under consideration, then in both cases we prove that the problem of deciding if a given instance admits an equilibrium is \Exists-R-complete, where \Exists-R is the class of decision problems which can be reduced in polynomial time to Existential Theory of the Reals.
+  3. For Arrow-Debreu markets under Leontief utility functions and a constant number of agents, we give a polynomial-time algorithm for computing an equilibrium. This settles part of an open problem of Devanur and Kannan (FOCS'08).
+  We note that PLC utilities are about the most general utilities of interest in economics and several fundamental utility functions studied within AGT are special cases of it. Several important problems, which have been shown to be in FIXP, are waiting for proofs of FIXP-hardness. In this context, our technique of reducing from 3-Nash to Multivariate Polynomial Equations and then to the problem is likely to be useful in the future.</summary>
+    <category term="cs.CC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-11-18T23:04:07Z</published>
+    <arxiv:primary_category term="cs.CC"/>
+    <author>
+      <name>Jugal Garg</name>
+    </author>
+    <author>
+      <name>Ruta Mehta</name>
+    </author>
+    <author>
+      <name>Vijay V. Vazirani</name>
+    </author>
+    <author>
+      <name>Sadra Yazdanbod</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1411.1733v1</id>
+    <title>Wireless-Delimited Secure Zones with Encrypted Attribute-Based Broadcast for Safe Firearms</title>
+    <updated>2014-11-06T20:22:00Z</updated>
+    <link href="https://arxiv.org/abs/1411.1733v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1411.1733v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents an application of the highly expressive Attribute-Based Encryption to implement wireless-delimited Secure Zones for firearms. Within these zones, radio-transmitted local policies based on attributes of the consumer and the firearm are received by embedded hardware in the firearms, which then advises the consumer about safe operations. The Secure Zones utilize Attribute-Based Encryption to encode the policies and consumer or user attributes, and providing privacy and security through it cryptography. We describe a holistic approach to evolving the firearm to a cyber-physical system to aid in augmenting safety. We introduce a conceptual model for a firearm equipped with sensors and a context-aware software agent. Based on the information from the sensors, the agent can access the context and inform the consumer of potential unsafe operations. To support Secure Zones and the cyber-physical firearm model, we propose a Key Infrastructure Scheme for key generation, distribution, and management, and a Context-Aware Software Agent Framework for Firearms.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-11-06T20:22:00Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Marcos Portnoi</name>
+    </author>
+    <author>
+      <name>Chien-Chung Shen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1410.2298v2</id>
+    <title>Team-triggered coordination for real-time control of networked cyber-physical systems</title>
+    <updated>2015-07-08T19:21:24Z</updated>
+    <link href="https://arxiv.org/abs/1410.2298v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1410.2298v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This paper studies the real-time implementation of distributed controllers on networked cyber-physical systems. We build on the strengths of event- and self-triggered control to synthesize a unified approach, termed team-triggered, where agents make promises to one another about their future states and are responsible for warning each other if they later decide to break them. The information provided by these promises allows individual agents to autonomously schedule information requests in the future and sets the basis for maintaining desired levels of performance at lower implementation cost. We establish provably correct guarantees for the distributed strategies that result from the proposed approach and examine their robustness against delays, packet drops, and communication noise. The results are illustrated in simulations of a multi-agent formation control problem.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-10-08T22:17:03Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Cameron Nowzari</name>
+    </author>
+    <author>
+      <name>Jorge Cortes</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1404.0576v3</id>
+    <title>A Lyapunov redesign of coordination algorithms for cyberphysical systems</title>
+    <updated>2014-10-01T10:53:55Z</updated>
+    <link href="https://arxiv.org/abs/1404.0576v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1404.0576v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The objective is to design distributed coordination strategies for a network of agents in a cyber-physical environment. In particular, we concentrate on the rendez-vous of agents having double-integrator dynamics with the addition of a damping term in the velocity dynamics. We start with distributed controllers that solve the problem in continuous-time, and we then explain how to implement these using event-based sampling. The idea is to define a triggering rule per edge using a clock variable which only depends on the local variables. The triggering laws are designed to compensate for the perturbative term introduced by the sampling, a technique that reminds of Lyapunov-based control redesign. We first present an event-triggered solution which requires continuous measurement of the relative position and we then explain how to convert it to a self-triggered policy. The latter only requires the measurements of the relative position and velocity at the last transmission instants, which is useful to reduce both the communication and the computation costs. The strategies guarantee the existence of a uniform minimum amount of times between any two edge events. The analysis is carried out using an invariance principle for hybrid systems.</summary>
+    <category term="math.OC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2014-04-02T14:45:06Z</published>
+    <arxiv:primary_category term="math.OC"/>
+    <author>
+      <name>Claudio de Persis</name>
+    </author>
+    <author>
+      <name>Romain Postoyan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1308.5272v2</id>
+    <title>On Computability of Equilibria in Markets with Production</title>
+    <updated>2013-09-23T18:28:46Z</updated>
+    <link href="https://arxiv.org/abs/1308.5272v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1308.5272v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Although production is an integral part of the Arrow-Debreu market model, most of the work in theoretical computer science has so far concentrated on markets without production, i.e., the exchange economy. This paper takes a significant step towards understanding computational aspects of markets with production.
+  We first define the notion of separable, piecewise-linear concave (SPLC) production by analogy with SPLC utility functions. We then obtain a linear complementarity problem (LCP) formulation that captures exactly the set of equilibria for Arrow-Debreu markets with SPLC utilities and SPLC production, and we give a complementary pivot algorithm for finding an equilibrium. This settles a question asked by Eaves in 1975 of extending his complementary pivot algorithm to markets with production.
+  Since this is a path-following algorithm, we obtain a proof of membership of this problem in PPAD, using Todd, 1976. We also obtain an elementary proof of existence of equilibrium (i.e., without using a fixed point theorem), rationality, and oddness of the number of equilibria. We further give a proof of PPAD-hardness for this problem and also for its restriction to markets with linear utilities and SPLC production. Experiments show that our algorithm runs fast on randomly chosen examples, and unlike previous approaches, it does not suffer from issues of numerical instability. Additionally, it is strongly polynomial when the number of goods or the number of agents and firms is constant. This extends the result of Devanur and Kannan (2008) to markets with production.
+  Finally, we show that an LCP-based approach cannot be extended to PLC (non-separable) production, by constructing an example which has only irrational equilibria.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-08-24T01:20:22Z</published>
+    <arxiv:comment>An extended abstract will appear in SODA 2014</arxiv:comment>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>Jugal Garg</name>
+    </author>
+    <author>
+      <name>Vijay V. Vazirani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1306.5441v1</id>
+    <title>Supervisor Localization of Discrete-Event Systems based on State Tree Structures</title>
+    <updated>2013-06-23T17:19:26Z</updated>
+    <link href="https://arxiv.org/abs/1306.5441v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1306.5441v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Recently we developed supervisor localization, a top-down approach to distributed control of discrete-event systems in the Ramadge-Wonham supervisory control framework. Its essence is the decomposition of monolithic (global) control action into local control strategies for the individual agents. In this paper, we establish a counterpart supervisor localization theory in the framework of State Tree Structures, known to be efficient for control design of very large systems. In the new framework, we introduce the new concepts of local state tracker, local control function, and state-based local-global control equivalence. As before, we prove that the collective localized control behavior is identical to the monolithic optimal (i.e. maximally permissive) and nonblocking controlled behavior. In addition, we propose a new and more efficient localization algorithm which exploits BDD computation. Finally we demonstrate our localization approach on a model for a complex semiconductor manufacturing system.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-06-23T17:19:26Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <author>
+      <name>Kai Cai</name>
+    </author>
+    <author>
+      <name>W. M. Wonham</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1305.1439v1</id>
+    <title>Supervision Localization of Timed Discrete-Event Systems</title>
+    <updated>2013-05-07T08:52:21Z</updated>
+    <link href="https://arxiv.org/abs/1305.1439v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1305.1439v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study supervisor localization for real-time discrete-event systems (DES) in the Brandin-Wonham framework of timed supervisory control. We view a real-time DES as comprised of asynchronous agents which are coupled through imposed logical and temporal specifications; the essence of supervisor localization is the decomposition of monolithic (global) control action into local control strategies for these individual agents. This study extends our previous work on supervisor localization for untimed DES, in that monolithic timed control action typically includes not only disabling action as in the untimed case, but also ``clock preempting'' action which enforces prescribed temporal behavior. The latter action is executed by a class of special events, called ``forcible'' events; accordingly, we localize monolithic preemptive action with respect to these events. We demonstrate the new features of timed supervisor localization with a manufacturing cell case study, and discuss a distributed control implementation.</summary>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-05-07T08:52:21Z</published>
+    <arxiv:primary_category term="eess.SY"/>
+    <arxiv:journal_ref>Automatica, vol. 49, no. 9, pp. 2786-2794, Sep. 2013</arxiv:journal_ref>
+    <author>
+      <name>Renyuan Zhang</name>
+    </author>
+    <author>
+      <name>Kai Cai</name>
+    </author>
+    <author>
+      <name>Yongmei Gan</name>
+    </author>
+    <author>
+      <name>Zhaoan Wang</name>
+    </author>
+    <author>
+      <name>W. M. Wonham</name>
+    </author>
+    <arxiv:doi>10.1016/j.automatica.2013.05.015</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.automatica.2013.05.015" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1304.4051v1</id>
+    <title>Coordinating metaheuristic agents with swarm intelligence</title>
+    <updated>2013-04-15T11:09:41Z</updated>
+    <link href="https://arxiv.org/abs/1304.4051v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1304.4051v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Coordination of multi agent systems remains as a problem since there is no prominent method to completely solve this problem. Metaheuristic agents are specific implementations of multi-agent systems, which imposes working together to solve optimisation problems with metaheuristic algorithms. The idea borrowed from swarm intelligence seems working much better than those implementations suggested before. This paper reports the performance of swarms of simulated annealing agents collaborating with particle swarm optimization algorithm. The proposed approach is implemented for multidimensional knapsack problem and has resulted much better than some other works published before.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2013-04-15T11:09:41Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <arxiv:journal_ref>Journal of Intelligent Manufacturing, 23 (4), pp:991-999, 2012</arxiv:journal_ref>
+    <author>
+      <name>Mehmet Emin Aydin</name>
+    </author>
+    <arxiv:doi>10.1007/s10845-010-0435-y</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/s10845-010-0435-y" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1210.1827v1</id>
+    <title>Rapid Microwave-Assisted Synthesis of Dextran-Coated Iron Oxide Nanoparticles for Magnetic Resonance Imaging</title>
+    <updated>2012-10-05T17:58:18Z</updated>
+    <link href="https://arxiv.org/abs/1210.1827v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1210.1827v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Currently, magnetic iron oxide nanoparticles are the only nano-sized magnetic resonance imaging (MRI) contrast agents approved for clinical use, yet commercial manufacturing of these agents has been limited or discontinued. Though there is still widespread demand for these particles both for clinical use and research, they are difficult to obtain commercially, and complicated syntheses make in-house preparation infeasible for most biological research labs or clinics. To make commercial production viable and increase accessibility of these products, it is crucial to develop simple, rapid, and reproducible preparations of biocompatible iron oxide nanoparticles. Here, we report a rapid, straightforward microwave-assisted synthesis of superparamagnetic dextran-coated iron oxide nanoparticles. The nanoparticles were produced in two hydrodynamic sizes with differing core morphologies by varying the synthetic method as either a two-step or single step process. A striking benefit of these methods is the ability to obtain swift and consistent results without the necessity for air, pH, or temperature sensitive techniques; therefore, reaction times and complex manufacturing processes are greatly reduced as compared to conventional synthetic methods. This is a great benefit for cost-effective translation to commercial production. The nanoparticles are found to be superparamagnetic and exhibit properties consistent for use in MRI. In addition, the dextran coating imparts the water-solubility and biocompatibility necessary for in vivo utilization.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-10-05T17:58:18Z</published>
+    <arxiv:comment>19 pages, 5 figures, 1 table</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Nanotechnology 23 (2012) 215602</arxiv:journal_ref>
+    <author>
+      <name>Elizabeth A. Osborne</name>
+    </author>
+    <author>
+      <name>Tonya M. Atkins</name>
+    </author>
+    <author>
+      <name>Dustin A. Gilbert</name>
+    </author>
+    <author>
+      <name>Susan M. Kauzlarich</name>
+    </author>
+    <author>
+      <name>Kai Liu</name>
+    </author>
+    <author>
+      <name>Angelique Y. Louie</name>
+    </author>
+    <arxiv:doi>10.1088/0957-4484/23/21/215602</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0957-4484/23/21/215602" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1208.6421v1</id>
+    <title>A Novel Service Oriented Model for Query Identification and Solution Development using Semantic Web and Multi Agent System</title>
+    <updated>2012-08-31T08:38:33Z</updated>
+    <link href="https://arxiv.org/abs/1208.6421v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1208.6421v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In this paper, we propose to develop service model architecture by merging multi-agentsystems and semantic web technology. The proposed architecture works in two stages namely, Query Identification and Solution Development. A person referred to as customer will submit the problem details or requirements which will be referred to as a query. Anyone who can provide a service will need to register with the registrar module of the architecture. Services can be anything ranging from expert consultancy in the field of agriculture to academic research, from selling products to manufacturing goods, from medical help to legal issues or even providing logistics. Query submitted by customer is first parsed and then iteratively understood with the help of domain experts and the customer to get a precise set of properties. Query thus identified will be solved again with the help of intelligent agent systems which will search the semantic web for all those who can find or provide a solution. A workable solution workflow is created and then depending on the requirements, using the techniques of negotiation or auctioning, solution is implemented to complete the service for customer. This part is termed as solution development. In this service oriented architecture, we first try to analyze the complex set of user requirements then try to provide best possible solution in an optimized way by combining better information searches through semantic web and better workflow provisioning using multi agent systems.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-08-31T08:38:33Z</published>
+    <arxiv:comment>7 pages, 4 figures, Published with International Journal of Computer Applications (IJCA)</arxiv:comment>
+    <arxiv:primary_category term="cs.MA"/>
+    <arxiv:journal_ref>International Journal of Computer Applications 35(9):12-18, 2011</arxiv:journal_ref>
+    <author>
+      <name>Muneendra Ojha</name>
+    </author>
+    <arxiv:doi>10.5120/4428-6165</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.5120/4428-6165" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1207.3236v1</id>
+    <title>Association of indigo with zeolites for improved colour stabilization</title>
+    <updated>2012-07-13T13:18:39Z</updated>
+    <link href="https://arxiv.org/abs/1207.3236v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1207.3236v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The durability of an organic colour and its resistance against external chemical agents and exposure to light can be significantly enhanced by hybridizing the natural dye with a mineral. In search for stable natural pigments, the present work focuses on the association of indigo blue with several zeolitic matrices (LTA zeolite, mordenite, MFI zeolite). The manufacturing of the hybrid pigment is tested under varying oxidising conditions, using Raman and UV-visible spectrometric techniques. Blending indigo with MFI is shown to yield the most stable composite in all of our artificial indigo pigments. In absence of defects and substituted cations such as aluminum in the framework of the MFI zeolite matrix, we show that matching the pore size with the dimensions of the guest indigo molecule is the key factor. The evidence for the high colour stability of indigo@MFI opens a new path for modeling the stability of indigo in various alumino-silicate substrates such as in the historical Maya Blue pigment.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-07-13T13:18:39Z</published>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Applied Spectroscopy 64, 10 (2010) 1131-1138</arxiv:journal_ref>
+    <author>
+      <name>Catherine Dejoie</name>
+      <arxiv:affiliation>NEEL, LBNL</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Pauline Martinetto</name>
+      <arxiv:affiliation>NEEL</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Eric Dooryhee</name>
+      <arxiv:affiliation>NEEL, BNL</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Elsa Van Eslande</name>
+      <arxiv:affiliation>C2RMF</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Sylvie Blanc</name>
+      <arxiv:affiliation>IPREM</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Patrice Bordat</name>
+      <arxiv:affiliation>IPREM</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ross Brown</name>
+      <arxiv:affiliation>IPREM</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Florence Porcher</name>
+      <arxiv:affiliation>LLB</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Michel Anne</name>
+      <arxiv:affiliation>NEEL</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1366/000370210792973622</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1366/000370210792973622" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1205.7025v1</id>
+    <title>Engineering hierarchical complex systems: an agent-based approach. The case of flexible manufacturing systems</title>
+    <updated>2012-05-31T15:50:27Z</updated>
+    <link href="https://arxiv.org/abs/1205.7025v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1205.7025v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This article introduces a formal model to specify, model and validate hierarchical complex systems described at different levels of analysis. It relies on concepts that have been developed in the multi-agent-based simulation (MABS) literature: level, influence and reaction. One application of such model is the specification of hierarchical complex systems, in which decisional capacities are dynamically adapted at each level with respect to the emergences/constraints paradigm. In the conclusion, we discuss the main perspective of this work: the definition of a generic meta-model for holonic multi-agent systems (HMAS).</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-05-31T15:50:27Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <arxiv:journal_ref>Studies in Computational Intelligence, Volume 402, p. 49-60 2012</arxiv:journal_ref>
+    <author>
+      <name>Gildas Morvan</name>
+    </author>
+    <author>
+      <name>Daniel Dupont</name>
+    </author>
+    <author>
+      <name>Jean-Baptiste Soyez</name>
+    </author>
+    <author>
+      <name>Rochdi Merzouki</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-642-27449-7_4</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-642-27449-7_4" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1201.3880v1</id>
+    <title>Modelling and simulation of complex systems: an approach based on multi-level agents</title>
+    <updated>2012-01-18T19:02:11Z</updated>
+    <link href="https://arxiv.org/abs/1201.3880v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1201.3880v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A complex system is made up of many components with many interactions. So the design of systems such as simulation systems, cooperative systems or assistance systems includes a very accurate modelling of interactional and communicational levels. The agent-based approach provides an adapted abstraction level for this problem. After having studied the organizational context and communicative capacities of agentbased systems, to simulate the reorganization of a flexible manufacturing, to regulate an urban transport system, and to simulate an epidemic detection system, our thoughts on the interactional level were inspired by human-machine interface models, especially those in "cognitive engineering". To provide a general framework for agent-based complex systems modelling, we then proposed a scale of four behaviours that agents may adopt in their complex systems (reactive, routine, cognitive, and collective). To complete the description of multi-level agent models, which is the focus of this paper, we illustrate our modelling and discuss our ongoing work on each level.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2012-01-18T19:02:11Z</published>
+    <arxiv:comment>10 pages; IJCSI International Journal of Computer Science Issues, Vol. 8, Issue 6, No 1, November 2011</arxiv:comment>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Alain-Jérôme Fougères</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1111.0065v1</id>
+    <title>Communication-Based Decomposition Mechanisms for Decentralized MDPs</title>
+    <updated>2011-10-31T22:22:03Z</updated>
+    <link href="https://arxiv.org/abs/1111.0065v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1111.0065v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Multi-agent planning in stochastic environments can be framed formally as a decentralized Markov decision problem. Many real-life distributed problems that arise in manufacturing, multi-robot coordination and information gathering scenarios can be formalized using this framework. However, finding the optimal solution in the general case is hard, limiting the applicability of recently developed algorithms. This paper provides a practical approach for solving decentralized control problems when communication among the decision makers is possible, but costly. We develop the notion of communication-based mechanism that allows us to decompose a decentralized MDP into multiple single-agent problems. In this framework, referred to as decentralized semi-Markov decision process with direct communication (Dec-SMDP-Com), agents operate separately between communications. We show that finding an optimal mechanism is equivalent to solving optimally a Dec-SMDP-Com. We also provide a heuristic search algorithm that converges on the optimal decomposition. Restricting the decomposition to some specific types of local behaviors reduces significantly the complexity of planning. In particular, we present a polynomial-time algorithm for the case in which individual agents perform goal-oriented behaviors between communications. The paper concludes with an additional tractable algorithm that enables the introduction of human knowledge, thereby reducing the overall problem to finding the best time to communicate. Empirical results show that these approaches provide good approximate solutions.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-10-31T22:22:03Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Journal Of Artificial Intelligence Research, Volume 32, pages 169-202, 2008</arxiv:journal_ref>
+    <author>
+      <name>Claudia V. Goldman</name>
+    </author>
+    <author>
+      <name>Shlomo Zilberstein</name>
+    </author>
+    <arxiv:doi>10.1613/jair.2466</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1613/jair.2466" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1109.0601v1</id>
+    <title>Application of distributed constraint satisfaction problem to the agent-based planning in manufacturing systems</title>
+    <updated>2011-09-03T07:43:09Z</updated>
+    <link href="https://arxiv.org/abs/1109.0601v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1109.0601v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Nowadays, a globalization of national markets requires developing flexible and demand-driven production systems. Agent-based technology, being distributed, flexible and autonomous is expected to provide a short-time reaction to disturbances and sudden changes of environment and allows satisfying the mentioned requirements. The distributed constraint satisfaction approach underlying the suggested method is described by a modified Petri network providing both the conceptual notions and main details of implementation.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-09-03T07:43:09Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <arxiv:journal_ref>Proceedings of the International Scientific Congress "Intelligent Systems (IEEE AIS'03)" and "Intelligent CAD's (CAD-2003)", p.124-140, Divnomorsk, Russia, 2003</arxiv:journal_ref>
+    <author>
+      <name>S. Kornienko</name>
+    </author>
+    <author>
+      <name>O. Kornienko</name>
+    </author>
+    <author>
+      <name>P. Levi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1108.3019v1</id>
+    <title>A First Approach on Modelling Staff Proactiveness in Retail Simulation Models</title>
+    <updated>2011-08-15T15:25:15Z</updated>
+    <link href="https://arxiv.org/abs/1108.3019v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1108.3019v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>There has been a noticeable shift in the relative composition of the industry in the developed countries in recent years; manufacturing is decreasing while the service sector is becoming more important. However, currently most simulation models for investigating service systems are still built in the same way as manufacturing simulation models, using a process-oriented world view, i.e. they model the flow of passive entities through a system. These kinds of models allow studying aspects of operational management but are not well suited for studying the dynamics that appear in service systems due to human behaviour. For these kinds of studies we require tools that allow modelling the system and entities using an object-oriented world view, where intelligent objects serve as abstract "actors" that are goal directed and can behave proactively. In our work we combine process-oriented discrete event simulation modelling and object-oriented agent based simulation modelling to investigate the impact of people management practices on retail productivity. In this paper, we reveal in a series of experiments what impact considering proactivity can have on the output accuracy of simulation models of human centric systems. The model and data we use for this investigation are based on a case study in a UK department store. We show that considering proactivity positively influences the validity of these kinds of models and therefore allows analysts to make better recommendations regarding strategies to apply people management practises.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-08-15T15:25:15Z</published>
+    <arxiv:comment>25 pages, 3 figures, 10 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>Journal of Artificial Societies and Social Simulation, 14 (2), pages 1-25, 2011</arxiv:journal_ref>
+    <author>
+      <name>Peer-Olaf Siebers</name>
+    </author>
+    <author>
+      <name>Uwe Aickelin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1104.2265v1</id>
+    <title>Responsibility Modeling for the Sociotechnical Risk Analysis of Coalitions of Systems</title>
+    <updated>2011-04-12T16:35:34Z</updated>
+    <link href="https://arxiv.org/abs/1104.2265v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1104.2265v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Society is challenging systems engineers by demanding ever more complex and integrated systems. With the rise of cloud computing and systems-of-systems (including cyber-physical systems) we are entering an era where mission critical services and applications will be dependent upon 'coalitions-of-systems'. Coalitions-of-systems (CoS) are a class of system similar to systems-of-systems but they differ in that they interact to further overlapping self-interests rather than an overarching mission. Assessing the sociotechnical risks associated with CoS is an open research question of societal importance as existing risk analysis techniques typically focus on the technical aspects of systems and ignore risks associated with coalition partners reneging on responsibilities or leaving the coalition. We demonstrate that a responsibility modeling based risk analysis approach enables the identification of sociotechnical risks associated with CoS. The approach identifies hazards and associated risks that may arise when relying upon a coalition of human/organizational/technical agents to provision a service or application. Through a case study of a proposed cloud IT infrastructure migration we show how the technique identifies vulnerabilities that may arise because of human, organizational or technical agents failing to discharge responsibilities.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2011-04-12T16:35:34Z</published>
+    <arxiv:comment>Submitted for consideration for the IEEE SMC2011 conference</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>David Greenwood</name>
+    </author>
+    <author>
+      <name>Ian Sommerville</name>
+    </author>
+    <arxiv:doi>10.1109/ICSMC.2011.6083832</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ICSMC.2011.6083832" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/1004.4317v1</id>
+    <title>The cooperative game theory foundations of network bargaining games</title>
+    <updated>2010-04-25T01:50:25Z</updated>
+    <link href="https://arxiv.org/abs/1004.4317v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/1004.4317v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We study bargaining games between suppliers and manufacturers in a network context. Agents wish to enter into contracts in order to generate surplus which then must be divided among the participants. Potential contracts and their surplus are represented by weighted edges in our bipartite network. Each agent in the market is additionally limited by a capacity representing the number of contracts which he or she may undertake. When all agents are limited to just one contract each, prior research applied natural generalizations of the Nash bargaining solution to the networked setting, defined the new solution concepts of stable and balanced, and characterized the resulting bargaining outcomes. We simplify and generalize these results to a setting in which participants in only one side of the market are limited to one contract each. The heart of our results uses a linear-programming formulation to establish a novel connection between well-studied cooperative game theory concepts (such as core and prekernel) and the solution concepts of stable and balanced defined for the bargaining games. This immediately implies one can take advantage of the results and algorithms in cooperative game theory to reproduce results such as those of Azar et al. [1] and Kleinberg and Tardos [29] and also generalize them to our setting. The cooperative-game-theoretic connection also inspires us to refine our solution space using standard solution concepts from that literature such as nucleolus and lexicographic kernel. The nucleolus is particularly attractive as it is unique, always exists, and is supported by experimental data in the network bargaining literature. Guided by algorithms from cooperative game theory, we show how to compute the nucleolus by pruning and iteratively solving a natural linear-programming formulation.</summary>
+    <category term="cs.GT" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2010-04-25T01:50:25Z</published>
+    <arxiv:primary_category term="cs.GT"/>
+    <author>
+      <name>MohammadHossein Bateni</name>
+    </author>
+    <author>
+      <name>MohammadTaghi Hajiaghayi</name>
+    </author>
+    <author>
+      <name>Nicole Immorlica</name>
+    </author>
+    <author>
+      <name>Hamid Mahini</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0806.3032v1</id>
+    <title>Multi-agents architecture for supply chain management</title>
+    <updated>2008-06-18T15:46:29Z</updated>
+    <link href="https://arxiv.org/abs/0806.3032v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0806.3032v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The purpose of this paper is to propose a new approach for the supply chain management. This approach is based on the virtual enterprise paradigm and the used of multi-agent concept. Each entity (like enterprise) is autonomous and must perform local and global goals in relation with its environment. The base component of our approach is a Virtual Enterprise Node (VEN). The supply chain is viewed as a set of tiers (corresponding to the levels of production), in which each partner of the supply chain (VEN) is in relation with several customers and suppliers. Each VEN belongs to one tier. The main customer gives global objectives (quantity, cost and delay) to the supply chain. The Mediator Agent (MA) is in charge to manage the supply chain in order to respect those objectives as global level. Those objectives are taking over to Negotiator Agent at the tier level (NAT). These two agents are only active if a perturbation occurs; otherwise information flows are only exchange between VENs. This architecture allows supply chains management which is completely transparent seen from simple enterprise of the supply chain. The used of Multi-Agent System (MAS) allows physical distribution of the decisional system. Moreover, the hierarchical organizational structure with a decentralized control guaranties, in the same time, the autonomy of each entity and the whole flexibility.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2008-06-18T15:46:29Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <arxiv:journal_ref>Journal of Manufacturing Technology Management 15, 8 (2004) pp. 745-755</arxiv:journal_ref>
+    <author>
+      <name>Daniel Roy</name>
+      <arxiv:affiliation>LGIPM, Inria Lorraine - Loria</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Didier Anciaux</name>
+      <arxiv:affiliation>LGIPM, Inria Lorraine - Loria</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Thibaud Monteiro</name>
+      <arxiv:affiliation>LGIPM, Inria Lorraine - Loria</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Latifa Ouzizi</name>
+      <arxiv:affiliation>LGIPM, Inria Lorraine - Loria</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0711.3302v1</id>
+    <title>The Effects of Additives on the Physical Properties of Electroformed Nickel and on the Stretch of Photoelectroformed Nickel Components</title>
+    <updated>2007-11-21T09:47:35Z</updated>
+    <link href="https://arxiv.org/abs/0711.3302v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0711.3302v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The process of nickel electroforming is becoming increasingly important in the manufacture of MST products, as it has the potential to replicate complex geometries with extremely high fidelity. Electroforming of nickel uses multi-component electrolyte formulations in order to maximise desirable product properties. In addition to nickel sulphamate (the major electrolyte component), formulation additives can also comprise nickel chloride (to increase nickel anode dissolution), sulphamic acid (to control pH), boric acid (to act as a pH buffer), hardening/levelling agents (to increase deposit hardness and lustre) and wetting agents (to aid surface wetting and thus prevent gas bubbles and void formation). This paper investigates the effects of some of these variables on internal stress and stretch as a function of applied current density.</summary>
+    <category term="cs.OH" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-11-21T09:47:35Z</published>
+    <arxiv:comment>Submitted on behalf of TIMA Editions (http://irevues.inist.fr/tima-editions)</arxiv:comment>
+    <arxiv:primary_category term="cs.OH"/>
+    <arxiv:journal_ref>Dans Symposium on Design, Test, Integration and Packaging of MEMS/MOEMS - DTIP 2006, Stresa, Lago Maggiore : Italie (2006)</arxiv:journal_ref>
+    <author>
+      <name>D. Allen</name>
+    </author>
+    <author>
+      <name>N. Duclos</name>
+    </author>
+    <author>
+      <name>I. Garbutt</name>
+    </author>
+    <author>
+      <name>M. Saumer</name>
+    </author>
+    <author>
+      <name>Ch. Dhum</name>
+    </author>
+    <author>
+      <name>M. Schmitt</name>
+    </author>
+    <author>
+      <name>J. E. Hoffmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/0707.3563v1</id>
+    <title>Virtual reality: A human centered tool for improving Manufacturing</title>
+    <updated>2007-07-24T14:28:01Z</updated>
+    <link href="https://arxiv.org/abs/0707.3563v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/0707.3563v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Manufacturing is using Virtual Reality tools to enhance the product life cycle. Their definitions are still in flux and it is necessary to define their connections. Thus, firstly, we will introduce more closely some definitions where we will find that, if the Virtual manufacturing concepts originate from machining operations and evolve in this manufacturing area, there exist a lot of applications in different fields such as casting, forging, sheet metalworking and robotics (mechanisms). From the recent projects in Europe or in USA, we notice that the human perception or the simulation of mannequin is more and more needed in both fields. In this context, we have isolated some applications as ergonomic studies, assembly and maintenance simulation, design or training where the virtual reality tools can be applied. Thus, we find out a family of applications where the virtual reality tools give the engineers the main role in the optimization process. We will illustrate our paper by several examples where virtual reality interfaces are used and combined with optimization tools as multi-agent systems.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2007-07-24T14:28:01Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <arxiv:journal_ref>Dans Proceedings of Virtual Concept 2005 - Virtual Concept, Biarritz : France (11/2005)</arxiv:journal_ref>
+    <author>
+      <name>Fouad Bennis</name>
+      <arxiv:affiliation>IRCCyN</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Damien Chablat</name>
+      <arxiv:affiliation>IRCCyN</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Philippe Dépincé</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cs/0511068v1</id>
+    <title>An Agent-based Manufacturing Management System for Production and Logistics within Cross-Company Regional and National Production Networks</title>
+    <updated>2005-11-18T14:41:09Z</updated>
+    <link href="https://arxiv.org/abs/cs/0511068v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cs/0511068v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  The goal is the development of a simultaneous, dynamic, technological as well as logistical real-time planning and an organizational control of the production by the production units themselves, working in the production network under the use of Multi-Agent-Technology. The design of the multi-agent-based manufacturing management system, the models of the single agents, algorithms for the agent-based, decentralized dispatching of orders, strategies and data management concepts as well as their integration into the SCM, basing on the solution described, will be explained in the following.
+  Keywords: production engineering and management, dynamic manufacturing planning and control, multi-agentsystems (MAS), supply-chain-management (SCM), e-manufacturing</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-11-18T14:41:09Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>S. Heinrich</name>
+    </author>
+    <author>
+      <name>H. Durr</name>
+    </author>
+    <author>
+      <name>T. Hanel</name>
+    </author>
+    <author>
+      <name>J. Lassig</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/physics/0506122v1</id>
+    <title>Network Marketing on a Small-World Network</title>
+    <updated>2005-06-14T14:12:13Z</updated>
+    <link href="https://arxiv.org/abs/physics/0506122v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/physics/0506122v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We investigate a dynamic model of network marketing in a small-world network structure artificially constructed similarly to the Watts-Strogatz network model. Different from the traditional marketing, consumers can also play the role of the manufacturer's selling agents in network marketing, which is stimulated by the referral fee the manufacturer offers. As the wiring probability $α$ is increased from zero to unity, the network changes from the one-dimensional regular directed network to the star network where all but one player are connected to one consumer. The price $p$ of the product and the referral fee $r$ are used as free parameters to maximize the profit of the manufacturer. It is observed that at $α=0$ the maximized profit is constant independent of the network size $N$ while at $α\neq 0$, it increases linearly with $N$. This is in parallel to the small-world transition. It is also revealed that while the optimal value of $p$ stays at an almost constant level in a broad range of $α$, that of $r$ is sensitive to a change in the network structure. The consumer surplus is also studied and discussed.</summary>
+    <category term="physics.soc-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-06-14T14:12:13Z</published>
+    <arxiv:comment>12 pages, to appear in Physica A</arxiv:comment>
+    <arxiv:primary_category term="physics.soc-ph"/>
+    <author>
+      <name>Beom Jun Kim</name>
+      <arxiv:affiliation>Ajou Univ.</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Tackseung Jun</name>
+      <arxiv:affiliation>Kyung Hee Univ.</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Jeong-Yoo Kim</name>
+      <arxiv:affiliation>Kyung Hee Univ.</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. Y. Choi</name>
+      <arxiv:affiliation>Seoul Natl' Univ.</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1016/j.physa.2005.06.059</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/j.physa.2005.06.059" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0501163v1</id>
+    <title>Silver paint as a soldering agent for DyBaCuO single-domains welding</title>
+    <updated>2005-01-08T15:32:07Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0501163v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0501163v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  Silver paint has been tested as a soldering agent for DyBaCuO single-domain welding. Junctions have been manufactured on Dy-Ba-Cu-O single-domains cut either along planes parallel to the c-axis or along the ab-planes. Microstructural and superconducting characterisations of the samples have been performed. For both types of junctions, the microstructure in the joined area is very clean: no secondary phase or Ag particles segregation has been observed. Electrical and magnetic measurements for all configurations of interest are reported $ρ(T)$ curves, and Hall probe mapping). The narrow resistive superconducting transition reported for all configurations shows that the artificial junction does not affect significantly the measured superconducting properties of the material.</summary>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.supr-con" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2005-01-08T15:32:07Z</published>
+    <arxiv:comment>12 pages, including 5 figures; 34 references; to be published in Supercond. Sci. Technol</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.mtrl-sci"/>
+    <arxiv:journal_ref>Supercond. Sci. Technol. 18 (2005) 508 - 512</arxiv:journal_ref>
+    <author>
+      <name>J-P. Mathieu</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <author>
+      <name>J-F. Fagnard</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ph. Laurent</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <author>
+      <name>B. Mattivi</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <author>
+      <name>C. Henrist</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Ph. Vanderbemden</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <author>
+      <name>M. Ausloos</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <author>
+      <name>R. Cloots</name>
+      <arxiv:affiliation>Univ. Liege</arxiv:affiliation>
+    </author>
+    <arxiv:doi>10.1088/0953-2048/18/4/021</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1088/0953-2048/18/4/021" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/cond-mat/0112502v2</id>
+    <title>A model for the size distribution of customer groups and businesses</title>
+    <updated>2002-01-08T07:42:19Z</updated>
+    <link href="https://arxiv.org/abs/cond-mat/0112502v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/cond-mat/0112502v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>  We present a generalization of the dynamical model of information transmission and herd behavior proposed by Eguiluz and Zimmermann. A characteristic size of group of agents $s_{0}$ is introduced. The fragmentation and coagulation rates of groups of agents are assumed to depend on the size of the group. We present results of numerical simulations and mean field analysis. It is found that the size distribution of groups of agents $n_{s}$ exhibits two distinct scaling behavior depending on $s \leq s_{0}$ or $s &gt; s_{0}$. For $s \leq s_{0}$, $n_{s} \sim s^{-(5/2 + δ)}$, while for $s &gt; s_{0}$, $n_{s} \sim s^{-(5/2 -δ)}$, where $δ$ is a model parameter representing the sensitivity of the fragmentation and coagulation rates to the size of the group. Our model thus gives a tunable exponent for the size distribution together with two scaling regimes separated by a characteristic size $s_{0}$. Suitably interpreted, our model can be used to represent the formation of groups of customers for certain products produced by manufacturers. This, in turn, leads to a distribution in the size of businesses. The characteristic size $s_{0}$, in this context, represents the size of a business for which the customer group becomes too large to be kept happy but too small for the business to become a brand name.</summary>
+    <category term="cond-mat.stat-mech" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2001-12-31T11:33:04Z</published>
+    <arxiv:comment>11 pages, 1 figure, corrected typos</arxiv:comment>
+    <arxiv:primary_category term="cond-mat.stat-mech"/>
+    <author>
+      <name>Dafang Zheng</name>
+    </author>
+    <author>
+      <name>G. J. Rodgers</name>
+    </author>
+    <author>
+      <name>P. M. Hui</name>
+    </author>
+    <arxiv:doi>10.1016/S0378-4371(02)00802-6</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1016/S0378-4371(02)00802-6" title="doi"/>
+  </entry>
+</feed>

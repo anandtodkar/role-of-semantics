@@ -1,0 +1,28 @@
+\begin{table}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{CS5: matched facts recovered from the emitted OPC UA NodeSet2 and AAS v3 projections of the same plant ($\neq$: conflicting value). Both projections are generated from one specification, so this measures the emitted profiles, not limits of either standard.}
+\label{tab:cs5}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Fact & AUF & OPC UA & AAS & Union \\
+\midrule
+identity & U1 & 73/73 & 73/73 & 73/73 \\
+semantic id & U1 & 0/46 & 46/46 & 46/46 \\
+nameplate & U1 & 0/11 & 11/11 & 11/11 \\
+datatype & U2 & 73/73 & 73/73 & 73/73 \\
+access & U2 & 73/73 & 0/73 & 73/73 \\
+range & U2 & 73/73 & 0/73 & 73/73 \\
+unit & U3 & 73/73 & 73/73 & 73/73 \\
+quantity kind & U3 & 53/73 (20$\neq$) & 0/73 & 53/73 (20$\neq$) \\
+membership & U4 & 73/73 & 73/73 & 73/73 \\
+parent & U4 & 16/16 & 0/16 & 16/16 \\
+feeds & U4 & 0/14 & 0/14 & 0/14 \\
+state & U5 & 0/9 & 9/9 & 9/9 \\
+legal commands & U5 & 0/9 & 0/9 & 0/9 \\
+interlock & U6 & 0/4 & 0/4 & 0/4 \\
+value & U7 & 0/53 & 53/53 & 53/53 \\
+observation time & U7 & 0/53 & 0/53 & 0/53 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,1120 @@
+{
+  "protocol_version": "1.1.0",
+  "run_utc": "2026-10-20T20:42:15+00:00",
+  "queries": [
+    {
+      "family": "F1_industrial_agents",
+      "source": "arxiv",
+      "query": "(all:\"large language model\" OR all:LLM OR all:\"agentic\") AND (all:\"industrial automation\" OR all:manufacturing OR all:\"cyber-physical\" OR all:PLC) AND all:agent",
+      "status": "ok",
+      "retrieved": 589,
+      "reported_total": 751,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "1cfaf1c98711f7f379a73de2e157a3103dd3aabb4e64b2ccafd3834f7f041a84"
+        },
+        {
+          "file": "page_001.xml",
+          "sha256": "857c2b5aaffc1c2751def87699ed600660859fcd4b9dd00028cf106ee535edec"
+        },
+        {
+          "file": "page_002.xml",
+          "sha256": "734bdcd93f6d0e6d0aec7589d678639592bf3a983442d7abb4976c019a509dbd"
+        },
+        {
+          "file": "page_003.xml",
+          "sha256": "fc3071c4c96fee9c236b3319e1c6168edaf596e1eb0ae0ce06e12451a8714912"
+        },
+        {
+          "file": "page_004.xml",
+          "sha256": "cca69323ddc5d9b5bafc2aa9532638377fa81a363d1a715129ea8c97239054c9"
+        },
+        {
+          "file": "page_005.xml",
+          "sha256": "8532308eac846df1b26fa9cb73928530aedce96d28286aeda4bc651751152146"
+        },
+        {
+          "file": "page_006.xml",
+          "sha256": "99e8219c6837b57ff0db1240eb3b5c4730ee4054cb62ec0532a267425412146d"
+        },
+        {
+          "file": "page_007.xml",
+          "sha256": "9a6f7fcd40f281786f92b0390b246eaa8b17d9d168eb97478809c4b7cc15210c"
+        }
+      ]
+    },
+    {
+      "family": "F2_knowledge_graphs",
+      "source": "arxiv",
+      "query": "(all:\"knowledge graph\" OR all:ontology) AND (all:\"industrial automation\" OR all:manufacturing) AND (all:\"large language model\" OR all:LLM)",
+      "status": "ok",
+      "retrieved": 37,
+      "reported_total": 37,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "b98159399a9c38874725fed47fced6ddffd005302d9ed3d5f76a43d728d01029"
+        }
+      ]
+    },
+    {
+      "family": "F3_information_models",
+      "source": "arxiv",
+      "query": "(all:\"OPC UA\" OR all:\"Asset Administration Shell\" OR all:AutomationML) AND (all:\"large language model\" OR all:LLM OR all:agent)",
+      "status": "ok",
+      "retrieved": 14,
+      "reported_total": 15,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "08b52b12cd70ae047406a8311956d6f534a94d031578892f277d8dc3ebff86d0"
+        }
+      ]
+    },
+    {
+      "family": "F4_runtime_validation",
+      "source": "arxiv",
+      "query": "(all:\"large language model\" OR all:LLM) AND (all:validation OR all:guardrail OR all:verification) AND (all:\"industrial automation\" OR all:\"control system\" OR all:PLC OR all:\"cyber-physical\")",
+      "status": "ok",
+      "retrieved": 87,
+      "reported_total": 87,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "f66d8b2c5138c4112b51b6215f5df2c677083019204e88a6dbc6cffcf3a8e509"
+        }
+      ]
+    },
+    {
+      "family": "F5_semantic_grounding",
+      "source": "arxiv",
+      "query": "(all:\"semantic grounding\" OR all:\"semantic interoperability\" OR all:\"semantic web\") AND (all:\"large language model\" OR all:LLM OR all:agent) AND (all:industrial OR all:manufacturing)",
+      "status": "ok",
+      "retrieved": 10,
+      "reported_total": 13,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "cb79a1b2f113080720181cd08b93b257dd95002829d8eb10c37ec99e99a9ce9a"
+        }
+      ]
+    },
+    {
+      "family": "F6_graph_rag",
+      "source": "arxiv",
+      "query": "(all:GraphRAG OR all:\"graph retrieval-augmented\" OR all:\"knowledge graph retrieval-augmented\") AND (all:industrial OR all:manufacturing OR all:maintenance)",
+      "status": "ok",
+      "retrieved": 16,
+      "reported_total": 16,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "487f069032a12d42da23a7d660aa8804e6d6add77f03f5a428ba7c6320d4a5fb"
+        }
+      ]
+    },
+    {
+      "family": "F7_neurosymbolic_tools",
+      "source": "arxiv",
+      "query": "(all:neurosymbolic OR all:\"neuro-symbolic\" OR all:\"function calling\" OR all:\"tool use\") AND (all:\"large language model\" OR all:LLM) AND (all:industrial OR all:manufacturing OR all:automation)",
+      "status": "ok",
+      "retrieved": 404,
+      "reported_total": 404,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "f2740093d352ceec49adcae7c7c55cd7cbf0d812d17c3291c5b22d11af1ad9b0"
+        },
+        {
+          "file": "page_001.xml",
+          "sha256": "2c8ecc391ca3ec9d4df6218974b93b4eceb4fa9c5cafb8700a682e04ccd247fa"
+        },
+        {
+          "file": "page_002.xml",
+          "sha256": "7bfdd73b8b36fce3de4af1a66a123f5e878d8fb0f9125e6982697f9286b5e2ee"
+        },
+        {
+          "file": "page_003.xml",
+          "sha256": "59456b281effbfcea3853f2b5901658b2298e4bd4a35846d456bbe5e738fcf21"
+        },
+        {
+          "file": "page_004.xml",
+          "sha256": "b00bcdc0f3a9d0a243c96dcef7a80b6786412ca690be44706f81d319457d2a6f"
+        }
+      ]
+    },
+    {
+      "family": "F8_safety_provenance",
+      "source": "arxiv",
+      "query": "(all:\"large language model\" OR all:LLM) AND (all:safety OR all:provenance OR all:trustworthy) AND (all:\"industrial automation\" OR all:\"process industry\" OR all:\"industrial control\")",
+      "status": "ok",
+      "retrieved": 15,
+      "reported_total": 15,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "1b9dade20f544935e5ce36375c1427299235670d853329d16ebf289ac153b34a"
+        }
+      ]
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "arxiv",
+      "query": "(ti:survey OR ti:review) AND (all:\"large language model\" OR all:LLM OR all:\"knowledge graph\") AND (all:\"industrial automation\" OR all:manufacturing OR all:\"industry 4.0\")",
+      "status": "ok",
+      "retrieved": 14,
+      "reported_total": 15,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "a60f9967e909847d80ac750dba699a3f6c2fefdcc18a5cf9caa8427a333f8b26"
+        }
+      ]
+    },
+    {
+      "family": "F1_industrial_agents",
+      "source": "crossref",
+      "query": "large language model agent industrial automation",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2401799,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "2298bec87191fe5c0258a9825a959a4a791aefe6e68bdde250a0d04afcb807fe"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "4470be951c900f70c62d1959a44d5d954fd845a33ac5534dba132a89f2ed07dc"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "e52d701c638257b6381a2e3a0dbe6c3a14c8242a6f565214aeb7c01eba78fb73"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F1_industrial_agents",
+      "source": "crossref",
+      "query": "LLM agent manufacturing system",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 1461264,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "7310e74cfd5c0d2020f9222d7ad9d7a21617516a07397a8bcd80703d52d21251"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "bf7f858c224b0062ff20f2b3b9de42df0fb830b717f0ea921903303d89d354ec"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "2ba15a597921d56a4990bfe4a60ffebae1752236fe9a0f315d3c62a6e719a5e8"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F1_industrial_agents",
+      "source": "crossref",
+      "query": "agentic AI cyber-physical production system",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2594036,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "a8e65c4d35906643fe612c127fa0ffc82af4978254b44a599a1796195e465c9c"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "3d6d818bfeda0cef0cd9154b4a85a9c3b4160e119f558f4b700d8184d1e2d50d"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "d25636f3fbe49181db104be7477db7ca03acccd2194c4e05c7738947e14f3de7"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F1_industrial_agents",
+      "source": "crossref",
+      "query": "LLM PLC control code agent",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 1012670,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "b8ea574d8ca669d071c24b5d7649466b9b5c494d36a882d95d69f49fda5664fc"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "ac06713c00158f6562c2369992017f6421cbdc151b7b13de08a10f3f5304257d"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "ff5560e6e7746cc1bbbc2a32a4caa1423cf99e150e65a63a830c2e072279e929"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F2_knowledge_graphs",
+      "source": "crossref",
+      "query": "industrial knowledge graph large language model",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2614219,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "0df03948fecb777c58da81385ed25d636a383be4eda404796999a6c0bd4c55ac"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "ce1ee29b0551b7e189ed76d15327a2ffa11920010dd9a3cc6b131a0316a6c1f3"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "28aeefc8a78f078c54ba949d4ac8a8bf03d734b68967192846b611265b90e7fc"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F2_knowledge_graphs",
+      "source": "crossref",
+      "query": "manufacturing ontology LLM",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 247440,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "5dcde566b2dfe39255e299baa6c1846a0917b656886ffd579c84bf56925ce956"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "38c621e5e79cbcb6e6c8e607f5ba6302f165aca7ee218696417c38d32649094d"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "05a1f6590448bda90d805c05c29952272b1801fae843312f76a0826a4508daf0"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F2_knowledge_graphs",
+      "source": "crossref",
+      "query": "engineering knowledge graph LLM automation",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2675645,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "b3f706082e54fdb4c35213e532358756b1c41499b6f2c6c4305854b0f382ce89"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "df3cc9a81c080e58867ca463efd0b99f003a7ed0a639b5c7ffbf5270733cb44c"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "1096e75e27d601235f41611c7712747c82a7985b4bd2e241c25489356dee3fa4"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F3_information_models",
+      "source": "crossref",
+      "query": "OPC UA large language model",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 1877467,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "5c31b800be31664abfda64f8b973c20e49592530e1ef6b31d70be6f6cb322bd8"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "7c4cac2074746f2a74dcf58bee7a48d4cf8d3d22f6945cbe9d775386a954439e"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "4bef85eea73b018be21396e8bee97247076dd94404891a389427e747a84572a9"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F3_information_models",
+      "source": "crossref",
+      "query": "asset administration shell large language model",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2077612,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "79a6094ac684bb07acc3430eb0014d12d9b2a15155425e633629fc791e7b21ba"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "13793861f7b803896cfb03047295479a62388ebe0d23d2360eb09b5af9fe4564"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "a189b5218043d545b91e57bc61863520ac616c2b7b105bbbd044078bb55ef218"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F3_information_models",
+      "source": "crossref",
+      "query": "AutomationML LLM",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 28968,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "731e14f0193b01a75dc215f8aba4d5ad0c583a06a3fa1d4ad395b9db85f8dca0"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "a0441303a152eab0bd741616761bec5be758df14ba3b03b1b911d8339d73ae3d"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "ded1a42c86e500345fd2c3e3d6707bddf5e70d8eb6336a4893d339598aad60c9"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F3_information_models",
+      "source": "crossref",
+      "query": "OPC UA information model agent generative AI",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2577490,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "7869750df7e84d6767712cf44db0326e683e732437c9713775ddf85d46c2fd5a"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "29068441b60d1d30600ecb8ed80365299ac5765ad5651e6a101c9a251109142d"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "44871e8131159c2b93ac0f118841b9d6bab5f7700df13ef204a75b4655742fa0"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F4_runtime_validation",
+      "source": "crossref",
+      "query": "LLM guardrail industrial control system",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2216416,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "5a74197211ba4763680eefd9d688f9fd3837caa6b1745ffcf0f7e3193b744eb8"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "b2c811a53330126eda3c85c909ca28e41001b4e52fa4c9587c45dbea0156bb23"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "38a39385bd7f877c5b9da819c525418fdc3c2d7e6e57c9cecf354d230569f1e1"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F4_runtime_validation",
+      "source": "crossref",
+      "query": "verification of LLM generated PLC code",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 178901,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "ce6e67a37750ec7e2672de3b0decd2b4a62fff601bc2bf5002cee92ca76e929a"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "d5a265e2b2214552af61227acaff26a6ea316ea597ee40731933e4c1d436dcfc"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "6c957429a610e576e6a1984d0739188dda8713166fb9399eb055b6a08cac0734"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F4_runtime_validation",
+      "source": "crossref",
+      "query": "safe LLM action validation cyber-physical",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 1007329,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "830707bb3e450ad6ee83ac35ce7640ad81d91219d1ceeda4789339414373f124"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "fb0d17d24b2025b73e48cb64dd766abc16b29125a9956f9d72b98780d5d076ed"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "c1aef4be6e8a663aa45c3c3049e26b63e31eaf756877dbeb84e57d75914a1ee7"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F5_semantic_grounding",
+      "source": "crossref",
+      "query": "semantic interoperability large language model industry 4.0",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2193958,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "195a2ffda2ff99b4362ba77ff9e407fa75033d57839f3572bed882048c3daef5"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "91865d62464072c20a16396928eefc57d0bbe6ae7675bc798d2d79594cf46d1b"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "3cff0b008c0cf550ce92ec1ed4b2fc9160629fe34cc91f91d0b9618434e40fff"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F5_semantic_grounding",
+      "source": "crossref",
+      "query": "semantic grounding LLM industrial data",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 1520047,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "7712ced75d1cd8697d87403e965140d4d834140b4013232c8f4a4c6d6f916411"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "d1bfbeab66480cc32192d2f819bc678371d1617ee8b9b9f17277390a36fb2695"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "6eec251be4c4502e843d69da735d3d3225a3c0325e4df7d73c6547bed585e835"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F6_graph_rag",
+      "source": "crossref",
+      "query": "graph retrieval augmented generation manufacturing",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 685780,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "0559be18eda12a2706b71cb1d6b51dd5f5462eb1edab950baaa07112ff4bab85"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "79b965d3b8138e36cd21080feba4cfd2652e464452466cdbafd3794113079480"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "35ef2be641e1bd488b3a02a54de3f513df7b692a3102da4b921dbc9b021fa876"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F6_graph_rag",
+      "source": "crossref",
+      "query": "knowledge graph RAG industrial maintenance",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 852657,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "c89f11890bc41692716db3766105aea2f454b7d15f141b6d5c266113d2089ff5"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "a9d8001026b8891019061c528f7a1f31dd77991646f5fa139024d5b559ffdd8b"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "41451826432aa7f76556a7a19f7d280bc8ccebbdeabc052e430881a889b41009"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F7_neurosymbolic_tools",
+      "source": "crossref",
+      "query": "neurosymbolic AI industrial automation LLM",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 944661,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "8c97c8f6b8add9ff16183d80d5b44eb5fe19842e64f7641ad45814b9674a15a6"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "8339f47aa366f6477e428b84bafdd0f160b4c099f01c671829d6c7f4f7fe63c4"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "503139b7432b1cd772eb57efb6f576cb21727e043ffec5fde6868092b33f29d3"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F7_neurosymbolic_tools",
+      "source": "crossref",
+      "query": "LLM function calling industrial automation",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 766603,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "345f085d979be5e28cabdd4feaca4ce9059ab7149402f07da266228b22ee2c7f"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "6f00607e29414657499eda363e96df2b1bfcb9430af903564b1a69175079fadf"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "a9ee9b6f2cf60d6fc5e492008c2049d693486b383a5c97b932829ffba121a0b1"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F7_neurosymbolic_tools",
+      "source": "crossref",
+      "query": "ontology grounded LLM agent manufacturing",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 349489,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "70d95a69d59502f359a1dc8bb8786335148b8446c3918ff1ebce685e369c0bcc"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "c427b4c47790b0d39aefa7c7c9061072c3dc11712013870630122e0cc3b4b7ef"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "372057f9e36aa3129f52857ac5290de6d71e98b05da1881541e37fa2a333cca3"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F8_safety_provenance",
+      "source": "crossref",
+      "query": "trustworthy LLM industrial automation safety",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 854714,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "d8b743fc036294919d5519871905e9d4010dfd04eb7c317cebda0144703842a7"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "9c8726014aaf342c82fd991ee56fa284e09483063de90a00955aad7c3c01c2e0"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "0280161ac4c5aaa0e9c7665de997e68a34e72dcd3cc052ff0bb1c760e85ac62c"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F8_safety_provenance",
+      "source": "crossref",
+      "query": "provenance traceability LLM industrial decision",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 591642,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "2ef0d6d7fc62834a7022a653e46dab6abc1a7e38ad4bf977863ee8479d0c6a78"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "df6b98e80438c927110362bd58308f628ab512eea2b1ac9c0bf8f97f84fcc9be"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "42d4270e08fbd8b11040ebe65497adb1436c885d95dbed261a3b35918b47b581"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "crossref",
+      "query": "survey large language models manufacturing",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 1503159,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "4b75d0b4912fed8abffe21e35259eaccb4da21af46a8462ea51368c1415c2520"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "acfeef7c0df134368acc15938238cb36171766aa0840ce1eb5635566e3087947"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "9af5b4ce05b7be15196c9607378d867ae38090fa825911c06f5fb2b1117da587"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "crossref",
+      "query": "review large language models industrial automation",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 3798540,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "2969578512c8eac2872aedf5714704a4f7842ada1f9f12d94e9c0e936dededa6"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "fdd84f861ded729376a23d67b637897865bb36fda654bfffadb5dc1680880da8"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "2a2216df902c32e8510d9bc10402a54b6232769b9815dd0ffe9ba61d49432bf2"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "crossref",
+      "query": "survey knowledge graphs manufacturing",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 807868,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "f5dade0d00f49c292122cececc5ced02bfe3d571d3d203b99d02fe3acdff123f"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "18d580e9966f40dc6ce7ded89713f64b227ebddb37258e16d7f23b90041786d5"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "3bb53690d821fded8e03d2270017820cd7bae83d6c6a309552d7f3b0b514b956"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "crossref",
+      "query": "review semantic interoperability industry 4.0",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2623692,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "7e2e3c66c80f47a4e4054ac3ea485a8e7d5a5d4d1751dc9db3085e1c33cc10eb"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "f0d88a0d3bc56ec4b5534186e8fa186c2156f4e11ad1f6c7d2f53b2aa33d05b9"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "13d0eae23ce22c69408f9d2f459a6cc0cf3d3560b1967c0991bd1fb07de96fef"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "crossref",
+      "query": "survey asset administration shell",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 413923,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "e24cf6378cd354b4366b37afc060deeacb4894c5c2a1f50db1765fd1b06dc73a"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "befd72ace08ab0c0affc785a6305d9b0e7177520c66a1f419b70a1e3f910f372"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "2b2f8720932b190e3e17ea7d189ae4a09ddfe59f0e675887a7d0dbcb0344ecff"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "crossref",
+      "query": "review OPC UA information modeling",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 3544346,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "688597f237a6ff387ecfe3a7c9b4aa7557b3e059d0b54469f0bab826e0334ef6"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "7717914b221d9dad5c523d9aef0693c77f383ac2f68f88323b4cdaefbc56f03e"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "171e6977925488c30f3770b51f6e291705587fc7afa06d4d9b2b4acd3d14dab5"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "crossref",
+      "query": "survey LLM agents cyber-physical systems",
+      "status": "ok",
+      "retrieved": 300,
+      "reported_total": 2352680,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "d0df620c493fcd3b620c7666579d6876f6fd85b9f571434c0bfd5fc6365a9d7e"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "c7bc9220b621578acf874d6a3a7010ccbadefff93e194542fd3c803fd62217e3"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "09f268bb9adf7e89265d3aa356c31daaa8dcfd57fe3522af4aec7ab3922b0ce9"
+        }
+      ],
+      "relevance_capped": true
+    },
+    {
+      "family": "F1_industrial_agents",
+      "source": "openalex",
+      "query": "(\"large language model\" OR LLM OR \"foundation model\" OR \"agentic AI\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR PLC) AND agent",
+      "status": "ok",
+      "retrieved": 1169,
+      "reported_total": 1167,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "d204c25b3ab5b5366b7594ca483971238d8ca3a54538c9bd3f08cdb0d1b0ea71"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "010c3a8e55d7e62a81c10375151536f1168c208f11b0e7c47b9c0e30880c3089"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "aae0bf9e5d13586660fa992176f8c50844dce0193c75e071c7f7b9d45a01ac9e"
+        },
+        {
+          "file": "page_003.json",
+          "sha256": "891e2734391919222db280c9b820a1117ba598fd00b957af626fea7926a50c50"
+        },
+        {
+          "file": "page_004.json",
+          "sha256": "e3ae4d56f212c1297d785438baf3d3024a3c6ebe540a4f7dd0925e2583778ba7"
+        },
+        {
+          "file": "page_005.json",
+          "sha256": "3d95c9563417cdbea3b0b93629bfbcd4563e4ce54027d678191b913e57176df1"
+        }
+      ]
+    },
+    {
+      "family": "F2_knowledge_graphs",
+      "source": "openalex",
+      "query": "(\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing OR engineering) AND (\"large language model\" OR LLM)",
+      "status": "ok",
+      "retrieved": 1612,
+      "reported_total": 1612,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "b15891fd53b1e93ddc0d63cdbf8f71e65db990a69cfdfae2de41773a580c5f6d"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "61ccaba1f85b648c605661eee02798bbc6e6b641992749d3214f5850eadedfa1"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "beb31e756b291f316402df258000248c4caaea0e34b6af1904fe8c84b7fb27be"
+        },
+        {
+          "file": "page_003.json",
+          "sha256": "2816230421ac2c39e8717af2990dda8e0ab9d92af84db674cf752866ca301fbc"
+        },
+        {
+          "file": "page_004.json",
+          "sha256": "b703785773603d774bf5d9b06863aacb36ea400f141c31b18f117ef85f23b115"
+        },
+        {
+          "file": "page_005.json",
+          "sha256": "46c06fa559dbf7dabc9055fe9c1d134695f15051a01eaa6ea83b1db682b89003"
+        },
+        {
+          "file": "page_006.json",
+          "sha256": "ba338b629d83d432bef63464f3722706a7c3896a00547d56faba84b1490d7cf2"
+        },
+        {
+          "file": "page_007.json",
+          "sha256": "42ef77c07633c572d2c734e4b50a0e667a9f7eb8a4e814817b40fef483b80d64"
+        },
+        {
+          "file": "page_008.json",
+          "sha256": "de96bafa6e2918f8a16fc61aa89d91e3e2dfb82034a1bc1ef1413a647ff6c5ca"
+        }
+      ]
+    },
+    {
+      "family": "F3_information_models",
+      "source": "openalex",
+      "query": "(\"OPC UA\" OR \"Asset Administration Shell\" OR AutomationML OR \"Module Type Package\") AND (\"large language model\" OR LLM OR \"generative AI\" OR agent)",
+      "status": "ok",
+      "retrieved": 210,
+      "reported_total": 209,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "649f9b973e5de51a814f139744525da51937678c949418783b27f5a9b6e5d3b8"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "b0a51cb5756aedbd70d20949f41ea4d62d62b18d42b6a6f83300d4f2830e3f3e"
+        }
+      ]
+    },
+    {
+      "family": "F4_runtime_validation",
+      "source": "openalex",
+      "query": "(\"large language model\" OR LLM) AND (validation OR guardrail OR verification OR \"formal methods\") AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR PLC OR robot)",
+      "status": "ok",
+      "retrieved": 1914,
+      "reported_total": 1912,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "104db1f44290d7cfdf5f961651eede929ff6d1cd9412ce4e9d428ac06c7b388b"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "2887aa5ab0cacc208fdc7e2c5271281d9d39b31856e95c8cdf63c86b52e48e00"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "493a3e2c355e9c7bf9376dff0353d072fe9c0b2cfcfc2a73e4aabef8678f03e1"
+        },
+        {
+          "file": "page_003.json",
+          "sha256": "6082fddc525e04371d430c7092684274f6bce8edc69fc6fcdde27960057f9ab7"
+        },
+        {
+          "file": "page_004.json",
+          "sha256": "508af6326f1bcc395787c25b28780f0938f6041ee80490cd2200a3035d68d688"
+        },
+        {
+          "file": "page_005.json",
+          "sha256": "147cdef86e8a8f5af52b7c327ae413debedbd5dcfbc891da5b24febdc2d21400"
+        },
+        {
+          "file": "page_006.json",
+          "sha256": "2a5384f692de08b1fe405b6874514fa9dc462b48f6f756f203fb4925c2945e72"
+        },
+        {
+          "file": "page_007.json",
+          "sha256": "32f226c7a00818ba3989e1d96fb47c2552fd1a23bc95018034392ed679d1f153"
+        },
+        {
+          "file": "page_008.json",
+          "sha256": "845775a01801f6c1323db67484a3ceeeee8ffe28983a18ba90d2e51ce8108b6e"
+        },
+        {
+          "file": "page_009.json",
+          "sha256": "a2a2eddecca865cf0e973f4d20afa2c75111fa6357d1552cea3ba68c3eb8f861"
+        }
+      ]
+    },
+    {
+      "family": "F5_semantic_grounding",
+      "source": "openalex",
+      "query": "(\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\" OR \"semantic web\") AND (\"large language model\" OR LLM OR agent) AND (industrial OR manufacturing OR automation)",
+      "status": "ok",
+      "retrieved": 122,
+      "reported_total": 122,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "cf0063ad676fca9340c383c3dee21dc5b1d0dc4018c3a7a1fc8321d0eec2a7f1"
+        }
+      ]
+    },
+    {
+      "family": "F6_graph_rag",
+      "source": "openalex",
+      "query": "(GraphRAG OR \"graph retrieval-augmented\" OR \"knowledge graph retrieval-augmented\" OR \"KG-RAG\") AND (industrial OR manufacturing OR engineering OR maintenance)",
+      "status": "ok",
+      "retrieved": 210,
+      "reported_total": 210,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "34b1af472f8cd59fec7751a043c3134b593a07cf2db9a0e2319ef3b8f02a30a0"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "8cc28b2a6e6638142133042f35f91b9097ea410442843fb155a7031be03be9ae"
+        }
+      ]
+    },
+    {
+      "family": "F7_neurosymbolic_tools",
+      "source": "openalex",
+      "query": "(neurosymbolic OR \"neuro-symbolic\" OR \"ontology-grounded\" OR \"function calling\" OR \"tool use\") AND (\"large language model\" OR LLM) AND (industrial OR manufacturing OR automation)",
+      "status": "ok",
+      "retrieved": 429,
+      "reported_total": 429,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "f05d7988d2c1cf2c89d5d96608b3fad92d71259ee0ae4089ac12795e8e7e59d0"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "e935d4c0c051fb43e00ba489a806b2563ca9dc905f1b6fda6a941fe2720a4d5c"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "f2d559de23dfb06185c04533287295b211415aa555538f61504337aed674374e"
+        }
+      ]
+    },
+    {
+      "family": "F8_safety_provenance",
+      "source": "openalex",
+      "query": "(\"large language model\" OR LLM OR \"AI agent\") AND (safety OR provenance OR trustworthy OR traceability) AND (\"industrial automation\" OR \"process industry\" OR \"industrial control\")",
+      "status": "ok",
+      "retrieved": 145,
+      "reported_total": 145,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "99461c06a45c5ae215de3d7a1dde91386cce4121255823abcf172bd699c8da6d"
+        }
+      ]
+    },
+    {
+      "family": "R1_related_surveys",
+      "source": "openalex",
+      "query": "(survey OR review OR \"state of the art\") AND (\"large language model\" OR LLM OR \"generative AI\" OR \"knowledge graph\" OR \"semantic interoperability\") AND (\"industrial automation\" OR manufacturing OR \"industry 4.0\")",
+      "status": "ok",
+      "retrieved": 1200,
+      "reported_total": 1199,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "0c92ea4ff48b6a1dc4feb0fa77a3ee5a8a7f441f1291de6f9456306f314e6c9b"
+        },
+        {
+          "file": "page_001.json",
+          "sha256": "c458cb8a2f5f1992a6ec56ad658c0ddc29d7b9da79b414f6e522291bf7775d2a"
+        },
+        {
+          "file": "page_002.json",
+          "sha256": "3ef551fd9c7402934f0228e4c3febbb242c7137bbdcbe122d95cf668c0608bfc"
+        },
+        {
+          "file": "page_003.json",
+          "sha256": "c2a8e216e7786a99f334f1abc0e611a717e9f08264e8e290f8e84d524c8eab8a"
+        },
+        {
+          "file": "page_004.json",
+          "sha256": "fde11e6d8879fe8be11e9ec74220958cf158ded63e10615911ef33ba04592a5d"
+        },
+        {
+          "file": "page_005.json",
+          "sha256": "93367f2a978491b18455ad2ff18b4196bcc3ba5ac4d9fe5115be69e9b8543aec"
+        },
+        {
+          "file": "page_006.json",
+          "sha256": "a3f69d418e04ba5e6ab62784cdfb9f39e76b892d2218e57b6b5c3f1d16500b3b"
+        }
+      ]
+    }
+  ]
+}

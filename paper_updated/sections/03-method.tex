@@ -1,0 +1,99 @@
+\section{Survey Methodology}
+\label{sec:method}
+
+\subsection{Research questions}
+\begin{enumerate}[label=\textbf{RQ\arabic*.},leftmargin=2.6em]
+  \item Which engineering-information capabilities do industrial AI agents require to
+  ground observations and actions?
+  \item Which standards, information models, semantic technologies and knowledge
+  representations provide them?
+  \item Where do current industrial-agent architectures obtain identity, units, topology,
+  behaviour, constraints, provenance and runtime state?
+  \item Which capabilities remain missing or weakly supported?
+  \item Which architectural patterns combine LLM reasoning with deterministic engineering
+  validation?
+  \item What evidence shows that engineering semantics improve grounding, action
+  correctness, transferability, auditability or context efficiency?
+\end{enumerate}
+RQ1 is answered by the AUF derivation (Section~\ref{sec:auf}), RQ2 by the technology
+landscape and matrix (Sections~\ref{sec:landscape}--\ref{sec:capabilities}), RQ3--RQ5 by
+the agent-literature coding (Sections~\ref{sec:agents}--\ref{sec:architecture}), and RQ6
+by the reported evaluations and the case study (Section~\ref{sec:case}).
+
+\subsection{Sources and search strategy}
+Four evidence streams are distinguished and never pooled. \emph{Specifications} (IEC,
+ISO, ISA, VDI/VDE/NAMUR, W3C, ETSI, OPC Foundation, IDTA, ECLASS, GS1, IDSA) are collected
+from the issuing bodies and scored on what they standardise. \emph{Peer-reviewed
+literature} published 2021--2026 is searched in IEEE Xplore, Scopus, Web of Science, ACM
+Digital Library, ScienceDirect and SpringerLink by the authors, and in OpenAlex and
+Crossref by released tooling; Crossref is relevance-ranked and capped, so it supplements
+rather than replaces the boolean database searches. \emph{Preprints} (arXiv, posted
+content) are coded but labelled non-peer-reviewed. \emph{Vendor material} supports only
+implementation-capability statements. Foundational earlier work (retrieval augmentation,
+tool use, constraint languages) enters through backward snowballing. Rather than one
+query, the protocol defines eight topical families, (F1) LLM agents in industrial
+automation and cyber-physical systems, (F2) industrial knowledge graphs and ontologies with
+LLMs, (F3) \opcua{}, AAS and AutomationML with LLMs or agents, (F4) runtime validation and
+guardrails in control systems, (F5) semantic grounding and interoperability, (F6) Graph- and
+KG-RAG on engineering data, (F7) neurosymbolic, ontology-grounded and typed-tool agents, and
+(F8) safety, provenance and trust, plus a family (R1) dedicated to related surveys. Exact
+database-specific strings are frozen in protocol v\SurveyProtocolVersion{}, released with
+the article; forward and backward snowballing from included studies complements them.
+
+\subsection{Eligibility, screening and quality}
+Studies are included if they address industrial AI or LLM agents or the engineering
+semantics they consume (I1), industrial information models or knowledge graphs with an AI
+consumer (I2), grounding, tool use, retrieval or runtime action validation in an
+engineering context (I3), or constraints, provenance or state models used to check AI
+outputs (I4). Exclusion codes are: no industrial context (E1); generic RAG or graph
+construction without engineering semantics (E2); no agent or LLM (E3); duplicate or
+superseded version (E4); insufficient documentation (E5); inaccessible full text (E6);
+language or period (E7). Surveys (I5) feed only the related-survey gap analysis. Records are
+deduplicated by DOI and by normalised title, year
+and first author; near-identical titles are listed for manual resolution rather than
+merged. A deterministic, versioned automation rule then marks records ineligible unless
+title or abstract contains both an AI/semantics term and an industrial term; every
+excluded record and the failing rule are released, as PRISMA~2020 requires for automation
+tools. Title/abstract and full-text screening use spreadsheets that preserve each
+decision and reason. A seeded random 20\% sample is designated for double coding at both
+stages. Five quality items (architecture described, evaluation method, artefact
+availability, isolation of the semantic contribution, safety limitations) are scored 0--2
+and reported, not used for exclusion.
+
+\subsection{Coding and agreement}
+Each included system is coded for grounding category (Section~\ref{sec:agents}), retrieval
+mechanism, tool interface, representation, each AUF capability on a 0--3 scale (absent,
+implicit, explicit, checked at runtime), runtime validation, controller authority and
+evaluation level (none, simulation, testbed, physical). Technologies are coded with the
+rubric in Table~\ref{tab:rubric}, and each score is linked to a specification reference.
+Agreement on the double-coded sample is reported as quadratic-weighted Cohen's $\kappa$
+and ordinal Krippendorff's $\alpha$ with adjudicated disagreements; at the time of writing
+the second rater's coding is pending ($\kappa$: \AufKappa{}, $\alpha$: \AufAlpha{}), and all
+scores are first-rater codes.
+
+\subsection{Capability levels}
+Every capability statement records its level: \emph{specification} capability (what a
+standard can express by default), \emph{implementation} capability (what a cited
+implementation or profile exposes), and \emph{runtime} availability (what the agent
+actually receives or checks when deciding). Matrix A (Section~\ref{sec:capabilities}) codes
+specification capability; Matrix B (Section~\ref{sec:agents}) codes runtime availability
+and records ``not reported'' rather than inferring capabilities a paper does not
+demonstrate.
+
+\subsection{Search status}
+Figure~\ref{fig:prisma} is generated from the screening sheets. The open-source harvest
+(\SurveyHarvestDate{}) identified \SurveyIdentified{} records (\SurveyCrossref{} Crossref,
+\SurveyArxiv{} arXiv, \SurveyOpenAlex{} OpenAlex; incomplete for: \SurveyFailedSources{}).
+After removing \SurveyDuplicates{} duplicates and marking \SurveyAutoExcluded{} records
+ineligible by the automation rule, \SurveyUnique{} records await title/abstract
+screening, and \SurveyRelatedCandidates{} industrial survey candidates await full-text
+verification for Table~\ref{tab:related-surveys}. Subscription-database exports are
+imported with the same tooling, after which all counts are regenerated.
+
+\begin{figure}[t]
+\centering
+\resizebox{\linewidth}{!}{\input{figures/prisma}}
+\caption{PRISMA 2020 flow generated from the screening sheets; counts update automatically
+as screening proceeds.}
+\label{fig:prisma}
+\end{figure}

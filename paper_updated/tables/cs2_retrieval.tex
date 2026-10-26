@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{CS2: retrieval strategy crossed with exposed capabilities at 6,000 surrogate tokens. Membership and graph retrieval share a fixed entity resolver; graph traversal requires C3/C4 relations.}
+\label{tab:cs2}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Ctx. & Retrieval & Suff. & Coverage & Tokens \\
+\midrule
+C2 & lexical & 23\% & 55\% & 5193 \\
+C2 & membership & 23\% & 48\% & 1906 \\
+C3 & lexical & 40\% & 67\% & 5075 \\
+C3 & membership & 29\% & 59\% & 2507 \\
+C3 & graph & 46\% & 76\% & 5341 \\
+C4 & lexical & 71\% & 85\% & 5107 \\
+C4 & membership & 46\% & 69\% & 2767 \\
+C4 & graph & 80\% & 93\% & 5345 \\
+\bottomrule
+\end{tabular}
+\end{table}

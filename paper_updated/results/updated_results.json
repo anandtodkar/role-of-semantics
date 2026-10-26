@@ -1,0 +1,991 @@
+{
+ "config": {
+  "python": "3.13.15",
+  "sources_sha256": {
+   "__init__.py": "5b4cf69c2a79bba3a1cfd7bd6be6964a6e282d1d3c19f77fedcc54ba20b7286a",
+   "archive_report.py": "c810a821217c49989d57407a49927a1a29936c1e3238a878cfa14de1ae07ef57",
+   "conditions.py": "9f1e85ccbf853cc5b7579d065c21d5f84b2bb800f7fd781fe239a7907ad41331",
+   "experiments.py": "115d72dbaf504f3ae5cdf8320fc570ae4e8e02e94eb328c860bbdf1974cda05d",
+   "kg.py": "b25ab3aa90d33f53b0d80fee782a5045aa6fcfc420860c6b0a6c6848e98658f3",
+   "llm.py": "74a7480602e4111693793af4999ee3f685bd2630ac499a4cb8eecfcf3678b289",
+   "metrics.py": "e034f4a9873beb031fa292ca84249d0e1310e1df2e5658eab2de3a5ae0f52385",
+   "naming.py": "fc5a56893ec69620dc3dc970758ec2e2840bc137a487e34541a9317fc23be807",
+   "nodeset_case.py": "c3ab79784c368b579580e8ef2589c900731b7a43155a7b3ba32ba66b372b88c6",
+   "opcua_aas.py": "78eb38008f94d12d5d228f808ac36889c31c0e768a7feb8b44c96307a30bcaa8",
+   "plant.py": "aaeb474f63241a840dd66c6efaf3d8fdb6bfcc38c3a9f6ce8d819d1ecfbddc07",
+   "report.py": "ca5386f43f26eb255e18e0222adaba486be17ef12882045890ab04aeef4effea",
+   "retrieval.py": "b8f51a74033bdb553bf021c4a222d4f51461e1968ec7bd49a6c84ba71b25be2f",
+   "revision.py": "5bc6fcf885faa4ce0ca93d352091e19154a245c0ca718d69edfc39f4c191a6fe",
+   "shapes.py": "c07e05a116f052723f4c1fbe2edecb6489bfa4e3cef30f17c116f623b2c9f047",
+   "sparql_probe.py": "2628944e5fbe50aacb076162930d15b57a68441f9f7dac3e0f790244806484b0",
+   "statemachine.py": "47896f24865d5e842781900b430f84b69e9e297cc5000b1d4e590a8ecbf35386",
+   "tasks.py": "b7605162e4a7c51253e6a41cb4f42af132c7b1449202c58d3903d19b373adebd",
+   "toolgen.py": "892297c9d90e97b63d8b0349559cdf530f156248d5073b8d56e431d14d8b9a97",
+   "units.py": "496740891c2345828b86b4188121ac7e3b084e09124babfdab72ec4619d80170",
+   "validation.py": "23e4bf801d1708f714326dcdf6fb8416d2a74dd9999be64dd196ddb6bf426a7e",
+   "vocab.py": "ca2b92b627205094e26090354282a9cdf0c6c36818a842fc7baff005a0402d7a",
+   "agreement.py": "c698effedf6c34a3b2adaecef627b5c18b54b404c76972806aed63c8e4c25637",
+   "dedup.py": "7aa81534dc0a080f17e08732ac9f498640d0f5a6a6b75facf0cd71f9d08a9647",
+   "harvest.py": "2c9b69158efe8c7be480ec0558f429fbf571a2dd70e02e3dda0ce3ff2f86e894",
+   "importers.py": "085ee97679d5aa729edebc4f1a372ecfb9fbe8cfbde8cc101c5007eb6b356c46",
+   "records.py": "40202700069a7ff5f08ed7b03cd6164ef178567fd93016f8efc71c163fd3d6dc",
+   "screening.py": "3ff57dc28d67f65ed7468b4a5f782074275e6d9a28596152ff16f31ccd407053"
+  }
+ },
+ "prisma": {
+  "identified_by_source": {
+   "arxiv": 1186,
+   "crossref": 9000,
+   "openalex": 7011
+  },
+  "identified": 17197,
+  "duplicates_removed": 3797,
+  "automation_excluded": 6373,
+  "screened": 7027,
+  "ta_excluded": 0,
+  "ta_pending": 7027,
+  "ft_sought": 0,
+  "ft_not_retrieved": 0,
+  "ft_assessed": 0,
+  "ft_excluded": 0,
+  "ft_excluded_by_reason": {},
+  "ft_pending": 0,
+  "included": 0,
+  "complete": false
+ },
+ "macros": {
+  "SurveyIdentified": "17197",
+  "SurveyUnique": "7027",
+  "SurveyDuplicates": "3797",
+  "SurveyIncluded": "0",
+  "SurveyPendingTA": "7027",
+  "SurveyHarvestDate": "2026-10-20",
+  "SurveyFailedSources": "none",
+  "SurveyFamilies": "9",
+  "SurveyArxiv": "1186",
+  "SurveyOpenAlex": "7011",
+  "SurveyCrossref": "9000",
+  "SurveyAutoExcluded": "6373",
+  "SurveyProtocolVersion": "1.1.1",
+  "SurveyHarvestProtocolVersion": "1.1.0",
+  "SurveyRelatedCandidates": "404",
+  "AufAllThreeFirstClass": "0",
+  "AufAllThreeStrongNames": "MTP",
+  "AufTechnologies": "24",
+  "AufCells": "240",
+  "AufLocated": "0",
+  "AufUncited": "1",
+  "AufTypesFirstClass": "11",
+  "AufUnitsFirstClass": "1",
+  "AufBehaviourFirstClass": "4",
+  "AufConstraintsFirstClass": "2",
+  "AufProvenanceFirstClass": "5",
+  "AufAllThreeStrong": "1",
+  "AufKappa": "pending",
+  "AufAlpha": "pending",
+  "AgentSystemsCoded": "0",
+  "AgentCatA": "0",
+  "AgentCatB": "0",
+  "AgentCatC": "0",
+  "AgentCatD": "0",
+  "AgentCatE": "0",
+  "RelatedSurveysVerified": "0",
+  "CsSuffCZero": "0\\%",
+  "CsTopCZero": "0\\%",
+  "CsRecallGZero": "0\\%",
+  "CsFPRGZero": "0\\%",
+  "CsSuffCOne": "0\\%",
+  "CsTopCOne": "79\\%",
+  "CsRecallGOne": "14\\%",
+  "CsFPRGOne": "0\\%",
+  "CsSuffCTwo": "23\\%",
+  "CsTopCTwo": "95\\%",
+  "CsRecallGTwo": "68\\%",
+  "CsFPRGTwo": "8\\%",
+  "CsSuffCThree": "51\\%",
+  "CsTopCThree": "100\\%",
+  "CsRecallGThree": "74\\%",
+  "CsFPRGThree": "0\\%",
+  "CsSuffCFour": "86\\%",
+  "CsTopCFour": "100\\%",
+  "CsRecallGFour": "100\\%",
+  "CsFPRGFour": "0\\%",
+  "CsDisagreements": "0",
+  "CsFacts": "726",
+  "CsOpcuaFacts": "507",
+  "CsAasFacts": "411",
+  "CsUnionFacts": "626",
+  "CsOpcuaPct": "70\\%",
+  "CsAasPct": "57\\%",
+  "CsUnionPct": "86\\%",
+  "CsQkConflicts": "20",
+  "CsOpcuaTokens": "52,324",
+  "CsAasTokens": "70,871",
+  "CsKukaFacts": "676",
+  "CsKukaRetained": "676"
+ },
+ "cs2": [
+  {
+   "condition": "C0",
+   "strategy": "lexical",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.10047619047619047,
+   "mean_tokens": 406.8285714285714
+  },
+  {
+   "condition": "C0",
+   "strategy": "lexical",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.10047619047619047,
+   "mean_tokens": 406.8285714285714
+  },
+  {
+   "condition": "C0",
+   "strategy": "lexical",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.10047619047619047,
+   "mean_tokens": 406.8285714285714
+  },
+  {
+   "condition": "C0",
+   "strategy": "oracle_all",
+   "budget": null,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.1407979120059657,
+   "mean_tokens": 906.0
+  },
+  {
+   "condition": "C1",
+   "strategy": "lexical",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.2517460317460317,
+   "mean_tokens": 1182.7142857142858
+  },
+  {
+   "condition": "C1",
+   "strategy": "lexical",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.2517460317460317,
+   "mean_tokens": 1310.057142857143
+  },
+  {
+   "condition": "C1",
+   "strategy": "lexical",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.2517460317460317,
+   "mean_tokens": 1310.057142857143
+  },
+  {
+   "condition": "C1",
+   "strategy": "oracle_all",
+   "budget": null,
+   "n": 35,
+   "sufficiency": 0.0,
+   "coverage": 0.2619090231170768,
+   "mean_tokens": 2256.0
+  },
+  {
+   "condition": "C2",
+   "strategy": "lexical",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.22857142857142856,
+   "coverage": 0.5061904761904762,
+   "mean_tokens": 1392.0285714285715
+  },
+  {
+   "condition": "C2",
+   "strategy": "lexical",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.22857142857142856,
+   "coverage": 0.549047619047619,
+   "mean_tokens": 5192.771428571428
+  },
+  {
+   "condition": "C2",
+   "strategy": "lexical",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.2571428571428571,
+   "coverage": 0.6133333333333333,
+   "mean_tokens": 13430.885714285714
+  },
+  {
+   "condition": "C2",
+   "strategy": "oracle_all",
+   "budget": null,
+   "n": 35,
+   "sufficiency": 0.3142857142857143,
+   "coverage": 0.649047619047619,
+   "mean_tokens": 16412.0
+  },
+  {
+   "condition": "C2",
+   "strategy": "membership",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.22857142857142856,
+   "coverage": 0.47523809523809524,
+   "mean_tokens": 1127.7142857142858
+  },
+  {
+   "condition": "C2",
+   "strategy": "membership",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.22857142857142856,
+   "coverage": 0.4847619047619047,
+   "mean_tokens": 1905.8857142857144
+  },
+  {
+   "condition": "C2",
+   "strategy": "membership",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.22857142857142856,
+   "coverage": 0.4847619047619047,
+   "mean_tokens": 1905.8857142857144
+  },
+  {
+   "condition": "C3",
+   "strategy": "lexical",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.3142857142857143,
+   "coverage": 0.5271428571428571,
+   "mean_tokens": 1282.1142857142856
+  },
+  {
+   "condition": "C3",
+   "strategy": "lexical",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.4,
+   "coverage": 0.6690476190476191,
+   "mean_tokens": 5075.371428571429
+  },
+  {
+   "condition": "C3",
+   "strategy": "lexical",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.4857142857142857,
+   "coverage": 0.761904761904762,
+   "mean_tokens": 15997.142857142857
+  },
+  {
+   "condition": "C3",
+   "strategy": "oracle_all",
+   "budget": null,
+   "n": 35,
+   "sufficiency": 0.5428571428571428,
+   "coverage": 0.7976190476190477,
+   "mean_tokens": 19457.0
+  },
+  {
+   "condition": "C3",
+   "strategy": "membership",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.2571428571428571,
+   "coverage": 0.4952380952380952,
+   "mean_tokens": 1118.9714285714285
+  },
+  {
+   "condition": "C3",
+   "strategy": "membership",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.2857142857142857,
+   "coverage": 0.5923809523809525,
+   "mean_tokens": 2507.0857142857144
+  },
+  {
+   "condition": "C3",
+   "strategy": "membership",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.2857142857142857,
+   "coverage": 0.5923809523809525,
+   "mean_tokens": 2536.4285714285716
+  },
+  {
+   "condition": "C3",
+   "strategy": "graph",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.22857142857142856,
+   "coverage": 0.3647619047619048,
+   "mean_tokens": 1221.6
+  },
+  {
+   "condition": "C3",
+   "strategy": "graph",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.45714285714285713,
+   "coverage": 0.7576190476190476,
+   "mean_tokens": 5340.742857142857
+  },
+  {
+   "condition": "C3",
+   "strategy": "graph",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.4857142857142857,
+   "coverage": 0.7633333333333333,
+   "mean_tokens": 9676.114285714286
+  },
+  {
+   "condition": "C4",
+   "strategy": "lexical",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.45714285714285713,
+   "coverage": 0.6266666666666667,
+   "mean_tokens": 1341.0857142857142
+  },
+  {
+   "condition": "C4",
+   "strategy": "lexical",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.7142857142857143,
+   "coverage": 0.8461904761904762,
+   "mean_tokens": 5107.428571428572
+  },
+  {
+   "condition": "C4",
+   "strategy": "lexical",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.8857142857142857,
+   "coverage": 0.9523809523809524,
+   "mean_tokens": 18063.542857142857
+  },
+  {
+   "condition": "C4",
+   "strategy": "oracle_all",
+   "budget": null,
+   "n": 35,
+   "sufficiency": 0.9714285714285714,
+   "coverage": 0.9952380952380953,
+   "mean_tokens": 23016.0
+  },
+  {
+   "condition": "C4",
+   "strategy": "membership",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.3142857142857143,
+   "coverage": 0.5352380952380953,
+   "mean_tokens": 1150.0857142857142
+  },
+  {
+   "condition": "C4",
+   "strategy": "membership",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.45714285714285713,
+   "coverage": 0.6876190476190476,
+   "mean_tokens": 2766.7714285714287
+  },
+  {
+   "condition": "C4",
+   "strategy": "membership",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.45714285714285713,
+   "coverage": 0.6876190476190476,
+   "mean_tokens": 2823.9142857142856
+  },
+  {
+   "condition": "C4",
+   "strategy": "graph",
+   "budget": 1500,
+   "n": 35,
+   "sufficiency": 0.2857142857142857,
+   "coverage": 0.36928571428571433,
+   "mean_tokens": 1229.4
+  },
+  {
+   "condition": "C4",
+   "strategy": "graph",
+   "budget": 6000,
+   "n": 35,
+   "sufficiency": 0.8,
+   "coverage": 0.928888888888889,
+   "mean_tokens": 5344.6
+  },
+  {
+   "condition": "C4",
+   "strategy": "graph",
+   "budget": 24000,
+   "n": 35,
+   "sufficiency": 0.9142857142857143,
+   "coverage": 0.9609523809523809,
+   "mean_tokens": 11683.028571428571
+  }
+ ],
+ "cs3": [
+  {
+   "validator": "none",
+   "n": 137,
+   "tp": 84,
+   "fp": 0,
+   "fn": 0,
+   "tn": 53,
+   "recall": 1.0,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 1.0,
+   "abstentions": 0,
+   "recall_interval": [
+    0.9562667346678565,
+    0.9999999999999999
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ],
+   "valid_abstentions": 0,
+   "faulty_accepted": 0
+  },
+  {
+   "validator": "behaviour",
+   "n": 137,
+   "tp": 75,
+   "fp": 0,
+   "fn": 9,
+   "tn": 53,
+   "recall": 0.8928571428571429,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 0.8928571428571429,
+   "abstentions": 37,
+   "recall_interval": [
+    0.8087519975771198,
+    0.9426004368047676
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ],
+   "valid_abstentions": 28,
+   "faulty_accepted": 0
+  },
+  {
+   "validator": "constraints",
+   "n": 137,
+   "tp": 81,
+   "fp": 0,
+   "fn": 3,
+   "tn": 53,
+   "recall": 0.9642857142857143,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 0.9642857142857143,
+   "abstentions": 20,
+   "recall_interval": [
+    0.900181415678933,
+    0.9877805522269338
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ],
+   "valid_abstentions": 17,
+   "faulty_accepted": 0
+  },
+  {
+   "validator": "provenance",
+   "n": 137,
+   "tp": 71,
+   "fp": 0,
+   "fn": 13,
+   "tn": 53,
+   "recall": 0.8452380952380952,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 0.8452380952380952,
+   "abstentions": 40,
+   "recall_interval": [
+    0.753011640086769,
+    0.9072677719457987
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ],
+   "valid_abstentions": 27,
+   "faulty_accepted": 0
+  },
+  {
+   "validator": "topology",
+   "n": 137,
+   "tp": 79,
+   "fp": 0,
+   "fn": 5,
+   "tn": 53,
+   "recall": 0.9404761904761905,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 0.9404761904761905,
+   "abstentions": 5,
+   "recall_interval": [
+    0.8681156389946401,
+    0.974309817736567
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ],
+   "valid_abstentions": 0,
+   "faulty_accepted": 0
+  },
+  {
+   "validator": "units",
+   "n": 137,
+   "tp": 51,
+   "fp": 0,
+   "fn": 33,
+   "tn": 53,
+   "recall": 0.6071428571428571,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 0.6071428571428571,
+   "abstentions": 60,
+   "recall_interval": [
+    0.5002161009140969,
+    0.7046981993718724
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ],
+   "valid_abstentions": 27,
+   "faulty_accepted": 0
+  }
+ ],
+ "cs4": [
+  {
+   "validator": "procedural_full",
+   "n": 137,
+   "tp": 84,
+   "fp": 0,
+   "fn": 0,
+   "tn": 53,
+   "recall": 1.0,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 1.0,
+   "abstentions": 0,
+   "recall_interval": [
+    0.9562667346678565,
+    0.9999999999999999
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ]
+  },
+  {
+   "validator": "shacl_full",
+   "n": 137,
+   "tp": 84,
+   "fp": 0,
+   "fn": 0,
+   "tn": 53,
+   "recall": 1.0,
+   "false_positive_rate": 0.0,
+   "diagnosis_rate": 1.0,
+   "abstentions": 0,
+   "recall_interval": [
+    0.9562667346678565,
+    0.9999999999999999
+   ],
+   "false_positive_interval": [
+    0.0,
+    0.06758430445307662
+   ]
+  }
+ ],
+ "cs4_disagreements": [],
+ "cs5_synthetic": {
+  "input": "synthetic reference plant (one authored specification; circular)",
+  "assets": 17,
+  "signals": 73,
+  "reference_facts": 726,
+  "serialisations": {
+   "opcua_nodeset2_xml": {
+    "bytes": 115261,
+    "surrogate_tokens": 52324
+   },
+   "aas_v3_json": {
+    "bytes": 187838,
+    "surrogate_tokens": 70871
+   }
+  },
+  "coverage": {
+   "opcua": {
+    "identity": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "semantic_id": {
+     "reference": 46,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 46
+    },
+    "nameplate": {
+     "reference": 11,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 11
+    },
+    "datatype": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "access": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "range": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "unit": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "quantity_kind": {
+     "reference": 73,
+     "correct": 53,
+     "conflict": 20,
+     "missing": 0
+    },
+    "membership": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "parent": {
+     "reference": 16,
+     "correct": 16,
+     "conflict": 0,
+     "missing": 0
+    },
+    "feeds": {
+     "reference": 14,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 14
+    },
+    "state": {
+     "reference": 9,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 9
+    },
+    "legal_commands": {
+     "reference": 9,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 9
+    },
+    "interlock": {
+     "reference": 4,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 4
+    },
+    "value": {
+     "reference": 53,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 53
+    },
+    "observation_time": {
+     "reference": 53,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 53
+    }
+   },
+   "aas": {
+    "identity": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "semantic_id": {
+     "reference": 46,
+     "correct": 46,
+     "conflict": 0,
+     "missing": 0
+    },
+    "nameplate": {
+     "reference": 11,
+     "correct": 11,
+     "conflict": 0,
+     "missing": 0
+    },
+    "datatype": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "access": {
+     "reference": 73,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 73
+    },
+    "range": {
+     "reference": 73,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 73
+    },
+    "unit": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "quantity_kind": {
+     "reference": 73,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 73
+    },
+    "membership": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "parent": {
+     "reference": 16,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 16
+    },
+    "feeds": {
+     "reference": 14,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 14
+    },
+    "state": {
+     "reference": 9,
+     "correct": 9,
+     "conflict": 0,
+     "missing": 0
+    },
+    "legal_commands": {
+     "reference": 9,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 9
+    },
+    "interlock": {
+     "reference": 4,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 4
+    },
+    "value": {
+     "reference": 53,
+     "correct": 53,
+     "conflict": 0,
+     "missing": 0
+    },
+    "observation_time": {
+     "reference": 53,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 53
+    }
+   },
+   "union": {
+    "identity": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "semantic_id": {
+     "reference": 46,
+     "correct": 46,
+     "conflict": 0,
+     "missing": 0
+    },
+    "nameplate": {
+     "reference": 11,
+     "correct": 11,
+     "conflict": 0,
+     "missing": 0
+    },
+    "datatype": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "access": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "range": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "unit": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "quantity_kind": {
+     "reference": 73,
+     "correct": 53,
+     "conflict": 20,
+     "missing": 0
+    },
+    "membership": {
+     "reference": 73,
+     "correct": 73,
+     "conflict": 0,
+     "missing": 0
+    },
+    "parent": {
+     "reference": 16,
+     "correct": 16,
+     "conflict": 0,
+     "missing": 0
+    },
+    "feeds": {
+     "reference": 14,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 14
+    },
+    "state": {
+     "reference": 9,
+     "correct": 9,
+     "conflict": 0,
+     "missing": 0
+    },
+    "legal_commands": {
+     "reference": 9,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 9
+    },
+    "interlock": {
+     "reference": 4,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 4
+    },
+    "value": {
+     "reference": 53,
+     "correct": 53,
+     "conflict": 0,
+     "missing": 0
+    },
+    "observation_time": {
+     "reference": 53,
+     "correct": 0,
+     "conflict": 0,
+     "missing": 53
+    }
+   }
+  }
+ },
+ "cs5_kuka": {
+  "input": "KUKA instance NodeSet (IIH-attributed) and AAS derived from it (retention only)",
+  "reference_facts": 676,
+  "coverage": {
+   "identity": {
+    "reference": 90,
+    "correct": 90,
+    "conflict": 0,
+    "missing": 0
+   },
+   "browse_name": {
+    "reference": 90,
+    "correct": 90,
+    "conflict": 0,
+    "missing": 0
+   },
+   "display_name": {
+    "reference": 90,
+    "correct": 90,
+    "conflict": 0,
+    "missing": 0
+   },
+   "reference": {
+    "reference": 277,
+    "correct": 277,
+    "conflict": 0,
+    "missing": 0
+   },
+   "datatype": {
+    "reference": 60,
+    "correct": 60,
+    "conflict": 0,
+    "missing": 0
+   },
+   "value": {
+    "reference": 52,
+    "correct": 52,
+    "conflict": 0,
+    "missing": 0
+   },
+   "description": {
+    "reference": 17,
+    "correct": 17,
+    "conflict": 0,
+    "missing": 0
+   }
+  },
+  "serialisations": {
+   "opcua_nodeset2_xml": {
+    "bytes": 59182,
+    "surrogate_tokens": 25338
+   },
+   "aas_v3_json": {
+    "bytes": 677281,
+    "surrogate_tokens": 228711
+   }
+  }
+ }
+}

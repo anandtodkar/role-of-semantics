@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/B5hJ52rTagT+0tuJjIDd6x46BJQ</id>
+  <title>arXiv Query: search_query=(all:neurosymbolic OR all:"neuro-symbolic" OR all:"function calling" OR all:"tool use") AND (all:"large language model" OR all:LLM) AND (all:industrial OR all:manufacturing OR all:automation)&amp;id_list=&amp;start=400&amp;max_results=100</title>
+  <updated>2026-10-20T20:14:55Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:neurosymbolic+OR+(all:%22neuro-symbolic%22+OR+(all:%22function+calling%22+OR+all:%22tool+use%22)))+AND+((all:%22large+language+model%22+OR+all:LLM)+AND+(all:industrial+OR+(all:manufacturing+OR+all:automation)))&amp;start=400&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>404</opensearch:totalResults>
+  <opensearch:startIndex>400</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2310.03560v3</id>
+    <title>Redefining Digital Health Interfaces with Large Language Models</title>
+    <updated>2024-02-29T18:37:40Z</updated>
+    <link href="https://arxiv.org/abs/2310.03560v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.03560v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Digital health tools have the potential to significantly improve the delivery of healthcare services. However, their adoption remains comparatively limited due, in part, to challenges surrounding usability and trust. Large Language Models (LLMs) have emerged as general-purpose models with the ability to process complex information and produce human-quality text, presenting a wealth of potential applications in healthcare. Directly applying LLMs in clinical settings is not straightforward, however, with LLMs susceptible to providing inconsistent or nonsensical answers. We demonstrate how LLM-based systems can utilize external tools and provide a novel interface between clinicians and digital technologies. This enhances the utility and practical impact of digital healthcare tools and AI models while addressing current issues with using LLMs in clinical settings such as hallucinations. We illustrate LLM-based interfaces with the example of cardiovascular disease risk prediction. We develop a new prognostic tool using automated machine learning and demonstrate how LLMs can provide a unique interface to both our model and existing risk scores, highlighting the benefit compared to traditional interfaces for digital tools.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-05T14:18:40Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Fergus Imrie</name>
+    </author>
+    <author>
+      <name>Paulius Rauba</name>
+    </author>
+    <author>
+      <name>Mihaela van der Schaar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2308.05487v3</id>
+    <title>A Quantitative and Qualitative Evaluation of LLM-Based Explainable Fault Localization</title>
+    <updated>2024-07-02T13:25:16Z</updated>
+    <link href="https://arxiv.org/abs/2308.05487v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2308.05487v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fault Localization (FL), in which a developer seeks to identify which part of the code is malfunctioning and needs to be fixed, is a recurring challenge in debugging. To reduce developer burden, many automated FL techniques have been proposed. However, prior work has noted that existing techniques fail to provide rationales for the suggested locations, hindering developer adoption of these techniques. With this in mind, we propose AutoFL, a Large Language Model (LLM)-based FL technique that generates an explanation of the bug along with a suggested fault location. AutoFL prompts an LLM to use function calls to navigate a repository, so that it can effectively localize faults over a large software repository and overcome the limit of the LLM context length. Extensive experiments on 798 real-world bugs in Java and Python reveal AutoFL improves method-level acc@1 by up to 233.3% over baselines. Furthermore, developers were interviewed on their impression of AutoFL-generated explanations, showing that developers generally liked the natural language explanations of AutoFL, and that they preferred reading a few, high-quality explanations instead of many.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-08-10T10:26:55Z</published>
+    <arxiv:comment>Accepted to ACM International Conference on the Foundations of Software Engineering (FSE 2024)</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Sungmin Kang</name>
+    </author>
+    <author>
+      <name>Gabin An</name>
+    </author>
+    <author>
+      <name>Shin Yoo</name>
+    </author>
+    <arxiv:doi>10.1145/3660771</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1145/3660771" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.13304v1</id>
+    <title>ToolQA: A Dataset for LLM Question Answering with External Tools</title>
+    <updated>2023-06-23T05:43:28Z</updated>
+    <link href="https://arxiv.org/abs/2306.13304v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.13304v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have demonstrated impressive performance in various NLP tasks, but they still suffer from challenges such as hallucination and weak numerical reasoning. To overcome these challenges, external tools can be used to enhance LLMs' question-answering abilities. However, current evaluation methods do not distinguish between questions that can be answered using LLMs' internal knowledge and those that require external information through tool use. To address this issue, we introduce a new dataset called ToolQA, which is designed to faithfully evaluate LLMs' ability to use external tools for question answering. Our development of ToolQA involved a scalable, automated process for dataset curation, along with 13 specialized tools designed for interaction with external knowledge in order to answer questions. Importantly, we strive to minimize the overlap between our benchmark data and LLMs' pre-training data, enabling a more precise evaluation of LLMs' tool-use reasoning abilities. We conducted an in-depth diagnosis of existing tool-use LLMs to highlight their strengths, weaknesses, and potential improvements. Our findings set a new benchmark for evaluating LLMs and suggest new directions for future advancements. Our data and code are freely available to the broader scientific community on GitHub.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-23T05:43:28Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Yuchen Zhuang</name>
+    </author>
+    <author>
+      <name>Yue Yu</name>
+    </author>
+    <author>
+      <name>Kuan Wang</name>
+    </author>
+    <author>
+      <name>Haotian Sun</name>
+    </author>
+    <author>
+      <name>Chao Zhang</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2306.02781v4</id>
+    <title>An Automated Survey of Generative Artificial Intelligence: Large Language Models, Architectures, Protocols, and Applications</title>
+    <updated>2026-04-09T12:47:33Z</updated>
+    <link href="https://arxiv.org/abs/2306.02781v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2306.02781v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Generative artificial intelligence, and large language models in particular, have emerged as one of the most transformative paradigms in modern computer science. This automated survey provides an accessible treatment of the field as of early 2026, with a strong focus on the leading model families, deployment protocols, and real-world applications. The core of the survey is devoted to a detailed comparative analysis of the frontier large language models, with particular emphasis on open-weight systems: DeepSeek-V3, DeepSeek-R1, DeepSeek-V3.2, and the forthcoming DeepSeek V4; the Qwen 3 and Qwen 3.5 series; GLM-5; Kimi K2.5; MiniMax M2.5; LLaMA 4; Mistral Large 3; Gemma 3; and Phi-4, alongside proprietary systems including GPT-5.4, Gemini 3.1 Pro, Grok 4.20, and Claude Opus 4.6. For each model, we describe the architectural innovations, training regimes, and empirical performance on current benchmarks and the Chatbot Arena leaderboard. The survey further covers deployment protocols including Retrieval-Augmented Generation, the Model Context Protocol, the Agent-to-Agent protocol, function calling standards, and serving frameworks. We present an extensive review of real-world applications across fifteen industry sectors, from financial services and legal technology to tourism and agriculture, supported by empirical evidence and case studies. This work has been generated by Claude Opus 4.6 (Anthropic) under the supervision and editorial review of the human authors, with the goal of producing updated editions approximately every six months.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-06-05T11:14:18Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Eduardo C. Garrido-Merchán</name>
+    </author>
+    <author>
+      <name>Álvaro López López</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,9 @@
+technology,criterion,score,citation_key,locator,rationale,verified_by
+OPC UA core and companions,U2,3,iec62541,,"AccessLevel, DataType and EURange are readable from the address space at run time",
+OPC UA core and companions,U3,2,iec62541,,"EUInformation carries a display string and a UN/CEFACT unit code but no dimension algebra",
+PackML,U5,3,isa88,,"Standardised state model with legal commands per state",
+PackML,U1,1,isa88,,"Standardises state names, not instance identifiers",
+SHACL,U6,3,knublauch2017shacl,,"Executable constraint language with validation reports",
+SHACL,U3,1,knublauch2017shacl,,"Can check a unit if the data graph supplies one; contributes no unit semantics",
+QUDT,U3,3,qudt,,"Quantity kinds, dimension vectors and conversion multipliers/offsets",
+QUDT,U5,0,qudt,,"No behavioural or operation semantics",

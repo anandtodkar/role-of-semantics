@@ -1,0 +1,11 @@
+\begin{tikzpicture}[node distance=3.2mm and 3mm, >=Stealth]
+\node[draw, rounded corners=1pt, align=center, font=\scriptsize, text width=3.6cm, minimum height=7mm] (id) {Records identified: 17197\\{\tiny arxiv 1186, crossref 9000, openalex 7011}};
+\node[draw, align=center, font=\scriptsize, text width=2.9cm, minimum height=7mm, right=of id] (dup) {Duplicates removed: 3797\\Ineligible by automation: 6373};
+\node[draw, rounded corners=1pt, align=center, font=\scriptsize, text width=3.6cm, minimum height=7mm, below=of id] (scr) {Records screened: 7027\\\textit{screening in progress}};
+\node[draw, align=center, font=\scriptsize, text width=2.9cm, minimum height=7mm, right=of scr] (tax) {Excluded (title/abstract): 0\\pending: 7027};
+\node[draw, rounded corners=1pt, align=center, font=\scriptsize, text width=3.6cm, minimum height=7mm, below=of scr] (ft) {Full texts sought: 0\\not retrieved: 0};
+\node[draw, align=center, font=\scriptsize, text width=2.9cm, minimum height=7mm, right=of ft] (ftx) {Excluded (full text): 0\\{\tiny --}};
+\node[draw, rounded corners=1pt, align=center, font=\scriptsize, text width=3.6cm, minimum height=7mm, below=of ft] (inc) {Included and AUF-coded: 0\\pending: 0};
+\draw[->] (id) -- (scr); \draw[->] (scr) -- (ft); \draw[->] (ft) -- (inc);
+\draw[->] (id) -- (dup); \draw[->] (scr) -- (tax); \draw[->] (ft) -- (ftx);
+\end{tikzpicture}

@@ -1,0 +1,40 @@
+\section{A Reference Synthesis}
+\label{sec:architecture}
+
+Fig.~\ref{fig:runtime} synthesises the surveyed patterns into a reference flow. It is
+derived from the capability analysis and the grounding categories, not a claim that every
+industrial agent must use RDF or SHACL: any representation that delivers the same evidence
+and checks satisfies it, including competent procedural code.
+
+\begin{figure*}[t]
+\centering
+\begin{tikzpicture}[font=\scriptsize, box/.style={draw,rounded corners=1pt,align=center,minimum height=9mm,text width=24mm},arr/.style={-{Stealth},thick}]
+\node[box] (src) at (0,0) {Engineering sources\\L0--L4 models, PLC data};
+\node[box] (ev) at (3.3,0) {Evidence layer\\U1--U7 facts, versions};
+\node[box] (q) at (6.6,0) {Retrieval and query\\U8 pushdown, U9 slices};
+\node[box] (ag) at (9.9,0) {Agent\\reasoning, plan};
+\node[box] (tp) at (13.2,0) {Typed proposal\\U2 schema, identifiers};
+\node[box] (val) at (13.2,-1.6) {Deterministic validation\\U3--U6: reject / abstain};
+\node[box] (gate) at (9.9,-1.6) {Dispatch gate\\U7 refresh, scope, approval};
+\node[box] (plc) at (6.6,-1.6) {Controller\\current guards, authority};
+\node[box] (proc) at (3.3,-1.6) {Physical process};
+\node[box] (aud) at (0,-1.6) {Audit trace\\proposal, verdicts, outcome};
+\draw[arr] (src)--(ev); \draw[arr] (ev)--(q); \draw[arr] (q)--(ag); \draw[arr] (ag)--(tp);
+\draw[arr] (tp)--(val); \draw[arr] (val)--(gate); \draw[arr] (gate)--(plc); \draw[arr] (plc)--(proc);
+\draw[arr] (proc)--(aud); \draw[arr] (aud)--(src);
+\draw[arr,dashed] (val.north west) -- node[below left=-1pt,font=\tiny]{bounded repair} (ag.south east);
+\end{tikzpicture}
+\caption{Reference synthesis of runtime grounding. Evidence and validation support the agent;
+dispatch and controller checks retain current-condition authority. No language model
+participates in a hard-real-time loop.}
+\label{fig:runtime}
+\end{figure*}
+
+Four properties follow from the analysis. (i) Validation distinguishes three dispositions:
+reject when a violation is proved, abstain when required evidence is missing, and accept
+only relative to the checked evidence contract. Absent evidence is not evidence of an
+illegal command. (ii) A proposal accepted at planning time is revalidated at dispatch,
+because state and observations change. (iii) Repair is bounded, names the violated rule,
+and never weakens a guard or widens authorisation to avoid refusal. (iv) The semantic model
+stays behind authenticated, parameterised query interfaces with versioned mappings rather
+than being placed in the prompt or exposed as unrestricted graph or PLC access.

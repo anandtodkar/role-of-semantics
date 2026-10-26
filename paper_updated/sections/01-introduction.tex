@@ -1,0 +1,54 @@
+\section{Introduction}
+\label{sec:intro}
+
+A request such as ``raise the fill volume on Line~1 to 330\,mL'' carries obligations that a
+fluent answer does not discharge. The agent must identify the filler and its writable
+setpoint rather than a similarly described measurement, interpret the unit, obtain current
+evidence, and respect the machine's operating state and process interlocks. These are
+supervisory decisions above the controller's deterministic loop; an agent's plausible
+response is not evidence that the proposed command is admissible.
+
+Industrial automation has standardised much of the required knowledge over three decades:
+\opcua{} information models \cite{iec62541}, the Asset Administration Shell (AAS)
+\cite{idta2023aas}, property dictionaries \cite{eclass,iec61360}, ISA-95 hierarchies
+\cite{iec62264}, PackML state machines \cite{isa88} and the Module Type Package
+\cite{vdi2658}. The semantic web contributes RDF, OWL, SHACL and SPARQL
+\cite{w3c2014rdf,w3c2012owl,knublauch2017shacl,w3c2013sparql}, together with QUDT units
+\cite{qudt} and SOSA/SSN observations \cite{haller2019ssn}. These technologies were designed
+for machine-to-machine interoperability. Whether they supply what a language agent needs at
+decision time, and in which combination, has not been analysed systematically.
+
+Existing reviews examine industrial language models, industrial knowledge graphs,
+semantic interoperability and individual standards largely independently, and evaluate
+technologies against interoperability criteria such as coverage, mapping effort and
+conformance. Grounding research, conversely, evaluates retrieval and tool use on
+open-domain data that has no units, interlocks or operational consequences
+\cite{lewis2020rag,edge2024graphrag,pan2024unifying,patil2024gorilla}. The gap is an
+analysis of the field from the perspective of the \emph{engineering evidence} an agent
+requires to ground observations and actions.
+
+The central question of this survey is therefore: \emph{what engineering information and
+semantic capabilities are required to ground trustworthy industrial AI agents, how well do
+existing industrial standards and semantic technologies provide them, and which gaps remain
+for deployment?} We contribute:
+\begin{enumerate}[label=\textbf{C\arabic*.},leftmargin=2.3em]
+  \item A reproducible review protocol with six research questions, five search families,
+  explicit eligibility, quality and coding rules, and released screening tooling
+  (Section~\ref{sec:method}).
+  \item The agent-usability framework (AUF): ten capabilities, each with a definition,
+  the agent failure it prevents, a scoring rubric and supporting sources, used as the
+  survey's coding instrument (Section~\ref{sec:auf}).
+  \item A cross-technology capability analysis of \AufTechnologies{} standards and
+  vocabularies organised in a five-layer engineering-semantics landscape
+  (Sections~\ref{sec:landscape}--\ref{sec:capabilities}).
+  \item A classification of industrial agent architectures by grounding source and
+  authority, coded with AUF (Section~\ref{sec:agents}), and a reference synthesis
+  derived from it (Section~\ref{sec:architecture}).
+  \item A controlled case study showing how capability omissions identified by AUF manifest
+  as grounding and validation failures, including a matched \opcua{}/AAS comparison
+  (Section~\ref{sec:case}), and a research agenda (Section~\ref{sec:challenges}).
+\end{enumerate}
+The novelty lies in the analysis perspective, not in any individual technology: we
+organise the field around the evidence contract that connects engineering information to
+agent failure modes, and map it simultaneously across standards, semantic technologies and
+agent architectures.

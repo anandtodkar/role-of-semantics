@@ -1,0 +1,49 @@
+\section{Open Challenges and Research Agenda}
+\label{sec:challenges}
+
+\paragraph{Semantic completeness.} Validation is only as complete as the modelled guards.
+Methods are needed to show that an interlock inventory matches the control logic, for
+example by extracting guards from PLC programs and cross-checking them with declared
+constraints.
+
+\paragraph{Semantic correctness.} A graph can conform to every shape and still be wrong.
+Unit consistency with process equations, declared topology versus P\&IDs, and the
+equivalence of constraint models and ladder logic are decidable checks that are not yet
+routine. An incorrect semantic layer is more dangerous than none because it is trusted.
+
+\paragraph{Runtime freshness and dispatch races.} Engineering semantics combined with stale
+observations remain unsafe. Agents need freshness contracts, revalidation at dispatch and
+measured behaviour under reconnects, subscription lag and state changes between planning
+and execution.
+
+\paragraph{Agent and controller authority.} The boundary between supervisory reasoning and
+deterministic control needs explicit design: which checks the gateway performs, which remain
+in the controller, and how rejections and acknowledgements are traced.
+
+\paragraph{Model evolution and transfer.} PLC programs, configurations and mappings change.
+How semantic constraints are versioned, migrated and transferred between machines, and at
+what engineering cost, is largely unmeasured; reuse and maintainability claims for
+declarative constraints require change-effort studies.
+
+\paragraph{Engineering cost and ownership.} Someone must author and maintain identity maps,
+unit bindings, state models and guards. Bootstrapping from existing artefacts (\opcua{}
+address spaces, AutomationML, DEXPI, PLC projects) with formal acceptance checks is a
+promising route.
+
+\paragraph{Benchmarks with actions and consequences.} Industrial grounding lacks shared
+benchmarks with real installations, independently authored tasks, labelled faulty and
+legal actions, severity-weighted scoring and physical outcomes; the synthetic corpus used
+here is a starting point, not a substitute.
+
+\paragraph{Safety assurance.} Semantic validation is not functional safety. Zero observed
+invalid actions in a test corpus establishes no safety integrity level; assurance cases
+must separate proposal quality, gateway rejection and controller protection.
+
+\paragraph{Authorisation and policy.} Agents need the analogue of operator competence and
+shift authorisation, joining policy languages and security frameworks
+\cite{w3c2018odrl,iec62443} to equipment models and plant states.
+
+\paragraph{Agent-ready standards.} Existing standards were designed for interoperability.
+Publishing constraints and legal-command models alongside information models, for instance
+as a versioned constraint submodel or companion specification, would close the largest gap
+identified by the capability analysis.

@@ -1,0 +1,400 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/xXMfwpSawKKyT66qoTuVp0MYqrM</id>
+  <title>arXiv Query: search_query=(all:"large language model" OR all:LLM) AND (all:safety OR all:provenance OR all:trustworthy) AND (all:"industrial automation" OR all:"process industry" OR all:"industrial control")&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-20T20:15:12Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22large+language+model%22+OR+all:LLM)+AND+((all:safety+OR+(all:provenance+OR+all:trustworthy))+AND+(all:%22industrial+automation%22+OR+(all:%22process+industry%22+OR+all:%22industrial+control%22)))&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>15</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.30674v1</id>
+    <title>SkillRefine: Cross-Source Skill Induction and Execution Validation for LLM Agents in Refinery Planning Software</title>
+    <updated>2026-09-25T01:29:20Z</updated>
+    <link href="https://arxiv.org/abs/2609.30674v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.30674v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Operating industrial planning software such as AspenTech PIMS (Process Industry Modeling System) requires an LLM agent to combine structural knowledge, procedural knowledge from expert records, and constraints revealed only during execution. These evidence sources are heterogeneous and individually incomplete: documentation describes tables and interfaces but omits task-level coordination, expert CASE records expose multi-table modification patterns without explicit schema grounding, and execution feedback reveals latent constraints only when a plan is executed. We present \textsc{SkillRefine}, a framework that exploits the Documentation--Practice Gap between documented structure and expert practice to extract candidate coordination patterns, ground them against table definitions and COM specifications, and compile them into progressively disclosed skill packages with provenance. The library is then refined through label-free compliance screening, oracle-based match decomposition over table, row, column, and value dimensions, and signal-conditioned trajectory attribution for localized repair. We evaluate \textsc{SkillRefine} on PIMS-Bench, a benchmark built from two AspenTech PIMS demonstration models, using disjoint construction and held-out test tasks. On the held-out test set, \textsc{SkillRefine} achieves absolute component match F1 gains of 14\%--30\% across four LLM backbones, with the largest gains on complex multi-table coordination tasks.</summary>
+    <category term="cs.CE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-25T01:29:20Z</published>
+    <arxiv:comment>8 pages, 4 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CE"/>
+    <author>
+      <name>Dongxiao Liu</name>
+    </author>
+    <author>
+      <name>Boren Zhu</name>
+    </author>
+    <author>
+      <name>Yuwen Ding</name>
+    </author>
+    <author>
+      <name>Linghui Li</name>
+    </author>
+    <author>
+      <name>Lei Li</name>
+    </author>
+    <author>
+      <name>Xiaoyong Li</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.27567v2</id>
+    <title>CCR: Towards a Common, Quality-Gated CACAO Integrations Registry for European Cybersecurity Automation</title>
+    <updated>2026-09-24T09:29:23Z</updated>
+    <link href="https://arxiv.org/abs/2609.27567v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.27567v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Standardised, machine-readable cybersecurity playbooks provide a basis for portable, shareable, and reusable incident-response logic. OASIS CACAO provides a vendor-neutral representation for such playbooks, but not the product-specific integration artefacts needed to invoke external products and services. We introduce the Common CACAO Registry (CCR), an open, provenance-aware registry of CACAO HTTP-API connector envelopes. Each envelope captures an API operation's command, inputs, target, authentication-related information, provenance, validation evidence, and maturity metadata. CCR is quality-gated, with acceptance requiring both CACAO v2 schema validity and a mean back-validation score of at least 0.8 against the source OpenAPI operation, while a six-level maturity model records progressively stronger evidence and distinguishes gate acceptance from operational readiness. To seed CCR, we develop a hybrid OpenAPI-to-CACAO pipeline. Deterministic code extracts source-derived interface facts, generates identifiers, wires cross-references, and validates structure, while a constrained LLM provides bounded semantic enrichment, including action naming, authentication interpretation, and CACAO activity annotation. Evaluation across eight security APIs yields 713 CACAO-schema-valid envelopes with a mean back-validation score of 91.5%, of which 675 produce well-formed, dispatchable HTTP requests in a local harness. Comparison with a deterministic rule-based baseline shows that mechanical API structure is preserved more reliably through rule-based translation, while the LLM contributes bounded semantic enrichment, most notably CACAO activity annotation. Together, these results support CCR as reusable integration infrastructure for CACAO action steps and as an initial foundation for a broader common European registry.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-23T08:49:24Z</published>
+    <arxiv:comment>20 pages. Accepted at the 12th Workshop on the Security of Industrial Control Systems &amp; of Cyber-Physical Systems (CyberICPS 2026), held in conjunction with ESORICS 2026. To appear in Springer LNCS</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Mateusz Zych</name>
+    </author>
+    <author>
+      <name>Vasileios Mavroeidis</name>
+    </author>
+    <author>
+      <name>Gudmund Grov</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.20761v1</id>
+    <title>Integrating Large Language Model Agents with Digital Twins for Industrial Autonomous Systems</title>
+    <updated>2026-06-18T09:48:44Z</updated>
+    <link href="https://arxiv.org/abs/2606.20761v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.20761v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industrial automation is being transformed by digitalization and the increasing use of cyber-physical systems. Modern production environments require greater adaptability, faster reconfiguration, and more intuitive human-machine interaction. However, traditional rule-based systems rely on fixed logic and cannot autonomously adapt to changing conditions. Consequently, current automation systems lack a systematic approach for integrating adaptive and generalizable reasoning capabilities for interpreting, planning, and executing user tasks across dynamic environments and heterogeneous components.
+  This dissertation proposes a three-layer framework that integrates large language models (LLMs), digital twins, and automation systems into an autonomous system. Autonomy is defined as a design property assigned to system components and enabled through LLM-based reasoning to achieve adaptive, goal-oriented behavior. The Task-Process-Service-Resource (TPSR) model is introduced to transform user tasks into executable processes. Four LLM roles are identified: process orchestration, service matching, digital resource generation, and agent-as-a-service. Five peer-reviewed studies develop and refine these concepts using the design science research methodology.
+  Case studies and prototypes demonstrate adaptive task planning, event-driven control, simulation-based parameterization, and digital model generation. Results show high task executability, command correctness, and content-generation accuracy while reducing manual effort. The framework enables the integration of LLM-based reasoning into industrial automation systems and improves adaptability and usability. Limitations include dependence on accurate digital representations, the computational demands of LLMs, and the need for human intervention in safety-critical situations.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-18T09:48:44Z</published>
+    <arxiv:comment>Doctoral Dissertation, University of Stuttgart. Doctoral Exam Video Recording: https://youtu.be/Mhd9LiV5TKE</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Yuchen Xia</name>
+    </author>
+    <arxiv:doi>10.18419/opus-18222</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.18419/opus-18222" title="doi"/>
+    <arxiv:doi>10.2370/9783819106552</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.2370/9783819106552" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.05499v1</id>
+    <title>STMutants: A Mutation Testing Dataset for Structured Text Programs in Industrial Automation</title>
+    <updated>2026-06-03T22:47:54Z</updated>
+    <link href="https://arxiv.org/abs/2606.05499v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.05499v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Mutation testing is widely used to evaluate test-suite effectiveness, yet IEC 61131-3 Structured Text (ST) programs still lack a publicly available benchmark that supports reproducible mutation-based research. This gap is especially important because ST is extensively used in Programmable Logic Controllers (PLCs) that operate in real-time, safety-critical industrial environments, where software faults may cause equipment damage, production loss, or unsafe system behavior. To address this need, we present STMutants, a curated mutation testing dataset for industrial automation software. STMutants contains 110 generated first-order mutants derived from 11 ST programs collected from the OSCAT basic library and industrially relevant sources, of which 108 are retained after observability and equivalence screening. The dataset covers seven mutation operator categories adapted from classical taxonomies for the PLC domain, including value, relational, arithmetic, logical, negation, operation insertion/omission, and initialization faults. Each mutant is constructed through a four-phase methodology: fault-type profiling and operator selection, syntactic transformation, compilability verification, and manual equivalence screening with strong inter-rater agreement (kappa = 0.87). To demonstrate the usefulness of the dataset, we evaluate three large language models (LLMs) in a two-phase setting: test-suite generation followed by mutation kill/survive prediction. Across 108 retained mutants, the models achieve mutation detection accuracies of 86.1%, 94.4%, and 86.1%, respectively, with statistical analysis confirming significant performance differences. By providing the first publicly available mutation benchmark for ST programs, STMutants enables reproducible research on automated test generation, mutation analysis, fault localization, and AI-assisted quality assurance for PLC software.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-03T22:47:54Z</published>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Md Humaun Kabir</name>
+    </author>
+    <author>
+      <name>Md Rakibul Islam</name>
+    </author>
+    <author>
+      <name>Helen H. Lou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.01691v1</id>
+    <title>IstGPT: LLM-based Anomaly Detection for Spatial-Temporal Graph in Industrial Systems</title>
+    <updated>2026-06-01T04:55:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.01691v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.01691v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industrial Internet systems face increasing threats from sophisticated industrial control system (ICS) attacks, resulting in critical safety incidents. However, existing tools exhibit limited effectiveness in real-time anomaly detection due to the complex dependencies among sensors and actuators. To tackle this, we present IstGPT, the first industrial anomaly detection tool based on LLMs and graph learning to provide real-time protection against a wide range of ICS attacks. IstGPT achieves fine-grained and precise modeling on spatial-temporal dependencies in industrial cyber-physical systems. It first leverages industrial multi-modal knowledge, including operational data, technical documents, and system diagrams, to extract sensor-actuator dependency graphs via multi-stage prompt engineering. Then, LLM-Optimation iteratively refines the graph based on node accuracy, edge consistency, and logical coherence. Finally, IstGPT integrated improved graph neural networks with an encoder-decoder architecture to detect anomalies via reconstruction errors. We evaluate IstGPT against 12 state-of-the-art baselines on 9 datasets, including 2 public, 6 simulated, and a real-world robotic arm dataset. IstGPT achieves the best F1-scores and eTaF1 (a newer time-aware metric) across nine datasets. We further discuss the feasibility of deploying IstGPT in real-world industrial scenarios.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-01T04:55:51Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Yuchen Zhang</name>
+    </author>
+    <author>
+      <name>Ning Xi</name>
+    </author>
+    <author>
+      <name>Pengbin Feng</name>
+    </author>
+    <author>
+      <name>Shigang Liu</name>
+    </author>
+    <author>
+      <name>Jianfeng Ma</name>
+    </author>
+    <author>
+      <name>Yulong Shen</name>
+    </author>
+    <author>
+      <name>Yanan Sun</name>
+    </author>
+    <author>
+      <name>Xiaolin Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.29262v1</id>
+    <title>Harmonizing Real-Time Constraints and Long-Horizon Reasoning: An Asynchronous Agentic Framework for Dynamic Scheduling</title>
+    <updated>2026-05-28T02:26:18Z</updated>
+    <link href="https://arxiv.org/abs/2605.29262v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.29262v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Dynamic Flexible Job Shop Scheduling Problem (DFJSP) necessitates a trade-off between instant reaction to stochastic disturbances and global optimization of production goals. Conventional priority rules are insufficiently flexible to handle complex disruptions, whereas learning-based approaches often compromise interpretability or fail to generalize across problem scales. Although Large Language Models (LLMs) offer advanced reasoning capabilities to bridge this gap, their substantial inference latency is incompatible with the millisecond-level decision cycles of industrial control systems. To resolve this conflict, we introduce RACE-Sched, an asynchronous agent-based framework that decouples policy execution from logical reasoning via a dual-stream architecture. The Reactive Stream executes low-latency symbolic heuristics to enable real-time dispatching, while the parallel Deliberative Stream leverages an LLM to synthesize, validate, and evolve these rules. Candidate rules undergo rigorous testing in a sandbox and are deployed via atomic updates, ensuring safety without blocking the control loop. Additionally, a semantic rule repository indexes validated heuristics for retrieval-based initialization which enhances transferability across problem scales. Extensive evaluations on GEN-Bench, MK-Bench, and JMS-Bench demonstrate that RACE-Sched outperforms leading Deep Reinforcement Learning and other LLM-based baselines. This approach harmonizes real-time constraints with long-horizon reasoning to achieve superior solution quality and robust adaptation to dynamic events.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-28T02:26:18Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Shijie Cao</name>
+    </author>
+    <author>
+      <name>Yuan Yuan</name>
+    </author>
+    <author>
+      <name>Jing Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.09481v1</id>
+    <title>TSNBench: Benchmarking LLM Proficiency in Time-Sensitive Networking</title>
+    <updated>2026-05-10T11:25:41Z</updated>
+    <link href="https://arxiv.org/abs/2605.09481v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.09481v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>We present TSNBench, the first benchmark for evaluating large language model (LLM) proficiency in Time-Sensitive Networking (TSN), a suite of IEEE 802.1 standards for deterministic communication with bounded latency in safety-critical domains such as autonomous vehicles, aviation, defense, and industrial automation. While LLMs have been extensively evaluated on general knowledge tasks, their capabilities in safety-critical networking domains remain largely unexplored. TSNBench comprises 939 expert-validated multiple-choice questions (MCQs) covering diverse TSN mechanisms, along with 100 open-ended Worst-Case Delay (WCD) computation tasks for Credit-Based Shaper (CBS) and Cyclic Queuing and Forwarding (CQF) across varying network topologies and traffic conditions. MCQ answers are validated by domain experts, and open-ended ground truth WCD values are computed using a verified Network Calculus (NC) solver for CBS and closed-form mathematical upper bounds for CQF. We evaluate 16 LLMs and find that although models achieve 67 to 95% accuracy on MCQs, they fail substantially on open-ended WCD computation. For CBS, only GPT-5 achieves a Mean Absolute Percentage Error (MAPE) of 36.2%, meaning its predicted WCD deviates by 36.2% of the actual TSN flow delay on average, while most models exceed 80%. For CQF, the best model achieves 41.8% MAPE, with most models clustering between 80% and 100%. Such errors are large relative to TSN latency budgets and can lead to violations of real-time constraints and unsafe configurations. TSNBench demonstrates that MCQ benchmarks may overestimate LLM capabilities in safety-critical networking domains.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-10T11:25:41Z</published>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Rubi Debnath</name>
+    </author>
+    <author>
+      <name>Daniel Bujosa Mateu</name>
+    </author>
+    <author>
+      <name>Luxi Zhao</name>
+    </author>
+    <author>
+      <name>Silviu S. Craciunas</name>
+    </author>
+    <author>
+      <name>Paul Pop</name>
+    </author>
+    <author>
+      <name>Sebastian Steinhorst</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.26079v1</id>
+    <title>Large Language Models as Explainable Cyberattack Detectors for Energy Industrial Control Systems</title>
+    <updated>2026-04-28T19:44:38Z</updated>
+    <link href="https://arxiv.org/abs/2604.26079v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.26079v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In modern energy systems, industrial control systems (ICS) and power-system SCADA require intrusion detection that is not only accurate but also auditable by operators. The ICS intrusion-detection landscape is currently dominated by established supervised detectors. In this paper, we study whether an off-the-shelf large language model (LLM) can serve as a complementary, human-in-the-loop layer for Modbus traffic. We cast this as a binary network-side normal/critical decision task on two public ICS Modbus datasets, collapsing attack periods and other safety-critical behaviors into a single critical class. Each Modbus communication instance is converted into a compact token string derived from discretized protocol fields, and a prompt-configured LLM produces a normal/critical alert together with a concise, token-grounded incident record for analyst review. Under matched event information and shared evaluation splits, the resulting LLM-based triage pipeline achieves high predictive performance on both benchmarks and is broadly comparable to strong supervised baselines, while requiring no task-specific weight updates. To assess the audit record, we apply intervention-based diagnostics, including sufficiency- and necessity-style tests, which provide evidence that the cited tokens are often decision-relevant to the model's own prediction. These records are intended as audit signals rather than full human-grounded explanations.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-28T19:44:38Z</published>
+    <arxiv:comment>Accepted to ACM EnergySP 2026, co-located with ACM e-Energy 2026. Author accepted manuscript. 8 pages, 4 figures, 2 tables</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Weiyi Kong</name>
+    </author>
+    <author>
+      <name>Ahmad Mohammad Saber</name>
+    </author>
+    <author>
+      <name>Amr Youssef</name>
+    </author>
+    <author>
+      <name>Deepa Kundur</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.24051v1</id>
+    <title>System-aware contextual digital twin for ICS anomaly diagnosis</title>
+    <updated>2026-04-27T05:17:44Z</updated>
+    <link href="https://arxiv.org/abs/2604.24051v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.24051v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industrial Control Systems (ICS) integrate computing, physical processes, and communication to operate critical infrastructures such as power grids, water treatment plants, and oil and gas facilities. As ICS become increasingly targeted by cyberattacks, timely and reliable anomaly diagnosis is essential for protecting operational safety. However, existing ICS anomaly detection approaches face practical limitations: supervised methods require extensive labeled attack data and suffer from class imbalance, while model-based detectors often lack the ability to provide deep insight into the root causes of anomalies, leading to elevated false alarms and making it difficult for operators to initiate a timely response. In this work, we propose a system-aware unsupervised framework for ICS anomaly diagnosis that combines lightweight online detection with contextual explanation. The system identifies deviations from observed normal behaviors without prior knowledge of system topology. To support actionable response, we further concatenate a contextual digital twin augmented with an Large Language Model (LLM) to enhance interpretability, which translates detection evidence into grounded diagnostic hypotheses and verification steps for operators. Experiments on public ICS benchmarks demonstrate that the proposed framework achieves real-time detection efficiency and provides consistent, interpretable anomaly diagnoses, enabling low-latency warning and practical deployment in complex industrial environments.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-27T05:17:44Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Eungyu Woo</name>
+    </author>
+    <author>
+      <name>Yooshin Kim</name>
+    </author>
+    <author>
+      <name>Wonje Heo</name>
+    </author>
+    <author>
+      <name>Donghoon Shin</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.06749v1</id>
+    <title>Robotic Foundation Models for Industrial Control: A Comprehensive Survey and Readiness Assessment Framework</title>
+    <updated>2026-03-06T11:23:00Z</updated>
+    <link href="https://arxiv.org/abs/2603.06749v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.06749v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Robotic foundation models (RFMs) are emerging as a promising route towards flexible, instruction- and demonstration-driven robot control, however, a critical investigation of their industrial applicability is still lacking. This survey gives an extensive overview over the RFM-landscape and analyses, driven by concrete implications, how industrial domains and use cases shape the requirements of RFMs, with particular focus on collaborative robot platforms, heterogeneous sensing and actuation, edge-computing constraints, and safety-critical operation. We synthesise industrial deployment perspectives into eleven interdependent implications and operationalise them into an assessment framework comprising a catalogue of 149 concrete criteria, spanning both model capabilities and ecosystem requirements. Using this framework, we evaluate 324 manipulation-capable RFMs via 48,276 criterion-level decisions obtained via a conservative LLM-assisted evaluation pipeline, validated against expert judgements. The results indicate that industrial maturity is limited and uneven: even the highest-rated models satisfy only a fraction of criteria and typically exhibit narrow implication-specific peaks rather than integrated coverage. We conclude that progress towards industry-grade RFMs depends less on isolated benchmark successes than on systematic incorporation of safety, real-time feasibility, robust perception, interaction, and cost-effective system integration into auditable deployment stacks.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-06T11:23:00Z</published>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>David Kube</name>
+    </author>
+    <author>
+      <name>Simon Hadwiger</name>
+    </author>
+    <author>
+      <name>Tobias Meisen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.11666v1</id>
+    <title>PhyNiKCE: A Neurosymbolic Agentic Framework for Autonomous Computational Fluid Dynamics</title>
+    <updated>2026-02-12T07:37:56Z</updated>
+    <link href="https://arxiv.org/abs/2602.11666v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.11666v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The deployment of autonomous agents for Computational Fluid Dynamics (CFD), is critically limited by the probabilistic nature of Large Language Models (LLMs), which struggle to enforce the strict conservation laws and numerical stability required for physics-based simulations. Reliance on purely semantic Retrieval Augmented Generation (RAG) often leads to "context poisoning," where agents generate linguistically plausible but physically invalid configurations due to a fundamental Semantic-Physical Disconnect. To bridge this gap, this work introduces PhyNiKCE (Physical and Numerical Knowledgeable Context Engineering), a neurosymbolic agentic framework for trustworthy engineering. Unlike standard black-box agents, PhyNiKCE decouples neural planning from symbolic validation. It employs a Symbolic Knowledge Engine that treats simulation setup as a Constraint Satisfaction Problem, rigidly enforcing physical constraints via a Deterministic RAG Engine with specialized retrieval strategies for solvers, turbulence models, and boundary conditions. Validated through rigorous OpenFOAM experiments on practical, non-tutorial CFD tasks using Gemini-2.5-Pro/Flash, PhyNiKCE demonstrates a 96% relative improvement over state-of-the-art baselines. Furthermore, by replacing trial-and-error with knowledge-driven initialization, the framework reduced autonomous self-correction loops by 59% while simultaneously lowering LLM token consumption by 17%. These results demonstrate that decoupling neural generation from symbolic constraint enforcement significantly enhances robustness and efficiency. While validated on CFD, this architecture offers a scalable, auditable paradigm for Trustworthy Artificial Intelligence in broader industrial automation.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-12T07:37:56Z</published>
+    <arxiv:comment>30 pages, 10 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>E Fan</name>
+    </author>
+    <author>
+      <name>Lisong Shi</name>
+    </author>
+    <author>
+      <name>Zhengtong Li</name>
+    </author>
+    <author>
+      <name>Chih-yung Wen</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.11840v2</id>
+    <title>Imandra CodeLogician: Neuro-Symbolic Reasoning for Precise Analysis of Software Logic</title>
+    <updated>2026-02-06T20:38:53Z</updated>
+    <link href="https://arxiv.org/abs/2601.11840v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.11840v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have shown strong performance on code understanding tasks, yet they fundamentally lack the ability to perform precise, exhaustive mathematical reasoning about program behavior. Existing benchmarks either focus on mathematical proof automation, largely disconnected from real-world software, or on engineering tasks that do not require semantic rigor.
+  We present CodeLogician, a neurosymbolic agent for precise analysis of software logic, integrated with ImandraX, an industrial automated reasoning engine deployed in financial markets and safety-critical systems. Unlike prior approaches that use formal methods primarily to validate LLM outputs, CodeLogician uses LLMs to construct explicit formal models of software systems, enabling automated reasoning to answer rich semantic questions beyond binary verification outcomes.
+  To rigorously evaluate mathematical reasoning about software logic, we introduce code-logic-bench, a benchmark targeting the middle ground between theorem proving and software engineering benchmarks. It measures reasoning correctness about program state spaces, control flow, coverage constraints, and edge cases, with ground truth defined via formal modeling and region decomposition.
+  Comparing LLM-only reasoning against LLMs augmented with CodeLogician, formal augmentation yields substantial improvements, closing a 41-47 percentage point gap in reasoning accuracy. These results demonstrate that neurosymbolic integration is essential for scaling program analysis toward rigorous, autonomous software understanding.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-17T00:16:41Z</published>
+    <arxiv:comment>52 pages, 23 figures. Includes a new benchmark dataset (code-logic-bench) and evaluation of neurosymbolic reasoning for software analysis</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Hongyu Lin</name>
+    </author>
+    <author>
+      <name>Samer Abdallah</name>
+    </author>
+    <author>
+      <name>Makar Valentinov</name>
+    </author>
+    <author>
+      <name>Paul Brennan</name>
+    </author>
+    <author>
+      <name>Elijah Kagan</name>
+    </author>
+    <author>
+      <name>Christoph M. Wintersteiger</name>
+    </author>
+    <author>
+      <name>Denis Ignatovich</name>
+    </author>
+    <author>
+      <name>Grant Passmore</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.21859v1</id>
+    <title>TimeBill: Time-Budgeted Inference for Large Language Models</title>
+    <updated>2025-12-26T04:49:35Z</updated>
+    <link href="https://arxiv.org/abs/2512.21859v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.21859v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) are increasingly deployed in time-critical systems, such as robotics, autonomous driving, embodied intelligence, and industrial automation, where generating accurate responses within a given time budget is crucial for decision-making, control, or safety-critical tasks. However, the auto-regressive generation process of LLMs makes it challenging to model and estimate the end-to-end execution time. Furthermore, existing efficient inference methods based on a fixed key-value (KV) cache eviction ratio struggle to adapt to varying tasks with diverse time budgets, where an improper eviction ratio may lead to incomplete inference or a drop in response performance. In this paper, we propose TimeBill, a novel time-budgeted inference framework for LLMs that balances the inference efficiency and response performance. To be more specific, we propose a fine-grained response length predictor (RLP) and an execution time estimator (ETE) to accurately predict the end-to-end execution time of LLMs. Following this, we develop a time-budgeted efficient inference approach that adaptively adjusts the KV cache eviction ratio based on execution time prediction and the given time budget. Finally, through extensive experiments, we demonstrate the advantages of TimeBill in improving task completion rate and maintaining response performance under various overrun strategies.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-26T04:49:35Z</published>
+    <arxiv:comment>Accepted to AAAI 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Qi Fan</name>
+    </author>
+    <author>
+      <name>An Zou</name>
+    </author>
+    <author>
+      <name>Yehan Ma</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.19667v3</id>
+    <title>Tripartite-GraphRAG via Plugin Ontologies</title>
+    <updated>2025-09-09T10:38:54Z</updated>
+    <link href="https://arxiv.org/abs/2504.19667v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.19667v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have shown remarkable capabilities across various domains, yet they struggle with knowledge-intensive tasks in areas that demand factual accuracy, e.g. industrial automation and healthcare. Key limitations include their tendency to hallucinate, lack of source traceability (provenance), and challenges in timely knowledge updates. Combining language models with knowledge graphs (GraphRAG) offers promising avenues for overcoming these deficits. However, a major challenge lies in creating such a knowledge graph in the first place. Here, we propose a novel approach that combines LLMs with a tripartite knowledge graph representation, which is constructed by connecting complex, domain-specific objects via a curated ontology of corresponding, domain-specific concepts to relevant sections within chunks of text through a concept-anchored pre-analysis of source documents starting from an initial lexical graph. Subsequently, we formulate LLM prompt creation as an unsupervised node classification problem allowing for the optimization of information density, coverage, and arrangement of LLM prompts at significantly reduced lengths. An initial experimental evaluation of our approach on a healthcare use case, involving multi-faceted analyses of patient anamneses given a set of medical concepts as well as a series of clinical guideline literature, indicates its potential to optimize information density, coverage, and arrangement of LLM prompts while significantly reducing their lengths, which, in turn, may lead to reduced costs as well as more consistent and reliable LLM outputs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-28T10:43:35Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Michael Banf</name>
+    </author>
+    <author>
+      <name>Johannes Kuhn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.14209v2</id>
+    <title>Agents4PLC: Automating Closed-loop PLC Code Generation and Verification in Industrial Control Systems using LLM-based Agents</title>
+    <updated>2024-12-25T02:54:02Z</updated>
+    <link href="https://arxiv.org/abs/2410.14209v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.14209v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In industrial control systems, the generation and verification of Programmable Logic Controller (PLC) code are critical for ensuring operational efficiency and safety. While Large Language Models (LLMs) have made strides in automated code generation, they often fall short in providing correctness guarantees and specialized support for PLC programming. To address these challenges, this paper introduces Agents4PLC, a novel framework that not only automates PLC code generation but also includes code-level verification through an LLM-based multi-agent system. We first establish a comprehensive benchmark for verifiable PLC code generation area, transitioning from natural language requirements to human-written-verified formal specifications and reference PLC code. We further enhance our `agents' specifically for industrial control systems by incorporating Retrieval-Augmented Generation (RAG), advanced prompt engineering techniques, and Chain-of-Thought strategies. Evaluation against the benchmark demonstrates that Agents4PLC significantly outperforms previous methods, achieving superior results across a series of increasingly rigorous metrics. This research not only addresses the critical challenges in PLC programming but also highlights the potential of our framework to generate verifiable code applicable to real-world industrial applications.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-18T06:51:13Z</published>
+    <arxiv:comment>12 pages (references included), 6 figures and 3 tables. New version updated with fixed site and github repo and along with some minor adjustements</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Zihan Liu</name>
+    </author>
+    <author>
+      <name>Ruinan Zeng</name>
+    </author>
+    <author>
+      <name>Dongxia Wang</name>
+    </author>
+    <author>
+      <name>Gengyun Peng</name>
+    </author>
+    <author>
+      <name>Jingyi Wang</name>
+    </author>
+    <author>
+      <name>Qiang Liu</name>
+    </author>
+    <author>
+      <name>Peiyu Liu</name>
+    </author>
+    <author>
+      <name>Wenhai Wang</name>
+    </author>
+  </entry>
+</feed>

@@ -1,0 +1,23 @@
+\section{Threats to Validity and Conclusion}
+\label{sec:conclusion}
+
+\paragraph{Threats to validity.} The search may miss grey literature and vendor work, and
+arXiv records are not peer reviewed; snowballing and labelling mitigate but do not remove
+this. AUF scores are first-rater codes based on default specifications until the second
+rater's agreement is reported, and optional extensions or deployed profiles can change
+judgements. The capability list was derived top-down and is tested for saturation against
+the coded corpus. The case study uses one authored plant whose tasks, faults and
+validators share a specification; its OPC~UA/AAS comparison measures emitted profiles from
+that specification. No physical trial or complete model evaluation is reported; the
+surrogate tokenizer does not measure billing tokens.
+
+\paragraph{Conclusion.} Industrial AI-agent reliability depends less on the choice of
+language model or semantic syntax than on whether the agent has access to explicit,
+current, machine-interpretable engineering evidence covering identity, quantities,
+relations, behaviour, constraints and provenance. Existing standards provide many of
+these capabilities, but they are fragmented across technologies and rarely exposed as a
+coherent runtime evidence contract. The case study shows the consequences: typing alone
+resolves targets but not admissibility, equally informed validators decide identically,
+and matched \opcua{} and AAS profiles are complementary yet jointly incomplete. Making
+industrial standards agent-ready, chiefly by publishing behaviour and constraints with
+provenance behind query interfaces, is the most consequential next step.

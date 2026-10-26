@@ -1,0 +1,126 @@
+{
+  "protocol_version": "1.0.0",
+  "run_utc": "2026-10-20T19:47:09+00:00",
+  "queries": [
+    {
+      "family": "F1_industrial_agents",
+      "source": "openalex",
+      "query": "(\"large language model\" OR LLM OR \"foundation model\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR PLC) AND agent",
+      "status": "failed",
+      "retrieved": 0,
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "family": "F1_industrial_agents",
+      "source": "arxiv",
+      "query": "(all:\"large language model\" OR all:LLM) AND (all:\"industrial automation\" OR all:manufacturing OR all:\"cyber-physical\" OR all:PLC) AND all:agent",
+      "status": "ok",
+      "retrieved": 157,
+      "reported_total": 157,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "e80ee404ef595eb2a3c621d4577bdedde085f1963300d05cc3a601518f29dfff"
+        },
+        {
+          "file": "page_001.xml",
+          "sha256": "ee2949143ab6601c1d8f2eb36845968e5787826573287048d99ef08b66af562c"
+        }
+      ]
+    },
+    {
+      "family": "F2_knowledge_graphs",
+      "source": "openalex",
+      "query": "(\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing) AND (\"large language model\" OR LLM)",
+      "status": "failed",
+      "retrieved": 0,
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "family": "F2_knowledge_graphs",
+      "source": "arxiv",
+      "query": "(all:\"knowledge graph\" OR all:ontology) AND (all:\"industrial automation\" OR all:manufacturing) AND (all:\"large language model\" OR all:LLM)",
+      "status": "ok",
+      "retrieved": 37,
+      "reported_total": 37,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "b98159399a9c38874725fed47fced6ddffd005302d9ed3d5f76a43d728d01029"
+        }
+      ]
+    },
+    {
+      "family": "F3_information_models",
+      "source": "openalex",
+      "query": "(\"OPC UA\" OR \"Asset Administration Shell\") AND (\"large language model\" OR LLM OR \"generative AI\" OR agent)",
+      "status": "failed",
+      "retrieved": 0,
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "family": "F3_information_models",
+      "source": "arxiv",
+      "query": "(all:\"OPC UA\" OR all:\"Asset Administration Shell\") AND (all:\"large language model\" OR all:LLM OR all:agent)",
+      "status": "ok",
+      "retrieved": 14,
+      "reported_total": 14,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "0e91ae7497ab621c75415864eb5b54ea50b5a120bcf9c9b87a875714bd6c4072"
+        }
+      ]
+    },
+    {
+      "family": "F4_runtime_validation",
+      "source": "openalex",
+      "query": "(\"large language model\" OR LLM) AND (validation OR guardrail OR constraint OR verification) AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR PLC)",
+      "status": "failed",
+      "retrieved": 0,
+      "error": "HTTP Error 401: Unauthorized"
+    },
+    {
+      "family": "F4_runtime_validation",
+      "source": "arxiv",
+      "query": "(all:\"large language model\" OR all:LLM) AND (all:validation OR all:guardrail OR all:verification) AND (all:\"industrial automation\" OR all:\"control system\" OR all:PLC)",
+      "status": "ok",
+      "retrieved": 59,
+      "reported_total": 59,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "0ef4251cfc55c3f6379e7b0f0b3335154ade8a5c93bfdbb251b91ef4414c1594"
+        }
+      ]
+    },
+    {
+      "family": "F5_semantic_grounding",
+      "source": "openalex",
+      "query": "(\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\") AND (\"large language model\" OR LLM OR agent) AND (industrial OR manufacturing)",
+      "status": "ok",
+      "retrieved": 53,
+      "reported_total": 53,
+      "pages": [
+        {
+          "file": "page_000.json",
+          "sha256": "baae0ff5cd44c95e64362800765b0f222b66fcefc4e3a51ba5f724f8da0f16d3"
+        }
+      ]
+    },
+    {
+      "family": "F5_semantic_grounding",
+      "source": "arxiv",
+      "query": "(all:\"semantic grounding\" OR all:\"semantic interoperability\") AND (all:\"large language model\" OR all:LLM OR all:agent) AND (all:industrial OR all:manufacturing)",
+      "status": "ok",
+      "retrieved": 9,
+      "reported_total": 9,
+      "pages": [
+        {
+          "file": "page_000.xml",
+          "sha256": "7eba7f8e551ecd4c3d4c336d335d3717ed9edd9c99940fc0c5aad449d1ebecdd"
+        }
+      ]
+    }
+  ]
+}

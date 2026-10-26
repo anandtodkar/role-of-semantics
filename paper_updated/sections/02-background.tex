@@ -1,0 +1,36 @@
+\section{Background and Related Surveys}
+\label{sec:background}
+
+\paragraph{Industrial agents.} We use \emph{industrial AI agent} for a system in which a
+language model interprets an operator or system goal, retrieves plant information, and
+produces answers or typed tool calls that may affect equipment. Tool use and reasoning
+loops \cite{schick2023toolformer,yao2023react} and function-calling benchmarks
+\cite{patil2024gorilla} established the general pattern; protocols such as MCP \cite{mcp}
+standardise tool transport, not equipment truth.
+
+\paragraph{Engineering semantics.} By \emph{engineering semantics} we mean
+machine-interpretable statements about plant identity, types, units, structure,
+behaviour, constraints and provenance, as carried by information models, property
+dictionaries, ontologies and constraint languages. \emph{Grounding} is the resolution of an
+utterance or proposal to such statements; \emph{validation} checks a proposal against
+them before dispatch.
+
+\paragraph{Knowledge-graph grounding.} Retrieval-augmented generation conditions output on
+retrieved evidence \cite{lewis2020rag}; graph-based and hybrid variants retrieve structured
+neighbourhoods \cite{edge2024graphrag,sarmah2024hybridrag}, and knowledge-graph/LLM
+integration has been surveyed \cite{pan2024unifying}. These works mostly extract graphs from
+text. Industrial evidence such as units, ranges, access rights, state machines and
+interlocks is rarely written in text and must come from engineering systems. Our earlier
+IIH Semantics framework \cite{todkar2025semanticitot} integrates \opcua{} aggregation,
+RDF/SPARQL and a generated GraphQL schema on Industrial Edge; this survey generalises the
+question beyond one architecture.
+
+\paragraph{Related surveys.} Reviews of semantic interoperability evaluate standards for
+machine-to-machine exchange, and reviews of LLMs in manufacturing evaluate applications or
+models. Table~\ref{tab:related-surveys} positions this survey against reviews identified
+by the protocol of Section~\ref{sec:method}; rows are added only after full-text
+verification (\RelatedSurveysVerified{} verified at the time of writing). The
+distinguishing combination is an agent-oriented capability framework applied jointly to
+standards, semantic technologies and agent architectures with a systematic method.
+
+\input{tables/related_surveys}

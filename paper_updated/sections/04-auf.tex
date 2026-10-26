@@ -1,0 +1,48 @@
+\section{The Agent-Usability Framework}
+\label{sec:auf}
+
+An industrial agent receives a goal, resolves it against a plant it has not seen, decides
+which evidence it needs, and proposes an answer or action that must be checkable before
+dispatch. AUF asks what each source of engineering semantics contributes to that cycle.
+The ten capabilities were derived by tracing the minimum evidence obligations of a
+bounded supervisory cycle (resolve, interpret, locate, decide, check, trust, retrieve)
+and the two cross-cutting feasibility conditions of a deployment (context budget and
+ecosystem). Table~\ref{tab:rubric} states for each capability the operational requirement,
+the agent failure it prevents, the scoring anchors and representative sources. The
+derivation is tested against the coded literature as a saturation check: any recurring
+requirement that cannot be mapped to U1--U10 is reported as a framework gap.
+
+\begin{table*}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\caption{AUF capabilities: requirement, failure mode prevented and rubric anchors (0 absent;
+1 incidental; 2 supported; 3 first class). Scores reflect what a specification
+standardises by default, not optional extensions.}
+\label{tab:rubric}
+\begin{tabular}{@{}L{1.9cm}L{3.2cm}L{3.0cm}L{2.6cm}L{4.4cm}L{1.6cm}@{}}
+\toprule
+Capability & Requirement & Failure prevented & 1 incidental & 3 first class & Sources \\
+\midrule
+U1 Identity & resolve phrase to the right concept and instance & wrong equipment; homograph conflation & identifiers unique per vendor or file & globally unique, versioned, resolvable, synonym handling & \cite{iso29002,eclass,iec61360} \\
+U2 Types and access & know datatypes, ranges, access rights & malformed call; write to read-only point & datatype only & datatypes, ranges, access rights, enumerations, run-time introspection & \cite{iec62541,patil2024gorilla} \\
+U3 Quantities & bind values to quantity kind and unit & dimension or scale error & unit as display string & quantity kind, dimension vector, affine conversion & \cite{qudt} \\
+U4 Relations & containment, topology, typed relations & wrong scope; missed impact & containment only & typed relations with transitivity and inverses & \cite{iec62264,balaji2016brick} \\
+U5 Behaviour & operations, state machines, legal commands & command illegal in current state & operations named, untyped & typed operations plus state model with legality conditions & \cite{isa88,vdi2658} \\
+U6 Constraints & checkable guards and envelopes & unsafe or out-of-envelope proposal & range or type checks & executable constraint language with reports & \cite{knublauch2017shacl,w3c2018odrl} \\
+U7 Provenance and time & timestamped, attributed evidence & stale or untraceable evidence & one global timestamp & per-value time, source, agent and derivation & \cite{w3c2013prov,haller2019ssn} \\
+U8 Query pushdown & filter, join, aggregate outside the model & context stuffing; unanswerable aggregates & filtered fetch & query language with joins, aggregation, path traversal & \cite{w3c2013sparql,edge2024graphrag} \\
+U9 Context economy & faithful minimal evidence slice & budget exhaustion before evidence & verbose, partial fetch & compact and projectable to a minimal faithful slice & \cite{lewis2020rag,sarmah2024hybridrag} \\
+U10 Ecosystem & implementations, converters, governance & deployment never happens & one implementation & open implementations, converters, reference data, active governance & \cite{idta2023aas,mcp} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Three design rules make AUF a repeatable instrument rather than an opinion table. First,
+capabilities are scored separately, because strength in one does not compensate for
+another: a \texttt{Double} in bar and a \texttt{Double} in psi have the same type, and a
+complete address space need not state the order in which commands are legal. Second,
+technologies are scored on their default specification, since that is what an agent
+receives unless a deployment publishes more; deployment profiles are scored separately
+when agent systems are coded. Third, U1--U8 are evidence obligations whereas U9--U10 are
+feasibility conditions; AUF does not cover model training, cybersecurity or human
+factors, and it does not prescribe a serialisation.

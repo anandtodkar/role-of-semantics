@@ -1,0 +1,25 @@
+layer,technology,citation_keys,U1,U2,U3,U4,U5,U6,U7,U8,U9,U10,rater,scored
+L0,ECLASS / IEC CDD / IEC 61987,eclass;iec61360;iec61987;iso29002,3,2,2,1,0,1,0,1,2,3,R1,2026-07
+L0,GS1 identifiers / EPCIS,,3,1,0,1,1,0,2,1,2,3,R1,2026-07
+L1,OPC UA core and companions,iec62541,3,3,2,2,3,1,2,1,1,3,R1,2026-07
+L1,Asset Administration Shell,idta2023aas;idta2023nameplate,3,3,2,2,2,1,2,1,1,3,R1,2026-07
+L1,AutomationML,iec62714,2,3,1,3,1,1,1,0,1,2,R1,2026-07
+L1,MTP,vdi2658,2,3,2,2,3,2,1,0,2,2,R1,2026-07
+L1,PackML,isa88,1,2,0,0,3,2,0,0,3,3,R1,2026-07
+L1,ISA-95 / IEC 62264,iec62264,2,2,1,3,1,0,1,0,2,3,R1,2026-07
+L1,W3C WoT TD 1.1,w3c2023wot,3,3,2,1,3,1,1,1,2,2,R1,2026-07
+L1,NGSI-LD,etsi2023ngsild,3,2,2,3,1,1,3,2,2,2,R1,2026-07
+L1,IEC 61850,iec61850,3,3,2,2,2,1,2,0,1,3,R1,2026-07
+L2,RDF / RDFS,w3c2014rdf,3,2,0,3,0,0,1,3,1,3,R1,2026-07
+L2,OWL 2,w3c2012owl,3,3,0,3,0,2,0,2,1,3,R1,2026-07
+L2,SHACL,knublauch2017shacl,2,3,1,2,1,3,1,2,2,3,R1,2026-07
+L2,SPARQL 1.1,w3c2013sparql,2,1,0,3,0,1,1,3,3,3,R1,2026-07
+L2,PROV-O,w3c2013prov,3,2,0,3,1,0,3,2,2,2,R1,2026-07
+L3,QUDT,qudt,3,2,3,1,0,2,0,2,2,2,R1,2026-07
+L3,SOSA / SSN,haller2019ssn,3,2,1,2,1,0,3,2,2,3,R1,2026-07
+L3,Brick,balaji2016brick,3,3,1,3,0,1,0,3,2,3,R1,2026-07
+L3,SAREF and extensions,etsi2020saref,3,2,2,2,2,0,1,2,2,2,R1,2026-07
+L3,DEXPI,dexpi,2,3,2,3,0,1,1,1,1,2,R1,2026-07
+L4,IDS-RAM / Dataspace Protocol,idsa2022ram,3,2,0,2,1,2,3,1,1,2,R1,2026-07
+L4,Catena-X / Manufacturing-X,catenax,3,3,1,2,1,2,3,1,1,2,R1,2026-07
+L4,ODRL,w3c2018odrl,2,2,0,2,2,3,2,1,2,2,R1,2026-07

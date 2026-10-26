@@ -1,0 +1,64 @@
+\section{State of the Art in Industrial Agent Grounding}
+\label{sec:agents}
+
+Published industrial agents differ less in the language model they use than in where their
+engineering evidence comes from and who holds authority over actions. We therefore classify
+systems into five grounding categories (Fig.~\ref{fig:categories}) and code each included
+system with AUF on what it actually uses at runtime (Table~\ref{tab:agent-systems}).
+
+\begin{figure}[t]
+\centering\footnotesize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{@{}cl@{}}
+\toprule
+& Pipeline \\
+\midrule
+A & LLM $\rightarrow$ documents, manuals $\rightarrow$ recommendation \\
+B & LLM $\rightarrow$ typed tools $\rightarrow$ industrial API \\
+C & LLM $\rightarrow$ knowledge-graph retrieval $\rightarrow$ engineering context \\
+D & LLM $\rightarrow$ proposal $\rightarrow$ engineering validation $\rightarrow$ execution \\
+E & LLM $\rightarrow$ validation $\rightarrow$ dispatch gate $\rightarrow$ controller checks $\rightarrow$ process \\
+\bottomrule
+\end{tabular}
+\caption{Grounding categories used to code industrial agent systems. Categories are cumulative
+in authority, not in capability: a C system may lack typed tools.}
+\label{fig:categories}
+\end{figure}
+
+\paragraph{A: Document-grounded.} Retrieval over manuals, procedures and logs
+\cite{lewis2020rag} grounds explanations and troubleshooting. Identity (U1) and units (U3)
+remain implicit in text, so answers can be fluent yet unverifiable, and actions have no
+checkable target.
+
+\paragraph{B: Typed-tool grounded.} The model calls declared functions on \opcua{}, AAS or
+vendor APIs \cite{schick2023toolformer,yao2023react,patil2024gorilla,mcp}. Schemas provide
+types and access (U2) and can constrain identifiers, but units, state legality and guards
+are only as explicit as the exposed interface; tool transport does not establish equipment
+truth.
+
+\paragraph{C: Knowledge-graph grounded.} Retrieval over engineering graphs supplies identity,
+relations and query pushdown (U1, U4, U8) \cite{edge2024graphrag,sarmah2024hybridrag,pan2024unifying,todkar2025semanticitot}.
+Graphs built from engineering systems carry facts that text-derived graphs cannot, but
+retrieval quality and the completeness of the mapped constraints become new dependencies.
+
+\paragraph{D: Semantically validated.} Proposals are lifted into a checkable form and
+validated against constraints and state models (U5, U6) before execution
+\cite{knublauch2017shacl}. Validation converts a claim into a proposition with a truth
+value, but only relative to the constraints that were modelled.
+
+\paragraph{E: Controller-authoritative.} Validation is repeated at dispatch with fresh
+evidence (U7), and the controller retains independent, current-state checks and final
+actuator authority. This category separates supervisory reasoning from deterministic
+control and is the only one compatible with functional-safety practice; it is also the
+least reported with physical evaluation.
+
+\input{tables/agent_systems}
+
+The coding records, per system, which AUF capabilities are explicit or runtime-checked,
+whether validation and controller authority exist, and the evaluation level. The
+analysis questions are fixed in advance: which capabilities are most often absent (RQ4),
+which category combinations co-occur with runtime validation (RQ5), and which studies
+report measured effects of engineering semantics on grounding, action correctness or
+context cost rather than demonstrations (RQ6). The number of coded systems
+(\AgentSystemsCoded{} at the time of writing) and their distribution over categories
+are regenerated from the released coding sheet.

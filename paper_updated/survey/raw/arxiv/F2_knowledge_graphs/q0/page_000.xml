@@ -1,0 +1,972 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/JxHyLj2rj3QtzInFrvEWC1NNTXg</id>
+  <title>arXiv Query: search_query=(all:"knowledge graph" OR all:ontology) AND (all:"industrial automation" OR all:manufacturing) AND (all:"large language model" OR all:LLM)&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-20T19:47:22Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22knowledge+graph%22+OR+all:ontology)+AND+((all:%22industrial+automation%22+OR+all:manufacturing)+AND+(all:%22large+language+model%22+OR+all:LLM))&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>37</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2609.11493v2</id>
+    <title>From Document Silos to Process Intelligence: A Multi-Layer Knowledge Graph for CMC Process Development</title>
+    <updated>2026-09-23T11:43:46Z</updated>
+    <link href="https://arxiv.org/abs/2609.11493v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.11493v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Chemistry, Manufacturing and Controls (CMC) process development generates an enormous body of technical information across a multi-stage, knowledge-intensive continuum from drug discovery to commercial manufacturing. This knowledge is traditionally fragmented across functions and heterogeneous formats, causing traceability gaps and significant knowledge-management costs during technology transfer and regulatory filing. We present a modular agentic-AI platform that converts a heterogeneous corpus of process-development documents into a queryable, dual-layer knowledge graph. A base knowledge layer builds a lexical graph with a Document-Section-Chunk hierarchy through lossless ingestion of digital, scanned, handwritten, and multilingual documents, while an intelligence layer extracts ontology-aligned entities and bridges cross-document concepts through a provenance-anchored domain graph. LLM agents operate across both layers, selecting the retrieval path best suited to each question. We evaluate the lexical layer with a novel three-tier protocol measuring the deployment-fidelity of a retrieval-augmented generation (RAG) system on proprietary data, demonstrated on 505 questions curated from 38 development reports of a Sanofi small-molecule program. Tier-1 multiple-choice accuracy of 95% signals strong platform reliability; the stricter Tier-2 LLM-judge pass rate of 85%, which degrades on comparative and corpus-wide questions, reveals a failure taxonomy that Tier-1 accuracy alone fails to capture. A router agent selects between layers according to question type. We anticipate this protocol will enable future designers of agentic platforms to assess their systems against nonpublic databases, and that graph-based architectures will see broader adoption in pharma as a means of transforming fragmented document repositories into structured process intelligence.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-10T12:59:04Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Reza Amirmoshiri</name>
+    </author>
+    <author>
+      <name>Faryad Sahneh</name>
+    </author>
+    <author>
+      <name>Yasser Jangjou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.10237v1</id>
+    <title>The Answer Path and the Grounding Instruction in LLM Question Answering over Knowledge Graphs</title>
+    <updated>2026-09-09T14:31:11Z</updated>
+    <link href="https://arxiv.org/abs/2609.10237v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.10237v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>A graph retrieval-augmented generation pipeline chooses which triples to put in the prompt, a syntax to write them in, an order to write them in, and a sentence telling the model what to do with them. We vary all four over six large language models and two knowledge-graph question answering benchmarks. Two of the four choices move the answer and the other two are flat. The first is whether the answer path, the triples needed to reach the answer, is in the prompt at all. Holding the number of triples fixed and replacing every triple that is not on the chain with material from an unrelated entity changes answer accuracy by +0.003 F1, while removing the chain costs most of what the graph was worth. Retrieval budget belongs on recall, and precision in the range we can test buys nothing. There is no retriever here: subgraphs come from gold SPARQL, so precision describes the context we build, not a system setting. The second is the grounding instruction. With no facts in the prompt, telling a model to answer using only the provided facts drops F1 from 0.299 to 0.035, a factor of 8.63. That figure describes an evaluation with an empty context arm rather than a working pipeline, and an experiment that applies the instruction to its context arm but not to its no-context baseline manufactures a spurious finding that graph context hurts at depth. We found one in our own results and retract it. Syntax, triple order and subgraph size produce no effect we can measure at multi-hop depth. The comparison that would price the grounding instruction against correct context is not measurable with a format-sensitive scorer, because the instruction determines the response format; we report it as an open contrast rather than a number.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-09T14:31:11Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Arquimedes Canedo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2609.00604v2</id>
+    <title>NeuroGraph: An AI Graph-Driven Neuro-Symbolic Framework for Explainable Threat Reasoning in Advanced Manufacturing</title>
+    <updated>2026-09-08T01:45:58Z</updated>
+    <link href="https://arxiv.org/abs/2609.00604v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2609.00604v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The growing complexity of cyber-physical attack surfaces in advanced manufacturing has made cyber threat intelligence analysis increasingly difficult. Although large language models and retrieval-augmented generation have improved CTI workflows, text-based approaches remain vulnerable to hallucinations and provide limited support for structured reasoning over interconnected threats. Graph-based RAG reduces some of these limitations, but existing approaches often lack ontology-consistent multi-hop reasoning and transparent evidence tracing across heterogeneous cybersecurity data. This paper proposes a graph-grounded neuro-symbolic framework that integrates ontology-aware symbolic query generation, knowledge graph retrieval, and neural language generation to support accurate and explainable threat analysis across information technology and operational technology environments. The framework adopts a dual-large language model architecture: the first model translates natural-language questions into executable Cypher queries for symbolic graph retrieval, while the second generates answers strictly from the retrieved graph evidence. Experimental evaluation using publicly available cyber threat intelligence benchmarks shows consistent improvements over the published baseline in reasoning accuracy, while also reducing hallucinations, strengthening multi-hop reasoning, and improving robustness to adversarial perturbations. Runtime and explainability analyses further demonstrate that the framework maintains interactive inference performance and exposes graph-grounded reasoning artifacts that allow analysts to inspect and verify each stage of the analysis. Overall, the results highlight the potential of graph-grounded neuro-symbolic reasoning as a scalable, interpretable, and reliable approach to cyber threat intelligence for next-generation Industry 5.0 environments.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-09-01T02:45:44Z</published>
+    <arxiv:comment>Submission to Springer:Journal of Information Security (Peer Review)</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Padmeswari Nandiya</name>
+    </author>
+    <author>
+      <name>Ahmad Mohsin</name>
+    </author>
+    <author>
+      <name>Ahmed Ibrahim</name>
+    </author>
+    <author>
+      <name>Iqbal H. Sarker</name>
+    </author>
+    <author>
+      <name>Helge Janicke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2608.24918v1</id>
+    <title>Semantic Graph Unification for Industrial Digital Threads: Bridging 11 Heterogeneous Manufacturing Systems Through Ontology-Driven Knowledge Graphs</title>
+    <updated>2026-08-11T19:15:07Z</updated>
+    <link href="https://arxiv.org/abs/2608.24918v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2608.24918v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Modern manufacturing enterprises operate heterogeneous systems -- ERP, MES, PLM, SCADA, QMS, SCM -- each with its own data model and API. The resulting silos prevent holistic analysis, delay root-cause investigation, and obstruct Industry 4.0 traceability. Point-to-point integration scales as O(n^2) and accumulates brittle dependencies. This paper presents an open framework for semantic graph unification of industrial digital threads. An ontology-driven RDF knowledge graph unifies data from 11 simulated sources across nine domains through a five-stage ETL pipeline with automated entity resolution spanning 97 owl:sameAs identity links. The ontology encompasses 78 RDFS classes, 108 object properties, and 243 data properties, drawing on ISA-95, OPC UA, eClass, the Asset Administration Shell, RAMI 4.0, and additional standards. An automated discovery engine applies nine strategy categories -- cross-station correlation, alarm coverage, ECN impact, CUSUM/EWMA drift detection -- to surface insights spanning system boundaries. The primary empirical result: blocking 24 cross-system tools reduces recall from 1.00 to 0.31 (F1 from 1.00 to 0.48), showing that 69% of discoverable signals require cross-system graph joins. Leave-one-out ablation confirms six of nine strategies contribute unique signals. Verification against a 65-signal manifest (16 positive, 49 null) yields F1 = 1.00 (95% Clopper-Pearson CI [0.79, 1.00]); as the manifest was author-constructed, this constitutes verification not independent validation. The graph is exposed to LLM agents via 287 Model Context Protocol tools as a SPARQL-native semantic layer. Five industry templates (aerospace, CPG, pharma, medical devices, turbine blades) demonstrate schema stability across manufacturing verticals.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-08-11T19:15:07Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Grama Chethan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.17637v1</id>
+    <title>Brick-DICL: Dynamic In-Context Learning for Automated Brick Schema Classification</title>
+    <updated>2026-06-16T07:46:51Z</updated>
+    <link href="https://arxiv.org/abs/2606.17637v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.17637v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building Management Systems (BMS) are essential for optimizing energy efficiency and operational performance in modern buildings. However, the lack of standardization across BMS points from different manufacturers creates significant barriers to integration and data utilization. While the Brick schema offers a standardized ontology for building systems, mapping BMS points to appropriate Brick classes presents three critical challenges: (i) the extensive number of Brick classes (936 in the latest version), (ii) limited domain-specific knowledge in large language models (LLMs), and (iii) substantial manual effort required for verification. To address these challenges, we propose Brick-DICL, a two-stage dynamic in-context learning framework for automated Brick schema classification. Brick-DICL consists of two primary components: metadata-RAG, which retrieves relevant examples to enhance LLMs' domain knowledge, and class-RAG, which narrows down potential Brick classes to address the large classification space. Additionally, we implement a multi-LLM filtering mechanism that compares predictions across multiple models, flagging low-confidence classifications for human review. As a result: (i) General: Brick-DICL is applicable to any building management system regardless of manufacturer or metadata format; (ii) Novel and Powerful: as the first dynamic in-context learning approach for Brick schema classification, Brick-DICL achieves significant classification accuracy improvements on building datasets, outperforming existing methods; (iii) Efficient: our multi-LLM filtering strategy reduces manual verification effort, enabling rapid digital building onboarding. Extensive experiments demonstrate Brick-DICL's effectiveness across diverse building datasets, accelerating the path toward standardized, interoperable building management systems.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-16T07:46:51Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yiyue Qian</name>
+    </author>
+    <author>
+      <name>Shinan Zhang</name>
+    </author>
+    <author>
+      <name>Huan Song</name>
+    </author>
+    <author>
+      <name>Negin Sokhandan</name>
+    </author>
+    <author>
+      <name>Hannah Marlowe</name>
+    </author>
+    <author>
+      <name>Diego Socolinsky</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.28364v1</id>
+    <title>LLM based Knowledge Graph Approach to Automating Medical Device Regulatory Compliance</title>
+    <updated>2026-06-14T14:39:28Z</updated>
+    <link href="https://arxiv.org/abs/2606.28364v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.28364v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Advanced medical devices increasingly rely on AI-driven frameworks to automate compliance processes, ensuring safety and efficacy while reducing regulatory burdens. In the United States, software-based medical devices, including those utilizing AI/ML models, are regulated by the FDA's Center for Devices and Radiological Health (CDRH) under the Code of Federal Regulations (CFR) Title 21. These regulations are extensive, cross-referenced documents that require significant human effort to parse, leading to high compliance costs for manufacturers. We propose a novel, semantically rich framework that extracts regulatory knowledge from FDA documents and translates it into a machine-processable format. Our system encodes regulatory knowledge into an OWL/RDF-based knowledge graph and uses the Mistral 7B Instruct model to dynamically generate SPARQL queries, perform compliance reasoning, and produce structured reports. This enables automated device classification (Class I, II, or III) and real-time regulatory evaluation. Validated through real-world use cases, our framework significantly reduces manual review effort, enhances interpretability, and accelerates time-to-market. The proposed approach integrates AI reasoning and semantic technologies to achieve scalable, transparent, and automated regulatory compliance.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-14T14:39:28Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <arxiv:journal_ref>2025 IEEE International Conference on Big Data (BigData), 2025, pp. 321-328</arxiv:journal_ref>
+    <author>
+      <name>Subhankar Chattoraj</name>
+    </author>
+    <author>
+      <name>Karuna Pande Joshi</name>
+    </author>
+    <arxiv:doi>10.1109/BigData66926.2025.11402139</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/BigData66926.2025.11402139" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.11259v1</id>
+    <title>Template-as-Ontology: Configurable Synthetic Data Infrastructure for Cross-Domain Manufacturing AI Validation</title>
+    <updated>2026-05-11T21:36:05Z</updated>
+    <link href="https://arxiv.org/abs/2605.11259v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.11259v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>LLarge language model (LLM)-based AI agents deployed in manufacturing environments require populated, schema-correct data for validation, yet production MES data is proprietary, privacy-encumbered, and vendor-specific. This paper introduces the Template-as-Ontology principle: a single Python configuration module (700-770 lines, 45 validated exports) serves simultaneously as the specification for a time-stepped manufacturing simulator and as the runtime domain schema for AI analytics tools, producing alignment by construction rather than integration. We formally define the domain template as a typed relational configuration schema and prove that structural alignment between simulation and tool layers is guaranteed by single-source consumption. A five-layer pipeline--simulation, PostgreSQL, CDC/Iceberg lakehouse, star schema, and 12 parameterized AI tools--generates causally coherent, MES-shaped data spanning 66 entity types across four operational domains mapped to ISA-95/IEC 62264. We validate the architecture with six industry templates (aerospace, pharma, automotive, electronics, beverages, warehousing) running on identical framework code. Calibration experiments (60 runs, 10 seeds per template) confirm parametric controllability: observed KPIs fall within configured ranges across all templates. A controlled hallucination experiment (72 tool invocations, Qwen3-32B) demonstrates that ontology-constrained parameters eliminate tool-parameter fabrication (0% constrained vs. 43% unconstrained hallucination rate for the evaluated model, Fisher's exact test p &lt; 10^-12); the 0% constrained rate is an architectural guarantee that holds for any model. The framework provides a reusable data layer for discrete manufacturing AI validation.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-11T21:36:05Z</published>
+    <arxiv:comment>18 pages, 1 fugure</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Grama Chethan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.11234v1</id>
+    <title>The Semantic Training Gap: Ontology-Grounded Tool Architectures for Industrial AI Agent Systems</title>
+    <updated>2026-05-11T20:48:18Z</updated>
+    <link href="https://arxiv.org/abs/2605.11234v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.11234v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language model (LLM)-based AI agents are increasingly deployed in manufacturing environments for analytics, quality management, and decision support. These agents demonstrate statistical fluency with domain terminology but lack grounded understanding of operational semantics -- the relational structure that connects equipment identifiers, process parameters, failure codes, and regulatory constraints within a specific production context. This paper identifies and formalizes the semantic training gap: a structural disconnect between how AI systems acquire domain vocabulary through training and how manufacturing operations define meaning through ontological relationships. We demonstrate that this gap causes operationally incorrect outputs even when model responses are linguistically precise, and that in multi-agent configurations it produces a compounding failure mode we term semantic drift. To close this gap, we present an architecture that embeds manufacturing ontology directly into the AI tool layer as a typed relational configuration, enforcing semantic constraints at runtime rather than relying on model training. The architecture is formalized as a three-operation interface contract -- resolve, contextualize, annotate -- with invariants enforced by an AIOps orchestration layer. In a controlled experiment across six industry configurations (72 tool invocations using Qwen3-32B), unconstrained tool parameters produced a 43% hallucination rate for domain identifiers; ontology-grounded parameters reduced this to 0%. We validate the approach through a digital twin analytics platform demonstrating that a single codebase with domain-specific ontology configurations eliminates tool-call hallucination and achieves cross-domain configurability without application code changes.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-11T20:48:18Z</published>
+    <arxiv:comment>29 pages, 2 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Grama Chethan</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.04003v1</id>
+    <title>Physics-Grounded Multi-Agent Architecture for Traceable, Risk-Aware Human-AI Decision Support in Manufacturing</title>
+    <updated>2026-05-05T17:24:53Z</updated>
+    <link href="https://arxiv.org/abs/2605.04003v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.04003v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>High-precision CNC machining of free-form aerospace components requires bounded compensations informed by inspection, simulation, and process knowledge. Off-the-shelf large language model (LLM) assistants can generate text, but they do not reliably execute risk-constrained multi-step numerical workflows or provide auditable provenance for high-stakes decisions. We present multi-agent knowledge analysis (MAKA), a human-in-the-loop decision-support architecture that separates intent routing, tools-only quantitative analysis, knowledge graph retrieval, and critic-based verification that enforces physical plausibility, safety bounds, and provenance completeness before recommendations are surfaced for human approval. MAKA is instantiated on a Ti-6Al-4V rotor blade machining testbed by fusing virtual-machining path-tracking error fields, cutting-force and deflection simulations, and scan-based 3D inspection deviation maps from 16 blades. The analysis decomposes deviation into an evidence-linked pathing component, a drift-based wear proxy capturing systematic evolution across parts, a residual systematic compliance term, and a variability proxy for instability-aware escalation. In a three-level tool-orchestration benchmark (single-step through $\geq$3-step stateful sequences), MAKA improves successful tool execution by up to 87.5 percentage points relative to an unstructured single-model interaction pattern with identical tool access. Digital twin what-if studies show MAKA can coordinate traceable compensation candidates that reduce predicted surface deviation from order $10^{-2}$in to approximately $\pm 10^{-3}$in over most of the blade within the simulation environment, providing a pre-deployment verification signal for risk-aware human decision-making.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-05T17:24:53Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Danny Hoang</name>
+    </author>
+    <author>
+      <name>Ryan Matthiessen</name>
+    </author>
+    <author>
+      <name>Christopher Miller</name>
+    </author>
+    <author>
+      <name>Nasir Mannan</name>
+    </author>
+    <author>
+      <name>Ruby ElKharboutly</name>
+    </author>
+    <author>
+      <name>David Gorsich</name>
+    </author>
+    <author>
+      <name>Matthew P. Castanier</name>
+    </author>
+    <author>
+      <name>Farhad Imani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2605.01100v1</id>
+    <title>A Knowledge-Driven LLM-Based Decision-Support System for Explainable Defect Analysis and Mitigation Guidance in Laser Powder Bed Fusion</title>
+    <updated>2026-05-01T21:12:51Z</updated>
+    <link href="https://arxiv.org/abs/2605.01100v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2605.01100v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This work presents a knowledge-driven decision-support system that integrates structured defect knowledge with LLM-based reasoning to provide explainable defect diagnosis and mitigation guidance in manufacturing, using LPBF as a representative, safety-critical case study. The proposed ontology-integrated LLM-based decision support system for LPBF defect analysis and mitigation guidance is built on a knowledge base containing 27 known LPBF defect types organized into hierarchical categories and causal relationships. The developed system supports fuzzy natural language queries for systematic knowledge retrieval, literature-supported explanation of defects, and guidance on defect causes and mitigation strategies derived from encoded process knowledge. Furthermore, a multimodal image-assessment module based on foundation models enables descriptor-guided interpretation of representative microscopic defect images through semantic alignment scoring. The proposed framework was evaluated through qualitative comparisons with general-purpose vision-language models, an ablation study, and an inter-rater reliability analysis. Evaluation on the literature-derived dataset showed that the fully integrated configuration outperformed the other three evaluated system configurations, achieving a macro-average F1 score of 0.808. Additionally, inter-rater reliability analysis using Cohen's kappa indicated substantial agreement between the model outputs and the literature-derived reference labels. These findings suggest that ontology-guided knowledge representation can improve the consistency, interpretability, and practical usefulness of LLM-assisted LPBF defect analysis.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-05-01T21:12:51Z</published>
+    <arxiv:comment>28 pages, 15 figures</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Basit Mahmud Shahriar</name>
+    </author>
+    <author>
+      <name>Md Habibor Rahman</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.16280v1</id>
+    <title>Using Large Language Models and Knowledge Graphs to Improve the Interpretability of Machine Learning Models in Manufacturing</title>
+    <updated>2026-04-17T17:41:17Z</updated>
+    <link href="https://arxiv.org/abs/2604.16280v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.16280v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Explaining Machine Learning (ML) results in a transparent and user-friendly manner remains a challenging task of Explainable Artificial Intelligence (XAI). In this paper, we present a method to enhance the interpretability of ML models by using a Knowledge Graph (KG). We store domain-specific data along with ML results and their corresponding explanations, establishing a structured connection between domain knowledge and ML insights. To make these insights accessible to users, we designed a selective retrieval method in which relevant triplets are extracted from the KG and processed by a Large Language Model (LLM) to generate user-friendly explanations of ML results. We evaluated our method in a manufacturing environment using the XAI Question Bank. Beyond standard questions, we introduce more complex, tailored questions that highlight the strengths of our approach. We evaluated 33 questions, analyzing responses using quantitative metrics such as accuracy and consistency, as well as qualitative ones such as clarity and usefulness. Our contribution is both theoretical and practical: from a theoretical perspective, we present a novel approach for effectively enabling LLMs to dynamically access a KG in order to improve the explainability of ML results. From a practical perspective, we provide empirical evidence showing that such explanations can be successfully applied in real-world manufacturing environments, supporting better decision-making in manufacturing processes.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-17T17:41:17Z</published>
+    <arxiv:comment>14 pages, 8 figures, Submittet to conference</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Thomas Bayer</name>
+    </author>
+    <author>
+      <name>Alexander Lohr</name>
+    </author>
+    <author>
+      <name>Sarah Weiß</name>
+    </author>
+    <author>
+      <name>Bernd Michelberger</name>
+    </author>
+    <author>
+      <name>Wolfram Höpken</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.20094v1</id>
+    <title>LLM-Enhanced Semantic Data Integration of Electronic Component Qualifications in the Aerospace Domain</title>
+    <updated>2026-03-20T16:22:06Z</updated>
+    <link href="https://arxiv.org/abs/2603.20094v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.20094v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large manufacturing companies face challenges in information retrieval due to data silos maintained by different departments, leading to inconsistencies and misalignment across databases. This paper presents an experience in integrating and retrieving qualification data for electronic components used in satellite board design. Due to data silos, designers cannot immediately determine the qualification status of individual components. However, this process is critical during the planning phase, when assembly drawings are issued before production, to optimize new qualifications and avoid redundant efforts. To address this, we propose a pipeline that uses Virtual Knowledge Graphs for a unified view over heterogeneous data sources and LLMs to enhance retrieval and reduce manual effort in data cleansing. The retrieval of qualifications is then performed through an Ontology-based Data Access approach for structured queries and a vector search mechanism for retrieving qualifications based on similar textual properties. We perform a comparative cost-benefit analysis, demonstrating that the proposed pipeline also outperforms approaches relying solely on LLMs, such as Retrieval-Augmented Generation (RAG), in terms of long-term efficiency.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DB" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-20T16:22:06Z</published>
+    <arxiv:comment>ESWC 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Antonio De Santis</name>
+    </author>
+    <author>
+      <name>Marco Balduini</name>
+    </author>
+    <author>
+      <name>Matteo Belcao</name>
+    </author>
+    <author>
+      <name>Andrea Proia</name>
+    </author>
+    <author>
+      <name>Marco Brambilla</name>
+    </author>
+    <author>
+      <name>Emanuele Della Valle</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.24262v4</id>
+    <title>Coverage-Aware Web Crawling for Domain-Specific Supplier Discovery via a Web--Knowledge--Web Pipeline</title>
+    <updated>2026-04-30T02:58:59Z</updated>
+    <link href="https://arxiv.org/abs/2602.24262v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.24262v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Identifying the full landscape of small and medium-sized enterprises (SMEs) in specialized industry sectors is critical for supply-chain resilience, yet existing business databases suffer from substantial coverage gaps -- particularly for sub-tier suppliers and firms in emerging niche markets. We propose a \textbf{Web--Knowledge--Web (W$\to$K$\to$W)} pipeline that iteratively (1)~crawls domain-specific web sources to discover candidate supplier entities, (2)~extracts and consolidates structured knowledge into a heterogeneous knowledge graph using domain-adapted few-shot LLM prompting, and (3)~uses the knowledge graph's topology and coverage signals to guide subsequent crawling toward under-represented regions of the supplier space. To quantify discovery completeness, we introduce a \textbf{coverage estimation framework} inspired by ecological species-richness estimators (Chao1, ACE) adapted for web-entity populations. Experiments on the semiconductor equipment manufacturing sector (NAICS 333242) demonstrate that the W$\to$K$\to$W pipeline achieves the highest precision (0.165) and F1 (0.123) among all methods while using only 144 pages -- 32\% fewer than the 213-page baseline budget -- building a knowledge graph of 664 entities and 542 relations with 100\% relation type-consistency.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-27T18:31:42Z</published>
+    <arxiv:comment>Accepted by 2026 7th International Conference on Computer Information and Big Data Applications</arxiv:comment>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Yijiashun Qi</name>
+    </author>
+    <author>
+      <name>Yijiazhen Qi</name>
+    </author>
+    <author>
+      <name>Tanmay Wagh</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.12419v1</id>
+    <title>Intent-Driven Smart Manufacturing Integrating Knowledge Graphs and Large Language Models</title>
+    <updated>2026-02-12T21:17:37Z</updated>
+    <link href="https://arxiv.org/abs/2602.12419v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.12419v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The increasing complexity of smart manufacturing environments demands interfaces that can translate high-level human intents into machine-executable actions. This paper presents a unified framework that integrates instruction-tuned Large Language Models (LLMs) with ontology-aligned Knowledge Graphs (KGs) to enable intent-driven interaction in Manufacturing-as-a-Service (MaaS) ecosystems. We fine-tune Mistral-7B-Instruct-V02 on a domain-specific dataset, enabling the translation of natural language intents into structured JSON requirement models. These models are semantically mapped to a Neo4j-based knowledge graph grounded in the ISA-95 standard, ensuring operational alignment with manufacturing processes, resources, and constraints. Our experimental results demonstrate significant performance gains over zero-shot and 3-shots baselines, achieving 89.33\% exact match accuracy and 97.27\% overall accuracy. This work lays the foundation for scalable, explainable, and adaptive human-machine</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-12T21:17:37Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Takoua Jradi</name>
+    </author>
+    <author>
+      <name>John Violos</name>
+    </author>
+    <author>
+      <name>Dimitrios Spatharakis</name>
+    </author>
+    <author>
+      <name>Lydia Mavraidi</name>
+    </author>
+    <author>
+      <name>Ioannis Dimolitsas</name>
+    </author>
+    <author>
+      <name>Aris Leivadeas</name>
+    </author>
+    <author>
+      <name>Symeon Papavassiliou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.00699v1</id>
+    <title>From Prompt to Graph: Comparing LLM-Based Information Extraction Strategies in Domain-Specific Ontology Development</title>
+    <updated>2026-01-31T12:50:23Z</updated>
+    <link href="https://arxiv.org/abs/2602.00699v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.00699v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Ontologies are essential for structuring domain knowledge, improving accessibility, sharing, and reuse. However, traditional ontology construction relies on manual annotation and conventional natural language processing (NLP) techniques, making the process labour-intensive and costly, especially in specialised fields like casting manufacturing. The rise of Large Language Models (LLMs) offers new possibilities for automating knowledge extraction. This study investigates three LLM-based approaches, including pre-trained LLM-driven method, in-context learning (ICL) method and fine-tuning method to extract terms and relations from domain-specific texts using limited data. We compare their performances and use the best-performing method to build a casting ontology that validated by domian expert.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-31T12:50:23Z</published>
+    <arxiv:comment>11 pages,8 figures,3 tables,presented at International Conference on Industry of the Future and Smart Manufacturing,2025</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Xuan Liu</name>
+    </author>
+    <author>
+      <name>Ziyu Li</name>
+    </author>
+    <author>
+      <name>Mu He</name>
+    </author>
+    <author>
+      <name>Ziyang Ma</name>
+    </author>
+    <author>
+      <name>Xiaoxu Wu</name>
+    </author>
+    <author>
+      <name>Gizem Yilmaz</name>
+    </author>
+    <author>
+      <name>Yiyuan Xia</name>
+    </author>
+    <author>
+      <name>Bingbing Li</name>
+    </author>
+    <author>
+      <name>He Tan</name>
+    </author>
+    <author>
+      <name>Jerry Ying Hsi Fuh</name>
+    </author>
+    <author>
+      <name>Wen Feng Lu</name>
+    </author>
+    <author>
+      <name>Anders E. W. Jarfors</name>
+    </author>
+    <author>
+      <name>Per Jansson</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.05298v1</id>
+    <title>Mathematical Knowledge Graph-Driven Framework for Equation-Based Predictive and Reliable Additive Manufacturing</title>
+    <updated>2026-01-08T10:38:03Z</updated>
+    <link href="https://arxiv.org/abs/2601.05298v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.05298v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Additive manufacturing (AM) relies critically on understanding and extrapolating process-property relationships; however, existing data-driven approaches remain limited by fragmented knowledge representations and unreliable extrapolation under sparse data conditions. In this study, we propose an ontology-guided, equation-centric framework that tightly integrates large language models (LLMs) with an additive manufacturing mathematical knowledge graph (AM-MKG) to enable reliable knowledge extraction and principled extrapolative modeling. By explicitly encoding equations, variables, assumptions, and their semantic relationships within a formal ontology, unstructured literature is transformed into machine-interpretable representations that support structured querying and reasoning. LLM-based equation generation is further conditioned on MKG-derived subgraphs, enforcing physically meaningful functional forms and mitigating non-physical or unstable extrapolation trends. To assess reliability beyond conventional predictive uncertainty, a confidence-aware extrapolation assessment is introduced, integrating extrapolation distance, statistical stability, and knowledge-graph-based physical consistency into a unified confidence score. Results demonstrate that ontology-guided extraction significantly improves the structural coherence and quantitative reliability of extracted knowledge, while subgraph-conditioned equation generation yields stable and physically consistent extrapolations compared to unguided LLM outputs. Overall, this work establishes a unified pipeline for ontology-driven knowledge representation, equation-centered reasoning, and confidence-based extrapolation assessment, highlighting the potential of knowledge-graph-augmented LLMs as reliable tools for extrapolative modeling in additive manufacturing.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T10:38:03Z</published>
+    <arxiv:comment>preprint</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yeongbin Cha</name>
+    </author>
+    <author>
+      <name>Namjung Kim</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2601.04696v1</id>
+    <title>A Method for Constructing a Digital Transformation Driving Mechanism Based on Semantic Understanding of Large Models</title>
+    <updated>2026-01-08T08:06:58Z</updated>
+    <link href="https://arxiv.org/abs/2601.04696v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2601.04696v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In the process of digital transformation, enterprises are faced with problems such as insufficient semantic understanding of unstructured data and lack of intelligent decision-making basis in driving mechanisms. This study proposes a method that combines a large language model (LLM) and a knowledge graph. First, a fine-tuned BERT (Bidirectional Encoder Representations from Transformers) model is used to perform entity recognition and relationship extraction on multi-source heterogeneous texts, and GPT-4 is used to generate semantically enhanced vector representations; secondly, a two-layer graph neural network (GNN) architecture is designed to fuse the semantic vectors output by LLM with business metadata to construct a dynamic and scalable enterprise knowledge graph; then reinforcement learning is introduced to optimize decision path generation, and the reward function is used to drive the mechanism iteration. In the case of the manufacturing industry, this mechanism reduced the response time for equipment failure scenarios from 7.8 hours to 3.7 hours, the F1 value reached 94.3%, and the compensation for decision errors in the annual digital transformation cost decreased by 45.3%. This method significantly enhances the intelligence level and execution efficiency of the digital transformation driving mechanism by integrating large model semantic understanding with structured knowledge.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-08T08:06:58Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Huayi Liu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.18265v1</id>
+    <title>Intelligent Human-Machine Partnership for Manufacturing: Enhancing Warehouse Planning through Simulation-Driven Knowledge Graphs and LLM Collaboration</title>
+    <updated>2025-12-20T08:09:24Z</updated>
+    <link href="https://arxiv.org/abs/2512.18265v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.18265v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Manufacturing planners face complex operational challenges that require seamless collaboration between human expertise and intelligent systems to achieve optimal performance in modern production environments. Traditional approaches to analyzing simulation-based manufacturing data often create barriers between human decision-makers and critical operational insights, limiting effective partnership in manufacturing planning. Our framework establishes a collaborative intelligence system integrating Knowledge Graphs and Large Language Model-based agents to bridge this gap, empowering manufacturing professionals through natural language interfaces for complex operational analysis. The system transforms simulation data into semantically rich representations, enabling planners to interact naturally with operational insights without specialized expertise. A collaborative LLM agent works alongside human decision-makers, employing iterative reasoning that mirrors human analytical thinking while generating precise queries for knowledge extraction and providing transparent validation. This partnership approach to manufacturing bottleneck identification, validated through operational scenarios, demonstrates enhanced performance while maintaining human oversight and decision authority. For operational inquiries, the system achieves near-perfect accuracy through natural language interaction. For investigative scenarios requiring collaborative analysis, we demonstrate the framework's effectiveness in supporting human experts to uncover interconnected operational issues that enhance understanding and decision-making. This work advances collaborative manufacturing by creating intuitive methods for actionable insights, reducing cognitive load while amplifying human analytical capabilities in evolving manufacturing ecosystems.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-20T08:09:24Z</published>
+    <arxiv:comment>13 pages, 2 figures, accepted for oral presentation at AAAI Human Machine Collaboration Workshop 2026</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Himabindu Thogaru</name>
+    </author>
+    <author>
+      <name>Saisubramaniam Gopalakrishnan</name>
+    </author>
+    <author>
+      <name>Zishan Ahmad</name>
+    </author>
+    <author>
+      <name>Anirudh Deodhar</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2512.12112v2</id>
+    <title>BRIDG-ICS: AI-Grounded Knowledge Graphs for Intelligent Threat Analytics in Industry~5.0 Cyber-Physical Systems</title>
+    <updated>2026-03-05T03:29:30Z</updated>
+    <link href="https://arxiv.org/abs/2512.12112v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2512.12112v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Industry 5.0's increasing integration of IT and OT systems is transforming industrial operations but also expanding the cyber-physical attack surface. Industrial Control Systems (ICS) face escalating security challenges as traditional siloed defences fail to provide coherent, cross-domain threat insights. We present BRIDG-ICS (BRIDge for Industrial Control Systems), an AI-driven Knowledge Graph (KG) framework for context-aware threat analysis and quantitative assessment of cyber resilience in smart manufacturing environments. BRIDG-ICS fuses heterogeneous industrial and cybersecurity data into an integrated Industrial Security Knowledge Graph linking assets, vulnerabilities, and adversarial behaviours with probabilistic risk metrics (e.g. exploit likelihood, attack cost). This unified graph representation enables multi-stage attack path simulation using graph-analytic techniques. To enrich the graph's semantic depth, the framework leverages Large Language Models (LLMs): domain-specific LLMs extract cybersecurity entities, predict relationships, and translate natural-language threat descriptions into structured graph triples, thereby populating the knowledge graph with missing associations and latent risk indicators. This unified AI-enriched KG supports multi-hop, causality-aware threat reasoning, improving visibility into complex attack chains and guiding data-driven mitigation. In simulated industrial scenarios, BRIDG-ICS scales well, reduces potential attack exposure, and can enhance cyber-physical system resilience in Industry 5.0 settings.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-12-13T01:11:00Z</published>
+    <arxiv:comment>44 Pages, To be published in Springer Cybersecurity Journal</arxiv:comment>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Padmeswari Nandiya</name>
+    </author>
+    <author>
+      <name>Ahmad Mohsin</name>
+    </author>
+    <author>
+      <name>Ahmed Ibrahim</name>
+    </author>
+    <author>
+      <name>Iqbal H. Sarker</name>
+    </author>
+    <author>
+      <name>Helge Janicke</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.15428v2</id>
+    <title>Fault Cause Identification across Manufacturing Lines through Ontology-Guided and Process-Aware FMEA Graph Learning with LLMs</title>
+    <updated>2026-08-04T13:21:26Z</updated>
+    <link href="https://arxiv.org/abs/2510.15428v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.15428v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Fault cause identification in complex engineered systems remains challenging due to system complexity, frequent reconfigurations, and the limited reusability of accumulated diagnostic knowledge, with automated manufacturing lines representing a prominent application domain. Although Failure Mode and Effects Analysis (FMEA) worksheets contain valuable expert insights, their reuse across heterogeneous system configurations is hindered by natural language variability, inconsistent terminology, and process differences. To address these limitations, we propose OGPAL (Ontology-Guided and Process-Aware Learning), a framework that enhances FMEA reusability by combining manufacturing-domain conceptualization with graph neural network reasoning. First, FMEA worksheets from multiple manufacturing lines are transformed into a unified knowledge graph through ontology-guided information extraction supported by a large language model (LLM), capturing domain concepts such as actions, states, components, and parameters. Second, a Relational Graph Convolutional Network (RGCN) with the process-aware scoring function learns embeddings that respect both semantic relationships and sequential process flows. Finally, link prediction is employed to retrieve and rank candidate fault causes consistent with the target line's process flow.
+  A case study on automotive pressure sensor assembly lines demonstrates that OGPAL outperforms a state-of-the-art retrieval-augmented generation baseline (nDCG@20 = 0.450) and an RGCN approach (0.559), achieving the best performance (0.719) in fault cause identification. Ablation studies confirm the contributions of both LLM-driven domain conceptualization and process-aware learning. These results indicate that the framework effectively supports reasoning over heterogeneous diagnostic knowledge and improves the transferability of FMEA knowledge across manufacturing lines.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-17T08:35:47Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Sho Okazaki</name>
+    </author>
+    <author>
+      <name>Kohei Kaminishi</name>
+    </author>
+    <author>
+      <name>Takuma Fujiu</name>
+    </author>
+    <author>
+      <name>Yusheng Wang</name>
+    </author>
+    <author>
+      <name>Manu Sasidharan</name>
+    </author>
+    <author>
+      <name>Jun Ota</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.22619v1</id>
+    <title>Enhancing Manufacturing Knowledge Access with LLMs and Context-aware Prompting</title>
+    <updated>2025-07-30T12:39:01Z</updated>
+    <link href="https://arxiv.org/abs/2507.22619v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.22619v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Knowledge graphs (KGs) have transformed data management within the manufacturing industry, offering effective means for integrating disparate data sources through shared and structured conceptual schemas. However, harnessing the power of KGs can be daunting for non-experts, as it often requires formulating complex SPARQL queries to retrieve specific information. With the advent of Large Language Models (LLMs), there is a growing potential to automatically translate natural language queries into the SPARQL format, thus bridging the gap between user-friendly interfaces and the sophisticated architecture of KGs. The challenge remains in adequately informing LLMs about the relevant context and structure of domain-specific KGs, e.g., in manufacturing, to improve the accuracy of generated queries. In this paper, we evaluate multiple strategies that use LLMs as mediators to facilitate information retrieval from KGs. We focus on the manufacturing domain, particularly on the Bosch Line Information System KG and the I40 Core Information Model. In our evaluation, we compare various approaches for feeding relevant context from the KG to the LLM and analyze their proficiency in transforming real-world questions into SPARQL queries. Our findings show that LLMs can significantly improve their performance on generating correct and complete queries when provided only the adequate context of the KG schema. Such context-aware prompting techniques help LLMs to focus on the relevant parts of the ontology and reduce the risk of hallucination. We anticipate that the proposed techniques help LLMs to democratize access to complex data repositories and empower informed decision-making in manufacturing settings.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-07-30T12:39:01Z</published>
+    <arxiv:comment>European Conference on Artificial Intelligence (ECAI) 2024</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Sebastian Monka</name>
+    </author>
+    <author>
+      <name>Irlan Grangel-González</name>
+    </author>
+    <author>
+      <name>Stefan Schmid</name>
+    </author>
+    <author>
+      <name>Lavdim Halilaj</name>
+    </author>
+    <author>
+      <name>Marc Rickart</name>
+    </author>
+    <author>
+      <name>Oliver Rudolph</name>
+    </author>
+    <author>
+      <name>Rui Dias</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2507.02914v1</id>
+    <title>OAK -- Onboarding with Actionable Knowledge</title>
+    <updated>2025-06-25T07:03:52Z</updated>
+    <link href="https://arxiv.org/abs/2507.02914v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2507.02914v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The loss of knowledge when skilled operators leave poses a critical issue for companies. This know-how is diverse and unstructured. We propose a novel method that combines knowledge graph embeddings and multi-modal interfaces to collect and retrieve expertise, making it actionable. Our approach supports decision-making on the shop floor. Additionally, we leverage LLMs to improve query understanding and provide adapted answers. As application case studies, we developed a proof-of-concept for quality control in high precision manufacturing.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-25T07:03:52Z</published>
+    <arxiv:comment>This paper is an extended version of the work originally presented at the AI-Days 2024 conference in Lausanne, Switzerland. It builds upon the findings shared during the conference and includes additional results and analysis</arxiv:comment>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>Steve Devènes</name>
+      <arxiv:affiliation>Institute of Systems Engineering, HEI-VS, HES-SO University of Applied Sciences and Arts Western Switzerland</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Marine Capallera</name>
+      <arxiv:affiliation>HumanTech Institute, HEIA HES-SO University of Applied Sciences and Arts Western Switzerland</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Robin Cherix</name>
+      <arxiv:affiliation>HumanTech Institute, HEIA HES-SO University of Applied Sciences and Arts Western Switzerland</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Elena Mugellini</name>
+      <arxiv:affiliation>HumanTech Institute, HEIA HES-SO University of Applied Sciences and Arts Western Switzerland</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Omar Abou Khaled</name>
+      <arxiv:affiliation>HumanTech Institute, HEIA HES-SO University of Applied Sciences and Arts Western Switzerland</arxiv:affiliation>
+    </author>
+    <author>
+      <name>Francesco Carrino</name>
+      <arxiv:affiliation>Institute of Systems Engineering, HEI-VS, HES-SO University of Applied Sciences and Arts Western Switzerland</arxiv:affiliation>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.13026v1</id>
+    <title>Knowledge Graph Fusion with Large Language Models for Accurate, Explainable Manufacturing Process Planning</title>
+    <updated>2025-06-16T01:26:08Z</updated>
+    <link href="https://arxiv.org/abs/2506.13026v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.13026v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Precision process planning in Computer Numerical Control (CNC) machining demands rapid, context-aware decisions on tool selection, feed-speed pairs, and multi-axis routing, placing immense cognitive and procedural burdens on engineers from design specification through final part inspection. Conventional rule-based computer-aided process planning and knowledge-engineering shells freeze domain know-how into static tables, which become limited when dealing with unseen topologies, novel material states, shifting cost-quality-sustainability weightings, or shop-floor constraints such as tool unavailability and energy caps. Large language models (LLMs) promise flexible, instruction-driven reasoning for tasks but they routinely hallucinate numeric values and provide no provenance. We present Augmented Retrieval Knowledge Network Enhanced Search &amp; Synthesis (ARKNESS), the end-to-end framework that fuses zero-shot Knowledge Graph (KG) construction with retrieval-augmented generation to deliver verifiable, numerically exact answers for CNC process planning. ARKNESS (1) automatically distills heterogeneous machining documents, G-code annotations, and vendor datasheets into augmented triple, multi-relational graphs without manual labeling, and (2) couples any on-prem LLM with a retriever that injects the minimal, evidence-linked subgraph needed to answer a query. Benchmarked on 155 industry-curated questions spanning tool sizing and feed-speed optimization, a lightweight 3B-parameter Llama-3 augmented by ARKNESS matches GPT-4o accuracy while achieving a +25 percentage point gain in multiple-choice accuracy, +22.4 pp in F1, and 8.1x ROUGE-L on open-ended responses.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-16T01:26:08Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Danny Hoang</name>
+    </author>
+    <author>
+      <name>David Gorsich</name>
+    </author>
+    <author>
+      <name>Matthew P. Castanier</name>
+    </author>
+    <author>
+      <name>Farhad Imani</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.11180v2</id>
+    <title>Beyond Formal Semantics for Capabilities and Skills: Model Context Protocol in Manufacturing</title>
+    <updated>2025-12-09T14:19:21Z</updated>
+    <link href="https://arxiv.org/abs/2506.11180v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.11180v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Explicit modeling of capabilities and skills -- whether based on ontologies, Asset Administration Shells, or other technologies -- requires considerable manual effort and often results in representations that are not easily accessible to Large Language Models (LLMs). In this work-in-progress paper, we present an alternative approach based on the recently introduced Model Context Protocol (MCP). MCP allows systems to expose functionality through a standardized interface that is directly consumable by LLM-based agents. We conduct a prototypical evaluation on a laboratory-scale manufacturing system, where resource functions are made available via MCP. A general-purpose LLM is then tasked with planning and executing a multi-step process, including constraint handling and the invocation of resource functions via MCP. The results indicate that such an approach can enable flexible industrial automation without relying on explicit semantic models. This work lays the basis for further exploration of external tool integration in LLM-driven production systems.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.ET" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-12T13:02:16Z</published>
+    <arxiv:comment>\c{opyright} 2025 IEEE. Personal use of this material is permitted. Permission from IEEE must be obtained for all other uses, in any current or future media, including reprinting/republishing this material for advertising or promotional purposes, creating new collective works, for resale or redistribution to servers or lists, or reuse of any copyrighted component of this work in other works</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Luis Miguel Vieira da Silva</name>
+    </author>
+    <author>
+      <name>Aljosha Köcher</name>
+    </author>
+    <author>
+      <name>Felix Gehlhoff</name>
+    </author>
+    <arxiv:doi>10.1109/ETFA65518.2025.11205601</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ETFA65518.2025.11205601" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.03801v1</id>
+    <title>From Theory to Practice: Real-World Use Cases on Trustworthy LLM-Driven Process Modeling, Prediction and Automation</title>
+    <updated>2025-06-04T10:12:09Z</updated>
+    <link href="https://arxiv.org/abs/2506.03801v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.03801v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Traditional Business Process Management (BPM) struggles with rigidity, opacity, and scalability in dynamic environments while emerging Large Language Models (LLMs) present transformative opportunities alongside risks. This paper explores four real-world use cases that demonstrate how LLMs, augmented with trustworthy process intelligence, redefine process modeling, prediction, and automation. Grounded in early-stage research projects with industrial partners, the work spans manufacturing, modeling, life-science, and design processes, addressing domain-specific challenges through human-AI collaboration. In manufacturing, an LLM-driven framework integrates uncertainty-aware explainable Machine Learning (ML) with interactive dialogues, transforming opaque predictions into auditable workflows. For process modeling, conversational interfaces democratize BPMN design. Pharmacovigilance agents automate drug safety monitoring via knowledge-graph-augmented LLMs. Finally, sustainable textile design employs multi-agent systems to navigate regulatory and environmental trade-offs. We intend to examine tensions between transparency and efficiency, generalization and specialization, and human agency versus automation. By mapping these trade-offs, we advocate for context-sensitive integration prioritizing domain needs, stakeholder values, and iterative human-in-the-loop workflows over universal solutions. This work provides actionable insights for researchers and practitioners aiming to operationalize LLMs in critical BPM environments.</summary>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-04T10:12:09Z</published>
+    <arxiv:comment>Accepted to the Next Gen Data and Process Management: Large Language Models and Beyond workshop at SIGMOD 2025</arxiv:comment>
+    <arxiv:primary_category term="cs.SE"/>
+    <author>
+      <name>Peter Pfeiffer</name>
+    </author>
+    <author>
+      <name>Alexander Rombach</name>
+    </author>
+    <author>
+      <name>Maxim Majlatow</name>
+    </author>
+    <author>
+      <name>Nijat Mehdiyev</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2506.04252v1</id>
+    <title>A Graph-Retrieval-Augmented Generation Framework Enhances Decision-Making in the Circular Economy</title>
+    <updated>2025-06-01T07:49:47Z</updated>
+    <link href="https://arxiv.org/abs/2506.04252v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2506.04252v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large language models (LLMs) hold promise for sustainable manufacturing, but often hallucinate industrial codes and emission factors, undermining regulatory and investment decisions. We introduce CircuGraphRAG, a retrieval-augmented generation (RAG) framework that grounds LLMs outputs in a domain-specific knowledge graph for the circular economy. This graph connects 117,380 industrial and waste entities with classification codes and GWP100 emission data, enabling structured multi-hop reasoning. Natural language queries are translated into SPARQL and verified subgraphs are retrieved to ensure accuracy and traceability. Compared with Standalone LLMs and Naive RAG, CircuGraphRAG achieves superior performance in single-hop and multi-hop question answering, with ROUGE-L F1 scores up to 1.0, while baseline scores below 0.08. It also improves efficiency, halving the response time and reducing token usage by 16% in representative tasks. CircuGraphRAG provides fact-checked, regulatory-ready support for circular economy planning, advancing reliable, low-carbon resource decision making.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-06-01T07:49:47Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yang Zhao</name>
+    </author>
+    <author>
+      <name>Chengxiao Dai</name>
+    </author>
+    <author>
+      <name>Dusit Niyato</name>
+    </author>
+    <author>
+      <name>Chuan Fu Tan</name>
+    </author>
+    <author>
+      <name>Keyi Xiang</name>
+    </author>
+    <author>
+      <name>Yueyang Wang</name>
+    </author>
+    <author>
+      <name>Zhiquan Yeo</name>
+    </author>
+    <author>
+      <name>Daren Tan Zong Loong</name>
+    </author>
+    <author>
+      <name>Jonathan Low Zhaozhi</name>
+    </author>
+    <author>
+      <name>Eugene H. Z. HO</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.18553v1</id>
+    <title>Applying Ontologies and Knowledge Augmented Large Language Models to Industrial Automation: A Decision-Making Guidance for Achieving Human-Robot Collaboration in Industry 5.0</title>
+    <updated>2025-05-24T06:42:22Z</updated>
+    <link href="https://arxiv.org/abs/2505.18553v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.18553v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid advancement of Large Language Models (LLMs) has resulted in interest in their potential applications within manufacturing systems, particularly in the context of Industry 5.0. However, determining when to implement LLMs versus other Natural Language Processing (NLP) techniques, ontologies or knowledge graphs, remains an open question. This paper offers decision-making guidance for selecting the most suitable technique in various industrial contexts, emphasizing human-robot collaboration and resilience in manufacturing. We examine the origins and unique strengths of LLMs, ontologies, and knowledge graphs, assessing their effectiveness across different industrial scenarios based on the number of domains or disciplines required to bring a product from design to manufacture. Through this comparative framework, we explore specific use cases where LLMs could enhance robotics for human-robot collaboration, while underscoring the continued relevance of ontologies and knowledge graphs in low-dependency or resource-constrained sectors. Additionally, we address the practical challenges of deploying these technologies, such as computational cost and interpretability, providing a roadmap for manufacturers to navigate the evolving landscape of Language based AI tools in Industry 5.0. Our findings offer a foundation for informed decision-making, helping industry professionals optimize the use of Language Based models for sustainable, resilient, and human-centric manufacturing. We also propose a Large Knowledge Language Model architecture that offers the potential for transparency and configuration based on complexity of task and computing resources available.</summary>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-24T06:42:22Z</published>
+    <arxiv:primary_category term="cs.HC"/>
+    <author>
+      <name>John Oyekan</name>
+    </author>
+    <author>
+      <name>Christopher Turner</name>
+    </author>
+    <author>
+      <name>Michael Bax</name>
+    </author>
+    <author>
+      <name>Erich Graf</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2505.20308v2</id>
+    <title>Large Language Model Powered Decision Support for a Metal Additive Manufacturing Knowledge Graph</title>
+    <updated>2025-07-28T05:26:47Z</updated>
+    <link href="https://arxiv.org/abs/2505.20308v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2505.20308v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Metal additive manufacturing (AM) involves complex interdependencies among processes, materials, feedstock, and post-processing steps. However, the underlying relationships and domain knowledge remain fragmented across literature and static databases that often require expert-level queries, limiting their applicability in design and planning. To address these limitations, we develop a novel and structured knowledge graph (KG), representing 53 distinct metals and alloys across seven material categories, nine AM processes, four feedstock types, and corresponding post-processing requirements. A large language model (LLM) interface, guided by a few-shot prompting strategy, enables natural language querying without the need for formal query syntax. The system supports a range of tasks, including compatibility evaluation, constraint-based filtering, and design for AM (DfAM) guidance. User queries in natural language are normalized, translated into Cypher, and executed on the KG, with results returned in a structured format. This work introduces the first interactive system that connects a domain-specific metal AM KG with an LLM interface, delivering accessible and explainable decision support for engineers and promoting human-centered tools in manufacturing knowledge systems.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-05-20T18:27:22Z</published>
+    <arxiv:comment>The paper has been accepted at 11th International Conference of Asian Society for Precision Engineering and Nanotechnology</arxiv:comment>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Muhammad Tayyab Khan</name>
+    </author>
+    <author>
+      <name>Lequn Chen</name>
+    </author>
+    <author>
+      <name>Wenhe Feng</name>
+    </author>
+    <author>
+      <name>Seung Ki Moon</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2504.19667v3</id>
+    <title>Tripartite-GraphRAG via Plugin Ontologies</title>
+    <updated>2025-09-09T10:38:54Z</updated>
+    <link href="https://arxiv.org/abs/2504.19667v3" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2504.19667v3" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Large Language Models (LLMs) have shown remarkable capabilities across various domains, yet they struggle with knowledge-intensive tasks in areas that demand factual accuracy, e.g. industrial automation and healthcare. Key limitations include their tendency to hallucinate, lack of source traceability (provenance), and challenges in timely knowledge updates. Combining language models with knowledge graphs (GraphRAG) offers promising avenues for overcoming these deficits. However, a major challenge lies in creating such a knowledge graph in the first place. Here, we propose a novel approach that combines LLMs with a tripartite knowledge graph representation, which is constructed by connecting complex, domain-specific objects via a curated ontology of corresponding, domain-specific concepts to relevant sections within chunks of text through a concept-anchored pre-analysis of source documents starting from an initial lexical graph. Subsequently, we formulate LLM prompt creation as an unsupervised node classification problem allowing for the optimization of information density, coverage, and arrangement of LLM prompts at significantly reduced lengths. An initial experimental evaluation of our approach on a healthcare use case, involving multi-faceted analyses of patient anamneses given a set of medical concepts as well as a series of clinical guideline literature, indicates its potential to optimize information density, coverage, and arrangement of LLM prompts while significantly reducing their lengths, which, in turn, may lead to reduced costs as well as more consistent and reliable LLM outputs.</summary>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-04-28T10:43:35Z</published>
+    <arxiv:primary_category term="cs.LG"/>
+    <author>
+      <name>Michael Banf</name>
+    </author>
+    <author>
+      <name>Johannes Kuhn</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2502.15932v1</id>
+    <title>CVE-LLM : Ontology-Assisted Automatic Vulnerability Evaluation Using Large Language Models</title>
+    <updated>2025-02-21T20:59:15Z</updated>
+    <link href="https://arxiv.org/abs/2502.15932v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2502.15932v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The National Vulnerability Database (NVD) publishes over a thousand new vulnerabilities monthly, with a projected 25 percent increase in 2024, highlighting the crucial need for rapid vulnerability identification to mitigate cybersecurity attacks and save costs and resources. In this work, we propose using large language models (LLMs) to learn vulnerability evaluation from historical assessments of medical device vulnerabilities in a single manufacturer's portfolio. We highlight the effectiveness and challenges of using LLMs for automatic vulnerability evaluation and introduce a method to enrich historical data with cybersecurity ontologies, enabling the system to understand new vulnerabilities without retraining the LLM. Our LLM system integrates with the in-house application - Cybersecurity Management System (CSMS) - to help Siemens Healthineers (SHS) product cybersecurity experts efficiently assess the vulnerabilities in our products. Also, we present guidelines for efficient integration of LLMs into the cybersecurity tool.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-02-21T20:59:15Z</published>
+    <arxiv:comment>arXiv admin note: substantial text overlap with arXiv:2407.14640</arxiv:comment>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Rikhiya Ghosh</name>
+    </author>
+    <author>
+      <name>Hans-Martin von Stockhausen</name>
+    </author>
+    <author>
+      <name>Martin Schmitt</name>
+    </author>
+    <author>
+      <name>George Marica Vasile</name>
+    </author>
+    <author>
+      <name>Sanjeev Kumar Karn</name>
+    </author>
+    <author>
+      <name>Oladimeji Farri</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2501.03067v1</id>
+    <title>Design and implementation of tools to build an ontology of Security Requirements for Internet of Medical Things</title>
+    <updated>2025-01-06T15:04:45Z</updated>
+    <link href="https://arxiv.org/abs/2501.03067v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2501.03067v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>When developing devices, architectures and services for the Internet of Medical Things (IoMT) world, manufacturers or integrators must be aware of the security requirements expressed by both laws and specifications. To provide tools guiding through these requirements and to assure a third party of the correct compliance, an ontology charting the relevant laws and specifications (for the European context) is very useful. We here address the development of this ontology. Due to the very high number and size of the considered specification documents, we have put in place a methodology and tools to simplify the transition from natural text to an ontology. The first step is a manual highlighting of relevant concepts in the corpus, then a manual translation to XML/XSD is operated. We have developed a tool allowing us to convert this semi-structured data into an ontology. Because the different specifications use similar but different wording, our approach favors the creation of similar instances in the ontology. To improve the ontology simplification through instance merging, we consider the use of LLMs. The responses of the LLMs are compared against our manually defined correct responses. The quality of the responses of the automated system does not prove to be good enough to be trusted blindly, and should only be used as a starting point for a manual correction.</summary>
+    <category term="cs.CR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-01-06T15:04:45Z</published>
+    <arxiv:primary_category term="cs.CR"/>
+    <author>
+      <name>Daniel Naro</name>
+    </author>
+    <author>
+      <name>Jaime Delgado</name>
+    </author>
+    <author>
+      <name>Silvia Llorente</name>
+    </author>
+    <author>
+      <name>Amanda Palomo</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2410.23303v1</id>
+    <title>Demonstrating Linked Battery Data To Accelerate Knowledge Flow in Battery Science</title>
+    <updated>2024-10-16T14:12:41Z</updated>
+    <link href="https://arxiv.org/abs/2410.23303v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2410.23303v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Batteries are pivotal for transitioning to a climate-friendly future, leading to a surge in battery research. Scopus (Elsevier) lists 14,388 papers that mention "lithium-ion battery" in 2023 alone, making it infeasible for individuals to keep up. This paper discusses strategies based on structured, semantic, and linked data to manage this information overload. Structured data follows a predefined, machine-readable format; semantic data includes metadata for context; linked data references other semantic data, forming a web of interconnected information. We use a battery-related ontology, BattINFO to standardise terms and enable automated data extraction and analysis. Our methodology integrates full-text search and machine-readable data, enhancing data retrieval and battery testing. We aim to unify commercial cell information and develop tools for the battery community such as manufacturer-independent cycling procedure descriptions and external memory for Large Language Models. Although only a first step, this approach significantly accelerates battery research and digitalizes battery testing, inviting community participation for continuous improvement. We provide the structured data and the tools to access them as open source.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.DL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-10-16T14:12:41Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Philipp Dechent</name>
+    </author>
+    <author>
+      <name>Elias Barbers</name>
+    </author>
+    <author>
+      <name>Simon Clark</name>
+    </author>
+    <author>
+      <name>Susanne Lehner</name>
+    </author>
+    <author>
+      <name>Brady Planden</name>
+    </author>
+    <author>
+      <name>Masaki Adachi</name>
+    </author>
+    <author>
+      <name>David A. Howey</name>
+    </author>
+    <author>
+      <name>Sabine Paarmann</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.07705v1</id>
+    <title>Enhancing Supply Chain Visibility with Knowledge Graphs and Large Language Models</title>
+    <updated>2024-08-05T17:11:29Z</updated>
+    <link href="https://arxiv.org/abs/2408.07705v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.07705v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>In today's globalized economy, comprehensive supply chain visibility is crucial for effective risk management. Achieving visibility remains a significant challenge due to limited information sharing among supply chain partners. This paper presents a novel framework leveraging Knowledge Graphs (KGs) and Large Language Models (LLMs) to enhance supply chain visibility without relying on direct stakeholder information sharing. Our zero-shot, LLM-driven approach automates the extraction of supply chain information from diverse public sources and constructs KGs to capture complex interdependencies between supply chain entities. We employ zero-shot prompting for Named Entity Recognition (NER) and Relation Extraction (RE) tasks, eliminating the need for extensive domain-specific training. We validate the framework with a case study on electric vehicle supply chains, focusing on tracking critical minerals for battery manufacturing. Results show significant improvements in supply chain mapping, extending visibility beyond tier-2 suppliers. The framework reveals critical dependencies and alternative sourcing options, enhancing risk management and strategic planning. With high accuracy in NER and RE tasks, it provides an effective tool for understanding complex, multi-tiered supply networks. This research offers a scalable, flexible method for constructing domain-specific supply chain KGs, addressing longstanding challenges in visibility and paving the way for advancements in digital supply chain surveillance.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-05T17:11:29Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Sara AlMahri</name>
+    </author>
+    <author>
+      <name>Liming Xu</name>
+    </author>
+    <author>
+      <name>Alexandra Brintrup</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2408.01700v1</id>
+    <title>Integrating Large Language Models and Knowledge Graphs for Extraction and Validation of Textual Test Data</title>
+    <updated>2024-08-03T07:42:53Z</updated>
+    <link href="https://arxiv.org/abs/2408.01700v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2408.01700v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Aerospace manufacturing companies, such as Thales Alenia Space, design, develop, integrate, verify, and validate products characterized by high complexity and low volume. They carefully document all phases for each product but analyses across products are challenging due to the heterogeneity and unstructured nature of the data in documents. In this paper, we propose a hybrid methodology that leverages Knowledge Graphs (KGs) in conjunction with Large Language Models (LLMs) to extract and validate data contained in these documents. We consider a case study focused on test data related to electronic boards for satellites. To do so, we extend the Semantic Sensor Network ontology. We store the metadata of the reports in a KG, while the actual test results are stored in parquet accessible via a Virtual Knowledge Graph. The validation process is managed using an LLM-based approach. We also conduct a benchmarking study to evaluate the performance of state-of-the-art LLMs in executing this task. Finally, we analyze the costs and benefits of automating preexisting processes of manual data extraction and validation for subsequent cross-report analyses.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-08-03T07:42:53Z</published>
+    <arxiv:comment>Paper Accepted at ISWC 2024 In-Use Track</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <arxiv:journal_ref>ISWC 2024</arxiv:journal_ref>
+    <author>
+      <name>Antonio De Santis</name>
+    </author>
+    <author>
+      <name>Marco Balduini</name>
+    </author>
+    <author>
+      <name>Federico De Santis</name>
+    </author>
+    <author>
+      <name>Andrea Proia</name>
+    </author>
+    <author>
+      <name>Arsenio Leo</name>
+    </author>
+    <author>
+      <name>Marco Brambilla</name>
+    </author>
+    <author>
+      <name>Emanuele Della Valle</name>
+    </author>
+    <arxiv:doi>10.1007/978-3-031-77847-6_17</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1007/978-3-031-77847-6_17" title="doi"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2404.06571v1</id>
+    <title>Building A Knowledge Graph to Enrich ChatGPT Responses in Manufacturing Service Discovery</title>
+    <updated>2024-04-09T18:46:46Z</updated>
+    <link href="https://arxiv.org/abs/2404.06571v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2404.06571v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Sourcing and identification of new manufacturing partners is crucial for manufacturing system integrators to enhance agility and reduce risk through supply chain diversification in the global economy. The advent of advanced large language models has captured significant interest, due to their ability to generate comprehensive and articulate responses across a wide range of knowledge domains. However, the system often falls short in accuracy and completeness when responding to domain-specific inquiries, particularly in areas like manufacturing service discovery. This research explores the potential of leveraging Knowledge Graphs in conjunction with ChatGPT to streamline the process for prospective clients in identifying small manufacturing enterprises. In this study, we propose a method that integrates bottom-up ontology with advanced machine learning models to develop a Manufacturing Service Knowledge Graph from an array of structured and unstructured data sources, including the digital footprints of small-scale manufacturers throughout North America. The Knowledge Graph and the learned graph embedding vectors are leveraged to tackle intricate queries within the digital supply chain network, responding with enhanced reliability and greater interpretability. The approach highlighted is scalable to millions of entities that can be distributed to form a global Manufacturing Service Knowledge Network Graph that can potentially interconnect multiple types of Knowledge Graphs that span industry sectors, geopolitical boundaries, and business domains. The dataset developed for this study, now publicly accessible, encompasses more than 13,000 manufacturers' weblinks, manufacturing services, certifications, and location entity types.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-04-09T18:46:46Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yunqing Li</name>
+    </author>
+    <author>
+      <name>Binil Starly</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2310.19998v1</id>
+    <title>Generative retrieval-augmented ontologic graph and multi-agent strategies for interpretive large language model-based materials design</title>
+    <updated>2023-10-30T20:31:50Z</updated>
+    <link href="https://arxiv.org/abs/2310.19998v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2310.19998v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Transformer neural networks show promising capabilities, in particular for uses in materials analysis, design and manufacturing, including their capacity to work effectively with both human language, symbols, code, and numerical data. Here we explore the use of large language models (LLMs) as a tool that can support engineering analysis of materials, applied to retrieving key information about subject areas, developing research hypotheses, discovery of mechanistic relationships across disparate areas of knowledge, and writing and executing simulation codes for active knowledge generation based on physical ground truths. When used as sets of AI agents with specific features, capabilities, and instructions, LLMs can provide powerful problem solution strategies for applications in analysis and design problems. Our experiments focus on using a fine-tuned model, MechGPT, developed based on training data in the mechanics of materials domain. We first affirm how finetuning endows LLMs with reasonable understanding of domain knowledge. However, when queried outside the context of learned matter, LLMs can have difficulty to recall correct information. We show how this can be addressed using retrieval-augmented Ontological Knowledge Graph strategies that discern how the model understands what concepts are important and how they are related. Illustrated for a use case of relating distinct areas of knowledge - here, music and proteins - such strategies can also provide an interpretable graph structure with rich information at the node, edge and subgraph level. We discuss nonlinear sampling strategies and agent-based modeling applied to complex question answering, code generation and execution in the context of automated force field development from actively learned Density Functional Theory (DFT) modeling, and data analysis.</summary>
+    <category term="cs.CL" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.dis-nn" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mes-hall" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cond-mat.mtrl-sci" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="physics.app-ph" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-10-30T20:31:50Z</published>
+    <arxiv:primary_category term="cs.CL"/>
+    <author>
+      <name>Markus J. Buehler</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2304.09823v4</id>
+    <title>The Future of ChatGPT-enabled Labor Market: A Preliminary Study in China</title>
+    <updated>2023-11-04T05:59:47Z</updated>
+    <link href="https://arxiv.org/abs/2304.09823v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2304.09823v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>As a phenomenal large language model, ChatGPT has achieved unparalleled success in various real-world tasks and increasingly plays an important role in our daily lives and work. However, extensive concerns are also raised about the potential ethical issues, especially about whether ChatGPT-like artificial general intelligence (AGI) will replace human jobs. To this end, in this paper, we introduce a preliminary data-driven study on the future of ChatGPT-enabled labor market from the view of Human-AI Symbiosis instead of Human-AI Confrontation. To be specific, we first conduct an in-depth analysis of large-scale job posting data in BOSS Zhipin, the largest online recruitment platform in China. The results indicate that about 28% of occupations in the current labor market require ChatGPT-related skills. Furthermore, based on a large-scale occupation-centered knowledge graph, we develop a semantic information enhanced collaborative filtering algorithm to predict the future occupation-skill relations in the labor market. As a result, we find that additional 45% occupations in the future will require ChatGPT-related skills. In particular, industries related to technology, products, and operations are expected to have higher proficiency requirements for ChatGPT-related skills, while the manufacturing, services, education, and health science related industries will have lower requirements for ChatGPT-related skills.</summary>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2023-04-14T06:56:35Z</published>
+    <arxiv:primary_category term="cs.CY"/>
+    <author>
+      <name>Lan Chen</name>
+    </author>
+    <author>
+      <name>Xi Chen</name>
+    </author>
+    <author>
+      <name>Shiyu Wu</name>
+    </author>
+    <author>
+      <name>Yaqi Yang</name>
+    </author>
+    <author>
+      <name>Meng Chang</name>
+    </author>
+    <author>
+      <name>Hengshu Zhu</name>
+    </author>
+  </entry>
+</feed>

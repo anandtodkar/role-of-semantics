@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom" xmlns="http://www.w3.org/2005/Atom">
+  <id>https://arxiv.org/api/AeyrzbOLgwCgFGMOejraIGqDeJc</id>
+  <title>arXiv Query: search_query=(all:"semantic grounding" OR all:"semantic interoperability") AND (all:"large language model" OR all:LLM OR all:agent) AND (all:industrial OR all:manufacturing)&amp;id_list=&amp;start=0&amp;max_results=100</title>
+  <updated>2026-10-20T19:47:30Z</updated>
+  <link href="https://arxiv.org/api/query?search_query=(all:%22semantic+grounding%22+OR+all:%22semantic+interoperability%22)+AND+((all:%22large+language+model%22+OR+(all:LLM+OR+all:agent))+AND+(all:industrial+OR+all:manufacturing))&amp;start=0&amp;max_results=100&amp;id_list=" type="application/atom+xml"/>
+  <opensearch:itemsPerPage>100</opensearch:itemsPerPage>
+  <opensearch:totalResults>9</opensearch:totalResults>
+  <opensearch:startIndex>0</opensearch:startIndex>
+  <entry>
+    <id>http://arxiv.org/abs/2607.11019v2</id>
+    <title>QwenPaw-Data: Bridging Facts, Methodology, and Execution for Autonomous Enterprise Data Analytics</title>
+    <updated>2026-07-14T11:35:10Z</updated>
+    <link href="https://arxiv.org/abs/2607.11019v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2607.11019v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Enterprise data analysis is emerging as a distinct frontier for autonomous agents. Compared with general-purpose interaction and software engineering, it operates in an open, ambiguous, and continuously evolving environment. These characteristics call for a data-agent architecture that treats semantics, methodology, execution, and evolution as first-class system concerns. To this end, we introduce QwenPaw-Data, an agentic data system designed for enterprise intelligent data analysis. QwenPaw-Data consolidates heterogeneous assets from warehouses, dashboards, documents, interaction logs, and historical tasks into reusable, governable, and evolvable analysis assets, then turns natural-language requests into end-to-end analytical workflows spanning data understanding, retrieval, analysis, report generation, and decision support. Its architecture decomposes the problem into three collaborative subsystems: DataBridge provides trustworthy semantic grounding through interconnected metadata, knowledge, and trace graphs; Skill-Hub codifies expert analytical methodology into reusable and verifiable skills; and Host materializes these evidence and method assets into controllable, artifact-centric runtime execution. Across these subsystems, semantics, methods, traces, and feedback are continuously deposited back into the system, forming a self-evolving asset flywheel. Experiments on public benchmarks and real-world industrial BI workloads show that QwenPaw-Data improves both verifiable data access capability and higher-level analytical quality, offering a practical foundation for reliable, traceable, and continuously improving enterprise data agents.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-07-13T02:38:00Z</published>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Tianjing Zeng</name>
+    </author>
+    <author>
+      <name>Yuntao Hong</name>
+    </author>
+    <author>
+      <name>Zhongjun Ding</name>
+    </author>
+    <author>
+      <name>Dandan Liu</name>
+    </author>
+    <author>
+      <name>Yinan Mei</name>
+    </author>
+    <author>
+      <name>Yunxiang Su</name>
+    </author>
+    <author>
+      <name>Yiming Wang</name>
+    </author>
+    <author>
+      <name>Xiaojian Zhang</name>
+    </author>
+    <author>
+      <name>Jingyu Zhu</name>
+    </author>
+    <author>
+      <name>Junhao Zhu</name>
+    </author>
+    <author>
+      <name>Zhuowen Liang</name>
+    </author>
+    <author>
+      <name>Jiazhen Peng</name>
+    </author>
+    <author>
+      <name>Lianggui Weng</name>
+    </author>
+    <author>
+      <name>Zhihao Ding</name>
+    </author>
+    <author>
+      <name>Kerui Yi</name>
+    </author>
+    <author>
+      <name>Qifeng Wang</name>
+    </author>
+    <author>
+      <name>Rong Zhu</name>
+    </author>
+    <author>
+      <name>Bolin Ding</name>
+    </author>
+    <author>
+      <name>Liyu Mou</name>
+    </author>
+    <author>
+      <name>Jingren Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.25147v1</id>
+    <title>TokenMinds: Pretrained User Tokens and Embeddings for User Understanding in Large Recommender Systems</title>
+    <updated>2026-06-23T20:20:37Z</updated>
+    <link href="https://arxiv.org/abs/2606.25147v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.25147v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>User modeling in industrial recommender systems typically produces dense embeddings, which suffer from representational constraints inherent to fixed-dimensional vectors. An emerging alternative for discrete user representation -- using LLMs to generate text-based user tokens -- captures topical co-occurrences rather than deep sequential behavior dynamics and produces outputs that are difficult to ground to item attributes. Meanwhile, Semantic ID (SID) based item tokenization has proven effective for improving generalization in generative recommendation, yet discrete SID-based representations for users remain largely unexplored. We propose TokenMinds, an industrial-scale system that extends the PLUM framework from item retrieval to user modeling, generating both discrete SID-based user tokens and dense user embeddings via an encoder-decoder architecture adapted from pre-trained LLMs. This dual-output design provides the complementary benefits of discrete, semantically grounded user representations while maintaining compatibility with existing downstream models that rely on dense embeddings. Additionally, the shared SID vocabulary naturally extends to cross-scenario modeling: by unifying long-form and short-form video behaviors into a single model, we substantially reduce training and serving costs. We validate TokenMinds through extensive offline experiments and live launches on multiple YouTube surfaces, served on full user traffic (billions of users) via an asynchronous infrastructure that decouples representation generation from downstream scoring. Focusing on ranking as the primary downstream use case, our results confirm the practical viability of SID-based user tokens at industrial scale and demonstrate that tokens and dense embeddings provide complementary value across different production ranking systems.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.LG" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-23T20:20:37Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Qingyun Liu</name>
+    </author>
+    <author>
+      <name>Bo Yan</name>
+    </author>
+    <author>
+      <name>Yang Liu</name>
+    </author>
+    <author>
+      <name>Yuji Roh</name>
+    </author>
+    <author>
+      <name>Ekansh Sharma</name>
+    </author>
+    <author>
+      <name>Likang Yin</name>
+    </author>
+    <author>
+      <name>Emma Olowo</name>
+    </author>
+    <author>
+      <name>Min-hsuan Tsai</name>
+    </author>
+    <author>
+      <name>Yuxuan Li</name>
+    </author>
+    <author>
+      <name>Diego Uribe</name>
+    </author>
+    <author>
+      <name>Saksham Aggarwal</name>
+    </author>
+    <author>
+      <name>Siqi Wu</name>
+    </author>
+    <author>
+      <name>Yuan Hao</name>
+    </author>
+    <author>
+      <name>Vikas Kedigehalli</name>
+    </author>
+    <author>
+      <name>Lukasz Heldt</name>
+    </author>
+    <author>
+      <name>Lichan Hong</name>
+    </author>
+    <author>
+      <name>Li Wei</name>
+    </author>
+    <author>
+      <name>Xinyang Yi</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2606.12835v1</id>
+    <title>The Internet of Agentic AI: Communication, Coordination, and Collective Intelligence at Scale</title>
+    <updated>2026-06-11T03:02:59Z</updated>
+    <link href="https://arxiv.org/abs/2606.12835v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2606.12835v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The rapid emergence of autonomous AI agents is transforming artificial intelligence from isolated model inference into distributed systems of reasoning, communication, and action. This paper develops the vision of the Internet of Agentic AI (IoAI): an open ecosystem in which heterogeneous agents discover one another, negotiate responsibilities, exchange context, invoke tools, and execute workflows across cloud, edge, device, organizational, and cyber-physical environments. We synthesize foundations from single-agent agentic AI, multi-agent systems, distributed computing, communication networks, game theory, and security engineering to characterize the architectures and mechanisms required for scalable agent ecosystems. The paper examines agent deployment models, workflow lifecycles, communication protocols, interoperability layers, resource-management challenges, and trust architectures, with case studies in adaptive manufacturing and distributed operational coordination. The resulting framework highlights the central research challenges of controlled emergence, semantic interoperability, secure identity, incentive-compatible coordination, resource-aware orchestration, and governance for large-scale networks of autonomous agents.</summary>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.CY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-06-11T03:02:59Z</published>
+    <arxiv:primary_category term="cs.MA"/>
+    <author>
+      <name>Quanyan Zhu</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2604.01728v1</id>
+    <title>The AnIML Ontology: Enabling Semantic Interoperability for Large-Scale Experimental Data in Interconnected Scientific Labs</title>
+    <updated>2026-04-02T07:49:37Z</updated>
+    <link href="https://arxiv.org/abs/2604.01728v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2604.01728v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Achieving semantic interoperability across heterogeneous experimental data systems remains a major barrier to data-driven scientific discovery. The Analytical Information Markup Language (AnIML), a flexible XML-based standard for analytical chemistry and biology, is increasingly used in industrial R&amp;D labs for managing and exchanging experimental data. However, the expressivity of the XML schema permits divergent interpretations across stakeholders, introducing inconsistencies that undermine the interoperability the AnIML schema was designed to support. In this paper, we present the AnIML Ontology, an OWL 2 ontology that formalises the semantics of AnIML and aligns it with the Allotrope Data Format to support future cross-system and cross-lab interoperability. The ontology was developed using an expert-in-the-loop approach combining LLM-assisted requirement elicitation with collaborative ontology engineering. We validate the ontology through a multi-layered approach: data-driven transformation of real-world AnIML files into knowledge graphs, competency question verification via SPARQL, and a novel validation protocol based on adversarial negative competency questions mapped to established ontological anti-patterns and enforced via SHACL constraints.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-04-02T07:49:37Z</published>
+    <arxiv:comment>Accepted at the 38th International Conference on Advanced Information Systems Engineering (CAiSE 2026)</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Wilf Morlidge</name>
+    </author>
+    <author>
+      <name>Elliott Watkiss-Leek</name>
+    </author>
+    <author>
+      <name>George Hannah</name>
+    </author>
+    <author>
+      <name>Harry Rostron</name>
+    </author>
+    <author>
+      <name>Andrew Ng</name>
+    </author>
+    <author>
+      <name>Ewan Johnson</name>
+    </author>
+    <author>
+      <name>Andrew Mitchell</name>
+    </author>
+    <author>
+      <name>Terry R. Payne</name>
+    </author>
+    <author>
+      <name>Valentina Tamma</name>
+    </author>
+    <author>
+      <name>Jacopo de Berardinis</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2603.15900v1</id>
+    <title>The Internet of Physical AI Agents: Interoperability, Longevity, and the Cost of Getting It Wrong</title>
+    <updated>2026-03-16T20:44:26Z</updated>
+    <link href="https://arxiv.org/abs/2603.15900v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2603.15900v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Internet has evolved by progressively expanding what humanity connects: first computers, then people, and later billions of devices through the Internet of Things (IoT). While IoT succeeded in digitizing perception at scale, it also exposed fundamental limitations, including fragmentation, weak security, limited autonomy, and poor long-term sustainability. Today, advances in edge hardware, sensing, connectivity, and artificial intelligence enable a new phase: the Internet of Physical AI Agents. Unlike IoT devices that primarily sense and report, Physical AI Agents perceive, reason, and act in real time, operating autonomously and cooperatively across safety-critical domains such as disaster response, healthcare, industrial automation, and mobility. However, embedding fast-evolving AI capabilities into long-lived physical infrastructure introduces new architectural risks, particularly around interoperability, lifecycle management, and premature ossification. This article revisits lessons from IoT and Internet evolution, and articulates design principles for building resilient, evolvable, and trustworthy agentic systems. We present an architectural blueprint encompassing agentic identity, secure agent-to-agent communication, semantic interoperability, policy-governed runtimes, and observability-driven governance. We argue that treating evolution, trust, and interoperability as first-class requirements is essential to avoid hard-coding today's assumptions into tomorrow's intelligent infrastructure, and to prevent the high technical and economic cost of getting it wrong.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-03-16T20:44:26Z</published>
+    <arxiv:comment>A related version of this work is currently under review for publication in an IEEE magazine</arxiv:comment>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Roberto Morabito</name>
+    </author>
+    <author>
+      <name>Mallik Tatipamula</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.13800v1</id>
+    <title>Ontological grounding for sound and natural robot explanations via large language models</title>
+    <updated>2026-02-14T14:23:11Z</updated>
+    <link href="https://arxiv.org/abs/2602.13800v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.13800v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>Building effective human-robot interaction requires robots to derive conclusions from their experiences that are both logically sound and communicated in ways aligned with human expectations. This paper presents a hybrid framework that blends ontology-based reasoning with large language models (LLMs) to produce semantically grounded and natural robot explanations. Ontologies ensure logical consistency and domain grounding, while LLMs provide fluent, context-aware and adaptive language generation. The proposed method grounds data from human-robot experiences, enabling robots to reason about whether events are typical or atypical based on their properties. We integrate a state-of-the-art algorithm for retrieving and constructing static contrastive ontology-based narratives with an LLM agent that uses them to produce concise, clear, interactive explanations. The approach is validated through a laboratory study replicating an industrial collaborative task. Empirical results show significant improvements in the clarity and brevity of ontology-based narratives while preserving their semantic accuracy. Initial evaluations further demonstrate the system's ability to adapt explanations to user feedback. Overall, this work highlights the potential of ontology-LLM integration to advance explainable agency, and promote more transparent human-robot collaboration.</summary>
+    <category term="cs.RO" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.HC" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-02-14T14:23:11Z</published>
+    <arxiv:comment>An extended abstract of this article is accepted for presentation at AAMAS 2026: Olivares-Alarcos, A., Muhammad, A., Sanjaya, S., Lin, H. and Alenyà, G. (2026). Blending ontologies and language models to generate sound and natural robot explanations. In Proceedings of the International Conference on Autonomous Agents and Multiagent Systems. IFAAMAS</arxiv:comment>
+    <arxiv:primary_category term="cs.RO"/>
+    <author>
+      <name>Alberto Olivares-Alarcos</name>
+    </author>
+    <author>
+      <name>Muhammad Ahsan</name>
+    </author>
+    <author>
+      <name>Satrio Sanjaya</name>
+    </author>
+    <author>
+      <name>Hsien-I Lin</name>
+    </author>
+    <author>
+      <name>Guillem Alenyà</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2602.00818v1</id>
+    <title>The Syntactic-Semantic Internet:Engineering Infrastructures for Autonomous Systems</title>
+    <updated>2026-01-31T17:11:29Z</updated>
+    <link href="https://arxiv.org/abs/2602.00818v1" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2602.00818v1" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The Internet has evolved through successive architectural abstractions that enabled unprecedented scale, interoperability, and innovation. Packet-based networking enabled the reliable transport of bits; cloud-native systems enabled the orchestration of distributed computation. Today, the emergence of autonomous, learning-based systems introduces a new architectural challenge: intelligence is increasingly embedded directly into network control, computation, and decision-making, yet the Internet lacks a structural foundation for representing and exchanging meaning. In this paper, we argue that cognition alone: pattern recognition, prediction, and optimization, is insufficient for the next generation of networked systems. As autonomous agents act across safety-critical and socio-technical domains, systems must not only compute and communicate, but also comprehend intent, context, and consequence. We introduce the concept of a Semantic Layer: a new architectural stratum that treats meaning as a first-class construct, enabling interpretive alignment, semantic accountability, and intelligible autonomous behavior. We show that this evolution leads naturally to a Syntactic-Semantic Internet. The syntactic stack continues to transport bits, packets, and workloads with speed and reliability, while a parallel semantic stack transports meaning, grounding, and consequence. We describe the structure of this semantic stack-semantic communication, a semantic substrate, and an emerging Agentic Web, and draw explicit architectural parallels to TCP/IP and the World Wide Web. Finally, we examine current industry efforts, identify critical architectural gaps, and outline the engineering challenges required to make semantic interoperability a global, interoperable infrastructure.</summary>
+    <category term="cs.NI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SP" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2026-01-31T17:11:29Z</published>
+    <arxiv:primary_category term="cs.NI"/>
+    <author>
+      <name>Mallik Tatipamula</name>
+    </author>
+    <author>
+      <name>Xuesong Liu</name>
+    </author>
+    <author>
+      <name>Yao Sun</name>
+    </author>
+    <author>
+      <name>Muhammad Ali Imran</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2510.11639v2</id>
+    <title>OneRec-Think: In-Text Reasoning for Generative Recommendation</title>
+    <updated>2025-11-11T07:19:31Z</updated>
+    <link href="https://arxiv.org/abs/2510.11639v2" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2510.11639v2" rel="related" type="application/pdf" title="pdf"/>
+    <summary>The powerful generative capacity of Large Language Models (LLMs) has instigated a paradigm shift in recommendation. However, existing generative models (e.g., OneRec) operate as implicit predictors, critically lacking the capacity for explicit and controllable reasoning-a key advantage of LLMs. To bridge this gap, we propose OneRec-Think, a unified framework that seamlessly integrates dialogue, reasoning, and personalized recommendation. OneRec-Think incorporates: (1) Itemic Alignment: cross-modal Item-Textual Alignment for semantic grounding; (2) Reasoning Activation: Reasoning Scaffolding to activate LLM reasoning within the recommendation context; and (3) Reasoning Enhancement, where we design a recommendation-specific reward function that accounts for the multi-validity nature of user preferences. Experiments across public benchmarks show state-of-the-art performance. Moreover, our proposed "Think-Ahead" architecture enables effective industrial deployment on Kuaishou, achieving a 0.159\% gain in APP Stay Time and validating the practical efficacy of the model's explicit reasoning capability.</summary>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2025-10-13T17:20:13Z</published>
+    <arxiv:primary_category term="cs.IR"/>
+    <author>
+      <name>Zhanyu Liu</name>
+    </author>
+    <author>
+      <name>Shiyao Wang</name>
+    </author>
+    <author>
+      <name>Xingmei Wang</name>
+    </author>
+    <author>
+      <name>Rongzhou Zhang</name>
+    </author>
+    <author>
+      <name>Jiaxin Deng</name>
+    </author>
+    <author>
+      <name>Honghui Bao</name>
+    </author>
+    <author>
+      <name>Jinghao Zhang</name>
+    </author>
+    <author>
+      <name>Wuchao Li</name>
+    </author>
+    <author>
+      <name>Pengfei Zheng</name>
+    </author>
+    <author>
+      <name>Xiangyu Wu</name>
+    </author>
+    <author>
+      <name>Yifei Hu</name>
+    </author>
+    <author>
+      <name>Qigen Hu</name>
+    </author>
+    <author>
+      <name>Xinchen Luo</name>
+    </author>
+    <author>
+      <name>Lejian Ren</name>
+    </author>
+    <author>
+      <name>Zixing Zhang</name>
+    </author>
+    <author>
+      <name>Qianqian Wang</name>
+    </author>
+    <author>
+      <name>Kuo Cai</name>
+    </author>
+    <author>
+      <name>Yunfan Wu</name>
+    </author>
+    <author>
+      <name>Hongtao Cheng</name>
+    </author>
+    <author>
+      <name>Zexuan Cheng</name>
+    </author>
+    <author>
+      <name>Lu Ren</name>
+    </author>
+    <author>
+      <name>Huanjie Wang</name>
+    </author>
+    <author>
+      <name>Yi Su</name>
+    </author>
+    <author>
+      <name>Ruiming Tang</name>
+    </author>
+    <author>
+      <name>Kun Gai</name>
+    </author>
+    <author>
+      <name>Guorui Zhou</name>
+    </author>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2403.17209v4</id>
+    <title>Generation of Asset Administration Shell with Large Language Model Agents: Toward Semantic Interoperability in Digital Twins in the Context of Industry 4.0</title>
+    <updated>2024-06-24T12:04:06Z</updated>
+    <link href="https://arxiv.org/abs/2403.17209v4" rel="alternate" type="text/html"/>
+    <link href="https://arxiv.org/pdf/2403.17209v4" rel="related" type="application/pdf" title="pdf"/>
+    <summary>This research introduces a novel approach for achieving semantic interoperability in digital twins and assisting the creation of Asset Administration Shell (AAS) as digital twin model within the context of Industry 4.0. The foundational idea of our research is that the communication based on semantics and the generation of meaningful textual data are directly linked, and we posit that these processes are equivalent if the exchanged information can be serialized in text form. Based on this, we construct a "semantic node" data structure in our research to capture the semantic essence of textual data. Then, a system powered by large language models is designed and implemented to process the "semantic node" and generate standardized digital twin models from raw textual data collected from datasheets describing technical assets. Our evaluation demonstrates an effective generation rate of 62-79%, indicating a substantial proportion of the information from the source text can be translated error-free to the target digital twin instance model with the generative capability of large language models. This result has a direct application in the context of Industry 4.0, and the designed system is implemented as a data model generation tool for reducing the manual effort in creating AAS model. In our evaluation, a comparative analysis of different LLMs and an in-depth ablation study of Retrieval-Augmented Generation (RAG) mechanisms provide insights into the effectiveness of LLM systems for interpreting technical concepts and translating data. Our findings emphasize LLMs' capability to automate AAS instance creation and contribute to the broader field of semantic interoperability for digital twins in industrial applications. The prototype implementation and evaluation results are presented on our GitHub Repository: https://github.com/YuchenXia/AASbyLLM.</summary>
+    <category term="cs.AI" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.IR" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.MA" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="cs.SE" scheme="http://arxiv.org/schemas/atom"/>
+    <published>2024-03-25T21:37:30Z</published>
+    <arxiv:comment>Published in IEEE Access</arxiv:comment>
+    <arxiv:primary_category term="cs.AI"/>
+    <author>
+      <name>Yuchen Xia</name>
+    </author>
+    <author>
+      <name>Zhewen Xiao</name>
+    </author>
+    <author>
+      <name>Nasser Jazdi</name>
+    </author>
+    <author>
+      <name>Michael Weyrich</name>
+    </author>
+    <arxiv:doi>10.1109/ACCESS.2024.3415470</arxiv:doi>
+    <link rel="related" href="https://doi.org/10.1109/ACCESS.2024.3415470" title="doi"/>
+  </entry>
+</feed>

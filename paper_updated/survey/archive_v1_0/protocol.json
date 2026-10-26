@@ -1,0 +1,114 @@
+{
+  "version": "1.0.0",
+  "frozen_utc": "2026-10-20",
+  "title": "Engineering semantics for trustworthy industrial AI agents: systematic state-of-the-art review",
+  "research_questions": {
+    "RQ1": "What engineering-information capabilities do industrial AI agents require to ground observations and actions?",
+    "RQ2": "Which industrial standards, information models, semantic technologies and knowledge representations provide these capabilities?",
+    "RQ3": "Where do current industrial-agent architectures obtain identity, units, topology, behaviour, constraints, provenance and runtime state?",
+    "RQ4": "Which capabilities remain missing or weakly supported in current industrial AI-agent research?",
+    "RQ5": "Which architectural patterns combine LLM reasoning with deterministic engineering validation?",
+    "RQ6": "What evidence exists that engineering semantics improve grounding, action correctness, transferability, auditability or context efficiency?"
+  },
+  "time_window": {"from_year": 2018, "to_year": 2026},
+  "time_window_rationale": "Transformer-based language agents and tool use; standards are covered from specifications, not by this search.",
+  "languages": ["en"],
+  "databases": {
+    "subscription_run_by_authors": ["ieee_xplore", "scopus", "web_of_science", "acm_dl", "sciencedirect", "springerlink"],
+    "open_api_run_by_tooling": ["openalex", "arxiv", "semanticscholar"],
+    "non_peer_reviewed": ["arxiv"]
+  },
+  "harvest": {"max_records_per_query": 2000, "double_code_fraction": 0.2, "seed": 20261020},
+  "search_families": [
+    {
+      "id": "F1_industrial_agents",
+      "description": "LLM or foundation-model agents in industrial automation and manufacturing",
+      "queries": {
+        "openalex": "(\"large language model\" OR LLM OR \"foundation model\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR PLC) AND agent",
+        "arxiv": "(all:\"large language model\" OR all:LLM) AND (all:\"industrial automation\" OR all:manufacturing OR all:\"cyber-physical\" OR all:PLC) AND all:agent",
+        "semanticscholar": "large language model agent industrial automation manufacturing",
+        "ieee_xplore": "(\"All Metadata\":\"large language model\" OR \"All Metadata\":LLM OR \"All Metadata\":\"foundation model\") AND (\"All Metadata\":\"industrial automation\" OR \"All Metadata\":manufacturing OR \"All Metadata\":\"cyber-physical\" OR \"All Metadata\":PLC) AND \"All Metadata\":agent",
+        "scopus": "TITLE-ABS-KEY((\"large language model\" OR llm OR \"foundation model\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR plc) AND agent)",
+        "web_of_science": "TS=((\"large language model\" OR LLM OR \"foundation model\") AND (\"industrial automation\" OR manufacturing OR \"cyber-physical\" OR PLC) AND agent)"
+      }
+    },
+    {
+      "id": "F2_knowledge_graphs",
+      "description": "Knowledge graphs and ontologies combined with LLMs in industrial settings",
+      "queries": {
+        "openalex": "(\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing) AND (\"large language model\" OR LLM)",
+        "arxiv": "(all:\"knowledge graph\" OR all:ontology) AND (all:\"industrial automation\" OR all:manufacturing) AND (all:\"large language model\" OR all:LLM)",
+        "semanticscholar": "knowledge graph ontology large language model manufacturing industrial automation",
+        "scopus": "TITLE-ABS-KEY((\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing) AND (\"large language model\" OR llm))",
+        "web_of_science": "TS=((\"knowledge graph\" OR ontology) AND (\"industrial automation\" OR manufacturing) AND (\"large language model\" OR LLM))"
+      }
+    },
+    {
+      "id": "F3_information_models",
+      "description": "OPC UA and Asset Administration Shell with AI agents or LLMs",
+      "queries": {
+        "openalex": "(\"OPC UA\" OR \"Asset Administration Shell\") AND (\"large language model\" OR LLM OR \"generative AI\" OR agent)",
+        "arxiv": "(all:\"OPC UA\" OR all:\"Asset Administration Shell\") AND (all:\"large language model\" OR all:LLM OR all:agent)",
+        "semanticscholar": "OPC UA Asset Administration Shell large language model agent",
+        "scopus": "TITLE-ABS-KEY((\"OPC UA\" OR \"Asset Administration Shell\") AND (\"large language model\" OR llm OR \"generative AI\" OR agent))",
+        "web_of_science": "TS=((\"OPC UA\" OR \"Asset Administration Shell\") AND (\"large language model\" OR LLM OR \"generative AI\" OR agent))"
+      }
+    },
+    {
+      "id": "F4_runtime_validation",
+      "description": "Validation, guardrails and constraint checking of LLM outputs or actions in industrial control",
+      "queries": {
+        "openalex": "(\"large language model\" OR LLM) AND (validation OR guardrail OR constraint OR verification) AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR PLC)",
+        "arxiv": "(all:\"large language model\" OR all:LLM) AND (all:validation OR all:guardrail OR all:verification) AND (all:\"industrial automation\" OR all:\"control system\" OR all:PLC)",
+        "semanticscholar": "large language model guardrail verification industrial control system PLC",
+        "scopus": "TITLE-ABS-KEY((\"large language model\" OR llm) AND (validation OR guardrail OR constraint OR verification) AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR plc))",
+        "web_of_science": "TS=((\"large language model\" OR LLM) AND (validation OR guardrail OR constraint OR verification) AND (\"industrial automation\" OR \"control system\" OR \"cyber-physical\" OR PLC))"
+      }
+    },
+    {
+      "id": "F5_semantic_grounding",
+      "description": "Semantic grounding and semantic interoperability for LLMs or agents in industry",
+      "queries": {
+        "openalex": "(\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\") AND (\"large language model\" OR LLM OR agent) AND (industrial OR manufacturing)",
+        "arxiv": "(all:\"semantic grounding\" OR all:\"semantic interoperability\") AND (all:\"large language model\" OR all:LLM OR all:agent) AND (all:industrial OR all:manufacturing)",
+        "semanticscholar": "semantic interoperability grounding large language model agent industrial",
+        "scopus": "TITLE-ABS-KEY((\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\") AND (\"large language model\" OR llm OR agent) AND (industrial OR manufacturing))",
+        "web_of_science": "TS=((\"semantic grounding\" OR \"engineering semantics\" OR \"semantic interoperability\") AND (\"large language model\" OR LLM OR agent) AND (industrial OR manufacturing))"
+      }
+    }
+  ],
+  "inclusion": {
+    "I1": "Addresses industrial AI or LLM agents, or engineering semantics used by them",
+    "I2": "Concerns industrial semantic interoperability, engineering knowledge graphs or industrial information models with an AI/agent consumer",
+    "I3": "Concerns grounding, tool use, retrieval or runtime action validation in an industrial/engineering context",
+    "I4": "Concerns engineering constraints, provenance or state models used to check AI outputs"
+  },
+  "exclusion": {
+    "E1": "No industrial or engineering context (generic, consumer or enterprise chatbots)",
+    "E2": "Generic RAG or KG construction without engineering semantics",
+    "E3": "Not about AI agents, LLMs or their information supply",
+    "E4": "Duplicate or superseded version (conference version of a later journal paper)",
+    "E5": "Insufficient documentation to code (abstract only, editorial, poster without method)",
+    "E6": "Full text not accessible",
+    "E7": "Not in English or outside the time window"
+  },
+  "quality_items": {
+    "Q1": "Architecture and information sources are described sufficiently to code AUF capabilities",
+    "Q2": "Evaluation method is stated (none, simulation, testbed, physical plant)",
+    "Q3": "Data, tasks or artefacts are available or reproducibly described",
+    "Q4": "Baselines or ablations isolate the semantic contribution",
+    "Q5": "Limitations and safety boundaries are discussed"
+  },
+  "quality_scale": "0 no, 1 partial, 2 yes",
+  "agent_coding": {
+    "grounding_category": {
+      "A": "prompt or document grounded",
+      "B": "typed API or tool grounded",
+      "C": "knowledge-graph grounded",
+      "D": "semantically validated proposals",
+      "E": "controller-authoritative (validation plus dispatch gate and PLC checks)"
+    },
+    "capability_scale": "0 absent, 1 implicit or prose only, 2 explicit machine-readable, 3 explicit and checked at runtime",
+    "evaluation_levels": ["none", "simulation", "testbed", "physical"]
+  }
+}
