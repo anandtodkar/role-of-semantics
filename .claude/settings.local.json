@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import rdflib, pyshacl, matplotlib, numpy, pandas; print\\('deps OK'\\)\")",
+      "Bash(python run_experiments.py)",
+      "Read(//d/Siemens/research/paper/tables/**)"
+    ]
+  }
+}
